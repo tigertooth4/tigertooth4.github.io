@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geometry on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/geometry/</link>
+    <link>http://tigertooth4.github.io/tags/Geometry/</link>
     <description>Recent content in Geometry on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 25 Nov 2014 17:47:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/Geometry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Book List After Interstellar</title>
-      <link>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</link>
+      <link>http://tigertooth4.github.io/post/Math/Book-List-After-Interstellar/</link>
       <pubDate>Tue, 25 Nov 2014 17:47:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/Book-List-After-Interstellar/</guid>
       <description>昨天看了 LostAbaddon 的星穿影评以及科普，我都想转行去研究相对论和宇宙学了！小时候对关于黑洞、时间的题材异常的着迷。不过，从没有学过一遍义相对论，更别说</description>
     </item>
     
     <item>
       <title>Fiddle around with Lambert W function</title>
-      <link>http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/</link>
+      <link>http://tigertooth4.github.io/post/Math/Fiddle-around-with-Lambert-W-function/</link>
       <pubDate>Sat, 07 Apr 2012 17:29:45 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/Fiddle-around-with-Lambert-W-function/</guid>
       <description>Title:
 Date:
 [mathjax]

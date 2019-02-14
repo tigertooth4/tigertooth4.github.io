@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VPN on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/vpn/</link>
+    <link>http://tigertooth4.github.io/tags/VPN/</link>
     <description>Recent content in VPN on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 03 Oct 2015 12:15:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/VPN/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>自己建了一个SS</title>
-      <link>http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/</link>
+      <link>http://tigertooth4.github.io/post/Life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/</link>
       <pubDate>Sat, 03 Oct 2015 12:15:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/</guid>
+      <guid>http://tigertooth4.github.io/post/Life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/</guid>
       <description>趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日</description>
     </item>
     

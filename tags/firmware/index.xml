@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Firmware on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/firmware/</link>
+    <link>http://tigertooth4.github.io/tags/Firmware/</link>
     <description>Recent content in Firmware on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 11 Sep 2014 09:20:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/Firmware/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kossel XL 构建记 (24) Electronic Box and First Marlin attempt</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/</link>
+      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_24/</link>
       <pubDate>Thu, 11 Sep 2014 09:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/</guid>
+      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_24/</guid>
       <description>画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目</description>
     </item>
     

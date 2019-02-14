@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Math on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/math/</link>
+    <link>http://tigertooth4.github.io/tags/Math/</link>
     <description>Recent content in Math on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 25 Nov 2014 17:47:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/Math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Book List After Interstellar</title>
-      <link>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</link>
+      <link>http://tigertooth4.github.io/post/Math/Book-List-After-Interstellar/</link>
       <pubDate>Tue, 25 Nov 2014 17:47:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/Book-List-After-Interstellar/</guid>
       <description>昨天看了 LostAbaddon 的星穿影评以及科普，我都想转行去研究相对论和宇宙学了！小时候对关于黑洞、时间的题材异常的着迷。不过，从没有学过一遍义相对论，更别说</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (21) Redesign the frame</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_21/</link>
+      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_21/</link>
       <pubDate>Thu, 28 Aug 2014 16:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_21/</guid>
+      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_21/</guid>
       <description>沉寂了几天，我又回来了。步进电机也终于到了：）不过因为大淘宝上 0.9 步进电机的卖家很少，选择的余地很小。我只能选了光轴的，结果买回来只能再用锉来</description>
     </item>
     
     <item>
       <title>ORESUS 中的求逆</title>
-      <link>http://tigertooth4.github.io/post/math/inverse-in-oresus/</link>
+      <link>http://tigertooth4.github.io/post/Math/Inverse-in-ORESUS/</link>
       <pubDate>Tue, 05 Aug 2014 12:16:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/inverse-in-oresus/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/Inverse-in-ORESUS/</guid>
       <description>我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (9) Y-shape carriages design, OpenSCAD</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</link>
+      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_09/</link>
       <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</guid>
+      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_09/</guid>
       <description>OpenSCAD 真是个好东西。当你规划好每个点的位置后，事情真是变得轻而易举。如果你觉得那个地方长了，或者短 了，只要调调参数就能搞定！昨天一直在设计线性滑</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (8) Delivery, Y shape design</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</link>
+      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_08/</link>
       <pubDate>Thu, 31 Jul 2014 19:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</guid>
+      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_08/</guid>
       <description>今天收了 5 个快递&amp;hellip; 截止到目前为止另外还有 4 件在路上。铝框架：滑 轮：还有带圆孔强磁铁以及各种螺丝螺母（没拍照，磁铁真的磁力强到可</description>
     </item>
     
     <item>
       <title>斜洛朗级数环的软件包 和 FriCAS</title>
-      <link>http://tigertooth4.github.io/post/math/oresus-and-fricas/</link>
+      <link>http://tigertooth4.github.io/post/Math/ORESUS-and-FriCAS/</link>
       <pubDate>Wed, 30 Jul 2014 19:21:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/oresus-and-fricas/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/ORESUS-and-FriCAS/</guid>
       <description>这几天都在忙着写 ORESUS 软件包的一些例子。总算要实现我 4 年（甚至更早以前）的愿望了！那时候和ex游完泳等她的时候就在写 ORESUS 的代码。。。 好吧！现在大家</description>
     </item>
     
     <item>
       <title>斜洛朗级数环的软件包现在可以计算一个算子的分数次方了！</title>
-      <link>http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/</link>
+      <link>http://tigertooth4.github.io/post/Math/ORESUS-now-understand-fractional-powers/</link>
       <pubDate>Sat, 26 Jul 2014 18:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/ORESUS-now-understand-fractional-powers/</guid>
       <description>先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！</description>
     </item>
     
     <item>
       <title>最近 Coursera 上几个有意思的课程</title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</link>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-Coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</link>
       <pubDate>Mon, 12 May 2014 23:10:53 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</guid>
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-Coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</guid>
       <description>课程太多，一下听不过来，不过还是想记录一下： 算法分析与设计（I) https://www.coursera.org/course/algo 来自：Stanford Univ 概述 _In this course you will learn several fundamental principles of algorithm design. You&amp;rsquo;ll learn the divide-and-conquer design paradigm, with applications to fast sorting,</description>
     </item>
     
     <item>
       <title>Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts</title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers--brew-k-theory-a-polynomial-and-random-thoughts/</link>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/Burgers--Brew-K-theory-A-polynomial-and-Random-Thoughts/</link>
       <pubDate>Wed, 05 Dec 2012 16:10:40 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers--brew-k-theory-a-polynomial-and-random-thoughts/</guid>
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/Burgers--Brew-K-theory-A-polynomial-and-Random-Thoughts/</guid>
       <description>Today we went to Burgers &amp;amp; Brew for lunch. Burgers &amp;amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&amp;rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&amp;rsquo;s only $7 or so.
 more
 [caption id=&amp;ldquo;attachment_427&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] Hamburger (@Burgers &amp;amp; Brew)[/caption]</description>
@@ -96,19 +96,19 @@ more
     
     <item>
       <title>Calculate PDOs using AXIOM / FriCAS</title>
-      <link>http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/</link>
+      <link>http://tigertooth4.github.io/post/Coding/Calculate-PDOs-by-using-AXIOM/FriCAS/</link>
       <pubDate>Thu, 03 May 2012 00:46:30 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/</guid>
+      <guid>http://tigertooth4.github.io/post/Coding/Calculate-PDOs-by-using-AXIOM/FriCAS/</guid>
       <description>For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2+u(x,t)```, (A=\partial^3+4u(x,t)\partial+2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers.</description>
     </item>
     
     <item>
       <title>Fiddle around with Lambert W function</title>
-      <link>http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/</link>
+      <link>http://tigertooth4.github.io/post/Math/Fiddle-around-with-Lambert-W-function/</link>
       <pubDate>Sat, 07 Apr 2012 17:29:45 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/</guid>
+      <guid>http://tigertooth4.github.io/post/Math/Fiddle-around-with-Lambert-W-function/</guid>
       <description>Title:
 Date:
 [mathjax]
