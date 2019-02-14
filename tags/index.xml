@@ -41,7 +41,7 @@
     <item>
       <title>3DP</title>
       <link>http://tigertooth4.github.io/tags/3dp/</link>
-      <pubDate>Sat, 08 Nov 2014 20:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/3dp/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title>3dp</title>
       <link>http://tigertooth4.github.io/tags/3dp/</link>
-      <pubDate>Sat, 08 Nov 2014 20:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/3dp/</guid>
       <description></description>
@@ -89,6 +89,15 @@
       <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Armbian</title>
+      <link>http://tigertooth4.github.io/tags/armbian/</link>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/armbian/</guid>
       <description></description>
     </item>
     
@@ -212,7 +221,7 @@
     <item>
       <title>DIY</title>
       <link>http://tigertooth4.github.io/tags/diy/</link>
-      <pubDate>Sun, 31 Jul 2016 16:22:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/diy/</guid>
       <description></description>
@@ -548,6 +557,15 @@
       <pubDate>Tue, 05 Aug 2014 12:16:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/oresus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OctoPrint</title>
+      <link>http://tigertooth4.github.io/tags/octoprint/</link>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/octoprint/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,37 @@
     <description>Recent content in Posts on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 01 May 2018 16:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 15:54:33 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何在 OrangePiZeroPlus 上安装 Octoprint</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/compactxy/howto-install-octoprint-on-orangepizeroplus/</link>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/compactxy/howto-install-octoprint-on-orangepizeroplus/</guid>
+      <description>下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登</description>
+    </item>
+    
+    <item>
+      <title>What I’ve learned at MA conference in ShangHai</title>
+      <link>http://tigertooth4.github.io/post/math/learned-from-ma-conference-at-shanghai/</link>
+      <pubDate>Mon, 27 Aug 2018 15:34:47 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/math/learned-from-ma-conference-at-shanghai/</guid>
+      <description>转眼回到北京已经有几日了，但对上海数学分析研讨会之行仍有很多感触。在会上，多位来自不同高校的优秀教师、老前辈都做了精彩的报告。其中，我对几位</description>
+    </item>
+    
+    <item>
+      <title>在暑假即将结束的日子里我还要做什么？</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/my-recent-todo-list/</link>
+      <pubDate>Wed, 22 Aug 2018 21:01:22 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/my-recent-todo-list/</guid>
+      <description>暑假实在是太短了，感觉还有很多想做的事情没有做！那么好吧，为了更好的利用暑假的尾巴去完成更多想做的事情，下面我就把将要研究的东西罗列一下。做</description>
+    </item>
     
     <item>
       <title>给LP大人安装 Bootcamp 双系统 </title>
