@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Download on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/download/</link>
+    <description>Recent content in Download on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 16 Apr 2013 11:44:32 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/download/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 wget 下载一个目录下的所有文件</title>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E4%BD%BF%E7%94%A8-wget-%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AA%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Tue, 16 Apr 2013 11:44:32 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E4%BD%BF%E7%94%A8-wget-%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AA%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/</guid>
+      <description>今天想下载 MIT 的李代数课程笔记，参见网页：http://math.mit.edu/classes/18.745/Notes/. 突然间忘了 [cciN_bash]wget[/cciN_bash] 的用</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (24) Electronic Box and First Marlin attempt - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt" />
+<meta property="og:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/" />
+
+
+
+<meta property="article:published_time" content="2014-09-11T09:20:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-09-11T09:20:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt">
+<meta itemprop="description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目">
+
+
+<meta itemprop="datePublished" content="2014-09-11T09:20:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-09-11T09:20:00&#43;00:00" />
+<meta itemprop="wordCount" content="1651">
+
+
+
+<meta itemprop="keywords" content="3DP,Kossel,DIY,Marlin,Firmware," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt"/>
+<meta name="twitter:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (24) Electronic Box and First Marlin attempt</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-09-11 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>画好的电路盒已经开始打印了，这个是正在打印的前面板：
+<img src="/3DP/_images/DSC00557.JPG" alt="" />
+为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/</p>
+
+<p>这是组装好的前面板：
+<img src="/3DP/_images/DSC00558.JPG" alt="" />
+Kossel XL 赫然在目；）</p>
+
+<p>熬夜组装前面板及防滚架：
+<img src="/3DP/_images/DSC00560.JPG" alt="" />
+顺便等凌晨 1 点的水果新品发布会（结果视频直播状况频发: 首先是全世界都注意到的中国 lady 的同声传译；然后又遇到无数次的视频中断，甚至水果的官网都一度瘫痪了。。。）</p>
+
+<p>跑题了，抱歉！上图中右侧的防滚架没有考虑到 LCD 面板后面的凸起，装不上。于是人工打磨了一下，开了几个槽 ;/ （懒得再画新的了，反正安慰自己在里面看不见。可见我是一个“看脸”的人&hellip;）</p>
+
+<p>装好防滚架的前面板：
+<img src="/3DP/_images/DSC00561.JPG" alt="" /></p>
+
+<hr />
+
+<p>前天看到这个网站，说明如何修改 Marlin 的参数 <a href="http://www.hkepc.com/forum/viewthread.php?tid=2084008">http://www.hkepc.com/forum/viewthread.php?tid=2084008</a>。然后他推荐了一个 Marlin 的衍生版，由 RichCattell 编写。我看了眼，发现更新的比较频繁，有对自动调平的功能有了改进，于是决定采用，地址是：<a href="https://github.com/RichCattell/Marlin/releases/tag/v1.04">https://github.com/RichCattell/Marlin/releases/tag/v1.04</a></p>
+
+<hr />
+
+<p>好了，现在就开始修改 Marlin 的参数了！在 Marlin 的目录中找到 Configuration.h 这个文件。 Marlin 的设置主要在 Configuration.h 和 Configuration_adv.h 中。</p>
+
+<p>其实也没有多少要改的：主要涉及到 Delta 系打印机的几何参数，例如连杆长度等等。但是这些参数对于 Kossel 的打印质量影响很大，所以要仔细测量并更新 Configuration.h 。</p>
+
+<pre><code class="language-c++">// Center-to-center distance of the holes in the diagonal push rods.
+ # define DEFAULT_DELTA_DIAGONAL_ROD 275.0 // mm
+</code></pre>
+
+<p>这是连杆从球头中心到球头中心的距离，卷尺测量了下，近 275 毫米。</p>
+
+<pre><code class="language-c++">// Horizontal offset from middle of printer to smooth rod center.
+ #define DELTA_SMOOTH_ROD_OFFSET 214.8 //=372/sqrt(3) mm
+</code></pre>
+
+<p>这是从挤出头中心点到垂直铝框架中轴的距离。我是量了两个垂直铝框架中轴间的距离，除以√{3} 这样来算的。</p>
+
+<pre><code class="language-c++">// Horizontal offset of the universal joints on the end effector.
+ #define DELTA_EFFECTOR_OFFSET 39  // mm
+</code></pre>
+
+<p>这是 Effector 中心到 effector 的球头连接头中心的距离。</p>
+
+<pre><code class="language-c++">// Horizontal offset of the universal joints on the carriages.
+ #define DELTA_CARRIAGE_OFFSET 38 // mm
+</code></pre>
+
+<p>这是从垂直铝框架中轴，到滑车上的球头中心的距离。</p>
+
+<pre><code class="language-c++">// Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
+ # define BED_DIAMETER 260 // mm
+</code></pre>
+
+<p>这是热床的直径，我用的近 260 毫米的大床;)</p>
+
+<pre><code class="language-c++"> // Z-Probe variables
+ // Start and end location values are used to deploy/retract the probe (will move from start to end and back again)
+ # define Z_PROBE_OFFSET {0, 10, -5.6, 0}  // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.
+ # define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}   // X, Y, Z, E start location for z-probe deployment sequence
+ # define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}    // X, Y, Z, E end location for z-probe deployment sequence
+ # define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}  // X, Y, Z, E start location for z-probe retract sequence
+ # define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     // X, Y, Z, E end location for z-probe retract sequence
+
+ # define AUTOLEVEL_GRID 24 // Distance between autolevel Z probing points, should be less than print surface radius/3.
+</code></pre>
+
+<p>这些是有关自调平系统的一些参数，先不管。自调平总是最后关心的问题。</p>
+
+<pre><code class="language-c++">// Travel limits after homing
+ # define X_MAX_POS 130
+ # define X_MIN_POS -130
+ # define Y_MAX_POS 130
+ # define Y_MIN_POS -130
+ # define Z_MAX_POS MANUAL_Z_HOME_POS
+ # define Z_MIN_POS 0
+</code></pre>
+
+<p>这些是根据热床大小定的。Z_MAX_POS 需要测量一下，是从挤出头到热床的距离。</p>
+
+<p>除此之外，还有一个重要参数，就是：</p>
+
+<pre><code class="language-c++"> # define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 439.5} //{80, 80, 80, 439.5}
+</code></pre>
+
+<p>这是和传动机构相关的（单位运行距离（1mm）下步进电机前进的步数。200,200,200 分别代表 x,y,z 方向的步进量，439.5(用的默认值，还没改)是挤出机步进电机的步数。 我用的是 0.9 步进，GT2 的皮带（即齿间距2mm），以及 16齿的同步轮。带入网上的计算器：<a href="http://prusaprinters.org/calculator/">http://prusaprinters.org/calculator/</a></p>
+
+<p>或者把上述宏定义修改为下面这若干行代码<sup class="footnote-ref" id="fnref:http-www-hkepc-com-forum-viewthread-php-tid-2084008"><a href="#fn:http-www-hkepc-com-forum-viewthread-php-tid-2084008">1</a></sup></p>
+
+<pre><code class="language-c++:n"> # define STEPS_PER_REVOLUTION_X 3200
+ # define STEPS_PER_REVOLUTION_Z 3200
+ # define STEPS_PER_REVOLUTION_E 3200
+ # define STEPS_PER_REVOLUTION_Y 6400
+
+ # define IDLER_TEETH_X 8
+ # define IDLER_TEETH_Y 8
+
+ # define BELT_PITCH_X (.2 \* MM_PER_INCH)
+ # define BELT_PITCH_Y (.2 \* MM_PER_INCH)
+
+ # define PITCH_OF_Z_ROD 1.25
+
+ // makergear extruder box
+ # define EXTRUDER_GEAR_RATIO 13.0
+ # define PINCH_WHEEL_DIAMETER 11.59
+
+ # define AXIS_STEPS_PER_UNIT_X (STEPS_PER_REVOLUTION_X / IDLER_TEETH_X / BELT_PITCH_X)
+ # define AXIS_STEPS_PER_UNIT_Y (STEPS_PER_REVOLUTION_Y / IDLER_TEETH_Y / BELT_PITCH_Y)
+ # define AXIS_STEPS_PER_UNIT_Z (STEPS_PER_REVOLUTION_Z / PITCH_OF_Z_ROD)
+ # define AXIS_STEPS_PER_UNIT_E (STEPS_PER_REVOLUTION_E \* EXTRUDER_GEAR_RATIO / (PINCH_WHEEL_DIAMETER \* PI))
+ # define DEFAULT_AXIS_STEPS_PER_UNIT {AXIS_STEPS_PER_UNIT_X, AXIS_STEPS_PER_UNIT_Y, AXIS_STEPS_PER_UNIT_Z, AXIS_STEPS_PER_UNIT_E}
+</code></pre>
+
+<p>其中 STEPS_PER_REVOLUTION 是指电机转动一圈的步数（对于 0.9 步进来说是 <sup>360</sup>&frasl;<sub>0</sub>.9 = 400 步，但是还有 MicroStepping，在
+Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电机转动一周实际上会有 6400 个分度。这就是这个参数的由来 ）</p>
+
+<hr />
+
+<p>【更新】今天看到这个不错：Hacking Marlin to add extruder load/unload: <a href="http://3dwest.blogspot.hk">http://3dwest.blogspot.hk</a>
+以往更换料丝的时候进料、退料都要的拧半天调节旋钮，有了这个进料、退料的命令后一切就应该方便了。按照这个博客所说，只需要修改：ultralcd.cpp 文件：</p>
+
+<pre><code class="language-c++:n"> static void lcd_prepare_menu()
+ {
+     START_MENU();
+     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
+ #ifdef SDSUPPORT
+     //MENU_ITEM(function, MSG_AUTOSTART, lcd_autostart_sd);
+ #endif
+     MENU_ITEM(gcode, MSG_DISABLE_STEPPERS, PSTR(&quot;M84&quot;));
+     MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR(&quot;G28&quot;));
+     MENU_ITEM(gcode, MSG_LOAD_FILAMENT, PSTR(&quot;G21 G1 F500 E10&quot;));
+     MENU_ITEM(gcode, MSG_FEED_FILAMENT, PSTR(&quot;G1 F1000 E1000&quot;));
+     MENU_ITEM(gcode, MSG_UNLOAD_FILAMENT, PSTR(&quot;G1 F1000 E-1000&quot;));
+     //MENU_ITEM(gcode, MSG_SET_ORIGIN, PSTR(&quot;G92 X0 Y0 Z0&quot;));
+     MENU_ITEM(function, MSG_PREHEAT_PLA, lcd_preheat_pla);
+     MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs);
+     MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
+ #if PS_ON_PIN &gt; -1
+     if (powersupply)
+     {
+         MENU_ITEM(gcode, MSG_SWITCH_PS_OFF, PSTR(&quot;M81&quot;));
+     }else{
+         MENU_ITEM(gcode, MSG_SWITCH_PS_ON, PSTR(&quot;M80&quot;));
+     }
+ #endif
+    MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu);
+    END_MENU();
+}
+</code></pre>
+
+<p>唯一需要注意的是按照你的 Bowden 管长度来调整 MENU_ITEM 的响应代码，作者的 Bowden 管是 1米长的，所以
+用了 E1000 。</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:http-www-hkepc-com-forum-viewthread-php-tid-2084008"> <a class="footnote-return" href="#fnref:http-www-hkepc-com-forum-viewthread-php-tid-2084008"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2014-09-11</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+          <a href="/tags/marlin/">Marlin</a>
+          
+          <a href="/tags/firmware/">Firmware</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_25/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记 (25) Fans on Arduino Board</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_23/">
+            <span class="next-text nav-default">Kossel XL 构建记 (23) Show me the box and heatbed</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

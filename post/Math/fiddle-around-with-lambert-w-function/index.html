@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Fiddle around with Lambert W function - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="Title:
+Date:
+[mathjax]
+These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
+The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z)." />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Fiddle around with Lambert W function" />
+<meta property="og:description" content="Title:
+Date:
+[mathjax]
+These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
+The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/math/fiddle-around-with-lambert-w-function/" />
+
+
+
+<meta property="article:published_time" content="2012-04-07T17:29:45&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-04-07T17:29:45&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Fiddle around with Lambert W function">
+<meta itemprop="description" content="Title:
+Date:
+[mathjax]
+These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
+The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z).">
+
+
+<meta itemprop="datePublished" content="2012-04-07T17:29:45&#43;00:00" />
+<meta itemprop="dateModified" content="2012-04-07T17:29:45&#43;00:00" />
+<meta itemprop="wordCount" content="281">
+
+
+
+<meta itemprop="keywords" content="Math,Geometry," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fiddle around with Lambert W function"/>
+<meta name="twitter:description" content="Title:
+Date:
+[mathjax]
+These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
+The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z)."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Fiddle around with Lambert W function</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-04-07 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>Title:</p>
+
+<p>Date:</p>
+
+<p>[mathjax]</p>
+
+<p>These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.</p>
+
+<p>The problem is like this: a <em>Lambert curve</em> is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z). Such functions are not unique, we call them the <a href="http://en.wikipedia.org/wiki/Lambert_W_function" title="Lambert W function">Lambert W function</a> .</p>
+
+<p>more</p>
+
+<p>By inverse function theorem, (w) can be written locally as a function of (z). Note that there are two branches, the branches we care about is called (w_0). From wikipedia, one could find the asymptotic expansion of (w_0) w.r.t. (z), which is [w<em>0(z) = \sum</em>{k\ge 1}\frac{(-k)^{k-1}}{k!}x^k.] Now if we redefine the Lambert curve to be (x = y e^{-y}), and define [t = 1 + \sum_{k=1}^\infty \frac{k^k}{k!}x^k,] how the expression (x=y e^{-y}) may be changed when we substitute (y) by (t)?</p>
+
+<p>Notice that the Taylor expansions of (w_0(z)) and (t(x)) are alike, it is not so hard to establish a functional relationship between the two. So lets start by finding a Taylor series of (y) w.r.t. (x). It is easy to see two definitions of Lambert curves are identified if we introduce the transform (y(x) = -w<em>0(x)). So (y) can be expand to a Taylor series: [y(x)=\sum</em>{k\ge 1}\frac{k^{k-1}}{k!}x^k.] By term-by-term differentiation, we know (x y&rsquo;(x) = t-1). But from another point of view, by implicit differentiation, we find (1 = xy&rsquo;(y^{-1} - 1)). So (y = 1-t^{-1}). And, if written in the new parameter (t), Lambert curve can be formatted as [x = (1-t^{-1}) e^{-(1-t^{-1})}.]</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2012-04-07</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/math/">Math</a>
+          
+          <a href="/tags/geometry/">Geometry</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/life/%E6%A0%A1%E5%9B%AD%E6%98%A5%E5%A4%A9/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">校园、春天</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E5%BB%BA%E6%A8%A1/blender-project-i/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

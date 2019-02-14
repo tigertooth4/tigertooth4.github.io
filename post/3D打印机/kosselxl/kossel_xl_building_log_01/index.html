@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (1) Shift of linear carriage design, design goals - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_01/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals" />
+<meta property="og:description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_01/" />
+
+
+
+<meta property="article:published_time" content="2014-07-22T17:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-07-22T17:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals">
+<meta itemprop="description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰">
+
+
+<meta itemprop="datePublished" content="2014-07-22T17:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-07-22T17:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="569">
+
+
+
+<meta itemprop="keywords" content="3DP,Kossel,DIY," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals"/>
+<meta name="twitter:description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (1) Shift of linear carriage design, design goals</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-07-22 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>今天果断放弃了 Johann 的 <a href="https://github.com/jcrocholl/recirculating" title="recirculating"> 塑料滚珠线性滑轨方案 </a> <img src="/3DP/_images/DSC00372.jpg" alt="" title="滚珠线性滑轨（正面）" />  <img src="/3DP/_images/DSC00373.jpg" alt="" title="滚珠线性滑轨（背面）" />主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰撞的声音，以及和铝合金框架碰撞的噪音，噪音问题在 google 论坛 Delta robot 3D printer 中也有提及，可是我找不到出处了 😓）</p>
+
+<p>剩下的问题有以下几点</p>
+
+<ul>
+<li>铝框架的选择：目前看来，考虑到整体结构的刚性 2020 型铝型材是比较理想的方案，需要确定的是使用欧标的 T-型铝 <img src="/3DP/_images/DSC00374.jpg" alt="" title="T-型铝材打印件" />还是国标的铝材 <img src="/3DP/_images/DSC00375.jpg" alt="" title="欧标铝材打印件" /> 貌似 kossel 800 使用了 T-型铝。T-型铝的不便之处是还要使用特定的 T-型螺母；而 国标的貌似用 M4 螺母就可以了，但是不清楚 2020 的打印件是否会预留了 M4 的螺丝孔）。</li>
+<li>2020 的打印件：头疼！今天找了好久都没看到有一个详细的解决方案&hellip;</li>
+<li>滑轨的设计：也许会采用 Kossel 800 的三滑轮滑轨，滑轮需要卡在铝型材的凹槽中，要找到合适宽度的滑轮才可以（某宝搜索要给力才行啊！）</li>
+<li>连杆、万向轮：有两种方案（确切说是三种）用万向节（有国外进口的车模用塑料万向节或者国内产廉价碳钢万向节。当然塑料万向节看起来颜色统一，更高大上一些，但是碳钢万向节的好处是更精密），或者使用磁球连接，磁球的方案会有磨损，因此虽然看起来非常酷，也方便拆卸，但是是否选用还有待考虑（最怕当挤出头碰到打印件时把挤出头碰掉就麻烦了）</li>
+<li>最后，挤出头：采用金属的还是 Peek 管的 J-head? 也许我会采用金属的（最后说不定会考虑一下 E3D 😊）</li>
+</ul>
+
+<p>问题远比想象的多。。。</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2014-07-22</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_02/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记（2） Hotend decision</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/">
+            <span class="next-text nav-default">最近 Coursera 上几个有意思的课程</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

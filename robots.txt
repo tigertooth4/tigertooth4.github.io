@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://tigertooth4.github.io/sitemap.xml

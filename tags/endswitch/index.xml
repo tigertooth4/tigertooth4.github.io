@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EndSwitch on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/endswitch/</link>
+    <description>Recent content in EndSwitch on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Sep 2014 09:35:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/endswitch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kossel XL 构建记 (28) ---- The GCode Magic</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</link>
+      <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</guid>
+      <description>昨晚唯一成功解决的，就是电机的运转问题。在电机测试代码下，电机终于可以正常运转了！GCode 真是个神奇的东西，在 Pronterface 下，按钮几乎是个废柴，但是</description>
+    </item>
+    
+  </channel>
+</rss>

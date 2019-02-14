@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>对家用3d打印机的思考 - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="市面上有这么多3d打印机了，我们还能改进什么？ ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠） 自动调平 自动切片 改进的菜单设计 兼有2" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="对家用3d打印机的思考" />
+<meta property="og:description" content="市面上有这么多3d打印机了，我们还能改进什么？ ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠） 自动调平 自动切片 改进的菜单设计 兼有2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/" />
+
+
+
+<meta property="article:published_time" content="2016-08-25T18:56:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-08-25T18:56:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="对家用3d打印机的思考">
+<meta itemprop="description" content="市面上有这么多3d打印机了，我们还能改进什么？ ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠） 自动调平 自动切片 改进的菜单设计 兼有2">
+
+
+<meta itemprop="datePublished" content="2016-08-25T18:56:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-08-25T18:56:00&#43;00:00" />
+<meta itemprop="wordCount" content="376">
+
+
+
+<meta itemprop="keywords" content="3dp,Design,Home,Desktop,PWM," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="对家用3d打印机的思考"/>
+<meta name="twitter:description" content="市面上有这么多3d打印机了，我们还能改进什么？ ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠） 自动调平 自动切片 改进的菜单设计 兼有2"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">对家用3d打印机的思考</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-08-25 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>市面上有这么多3d打印机了，我们还能改进什么？</p>
+
+<ul>
+<li>ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠）</li>
+<li>自动调平</li>
+<li>自动切片</li>
+<li>改进的菜单设计</li>
+<li>兼有2d绘图等功能</li>
+<li>最大的打印占比？</li>
+<li>断料检测</li>
+<li>自动上料/退料/换料</li>
+<li>安全/低毒</li>
+<li>断电续打</li>
+<li>外观！外观！外观！</li>
+</ul>
+
+<hr />
+
+<p>更新：电源管理功能可以通过 Raspberry PI + 继电器来实现，Raspberry PI 可以作为打印机的控制终端，平时开启时耗电量基本可以忽略不计，然后通过 GPIO 来控制继电器，实现打印机的电源开启/关闭等功能。这种思路不但适用于控制打印机，还可以用来控制家里的其它电器，将 PI 和家中的无线路由器相连，可以实现智能家居的功能。</p>
+
+<hr />
+
+<p>更新：随着时间的发展，越来越多的厂商开始关注 3D 打印产业了，越来越多的类型、越来越多的产品也相继涌现。但是，缺乏标准使这个行业开始有些混乱了。作为一个 maker, 要想改进某项硬件，必须要留守在某个厂商的阵营。这种情形深深的困扰着我。。。</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2016-08-25</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3dp</a>
+          
+          <a href="/tags/design/">Design</a>
+          
+          <a href="/tags/home/">Home</a>
+          
+          <a href="/tags/desktop/">Desktop</a>
+          
+          <a href="/tags/pwm/">PWM</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/fff-%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%8B%E4%B8%80%E7%AB%99%E5%A4%9A%E6%9D%90%E6%96%99%E6%B7%B7%E5%90%88%E6%89%93%E5%8D%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">FFM 技术的下一站：多材料混合打印</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/dinky/%E5%81%9A%E4%B8%80%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%B4%A7%E5%87%91%E7%9A%84-3d-%E6%89%93%E5%8D%B0%E6%9C%BA/">
+            <span class="next-text nav-default">做一台小巧紧凑的 3D 打印机</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="Hi guys,
+ At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&amp;rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/&#43;XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
+ Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate." />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/yet-another-multi-nozzle-tool-head-design/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Hi guys,
+ At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/&#43;XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
+ Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/yet-another-multi-nozzle-tool-head-design/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Hi guys,
+ At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/&#43;XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
+ Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate.">
+
+
+
+<meta itemprop="wordCount" content="613">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Hi guys,
+ At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/&#43;XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
+ Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>Hi guys,</p>
+
+<p> </p>
+
+<p>At the end of this year, I would like to share my design of a multi-nozzle tool
+head. You may or may not remember that a year ago I&rsquo;ve posted some results of
+dual material 3d printing on my DIY Ultimaker 2
+(<a href="https://plus.google.com/+XiaojunLiu/posts/4kjzNmNFms">https://plus.google.com/+XiaojunLiu/posts/4kjzNmNFms</a>). I said I used a
+different approach which has not been implemented (at least I didn’t find)
+elsewhere.</p>
+
+<p> </p>
+
+<p>Well, the nozzle changing idea I came up with was inspired by the multi-lens
+microscope (where three or four lenses are distributed around an axis, mounted
+on a plate. To change from one to another, one can simply rotate the whole plate
+so that the lens engaging is pointing towards the object).</p>
+
+<p> </p>
+
+<p><img src="post.images/XY0a5i.png" alt="" /></p>
+
+<p> </p>
+
+<p>Took this idea, I replace the lenses with nozzles. For example, given three E3D
+kraken style heat breaks, heat blocks and nozzles distributes around a slightly
+leaned axis, at an even angle. The axis is leaned at a certain angle to ensure
+the nozzle engaged will be pointing perpendicularly towards the heated bed.</p>
+
+<p> </p>
+
+<p><img src="post.images/Sbbk8O.png" alt="" /></p>
+
+<p> </p>
+
+<p>Then the heat breaks will be inserted and mounted into a single heatsink.</p>
+
+<p><img src="post.images/oKvrAY.png" alt="" /></p>
+
+<p> </p>
+
+<p>At the top of the heatsink a large 6807zz bearing is inserted to ensure the
+rotation with the given axis. Actually we use two bearings for the axis to avoid
+wobbling when performing the rotation.</p>
+
+<p> </p>
+
+<p><img src="post.images/7C8Q6D.png" alt="" /></p>
+
+<p> </p>
+
+<p>But a free rotation is not what we want, for the engaged nozzle will rotates
+away by fiction. To implement the intermittent rotation, I used the Geneva
+mechanism, as you can see the Geneva wheel is fixed in the back side of the
+heatsink. So that the drive gear rotates, drives the Geneva wheel rotates. And
+when the engaged nozzle is printing, Geneva wheel is constrained so that the
+rotation freedom is eliminated.</p>
+
+<p> </p>
+
+<p><img src="post.images/8R5Jsv.png" alt="" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>To drive the gear, many approaches can be used. For simplicity, I took the
+mechanical way (inspired by the Ultimaker 3). I used a rack to drive the gear.
+So that if the rack is pushed from either sides, the drive gear rotates.</p>
+
+<p> </p>
+
+<p>To do that, two rods must be mounted on each sides of the printer, so that if
+the tool head moves towards the end of the rod, the rack will be pushed.</p>
+
+<p><img src="post.images/CLMv9B.png" alt="" /></p>
+
+<p>Then a printed pivot part will connects these components together. The pivot
+part is also good for holding all the wires and Bowden tubes, which will be
+connected to the nozzles.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><img src="post.images/0yJ8Xe.png" alt="" /></p>
+
+<p> </p>
+
+<p>Then comes with the printed enclosure and two fans. The left axial fan is for
+cooling the heatsink, and the right blower fan is for cooling the printed parts.</p>
+
+<p> </p>
+
+<p><img src="post.images/nWHi7r.png" alt="" /></p>
+
+<p> </p>
+
+<p>Finally, at the bottom a sheet metal piece is mounted to the enclosure to
+prevent ooz</p>
+
+<p>from un-used nozzle. Also a printed shroud guides the air flow out from the
+blower fan to the printed parts.</p>
+
+<p> </p>
+
+<p><img src="post.images/W4Rknl.png" alt="" /></p>
+
+<p> </p>
+
+<p>Currently the whole tool head design can be used as a module for UM2. The rack
+can be pushed by two rods which are fixed on two sides of the wall of the UM2
+machine.</p>
+
+<p> </p>
+
+<p><img src="post.images/o5Ogat.png" alt="" /></p>
+
+<p> </p>
+
+<p><img src="post.images/guen2D.png" alt="" /></p>
+
+<p><img src="post.images/wOIMgF.png" alt="" /></p>
+
+<p>As you may see here currently only two nozzles have been mounted. The repeat
+accuracy is impressive, I’ve printed a lot of dual-extrusion models, such as the
+Gyro, the traffic cone, the hand-drill and also a strandbeest I designed on
+thingiverse (<a href="https://www.thingiverse.com/thing:3263196">https://www.thingiverse.com/thing:3263196</a>).</p>
+
+<p> </p>
+
+<p>I’m working on the hardware and software to make three nozzle printing possible.</p>
+
+<p> </p>
+
+<p>Also, I’m trying to make this design more compact. The heatsink part needs to be
+simplified, improved, for easy making. And I have not give a good name for this
+tool head.</p>
+
+<p> </p>
+
+<p>So please help me to improve it! Any ideas, comments, names are appreciated!
+Also I’ve some spared parts, I’ll be very happy to help you to try this out.</p>
+
+<p> </p>
+
+<p>Best,</p>
+
+<p>XJ</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_32/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/cocoa/nspopover-&#43;-custom-view-inside/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

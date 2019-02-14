@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>戴维斯的街道和生成函数 - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &amp;quot;戴维斯的街道和生成函数" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%88%B4%E7%BB%B4%E6%96%AF%E7%9A%84%E8%A1%97%E9%81%93%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="戴维斯的街道和生成函数" />
+<meta property="og:description" content="为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &quot;戴维斯的街道和生成函数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%88%B4%E7%BB%B4%E6%96%AF%E7%9A%84%E8%A1%97%E9%81%93%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" />
+
+
+
+<meta property="article:published_time" content="2013-02-25T23:31:09&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-02-25T23:31:09&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="戴维斯的街道和生成函数">
+<meta itemprop="description" content="为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &quot;戴维斯的街道和生成函数">
+
+
+<meta itemprop="datePublished" content="2013-02-25T23:31:09&#43;00:00" />
+<meta itemprop="dateModified" content="2013-02-25T23:31:09&#43;00:00" />
+<meta itemprop="wordCount" content="1484">
+
+
+
+<meta itemprop="keywords" content="生成函数,数学,Davis," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="戴维斯的街道和生成函数"/>
+<meta name="twitter:description" content="为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &quot;戴维斯的街道和生成函数"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">戴维斯的街道和生成函数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-02-25 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &quot;戴维斯的街道和生成函数&quot; （以下内容可能引起非数学专业的童鞋们的不适，请回避...）。</p>
+
+<p>当我刚来戴维斯不久时，我就发现这里的街道很有意思，首先都是棋盘形的，横平竖直。其次，街道的命名方法很直接：南北方向的以英文字母 A, B, C, D ... 命名，东西方向的以 1, 2, 3, 4, ... 命名（后来去过其它城市才发现这是命名的通用规则）。我住在 J street 和 Covell Blvd 的交叉口 （Covell 大概到了14街吧），每天骑车总会想想有什么新鲜的路线可以尝试。</p>
+
+<p>[caption id=&quot;attachment_514&quot; align=&quot;aligncenter&quot; width=&quot;600&quot;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2013/02/屏幕快照-2013-02-25-下午10.50.15.png"><figure><img src="http://www.xjliu.net/blog/wp-content/uploads/2013/02/屏幕快照-2013-02-25-下午10.50.15.png" alt="戴维斯城区地图，大体上呈田字形的街道"></figure></a> 戴维斯城区地图，大体上呈田字形的街道[/caption]</p>
+
+<p>这一天突然想到一个问题：如果我每天尝试一条路线去学校，一年时间能不能把所有路线都试一遍呢？ 在纸上画了画，觉得这个问题似乎很复杂（小学奥数没学好，记得有这样的计数问题，可是却忘了怎么做），路线可以多种多样，在每个交叉路口都有 2 或者 4 种选择。要保证最后的路线不形成圈，而且能从固定起点（例如家）到固定终点（例如学校）。 但是，作为受过多年数学专业训练的人，我怎么能随便放弃一个数学问题呢？于是从简单的问题着手：如果大街围成一个 1×1，1×2，2×1 .... 的小方格，路线应该如何计算？</p>
+
+<p>[caption id=&quot;attachment_517&quot; align=&quot;aligncenter&quot; width=&quot;600&quot;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2013/02/手稿.png"><figure><img src="http://www.xjliu.net/blog/wp-content/uploads/2013/02/手稿-1024x561.png" alt="手绘简图和思路"></figure></a> 手绘简图和思路[/caption]</p>
+
+<p>很快发现，应该对走的方式加以限制：假定从田字格的左下角出发，目的地是右上角，我们可以给节点以坐标，例如让左下角节点为原点 (0, 0)，所有节点都用整数数组 (i, j) 来标记。那么，我们应只考虑那些往东或北方向行进的路线：因为这样才能更接近目的地。 于是我们的问题变为：从 (0, 0) 点出发，到 (n,m) 点，如果每次都让横坐标或者纵坐标加 1 的话，这样的路线会有多少条？ 假设我们的棋盘大小为  n×m，假设从  (0, 0) 点出发，到 (n,m) 的路线总数为 $W_{(n,m)}$，那么向东或北前进后，从新起点到 (n,m) 的路线应该分别为 $W_{(n-1, m)}$ 和 $W_{(n,m-1)}$。于是我们就有了一个递推公式： <span  class="math">\(W_{(n,m)} = W_{(n-1,m)} + W_{(n, m-1)}.\)</span> 初始条件自然是 $W_{(0,m)} = W_{(n,0)} = 1$。因此，从数学上说，这个问题已经解决了！ 但是，显然如果这就算是问题的答案，大家一定不满意！好吧，那我们来算具体的例子：我之前说过，我公寓的位置大概是 J st 和 14th st 的交汇处，假设学校的位置是 A st 和 1st 的交汇处，也就是原点 (0, 0)，那么我的公寓坐标就是 (10, 14)。用我最喜欢的一个小众数学软件 FriCAS 实现递推公式是最容易的，代码如下：</p>
+
+<p>[cc lang=&quot;Haskell&quot;]</p>
+
+<p>W(n,0)==1</p>
+
+<p>W(0,m)==1</p>
+
+<p>W(n,m)==W(n,m-1)+W(n-1,m)</p>
+
+<p>[/cc]</p>
+
+<p>要求具体值时，只要输入 [cciN_haskell]W(10,14)[/cciN_haskell] 就可以得到结果。最后计算出道路的数目约一百九十六万（1,961,256)。如果我每天选不同的路线的话，要走五千多年才能走完。</p>
+
+<h3 id="更进一步">更进一步</h3>
+
+<p>作为学数学的重脑力工作者，到这一步自然不会结束。有没有一种方法可以不用电脑解决问题呢？我们可以使用数学中常见的技巧：所谓生成函数（generating functions）的方法，将所有 $W_{(n,m)}$ 组合在一起，给每组 (n,m) 配以不同的权重，加以区分。权重是用未定元的不同次数实现的。在有了权重以后，我们可以把所有 $W_{(n,m)}$ 组合起来，这就是生成函数，我们记其为 $ \Phi $:</p>
+
+<p><span  class="math">\[ \Phi(x,y) := \sum_{n,m\in\mathbb{N}} W_{(n,m)} x^n y^m.\]</span></p>
+
+<p>这个公式，对于学过微分方程的人其实并不陌生，它就是著名的 Laplace 变换！因此，我们实际上对 $W_{(n,m)}$ 做了这个变换。</p>
+
+<p>下面，我们自然要问，既然 $W_{(n,m)}$ 可以变换，那么 $W_{n,m}$ 所满足的等式可不可以变换呢？当然可以！这正是我们关心的问题！如果对 $W_{(n,m)}$ 的递推公式两边都作用 $\sum_{n,m\in\mathbb{N}} x^n y^m$ 的话，我们会得到如下关系</p>
+
+<p><span  class="math">\[ \Phi(x,y) = (x+y) \Phi(x,y) + \frac{x}{1-x} + \frac{y}{1-y}.\]</span></p>
+
+<p>注意到右边最后两项使用了初始条件。所以 <span  class="math">\( \Phi(x,y) = \frac{x+y-2 x y}{(1-x) (1-y) (1-x-y)}.\)</span></p>
+
+<p>也就是说，所有关于路径数目的信息完全隐藏在函数 $ \Phi(x,y)$ 里了！如果想求到任何位置 (n,m) 的不同路径数目，只要算算 $ \Phi(x,y)$ 的展开式 $x^n y^m$ 项的系数就好了！</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2013-02-25</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/">生成函数</a>
+          
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+          
+          <a href="/tags/davis/">Davis</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E5%85%B6%E5%AE%83/%E6%9C%89%E5%85%B3-markdown-%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B5%84%E6%BA%90/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">有关 Markdown 编程的一些资源</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/">
+            <span class="next-text nav-default">多项式不等式以及数学软件GUI前端</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

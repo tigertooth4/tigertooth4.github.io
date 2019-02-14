@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>G29 on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/g29/</link>
+    <description>Recent content in G29 on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Mar 2015 15:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/g29/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/</link>
+      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/</guid>
+      <description>自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。</description>
+    </item>
+    
+    <item>
+      <title>Kossel XL 构建记 (35) ---- Various Post Building Thoughts</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_35/</link>
+      <pubDate>Fri, 20 Feb 2015 15:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_35/</guid>
+      <description>好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G+ 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做</description>
+    </item>
+    
+    <item>
+      <title>Kossel XL 构建记 (34) ---- The Printer Calibration</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_34/</link>
+      <pubDate>Sat, 08 Nov 2014 20:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_34/</guid>
+      <description>简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单</description>
+    </item>
+    
+  </channel>
+</rss>

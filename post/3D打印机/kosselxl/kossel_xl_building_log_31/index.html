@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (31) ---- The G-Code Summary  - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_31/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (31) ---- The G-Code Summary " />
+<meta property="og:description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_31/" />
+
+
+
+<meta property="article:published_time" content="2014-10-05T15:52:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-10-05T15:52:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (31) ---- The G-Code Summary ">
+<meta itemprop="description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通">
+
+
+<meta itemprop="datePublished" content="2014-10-05T15:52:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-10-05T15:52:00&#43;00:00" />
+<meta itemprop="wordCount" content="1243">
+
+
+
+<meta itemprop="keywords" content="3DP,Kossel,GCode," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (31) ---- The G-Code Summary "/>
+<meta name="twitter:description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (31) ---- The G-Code Summary </h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-10-05 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#概览">概览</a></li>
+<li><a href="#延时发出的-g-指令">延时发出的 G 指令</a></li>
+<li><a href="#即时执行的-g-指令">即时执行的 G 指令</a></li>
+<li><a href="#设定-读取">设定/读取</a></li>
+<li><a href="#marlin-richcattell-的特殊设定">Marlin-RichCattell 的特殊设定</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>Title:
+Date: 2014-10-05 15:52:00
+Tag: 3dp, Kossel, GCode
+Status: public</p>
+
+<p>以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 <a href="http://reprap.org/wiki/G-code/zh_cn">RepRap:G-Code</a> 以及
+<a href="http://tontome.wordpress.com/2014/08/23/g-code-commands-supported-by-marlin/">tontome.wordpress</a></p>
+
+<h2 id="概览">概览</h2>
+
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>意义</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Gnnn</td>
+<td>标准 G-Code 指令</td>
+</tr>
+
+<tr>
+<td>Mnnn</td>
+<td>Reprap 定义的指令</td>
+</tr>
+
+<tr>
+<td>Tnnn</td>
+<td>通常是挤出头的代码</td>
+</tr>
+
+<tr>
+<td>Xnnn</td>
+<td>X 坐标移动，Y,Z 同理</td>
+</tr>
+
+<tr>
+<td>Fnnn</td>
+<td>进料速度，以 mm/min 为单位</td>
+</tr>
+
+<tr>
+<td>Ennn</td>
+<td>控制进入挤出机的线材的长度</td>
+</tr>
+
+<tr>
+<td>Nnnn</td>
+<td>行码</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="延时发出的-g-指令">延时发出的 G 指令</h2>
+
+<p>这些指令是逐条进入固件并执行的。固件中一般都设有一个缓存，用来存放未执行的代码。</p>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>G0</td>
+<td>快速移动</td>
+<td>G0 X12 : 快速在 X 方向移动 12mm</td>
+</tr>
+
+<tr>
+<td>G1</td>
+<td>可控移动</td>
+<td>G1 X10 Y5 E20 : 从当前点移动到 X=10, Y=5 的点，并挤出 20mm 的料丝; G1 F600 可以设置挤出速度为 600mm/min</td>
+</tr>
+
+<tr>
+<td>G28</td>
+<td>移动至原点</td>
+<td>向着限位开关的方向移动，知道碰触限位开关时停止；G28 X0 Y70 会忽略 Z 方向的复位，X, Y 的数值不起作用</td>
+</tr>
+
+<tr>
+<td>G29</td>
+<td>细致的Z探测</td>
+<td>G29 : 每个检查点的 Z 高度都测量 3 次</td>
+</tr>
+
+<tr>
+<td>G30</td>
+<td>当前位置的 Z 探测</td>
+<td>G30 : 只探测当前 X-Y 位置的 Z 高度</td>
+</tr>
+
+<tr>
+<td>G31</td>
+<td>通报Z限位器是否已被触发</td>
+<td>G31</td>
+</tr>
+
+<tr>
+<td>G32</td>
+<td>用于 FPU 的Z探测</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="即时执行的-g-指令">即时执行的 G 指令</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>G4</td>
+<td>停顿</td>
+<td>G4 P200 停顿 200ms, 停顿过程中很多量仍可以被控制，如挤出头温度等</td>
+</tr>
+
+<tr>
+<td>G21</td>
+<td>设置以mm 为单位</td>
+<td></td>
+</tr>
+
+<tr>
+<td>G90</td>
+<td>设置成绝对位置</td>
+<td></td>
+</tr>
+
+<tr>
+<td>G91</td>
+<td>设置成相对位置</td>
+<td></td>
+</tr>
+
+<tr>
+<td>G92</td>
+<td>设置当前点为指定坐标</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M0</td>
+<td>执行完缓冲区指令后立即停止并关机</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M1</td>
+<td>执行完缓冲区指令后进入睡眠状态</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M17</td>
+<td>步进电机加电</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M18</td>
+<td>步进电机断电</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M20</td>
+<td>列出 SD 卡 根目录的文件</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M21</td>
+<td>初始化 SD 卡</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M22</td>
+<td>推出 SD 卡</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M23</td>
+<td>选定 SD 卡上的文件</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M24</td>
+<td>开始、继续 SD 打印</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M25</td>
+<td>暂停 SD 打印</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M27</td>
+<td>报告 SD 卡状态</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="设定-读取">设定/读取</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>M92</td>
+<td>设置 axis_steps_per_units</td>
+<td>M92 X<new steps></td>
+</tr>
+
+<tr>
+<td>M104</td>
+<td>设置挤出机温度, 然后立即将控制权转交给host</td>
+<td>M104 S190 : 设置挤出机到 190°C</td>
+</tr>
+
+<tr>
+<td>M105</td>
+<td>读取挤出头和热床温度</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M106</td>
+<td>风扇开</td>
+<td>M106 S190 : 将风扇转速设定在 0-255 之间</td>
+</tr>
+
+<tr>
+<td>M107</td>
+<td>风扇关</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M109</td>
+<td>设置挤出头温度，并等待升温到此温度</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M114</td>
+<td>得到当前的位置</td>
+<td>X Y Z 和挤出头 E 的位置</td>
+</tr>
+
+<tr>
+<td>M119</td>
+<td>返回限位开关状态</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M134</td>
+<td>将 PID 值写入到 EEPROM</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M135</td>
+<td>设置 PID 采样间隔</td>
+<td>M135 S300 （设置采样间隔为 300ms)</td>
+</tr>
+
+<tr>
+<td>M136</td>
+<td>打印 PID 设置到 host</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M140</td>
+<td>设置热床温度，并立即交回控制权</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M190</td>
+<td>等待热床到设定的温度</td>
+<td>M190 S60</td>
+</tr>
+
+<tr>
+<td>M201</td>
+<td>设定打印最大加速度</td>
+<td>M201 X1000 Y1000 Z100 E2000 （设置 X,Y, Z 和 E 的加速度 unit/second^2</td>
+</tr>
+
+<tr>
+<td>M203</td>
+<td>设定最大 Feedrate (mm/minute)</td>
+<td>M203 X6000 Y6000 Z300 E10000</td>
+</tr>
+
+<tr>
+<td>M207</td>
+<td>通过测量 Z 轴的最大活动范围来校准 Z 轴</td>
+<td>M207 (当把打印头移动到你认为的 Z=0 处时用这个命令，打印机会自动回位并记录 Z 轴移动的距离作为 Z_MAX)</td>
+</tr>
+
+<tr>
+<td>M208</td>
+<td>设置 X Y Z 轴的最大行程</td>
+<td>M208 X250 Y210 Z180 （Marlin 中可以通过 M500 命令把设置结果保存到 EEPROM 中）</td>
+</tr>
+
+<tr>
+<td>M240</td>
+<td>照相</td>
+<td></td>
+</tr>
+
+<tr>
+<td>M301</td>
+<td>手动设置 PID 的值</td>
+<td>M301 P1 I2 D3</td>
+</tr>
+
+<tr>
+<td>M303</td>
+<td>自动PID调节</td>
+<td>设置加热头：M303 S<temperature> C<cycles> 设置热床： M303 E-1 C<cycles> S<temperature></td>
+</tr>
+
+<tr>
+<td>M304</td>
+<td>设置热床 PID 的值</td>
+<td>M304 P1 I2 D3</td>
+</tr>
+
+<tr>
+<td>M500</td>
+<td>保存设置到 EEPROM 中</td>
+<td>M500</td>
+</tr>
+
+<tr>
+<td>M501</td>
+<td>从 EEPROM 中读取设置</td>
+<td>M501</td>
+</tr>
+
+<tr>
+<td>M502</td>
+<td>重置为出厂设置</td>
+<td>M502 （还需要用 M500 保存）</td>
+</tr>
+
+<tr>
+<td>M503</td>
+<td>获取设置</td>
+<td>M503</td>
+</tr>
+
+<tr>
+<td>M565</td>
+<td>设置探针和加热头之间的偏移量</td>
+<td>M565 X3 Y4.5 Z-2.37</td>
+</tr>
+
+<tr>
+<td>M660</td>
+<td>设置 delta 的参数</td>
+<td>M660 L250 R160 S200  （L = diagonal rod length, R = delta radius, S = segments per second.）</td>
+</tr>
+
+<tr>
+<td>M906</td>
+<td>设置各步进电机的电流（毫安）</td>
+<td>M906 X300 Y500 Z200 E350</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="marlin-richcattell-的特殊设定">Marlin-RichCattell 的特殊设定</h2>
+
+<p>因为我用的是 RichCattell 版本的 Marlin (此版本对于自动标定有了加强)，这里有几个命令需要强调下：</p>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>G30</td>
+<td>可以 G30 X?? Y??，这是标定特定的点，或者 G30 A 代表自动调平</td>
+<td>G30 A 之后，探头将会标定圆周上的六个点以及圆心，得出各个 Tower 的限位开关的修正值，以及各个杆长的修正值等等。</td>
+</tr>
+
+<tr>
+<td>G29</td>
+<td>传统的 7x7 网格调平，但是我不清楚其中的机理，调平后得到的数值是 Z 轴的高度，这些数值会直接被利用来补偿打印时的误差吗？</td>
+<td>G29 Z+0.3 让 Z 轴抬升 0.3mm</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2014-10-05</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/gcode/">GCode</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/life/ohlife/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">纪念即将关闭的 Ohlife</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_30/">
+            <span class="next-text nav-default">Kossel XL 构建记 (30) ---- The Heatbed Assembling</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

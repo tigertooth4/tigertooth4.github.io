@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rostock on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/rostock/</link>
+    <description>Recent content in Rostock on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 Jul 2014 21:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/rostock/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rostock 挤出头架修改</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Mon, 28 Jul 2014 21:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/</guid>
+      <description>这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可</description>
+    </item>
+    
+    <item>
+      <title>Rostock Mini Pro J-head 挤出头peek管风扇架</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/rostock/rostock-mini-pro-j-head-hotend-fan-holder/</link>
+      <pubDate>Fri, 25 Jul 2014 11:30:30 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/rostock/rostock-mini-pro-j-head-hotend-fan-holder/</guid>
+      <description>最近总是饱受打印件抽丝的困扰，打印件里外总是有好多打印头运行时拉出来的细丝，极不美观。而且，这个J-head的制造水平实在欠佳，测温探头的导</description>
+    </item>
+    
+  </channel>
+</rss>

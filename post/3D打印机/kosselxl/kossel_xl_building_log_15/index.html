@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (15) Effector plan - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="Effector 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_15/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (15) Effector plan" />
+<meta property="og:description" content="Effector 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_15/" />
+
+
+
+<meta property="article:published_time" content="2014-08-14T10:06:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-14T10:06:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (15) Effector plan">
+<meta itemprop="description" content="Effector 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊">
+
+
+<meta itemprop="datePublished" content="2014-08-14T10:06:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-08-14T10:06:00&#43;00:00" />
+<meta itemprop="wordCount" content="562">
+
+
+
+<meta itemprop="keywords" content="3DP,Kossel,DIY,MIY,Effector,Design," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (15) Effector plan"/>
+<meta name="twitter:description" content="Effector 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (15) Effector plan</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-14 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p><em>Effector</em> 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我
+ 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊台复杂不少。要在吊台上添加微动开关、机械部
+ 件、弹簧等等，保证当挤出头触碰玻璃板的瞬间，微动开关可以被触发，为了这个目的，这几天脑子里各种方案在
+ 打架&hellip;</p>
+
+<p>目前设计的方案是参考（copy）<em>ATOM3DP</em> 的。整个联动机构都包在一个类似宇宙飞船外形的舱里。从外面是看不
+到微动开关的。碍于微动开关的尺寸，所以整个机构不可能做得很小巧，而且在下部还要装 E3D 的散热风扇
+(30x10)，所以后部又要留下足够的空间，使得整个装置的空间都很紧张了。</p>
+
+<p>这是我目前的设计图，虽说是 copy，但是还是和 ATOM3DP 有区别的。<img src="/3DP/_images/Effector.png" alt="" /> 主要是目前 E3D 的 groove
+非常大，因此我要预留比 ATOM3DP 设计中更大的空间。</p>
+
+<p>这是 Effector 底部的空洞：<img src="/3DP/_images/Effector-base.png" alt="" />这是上面的盖子<img src="/3DP/_images/Effector-lid.png" alt="" />可以叫它马桶盖😓. 中间使用一颗 m3 螺丝
+固定的，到时还要在连接处加上垫片以便上面的盖子不移位。</p>
+
+<p>目前还没有预留固定 groove 的孔，主要是不清楚孔该打在哪里。而且以后还要考虑到和微动开关的配合（微动开
+关的位置）等，所以今天我先要打出一个小样，以便今后继续研究。</p>
+
+<hr />
+
+<p>【补充】这是前天制作好的连杆；误差应该在 ± 0.2mm，所以我在滑轨上先定好连杆的长度，然后拧上两个固定微
+动开关的零件限位，这样再粘连杆头的时候就不会有错了！<img src="/3DP/_images/DSC00496.jpg" alt="" /> <img src="/3DP/_images/DSC00497.jpg" alt="" /> <img src="/3DP/_images/DSC00498.jpg" alt="" />
+<img src="/3DP/_images/DSC00500.jpg" alt="" /></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2014-08-14</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+          <a href="/tags/miy/">MIY</a>
+          
+          <a href="/tags/effector/">Effector</a>
+          
+          <a href="/tags/design/">Design</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_16/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记 (16) Emacs, editor for OpenSCAD</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_14/">
+            <span class="next-text nav-default">Kossel XL 构建记 (14) Rods, length and assembly</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

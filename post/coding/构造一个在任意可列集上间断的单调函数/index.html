@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>构造一个在任意可列集上间断的单调函数 - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/coding/%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9C%A8%E4%BB%BB%E6%84%8F%E5%8F%AF%E5%88%97%E9%9B%86%E4%B8%8A%E9%97%B4%E6%96%AD%E7%9A%84%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="构造一个在任意可列集上间断的单调函数" />
+<meta property="og:description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/coding/%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9C%A8%E4%BB%BB%E6%84%8F%E5%8F%AF%E5%88%97%E9%9B%86%E4%B8%8A%E9%97%B4%E6%96%AD%E7%9A%84%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" />
+
+
+
+<meta property="article:published_time" content="2012-07-13T21:37:19&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-07-13T21:37:19&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="构造一个在任意可列集上间断的单调函数">
+<meta itemprop="description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函">
+
+
+<meta itemprop="datePublished" content="2012-07-13T21:37:19&#43;00:00" />
+<meta itemprop="dateModified" content="2012-07-13T21:37:19&#43;00:00" />
+<meta itemprop="wordCount" content="660">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="构造一个在任意可列集上间断的单调函数"/>
+<meta name="twitter:description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">构造一个在任意可列集上间断的单调函数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-07-13 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>[mathjax]</p>
+
+<p>几天前，<a href="http://emuch.net" title="小木虫">小木虫</a> 上有人提问这样一个问题：</p>
+
+<p><em>在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？</em></p>
+
+<p>由于连续的凸函数在有界闭区间的每个点上至少存在左右导数，也就是说，连续凸函数的导函数至多只有第一类间断点。并且，由凸函数的性质，我们还能证明凸函数的导函数一定是单调函数。因此，要回答上述问题，我们只需要说明：</p>
+
+<p><em>是否存在这样的单调函数，它的间断点的集合在有界闭区间上稠密？</em></p>
+
+<p>more</p>
+
+<p>事实上，这样的单调函数是存在的。经过一番搜索，我发现前人已经研究过类似的问题，其结论是：</p>
+
+<p>对于任意可列集 ({a<em>k}</em>{k\in\mathbb{N}}), 都能找到一个单调函数 (F(x))，使得 (F(x)) 以 (a_k) 为其间断点。</p>
+
+<p>构造方法很简单，只要令：[ F(x) = \sum_{a_k &lt; x} \frac{1}{r^k} ] 即可，其中(r)是一个大于1的常数。证明 (F(x)) 是单调函数，并且以 (a_k) 为间断点，可以参考</p>
+
+<p><a href="http://166.111.121.20:9080/mathjournal/GKSX704/gksx704029.caj.pdf">论文一</a> 或者 <a href="http://wenku.baidu.com/view/9e228260783e0912a2162a0a.html">论文二</a>。</p>
+
+<p>下面，以 [0,1] 中的有理数集为对象，我给出函数 (F(x)) 的大致图像:</p>
+
+<p>[caption id=&ldquo;attachment_165&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc.png"><img src="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc-300x189.png" alt="" title="在 [0,1] 中有理数集上间断的单调函数" /></a> 在 [0,1] 中有理数集上间断的单调函数[/caption]</p>
+
+<p>为画出这样的图像，我们使用了 Mathematica. 其关键是不重复地列出所有 [0,1] 中分母小于 (n) 的有理数，并对于 (a_k &lt; x) 的 (k) 求和。为此，我们使用了 Table 命令来创建有理数列表，并用 Total 命令对于 (\frac{1}{r^k}) 的列表进行加和，代码如下：</p>
+
+<p>`</p>
+
+<p>n = 20; r = 1.05;</p>
+
+<p>a = DeleteDuplicates[Flatten[Table[Table[i/j, {i, j}], {j, n}]]];</p>
+
+<p>F[x_] := Total[Table[If[a[[i]] &lt; x, 1/r^i, 0], {i, Length[a]}]];</p>
+
+<p>Plot[F[x], {x, 0, 1}]</p>
+
+<p>`</p>
+
+<p>注意，Flatten 命令的目的是把多层列表（nested list）转化为一普通列表，而 DeleteDuplicates 的作用是去掉列表中的重复项。Mathematica 中，取列表中第 i 号元素的方式是两层中括号 a[[i]]。Mathematica 中对于列表的处理是异常强大的，大家可以慢慢体会它的强大与灵活。</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2012-07-13</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/life/%E5%BD%A2%E5%8F%98/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">形变</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/coding/calculate-pdos-by-using-axiom/fricas/">
+            <span class="next-text nav-default">Calculate PDOs using AXIOM / FriCAS</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (18) Effector design  - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试 effector 的设计方案，之前的方案在做微动开关螺丝孔的时" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_18/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (18) Effector design " />
+<meta property="og:description" content="看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试 effector 的设计方案，之前的方案在做微动开关螺丝孔的时" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_18/" />
+
+
+
+<meta property="article:published_time" content="2014-08-17T23:49:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-17T23:49:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (18) Effector design ">
+<meta itemprop="description" content="看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试 effector 的设计方案，之前的方案在做微动开关螺丝孔的时">
+
+
+<meta itemprop="datePublished" content="2014-08-17T23:49:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-08-17T23:49:00&#43;00:00" />
+<meta itemprop="wordCount" content="756">
+
+
+
+<meta itemprop="keywords" content="3DP,Kossel,DIY,MIY," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (18) Effector design "/>
+<meta name="twitter:description" content="看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试 effector 的设计方案，之前的方案在做微动开关螺丝孔的时"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (18) Effector design </h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-17 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试
+effector 的设计方案，之前的方案在做微动开关螺丝孔的时候高了大概 2mm, 因此每次盖上马桶盖的时候一定会盖
+不严。现在把微动开关沉下去 2mm 后问题解决了！</p>
+
+<p>然后是用来拉紧马桶盖和底部的螺丝，因为螺丝套在圆珠笔芯的弹簧上，所以整个机构得以实现目的。但是今天发
+现，螺丝的螺纹使得弹簧收缩张开时都有很大阻力，于是用锉刀把螺丝中部的螺纹磨平就好了（螺丝还是挺容易锉
+的:-D）</p>
+
+<p>今天不早了，等明天再上图吧！设计 effector 的过程真是艰辛。而且，我现在对黄色的马桶盖也不甚满意（貌似
+太 juvenile 了，也许纯黑色更大气点？）</p>
+
+<p>因为 effector 的底座厚了几毫米，原来默认的 hotend 固定风扇恐怕安不上了，需要重新做一个，在某宝上看到
+了这款 25mm 的<a href="http://item.taobao.com/item.htm?spm=a1z0k.7385961.1997985097.d4918997.LaP0Zs&amp;id=37389879749&amp;_u=h7veq78468c">风扇</a>（够小巧 o(╯□╰)o ）。还没有下手，因为不知道用 12V 还是 5V 的。所以 Ramps 1.4
+板子上的风扇都是怎么连线的呢？最好看这个网页：
+<a href="http://start3dprinting.com/2013/04/adding-a-fan-to-ramps-1-4-board/">http://start3dprinting.com/2013/04/adding-a-fan-to-ramps-1-4-board/</a> 说的很清楚，要想要一个能够控
+制的风扇，要用 D9 (应该是 12V 的)，要想要一个常转的风扇， Ramps 1.4 板子上有个写着 F1 的风扇接口。</p>
+
+<p>写到这里，又想到应该在 effector 上预留几个孔，好固定吹耗材的风扇啊，不过不知为什么目前所知 Delta 系的打印机都没有这个挂在 effector 上用来吹耗材的风扇？</p>
+
+<hr />
+
+<p>【睡前更新】这个网站不错：<a href="http://start3dprinting.com">http://start3dprinting.com</a></p>
+
+<p>3D 打印的印刷电路板：<a href="https://www.kickstarter.com/projects/cartesianco/the-ex1-rapid-3d-printing-of-circuit-boards">https://www.kickstarter.com/projects/cartesianco/the-ex1-rapid-3d-printing-of-circuit-boards</a></p>
+
+<p>【跳票的更新】说是要上图的嘛！就让大家看看 effector 的几版打印件，区别主要是螺丝孔的位置啦！（照片可能不容易发现）</p>
+
+<p>最开始学习的网上的 effector 设计：<img src="/3DP/_images/DSC00512.jpg" alt="" /></p>
+
+<p>G1, G2, G3……<img src="/3DP/_images/DSC00510.jpg" alt="" /> (请无视那脏兮兮的键盘= =b)</p>
+
+<p>试装配成功（所有的线材都是走外部的）<img src="/3DP/_images/DSC00509.jpg" alt="" /></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2014-08-17</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+          <a href="/tags/miy/">MIY</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_19/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记 (19) Wiring plans </span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_17/">
+            <span class="next-text nav-default">Kossel XL 构建记 (17) Stepper motors</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

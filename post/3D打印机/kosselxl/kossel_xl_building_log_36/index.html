@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件 - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件" />
+<meta property="og:description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/" />
+
+
+
+<meta property="article:published_time" content="2015-03-03T15:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-03-03T15:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件">
+<meta itemprop="description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。">
+
+
+<meta itemprop="datePublished" content="2015-03-03T15:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-03-03T15:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1546">
+
+
+
+<meta itemprop="keywords" content="3dp,deltabot,Kossel,Marlin,auto-levelling,auto-calibration,G29,G30," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件"/>
+<meta name="twitter:description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-03-03 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#自动调平与自动校正">自动调平与自动校正</a></li>
+<li><a href="#marlin-固件对于自动调平和自动校正的支持现状">Marlin 固件对于自动调平和自动校正的支持现状</a></li>
+<li><a href="#jcrocholl-的-marlin-代码">Jcrocholl 的 Marlin 代码</a>
+<ul>
+<li><a href="#g29-和-g30">G29 和 G30</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h4 id="自动调平与自动校正">自动调平与自动校正</h4>
+
+<p>首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。自动调
+平，一般是指调节热床的平整度；而自动校正是一个更复杂的过程，不但包括校正热床的平整度，还包括调整三个
+塔（Towers）的对称性，限位开关的高度，杆长等等，是一个相当复杂的过程。</p>
+
+<h4 id="marlin-固件对于自动调平和自动校正的支持现状">Marlin 固件对于自动调平和自动校正的支持现状</h4>
+
+<p>Marlin 固件的碎片化越来越严重了！如果上 Github, 你会发现目前 Marlin 至少有 1800 多个 fork。最最正宗的
+Marlin 固件是由 Erik 维护的。不幸的是，尽管已经存在了很久，但是目前对于 Deltabot 的自动调平支持的还
+不是很好（原因嘛~也许 Marlin 固件要做到大而全，尽量支持各种结构和机型，当然不可能在短时间内将所有事
+情都做完美）。</p>
+
+<p>目前支持 Deltabot 自动调平的固件可以参考 Jcrocholl 的 Marlin 固件；而『支持』自动校正的是
+RichCattell 的 Marlin 固件。</p>
+
+<h4 id="jcrocholl-的-marlin-代码">Jcrocholl 的 Marlin 代码</h4>
+
+<h5 id="g29-和-g30">G29 和 G30</h5>
+
+<p>阅读 Marlin 的代码，可以发现控制 Deltabot 运动的全部代码几乎都在 Marlin_main.cpp 这个文件的
+Process_commands() 文件里。通过 switch 语句来处理不同的 G-Code, M-Code 指令。在 Jcrocholl 版本的
+Marlin 中，G30 的作用是探测某一点的 Z-高度。让我们来研究一下代码：</p>
+
+<pre><code class="language-c++">    case 30: // G30 Single Z Probe
+        {
+            engage_z_probe(); // Engage Z Servo endstop if available
+			/* 这个函数是在 marlin_main.cpp 里面定义的，作用是放下Z-探测探针（当然有各种办法放下，比
+			   如用『伺服电机』或者干脆让 Z-探针接触皮带从而放下探针）。崩溃的是，让 Z-探针接触皮带的
+			   坐标是写死在固件里的（并没有提供设置参数），因此 Jcrocholl 的 Marlin 注定是高度定制化
+		       的。
+			*/
+            st_synchronize();
+			/* 这个函数的定义可以在 Stepper.cpp 这个文件里面找到，是直接控制步进电机用的。作用是完成
+			   缓充区里暂存的命令，并负责管理热床的状态、更新 LCD 显示等等。
+		    */
+
+            // TODO: make sure the bed_level_rotation_matrix is identity or the planner will get set incorectly
+            setup_for_endstop_move();
+			/* 设定 feedrate 等等，但最重要的是 enable_endstops(true)，即把一个检测 endstop 状态的变
+               量：check_endstops 的值设为 true。
+		    */
+
+            feedrate = homing_feedrate[Z_AXIS];
+
+            run_z_probe();
+			/* 这才是最重要的一句：开始 z-探测。这个函数也是 Jcrocholl 特有的，下面我们将分析这个函
+			   数的功能。
+			*/
+
+            SERIAL_PROTOCOLPGM(MSG_BED);
+            SERIAL_PROTOCOLPGM(&quot; X: &quot;);
+            SERIAL_PROTOCOL(current_position[X_AXIS]);
+            SERIAL_PROTOCOLPGM(&quot; Y: &quot;);
+            SERIAL_PROTOCOL(current_position[Y_AXIS]);
+            SERIAL_PROTOCOLPGM(&quot; Z: &quot;);
+            SERIAL_PROTOCOL(current_position[Z_AXIS]);
+            SERIAL_PROTOCOLPGM(&quot;\n&quot;);
+
+            clean_up_after_endstop_move();
+            retract_z_probe(); // Retract Z Servo endstop if available
+        }
+        break;
+
+</code></pre>
+
+<p>run_z_probe() 的代码：</p>
+
+<pre><code class="language-c++">static void run_z_probe() {
+    plan_bed_level_matrix.set_to_identity();
+
+#ifdef DELTA
+    enable_endstops(true);
+    float start_z = current_position[Z_AXIS];
+	// 当前的打印头位置的 z 坐标
+
+    long start_steps = st_get_position(Z_AXIS);
+	/* 这句很奇怪，得到 Z-柱的步进电机当前的步数，但是对于 Deltabot 来说，Z-柱的步数和打印头的 Z-坐
+	 标之间有直接关系吗？
+
+	*/
+
+    feedrate = homing_feedrate[Z_AXIS]/10; // 让移动速度是 Homing 速度的十分之一
+    destination[Z_AXIS] = -10; // 设置打印头 z-坐标的预期值为 -10
+    prepare_move_raw(); // 规划运动
+    st_synchronize(); // 完成缓冲
+    endstops_hit_on_purpose(); // 设置三个轴 hit 的值为 false
+
+    enable_endstops(false); //设置 check_endstops 这个变量为 false
+    long stop_steps = st_get_position(Z_AXIS);
+
+    float mm = start_z - float(start_steps - stop_steps) / axis_steps_per_unit[Z_AXIS];
+    current_position[Z_AXIS] = mm;
+    calculate_delta(current_position);
+    plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
+#else
+    feedrate = homing_feedrate[Z_AXIS];
+
+    // move down until you find the bed
+    float zPosition = -10;
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    st_synchronize();
+
+        // we have to let the planner know where we are right now as it is not where we said to go.
+    zPosition = st_get_position_mm(Z_AXIS);
+    plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS]);
+
+    // move up the retract distance
+    zPosition += home_retract_mm(Z_AXIS);
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    st_synchronize();
+
+    // move back down slowly to find bed
+    feedrate = homing_feedrate[Z_AXIS]/4;
+    zPosition -= home_retract_mm(Z_AXIS) * 2;
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    st_synchronize();
+
+    current_position[Z_AXIS] = st_get_position_mm(Z_AXIS);
+    // make sure the planner knows where we are as it may be a bit different than we last said to move to
+    plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]);
+#endif
+}
+
+</code></pre>
+
+<p>prepare_move_raw() 的代码，在 Marlin_main.cpp 里定义：</p>
+
+<pre><code class="language-c++">void prepare_move_raw()
+{
+  previous_millis_cmd = millis();
+  // 这是一个 Arduino 内部函数，得到 Arduino 运行到现在的时间（是个
+  // 无符号长整型），Arduino 将会在 50 天后重置时间
+
+  calculate_delta(destination);
+  // 输入打印头的笛卡尔坐标，得到打印头的 delta 坐标（三个滑车向下移动的距离）
+
+  plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
+                   destination[E_AXIS], feedrate*feedmultiply/60/100.0,
+                   active_extruder);
+  // 将线性运动加入 buffer, x, y, z 是带符号的目标位置，单位是 mm
+
+  for(int8_t i=0; i &lt; NUM_AXIS; i++) {
+    current_position[i] = destination[i];
+  }
+  // 将当前打印头位置位置设为目标位置，表明运动完成
+}
+</code></pre>
+
+<p>以下是 RichCattell 的z_probe() 代码，在 Marlin_main.cpp 文件里定义：</p>
+
+<pre><code class="language-c++">float z_probe() {
+  feedrate = AUTOCAL_TRAVELRATE * 60;
+  prepare_move();
+  st_synchronize();
+
+  enable_endstops(true);
+  float start_z = current_position[Z_AXIS];
+  long start_steps = st_get_position(Z_AXIS);
+
+  feedrate = AUTOCAL_PROBERATE * 60;
+  destination[Z_AXIS] = -20;
+  prepare_move_raw();
+  st_synchronize();
+  endstops_hit_on_purpose();
+
+  enable_endstops(false);
+  long stop_steps = st_get_position(Z_AXIS);
+
+  //saved_position[X_AXIS] = float((st_get_position(X_AXIS)) / axis_steps_per_unit[X_AXIS]);
+  //saved_position[Y_AXIS] = float((st_get_position(Y_AXIS)) / axis_steps_per_unit[Y_AXIS]);
+  //saved_position[Z_AXIS] = float((st_get_position(Z_AXIS)) / axis_steps_per_unit[Z_AXIS]);
+
+  float mm = start_z -
+    float(start_steps - stop_steps) / axis_steps_per_unit[Z_AXIS];
+  current_position[Z_AXIS] = mm;
+  calculate_delta(current_position);
+  plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
+		    current_position[E_AXIS]);
+
+  for(int8_t i=0; i &lt; 3; i++) {
+    saved_position[i] = float(st_get_position(i) / axis_steps_per_unit[i]);
+    }
+
+  destination[Z_AXIS] = mm + AUTOCAL_PROBELIFT;
+  prepare_move_raw();
+  st_synchronize();
+  return mm;
+}
+</code></pre>
+
+<p>以下是 prepare_move() 的代码，在 Marlin_main.cpp 里定义：</p>
+
+<pre><code class="language-c++">void prepare_move()
+{
+  clamp_to_software_endstops(destination);
+
+  previous_millis_cmd = millis();
+#ifdef DELTA
+  float difference[NUM_AXIS];
+  for (int8_t i=0; i &lt; NUM_AXIS; i++) {
+    difference[i] = destination[i] - current_position[i];
+  }
+  float cartesian_mm = sqrt(sq(difference[X_AXIS]) +
+                            sq(difference[Y_AXIS]) +
+                            sq(difference[Z_AXIS]));
+  if (cartesian_mm &lt; 0.000001) { cartesian_mm = abs(difference[E_AXIS]); }
+  if (cartesian_mm &lt; 0.000001) { return; }
+  float seconds = 6000 * cartesian_mm / feedrate / feedmultiply;
+  int steps = max(1, int(DELTA_SEGMENTS_PER_SECOND * seconds));
+  // SERIAL_ECHOPGM(&quot;mm=&quot;); SERIAL_ECHO(cartesian_mm);
+  // SERIAL_ECHOPGM(&quot; seconds=&quot;); SERIAL_ECHO(seconds);
+  // SERIAL_ECHOPGM(&quot; steps=&quot;); SERIAL_ECHOLN(steps);
+  for (int s = 1; s &lt;= steps; s++) {
+    float fraction = float(s) / float(steps);
+    for(int8_t i=0; i &lt; NUM_AXIS; i++) {
+      destination[i] = current_position[i] + difference[i] * fraction;
+    }
+    calculate_delta(destination);
+    adjust_delta(destination);
+    plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
+                     destination[E_AXIS], feedrate*feedmultiply/60/100.0,
+                     active_extruder);
+  }
+#else
+
+</code></pre>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2015-03-03</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3dp</a>
+          
+          <a href="/tags/deltabot/">deltabot</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/marlin/">Marlin</a>
+          
+          <a href="/tags/auto-levelling/">auto-levelling</a>
+          
+          <a href="/tags/auto-calibration/">auto-calibration</a>
+          
+          <a href="/tags/g29/">G29</a>
+          
+          <a href="/tags/g30/">G30</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/life/%E4%BB%8A%E5%A4%A9%E8%AF%BB%E4%BA%86%E4%B8%8D%E5%B0%91%E4%B9%A6/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">今天读了不少书</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_35/">
+            <span class="next-text nav-default">Kossel XL 构建记 (35) ---- Various Post Building Thoughts</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

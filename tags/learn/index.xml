@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/learn/</link>
+    <description>Recent content in Learn on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 12 May 2014 23:10:53 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/learn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最近 Coursera 上几个有意思的课程</title>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</link>
+      <pubDate>Mon, 12 May 2014 23:10:53 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</guid>
+      <description>课程太多，一下听不过来，不过还是想记录一下： 算法分析与设计（I) https://www.coursera.org/course/algo 来自：Stanford Univ 概述 _In this course you will learn several fundamental principles of algorithm design. You&amp;rsquo;ll learn the divide-and-conquer design paradigm, with applications to fast sorting,</description>
+    </item>
+    
+    <item>
+      <title>Blender Project (II)</title>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/blender-project-ii/</link>
+      <pubDate>Wed, 07 Nov 2012 17:00:42 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/blender-project-ii/</guid>
+      <description>I&amp;rsquo;m learning to make a coffee cup by using Blender.
+more
+Before we start, there is an annoying little thing for beginners: Starting a new file/scene in Blender. Blender seems to load the latest scene back, which is annoying. So I just use File &amp;gt; Load Factory Settings to load the default scene (with single box object in the scene) back. Then unfortunately all your customized setting will be gone. So you need to customize again, and choose File &amp;gt; Save User Settings.</description>
+    </item>
+    
+  </channel>
+</rss>

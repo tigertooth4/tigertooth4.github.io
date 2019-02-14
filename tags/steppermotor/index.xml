@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>StepperMotor on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/steppermotor/</link>
+    <description>Recent content in StepperMotor on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Sep 2014 09:35:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/steppermotor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kossel XL 构建记 (27) ---- The frustrating stepper motors</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</link>
+      <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</guid>
+      <description>步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开</description>
+    </item>
+    
+    <item>
+      <title>Kossel XL 构建记 (28) ---- The GCode Magic</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</link>
+      <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</guid>
+      <description>昨晚唯一成功解决的，就是电机的运转问题。在电机测试代码下，电机终于可以正常运转了！GCode 真是个神奇的东西，在 Pronterface 下，按钮几乎是个废柴，但是</description>
+    </item>
+    
+    <item>
+      <title>Kossel XL 构建记 (11) Marlin, some thoughts</title>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</link>
+      <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</guid>
+      <description>今天看到一份介绍 Marlin 固件的 ppt, 见 slideshare. Google 论坛上关于电机电流的讨论，最下面有些推荐的点击链接 https://groups.google.com/forum/#!topic/mendelmax/c_Oss0hmKVk motor-maths 昨天大体明白了 Delta 系的原理，今天可以稍微考虑一下算法 这里</description>
+    </item>
+    
+  </channel>
+</rss>
