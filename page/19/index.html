@@ -140,7 +140,7 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/"></a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/cocoa/nspopover-&#43;-custom-view-inside/"></a></h1>
     <div class="post-meta">
       <span class="post-time"> 0001-01-01 </span>
       
@@ -150,10 +150,20 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS Date: 2013-04-17 17:31:35 Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress Today I found several good posts. Let me note them down here: Every irreducible representation of Abelian group is one dimensional. http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/ 自己建立一个免费的vp
+      Title: NSPopover + Custom view inside
+Date: 2013-04-09 11:21:32
+Today I would like to implement a [cciN_objc]NSPopover[/cciN_objc] view with a subclass of [cciN_objc]NSTableView[/cciN_objc] in it.
+Here is a solution of how to display [cciN_objc]NSPopover[/cciN_objc] programmatically from stackoverflow : http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically , I&rsquo;ll quote the code below:
+[cc_objc]
+NSViewController *controller = [[NSViewController alloc] initWithNibName:@&ldquo;View&rdquo; bundle:nil];
+NSPopover *popover = [[NSPopover alloc] init];
+[popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+[popover setContentViewController:controller];
+[popover setAnimates:YES];
+[popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];
     </div>
     <div class="read-more">
-      <a href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/" class="read-more-link">阅读更多</a>
+      <a href="/post/cocoa/nspopover-&#43;-custom-view-inside/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
