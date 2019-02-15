@@ -57,7 +57,7 @@
 
 
 
-<meta property="og:updated_time" content="2014-07-22T17:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2014-05-12T23:10:53&#43;00:00"/>
 
 
 
@@ -137,27 +137,6 @@
   <section id="posts" class="posts">
     
     
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/3dprinter/kosselxl/kossel_xl_building_log_01/">Kossel XL 构建记 (1) Shift of linear carriage design, design goals</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-07-22 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰
-    </div>
-    <div class="read-more">
-      <a href="/post/3dprinter/kosselxl/kossel_xl_building_log_01/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     
       <article class="post">
   <header class="post-header">
@@ -244,6 +223,34 @@ Here&rsquo;s some beautiful piece performed by other people in YouTube:
     </div>
     <div class="read-more">
       <a href="/post/life/some-piano-video-tutorials/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/">生成量子曲线的代码</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-11-02 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      c[0, 0, p, q] := 1;
+c[m, k, p, q] := If[
+(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
+cm - 1, k, p, q
+ c[m - 1, k - 1, p, q]];  A[p, q] :=
+x^q + Sum[
+Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
+ y^p  
+    </div>
+    <div class="read-more">
+      <a href="/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

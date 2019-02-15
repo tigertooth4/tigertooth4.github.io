@@ -185,13 +185,6 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/post/life/ohlife/</loc>
-    <lastmod>2014-10-13T22:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/</loc>
     <lastmod>2014-10-05T15:52:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1132,7 +1125,7 @@
   
   <url>
     <loc>http://tigertooth4.github.io/tags/life/</loc>
-    <lastmod>2014-10-13T22:00:00+00:00</lastmod>
+    <lastmod>2013-01-20T14:07:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1180,22 +1173,8 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/tags/memory/</loc>
-    <lastmod>2014-10-13T22:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/tags/miracle/</loc>
     <lastmod>2013-01-20T14:07:47+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/moment/</loc>
-    <lastmod>2014-10-13T22:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1210,13 +1189,6 @@
   <url>
     <loc>http://tigertooth4.github.io/tags/octoprint/</loc>
     <lastmod>2018-09-04T15:54:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/ohlife/</loc>
-    <lastmod>2014-10-13T22:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
