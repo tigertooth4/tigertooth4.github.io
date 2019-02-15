@@ -13,100 +13,100 @@
     
     <item>
       <title>Kossel XL 构建记 (20) Effector</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_20/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_20/</link>
       <pubDate>Thu, 21 Aug 2014 17:55:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_20/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_20/</guid>
       <description>不知不觉，这个系列已经来到第 20 篇了！Effector 的组装今天终于完成！所有的布线都藏在了 Effector 内部，然后从“马桶盖”的孔里穿出。这是最后组装好</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (19) Wiring plans </title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_19/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_19/</link>
       <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_19/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_19/</guid>
       <description>讨厌返工，不过之前框架 &amp;lt;50% 的 infill 还是让我担心整个系统的强度。所以今天回去打算再换 50% 的 infill 打印一遍&amp;hellip;. 最让人纠结的问题就是整个电路部分</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (18) Effector design </title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_18/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_18/</link>
       <pubDate>Sun, 17 Aug 2014 23:49:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_18/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_18/</guid>
       <description>看来目前一切正常，我经常感叹：这台打印机真是从零开始制造的。。。一切都要设计。今天早晨开始调试 effector 的设计方案，之前的方案在做微动开关螺丝孔的时</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (17) Stepper motors</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_17/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_17/</link>
       <pubDate>Fri, 15 Aug 2014 14:30:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_17/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_17/</guid>
       <description>Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。 今天又在研究步进马达，这个型号 42BYGHM810 在某宝中可</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (16) Emacs, editor for OpenSCAD</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_16/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_16/</link>
       <pubDate>Fri, 15 Aug 2014 12:40:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_16/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_16/</guid>
       <description>今天在继续修改 Effector 的设计方案，关于微动开关的位置，总是无法确定。经过多次尝试，还是决定先按在底部看看了。 OpenSCAD 居然有 Emacs 模式，只要用 Package-manager 安装就好了，在</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (15) Effector plan</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_15/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_15/</link>
       <pubDate>Thu, 14 Aug 2014 10:06:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_15/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_15/</guid>
       <description>Effector 又叫效应器，是一个生物学里面的名词。这里我们所指的 Effector, 就是悬挂挤出头的吊台。因为我 们要在吊台上添加自动调平的机构，所以吊台的设计就比一般的吊</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (14) Rods, length and assembly</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_14/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_14/</link>
       <pubDate>Tue, 12 Aug 2014 16:36:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_14/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_14/</guid>
       <description>昨天设定了连杆的长度，用 700mm 的铝型材上面架了两个 Endstop mount, 量了一下，长度为 271.7± 0.1 mm , 看来这就是所需要的杆长了。 上午陪母上大人看了个牙，下午还</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (13) Tutorials</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_13/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_13/</link>
       <pubDate>Fri, 08 Aug 2014 20:21:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_13/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_13/</guid>
       <description>今天才知道原来还有个 PID 一说（温度控制）（Marlin 固件里有自动调节 PID 的指令），这里有教程： PID。而且，挤出机也是需要标定的，如果让它进 10cm</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (11) Marlin, some thoughts</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_11/</link>
       <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_11/</guid>
       <description>今天看到一份介绍 Marlin 固件的 ppt, 见 slideshare. Google 论坛上关于电机电流的讨论，最下面有些推荐的点击链接 https://groups.google.com/forum/#!topic/mendelmax/c_Oss0hmKVk motor-maths 昨天大体明白了 Delta 系的原理，今天可以稍微考虑一下算法 这里</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (9) Y-shape carriages design, OpenSCAD</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_09/</link>
       <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_09/</guid>
       <description>OpenSCAD 真是个好东西。当你规划好每个点的位置后，事情真是变得轻而易举。如果你觉得那个地方长了，或者短 了，只要调调参数就能搞定！昨天一直在设计线性滑</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (8) Delivery, Y shape design</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_08/</link>
       <pubDate>Thu, 31 Jul 2014 19:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_08/</guid>
       <description>今天收了 5 个快递&amp;hellip; 截止到目前为止另外还有 4 件在路上。铝框架：滑 轮：还有带圆孔强磁铁以及各种螺丝螺母（没拍照，磁铁真的磁力强到可</description>
     </item>
     

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记 (35) ---- Various Post Building Thoughts - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G&#43; 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.46" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_35/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记 (35) ---- Various Post Building Thoughts" />
+<meta property="og:description" content="好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G&#43; 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_35/" />
+
+
+
+<meta property="article:published_time" content="2015-02-20T15:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-02-20T15:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记 (35) ---- Various Post Building Thoughts">
+<meta itemprop="description" content="好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G&#43; 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做">
+
+
+<meta itemprop="datePublished" content="2015-02-20T15:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-02-20T15:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1016">
+
+
+
+<meta itemprop="keywords" content="3dp,Kossel,Marlin,G29,G30,Calibration," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (35) ---- Various Post Building Thoughts"/>
+<meta name="twitter:description" content="好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G&#43; 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记 (35) ---- Various Post Building Thoughts</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-02-20 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#调平-修正凸凹">调平/修正凸凹</a></li>
+<li><a href="#校正打印件的尺寸">校正打印件的尺寸</a></li>
+<li><a href="#关于失步">关于失步</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G+ 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做打印件冷却风扇），还想用 PCB 取代导线（野心蛮大的^_*）。</p>
+
+<p>不过，最初的 Effector 设计已经使用一段时间了！没有采用自动调平，主要是固件中自动调平的部分还不太稳定（RichCattell 版本的自动调平代码本身有缺陷，经常导致迭代多次无法收敛；而传统的 Marlin 自动调平貌似根本没有考虑到 Delta 机型）因此一直都在用三点手动调平（后面将有具体介绍）。打印中遇到的问题有很多：</p>
+
+<h4 id="调平-修正凸凹">调平/修正凸凹</h4>
+
+<p>我的 Kossel XL 在热床底部加了调平螺丝，所以调节底板水平并不是一件难事。调平时需要一张 A4 纸，先调节热床边缘靠近三个立柱的点的高度，使的挤出头和热床之间恰好能有1张 A4 纸的间隔（A4 纸夹在中间推动的时候稍感阻力即可）。三个点的坐标可以用热床半径R 乘以三角函数来确定：
+(R*cos(a),R*sin(a))，其中 a 是210，300度和90度。调节这三个点的原因是这三个点距离调平螺丝较近，调节起来对另外两个点的高度影响最小。我用的三个点的坐标是 (-73,-43) (73,43) 和 (0,80)。</p>
+
+<p>FYI, 移动挤出头到这三个点的 G-code 是：G1 X-73 Y-43 Z0 等等。为了防止挤出头撞到热床，可以先移动到 Z=1 的地方，再用 G1 Z0 来让挤出头下降到 Z=0 处。</p>
+
+<p>这三点完成后，能够保证热床平面和三个滑块达到最顶端的三个点所成的平面平行了。下一步就要考虑修正凸凹性了。需要调节斜杆的水平投影长度。用 G28 命令归零然后 G1 Z5 降到距离热床 5mm 处, 然后逐渐降低挤出头的位置，直到挤出头和热床有一张 A4 纸的距离，看看现在 Z 方向的读数，如果读数 &gt;0 说明挤出头所在的曲面是中间低，四周高的；反之，如果读数 &lt;0 说明挤出头所在的平面是中间高，四周低的。</p>
+
+<p>如果是第一种情况，就要减小 Marlin 固件中 DELTA_SMOOTH_ROD_OFFSET 的值；否则，如果是第二种情况，可以增加 DELTA_SMOOTH_ROD_OFFSET 的值.</p>
+
+<p>关于 Delta 打印机的精度讨论，请看如下链接：</p>
+
+<h4 id="校正打印件的尺寸">校正打印件的尺寸</h4>
+
+<p>这一步对于成功的打印也非常重要。打印件的尺寸要尽可能接近实际尺寸。方法是修改 Marlin 固件中杆长的参数 DELTA_DIAGONAL_ROD。可以用 OpenSCAD 画一个100x3x3 细长的长方形条：如果实际打印的长度为 L，那么就要修改杆长：新的杆长 = L/100 * 老的杆长.</p>
+
+<h4 id="关于失步">关于失步</h4>
+
+<p>并不是一失步就要增加 A4988 的电流！从台湾朋友 diy3dp 的博客中明白了原来减小加速度也是一个好办法！原因当然是牛顿定律！加速度小了，喷头转向所受的力当然也就小了！注意到，减小加速度并不会明显增加打印时间。真是让打印又快又稳的好方法！</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2015-02-20</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3dp</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/marlin/">Marlin</a>
+          
+          <a href="/tags/g29/">G29</a>
+          
+          <a href="/tags/g30/">G30</a>
+          
+          <a href="/tags/calibration/">Calibration</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3dprinter/kosselxl/kossel_xl_building_log_36/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/math/book-list-after-interstellar/">
+            <span class="next-text nav-default">Book List After Interstellar</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

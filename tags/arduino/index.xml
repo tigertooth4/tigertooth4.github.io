@@ -13,37 +13,37 @@
     
     <item>
       <title>Kossel XL 构建记 (27) ---- The frustrating stepper motors</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/</link>
       <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/</guid>
       <description>步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (28) ---- The GCode Magic</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_28/</link>
       <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_28/</guid>
       <description>昨晚唯一成功解决的，就是电机的运转问题。在电机测试代码下，电机终于可以正常运转了！GCode 真是个神奇的东西，在 Pronterface 下，按钮几乎是个废柴，但是</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (26) Wiring, Bluetooth and Power switch</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_26/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_26/</link>
       <pubDate>Tue, 16 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_26/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_26/</guid>
       <description>返工 返工! 又是返工! 这次的原因是发现 LCD 模块和 Ramps 板子用排插连在一起以后，盒子中部的空间因为有铝框架穿过，显然不够走线的了，如图: 而且，原先的设</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (25) Fans on Arduino Board</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_25/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_25/</link>
       <pubDate>Fri, 12 Sep 2014 12:15:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_25/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_25/</guid>
       <description>我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock Mini 用这个位置插外接电源，是因为又加了一根连线，</description>
     </item>
     

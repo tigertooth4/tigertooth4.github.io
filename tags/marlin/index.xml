@@ -13,46 +13,46 @@
     
     <item>
       <title>Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/</link>
       <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_36/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/</guid>
       <description>自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (35) ---- Various Post Building Thoughts</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_35/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_35/</link>
       <pubDate>Fri, 20 Feb 2015 15:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_35/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_35/</guid>
       <description>好久没更新了！这些天一直在研究下一代的 Effector 的设计：将融合 Thomas G+ 上的设计（用接近传感器做自动调平）和 Atom3DP 2.0 的三风扇结构（利用两个侧吹风的微型鼓风机做</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (33) ---- The Extruder Test and Calibration</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_33/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/</link>
       <pubDate>Fri, 07 Nov 2014 12:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_33/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/</guid>
       <description>很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (24) Electronic Box and First Marlin attempt</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/</link>
       <pubDate>Thu, 11 Sep 2014 09:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_24/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/</guid>
       <description>画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (11) Marlin, some thoughts</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_11/</link>
       <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_11/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_11/</guid>
       <description>今天看到一份介绍 Marlin 固件的 ppt, 见 slideshare. Google 论坛上关于电机电流的讨论，最下面有些推荐的点击链接 https://groups.google.com/forum/#!topic/mendelmax/c_Oss0hmKVk motor-maths 昨天大体明白了 Delta 系的原理，今天可以稍微考虑一下算法 这里</description>
     </item>
     

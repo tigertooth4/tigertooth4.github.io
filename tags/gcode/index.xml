@@ -13,37 +13,37 @@
     
     <item>
       <title>Kossel XL 构建记 (34) ---- The Printer Calibration</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_34/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_34/</link>
       <pubDate>Sat, 08 Nov 2014 20:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_34/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_34/</guid>
       <description>简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (31) ---- The G-Code Summary </title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_31/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/</link>
       <pubDate>Sun, 05 Oct 2014 15:52:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_31/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/</guid>
       <description>Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (30) ---- The Heatbed Assembling</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_30/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_30/</link>
       <pubDate>Thu, 02 Oct 2014 15:33:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_30/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_30/</guid>
       <description>前天晚上有点时间，于是把之前买的9寸披萨的软木锅垫用上，为热床加了一个隔热层。这隔热层话说还有些技术含量，为了防止软木部分风化，落渣，我想了</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (28) ---- The GCode Magic</title>
-      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</link>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_28/</link>
       <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_28/</guid>
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_28/</guid>
       <description>昨晚唯一成功解决的，就是电机的运转问题。在电机测试代码下，电机终于可以正常运转了！GCode 真是个神奇的东西，在 Pronterface 下，按钮几乎是个废柴，但是</description>
     </item>
     

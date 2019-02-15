@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何在 OrangePiZeroPlus 上安装 Octoprint - T&amp;M - A man&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.46" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/compactxy/howto-install-octoprint-on-orangepizeroplus/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="如何在 OrangePiZeroPlus 上安装 Octoprint" />
+<meta property="og:description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/compactxy/howto-install-octoprint-on-orangepizeroplus/" />
+
+
+
+<meta property="article:published_time" content="2018-09-04T15:54:33&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-09-04T15:54:33&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="如何在 OrangePiZeroPlus 上安装 Octoprint">
+<meta itemprop="description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登">
+
+
+<meta itemprop="datePublished" content="2018-09-04T15:54:33&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-04T15:54:33&#43;08:00" />
+<meta itemprop="wordCount" content="1029">
+
+
+
+<meta itemprop="keywords" content="3DP,OctoPrint,armbian,DIY," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何在 OrangePiZeroPlus 上安装 Octoprint"/>
+<meta name="twitter:description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">T&amp;M</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">T&amp;M</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何在 OrangePiZeroPlus 上安装 Octoprint</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-04 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <ol>
+<li><p>下载 Armbian 镜像 Armbian.com</p></li>
+
+<li><p>将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)；</p></li>
+
+<li><p>将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源；</p></li>
+
+<li><p>待 OrangePI 的指示灯亮起以后，可以在路由器的登录页面后寻找 OrangePI，确定 IP
+地址</p></li>
+
+<li><p>ssh 到 OrangePI：</p>
+
+<pre><code>ssh root@192.168.3.63 -p 22
+</code></pre>
+
+<p>初始密码是：1234</p></li>
+
+<li><p>OrangePI 会提示修改密码并且新建用户，赋予 sudo 权限等；</p></li>
+
+<li><p>在 root 用户下，查看 OrangePI 是否可以正常联网；若显示 ping: ***: Name of
+service not known，则需要编辑 /etc/network/interfaces 添加 dns-nameservers
+8.8.8.8 8.8.4.4;</p></li>
+
+<li><p>在 root 用户下，</p>
+
+<pre><code>apt-get update
+</code></pre>
+
+<pre><code>apt-get upgrade
+</code></pre></li>
+
+<li><p>在 root 下，有一个配置工具 nmtui-connect 可以连接 WiFi，还有 armbian-config
+可以设置静态或动态 IP</p></li>
+
+<li><p>在 root 下，</p>
+
+<pre><code>sudo adduser octoprint
+</code></pre></li>
+
+<li><p>接下来</p>
+
+<pre><code>sudo usermod -a -G tty octoprint
+</code></pre>
+
+<pre><code>sudo usermod -a -G dialout octoprint
+</code></pre></li>
+
+<li><p>然后</p>
+
+<pre><code>sudo adduser octoprint sudo
+</code></pre></li>
+
+<li><p>sudo vimudo 将我们 octoprint 的 sudo 设置写入：在此文件的最后添加：octoprint
+ALL=(ALL) NOPASSWD:ALL，然后 ctrl-o 回车写入，ctrl-x 退出；</p></li>
+
+<li><p>嗯，然后 sudo passed octoprint -d 重置密码过期信息</p></li>
+
+<li><p>然后安装所需的 git，python 工具：</p>
+
+<pre><code>   sudo apt-get install git python-pip python-dev python-setuptools psmisc virtualenv
+</code></pre></li>
+
+<li><p>切换到我们刚才创建的 octoprint 账号：sudo su octoprint</p></li>
+
+<li><p>切换到 octoprint 的家目录 cd ~</p></li>
+
+<li><p>wget <a href="https://pypi.python.org/packages/source/p/pyserial/pyserial-2.7.tar.gz">https://pypi.python.org/packages/source/p/pyserial/pyserial-2.7.tar.gz</a>
+，这一步我直接使用了</p>
+
+<pre><code>sudo pip install pyserial
+</code></pre></li>
+
+<li><p>下一步，git OctoPrint:</p>
+
+<pre><code>git clone https://github.com/foosel/OctoPrint.git
+</code></pre></li>
+
+<li><p>当克隆完成后，进入 OctoPrint 目录：cd OctoPrint，用虚拟环境变量命令：
+virtualenv venv；</p></li>
+
+<li><p>成功完成后</p>
+
+<pre><code>./venv/bin/python setup.py install
+</code></pre></li>
+
+<li><p>好了！现在可以启动一下 OctoPrint 看看：</p>
+
+<pre><code>~/OctoPrint/venv/bin/octoprint serve
+</code></pre></li>
+
+<li><p>稍等片刻，看到 listening… 的字样以后就可以打开浏览器，输入 orangepi 的 ip
+地址后面跟着 :5000 端口，然后就可以一步一步设置 OctoPrint 了；</p></li>
+
+<li><p>我在用户名栏里面输入了我的拼音缩写，然后输入了密码；</p></li>
+
+<li><p>下面我们要拷贝一些文件，以使得 octoprint 可以在开机的时候启动；我们首先
+ctrl+z 结束 octoprint</p></li>
+
+<li><p>接下来将 octoprint 服务拷贝到启动服务目录</p>
+
+<pre><code>sudo cp ~/OctoPrint/scripts/octoprint.init /etc/init.d/octoprint
+</code></pre></li>
+
+<li><p>赋予可执行权限</p>
+
+<pre><code>sudo chmod +x /etc/init.d/octoprint
+</code></pre></li>
+
+<li><p>然后</p>
+
+<pre><code>sudo cp ~/OctoPrint/scripts/octoprint.default /etc/default/octoprint
+</code></pre></li>
+
+<li><p>接着</p>
+
+<pre><code>sudo vim /etc/default/octoprint
+</code></pre></li>
+
+<li><p>将 OCTOPRINT_USER=pi 改为 =octoprint</p></li>
+
+<li><p>将 DAEMON=… 取消注释，并且改为
+DAEMON=/home/octoprint/OctoPrint/venv/bin/octoprint</p></li>
+
+<li><p>然后保存退出</p></li>
+
+<li><p>最后我们要 push 这些更新到 default:</p>
+
+<pre><code>sudo update-rc.d octoprint defaults
+</code></pre></li>
+
+<li><p>然后 sudo service octoprint start</p></li>
+
+<li><p>注意到做完这一套流程以后，octoprint
+的无线网络好像失效了，于是我们要采取下面的补救措施：</p>
+
+<ol>
+<li><p>运行</p>
+
+<pre><code>sudo iwlist wlan0 scanning | grep ESSID
+</code></pre>
+
+<p>看到你网络里面所有的路由器名称</p></li>
+
+<li><p>下一步，注意引号要使用英文的引号</p></li>
+</ol>
+
+<pre><code>     wpa_passphrase “你的 WiFi 名称” “你的 WiFi 密码” | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+
+<p>这个会在你的 wpa_supplicant.conf 里面加上一段话类似于 network={ ssid=“…”
+#psk=“”….}，把这里面的 #psk 变成 psk 然后保存文件</p>
+
+<ol>
+<li>在 /etc/network/interfaces 这个文件里面加上</li>
+</ol></li>
+</ol>
+
+<pre><code>        auto lo
+
+        iface lo inet loopback
+        iface eth0 inet dhcp
+
+        allow-hotplug wlan0
+        auto wlan0
+
+
+        iface wlan0 inet dhcp
+        wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+        然后重新启动 sudo reboot
+</code></pre>
+
+<ol>
+<li><p>而且，域名识别好像也没有启用（注意：更改域名的话要改 /etc/hostname 和
+/etc/hosts 两个文件里的域名，初识时为 orangepizeroplus，可以改为
+“你喜欢的任何名字”)</p></li>
+
+<li><p>然后：</p>
+
+<pre><code>    sudo apt-get install avahi-daemon
+</code></pre>
+
+<p>这个的用处是在局域网里面广播域名，然后你就可以用
+“你喜欢的任何名字”.local:5000 去访问 octoprint 了！</p></li>
+</ol>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-09-04</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3DP</a>
+          
+          <a href="/tags/octoprint/">OctoPrint</a>
+          
+          <a href="/tags/armbian/">armbian</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/math/learned-from-ma-conference-at-shanghai/">
+            <span class="next-text nav-default">What I’ve learned at MA conference in ShangHai</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tt4</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
