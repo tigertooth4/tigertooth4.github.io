@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Desktop on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/Desktop/</link>
+    <link>http://tigertooth4.github.io/tags/desktop/</link>
     <description>Recent content in Desktop on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 25 Aug 2016 18:56:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/Desktop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>对家用3d打印机的思考</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/</link>
       <pubDate>Thu, 25 Aug 2016 18:56:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/</guid>
       <description>市面上有这么多3d打印机了，我们还能改进什么？ ATX电源管理（平时待机时休眠，打印完成后自动断电/休眠） 自动调平 自动切片 改进的菜单设计 兼有2</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PDO on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/PDO/</link>
+    <link>http://tigertooth4.github.io/tags/pdo/</link>
     <description>Recent content in PDO on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 26 Jul 2014 18:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/PDO/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/pdo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>斜洛朗级数环的软件包现在可以计算一个算子的分数次方了！</title>
-      <link>http://tigertooth4.github.io/post/Math/ORESUS-now-understand-fractional-powers/</link>
+      <link>http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/</link>
       <pubDate>Sat, 26 Jul 2014 18:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/Math/ORESUS-now-understand-fractional-powers/</guid>
+      <guid>http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/</guid>
       <description>先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！</description>
     </item>
     
     <item>
       <title>Calculate PDOs using AXIOM / FriCAS</title>
-      <link>http://tigertooth4.github.io/post/Coding/Calculate-PDOs-by-using-AXIOM/FriCAS/</link>
+      <link>http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/</link>
       <pubDate>Thu, 03 May 2012 00:46:30 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/Coding/Calculate-PDOs-by-using-AXIOM/FriCAS/</guid>
+      <guid>http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/</guid>
       <description>For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2+u(x,t)```, (A=\partial^3+4u(x,t)\partial+2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers.</description>
     </item>
     

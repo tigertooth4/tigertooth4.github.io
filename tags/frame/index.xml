@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frame on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/Frame/</link>
+    <link>http://tigertooth4.github.io/tags/frame/</link>
     <description>Recent content in Frame on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 17 Sep 2014 09:35:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/Frame/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/frame/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kossel XL 构建记 (27) ---- The frustrating stepper motors</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_27/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</link>
       <pubDate>Wed, 17 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_27/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_27/</guid>
       <description>步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (26) Wiring, Bluetooth and Power switch</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_26/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_26/</link>
       <pubDate>Tue, 16 Sep 2014 09:35:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_26/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_26/</guid>
       <description>返工 返工! 又是返工! 这次的原因是发现 LCD 模块和 Ramps 板子用排插连在一起以后，盒子中部的空间因为有铝框架穿过，显然不够走线的了，如图: 而且，原先的设</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (23) Show me the box and heatbed</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_23/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_23/</link>
       <pubDate>Wed, 10 Sep 2014 00:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_23/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_23/</guid>
       <description>好像又回到了小时候。成天脑子里想的就是如何造出我想要的东西。。。 红黄的配色是参考钢铁侠哈！不过，为了保持整体配色的风格一致，最后打印的时候我</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (22) Mount the power brick, iteration equations</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_22/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_22/</link>
       <pubDate>Tue, 02 Sep 2014 23:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_22/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_22/</guid>
       <description>不知不觉又是5天没更了。时间过得真快，基本上 Kossel 的雏形已经搭建出来了，内部走线也已经布置完毕。接下来的问题就是总装了！基本上这两天都在折腾滑轨</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (21) Redesign the frame</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_21/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_21/</link>
       <pubDate>Thu, 28 Aug 2014 16:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_21/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_21/</guid>
       <description>沉寂了几天，我又回来了。步进电机也终于到了：）不过因为大淘宝上 0.9 步进电机的卖家很少，选择的余地很小。我只能选了光轴的，结果买回来只能再用锉来</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iteration on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/Iteration/</link>
+    <link>http://tigertooth4.github.io/tags/iteration/</link>
     <description>Recent content in Iteration on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 10 Sep 2014 00:20:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/Iteration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/iteration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kossel XL 构建记 (23) Show me the box and heatbed</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_23/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_23/</link>
       <pubDate>Wed, 10 Sep 2014 00:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_23/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_23/</guid>
       <description>好像又回到了小时候。成天脑子里想的就是如何造出我想要的东西。。。 红黄的配色是参考钢铁侠哈！不过，为了保持整体配色的风格一致，最后打印的时候我</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (22) Mount the power brick, iteration equations</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_22/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_22/</link>
       <pubDate>Tue, 02 Sep 2014 23:20:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_22/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_22/</guid>
       <description>不知不觉又是5天没更了。时间过得真快，基本上 Kossel 的雏形已经搭建出来了，内部走线也已经布置完毕。接下来的问题就是总装了！基本上这两天都在折腾滑轨</description>
     </item>
     

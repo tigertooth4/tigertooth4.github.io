@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Polar on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/Polar/</link>
+    <link>http://tigertooth4.github.io/tags/polar/</link>
     <description>Recent content in Polar on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 02 Aug 2014 10:45:00 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/Polar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/polar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kossel XL 构建记 (9) Y-shape carriages design, OpenSCAD</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_09/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</link>
       <pubDate>Sat, 02 Aug 2014 10:45:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_09/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_09/</guid>
       <description>OpenSCAD 真是个好东西。当你规划好每个点的位置后，事情真是变得轻而易举。如果你觉得那个地方长了，或者短 了，只要调调参数就能搞定！昨天一直在设计线性滑</description>
     </item>
     
     <item>
       <title>Kossel XL 构建记 (8) Delivery, Y shape design</title>
-      <link>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_08/</link>
+      <link>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</link>
       <pubDate>Thu, 31 Jul 2014 19:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/3D%E6%89%93%E5%8D%B0%E6%9C%BA/KosselXL/Kossel_XL_building_log_08/</guid>
+      <guid>http://tigertooth4.github.io/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_08/</guid>
       <description>今天收了 5 个快递&amp;hellip; 截止到目前为止另外还有 4 件在路上。铝框架：滑 轮：还有带圆孔强磁铁以及各种螺丝螺母（没拍照，磁铁真的磁力强到可</description>
     </item>
     

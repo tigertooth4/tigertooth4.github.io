@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topology on T&amp;M - A man&#39;s thinking and making</title>
-    <link>http://tigertooth4.github.io/tags/Topology/</link>
+    <link>http://tigertooth4.github.io/tags/topology/</link>
     <description>Recent content in Topology on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 04 Nov 2012 15:22:40 +0000</lastBuildDate>
     
-	<atom:link href="http://tigertooth4.github.io/tags/Topology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/topology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>形变</title>
-      <link>http://tigertooth4.github.io/post/Life/%E5%BD%A2%E5%8F%98/</link>
+      <link>http://tigertooth4.github.io/post/life/%E5%BD%A2%E5%8F%98/</link>
       <pubDate>Sun, 04 Nov 2012 15:22:40 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/Life/%E5%BD%A2%E5%8F%98/</guid>
+      <guid>http://tigertooth4.github.io/post/life/%E5%BD%A2%E5%8F%98/</guid>
       <description>在 Matrix67.com 的博文中提出了这样一个问题： 为了说明“同痕”这一概念直观上并不容易把握，《The Knot Book》一书中举了一个经典的例子。如下图，左图是一个</description>
     </item>
     
