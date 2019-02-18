@@ -6,10 +6,20 @@
     <description>Recent content in Posts on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Sep 2018 15:54:33 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Yet Another Multi-nozzle Tool Head Design</title>
+      <link>http://tigertooth4.github.io/post/3dprinter/2018-12-12/yet-another-multi-nozzle-tool-head-design/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3dprinter/2018-12-12/yet-another-multi-nozzle-tool-head-design/</guid>
+      <description>At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&amp;rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/+XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
+ Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate.</description>
+    </item>
     
     <item>
       <title>如何在 OrangePiZeroPlus 上安装 Octoprint</title>
@@ -526,15 +536,6 @@ Another issue bothers me recently was the insufficient vertical holes.</descript
     </item>
     
     <item>
-      <title>2013 年终总结</title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/2013-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Wed, 01 Jan 2014 06:26:09 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/2013-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
-      <description>2013 是忙碌的一年，有开心，有收获也有遗憾和焦虑。在大洋的彼岸生活学习，遇到了很多人，交了很多朋友，也去了很多城市&amp;hellip;下面就来看看我</description>
-    </item>
-    
-    <item>
       <title>Some Piano Video Tutorials</title>
       <link>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</link>
       <pubDate>Wed, 18 Dec 2013 20:27:05 +0000</pubDate>
@@ -563,15 +564,6 @@ cm - 1, k, p, q
 x^q + Sum[
 Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
  y^p  </description>
-    </item>
-    
-    <item>
-      <title>周日去旧金山接我妈</title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%91%A8%E6%97%A5%E5%8E%BB%E6%97%A7%E9%87%91%E5%B1%B1%E6%8E%A5%E6%88%91%E5%A6%88/</link>
-      <pubDate>Sat, 11 May 2013 20:00:45 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%91%A8%E6%97%A5%E5%8E%BB%E6%97%A7%E9%87%91%E5%B1%B1%E6%8E%A5%E6%88%91%E5%A6%88/</guid>
-      <description>Route Train: Capitol Corridor 723 (San Jose Diridon Station) 5:55am ~ 7:18 (5 stops) Arrive: Emeryville Amtrak Walk to Shellmound St: Powell St. (about 4min) Bus F [$4.20]: (Berkeley ↦ San Fracisco, by AC Transit) 7:39am ~ 7:55 (1 stop) Arrive: Transbay Temp Terminal Walk to Main St: Folsom St. (about 4min) Bus KX [$5.00]: (towards Palo Alto Caltrain) 8:22am ~ 8:56 (9 stops) Arrive: SFO Airport Terminal 2 lower</description>
     </item>
     
     <item>
@@ -608,15 +600,6 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/</guid>
       <description>[mathjax] 看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。 今天看到了</description>
-    </item>
-    
-    <item>
-      <title>Summary of my 2012</title>
-      <link>http://tigertooth4.github.io/post/life/summary-of-my-2012/</link>
-      <pubDate>Sun, 20 Jan 2013 14:07:47 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/life/summary-of-my-2012/</guid>
-      <description>The year 2012 has passed for almost 20 days. I&amp;#8217;m a lazy blogger right ;-P. I really want to write something for my 2012. The reason for delay of writing was I had a math problem to solve. I was struggling a lot during the Christmas and new year holidays. I&amp;#8217;ve been working everyday to expect a solution for the final step of the proof: matching two pieces of expressions, one was from the Laplace transform, the other was from the Eynard-Orantin recursion formula.</description>
     </item>
     
     <item>
@@ -823,17 +806,6 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/</guid>
       <description>Title: Kossel XL 构建记 (32) &amp;mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://tigertooth4.github.io/post/3dprinter/yet-another-multi-nozzle-tool-head-design/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/3dprinter/yet-another-multi-nozzle-tool-head-design/</guid>
-      <description>Hi guys,
- At the end of this year, I would like to share my design of a multi-nozzle tool head. You may or may not remember that a year ago I&amp;rsquo;ve posted some results of dual material 3d printing on my DIY Ultimaker 2 (https://plus.google.com/+XiaojunLiu/posts/4kjzNmNFms). I said I used a different approach which has not been implemented (at least I didn’t find) elsewhere.
- Well, the nozzle changing idea I came up with was inspired by the multi-lens microscope (where three or four lenses are distributed around an axis, mounted on a plate.</description>
     </item>
     
     <item>
