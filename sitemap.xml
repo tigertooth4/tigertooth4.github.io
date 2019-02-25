@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tigertooth4.github.io/post/2019-02/tct-asia-pt1/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/2018-12/yet-another-multi-nozzle-tool-head-design/</loc>
     <lastmod>2018-12-12T10:44:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1140,7 +1147,7 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2018-12-12T10:44:22+08:00</lastmod>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1224,7 +1231,7 @@
   
   <url>
     <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2018-12-12T10:44:22+08:00</lastmod>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
