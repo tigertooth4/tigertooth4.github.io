@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ESUN on T&amp;M - A man&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/esun/</link>
+    <description>Recent content in ESUN on T&amp;M - A man&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 03 Mar 2019 23:00:35 +0800</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/esun/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TCT Asia 观后感 partII</title>
+      <link>http://tigertooth4.github.io/post/2019-03/tct-asia-pt2/</link>
+      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-03/tct-asia-pt2/</guid>
+      <description>上次我们聊了聊 TCT Asia 上的 Makerbot 新机，这一次，让我们简要的说一说 对本次 TCT Asia 的其它感受。 FDM 技术重新焕发生机 得益于多材料打印技术的发展，去年曾经被光固化</description>
+    </item>
+    
+  </channel>
+</rss>
