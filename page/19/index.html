@@ -140,6 +140,37 @@
     
       <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/cocoa/nspopover-&#43;-custom-view-inside/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: NSPopover + Custom view inside
+Date: 2013-04-09 11:21:32
+Today I would like to implement a [cciN_objc]NSPopover[/cciN_objc] view with a subclass of [cciN_objc]NSTableView[/cciN_objc] in it.
+Here is a solution of how to display [cciN_objc]NSPopover[/cciN_objc] programmatically from stackoverflow : http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically , I&rsquo;ll quote the code below:
+[cc_objc]
+NSViewController *controller = [[NSViewController alloc] initWithNibName:@&ldquo;View&rdquo; bundle:nil];
+NSPopover *popover = [[NSPopover alloc] init];
+[popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+[popover setContentViewController:controller];
+[popover setAnimates:YES];
+[popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];
+    </div>
+    <div class="read-more">
+      <a href="/post/cocoa/nspopover-&#43;-custom-view-inside/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/cocoa/%E5%87%A0%E4%B8%AA%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B5%84%E6%BA%90/"></a></h1>
     <div class="post-meta">
       <span class="post-time"> 0001-01-01 </span>
@@ -217,40 +248,6 @@
     </div>
     <div class="read-more">
       <a href="/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/misc/a-dream/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: A dream
-Date: 2012-02-22 15:54:00
-Status: private
-Suddenly I&rsquo;ve got the idea about my life.
-I had a unpleasant dream yesterday. About you&hellip;
-more
-I&rsquo;ve heard a lot of sad news today.
-I know I can do nothing about this.
-Hopeless moment.
-But, I do believe it&rsquo;s part of life.
-Everything will be fine.
-We won&rsquo;t lose hope.
-So, to help, to give, to do meaningful things.
-And, bless&hellip;
-    </div>
-    <div class="read-more">
-      <a href="/post/misc/a-dream/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

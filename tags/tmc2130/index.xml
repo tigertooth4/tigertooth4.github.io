@@ -6,10 +6,19 @@
     <description>Recent content in TMC2130 on T&amp;M - A man&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Mar 2019 23:30:38 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 22:47:37 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/tmc2130/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零</title>
+      <link>http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/</link>
+      <pubDate>Sat, 20 Apr 2019 22:47:37 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/</guid>
+      <description>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无</description>
+    </item>
     
     <item>
       <title>Marlin2.0 bugfix &#43; Cohesion3D-remix 上使用 TMC2130 驱动</title>

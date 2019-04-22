@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2019-03-21T23:30:38&#43;08:00" />
 <meta itemprop="dateModified" content="2019-03-21T23:30:38&#43;08:00" />
-<meta itemprop="wordCount" content="1174">
+<meta itemprop="wordCount" content="1223">
 
 
 
@@ -181,7 +181,7 @@
 
 <p>TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&rdquo;失速检测&rdquo; （Stall-detection) 功能，以及由此而来的&rdquo;无传感器归零&rdquo; （Homeless-sensing). 对我这个电路外行，也只有在这块驱动芯片发布多年，各种视频、资料都齐备之后，才有机会尝试.</p>
 
-<p>由于家里有很多块定制的 C3D-remix 主板，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下.</p>
+<p>由于家里有很多块定制的 C3D-remix 主板<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下. <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
 
 <p>注意：要使用 TMC2130 的这些功能，需要开启它的 SPI 模式，在有些驱动板上，这个模式是被禁用的，需要去掉一块焊锡才可以开启。</p>
 
@@ -452,6 +452,17 @@
 <p>这句话的意思是在 Z 和 E 轴开启 stealth chop 模式.  开启后，别忘了用 M500 命令保存。</p>
 
 <p>从现在开始，我们就正式进入智能驱动的神奇世界了！</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Cohesion3d-Remix 主板可以在某宝买到，见某宝链接 <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <a href="https://www.youtube.com/watch?v=OUadiW5QLBE">https://www.youtube.com/watch?v=OUadiW5QLBE</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
     </div>
 
@@ -492,6 +503,11 @@
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         
           <a class="next" href="/post/2019-03/tct-asia-pt2/">
             <span class="next-text nav-default">TCT Asia 观后感 partII</span>
