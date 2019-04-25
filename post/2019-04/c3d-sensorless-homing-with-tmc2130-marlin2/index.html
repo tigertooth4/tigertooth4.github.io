@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2019-04-20T22:47:37&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-20T22:47:37&#43;08:00" />
-<meta itemprop="wordCount" content="654">
+<meta itemprop="wordCount" content="714">
 
 
 
@@ -168,6 +168,7 @@
 <li><a href="#硬件部分的改变">硬件部分的改变</a></li>
 <li><a href="#上传固件">上传固件</a></li>
 <li><a href="#上电测试">上电测试</a></li>
+<li><a href="#更新">更新</a></li>
 </ul>
 </nav>
   </div>
@@ -237,6 +238,21 @@
 <li>我将 X Y 方向的灵敏度设置为 1: M914 X1 Y1; 发现 Y 轴可以正常归零了。</li>
 <li>最后记得用 M500 保存设置。</li>
 <li>不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。</li>
+</ul>
+
+<h1 id="更新">更新</h1>
+
+<ul>
+<li>可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：</li>
+</ul>
+
+<pre><code class="language-c++">  #define DEBUG_LEVELING_FEATURE
+</code></pre>
+
+<ul>
+<li><p>使用 M111 S32 或 M111 S247 使系统信息能够被最大程度的记录下来</p></li>
+
+<li><p>使用 G28 归零。</p></li>
 </ul>
 <div class="footnotes">
 
