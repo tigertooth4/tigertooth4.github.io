@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/compactxy/howto-install-octoprint-on-orangepizeroplus/" />
@@ -53,22 +53,8 @@
 <meta property="og:description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/compactxy/howto-install-octoprint-on-orangepizeroplus/" />
-
-
-
 <meta property="article:published_time" content="2018-09-04T15:54:33&#43;08:00"/>
-
 <meta property="article:modified_time" content="2018-09-04T15:54:33&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="如何在 OrangePiZeroPlus 上安装 Octoprint">
 <meta itemprop="description" content="下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登">
@@ -314,36 +300,34 @@ DAEMON=/home/octoprint/OctoPrint/venv/bin/octoprint</p></li>
 
 <p>看到你网络里面所有的路由器名称</p></li>
 
-<li><p>下一步，注意引号要使用英文的引号</p></li>
-</ol>
+<li><p>下一步，注意引号要使用英文的引号</p>
 
-<pre><code>     wpa_passphrase “你的 WiFi 名称” “你的 WiFi 密码” | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre>
+<pre><code> wpa_passphrase “你的 WiFi 名称” “你的 WiFi 密码” | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre></li>
+</ol>
 
 <p>这个会在你的 wpa_supplicant.conf 里面加上一段话类似于 network={ ssid=“…”
 #psk=“”….}，把这里面的 #psk 变成 psk 然后保存文件</p>
 
 <ol>
-<li>在 /etc/network/interfaces 这个文件里面加上</li>
+<li><p>在 /etc/network/interfaces 这个文件里面加上</p>
+
+<pre><code>auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+auto wlan0
+
+
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+然后重新启动 sudo reboot
+</code></pre></li>
 </ol></li>
-</ol>
 
-<pre><code>        auto lo
-
-        iface lo inet loopback
-        iface eth0 inet dhcp
-
-        allow-hotplug wlan0
-        auto wlan0
-
-
-        iface wlan0 inet dhcp
-        wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-
-        然后重新启动 sudo reboot
-</code></pre>
-
-<ol>
 <li><p>而且，域名识别好像也没有启用（注意：更改域名的话要改 /etc/hostname 和
 /etc/hosts 两个文件里的域名，初识时为 orangepizeroplus，可以改为
 “你喜欢的任何名字”)</p></li>

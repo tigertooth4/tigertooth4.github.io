@@ -1,12 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://tigertooth4.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/algebraicequations/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/galois/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/</loc>
     <lastmod>2019-04-20T23:06:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/math/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/sqrt/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/symmetry/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/cohesion3d/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -17,10 +70,118 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/homing/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/marlin2.0/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/remix/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/sensorless/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/tmc2130/</loc>
+    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/marlin/</loc>
+    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/2019-03/marlin2-tmc2130-c3d/</loc>
     <lastmod>2019-03-21T23:30:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/spreadcycle/</loc>
+    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/stealthchop/</loc>
+    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/wiring/</loc>
+    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/3dp/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/3dprinting/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/clariant/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/fdm/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/makerbot/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/markforged/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/polymaker/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/shanghai/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/tct/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -31,6 +192,36 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/dualextrusion/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/esun/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/kexcelled/</loc>
+    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/pva/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/steelsheet/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/2019-02/tct-asia-pt1/</loc>
     <lastmod>2019-02-23T16:45:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,10 +229,46 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/ui/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/design/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/extruder/</loc>
+    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/2018-12/yet-another-multi-nozzle-tool-head-design/</loc>
     <lastmod>2018-12-12T10:44:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/diy/</loc>
+    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/octoprint/</loc>
+    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/armbian/</loc>
+    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -80,10 +307,46 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/desktop/</loc>
+    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/home/</loc>
+    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/pwm/</loc>
+    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/%E5%AF%B9%E5%AE%B6%E7%94%A83d%E6%89%93%E5%8D%B0%E6%9C%BA%E7%9A%84%E6%80%9D%E8%80%83/</loc>
     <lastmod>2016-08-25T18:56:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/3dprinter/</loc>
+    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/dinky/</loc>
+    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/ultimaker2/</loc>
+    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -136,6 +399,18 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/ss/</loc>
+    <lastmod>2015-10-03T12:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/vpn/</loc>
+    <lastmod>2015-10-03T12:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/</loc>
     <lastmod>2015-10-03T12:15:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,10 +446,52 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/g29/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/g30/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/kossel/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/</loc>
     <lastmod>2015-03-03T15:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/auto-calibration/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/auto-levelling/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/deltabot/</loc>
+    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/calibration/</loc>
+    <lastmod>2015-02-20T15:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -185,10 +502,34 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/book/</loc>
+    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</loc>
     <lastmod>2014-11-25T17:47:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/geometry/</loc>
+    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/gravitation/</loc>
+    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/physics/</loc>
+    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -203,6 +544,12 @@
     <lastmod>2014-11-09T13:49:44+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/gcode/</loc>
+    <lastmod>2014-11-08T20:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -234,10 +581,40 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/heatbed/</loc>
+    <lastmod>2014-10-02T15:33:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_30/</loc>
     <lastmod>2014-10-02T15:33:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/arduino/</loc>
+    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/bluetooth/</loc>
+    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/endswitch/</loc>
+    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/frame/</loc>
+    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -255,10 +632,40 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/steppermotor/</loc>
+    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_26/</loc>
     <lastmod>2014-09-16T09:35:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/rocker/</loc>
+    <lastmod>2014-09-16T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/switch/</loc>
+    <lastmod>2014-09-16T09:35:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/assembly/</loc>
+    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/electronics/</loc>
+    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -269,10 +676,34 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/mega/</loc>
+    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/firmware/</loc>
+    <lastmod>2014-09-11T09:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/</loc>
     <lastmod>2014-09-11T09:20:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/equation/</loc>
+    <lastmod>2014-09-10T00:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/iteration/</loc>
+    <lastmod>2014-09-10T00:20:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -297,6 +728,12 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/effector/</loc>
+    <lastmod>2014-08-21T17:55:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_20/</loc>
     <lastmod>2014-08-21T17:55:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -304,10 +741,34 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/miy/</loc>
+    <lastmod>2014-08-21T17:55:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_19/</loc>
     <lastmod>2014-08-19T13:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/rambo/</loc>
+    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/rumba/</loc>
+    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/mainboard/</loc>
+    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -353,10 +814,28 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
+    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/oresus/</loc>
+    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/math/inverse-in-oresus/</loc>
     <lastmod>2014-08-05T12:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/skew-laurent/</loc>
+    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -374,6 +853,12 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/polar/</loc>
+    <lastmod>2014-08-02T10:45:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_08/</loc>
     <lastmod>2014-07-31T19:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -385,6 +870,24 @@
     <lastmod>2014-07-30T19:38:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/algorithm/</loc>
+    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/coding/</loc>
+    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/symbolic/</loc>
+    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -402,10 +905,22 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/rostock/</loc>
+    <lastmod>2014-07-28T21:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/</loc>
     <lastmod>2014-07-28T21:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/pdo/</loc>
+    <lastmod>2014-07-26T18:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -451,6 +966,30 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/brain/</loc>
+    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/course/</loc>
+    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/coursera/</loc>
+    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/learn/</loc>
+    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%9C%80%E8%BF%91-coursera-%E4%B8%8A%E5%87%A0%E4%B8%AA%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E8%AF%BE%E7%A8%8B/</loc>
     <lastmod>2014-05-12T23:10:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -465,10 +1004,22 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/piano/</loc>
+    <lastmod>2013-12-18T20:27:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</loc>
     <lastmod>2013-12-18T20:27:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2013-11-02T04:03:56+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -479,10 +1030,40 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/download/</loc>
+    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/shell/</loc>
+    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/snippet/</loc>
+    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/wget/</loc>
+    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E4%BD%BF%E7%94%A8-wget-%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AA%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2013-04-16T11:44:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/markdown/</loc>
+    <lastmod>2013-03-13T22:58:40+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -493,6 +1074,12 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/davis/</loc>
+    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%88%B4%E7%BB%B4%E6%96%AF%E7%9A%84%E8%A1%97%E9%81%93%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2013-02-25T23:31:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -500,10 +1087,52 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/unix/</loc>
+    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/</loc>
+    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2013-01-22T14:27:58+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E5%A4%A9%E6%B0%94/</loc>
+    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E7%90%83%E9%9D%A2/</loc>
+    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -528,7 +1157,7 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers--brew-k-theory-a-polynomial-and-random-thoughts/</loc>
+    <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/</loc>
     <lastmod>2012-12-05T16:10:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -542,10 +1171,22 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/blender/</loc>
+    <lastmod>2012-11-07T17:00:42+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/blender-project-ii/</loc>
     <lastmod>2012-11-07T17:00:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/topology/</loc>
+    <lastmod>2012-11-04T15:22:40+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -592,969 +1233,166 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dmodeling/blender-project-i/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dmodeling/blender-project-iii/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dmodeling/todays-random-log/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dmodeling/todays-project-knot/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_29/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/cocoa/%E5%87%A0%E4%B8%AA%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B5%84%E6%BA%90/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/differentialgeometry/w1-s1/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/misc/a-dream/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/keydown-selection-for-nstableview-without-subclassing-it/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/mac-configuration-guide/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/macworld-asia-%E5%B1%95%E4%BC%9A%E5%8F%82%E8%A7%82%E8%AE%B0/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/migration-to-my-new-rmbp/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/moving-to-emacs-for-os-x-modified/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/this-is-my-new-blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/todays-pieces/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week-2/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week14-%E6%96%B0%E9%B2%9C%E4%BA%8B/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week51%E6%9C%AC%E5%91%A8%E6%96%B0%E9%B2%9C%E4%BA%8B/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week52-%E6%9C%AC%E5%91%A8%E6%96%B0%E9%B2%9C%E4%BA%8B/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/wrote-after-25-days-in-beijing/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/3dp/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/3dprinting/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/3dp/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/3dprinter/</loc>
-    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/algebraicequations/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/algorithm/</loc>
-    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/arduino/</loc>
-    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/armbian/</loc>
-    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/assembly/</loc>
-    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/auto-calibration/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/auto-levelling/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/blender/</loc>
-    <lastmod>2012-11-07T17:00:42+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/bluetooth/</loc>
-    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/book/</loc>
-    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/brain/</loc>
-    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/calibration/</loc>
-    <lastmod>2015-02-20T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/clariant/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/coding/</loc>
-    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/cohesion3d/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/course/</loc>
-    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/coursera/</loc>
-    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/dinky/</loc>
-    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/diy/</loc>
-    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/davis/</loc>
-    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/deltabot/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/design/</loc>
-    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/design/</loc>
-    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/desktop/</loc>
-    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/download/</loc>
-    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/dualextrusion/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/esun/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/effector/</loc>
-    <lastmod>2014-08-21T17:55:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/electronics/</loc>
-    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/endswitch/</loc>
-    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/equation/</loc>
-    <lastmod>2014-09-10T00:20:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/extruder/</loc>
-    <lastmod>2014-11-07T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/extruder/</loc>
-    <lastmod>2014-11-07T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/fdm/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/firmware/</loc>
-    <lastmod>2014-09-11T09:20:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/frame/</loc>
-    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
-    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/g29/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/g30/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/gcode/</loc>
-    <lastmod>2014-11-08T20:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/galois/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/geometry/</loc>
-    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/gravitation/</loc>
-    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/heatbed/</loc>
-    <lastmod>2014-10-02T15:33:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/home/</loc>
-    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/homing/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/iteration/</loc>
-    <lastmod>2014-09-10T00:20:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/kexcelled/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/kossel/</loc>
-    <lastmod>2015-03-03T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/learn/</loc>
-    <lastmod>2014-05-12T23:10:53+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/miy/</loc>
-    <lastmod>2014-08-21T17:55:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/mainboard/</loc>
-    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/makerbot/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/markdown/</loc>
-    <lastmod>2013-03-13T22:58:40+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/markforged/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/marlin/</loc>
-    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/marlin2.0/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/math/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/mega/</loc>
-    <lastmod>2014-09-12T12:15:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/oresus/</loc>
-    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/octoprint/</loc>
-    <lastmod>2018-09-04T15:54:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/pdo/</loc>
-    <lastmod>2014-07-26T18:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/pva/</loc>
-    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/pwm/</loc>
-    <lastmod>2016-08-25T18:56:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/physics/</loc>
-    <lastmod>2014-11-25T17:47:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/piano/</loc>
-    <lastmod>2013-12-18T20:27:05+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/polar/</loc>
-    <lastmod>2014-08-02T10:45:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/polymaker/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/rambo/</loc>
-    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/remix/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/rocker/</loc>
-    <lastmod>2014-09-16T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/rostock/</loc>
-    <lastmod>2014-07-28T21:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/rumba/</loc>
-    <lastmod>2014-08-19T13:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/ss/</loc>
-    <lastmod>2015-10-03T12:15:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/sensorless/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/shanghai/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/shell/</loc>
-    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/skew-laurent/</loc>
-    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/snippet/</loc>
-    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/spreadcycle/</loc>
-    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/sqrt/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/stealthchop/</loc>
-    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/steelsheet/</loc>
-    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/steppermotor/</loc>
-    <lastmod>2014-09-17T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/switch/</loc>
-    <lastmod>2014-09-16T09:35:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/symbolic/</loc>
-    <lastmod>2014-07-30T19:21:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/symmetry/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/tct/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/tmc2130/</loc>
-    <lastmod>2019-04-20T22:47:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/topology/</loc>
-    <lastmod>2012-11-04T15:22:40+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/ui/</loc>
-    <lastmod>2019-02-23T16:45:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/ultimaker2/</loc>
-    <lastmod>2016-07-31T16:22:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/unix/</loc>
-    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/vpn/</loc>
-    <lastmod>2015-10-03T12:15:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/wget/</loc>
-    <lastmod>2013-04-16T11:44:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/wiring/</loc>
-    <lastmod>2019-03-21T23:30:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2013-11-02T04:03:56+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/</loc>
-    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E5%A4%A9%E6%B0%94/</loc>
-    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2019-04-20T23:06:35+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E7%90%83%E9%9D%A2/</loc>
-    <lastmod>2013-01-22T14:27:58+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2013-02-25T23:31:09+00:00</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   

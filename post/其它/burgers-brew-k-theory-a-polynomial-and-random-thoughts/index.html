@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts - 思与制 - A guy&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="Today we went to Burgers &amp;amp; Brew for lunch. Burgers &amp;amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&amp;rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&amp;rsquo;s only $7 or so.
+more
+[caption id=&amp;ldquo;attachment_427&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] Hamburger (@Burgers &amp;amp; Brew)[/caption]" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts" />
+<meta property="og:description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/" />
+<meta property="article:published_time" content="2012-12-05T16:10:40&#43;00:00"/>
+<meta property="article:modified_time" content="2012-12-05T16:10:40&#43;00:00"/>
+
+<meta itemprop="name" content="Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts">
+<meta itemprop="description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]">
+
+
+<meta itemprop="datePublished" content="2012-12-05T16:10:40&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-05T16:10:40&#43;00:00" />
+<meta itemprop="wordCount" content="518">
+
+
+
+<meta itemprop="keywords" content="Math," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts"/>
+<meta name="twitter:description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">思与制</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">思与制</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-12-05 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.</p>
+
+<p>more</p>
+
+<p>[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2012/12/1c42a711.jpg"><img src="http://www.xjliu.net/blog/wp-content/uploads/2012/12/1c42a711.jpg" alt="" title="Hamburger" /></a> Hamburger (@Burgers &amp; Brew)[/caption]</p>
+
+<p>During the lunch, I asked Adam about his talk this morning. I was really want to know the basic things about K-theory. It turns out it was not too difficult concept to learn. However, to understand it, one must know what&rsquo;s this concept for? He didn&rsquo;t answer me about that. But anyway, this is my first time to see the definition of K-theory. And he gave me a nice article, which was the base of his talk. The article was written by S. Bloch around &lsquo;80s and published in a Lecture Notes, the title was <em>The Dilogarithm and Extensions of Lie Algebras</em>. He talked about the first section of the article. If I have time, I&rsquo;ll read this article.</p>
+
+<p>In this afternoon, Piotr gave a talk about super-A-polynomial. I knows nothing about A-polynomial. It might related to knot invariant. He mentioned the <em>Volume Conjecture</em>, which is basically about whenever we define certain <em>Chern-Simons</em> shape partition function w.r.t. knots K, we basically have gotten some knot invariants (for example: <em>Jones polynomial</em>, <em>colored Jones polynomial</em>, <em>HOMFLY polynomial</em> etc. etc. And when we taking some limit, and the result expanding in a exponential function, then the leading term <em>S0</em> will be related to an integral of some algebraic curve A(x,y). Here are some references maybe I can see in the future:</p>
+
+<ul>
+<li><p><a href="http://arxiv.org/abs/1203.2182" title="arXiv:1203.2182">arXiv:1203.2182</a> _Volume Conjecture: Refined and Categorified </p></li>
+
+<li><p><a href="http://arxiv.org/abs/1205.1515" title="arXiv:1205.1515">arXiv:1205.1515</a> _Super-A-polynomial for knots and BPS states</p></li>
+</ul>
+
+<p>_
+*   <a href="http://arxiv.org/abs/1209.1416" title="arXiv:1209.1416">arXiv:1209.1416</a> _3d analogs of Argyres-Douglas theories and knot homologies</p>
+
+<p>_</p>
+
+<p>For me, I can continue reading <a href="http://arxiv.org/abs/1108.0002v2" title="arXiv:1108.0002v2">arXiv:1108.0002v2</a> _A-polynomial, B-model, and Quantization _. And here are a lot of Prof. Zhou&rsquo;s paper I can read.</p>
+
+<p>Here are Gukov&rsquo;s video about categrofication:</p>
+
+<p><a href="http://www.youtube.com/watch?v=skFZATzg1BA&amp;list=PLCrjAFox2T31KhqXKYt4uYFsqVgdYH4mX">http://www.youtube.com/watch?v=skFZATzg1BA&amp;list=PLCrjAFox2T31KhqXKYt4uYFsqVgdYH4mX</a></p>
+
+<p>Then I would like to refer to some things I was thinking today. I was thinking why we cannot do good research in China. A big reason is: in US people can communicate frequently without any difficulty. (Because geometrically, the top universities in US are relatively close to each other.) And face to face meeting or seminar are way far productive then that by using email or internet. Furthermore, in US professors love their research. While in China professors love their money more (This is definitely not in general. But I can say in many cases Chinese professors will talk about others grant rather than others research.)</p>
+
+<p>The last thing I wouldn&rsquo;t want to forget is: here is a paper about string theory, written by Greene,</p>
+
+<p><a href="http://arxiv.org/abs/hep-th/9702155" title="arXiv:hep-th/9702155">arXiv:hep-th/9702155</a> <em>String Theory on Calabi-Yau Manifolds</em>. Here he mentioned from ground zero. Worth reading!</p>
+
+<p>Okey! That is definitely not all I want to mention today. But my memory and time are limited. So, I&rsquo;ll continue when I remember the rest of things again. Good night world!</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2012-12-05</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/math/">Math</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/coding/password-and-safety/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Password and safety</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/life/u-are-in-my-heart/">
+            <span class="next-text nav-default">U are in my heart</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2013 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">XL</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

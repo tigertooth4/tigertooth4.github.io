@@ -17,7 +17,13 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
+  <meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
+今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
+但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
+又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
+对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
+其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
+假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" />
@@ -50,38 +56,42 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
+今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
+但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
+又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
+对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
+其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
+假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是">
+<meta itemprop="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
+今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
+但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
+又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
+对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
+其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
+假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以">
 
 
 
-<meta itemprop="wordCount" content="1742">
+<meta itemprop="wordCount" content="255">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是"/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
+今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
+但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
+又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
+对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
+其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
+假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

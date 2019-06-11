@@ -601,14 +601,7 @@ Here&amp;rsquo;s some beautiful piece performed by other people in YouTube:
       <pubDate>Sat, 02 Nov 2013 04:03:56 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/</guid>
-      <description>c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q + Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  </description>
+      <description>c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q + Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p</description>
     </item>
     
     <item>
@@ -681,10 +674,10 @@ Basically, it uses md5 to transfer a preset string to another, which is consider
     
     <item>
       <title>Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts</title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers--brew-k-theory-a-polynomial-and-random-thoughts/</link>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/</link>
       <pubDate>Wed, 05 Dec 2012 16:10:40 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers--brew-k-theory-a-polynomial-and-random-thoughts/</guid>
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/</guid>
       <description>Today we went to Burgers &amp;amp; Brew for lunch. Burgers &amp;amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&amp;rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&amp;rsquo;s only $7 or so.
 more
 [caption id=&amp;ldquo;attachment_427&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] Hamburger (@Burgers &amp;amp; Brew)[/caption]</description>
@@ -787,7 +780,11 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dmodeling/blender-project-iii/</guid>
-      <description>Title: Blender Project (III) Date: 2012-11-08 18:19:35 Actually when I wrote this blog, I&amp;rsquo;m waiting for the result of rendering the coffee cup. I&amp;rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down. more In the last post, we</description>
+      <description>Title: Blender Project (III)
+Date: 2012-11-08 18:19:35
+Actually when I wrote this blog, I&amp;rsquo;m waiting for the result of rendering the coffee cup. I&amp;rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.
+more
+In the last post, we talked about the process of making the body of coffee cup from a cylinder.</description>
     </item>
     
     <item>
@@ -796,7 +793,23 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dmodeling/todays-random-log/</guid>
-      <description>Title: Today&amp;rsquo;s random log Date: 2012-11-19 13:13:56 [mathjax] 铁磁流体 [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;952&amp;rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption] 奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑</description>
+      <description>Title: Today&amp;rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;952&amp;rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&amp;reg;,k1}(\eta)\cdot \hat\xi{d_2+1}^{&amp;reg;,k_2}(\bar\eta)+
+\hat\xi_{d_1+1}^{&amp;reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&amp;reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n+1}^{&amp;reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&amp;reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n+1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}.</description>
     </item>
     
     <item>
@@ -805,7 +818,16 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dmodeling/todays-project-knot/</guid>
-      <description>Title: Todays project: knot Date: 2012-11-10 16:38:55 Today I modeled a knot. Let&amp;rsquo;s see the final render image: [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] A knot[/caption] The rough procedure is more Create a 2D path by using Extrude key &amp;ldquo;E Modify the 2D path to a 3D path, which will be the shape of a kno Create a circle with suitable diamete Apply the circle to the pat Set materia That&amp;rsquo;s it!:)</description>
+      <description>Title: Todays project: knot
+Date: 2012-11-10 16:38:55
+Today I modeled a knot. Let&amp;rsquo;s see the final render image:
+[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] A knot[/caption]
+The rough procedure is
+more
+ Create a 2D path by using Extrude key &amp;ldquo;E
+ Modify the 2D path to a 3D path, which will be the shape of a kno
+ Create a circle with suitable diamete
+ Apply the circle to the pat</description>
     </item>
     
     <item>
@@ -814,7 +836,9 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/</guid>
-      <description>Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja</description>
+      <description>Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public
+今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。
+其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 *Kossel*。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 *extra large*，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字） 的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点： 1.</description>
     </item>
     
     <item>
@@ -823,7 +847,14 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/</guid>
-      <description>Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的</description>
+      <description>Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public
+昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。
+还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)
+今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。
+接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。
+【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。
+考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。
+【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT.</description>
     </item>
     
     <item>
@@ -832,7 +863,13 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/</guid>
-      <description>Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是</description>
+      <description>Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
+今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
+但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
+又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
+对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
+其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
+假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以</description>
     </item>
     
     <item>
@@ -841,7 +878,14 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_29/</guid>
-      <description>Title: Kossel XL 构建记 (29) &amp;mdash;- The GCode Magic II Date: 2014-9-25 9:35:00 Tag: 3dp, Kossel, Wiring, Stepper, Motor, GCode Status: public 抽时间把以前所有的设计组合在一起，画了 Kossel-XL 3DP 的组装完成图 以及分解图 感觉太有成就感了：）！ 目前要</description>
+      <description>Title: Kossel XL 构建记 (29) &amp;mdash;- The GCode Magic II Date: 2014-9-25 9:35:00 Tag: 3dp, Kossel, Wiring, Stepper, Motor, GCode Status: public
+抽时间把以前所有的设计组合在一起，画了 Kossel-XL 3DP 的组装完成图
+以及分解图
+感觉太有成就感了：）！
+目前要做的，是赶紧对三个步进电机进行调试，然后加热板的支撑部分也应该考虑了。由于之前电源部分的尺寸稍差（调整起来费事），所以不得不把支撑部分垫高一点，以防 电源盒子的散热部分被加热板挡住。好吧，今晚可以动手绘制加热板的支撑部分了！
+以下内容可以参考 builda3dprinter
+风扇的接线 需要一直吹的有 hotend 以及 电路部分（？）的风扇。这里由于空间并不充裕，我用的是 25x25mm 的小风扇，依 然是 12V 的电压。风扇有三种可能的接法：
+ 接在供电接口上，这样的话一开机风扇就会一直转。这个接口我想用来接电路部分的散热风扇，以及电源的散 热风扇； 接在 Ramps 板子第一个 A4988 左侧的那个 12V 辅助输入口，同样，开机以后风扇也会转，因此这个口看来是 接热头风扇的首选接口； Ramps 板子的 D9 接口，这个接口的风扇转速可以调整，因此非常适合吹打印件。  其它接口的设置  D10 &amp;ndash; 接热头 (hot-end) D8 &amp;ndash; 接热床 (heated bed)  以上网页上交待说风扇要用 G-Code &amp;ldquo;M106 SXXX&amp;rdquo; 打开， XXX 是 0-255 之间的一个值，这个还需要再尝试才能确 定；要想关闭风扇，可以用 M106 S0</description>
     </item>
     
     <item>
@@ -850,7 +894,12 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/</guid>
-      <description>Title: Kossel XL 构建记 (32) &amp;mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价</description>
+      <description>Title: Kossel XL 构建记 (32) &amp;mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
+最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
+最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
+于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
+突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
+// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。</description>
     </item>
     
     <item>
@@ -859,7 +908,13 @@ There are some brand new video tutorials on YouTube. By far my fav are: Blender 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
-      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS Date: 2013-04-17 17:31:35 Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress Today I found several good posts. Let me note them down here: Every irreducible representation of Abelian group is one dimensional. http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/ 自己建立一个免费的vp</description>
+      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.</description>
     </item>
     
     <item>
@@ -887,7 +942,14 @@ NSPopover *popover = [[NSPopover alloc] init];
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/cocoa/%E5%87%A0%E4%B8%AA%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B5%84%E6%BA%90/</guid>
-      <description>Title: 几个开发相关的资源 Date: 2013-05-01 21:37:32 今天在 V2ex.com 发现了一些有用的资源： XCode-themes: [https://github.com/tursunovic/xcode-themes](https://github.com/tursunovic/xcode-themes Letterpress - Lightweight blogging system: [http://wangling.me/2013/01/letterpress.html](http://wangling.me/2013/01/letterpress.html AppCode - An alternative IDE for obj-c dev: [http://www.jetbrains.com/objc/](http://www.jetbrains.com/objc/ Monospace font: Source Code Pro http://slant.co/topics/67/~what-are-the-best-programming-fonts 话说 FriCAS 的 Mac OSX binary 也可以直接下载了，终于不</description>
+      <description>Title: 几个开发相关的资源
+Date: 2013-05-01 21:37:32
+今天在 V2ex.com 发现了一些有用的资源：
+ XCode-themes: [https://github.com/tursunovic/xcode-themes](https://github.com/tursunovic/xcode-themes
+ Letterpress - Lightweight blogging system: [http://wangling.me/2013/01/letterpress.html](http://wangling.me/2013/01/letterpress.html
+ AppCode - An alternative IDE for obj-c dev: [http://www.jetbrains.com/objc/](http://www.jetbrains.com/objc/
+ Monospace font: Source Code Pro http://slant.co/topics/67/~what-are-the-best-programming-fonts 
+  话说 FriCAS 的 Mac OSX binary 也可以直接下载了，终于不用手动编译了！:-) 见：http://www.math.uni.wroc.pl/~hebisch/fricas/FriCAS-1.2.0-x86_64-macos10.6.tbz</description>
     </item>
     
     <item>
@@ -896,7 +958,9 @@ NSPopover *popover = [[NSPopover alloc] init];
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/differentialgeometry/w1-s1/</guid>
-      <description>Title: W1-S1-Parametrized Curves Date: 2015-3-1 23:00 Tags: DifferentialGeometry, Examples, Curves Status: public 在 do Carmo 的书中有一些简单的参数曲线的例子，我们可以用 Mathematica 做出它的图像，以及切线的变化情况。 螺旋线 看似不可微，实则可微的曲</description>
+      <description>Title: W1-S1-Parametrized Curves Date: 2015-3-1 23:00 Tags: DifferentialGeometry, Examples, Curves Status: public
+在 do Carmo 的书中有一些简单的参数曲线的例子，我们可以用 Mathematica 做出它的图像，以及切线的变化情况。
+ 螺旋线   看似不可微，实则可微的曲线   带有自交点的曲线  </description>
     </item>
     
     <item>
@@ -905,7 +969,12 @@ NSPopover *popover = [[NSPopover alloc] init];
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/</guid>
-      <description>Title: 败了Lunatik的表带和手写笔 Date: 2012-11-16 16:18:39 Lunatik的 手写笔 和 表带 原先都是在 kickstarter 上的项目. 目前，表带正打五折优惠，确实很诱人.最终还是经不起</description>
+      <description>Title: 败了Lunatik的表带和手写笔
+Date: 2012-11-16 16:18:39
+Lunatik的 手写笔 和 表带 原先都是在 kickstarter 上的项目. 目前，表带正打五折优惠，确实很诱人.最终还是经不起诱惑，下手买了. 期望这些新玩意能真正被我所用，否则即使花再少的钱也会心痛啊！！
+more
+[gallery columns=&amp;ldquo;1&amp;rdquo; orderby=&amp;ldquo;rand&amp;rdquo;]
+说到这里，我想起了前两天看到的一篇博文，名字叫《极致》. 讲一个设计师试图在选择购买每件商品的时候都挑选他自己觉得最好的那件. 他认为，这样消费也许非常不理性，因为这些设计精良的商品往往都会更值钱些，他所能买到的商品数量注定会比较少. 但是，这些商品会提升他的生活质量，让他不必担心使用这些商品时会出现的意外. 从某种程度来说，我赞成他的观点. 拥有 &amp;ldquo;最好&amp;rdquo; 的商品，确实能让人感到幸福. 然而，能买到一件好的商品，这绝对需要耐心、比较、权衡. 正像这次我购物的经历一样.</description>
     </item>
     
     <item>
@@ -914,7 +983,14 @@ NSPopover *popover = [[NSPopover alloc] init];
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/</guid>
-      <description>Title: Eynard-Orantin 以及疑问 Date: 2013-01-20 22:29:12 [mathjax] [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] genus=3 Riemann Surface[/caption] 今天是无所事事的一天。上午晚起，中午和 Simon 等人吃饭又被雨淋，下午待在办公室在网上闲逛。唯一的收获似乎就是知道</description>
+      <description>Title: Eynard-Orantin 以及疑问
+Date: 2013-01-20 22:29:12
+[mathjax]
+[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] genus=3 Riemann Surface[/caption]
+今天是无所事事的一天。上午晚起，中午和 Simon 等人吃饭又被雨淋，下午待在办公室在网上闲逛。唯一的收获似乎就是知道上个月的手机费少交了大概十美元，是家庭套餐每人应付的月缴。不过，待在办公室里时间长了，人就会有各种各样的想法，比如今天，我就在想，到目前为之我究竟学到了什么呢？Principal specialization? Laplace 变换 还是 Enyard-Orantin 理论呢？学会了这些到底有什么用呢？
+随便在网上逛了逛，发现了一些文章和资源，于是干脆把别人的结论罗列一下，以便自己以后参考。
+more
+ Sergei Gukov, Witten 的学生，在 YT 上有几段视频，题目是”Quantization and Categorification”. Gukov 和 Sulkowski 合写过一篇文章&amp;rdquo;A-polynomial, B-model and Quantization&amp;rdquo; (arXiv:1108.0002v2),讲的是从经典曲线 (A(x,y)=0) 如何得到其量子对应，以及如何判断经典曲线一定有量子对应。将经典曲线量子化，意欲何为？这是我想了解的问题。另外，似乎 Eynard-Orantin 递推公式是得到量子曲线的方法之一，这与我所接触的 principal specialization 似乎有点关系，我要理解清楚。  </description>
     </item>
     
     <item>
@@ -963,7 +1039,18 @@ After long time search, I found some examples:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/</guid>
-      <description>Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，</description>
+      <description>Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&amp;ldquo;attachment_703&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;1024&amp;rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &amp;lsquo;load-path &amp;ldquo;~/.emacs.d/bm/&amp;ldquo;)
+(require &amp;lsquo;bm)
+快捷键设置 (global-set-key (kbd &amp;ldquo;M-S-return&amp;rdquo;) &amp;lsquo;bm-toggle)
+(global-set-key (kbd &amp;ldquo;M-S-down&amp;rdquo;) &amp;lsquo;bm-next)
+(global-set-key (kbd &amp;ldquo;M-S-up&amp;rdquo;) &amp;lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^</description>
     </item>
     
     <item>
@@ -972,7 +1059,17 @@ After long time search, I found some examples:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/</guid>
-      <description>Title: Emacs 的颜色补强计划 Date: 2013-04-04 22:05:21 用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量</description>
+      <description>Title: Emacs 的颜色补强计划
+Date: 2013-04-04 22:05:21
+用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量老是出错。上网搜了一下，才发现原来从 Emacs24 开始，改变了以前的颜色机制，这样文本高亮比以前似乎要更加犀利了（没有仔细读文献，只是看了看图直观的感觉是这样）。
+但是，在 Emacs24 之前的版本，必须要手动加入这项功能。具体的包见：
+https://github.com/sellout/emacs-color-theme-solarized
+安装很简单，这里是针对我这个 pre emacs24 来说的，我就犯懒直接复制 github 里的说明好了：
+ Download and install color-theme
+ Add the &amp;lt;cci_lisp&amp;gt;emacs-color-theme-solarized directory to your Emacs &amp;lt;cci_lisp&amp;gt;load-path
+ Add &amp;lt;cci_lisp&amp;gt;(require &amp;lsquo;color-theme-solarized) to your Emacs init file (usually &amp;lt;cci_bash&amp;gt;~/.emacs)
+ Reload the init file, or restart Emacs
+ Use the usual color-theme mechanism to select one of the Solarized themes, or &amp;lt;cci_lisp&amp;gt;M-x color-theme-solarized-[light|dark].</description>
     </item>
     
     <item>
@@ -981,7 +1078,11 @@ After long time search, I found some examples:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</guid>
-      <description>Title: Fixie: bikes without brakes Date: 2012-12-02 15:26:13 Recently I found something that is really cool! It&amp;rsquo;s called fixed gear bike, or &amp;ldquo;死飞&amp;rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&amp;rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always</description>
+      <description>Title: Fixie: bikes without brakes
+Date: 2012-12-02 15:26:13
+Recently I found something that is really cool! It&amp;rsquo;s called fixed gear bike, or &amp;ldquo;死飞&amp;rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&amp;rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
+more
+When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &amp;ldquo;死飞&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -1002,7 +1103,9 @@ In [cciN_objc]NSTableView[/cciN_objc], when you move the highlighting by arrow k
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/mac-configuration-guide/</guid>
-      <description>Title: Mac 配置指南 Date: 2014-8-4 17:47:00 Tags: Mac, Guide Status: public 今天看到一个 V2EX 上的贴子，发现这个 Mac 配置指南不错，适合刚买到 Mac 的童鞋借鉴，所以记下来：指南。 虽然这篇博客看来完全是</description>
+      <description>Title: Mac 配置指南 Date: 2014-8-4 17:47:00 Tags: Mac, Guide Status: public
+今天看到一个 V2EX 上的贴子，发现这个 Mac 配置指南不错，适合刚买到 Mac 的童鞋借鉴，所以记下来：指南。
+虽然这篇博客看来完全是为了充篇数写的。。。</description>
     </item>
     
     <item>
@@ -1011,7 +1114,16 @@ In [cciN_objc]NSTableView[/cciN_objc], when you move the highlighting by arrow k
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/macworld-asia-%E5%B1%95%E4%BC%9A%E5%8F%82%E8%A7%82%E8%AE%B0/</guid>
-      <description>Title: MacWorld Asia 展会参观记 Date: 2012-08-06 00:41:05 正巧碰上 MacWorld 的展会最近在国家会议中心召开，于是想去凑凑热闹！ 周五上午从家坐了一站的公车，下车后走了两步就到了国家会议中心</description>
+      <description>Title: MacWorld Asia 展会参观记
+Date: 2012-08-06 00:41:05
+正巧碰上 MacWorld 的展会最近在国家会议中心召开，于是想去凑凑热闹！
+周五上午从家坐了一站的公车，下车后走了两步就到了国家会议中心。以前只是知道这里会时常有展览，但是从来没进来过。虽然是周五，但是去往展会的人也不少，而且多半是年轻人。一路上，一个红衣女子也和我一路车，最开始还不以为然，后来才发现她也是去看展会的。由这些可以看到这些年苹果的产品的影响。（更不用提平时随处可见的手持 iPhone、iPad 的人了）
+mor
+来到展会，需要填一张注册单，领参观卡。普通游人可以参观 E1 至 E4 展厅；进入展会，现场的噪音，随处可见的扛着长枪短炮的记者、游客，穿着时尚性感的美女，立刻让人感受到了展览的气氛。
+我从 E1 进入展厅，顺着展位一个一个往前看。公司的名称各异，展台大小也不尽相同，但是总体来说还是以 iPhone, iPad 的周边设备为主。各种各样的手机壳，手机贴纸，移动存储，耳机，电源等等，玲琅满目。给我感觉比较有特色的，就是一家生产类似 inkling 那样的手写笔的厂家。毫无疑问，这是 inkling 的山寨版，无论是从工作原理，到产品的外形设计，都可以看到 inkling 的影子。不过，稍有特色的是，他们还有一款笔是可以结合笔记本或电脑显示屏使用的。将接收器吸附在屏幕一端，利用超声波的回声信号定位笔的位置，就可以达到在屏幕书写的目的。由于实际上充当了鼠标的角色，所以理论上来说可以兼容 Windows 中的所有程序。以下链接中有演示视频。易方笔
+接下去的展览还是以笔、套、壳、耳机、音像为主。这块市场能够发展，全得益于苹果手机和平板的强势发展。但是，国内市场给我的感觉还是缺乏原创性的产品。此次来展的公司，多数来自中国沿海地区，比如深圳等。所以，大多数创意产品都是“山寨货”。例如，易方 vs. inkling，再例如大嘴盘 vs. iCloudFTP。感觉并不是中国厂商拿不到好的创意，而是我们很少能够真正理解“需求”和“市场”。科技企业的创意很重要，从展会上，我看到了一种趋势：以前往往是山寨已有的上市产品，现在往往从
+创意阶段就可以山寨了：例如大嘴盘就是全面山寨了Kickstarter上的一个项目：iCloudFTP。
+展会的其余亮点就是 MacWorld 音乐坊了，介绍如何用 iPad 来制作音乐等等。对我而言，展会所讲的内容似乎不够深入，但也不是完全没有收获。至少我还知道有 R-mix 这款app可以对不同的音乐组成成分用可视话的方法显示出来，还可以进行编辑哦！可抹掉相应部分的声音。</description>
     </item>
     
     <item>
@@ -1072,7 +1184,11 @@ Today I was trying to read Prof. Zhou&amp;rsquo;s article Local Mirror Symmetry 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week-2/</guid>
-      <description>Title: Week 2 Date: 2014-01-11 08:00:34 Status: private 迎来了生日，本来是近期最愉快的一天，但是一封邮件又使心情降回了冰点。你说你累了，想和那个人在一起。其实我想说：在那一刻我动摇</description>
+      <description>Title: Week 2
+Date: 2014-01-11 08:00:34
+Status: private
+迎来了生日，本来是近期最愉快的一天，但是一封邮件又使心情降回了冰点。你说你累了，想和那个人在一起。其实我想说：在那一刻我动摇了，想遇到一个对的人真的很难，感谢你对我的爱，我思考了很久但没有答案，不知是嫉妒你比我更早找到了陪伴你的人，还是失望自己失去了寻找的勇气。之所以没回你是因为不知道该怎样回复。争强好胜的心理在这种情况下可能造成一时的冲动。每当我想回头去找你时，陈老师的话就会在耳边响起；当我想就这样死心，毅然决然走下去的时候，又害怕今后再也找不到合适的人。玩了两天的游戏，完全没心思工作，寂寞得可怕，不知该怎么办？你到底在想什么？还会想我吗？
+更新：原来你还是不能适应和那个人在一起。我立刻不担心了。证明我还是不够爱你，看来我的坚持是对的。</description>
     </item>
     
     <item>
@@ -1081,7 +1197,16 @@ Today I was trying to read Prof. Zhou&amp;rsquo;s article Local Mirror Symmetry 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week14-%E6%96%B0%E9%B2%9C%E4%BA%8B/</guid>
-      <description>Title: Week14 新鲜事 Date: 2014-04-15 05:38:45 Status: private Tags: 2014 , life , 心情 这个系列没有坚持下来，好烦银。好吧，隔了这么久，我怎么知道是第几周呢？只要像这样： 或者 Excel 也可以，不过我不经</description>
+      <description>Title: Week14 新鲜事
+Date: 2014-04-15 05:38:45
+Status: private
+Tags: 2014 , life , 心情
+这个系列没有坚持下来，好烦银。好吧，隔了这么久，我怎么知道是第几周呢？只要像这样：
+或者 Excel 也可以，不过我不经常用。
+more
+这两天一直关注 #MH370 和 #Pistorious 的案子，这也是 CNN 等报道的头版头条。围绕失事飞机，人们从希望到观望，不知道现在大多数人的心情是怎样的。上星期的 4~5 次 Ping 信号曾让我觉得大有希望，但是现在看，一切都是未知数。在茫茫印度洋，即使搜素范围已经缩小到了类似美国的一个州，但是搜索起来仍然像 “find a needle in a haystack”。现在派遣的 Bluefine underwater vehiecle，其搜素深度和能力都令人质疑。毕竟数据要在无人艇返回母舰后才能下载，分析更是要在之后才能进行。这样的延迟会浪费很多时间，试想如果是派遣载人深海探测器的话，可以排除很多不可能的区域，让搜索更有效率。
+关于 Pistorious 的案子，这位 amputee 始终坚持自己是错杀了自己的女友。开始我还是比较同情他的，因为他曾经的英雄事迹，以及他的良好形象（外贸协会这病得治）但是，看新闻后的评论几乎一边倒的谴责。。。也就开始怀疑起我的判断力了。。。想想这位世界冠军，我突然有种侥幸。好在这件事没有发生在我身上。想想人的一生真会经历很多的是是非非，也不可避免会做一些错事。但是这样的事情绝对不能出现在我身上。。。 想到我之前做错过的事，真的很自责。自卑与自负的结合体，真是一切皆有可能。。。
+然后思绪就转到了对 ex 的愧疚…</description>
     </item>
     
     <item>
@@ -1090,7 +1215,16 @@ Today I was trying to read Prof. Zhou&amp;rsquo;s article Local Mirror Symmetry 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week51%E6%9C%AC%E5%91%A8%E6%96%B0%E9%B2%9C%E4%BA%8B/</guid>
-      <description>Title: Week51本周新鲜事 Date: 2013-12-27 06:40:26 本周最大的喜讯莫过于发现 轻云 这个 APN 了，只要设置一下自动代理就可以科学上网，真是简单到家了！除此之外，还有一些值</description>
+      <description>Title: Week51本周新鲜事 Date: 2013-12-27 06:40:26
+本周最大的喜讯莫过于发现 轻云 这个 APN 了，只要设置一下自动代理就可以科学上网，真是简单到家了！除此之外，还有一些值得总结的东西，下面我来一一列举：
+ 78 Tools for Writing and Previewing Markdown : [传送门](http://mashable.com/2013/06/24/markdown-tools/ &amp;ldquo;传送门&amp;rdquo;
+ 学习 Haskell 的网站：传送门1；[传送门2](http://learnyouahaskell.com/chapters &amp;ldquo;传送门2&amp;rdquo;
+ 写给理工科人的乐理知识系列：[传送门](http://www.cnblogs.com/devymex/p/3385179.html &amp;ldquo;传送门&amp;rdquo;
+ 巴赫的音乐：Air on G string 教学视频：YouTube 以及 Jane 的 [google site](https://sites.google.com/site/pianoandmathtutorials/ &amp;ldquo;googleSite&amp;rdquo;
+ 一篇很好玩的博客：[断撸记](http://jianshu.io/p/84b6e62a1055 &amp;ldquo;断撸&amp;rdquo;
+ 还有很多不知道哪个靠谱的 Markdown ObjC 实现：bodhi(WYSIWYG) ； nongio(Use OCDiscount.framework) ; ThoMarkdown ; menter  另外还有前几周发现的：土星北极上的神秘六角形图案：[传送门](http://www.wired.com/wiredscience/2013/11/cassini-gallery-thanks?cid=co15093844#slideid-353231
+ LaTeX 制作的正十二面体日历：[传送门](http://www.texample.net/tikz/examples/foldable-dodecahedron-with-calendar/
+ 范畴论中重要的：Yoneda 引理：链接1；stack-Overflow; SOF2 ; 与 Haskell 的关系  Impossible Dovetail joint: [DovetailPuzzle](http://www.</description>
     </item>
     
     <item>
@@ -1099,7 +1233,15 @@ Today I was trying to read Prof. Zhou&amp;rsquo;s article Local Mirror Symmetry 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/week52-%E6%9C%AC%E5%91%A8%E6%96%B0%E9%B2%9C%E4%BA%8B/</guid>
-      <description>Title: Week52 本周新鲜事 Date: 2014-01-06 20:33:49 Tags: mathJAX , Ulysses , Wacom , 美剧 Week52 = Week1 买了 Ulysses III 天天美剧 #增加了人生的幸福指数 输入 mathJAX 公式，并用 marked 预览：例如 &amp;#92;[ x^2 &amp;#92;] 买了 Wacom Intuos Creative Pen，iPa</description>
+      <description>Title: Week52 本周新鲜事
+Date: 2014-01-06 20:33:49
+Tags: mathJAX , Ulysses , Wacom , 美剧
+Week52 = Week1
+ 买了 Ulysses III
+ 天天美剧 #增加了人生的幸福指数
+ 输入 mathJAX 公式，并用 marked 预览：例如 &amp;#92;[ x^2 &amp;#92;]
+ 买了 Wacom Intuos Creative Pen，iPad 上的画画神器！
+  </description>
     </item>
     
     <item>

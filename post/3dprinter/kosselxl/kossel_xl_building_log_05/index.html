@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja" />
+  <meta name="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public
+今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。
+其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 *Kossel*。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 *extra large*，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字） 的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点： 1." />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/" />
@@ -50,38 +52,30 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public
+今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。
+其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 *Kossel*。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 *extra large*，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字） 的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点： 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja">
+<meta itemprop="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public
+今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。
+其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 *Kossel*。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 *extra large*，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字） 的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点： 1.">
 
 
 
-<meta itemprop="wordCount" content="1038">
+<meta itemprop="wordCount" content="133">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja"/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public
+今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。
+其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 *Kossel*。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 *extra large*，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字） 的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点： 1."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

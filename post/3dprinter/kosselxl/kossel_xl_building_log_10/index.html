@@ -17,7 +17,14 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的" />
+  <meta name="description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public
+昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。
+还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)
+今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。
+接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。
+【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。
+考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。
+【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT." />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/" />
@@ -50,38 +57,45 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public
+昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。
+还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)
+今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。
+接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。
+【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。
+考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。
+【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的">
+<meta itemprop="description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public
+昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。
+还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)
+今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。
+接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。
+【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。
+考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。
+【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT.">
 
 
 
-<meta itemprop="wordCount" content="1264">
+<meta itemprop="wordCount" content="128">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的"/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public
+昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。
+还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)
+今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。
+接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。
+【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。
+考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。
+【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

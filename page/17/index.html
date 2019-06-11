@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/" />
@@ -55,18 +55,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://tigertooth4.github.io/" />
 
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2019-04-20T23:06:35&#43;08:00"/>
 
 <meta itemprop="name" content="思与制 - A guy&#39;s thinking and making">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -214,7 +203,18 @@ After long time search, I found some examples:
   
   <div class="post-content">
     <div class="post-summary">
-      Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，
+      Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^
     </div>
     <div class="read-more">
       <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" class="read-more-link">阅读更多</a>
@@ -235,7 +235,17 @@ After long time search, I found some examples:
   
   <div class="post-content">
     <div class="post-summary">
-      Title: Emacs 的颜色补强计划 Date: 2013-04-04 22:05:21 用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量
+      Title: Emacs 的颜色补强计划
+Date: 2013-04-04 22:05:21
+用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量老是出错。上网搜了一下，才发现原来从 Emacs24 开始，改变了以前的颜色机制，这样文本高亮比以前似乎要更加犀利了（没有仔细读文献，只是看了看图直观的感觉是这样）。
+但是，在 Emacs24 之前的版本，必须要手动加入这项功能。具体的包见：
+https://github.com/sellout/emacs-color-theme-solarized
+安装很简单，这里是针对我这个 pre emacs24 来说的，我就犯懒直接复制 github 里的说明好了：
+ Download and install color-theme
+ Add the &lt;cci_lisp&gt;emacs-color-theme-solarized directory to your Emacs &lt;cci_lisp&gt;load-path
+ Add &lt;cci_lisp&gt;(require &lsquo;color-theme-solarized) to your Emacs init file (usually &lt;cci_bash&gt;~/.emacs)
+ Reload the init file, or restart Emacs
+ Use the usual color-theme mechanism to select one of the Solarized themes, or &lt;cci_lisp&gt;M-x color-theme-solarized-[light|dark].
     </div>
     <div class="read-more">
       <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/" class="read-more-link">阅读更多</a>
@@ -256,7 +266,11 @@ After long time search, I found some examples:
   
   <div class="post-content">
     <div class="post-summary">
-      Title: Fixie: bikes without brakes Date: 2012-12-02 15:26:13 Recently I found something that is really cool! It&rsquo;s called fixed gear bike, or &ldquo;死飞&rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always
+      Title: Fixie: bikes without brakes
+Date: 2012-12-02 15:26:13
+Recently I found something that is really cool! It&rsquo;s called fixed gear bike, or &ldquo;死飞&rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
+more
+When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &ldquo;死飞&rdquo;.
     </div>
     <div class="read-more">
       <a href="/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/" class="read-more-link">阅读更多</a>

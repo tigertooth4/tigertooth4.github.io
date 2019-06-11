@@ -17,14 +17,7 @@
 
 
 <meta name="author" content="tt4" />
-  <meta name="description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  " />
+  <meta name="description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -33,7 +26,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
@@ -57,42 +50,14 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
 
 <meta property="og:title" content="生成量子曲线的代码" />
-<meta property="og:description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  " />
+<meta property="og:description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
-
-
-
 <meta property="article:published_time" content="2013-11-02T04:03:56&#43;00:00"/>
-
 <meta property="article:modified_time" content="2013-11-02T04:03:56&#43;00:00"/>
 
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="生成量子曲线的代码">
-<meta itemprop="description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  ">
+<meta itemprop="description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p">
 
 
 <meta itemprop="datePublished" content="2013-11-02T04:03:56&#43;00:00" />
@@ -104,14 +69,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 <meta itemprop="keywords" content="代码," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="生成量子曲线的代码"/>
-<meta name="twitter:description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  "/>
+<meta name="twitter:description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

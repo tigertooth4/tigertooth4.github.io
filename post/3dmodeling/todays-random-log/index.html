@@ -17,7 +17,23 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Today&amp;rsquo;s random log Date: 2012-11-19 13:13:56 [mathjax] 铁磁流体 [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;952&amp;rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption] 奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑" />
+  <meta name="description" content="Title: Today&amp;rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;952&amp;rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&amp;reg;,k1}(\eta)\cdot \hat\xi{d_2&#43;1}^{&amp;reg;,k_2}(\bar\eta)&#43;
+\hat\xi_{d_1&#43;1}^{&amp;reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&amp;reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n&#43;1}^{&amp;reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&amp;reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n&#43;1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}." />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +42,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dmodeling/todays-random-log/" />
@@ -50,38 +66,72 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Today&rsquo;s random log Date: 2012-11-19 13:13:56 [mathjax] 铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption] 奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑" />
+<meta property="og:description" content="Title: Today&rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&reg;,k1}(\eta)\cdot \hat\xi{d_2&#43;1}^{&reg;,k_2}(\bar\eta)&#43;
+\hat\xi_{d_1&#43;1}^{&reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n&#43;1}^{&reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n&#43;1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dmodeling/todays-random-log/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Today&rsquo;s random log Date: 2012-11-19 13:13:56 [mathjax] 铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption] 奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑">
+<meta itemprop="description" content="Title: Today&rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&reg;,k1}(\eta)\cdot \hat\xi{d_2&#43;1}^{&reg;,k_2}(\bar\eta)&#43;
+\hat\xi_{d_1&#43;1}^{&reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n&#43;1}^{&reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n&#43;1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}.">
 
 
 
-<meta itemprop="wordCount" content="700">
+<meta itemprop="wordCount" content="92">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Today&rsquo;s random log Date: 2012-11-19 13:13:56 [mathjax] 铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption] 奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑"/>
+<meta name="twitter:description" content="Title: Today&rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&reg;,k1}(\eta)\cdot \hat\xi{d_2&#43;1}^{&reg;,k_2}(\bar\eta)&#43;
+\hat\xi_{d_1&#43;1}^{&reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n&#43;1}^{&reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n&#43;1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

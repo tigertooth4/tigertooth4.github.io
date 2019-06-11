@@ -17,7 +17,18 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，" />
+  <meta name="description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&amp;ldquo;attachment_703&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;1024&amp;rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &amp;lsquo;load-path &amp;ldquo;~/.emacs.d/bm/&amp;ldquo;)
+(require &amp;lsquo;bm)
+快捷键设置 (global-set-key (kbd &amp;ldquo;M-S-return&amp;rdquo;) &amp;lsquo;bm-toggle)
+(global-set-key (kbd &amp;ldquo;M-S-down&amp;rdquo;) &amp;lsquo;bm-next)
+(global-set-key (kbd &amp;ldquo;M-S-up&amp;rdquo;) &amp;lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +37,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
@@ -50,38 +61,57 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，" />
+<meta property="og:description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，">
+<meta itemprop="description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^">
 
 
 
-<meta itemprop="wordCount" content="242">
+<meta itemprop="wordCount" content="47">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，"/>
+<meta name="twitter:description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

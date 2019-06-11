@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.46" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/" />
@@ -53,22 +53,8 @@
 <meta property="og:description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/" />
-
-
-
 <meta property="article:published_time" content="2019-04-20T23:06:35&#43;08:00"/>
-
 <meta property="article:modified_time" content="2019-04-20T23:06:35&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="Galois理论：一篇粗浅的介绍">
 <meta itemprop="description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其">
@@ -76,7 +62,7 @@
 
 <meta itemprop="datePublished" content="2019-04-20T23:06:35&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-20T23:06:35&#43;08:00" />
-<meta itemprop="wordCount" content="1247">
+<meta itemprop="wordCount" content="1239">
 
 
 
@@ -222,8 +208,7 @@ $$
 <li>首先通过变量替换 $z=x-\frac{a_2}{3}$ 消去二次项，得到如下标准形式的三次多项式
 $$
 z^3 + \frac{3a_1-a_2^2}{3} z - \frac{9a_1 a_2-27 a_0 - 2a_2^3}{27}=0
-$$
-<br /></li>
+$$</li>
 </ul>
 
 <p>即如下形式
@@ -248,47 +233,55 @@ $$</p></li>
 
 <h1 id="五次及以上的代数方程-为何不存在一般的根式解法">五次及以上的代数方程，为何不存在一般的根式解法？</h1>
 
-<p>Galois 的想法是这样的<sup class="footnote-ref" id="fnref:stillwell"><a href="#fn:stillwell">1</a></sup>。假设 $n\geq5$ 次的方程写成
-$$
+<p>Galois 的想法是这样的<sup class="footnote-ref" id="fnref:stillwell"><a href="#fn:stillwell">1</a></sup>。假设 $n\geq5$ 次的方程写成</p>
+
+<p>$$
 x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 = 0
-$$
-设其所有的解为 $x_1,x_2,\cdots, x<em>n$，则
-$$
-x^n + a</em>{n-1}x^{n-1}+\cdots + a_1 x + a_0 = (x-x_1)(x-x_2)\cdots (x-x_n)=0
-$$
-注意到，上式说明 $a_0, a_1,\cdots, a_n$ 实际上都是 $x_1,x_2,\cdots, x<em>n$ 的对称多项式
-$$
-\begin{align}
-a</em>{n-1} &amp;= - (x_1 + x_2 + \cdots + x<em>n)<br />
-a</em>{n-2} &amp;= \sum_{i\neq j} x_i x_j<br />
-\vdots\quad &amp;= \quad\quad\vdots<br />
-a_0 &amp;= \pm x_1 x_2 \cdots x_n
-\end{align}
-$$
-因此，若将置换群 $S_n$ 作用在方程的根上，系数 $a_0,a<em>1,\cdots,a</em>{n-1}$ 应保持不变。现在，假设所有的解都可以用系数 $a_0,a_1,a<em>2,\cdots,a</em>{n-1}$ 的<u>四则运算</u>和<u>根式</u>表达出来。我们</p>
+$$</p>
+
+<p>设其所有的解为 $x_1, x_2, \cdots, x_n$, 则</p>
+
+<p>$$
+x^n + a_{n-1}x^{n-1}+\cdots + a_1 x + a_0 = (x-x_1)(x-x_2)\cdots (x-x_n)=0
+$$</p>
+
+<p>注意到，上式说明 $a_0, a_1,\cdots, a_n$ 实际上都是 $x_1,x_2,\cdots,x_n$ 的对称多项式</p>
+
+<p>$$a_{n-1} = - (x_1 + x_2 + \cdots + x_n), $$</p>
+
+<p>$$\cdots$$</p>
+
+<p>$$a_0 = \pm x_1 x_2 \cdots x_n.$$</p>
+
+<p>因此，若将置换群 $S_n$ 作用在方程的根上，系数 $a_i$ 等应保持不变。现在，假设所有的解都可以用系数 $a_i$ 的<u>四则运算</u>和<u>根式</u>表达出来。我们</p>
 
 <ul>
-<li>记 $\mathbb{Q}(a<em>0,\cdots,a</em>{n-1})$ 为对系数 $a_i$ 进行<u>四则运算</u>能够得到的所有数构成的集合（这个集合会对加减乘除封闭，数学上，我们把这样的集合称为一个<u>域</u>。</li>
+<li>记 $\mathbb{Q}(a_0,&hellip;,a_{n-1})$ 为对系数 $a_i$ 进行<u>四则运算</u>能够得到的所有数构成的集合（这个集合会对加减乘除封闭，数学上，我们把这样的集合称为一个<u>域</u>。</li>
 <li>记 $\mathbb{Q}(x_1,\cdots,x_n)$ 为对方程的所有根进行<u>四则运算</u>能够得到的数的集合（也是一个域）。</li>
 <li>记 $E$ 为对系数 $a_i$ 及其<u>必要的根式</u>进行四则运算能够得到的数的集合（域）。</li>
 <li>记 $\overline{E}$ 为对 $E$ 中元素再进行下标的置换能够得到的所有数所构成的集合（域）。</li>
 </ul>
 
-<p>例如：对二次多项式 $x^2 + a_1 x + a_0 = 0$，
-$$
-E = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0}), \quad \overline{E} = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0},\sqrt{a_0^2-4a_1}).
-$$
-事实上，$E$ 中已经包含了 $x_1,x<em>2$：$x</em>{1,2}=\frac12 a_1 \pm \frac12 \sqrt{a_1^2-4a_0}$.</p>
+<p>例如：对二次多项式 $x^2 + a_1 x + a_0 = 0$，</p>
 
-<p>若所有的解都能用系数表达，那么我们可以得到如下包含关系
-$$
-B:=\mathbb{Q}(a<em>0,\cdots,a</em>{n-1}) \subset \mathbb{Q}(x_1,\cdots,x_n)\subset E\subset \overline{E}
-$$
-注意，第二个包含关系成立是由假设条件推出的。第二点要注意的是，在根的置换操作（群 $S_n$ 的作用下），$B$ 和 $\overline{E}$ 是保持不变的。我们定义所有保持 $B$ 不变的 $\overline{E}$ 的操作构成一个群，记为
-$$
+<div>$$
+E = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0}), \quad \overline{E} = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0}, \sqrt{a_0^2-4a_1}).
+$$</div>
+
+<p>事实上，$E$ 中已经包含了 $x_1,x_2$：$x_{1,2}=\frac12 a_1 \pm \frac12 \sqrt{a_1^2-4a_0}$.</p>
+
+<p>若所有的解都能用系数表达，那么我们可以得到如下包含关系</p>
+
+<div>$$
+B:=\mathbb{Q}(a_0, \cdots,a_{n-1}) \subset \mathbb{Q}(x_1,\cdots,x_n)\subset E\subset \overline{E}
+$$</div>
+
+<p>注意，第二个包含关系成立是由假设条件推出的。第二点要注意的是，在根的置换操作（群 $S_n$ 的作用下），$B$ 和 $\overline{E}$ 是保持不变的。我们定义所有保持 $B$ 不变的 $\overline{E}$ 的操作构成一个群，记为
+<code>$
 \mathrm{Gal}\left(\overline{E}/B\right)
-$$
-则显然应该有 $S_n\subset \mathrm{Gal}\left(\overline{E}/B\right)$.</p>
+$</code></p>
+
+<p>则显然应该有 $S_n\subset \mathrm{Gal}\left(\overline{E}/B\right)$.</p>
 
 <p>不巧的是， $\mathrm{Gal}\left(\overline{E}/B\right)$ 是一个可解群（即这些操作可以通过对依次添加进来的新的根式进行置换而得到），而当 $n\geq5$ 时，$S_n$ 不是可解群，从而产生了矛盾！</p>
 

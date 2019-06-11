@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design on 思与制 - A guy&#39;s thinking and making</title>
+    <title>design on 思与制 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/tags/design/</link>
-    <description>Recent content in Design on 思与制 - A guy&#39;s thinking and making</description>
+    <description>Recent content in design on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Aug 2016 18:56:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Feb 2019 16:45:52 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TCT Asia 观后感 part1</title>
+      <link>http://tigertooth4.github.io/post/2019-02/tct-asia-pt1/</link>
+      <pubDate>Sat, 23 Feb 2019 16:45:52 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-02/tct-asia-pt1/</guid>
+      <description>每年一度的 TCT Asia 展会又开幕了。和去年一样，今年我又打飞的来了，买了当天往返上海的机票。一出机场便直奔展会（从虹桥机场坐地铁二号线-七号线到花木</description>
+    </item>
     
     <item>
       <title>对家用3d打印机的思考</title>
