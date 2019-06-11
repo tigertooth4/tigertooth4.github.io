@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Galois理论：一篇粗浅的介绍 - 思与制 - A guy&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="XL" />
+  <meta name="description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.46" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Galois理论：一篇粗浅的介绍" />
+<meta property="og:description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/" />
+
+
+
+<meta property="article:published_time" content="2019-04-20T23:06:35&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-04-20T23:06:35&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Galois理论：一篇粗浅的介绍">
+<meta itemprop="description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其">
+
+
+<meta itemprop="datePublished" content="2019-04-20T23:06:35&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-20T23:06:35&#43;08:00" />
+<meta itemprop="wordCount" content="1247">
+
+
+
+<meta itemprop="keywords" content="Galois,Math,AlgebraicEquations,Sqrt,Symmetry," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Galois理论：一篇粗浅的介绍"/>
+<meta name="twitter:description" content="之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">思与制</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">思与制</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Galois理论：一篇粗浅的介绍</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-04-20 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#二次代数方程的情况">二次代数方程的情况</a></li>
+<li><a href="#三次代数方程的情况">三次代数方程的情况</a></li>
+<li><a href="#五次及以上的代数方程-为何不存在一般的根式解法">五次及以上的代数方程，为何不存在一般的根式解法？</a></li>
+<li><a href="#结论">结论</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其中引用了前苏联数学家 Andrei Kolmogorov 的一句</p>
+
+<blockquote>
+<p>Mathematics occurs on the boundary between the obvious and the impossible.</p>
+</blockquote>
+
+<p>其实，这句话也是这个报告标题的灵感来源。</p>
+
+<p>在报告中，我选取的其中一个实例就是 Galois 关于高次代数方程（次数大于等于5）时没有根式解法的证明，用以说明伟大的思想确实可以把不可能变成显然。之所以选这个实例，也是因为自己从没对 Galois 的思想有过大致的了解。想借这个机会好好了解一下。</p>
+
+<p>为了不会以后忘却，趁着报告过去的时间不长，我觉得还是有必要把当时讲的内容记录一下。</p>
+
+<p>所以，我们将要考虑的问题是如下代数方程：
+$$
+x^n+a_{n-1}x^{n-1}+\cdots + a_1 x + a_0 = 0
+$$
+的解能否通过对系数 $a_i$ 进行有限次四则运算和开方运算表示出来? 让我们来先看几个例子。</p>
+
+<h1 id="二次代数方程的情况">二次代数方程的情况</h1>
+
+<p>我们中学的时候都学过，二次代数方程
+$$
+x^2+a_1 x + a_0 = 0
+$$</p>
+
+<p>的解是可以这样表示出来的:
+$$
+x_{1,2}=\frac{-a_1\pm \sqrt{a_1^2-4a_0}}{2}
+$$</p>
+
+<h1 id="三次代数方程的情况">三次代数方程的情况</h1>
+
+<p>对于三次多项式
+$$
+x^3+a_2 x^2 + a_1 x + a_0 = 0
+$$
+来说，其求根公式也可以用如下的方法给出：</p>
+
+<ul>
+<li>首先通过变量替换 $z=x-\frac{a_2}{3}$ 消去二次项，得到如下标准形式的三次多项式
+$$
+z^3 + \frac{3a_1-a_2^2}{3} z - \frac{9a_1 a_2-27 a_0 - 2a_2^3}{27}=0
+$$
+<br /></li>
+</ul>
+
+<p>即如下形式
+  $$
+  z^3+pz = q.
+  $$</p>
+
+<ul>
+<li><p>利用伟达变换 $z=w-\frac{p}{3w}$ 将上述方程变成二次方程:
+$$
+(w^3)^2 - q(w^3) - \frac1{27}p^3=0.
+$$
+从而可以解出 w
+$$
+w = \sqrt[3]{\frac12 q \pm \sqrt{\frac14 q^2 + \frac1{27} p^3}}
+$$</p></li>
+
+<li><p>最后反解出 z 以及 x.</p></li>
+</ul>
+
+<p>对于四次代数方程，也有相应的求根公式（由 Ferrari 提出，后发表在 Cardano 的 Ars Magna (1545))。</p>
+
+<h1 id="五次及以上的代数方程-为何不存在一般的根式解法">五次及以上的代数方程，为何不存在一般的根式解法？</h1>
+
+<p>Galois 的想法是这样的<sup class="footnote-ref" id="fnref:stillwell"><a href="#fn:stillwell">1</a></sup>。假设 $n\geq5$ 次的方程写成
+$$
+x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 = 0
+$$
+设其所有的解为 $x_1,x_2,\cdots, x<em>n$，则
+$$
+x^n + a</em>{n-1}x^{n-1}+\cdots + a_1 x + a_0 = (x-x_1)(x-x_2)\cdots (x-x_n)=0
+$$
+注意到，上式说明 $a_0, a_1,\cdots, a_n$ 实际上都是 $x_1,x_2,\cdots, x<em>n$ 的对称多项式
+$$
+\begin{align}
+a</em>{n-1} &amp;= - (x_1 + x_2 + \cdots + x<em>n)<br />
+a</em>{n-2} &amp;= \sum_{i\neq j} x_i x_j<br />
+\vdots\quad &amp;= \quad\quad\vdots<br />
+a_0 &amp;= \pm x_1 x_2 \cdots x_n
+\end{align}
+$$
+因此，若将置换群 $S_n$ 作用在方程的根上，系数 $a_0,a<em>1,\cdots,a</em>{n-1}$ 应保持不变。现在，假设所有的解都可以用系数 $a_0,a_1,a<em>2,\cdots,a</em>{n-1}$ 的<u>四则运算</u>和<u>根式</u>表达出来。我们</p>
+
+<ul>
+<li>记 $\mathbb{Q}(a<em>0,\cdots,a</em>{n-1})$ 为对系数 $a_i$ 进行<u>四则运算</u>能够得到的所有数构成的集合（这个集合会对加减乘除封闭，数学上，我们把这样的集合称为一个<u>域</u>。</li>
+<li>记 $\mathbb{Q}(x_1,\cdots,x_n)$ 为对方程的所有根进行<u>四则运算</u>能够得到的数的集合（也是一个域）。</li>
+<li>记 $E$ 为对系数 $a_i$ 及其<u>必要的根式</u>进行四则运算能够得到的数的集合（域）。</li>
+<li>记 $\overline{E}$ 为对 $E$ 中元素再进行下标的置换能够得到的所有数所构成的集合（域）。</li>
+</ul>
+
+<p>例如：对二次多项式 $x^2 + a_1 x + a_0 = 0$，
+$$
+E = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0}), \quad \overline{E} = \mathbb{Q}(a_1,a_2,\sqrt{a_1^2-4a_0},\sqrt{a_0^2-4a_1}).
+$$
+事实上，$E$ 中已经包含了 $x_1,x<em>2$：$x</em>{1,2}=\frac12 a_1 \pm \frac12 \sqrt{a_1^2-4a_0}$.</p>
+
+<p>若所有的解都能用系数表达，那么我们可以得到如下包含关系
+$$
+B:=\mathbb{Q}(a<em>0,\cdots,a</em>{n-1}) \subset \mathbb{Q}(x_1,\cdots,x_n)\subset E\subset \overline{E}
+$$
+注意，第二个包含关系成立是由假设条件推出的。第二点要注意的是，在根的置换操作（群 $S_n$ 的作用下），$B$ 和 $\overline{E}$ 是保持不变的。我们定义所有保持 $B$ 不变的 $\overline{E}$ 的操作构成一个群，记为
+$$
+\mathrm{Gal}\left(\overline{E}/B\right)
+$$
+则显然应该有 $S_n\subset \mathrm{Gal}\left(\overline{E}/B\right)$.</p>
+
+<p>不巧的是， $\mathrm{Gal}\left(\overline{E}/B\right)$ 是一个可解群（即这些操作可以通过对依次添加进来的新的根式进行置换而得到），而当 $n\geq5$ 时，$S_n$ 不是可解群，从而产生了矛盾！</p>
+
+<h1 id="结论">结论</h1>
+
+<p>简而言之，对称性是解决高次代数方程求根问题的关键，Galois 正是洞察到了这一点！</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:stillwell">Stillwell, Galois theory for beginners.
+ <a class="footnote-return" href="#fnref:stillwell"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">XL</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2019-04-20</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/galois/">Galois</a>
+          
+          <a href="/tags/math/">Math</a>
+          
+          <a href="/tags/algebraicequations/">AlgebraicEquations</a>
+          
+          <a href="/tags/sqrt/">Sqrt</a>
+          
+          <a href="/tags/symmetry/">Symmetry</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/">
+            <span class="next-text nav-default">Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2013 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">XL</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

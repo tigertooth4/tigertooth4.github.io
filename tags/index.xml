@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on T&amp;M - A man&#39;s thinking and making</title>
+    <title>Tags on 思与制 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/tags/</link>
-    <description>Recent content in Tags on T&amp;M - A man&#39;s thinking and making</description>
+    <description>Recent content in Tags on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 03 Mar 2019 23:00:35 +0800</lastBuildDate>
@@ -44,6 +44,15 @@
       <pubDate>Sun, 31 Jul 2016 16:22:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/3dprinter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AlgebraicEquations</title>
+      <link>http://tigertooth4.github.io/tags/algebraicequations/</link>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/algebraicequations/</guid>
       <description></description>
     </item>
     
@@ -399,6 +408,15 @@
     </item>
     
     <item>
+      <title>Galois</title>
+      <link>http://tigertooth4.github.io/tags/galois/</link>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/galois/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Geometry</title>
       <link>http://tigertooth4.github.io/tags/geometry/</link>
       <pubDate>Tue, 25 Nov 2014 17:47:00 +0000</pubDate>
@@ -545,7 +563,7 @@
     <item>
       <title>Math</title>
       <link>http://tigertooth4.github.io/tags/math/</link>
-      <pubDate>Tue, 25 Nov 2014 17:47:00 +0000</pubDate>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/math/</guid>
       <description></description>
@@ -750,6 +768,15 @@
     </item>
     
     <item>
+      <title>Sqrt</title>
+      <link>http://tigertooth4.github.io/tags/sqrt/</link>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/sqrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>StealthChop</title>
       <link>http://tigertooth4.github.io/tags/stealthchop/</link>
       <pubDate>Thu, 21 Mar 2019 23:30:38 +0800</pubDate>
@@ -791,6 +818,15 @@
       <pubDate>Wed, 30 Jul 2014 19:21:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/symbolic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symmetry</title>
+      <link>http://tigertooth4.github.io/tags/symmetry/</link>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/symmetry/</guid>
       <description></description>
     </item>
     

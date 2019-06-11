@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sqrt on 思与制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/sqrt/</link>
+    <description>Recent content in Sqrt on 思与制 - A guy&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Apr 2019 23:06:35 +0800</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/sqrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Galois理论：一篇粗浅的介绍</title>
+      <link>http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/</link>
+      <pubDate>Sat, 20 Apr 2019 23:06:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-04/galois-theory-in-a-naive-point-of-view/</guid>
+      <description>之前为了讲通识课，精心准备了一个名为「在不可能与显然之间」的报告。报告的内容选取了数学中的一些事例，来说明数学为什么有趣，为什么令人惊叹。其</description>
+    </item>
+    
+  </channel>
+</rss>
