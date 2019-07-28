@@ -55,7 +55,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://tigertooth4.github.io/" />
 
-<meta property="og:updated_time" content="2019-04-20T23:06:35&#43;08:00"/>
+<meta property="og:updated_time" content="2019-07-23T22:58:00&#43;08:00"/>
 
 <meta itemprop="name" content="思与制 - A guy&#39;s thinking and making">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -126,6 +126,43 @@
   <section id="posts" class="posts">
     
     
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/3dmodeling/todays-random-log/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Today&rsquo;s random log
+Date: 2012-11-19 13:13:56
+[mathjax]
+铁磁流体 [caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;952&rdquo;]Ferrofluid( 铁磁流体, Picture from wikipedia）[/caption]
+奇妙的是，这东西竟然在磁场下呈现出这样诡异的形状，考虑到黑色部分是液体，当晃动整个系统时，黑色部分还能呈现出果冻般抖动的效果。
+more
+见Synchronized Ferrofluid Sculptures
+Mind blowing Ferrofluid sculpture
+这里是维基百科的解释。
+留数计算 这三天来一直在想一个问题，如何计算如下留数
+[\sum{i=1}^r\mathrm{Res}{\eta=zi}\frac1{(\eta-p)(\bar\eta^r-\eta^r)}\left[\frac{d}{d\eta}\hat\xi{d_1}^{&reg;,k1}(\eta)\cdot \hat\xi{d_2+1}^{&reg;,k_2}(\bar\eta)+
+\hat\xi_{d_1+1}^{&reg;,k1}(\bar\eta)\cdot \frac{d}{d\eta} \hat\xi{d_2}^{&reg;,k_2}(\eta)\right]d\eta
+]
+其中(\hat\xi{n+1}^{&reg;,k}(\eta) = \frac{\eta}{1-\eta^r}\frac{d}{d\eta}\hat\xi{n}^{&reg;,k}(\eta)), 最终形式是一个有理多项式，分母部分为 ((1-\eta^r)^{2n+1})，而分子部分是一个次数小于分母的多项式，(r)是自然数；(z_i)是单位根，满足(1-\eta^r=0)的第i个零点；(\bar\eta)是在(z_i)附近满足方程 (\bar\eta e^{-\bar\eta^r/r}=\eta e^{-\eta^r/r})却不等于(\eta)的另一个解，称之为(\eta)的 deck transformation. (\bar\eta) 可以在 (z_i) 附近展开成 (\eta) 的 Taylor 级数，我们用 (\bar\eta = S_i(\eta)) 表示.
+此问题的难点在于
+ (\bar\eta) 没有显示表示，并且只在(z_i)附近能够写成(\eta)的解析函数  但是我们尝试了一个更简单的留数计算问题，得到了如下结果
+引理1 当多项式(f(x))的次数小于(n r)时，我们有如下留数公式[\sum{i=1}^r \mathrm{Res}{z_i} \frac{f(\eta)}{(\eta-p)(1-\eta^r)^n}d\eta = - \frac{f(p)}{(1-p^r)^n}.
+    </div>
+    <div class="read-more">
+      <a href="/post/3dmodeling/todays-random-log/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     
       <article class="post">
   <header class="post-header">
@@ -258,32 +295,6 @@ more
     </div>
     <div class="read-more">
       <a href="/post/3dprinter/kosselxl/kossel_xl_building_log_29/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/3dprinter/kosselxl/kossel_xl_building_log_32/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
-最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
-最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
-于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
-突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
-// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。
-    </div>
-    <div class="read-more">
-      <a href="/post/3dprinter/kosselxl/kossel_xl_building_log_32/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

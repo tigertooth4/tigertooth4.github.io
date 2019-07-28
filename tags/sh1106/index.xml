@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SH1106 on 思与制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/sh1106/</link>
+    <description>Recent content in SH1106 on 思与制 - A guy&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 23 Jul 2019 22:58:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/sh1106/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</title>
+      <link>http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/</link>
+      <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/</guid>
+      <description>在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾</description>
+    </item>
+    
+  </channel>
+</rss>
