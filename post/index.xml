@@ -1266,5 +1266,14 @@ As I wrote to Simon :
  Board skating is not easy in Beijing.</description>
     </item>
     
+    <item>
+      <title>如何给 OrangePi zero plus 增加热点功能</title>
+      <link>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</guid>
+      <description>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中</description>
+    </item>
+    
   </channel>
 </rss>

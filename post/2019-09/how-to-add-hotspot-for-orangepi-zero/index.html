@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何给 OrangePi zero plus 增加热点功能 - 思与制 - A guy&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="XL" />
+  <meta name="description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="如何给 OrangePi zero plus 增加热点功能" />
+<meta property="og:description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/" />
+
+
+<meta itemprop="name" content="如何给 OrangePi zero plus 增加热点功能">
+<meta itemprop="description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中">
+
+
+
+<meta itemprop="wordCount" content="789">
+
+
+
+<meta itemprop="keywords" content="OrangePi,Octoprint,hotspot,ssh,Marlin,WiFi," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何给 OrangePi zero plus 增加热点功能"/>
+<meta name="twitter:description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">思与制</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">思与制</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何给 OrangePi zero plus 增加热点功能</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#增加热点功能">增加热点功能</a></li>
+<li><a href="#试验">试验</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中不足是，如果像我这样，把 OrangePi 安装到了打印机里面，那么当网络环境改变（比如带打印机外出），不方便连接网线的情况下，有没有事先登录过新环境的 WiFi的话，OctoPrint 几乎会变成废柴（因为无法从外部修改 OctoPrint 的设置，连接 WiFi 操纵打印机）。所以，这种情况下，最方便的还是让 OrangePi 自己变成一个热点。这样只需要用手机连接 OrangePi 的热点即可。</p>
+
+<p>本文参考了<a href="https://medium.com/@kennethjiang/painless-wi-fi-for-octoprint-4e6b68005400">medium 用户 Kennethjiang 的文章</a>。</p>
+
+<ul>
+<li><p>当然，如果事先知道陌生环境的 WiFi 账号密码，那只需要事先将新环境下的 WiFi 信息写入到 OrangePi 中即可。写入的办法是编辑 /etc/wpa_supplicant/wpa_supplicant.conf 文件 （sudo nano /etc/wpa_supplicant/wpa_supplicant.conf) 增加一组 network 的 SSID 和 psk 。</p></li>
+
+<li><p>否则，那么就需要给 OrangePI 增加热点功能。当它搜索不到任何可用的 WiFi 时默认开启热点功能。</p></li>
+</ul>
+
+<p>要想这样做，我参考了上述链接。有如下几个步骤：</p>
+
+<h1 id="增加热点功能">增加热点功能</h1>
+
+<ol>
+<li>增加软件：</li>
+</ol>
+
+<pre><code class="language-powershell">   sudo apt-get update
+   sudo apt-get install hostapd dnsmasq iw
+   sudo systemctl disable hostapd dnsmasq
+</code></pre>
+
+<ol>
+<li>配置 hostapd</li>
+</ol>
+
+<pre><code class="language-powershell">   sudo nano /etc/hostapd/hostapd.conf
+</code></pre>
+
+<p>增加这样几行</p>
+
+<pre><code class="language-powershell">   interface=wlan0
+   #driver=rtl871xdrv
+   ssid=CompactXY-Hotspot
+   hw_mode=g
+   channel=6
+   wmm_enabled=0
+   macaddr_acl=0
+   auth_algs=1
+   ignore_broadcast_ssid=0
+   wpa=2
+   wpa_passphrase=1234567890
+   wpa_key_mgmt=WPA-PSK
+   wpa_pairwise=TKIP
+   rsn_pairwise=CCMP
+</code></pre>
+
+<p>保存文件后，</p>
+
+<pre><code class="language-powershell">   sudo nano /etc/default/hostapd
+</code></pre>
+
+<p>将 <code>#DAEMON_CONF=&quot;/etc/hostapd.conf&quot;</code> 改成 <code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;</code></p>
+
+<ol>
+<li><code>$ sudo nano /etc/dnsmasq.conf</code> 将如下几行加到文件的末尾</li>
+</ol>
+
+<pre><code class="language-powershell">   #OctoHotspot Config
+   
+   #stop DNSmasq from using resolv.conf
+   
+   no-resolv
+   
+   #Interface to use
+   
+   interface=wlan0
+   bind-interfaces
+   dhcp-range=10.0.0.3,10.0.0.20,12h
+</code></pre>
+
+<ol>
+<li><p><code>$ sudo nano /etc/network/interfaces</code> 将 wlan0 的 wpa-conf 语句注释掉</p></li>
+
+<li><p>增加一个脚本，当找不到合适的 WiFi 连接时启动热点</p></li>
+</ol>
+
+<pre><code class="language-powershell">   sudo nano /usr/bin/autohotspot
+</code></pre>
+
+<p>copy-paste 如下代码</p>
+
+<pre><code class="language-powershell">   #!/bin/bash
+   #
+   createAdHocNetwork()
+   {
+       ip link set dev wlan0 down
+       ip a add 10.0.0.5/24 dev wlan0
+       ip link set dev wlan0 up
+       systemctl start dnsmasq
+       systemctl start hostapd
+   }
+   connected=false
+   while read ssid
+   do
+       if iw dev wlan0 scan ap-force | grep $ssid &gt; /dev/null
+       then
+           wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf &gt; /dev/null 2&gt;&amp;1
+           if dhclient -1 wlan0 &amp;&amp; iwconfig wlan0 | grep $ssid &gt; /dev/null
+           then
+               connected=true
+               break
+           else
+               wpa_cli terminate
+               break
+           fi
+       else
+           echo &quot;Not in range, WiFi with SSID:&quot; $ssid
+       fi
+   done &lt;&lt;&lt; &quot;$(grep -i '^[^#].*ssid=' /etc/wpa_supplicant/wpa_supplicant.conf | sed -n 's/.*ssid=&quot;*\([^&quot;]*\)&quot;*/\1/ip')&quot;
+   if ! $connected; then
+       createAdHocNetwork
+   fi
+</code></pre>
+
+<p>增加一项服务，并将下面的代码写入到 <code>autohotspot.service</code> 文件中</p>
+
+<pre><code class="language-powershell">   sudo nano /etc/systemd/system/autohotspot.service
+</code></pre>
+
+<pre><code class="language-powershell">   [Unit]
+   Description=Generates a non-internet Hotspot for ssh when no wifi network is in range.
+   After=network-online.target
+   [Service]
+   Type=oneshot
+   RemainAfterExit=yes
+   ExecStart=/usr/bin/autohotspot
+   [Install]
+   WantedBy=multi-user.target
+</code></pre>
+
+<p>激活服务使得在它启动的时候可以运行</p>
+
+<pre><code class="language-powershell">   sudo chmod +x /usr/bin/autohotspot
+   sudo systemctl enable autohotspot.service
+</code></pre>
+
+<ol>
+<li>下一次在启动 Octoprint 的时候如果找不到任何 WiFi，可以打开电脑寻找名为 CompactXY-Hotspot 的热点，密码为 1234567890，连上以后，Octoprint 的地址为 <a href="http://10.0.0.5/。">http://10.0.0.5/。</a></li>
+</ol>
+
+<h1 id="试验">试验</h1>
+
+<p>还没做过，暂且认为有效吧！</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">XL</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/orangepi/">OrangePi</a>
+          
+          <a href="/tags/octoprint/">Octoprint</a>
+          
+          <a href="/tags/hotspot/">hotspot</a>
+          
+          <a href="/tags/ssh/">ssh</a>
+          
+          <a href="/tags/marlin/">Marlin</a>
+          
+          <a href="/tags/wifi/">WiFi</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E5%85%B6%E5%AE%83/wrote-after-25-days-in-beijing/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2013 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">XL</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1427,4 +1427,30 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>http://tigertooth4.github.io/tags/orangepi/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/wifi/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/hotspot/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/ssh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
