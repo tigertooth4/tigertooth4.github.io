@@ -55,7 +55,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://tigertooth4.github.io/" />
 
-<meta property="og:updated_time" content="2019-07-23T22:58:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-09-07T23:13:00&#43;08:00"/>
 
 <meta itemprop="name" content="思与制 - A guy&#39;s thinking and making">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -126,6 +126,34 @@
   <section id="posts" class="posts">
     
     
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/3dprinter/kosselxl/kossel_xl_building_log_29/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Kossel XL 构建记 (29) &mdash;- The GCode Magic II Date: 2014-9-25 9:35:00 Tag: 3dp, Kossel, Wiring, Stepper, Motor, GCode Status: public
+抽时间把以前所有的设计组合在一起，画了 Kossel-XL 3DP 的组装完成图
+以及分解图
+感觉太有成就感了：）！
+目前要做的，是赶紧对三个步进电机进行调试，然后加热板的支撑部分也应该考虑了。由于之前电源部分的尺寸稍差（调整起来费事），所以不得不把支撑部分垫高一点，以防 电源盒子的散热部分被加热板挡住。好吧，今晚可以动手绘制加热板的支撑部分了！
+以下内容可以参考 builda3dprinter
+风扇的接线 需要一直吹的有 hotend 以及 电路部分（？）的风扇。这里由于空间并不充裕，我用的是 25x25mm 的小风扇，依 然是 12V 的电压。风扇有三种可能的接法：
+ 接在供电接口上，这样的话一开机风扇就会一直转。这个接口我想用来接电路部分的散热风扇，以及电源的散 热风扇； 接在 Ramps 板子第一个 A4988 左侧的那个 12V 辅助输入口，同样，开机以后风扇也会转，因此这个口看来是 接热头风扇的首选接口； Ramps 板子的 D9 接口，这个接口的风扇转速可以调整，因此非常适合吹打印件。  其它接口的设置  D10 &ndash; 接热头 (hot-end) D8 &ndash; 接热床 (heated bed)  以上网页上交待说风扇要用 G-Code &ldquo;M106 SXXX&rdquo; 打开， XXX 是 0-255 之间的一个值，这个还需要再尝试才能确 定；要想关闭风扇，可以用 M106 S0
+    </div>
+    <div class="read-more">
+      <a href="/post/3dprinter/kosselxl/kossel_xl_building_log_29/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     
       <article class="post">
   <header class="post-header">
@@ -257,32 +285,6 @@ Date: 2013-05-01 21:37:32
     </div>
     <div class="read-more">
       <a href="/post/differentialgeometry/w1-s1/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: 败了Lunatik的表带和手写笔
-Date: 2012-11-16 16:18:39
-Lunatik的 手写笔 和 表带 原先都是在 kickstarter 上的项目. 目前，表带正打五折优惠，确实很诱人.最终还是经不起诱惑，下手买了. 期望这些新玩意能真正被我所用，否则即使花再少的钱也会心痛啊！！
-more
-[gallery columns=&ldquo;1&rdquo; orderby=&ldquo;rand&rdquo;]
-说到这里，我想起了前两天看到的一篇博文，名字叫《极致》. 讲一个设计师试图在选择购买每件商品的时候都挑选他自己觉得最好的那件. 他认为，这样消费也许非常不理性，因为这些设计精良的商品往往都会更值钱些，他所能买到的商品数量注定会比较少. 但是，这些商品会提升他的生活质量，让他不必担心使用这些商品时会出现的意外. 从某种程度来说，我赞成他的观点. 拥有 &ldquo;最好&rdquo; 的商品，确实能让人感到幸福. 然而，能买到一件好的商品，这绝对需要耐心、比较、权衡. 正像这次我购物的经历一样.
-    </div>
-    <div class="read-more">
-      <a href="/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

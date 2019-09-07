@@ -6,10 +6,19 @@
     <description>Recent content on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 23 Jul 2019 22:58:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 23:13:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何给 OrangePi zero plus 增加热点功能</title>
+      <link>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</link>
+      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</guid>
+      <description>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中</description>
+    </item>
     
     <item>
       <title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</title>
@@ -1291,15 +1300,6 @@ Date: 2013-09-09 02:52:08
 When I first came back to Beijing, I was shocked as I said before. There were too many things I couldn&amp;rsquo;t put up with. The most tough one to got along with, was the transportation system. People and cars were both jammed on road. Cars were definitely wouldn&amp;rsquo;t keep distance with people.
 As I wrote to Simon :
  Board skating is not easy in Beijing.</description>
-    </item>
-    
-    <item>
-      <title>如何给 OrangePi zero plus 增加热点功能</title>
-      <link>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</guid>
-      <description>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中</description>
     </item>
     
   </channel>

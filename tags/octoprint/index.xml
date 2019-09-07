@@ -6,10 +6,19 @@
     <description>Recent content in Octoprint on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Sep 2018 15:54:33 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 23:13:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/octoprint/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何给 OrangePi zero plus 增加热点功能</title>
+      <link>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</link>
+      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</guid>
+      <description>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中</description>
+    </item>
     
     <item>
       <title>如何在 OrangePiZeroPlus 上安装 Octoprint</title>
@@ -18,15 +27,6 @@
       
       <guid>http://tigertooth4.github.io/post/3dprinter/compactxy/howto-install-octoprint-on-orangepizeroplus/</guid>
       <description>下载 Armbian 镜像 Armbian.com 将镜像刻录到 MicroSD 卡上（我使用了刻录工具 Etcher)； 将 MicroSD 卡插到 OrangePi 上，并将 OrangePi 连接网线、电源； 待 OrangePI 的指示灯亮起以后，可以在路由器的登</description>
-    </item>
-    
-    <item>
-      <title>如何给 OrangePi zero plus 增加热点功能</title>
-      <link>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/</guid>
-      <description>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中</description>
     </item>
     
   </channel>
