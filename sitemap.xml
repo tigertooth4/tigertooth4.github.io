@@ -2,31 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/compactxy/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/marlin2.0/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/octoprint/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2019-10-05T22:15:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/tags/marlin/</loc>
     <lastmod>2019-09-07T23:13:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/tags/octoprint/</loc>
-    <lastmod>2019-09-07T23:13:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/tags/orangepi/</loc>
-    <lastmod>2019-09-07T23:13:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2019-09-07T23:13:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
     <lastmod>2019-09-07T23:13:00+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -57,19 +82,7 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2019-09-07T23:13:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/tags/cohesion3d/</loc>
-    <lastmod>2019-07-23T22:58:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/marlin2.0/</loc>
     <lastmod>2019-07-23T22:58:00+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1314,6 +1327,11 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/post/3dmodeling/todays-project-knot/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/</loc>
     <priority>0</priority>
   </url>
@@ -1335,6 +1353,11 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
     <priority>0</priority>
   </url>
   
@@ -1385,6 +1408,11 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</loc>
     <priority>0</priority>
   </url>
   

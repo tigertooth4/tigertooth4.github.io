@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Sep 2019 23:13:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 22:15:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多灾多难的 CompactXY 终于快迎来第一次打印了</title>
+      <link>http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/</link>
+      <pubDate>Sat, 05 Oct 2019 22:15:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/</guid>
+      <description>本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的</description>
+    </item>
     
     <item>
       <title>如何给 OrangePi zero plus 增加热点功能</title>
@@ -850,6 +859,24 @@ more
     
     <item>
       <title></title>
+      <link>http://tigertooth4.github.io/post/3dmodeling/todays-project-knot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3dmodeling/todays-project-knot/</guid>
+      <description>Title: Todays project: knot
+Date: 2012-11-10 16:38:55
+Today I modeled a knot. Let&amp;rsquo;s see the final render image:
+[caption id=&amp;ldquo;&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;] A knot[/caption]
+The rough procedure is
+more
+ Create a 2D path by using Extrude key &amp;ldquo;E
+ Modify the 2D path to a 3D path, which will be the shape of a kno
+ Create a circle with suitable diamete
+ Apply the circle to the pat</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -918,6 +945,21 @@ more
 于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
 突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
 // 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
+      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.</description>
     </item>
     
     <item>
@@ -1088,6 +1130,19 @@ https://github.com/sellout/emacs-color-theme-solarized
  Add &amp;lt;cci_lisp&amp;gt;(require &amp;lsquo;color-theme-solarized) to your Emacs init file (usually &amp;lt;cci_bash&amp;gt;~/.emacs)
  Reload the init file, or restart Emacs
  Use the usual color-theme mechanism to select one of the Solarized themes, or &amp;lt;cci_lisp&amp;gt;M-x color-theme-solarized-[light|dark].</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</guid>
+      <description>Title: Fixie: bikes without brakes
+Date: 2012-12-02 15:26:13
+Recently I found something that is really cool! It&amp;rsquo;s called fixed gear bike, or &amp;ldquo;死飞&amp;rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&amp;rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
+more
+When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &amp;ldquo;死飞&amp;rdquo;.</description>
     </item>
     
     <item>
