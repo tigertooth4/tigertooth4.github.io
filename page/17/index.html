@@ -129,6 +129,32 @@
     
       <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/3dprinter/kosselxl/kossel_xl_building_log_32/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
+最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
+最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
+于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
+突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
+// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。
+    </div>
+    <div class="read-more">
+      <a href="/post/3dprinter/kosselxl/kossel_xl_building_log_32/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/cocoa/nspopover-&#43;-custom-view-inside/"></a></h1>
     <div class="post-meta">
       <span class="post-time"> 0001-01-01 </span>
@@ -153,6 +179,60 @@ NSPopover *popover = [[NSPopover alloc] init];
     </div>
     <div class="read-more">
       <a href="/post/cocoa/nspopover-&#43;-custom-view-inside/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.
+    </div>
+    <div class="read-more">
+      <a href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.
+    </div>
+    <div class="read-more">
+      <a href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -209,94 +289,6 @@ Date: 2013-05-01 21:37:32
 </article>
 
     
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: 败了Lunatik的表带和手写笔
-Date: 2012-11-16 16:18:39
-Lunatik的 手写笔 和 表带 原先都是在 kickstarter 上的项目. 目前，表带正打五折优惠，确实很诱人.最终还是经不起诱惑，下手买了. 期望这些新玩意能真正被我所用，否则即使花再少的钱也会心痛啊！！
-more
-[gallery columns=&ldquo;1&rdquo; orderby=&ldquo;rand&rdquo;]
-说到这里，我想起了前两天看到的一篇博文，名字叫《极致》. 讲一个设计师试图在选择购买每件商品的时候都挑选他自己觉得最好的那件. 他认为，这样消费也许非常不理性，因为这些设计精良的商品往往都会更值钱些，他所能买到的商品数量注定会比较少. 但是，这些商品会提升他的生活质量，让他不必担心使用这些商品时会出现的意外. 从某种程度来说，我赞成他的观点. 拥有 &ldquo;最好&rdquo; 的商品，确实能让人感到幸福. 然而，能买到一件好的商品，这绝对需要耐心、比较、权衡. 正像这次我购物的经历一样.
-    </div>
-    <div class="read-more">
-      <a href="/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Eynard-Orantin 以及疑问
-Date: 2013-01-20 22:29:12
-[mathjax]
-[caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] genus=3 Riemann Surface[/caption]
-今天是无所事事的一天。上午晚起，中午和 Simon 等人吃饭又被雨淋，下午待在办公室在网上闲逛。唯一的收获似乎就是知道上个月的手机费少交了大概十美元，是家庭套餐每人应付的月缴。不过，待在办公室里时间长了，人就会有各种各样的想法，比如今天，我就在想，到目前为之我究竟学到了什么呢？Principal specialization? Laplace 变换 还是 Enyard-Orantin 理论呢？学会了这些到底有什么用呢？
-随便在网上逛了逛，发现了一些文章和资源，于是干脆把别人的结论罗列一下，以便自己以后参考。
-more
- Sergei Gukov, Witten 的学生，在 YT 上有几段视频，题目是”Quantization and Categorification”. Gukov 和 Sulkowski 合写过一篇文章&rdquo;A-polynomial, B-model and Quantization&rdquo; (arXiv:1108.0002v2),讲的是从经典曲线 (A(x,y)=0) 如何得到其量子对应，以及如何判断经典曲线一定有量子对应。将经典曲线量子化，意欲何为？这是我想了解的问题。另外，似乎 Eynard-Orantin 递推公式是得到量子曲线的方法之一，这与我所接触的 principal specialization 似乎有点关系，我要理解清楚。  
-    </div>
-    <div class="read-more">
-      <a href="/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/misc/a-dream/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: A dream
-Date: 2012-02-22 15:54:00
-Status: private
-Suddenly I&rsquo;ve got the idea about my life.
-I had a unpleasant dream yesterday. About you&hellip;
-more
-I&rsquo;ve heard a lot of sad news today.
-I know I can do nothing about this.
-Hopeless moment.
-But, I do believe it&rsquo;s part of life.
-Everything will be fine.
-We won&rsquo;t lose hope.
-So, to help, to give, to do meaningful things.
-And, bless&hellip;
-    </div>
-    <div class="read-more">
-      <a href="/post/misc/a-dream/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
   </section>
   
   <nav class="pagination">
@@ -341,7 +333,7 @@ And, bless&hellip;
     &copy; 
     
       2013 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simulator on 思与制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/simulator/</link>
+    <description>Recent content in Simulator on 思与制 - A guy&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Aug 2019 15:29:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://tigertooth4.github.io/tags/simulator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>试验 Ultimaker 固件模拟器</title>
+      <link>http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/</link>
+      <pubDate>Mon, 26 Aug 2019 15:29:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/</guid>
+      <description>觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的</description>
+    </item>
+    
+  </channel>
+</rss>

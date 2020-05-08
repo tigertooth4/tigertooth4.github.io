@@ -82,6 +82,68 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2019-08-26T15:29:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/simulator/</loc>
+    <lastmod>2019-08-26T15:29:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/ultimaker/</loc>
+    <lastmod>2019-08-26T15:29:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/</loc>
+    <lastmod>2019-08-26T15:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/abel-dirichlet/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/series/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/weyl/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/convergence/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/equidistribution/</loc>
+    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/tags/cohesion3d/</loc>
     <lastmod>2019-07-23T22:58:00+08:00</lastmod>
     <priority>0</priority>
@@ -1307,6 +1369,11 @@
   </url>
   
   <url>
+    <loc>http://tigertooth4.github.io/post/2020-04/compactxy-print-quality-issue-resolutions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/post/3dmodeling/blender-project-i/</loc>
     <priority>0</priority>
   </url>
@@ -1357,17 +1424,17 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</loc>
     <priority>0</priority>
   </url>
   
@@ -1408,11 +1475,6 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</loc>
     <priority>0</priority>
   </url>
   
@@ -1478,6 +1540,11 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/wrote-after-25-days-in-beijing/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</loc>
     <priority>0</priority>
   </url>
   

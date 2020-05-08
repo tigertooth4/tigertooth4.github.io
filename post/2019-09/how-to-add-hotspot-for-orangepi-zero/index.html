@@ -62,7 +62,7 @@
 
 <meta itemprop="datePublished" content="2019-09-07T23:13:00&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-07T23:13:00&#43;08:00" />
-<meta itemprop="wordCount" content="882">
+<meta itemprop="wordCount" content="914">
 
 
 
@@ -153,6 +153,7 @@
 <li><a href="#增加热点功能">增加热点功能</a></li>
 <li><a href="#测试">测试</a></li>
 <li><a href="#更新">更新</a></li>
+<li><a href="#更新-2020">更新 2020</a></li>
 </ul>
 </nav>
   </div>
@@ -199,6 +200,7 @@
 
 <pre><code class="language-powershell">   interface=wlan0
    #driver=rtl871xdrv
+   driver=nl80211 #updated 2020.5.8
    ssid=CompactXY-Hotspot
    hw_mode=g
    channel=6
@@ -233,7 +235,7 @@
    #Interface to use
    
    interface=wlan0
-   bind-interfaces
+   #bind-interfaces #updated 2020.5.8
    dhcp-range=10.0.0.3,10.0.0.20,12h
 </code></pre>
 
@@ -315,6 +317,10 @@
 
 <p>也许应该参考这篇<a href="http://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/158-raspberry-pi-auto-wifi-hotspot-switch-direct-connection">文章</a> 。</p>
 
+<h1 id="更新-2020">更新 2020</h1>
+
+<p>事实上，一个明显的问题是，我应该创建 <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> 这个文件。</p>
+
     </div>
 
     
@@ -360,8 +366,8 @@
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/">
-            <span class="next-text nav-default">为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</span>
+          <a class="next" href="/post/2019-08/adventure-ultimaker-simulator/">
+            <span class="next-text nav-default">试验 Ultimaker 固件模拟器</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -400,7 +406,7 @@
     &copy; 
     
       2013 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

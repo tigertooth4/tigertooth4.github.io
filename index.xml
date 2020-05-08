@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>试验 Ultimaker 固件模拟器</title>
+      <link>http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/</link>
+      <pubDate>Mon, 26 Aug 2019 15:29:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/</guid>
+      <description>觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的</description>
+    </item>
+    
+    <item>
+      <title>Weyl 的等分布定理与数项级数的收敛性</title>
+      <link>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</link>
+      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</guid>
+      <description>在数学分析中有很多习题是关于数项级数的收敛性的。也有很多关于收敛性的判别方法。在这些判别法中，对于一般项级数的判别方法，一般的教材中会介绍绝</description>
+    </item>
+    
+    <item>
       <title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</title>
       <link>http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/</link>
       <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
@@ -817,6 +835,17 @@ The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \
     
     <item>
       <title></title>
+      <link>http://tigertooth4.github.io/post/2020-04/compactxy-print-quality-issue-resolutions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-04/compactxy-print-quality-issue-resolutions/</guid>
+      <description>CompactXY 打印质量问题溯源
+可能的问题线索
+ TMC2130 驱动散热不够 老旧的喷嘴、喉管、PTFE OrangePi 散热不够 OctoPrint USB 数据传输问题 OctoPrint 本身问题  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://tigertooth4.github.io/post/3dmodeling/blender-project-i/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -976,36 +1005,6 @@ more
     
     <item>
       <title></title>
-      <link>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
-      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
-Date: 2013-04-17 17:31:35
-Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
-Today I found several good posts. Let me note them down here:
- Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
- 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
- Height-for-width layout with CATextLayer  http://rhult.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
-      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
-Date: 2013-04-17 17:31:35
-Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
-Today I found several good posts. Let me note them down here:
- Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
- 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
- Height-for-width layout with CATextLayer  http://rhult.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1021,6 +1020,36 @@ NSPopover *popover = [[NSPopover alloc] init];
 [popover setContentViewController:controller];
 [popover setAnimates:YES];
 [popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
+      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/</guid>
+      <description>Title: Notable Things: irreducible repre for Abelian grp, build VPN by AWS
+Date: 2013-04-17 17:31:35
+Tags: Abelian-group , Amazon , AWS , CATextLayer , Cloud , Cocoa , Irreducible-representation , LaTeX , Proof , VPN , WordPress
+Today I found several good posts. Let me note them down here:
+ Every irreducible representation of Abelian group is one dimensional.  http://shortfatboychalkboard.wordpress.com/2011/01/27/representation-abelian-groups-cyclic-groups/
+ 自己建立一个免费的vpn服务器  http://geekblog.zhaoyan.me/自己建立一个免费的vpn服务器/
+ Height-for-width layout with CATextLayer  http://rhult.</description>
     </item>
     
     <item>
@@ -1157,19 +1186,6 @@ https://github.com/sellout/emacs-color-theme-solarized
  Add &amp;lt;cci_lisp&amp;gt;(require &amp;lsquo;color-theme-solarized) to your Emacs init file (usually &amp;lt;cci_bash&amp;gt;~/.emacs)
  Reload the init file, or restart Emacs
  Use the usual color-theme mechanism to select one of the Solarized themes, or &amp;lt;cci_lisp&amp;gt;M-x color-theme-solarized-[light|dark].</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</guid>
-      <description>Title: Fixie: bikes without brakes
-Date: 2012-12-02 15:26:13
-Recently I found something that is really cool! It&amp;rsquo;s called fixed gear bike, or &amp;ldquo;死飞&amp;rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&amp;rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
-more
-When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &amp;ldquo;死飞&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -1355,6 +1371,19 @@ Date: 2013-09-09 02:52:08
 When I first came back to Beijing, I was shocked as I said before. There were too many things I couldn&amp;rsquo;t put up with. The most tough one to got along with, was the transportation system. People and cars were both jammed on road. Cars were definitely wouldn&amp;rsquo;t keep distance with people.
 As I wrote to Simon :
  Board skating is not easy in Beijing.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/</guid>
+      <description>Title: Fixie: bikes without brakes
+Date: 2012-12-02 15:26:13
+Recently I found something that is really cool! It&amp;rsquo;s called fixed gear bike, or &amp;ldquo;死飞&amp;rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&amp;rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
+more
+When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &amp;ldquo;死飞&amp;rdquo;.</description>
     </item>
     
   </channel>

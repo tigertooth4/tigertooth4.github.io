@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>试验 Ultimaker 固件模拟器 - 思与制 - A guy&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="XL" />
+  <meta name="description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="试验 Ultimaker 固件模拟器" />
+<meta property="og:description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/" />
+<meta property="article:published_time" content="2019-08-26T15:29:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-26T15:29:00&#43;08:00"/>
+
+<meta itemprop="name" content="试验 Ultimaker 固件模拟器">
+<meta itemprop="description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的">
+
+
+<meta itemprop="datePublished" content="2019-08-26T15:29:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-26T15:29:00&#43;08:00" />
+<meta itemprop="wordCount" content="957">
+
+
+
+<meta itemprop="keywords" content="Ultimaker,Simulator,Marlin,C&#43;&#43;," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="试验 Ultimaker 固件模拟器"/>
+<meta name="twitter:description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">思与制</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">思与制</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">试验 Ultimaker 固件模拟器</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-08-26 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#原理">原理</a></li>
+<li><a href="#准备工作">准备工作</a></li>
+<li><a href="#后续工作">后续工作</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的位置。</p>
+
+<p>虽然每份 Ultimaker2Marlin 的源代码中都包含模拟器的全部源代码，但这部分功能却一直是非常神秘的存在，因为几乎没有人（也许夸张了点）懂得如何使用它。17年 UM 社区的一篇帖子曾经让我非常兴奋，因为这篇帖子详细描述了如何编译、运行模拟器代码。但是，那时的我一看到代码是在 Windows 下编译运行的就退缩了，因为手边并没有一台合适的运行 Windows 的机器 。有人要问了：难道你就没想过使用虚拟机吗？是的，当时的我确实脑子短路了，根本没想有虚拟机这回事。</p>
+
+<p>直到不久前，我重新会看那篇帖子的时候，才想起来我其实是有 VMware Fusion 和 Windows 7 虚拟机的。正巧，一个群友想给 UM2 固件添加新的调平功能。我想这是个绝好的机会，既可以帮他的忙，也可以顺便改变一下我以前开发固件的操作方式。</p>
+
+<p>于是，从重新温习17年的旧帖子开始，花了两天时间，我把 UM2 的模拟器搞通了。中间遇到了一些问题（在原帖中没有提及）我觉得有必要把解决方案记录下来，以备将来查阅。</p>
+
+<p>前面的步骤完全仿照<a href="https://community.ultimaker.com/topic/16856-how-to-build-marlin-the-way-tinkergnome-and-ultimaker-do-it-if-you-have-windows/">17年的帖子: How to build Marlin the way tinkergnome and Ultimaker do it if you have windows</a> .</p>
+
+<h1 id="原理">原理</h1>
+
+<p>利用 <a href="https://libsdl.org/">SDL</a> （Simple Direct Media Layer）库，这个库的用途是：Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including <a href="http://valvesoftware.com/">Valve</a>&rsquo;s award winning catalog and many <a href="https://www.humblebundle.com/">Humble Bundle</a> games.</p>
+
+<p>为了编译，我们要有一个工程文件，Ultimaker2Marlin 源代码中的 UltiLCD2_sim.cbp，这个工程文件是在 code::block 这款开发环境中建立的。这是一款轻量级、免费、跨平台、多语言的 IDE.</p>
+
+<p>为了编译，我们还要有 C++ 的编译器，这里用了 g++，所以在 Windows 下需要使用 MingW32。</p>
+
+<p>有了这三样东西，基本上就大功告成了，需要注意的只有 cbp 的编译、链接参数，这个将在后文中重点讲述。</p>
+
+<h1 id="准备工作">准备工作</h1>
+
+<ol>
+<li>下载 Ultimaker2Marlin 的源代码（原版的在<a href="https://github.com/Ultimaker/Ultimaker2Marlin">这里</a> ，Mark2 版的在 <a href="https://github.com/TinkerGnome/Ultimaker2Marlin">这里</a> ）。</li>
+<li>下载 MingW32，<a href="https://sourceforge.net/projects/mingw/files/">这里</a>，完全不熟悉 MingW 的我发现 MingW 有点类似 Linux 下的包管理工具，下载它的包管理工具，并且安装 <strong>mingw32-base</strong> 和 <strong>mingw32-gcc-g++</strong> (gnu c++ 编译器) 后，就成功搭建了一个基本 gcc 的编译环境。</li>
+<li>下载 <a href="https://www.arduino.cc/">Arduino IDE</a> （ 不要下载最新版，因为 Ultimaker2Marlin 不能在最新版下编译成功）下载 1.6.10 版即可。</li>
+<li>下载 SDL （注意 SDL 即可，不需要 SDL2 ），点 <a href="https://www.libsdl.org/download-1.2.php">这里</a>，并翻到最后 Development Library, 下载 <a href="SDL-devel-1.2.15-mingw32.tar.gz">MingW32 对应的开发库</a>。</li>
+</ol>
+
+<h1 id="后续工作">后续工作</h1>
+
+<p>很遗憾，没有时间把它写完，只好等用空的时候再写。</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">XL</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2019-08-26</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/ultimaker/">Ultimaker</a>
+          
+          <a href="/tags/simulator/">Simulator</a>
+          
+          <a href="/tags/marlin/">Marlin</a>
+          
+          <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2019-09/how-to-add-hotspot-for-orangepi-zero/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">如何给 OrangePi zero plus 增加热点功能</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/">
+            <span class="next-text nav-default">Weyl 的等分布定理与数项级数的收敛性</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2013 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">XL</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
