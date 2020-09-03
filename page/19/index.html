@@ -55,7 +55,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://tigertooth4.github.io/" />
 
-<meta property="og:updated_time" content="2019-10-05T22:15:00&#43;08:00"/>
+<meta property="og:updated_time" content="2020-09-02T23:43:00&#43;08:00"/>
 
 <meta itemprop="name" content="思与制 - A guy&#39;s thinking and making">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -129,6 +129,99 @@
     
       <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Draw graphic inside NSTextView
+Date: 2013-04-08 13:18:49
+Tags: Cocoa , Drawing , Image , NSTextView , Text
+After long time search, I found some examples:
+ Re: Drawing a line in NSTextView  _http://lists.apple.com/archives/cocoa-dev/2012/Apr/msg00003.html
+ Aligning a subview element with text in an NSTextView :  [http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html](http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html
+ google: [drawViewBackgroundInRect](https://www.google.com/search?client=safari&amp;rls=en&amp;q=drawViewBackgroundInRect&amp;ie=UTF-8&amp;oe=UTF-8#hl=en&amp;client=safari&amp;rls=en&amp;sclient=psy-ab&amp;q=drawViewBackgroundInRect&amp;oq=drawViewBackgroundInRect&amp;gs_l=serp.12...0.0.0.161000408.0.0.0.0.0.0.0.0..0.0...0.0...1c..8.psy-ab.UOTMcpaPkiM&amp;pbx=1&amp;bav=on.2,or.r_cp.r_qf.&amp;bvm=bv.44770516,d.cGE&amp;fp=3d1005b8c6da64ce&amp;biw=1235&amp;bih=625
+ Drawing in NSTextField
+  [http://stackoverflow.com/questions/1777444/drawing-in-nstextfield](http://stackoverflow.com/questions/1777444/drawing-in-nstextfield
+ CocoaHeads Atlanta May &lsquo;09: Aaron Hillegass on the Text System  [http://vimeo.
+    </div>
+    <div class="read-more">
+      <a href="/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^
+    </div>
+    <div class="read-more">
+      <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Title: Emacs 的颜色补强计划
+Date: 2013-04-04 22:05:21
+用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量老是出错。上网搜了一下，才发现原来从 Emacs24 开始，改变了以前的颜色机制，这样文本高亮比以前似乎要更加犀利了（没有仔细读文献，只是看了看图直观的感觉是这样）。
+但是，在 Emacs24 之前的版本，必须要手动加入这项功能。具体的包见：
+https://github.com/sellout/emacs-color-theme-solarized
+安装很简单，这里是针对我这个 pre emacs24 来说的，我就犯懒直接复制 github 里的说明好了：
+ Download and install color-theme
+ Add the &lt;cci_lisp&gt;emacs-color-theme-solarized directory to your Emacs &lt;cci_lisp&gt;load-path
+ Add &lt;cci_lisp&gt;(require &lsquo;color-theme-solarized) to your Emacs init file (usually &lt;cci_bash&gt;~/.emacs)
+ Reload the init file, or restart Emacs
+ Use the usual color-theme mechanism to select one of the Solarized themes, or &lt;cci_lisp&gt;M-x color-theme-solarized-[light|dark].
+    </div>
+    <div class="read-more">
+      <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/"></a></h1>
     <div class="post-meta">
       <span class="post-time"> 0001-01-01 </span>
@@ -194,87 +287,6 @@ In [cciN_objc]NSTableView[/cciN_objc], when you move the highlighting by arrow k
     </div>
     <div class="read-more">
       <a href="/post/%E5%85%B6%E5%AE%83/mac-configuration-guide/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/macworld-asia-%E5%B1%95%E4%BC%9A%E5%8F%82%E8%A7%82%E8%AE%B0/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: MacWorld Asia 展会参观记
-Date: 2012-08-06 00:41:05
-正巧碰上 MacWorld 的展会最近在国家会议中心召开，于是想去凑凑热闹！
-周五上午从家坐了一站的公车，下车后走了两步就到了国家会议中心。以前只是知道这里会时常有展览，但是从来没进来过。虽然是周五，但是去往展会的人也不少，而且多半是年轻人。一路上，一个红衣女子也和我一路车，最开始还不以为然，后来才发现她也是去看展会的。由这些可以看到这些年苹果的产品的影响。（更不用提平时随处可见的手持 iPhone、iPad 的人了）
-mor
-来到展会，需要填一张注册单，领参观卡。普通游人可以参观 E1 至 E4 展厅；进入展会，现场的噪音，随处可见的扛着长枪短炮的记者、游客，穿着时尚性感的美女，立刻让人感受到了展览的气氛。
-我从 E1 进入展厅，顺着展位一个一个往前看。公司的名称各异，展台大小也不尽相同，但是总体来说还是以 iPhone, iPad 的周边设备为主。各种各样的手机壳，手机贴纸，移动存储，耳机，电源等等，玲琅满目。给我感觉比较有特色的，就是一家生产类似 inkling 那样的手写笔的厂家。毫无疑问，这是 inkling 的山寨版，无论是从工作原理，到产品的外形设计，都可以看到 inkling 的影子。不过，稍有特色的是，他们还有一款笔是可以结合笔记本或电脑显示屏使用的。将接收器吸附在屏幕一端，利用超声波的回声信号定位笔的位置，就可以达到在屏幕书写的目的。由于实际上充当了鼠标的角色，所以理论上来说可以兼容 Windows 中的所有程序。以下链接中有演示视频。易方笔
-接下去的展览还是以笔、套、壳、耳机、音像为主。这块市场能够发展，全得益于苹果手机和平板的强势发展。但是，国内市场给我的感觉还是缺乏原创性的产品。此次来展的公司，多数来自中国沿海地区，比如深圳等。所以，大多数创意产品都是“山寨货”。例如，易方 vs. inkling，再例如大嘴盘 vs. iCloudFTP。感觉并不是中国厂商拿不到好的创意，而是我们很少能够真正理解“需求”和“市场”。科技企业的创意很重要，从展会上，我看到了一种趋势：以前往往是山寨已有的上市产品，现在往往从
-创意阶段就可以山寨了：例如大嘴盘就是全面山寨了Kickstarter上的一个项目：iCloudFTP。
-展会的其余亮点就是 MacWorld 音乐坊了，介绍如何用 iPad 来制作音乐等等。对我而言，展会所讲的内容似乎不够深入，但也不是完全没有收获。至少我还知道有 R-mix 这款app可以对不同的音乐组成成分用可视话的方法显示出来，还可以进行编辑哦！可抹掉相应部分的声音。
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/macworld-asia-%E5%B1%95%E4%BC%9A%E5%8F%82%E8%A7%82%E8%AE%B0/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/migration-to-my-new-rmbp/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Migration to my new rMBP
-Date: 2013-12-14 21:58:38
-Since I got a refurbished rMBP, it is time to migrate everything in my old MBP to the new one. Here I recorded a few important or interesting things I had in my old laptop. This would remind me in the future system upgrade.
- Migrate iTunes and iPhoto libraries: The fastest and most reliable way is using an external disk to copy your libraries out
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/migration-to-my-new-rmbp/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/moving-to-emacs-for-os-x-modified/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Moving to Emacs for OS X Modified
-Date: 2013-04-06 13:02:34
-Tags: Cocoa , Color , Emacs , Highlighting , Modified , OSX , Theme
-As a 2 years&rsquo; Carbon Emacs for Mac user, I believe the carbon version was the best among all the branches of Emacs for Mac OS. My criterion was very simple:
- good Chinese font renderin
- easy AucTeX setu
- behaves like a traditional Emac
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/moving-to-emacs-for-os-x-modified/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

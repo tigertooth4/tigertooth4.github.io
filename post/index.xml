@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Oct 2019 22:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 23:43:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何在 Mac 下安装 Manim</title>
+      <link>http://tigertooth4.github.io/post/2020-09/how-to-install-manim/</link>
+      <pubDate>Wed, 02 Sep 2020 23:43:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/how-to-install-manim/</guid>
+      <description>安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim</description>
+    </item>
     
     <item>
       <title>多灾多难的 CompactXY 终于快迎来第一次打印了</title>
@@ -808,13 +817,29 @@ The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \
     
     <item>
       <title></title>
-      <link>http://tigertooth4.github.io/post/2020-04/compactxy-print-quality-issue-resolutions/</link>
+      <link>http://tigertooth4.github.io/post/2020-09/design-the-geometric-shape-of-a-heatsink/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://tigertooth4.github.io/post/2020-04/compactxy-print-quality-issue-resolutions/</guid>
-      <description>CompactXY 打印质量问题溯源
-可能的问题线索
- TMC2130 驱动散热不够 老旧的喷嘴、喉管、PTFE OrangePi 散热不够 OctoPrint USB 数据传输问题 OctoPrint 本身问题  </description>
+      <guid>http://tigertooth4.github.io/post/2020-09/design-the-geometric-shape-of-a-heatsink/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</guid>
+      <description>散热器的几何尺寸设计</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/2020-09/raabe-test-and-euler-operator/raabe-%E5%88%A4%E5%88%AB%E6%B3%95%E4%B8%8E-euler-%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/raabe-test-and-euler-operator/raabe-%E5%88%A4%E5%88%AB%E6%B3%95%E4%B8%8E-euler-%E7%AE%97%E5%AD%90/</guid>
+      <description>Raabe 判别法与 Euler 算子</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://tigertooth4.github.io/post/2020-09/using-thermal-mechanics-to-calculate-the-limit-temp-for-a-heated-bed/%E5%88%A9%E7%94%A8%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97%E7%83%AD%E5%BA%8A%E7%9A%84%E6%9E%81%E9%99%90%E6%B8%A9%E5%BA%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/using-thermal-mechanics-to-calculate-the-limit-temp-for-a-heated-bed/%E5%88%A9%E7%94%A8%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97%E7%83%AD%E5%BA%8A%E7%9A%84%E6%9E%81%E9%99%90%E6%B8%A9%E5%BA%A6/</guid>
+      <description>利用热力学原理计算热床的极限温度</description>
     </item>
     
     <item>

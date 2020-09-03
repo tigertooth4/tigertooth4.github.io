@@ -6,10 +6,19 @@
     <description>Recent content in Math on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Apr 2019 23:06:35 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 23:43:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何在 Mac 下安装 Manim</title>
+      <link>http://tigertooth4.github.io/post/2020-09/how-to-install-manim/</link>
+      <pubDate>Wed, 02 Sep 2020 23:43:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/how-to-install-manim/</guid>
+      <description>安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim</description>
+    </item>
     
     <item>
       <title>Galois理论：一篇粗浅的介绍</title>

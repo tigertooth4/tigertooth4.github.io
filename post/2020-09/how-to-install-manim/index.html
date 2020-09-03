@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何在 Mac 下安装 Manim - 思与制 - A guy&#39;s thinking and making</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="XL" />
+  <meta name="description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="http://tigertooth4.github.io/post/2020-09/how-to-install-manim/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="如何在 Mac 下安装 Manim" />
+<meta property="og:description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2020-09/how-to-install-manim/" />
+<meta property="article:published_time" content="2020-09-02T23:43:00&#43;08:00"/>
+<meta property="article:modified_time" content="2020-09-02T23:43:00&#43;08:00"/>
+
+<meta itemprop="name" content="如何在 Mac 下安装 Manim">
+<meta itemprop="description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim">
+
+
+<meta itemprop="datePublished" content="2020-09-02T23:43:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-02T23:43:00&#43;08:00" />
+<meta itemprop="wordCount" content="664">
+
+
+
+<meta itemprop="keywords" content="Manim,Math,3b1b," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何在 Mac 下安装 Manim"/>
+<meta name="twitter:description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">思与制</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">思与制</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何在 Mac 下安装 Manim</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-02 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#一-安装过程">一、安装过程</a>
+<ul>
+<li><a href="#一-安装依赖的包">（一）. 安装依赖的包</a></li>
+<li><a href="#二-安装-manim">（二）. 安装 Manim</a></li>
+</ul></li>
+<li><a href="#二-manim-的使用">二、Manim 的使用</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>安装并使用 3b1b (<a href="https://www.blogger.com/">3blue1brown</a>) 的数学可视化系统 <a href="https://github.com/3b1b/manim">Manim@Github</a> 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！</p>
+
+<p>参考了我保存许久的一个关于 Manim 安装的 <a href="https://repperiumsci.blogspot.com/2019/12/my-adventures-with-manim-part_22.html">博客</a>，发现博主有了重大更新！为了方便爱好者们的使用，博主和其他一些小伙伴们 fork 了 3b1b 本身的代码，新建了一个 <a href="https://github.com/ManimCommunity/manim">社区版的 Manim</a>。 这下就更方便了。于是，下面的安装流程，基本上参照 <a href="https://github.com/ManimCommunity/manim">社区版 Manim</a> 的 <a href="https://manimce.readthedocs.io/en/latest/installation.html">安装文档</a>。</p>
+
+<h1 id="一-安装过程">一、安装过程</h1>
+
+<h2 id="一-安装依赖的包">（一）. 安装依赖的包</h2>
+
+<ol>
+<li><p>安装 Homebrew (这部分由于我已经装过，故省略)</p></li>
+
+<li><p>安装 Cairo</p></li>
+</ol>
+
+<pre><code class="language-powershell">   brew install cairo
+</code></pre>
+
+<ol>
+<li>安装 ffmpeg</li>
+</ol>
+
+<pre><code class="language-pow">   brew install ffmpeg
+</code></pre>
+
+<ol>
+<li>安装 Sox (非必须)</li>
+</ol>
+
+<pre><code class="language-pow">   brew install sox
+</code></pre>
+
+<ol>
+<li>安装 LaTeX （这一步基本上可以跳过了）。下面就是安装 TeXLive 的一些额外工具包：</li>
+</ol>
+
+<pre><code class="language-pow">   sudo tlmgr install standalone preview doublestroke relsize fundus-calligra \
+   wasysym physics dvisvgm.x86_64-darwin dvisvgm rsfs wasy cm-super
+</code></pre>
+
+<p>可以运行 <code>ffmpeg --version</code>, <code>latex</code>, <code>sox</code> 等命令检查上述安装。</p>
+
+<h2 id="二-安装-manim">（二）. 安装 Manim</h2>
+
+<p>为简便起见，我选择了通过 python 的包管理工具直接安装：</p>
+
+<pre><code class="language-pow">pip3 install manimce
+</code></pre>
+
+<h1 id="二-manim-的使用">二、Manim 的使用</h1>
+
+<p>根据文档所述，Manim 还是基于 python 的，它的使用有点像 LaTeX，首先建立一个文件夹，比如 <code>test</code>，然后将所有的代码、文件都放在这个文件夹中，并且使用 manim 编译。一段简单的代码如下所示 <sup class="footnote-ref" id="fnref:link"><a href="#fn:link">1</a></sup>,  让我来搬运一下！</p>
+
+<pre><code class="language-py"># scene.py
+from manim import *
+
+# all code must be contained inside the construct
+# method of a class that inherits from Scene
+class SquareToCircle(Scene):
+    def construct(self):
+        circle = Circle()                   # create a circle
+        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
+        self.play(ShowCreation(circle))     # show the circle on screen
+</code></pre>
+
+<p>将这段代码保存成 <code>test/scene.py</code> 后，就可以使用命令行来编译了：</p>
+
+<pre><code class="language-pow">manim scene.py SquareToCircle -pl
+</code></pre>
+
+<p>酷！实验成功！这里是真的要感谢 Manim 社区所有热心人的贡献🎉，是他们把安装使用过程讲解得如此清楚！此刻我的内心稍稍有点激动～</p>
+
+<p>当然，冷静一下，看代码如此简单，实现的功能也不复杂。看来，真正的功夫是要下在如何讲故事，如何几何化上面，这方面我应该还有很长的路要走。</p>
+
+<p>好了，今天就到这里了！Happy Manim ! Bye!</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:link">代码出自 <a href="https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html">https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html</a>
+ <a class="footnote-return" href="#fnref:link"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">XL</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2020-09-02</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/manim/">Manim</a>
+          
+          <a href="/tags/math/">Math</a>
+          
+          <a href="/tags/3b1b/">3b1b</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/2019-10/compactxy-octoprint-before-first-print/">
+            <span class="next-text nav-default">多灾多难的 CompactXY 终于快迎来第一次打印了</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2013 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">XL</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
