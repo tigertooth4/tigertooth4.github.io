@@ -6,10 +6,46 @@
     <description>Recent content in Tags on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 02 Sep 2020 23:43:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 18:02:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Approximation</title>
+      <link>http://tigertooth4.github.io/tags/approximation/</link>
+      <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/approximation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://tigertooth4.github.io/tags/math/</link>
+      <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theorem</title>
+      <link>http://tigertooth4.github.io/tags/theorem/</link>
+      <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/theorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weierstrass</title>
+      <link>http://tigertooth4.github.io/tags/weierstrass/</link>
+      <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/weierstrass/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>3b1b</title>
@@ -26,15 +62,6 @@
       <pubDate>Wed, 02 Sep 2020 23:43:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/manim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>http://tigertooth4.github.io/tags/math/</link>
-      <pubDate>Wed, 02 Sep 2020 23:43:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/math/</guid>
       <description></description>
     </item>
     

@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tigertooth4.github.io/tags/approximation/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/math/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/theorem/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/weierstrass/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2020-09/weierstrass-approximation-thm-proofs/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2020-09-07T18:02:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://tigertooth4.github.io/tags/3b1b/</loc>
     <lastmod>2020-09-02T23:43:00+08:00</lastmod>
     <priority>0</priority>
@@ -14,34 +63,10 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/tags/math/</loc>
-    <lastmod>2020-09-02T23:43:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2020-09-02T23:43:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2020-09-02T23:43:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/post/2020-09/how-to-install-manim/</loc>
     <lastmod>2020-09-02T23:43:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2020-09-02T23:43:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

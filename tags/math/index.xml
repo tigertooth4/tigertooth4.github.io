@@ -6,10 +6,19 @@
     <description>Recent content in Math on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 02 Sep 2020 23:43:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 18:02:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Weierstrass 逼近定理的证明</title>
+      <link>http://tigertooth4.github.io/post/2020-09/weierstrass-approximation-thm-proofs/</link>
+      <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/weierstrass-approximation-thm-proofs/</guid>
+      <description>为准备一个比赛，第一次较为细致地了解了一下 Weierstrass 逼近定理。本文将介绍一下该定理的内容，以及两种证明方法，其中一种是 Weierstrass 本人给出的，另一种也许是俄罗</description>
+    </item>
     
     <item>
       <title>如何在 Mac 下安装 Manim</title>
