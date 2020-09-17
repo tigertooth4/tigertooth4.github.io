@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>思与制 - A guy&#39;s thinking and making</title>
+    <title>思｜製 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/</link>
-    <description>Recent content on 思与制 - A guy&#39;s thinking and making</description>
+    <description>Recent content on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 07 Sep 2020 18:02:00 +0800</lastBuildDate>
@@ -849,15 +849,6 @@ Date:
 [mathjax]
 These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
 The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z).</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://tigertooth4.github.io/post/2020-09/design-the-geometric-shape-of-a-heatsink/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/2020-09/design-the-geometric-shape-of-a-heatsink/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</guid>
-      <description>散热器的几何尺寸设计</description>
     </item>
     
     <item>
