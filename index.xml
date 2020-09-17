@@ -6,10 +6,19 @@
     <description>Recent content on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 07 Sep 2020 18:02:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 23:43:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一道极限问题的证明使用了 Birkhoff 遍历定理？！</title>
+      <link>http://tigertooth4.github.io/post/2020-09/find-limit-by-birkhoff-ergodic-theorem/</link>
+      <pubDate>Tue, 15 Sep 2020 23:43:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/find-limit-by-birkhoff-ergodic-theorem/</guid>
+      <description>一道极限题 最近，在一个微信群里看到几个大佬在讨论一个极限题 $$ \lim_{t\to+\infty}\frac1t \int_0^t |\sin(x)\sin(\sqrt2 x)|dx $$ 感觉挺有意思，于是就多想了一下。 最初的想法当然是洛必达法则，但立刻发现</description>
+    </item>
     
     <item>
       <title>Weierstrass 逼近定理的证明</title>
