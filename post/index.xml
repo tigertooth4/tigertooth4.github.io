@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Sep 2020 23:46:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2020 13:46:00 +0800</lastBuildDate>
     
 	<atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>写在比赛结束之后</title>
+      <link>http://tigertooth4.github.io/post/2020-09/write-after-the-competition/</link>
+      <pubDate>Tue, 29 Sep 2020 13:46:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2020-09/write-after-the-competition/</guid>
+      <description>比赛结束了，结果没有出线。虽然这是想要的结果，可是没有在竞争中胜出，总是有些不开心。总结其中的得失，没有讲完是最大的遗憾，其实在选题的时候，</description>
+    </item>
     
     <item>
       <title>一道极限问题的证明使用了 Birkhoff 遍历定理？！</title>
