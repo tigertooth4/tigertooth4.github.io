@@ -2,28 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tigertooth4.github.io/tags/life/</loc>
-    <lastmod>2020-09-29T13:46:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/cas/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/tags/math/</loc>
-    <lastmod>2020-09-29T13:46:00+08:00</lastmod>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/online/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2020-09-29T13:46:00+08:00</lastmod>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/remote/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/</loc>
+    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://tigertooth4.github.io/tags/life/</loc>
     <lastmod>2020-09-29T13:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,13 +94,6 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/2020-09/write-after-the-competition/</loc>
-    <lastmod>2020-09-29T13:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2020-09-29T13:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1150,13 +1192,6 @@
   </url>
   
   <url>
-    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
-    <lastmod>2014-08-05T12:16:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://tigertooth4.github.io/tags/oresus/</loc>
     <lastmod>2014-08-05T12:16:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1623,12 +1658,6 @@
   
   <url>
     <loc>http://tigertooth4.github.io/post/2020-09/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

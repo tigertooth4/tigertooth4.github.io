@@ -6,7 +6,16 @@
     <description>Recent content on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Sep 2020 13:46:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 10:07:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Online FriCAS Notebooks (ft. Jupyter Notebook)</title>
+      <link>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</link>
+      <pubDate>Fri, 28 Jan 2022 10:07:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</guid>
+      <description>1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he</description>
+    </item>
+    
     <item>
       <title>写在比赛结束之后</title>
       <link>http://tigertooth4.github.io/post/2020-09/write-after-the-competition/</link>
@@ -908,15 +917,6 @@ The problem is like this: a Lambert curve is a curve given by [C = {(z,w) ; | ; 
       
       <guid>http://tigertooth4.github.io/post/2020-09/%E6%95%A3%E7%83%AD%E5%99%A8%E7%9A%84%E5%87%A0%E4%BD%95%E5%B0%BA%E5%AF%B8%E8%AE%BE%E8%AE%A1/</guid>
       <description>散热器的几何尺寸设计</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</guid>
-      <description>title: Online FriCAS Notebooks (ft. Jupyter Notebook) date: &amp;lsquo;2022-1-28T10:07:00+08:00&amp;rsquo; draft: false tags: [&amp;ldquo;Math&amp;rdquo;, &amp;ldquo;CAS&amp;rdquo;, &amp;ldquo;FriCAS&amp;rdquo;, &amp;ldquo;Online&amp;rdquo;, &amp;ldquo;Remote&amp;rdquo;, &amp;ldquo;日精一技&amp;rdquo;] 1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available</description>
     </item>
     
     <item>
