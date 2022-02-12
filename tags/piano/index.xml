@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Piano on 思｜製 - A guy&#39;s thinking and making</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Piano on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Dec 2013 20:27:05 +0000</lastBuildDate>
-    
-	<atom:link href="http://tigertooth4.github.io/tags/piano/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 18 Dec 2013 20:27:05 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/piano/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Some Piano Video Tutorials</title>
       <link>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</link>
@@ -18,9 +14,9 @@
       
       <guid>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</guid>
       <description>I started learning how to play piano a few months ago. Here’s some great video tutorials I’ve found:
- Canon in D major (Pachelbel): [YouTube](http://www.youtube.com/watch?v=xDObxlDeeRk
- Howl’s moving Castle Merry-go-round of life (by Joe Hisaishi): [YouTube](http://www.youtube.com/watch?v=Zt86xb7s-Io
- Summer (slow, by Joe Hisaishi): YouTube
+  Canon in D major (Pachelbel): [YouTube](http://www.youtube.com/watch?v=xDObxlDeeRk
+  Howl’s moving Castle Merry-go-round of life (by Joe Hisaishi): [YouTube](http://www.youtube.com/watch?v=Zt86xb7s-Io
+  Summer (slow, by Joe Hisaishi): YouTube
   From YouTube channels: PianoKeyz and Jane. Enjoy ;-)
 Here&amp;rsquo;s some beautiful piece performed by other people in YouTube:
  Bach air on the G string piano solo Orchestral suite no.</description>

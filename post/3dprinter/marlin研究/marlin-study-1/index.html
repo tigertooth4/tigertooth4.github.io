@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/marlin%E7%A0%94%E7%A9%B6/marlin-study-1/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Marlin Study (1)" />
 <meta property="og:description" content="Marlin 已经来到了 1.1.0rc，而我相信 Delta 系打印机能用的 Marlin 还停留在过去一年的那个 Marlin 上。特别，如果你熟悉 Delta 三角洲打印机的固件的话，有两个最常用的分" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/marlin%E7%A0%94%E7%A9%B6/marlin-study-1/" />
-<meta property="article:published_time" content="2015-10-05T17:20:00&#43;00:00"/>
-<meta property="article:modified_time" content="2015-10-05T17:20:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/marlin%E7%A0%94%E7%A9%B6/marlin-study-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-10-05T17:20:00+00:00" />
+<meta property="article:modified_time" content="2015-10-05T17:20:00+00:00" />
 
 <meta itemprop="name" content="Marlin Study (1)">
-<meta itemprop="description" content="Marlin 已经来到了 1.1.0rc，而我相信 Delta 系打印机能用的 Marlin 还停留在过去一年的那个 Marlin 上。特别，如果你熟悉 Delta 三角洲打印机的固件的话，有两个最常用的分">
-
-
-<meta itemprop="datePublished" content="2015-10-05T17:20:00&#43;00:00" />
-<meta itemprop="dateModified" content="2015-10-05T17:20:00&#43;00:00" />
+<meta itemprop="description" content="Marlin 已经来到了 1.1.0rc，而我相信 Delta 系打印机能用的 Marlin 还停留在过去一年的那个 Marlin 上。特别，如果你熟悉 Delta 三角洲打印机的固件的话，有两个最常用的分"><meta itemprop="datePublished" content="2015-10-05T17:20:00+00:00" />
+<meta itemprop="dateModified" content="2015-10-05T17:20:00+00:00" />
 <meta itemprop="wordCount" content="485">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Marlin Study (1)"/>
 <meta name="twitter:description" content="Marlin 已经来到了 1.1.0rc，而我相信 Delta 系打印机能用的 Marlin 还停留在过去一年的那个 Marlin 上。特别，如果你熟悉 Delta 三角洲打印机的固件的话，有两个最常用的分"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -159,9 +152,7 @@
     <div class="post-content">
       <p>Marlin 已经来到了 1.1.0rc，而我相信 Delta 系打印机能用的 Marlin 还停留在过去一年的那个 Marlin 上。特别，如果你熟悉 Delta 三角洲打印机的固件的话，有两个最常用的分支，分别为 <a href="https://github.com/RichCattell/Marlin/">RichCattell</a> (具有『更完善』的自动校正功能和 M666 固件参数调整)和 <a href="https://github.com/jcrocholl/Marlin">Jcrocholl</a>(具有平台高度补偿，更加实用)。但是这两个版本的 Marlin 的代码都有近一年没有更新过了。
 最近，我DIY了两台 UM2，其精巧美观的设计令人印象深刻。其实，最打动我的方面之一还是 UM2 友好的用户界面。操作起来及其方便，尤其是换料，暂停功能，还有调平功能（虽然不是全自动的），都非常简单易用。界面方面，最大的优点在于隐藏了那些 geeky 的参数（像打印头温度，热床温度，风扇转速，feedrate等等），而是直接显示最重要的参数（打印时间）。而且，从使用角度，菜单是动态的，当打印的时候最需要的功能就是暂停、终止，而 UM2 将这些设计在用户界面上显然非常明智。而相比起来，普通 Marlin 则需要进入到第二级菜单才能看到这些选项。</p>
-
 <p>同时，UM2 又保持了可操作性，其它参数都在 tune 这个选项下，操作起来也十分容易。</p>
-
 <p>我对 Marlin 进行重新设计，也是基于这个出发点。我相信，有 UM2 的代码做参考，这些并不是不可以实现的。</p>
 
     </div>
@@ -235,7 +226,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_25/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (25) Fans on Arduino Board" />
 <meta property="og:description" content="我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock Mini 用这个位置插外接电源，是因为又加了一根连线，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_25/" />
-<meta property="article:published_time" content="2014-09-12T12:15:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-09-12T12:15:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_25/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-12T12:15:00+00:00" />
+<meta property="article:modified_time" content="2014-09-12T12:15:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (25) Fans on Arduino Board">
-<meta itemprop="description" content="我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock Mini 用这个位置插外接电源，是因为又加了一根连线，">
-
-
-<meta itemprop="datePublished" content="2014-09-12T12:15:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-09-12T12:15:00&#43;00:00" />
+<meta itemprop="description" content="我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock Mini 用这个位置插外接电源，是因为又加了一根连线，"><meta itemprop="datePublished" content="2014-09-12T12:15:00+00:00" />
+<meta itemprop="dateModified" content="2014-09-12T12:15:00+00:00" />
 <meta itemprop="wordCount" content="212">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,Arduino,Mega,Electronics,Assembly," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3DP,Kossel,Arduino,Mega,Electronics,Assembly," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (25) Fans on Arduino Board"/>
 <meta name="twitter:description" content="我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock Mini 用这个位置插外接电源，是因为又加了一根连线，"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -160,7 +153,6 @@
       <p>我错了，原来Arduino 和 Ramps 合体时，Arduino 上的圆形 12V 输入不是接电源的正确位置（以前 Rostock
 Mini 用这个位置插外接电源，是因为又加了一根连线，将 Arduino 上的电流引到了 Ramps 上来。）所以，正确的
 做法应该使用 Ramps 上的 12V 电源接口供电，这样 Auduino 通过与 Ramps 的排线连接，获得电力。</p>
-
 <p>目前我要确定，整个系统需要多少台风扇。看起来，挤出头部分需要两台 25x25 的（一台吹挤出头，另一台吹打印
 件），电源部分需要1~3台 40x40 的，电路部分需要两台 40x40 的散热，所以应该是 5~7台。</p>
 
@@ -249,7 +241,7 @@ Mini 用这个位置插外接电源，是因为又加了一根连线，将 Ardui
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

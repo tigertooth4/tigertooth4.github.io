@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Rostock 挤出头架修改" />
 <meta property="og:description" content="这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/" />
-<meta property="article:published_time" content="2014-07-28T21:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-07-28T21:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/rostock/rostock%E6%8C%A4%E5%87%BA%E5%A4%B4%E6%9E%B6%E4%BF%AE%E6%94%B9/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-07-28T21:00:00+00:00" />
+<meta property="article:modified_time" content="2014-07-28T21:00:00+00:00" />
 
 <meta itemprop="name" content="Rostock 挤出头架修改">
-<meta itemprop="description" content="这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可">
-
-
-<meta itemprop="datePublished" content="2014-07-28T21:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-07-28T21:00:00&#43;00:00" />
+<meta itemprop="description" content="这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可"><meta itemprop="datePublished" content="2014-07-28T21:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-07-28T21:00:00+00:00" />
 <meta itemprop="wordCount" content="463">
-
-
-
-<meta itemprop="keywords" content="3dp,Rostock,DIY," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3dp,Rostock,DIY," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rostock 挤出头架修改"/>
 <meta name="twitter:description" content="这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,10 +151,8 @@
     
     <div class="post-content">
       <p>这两天饱受 J-head 堵头之苦。实在没办法了，而且打印的时候打印头总是刮到已经印好的部分，发出很大的噪音不说，有时还会造成打印头偏移。总结原因，问题可能出现在堵头以后没有把 J-head 清理干净。这里顺便给大家提个醒，堵头之后千万不要用蛮力往里送料，这样只会使堵头情况愈发严重，正确的做法是将料丝抽出，然后给打印头加热到 200°C 左右，再用细铁丝清理 J-head 内部。</p>
-
 <p>今天又出现新状况，快插头怎么拧也无法拧紧了，可是我明明在打印头固定架里装了一片 M5 的螺母，应该不会出现滑丝才对。不知道，但是之前打印头固定架设计得确实有问题（容差太大，导致 M5 螺母在其中有很大自由活动的空间，并且 M5 的预留位也不够深，造成快插头拧入时长度不够，这也许就是滑丝的原因）。于是，没办法，只好重新设计一款固定架！</p>
-
-<p>好在之前下载了 <em>3D_printer_CZar</em> 的 STL 文件（附有 scad 源文件）。所以正好可以改动一下。这是修改后的样子：<img src="/3DP/_images/Rostock-hotend-mount.png" alt="" />这是改过的文件<a href="https://www.dropbox.com/s/m2235jfikdnw0o1/hotend_mount_modified.scad">链接</a>。装配时，中间的六角孔和 M5 螺母很合适，大圆孔装入 J-head 时稍紧，需要把大圆孔内壁用美工刀打磨一下&hellip; 总之，这下快插头拧上可以多深入 1mm，应该不再会有今天遇到的问题了！</p>
+<p>好在之前下载了 <em>3D_printer_CZar</em> 的 STL 文件（附有 scad 源文件）。所以正好可以改动一下。这是修改后的样子：<img src="/3DP/_images/Rostock-hotend-mount.png" alt="">这是改过的文件<a href="https://www.dropbox.com/s/m2235jfikdnw0o1/hotend_mount_modified.scad">链接</a>。装配时，中间的六角孔和 M5 螺母很合适，大圆孔装入 J-head 时稍紧，需要把大圆孔内壁用美工刀打磨一下&hellip; 总之，这下快插头拧上可以多深入 1mm，应该不再会有今天遇到的问题了！</p>
 
     </div>
 
@@ -242,7 +233,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

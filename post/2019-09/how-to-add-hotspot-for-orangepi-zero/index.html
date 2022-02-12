@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="如何给 OrangePi zero plus 增加热点功能" />
 <meta property="og:description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/" />
-<meta property="article:published_time" content="2019-09-07T23:13:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-09-07T23:13:00&#43;08:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-09/how-to-add-hotspot-for-orangepi-zero/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-09-07T23:13:00+08:00" />
+<meta property="article:modified_time" content="2019-09-07T23:13:00+08:00" />
 
 <meta itemprop="name" content="如何给 OrangePi zero plus 增加热点功能">
-<meta itemprop="description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中">
-
-
-<meta itemprop="datePublished" content="2019-09-07T23:13:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-07T23:13:00&#43;08:00" />
+<meta itemprop="description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中"><meta itemprop="datePublished" content="2019-09-07T23:13:00+08:00" />
+<meta itemprop="dateModified" content="2019-09-07T23:13:00+08:00" />
 <meta itemprop="wordCount" content="914">
-
-
-
-<meta itemprop="keywords" content="OrangePi,Octoprint,hotspot,ssh,Marlin,WiFi," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="OrangePi,Octoprint,hotspot,ssh,Marlin,WiFi," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何给 OrangePi zero plus 增加热点功能"/>
 <meta name="twitter:description" content="在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中"/>
 
@@ -148,14 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#增加热点功能">增加热点功能</a></li>
-<li><a href="#测试">测试</a></li>
-<li><a href="#更新">更新</a></li>
-<li><a href="#更新-2020">更新 2020</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -164,161 +150,124 @@
 
     
     <div class="post-content">
-      
-
-<p>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中不足是，如果像我这样，把 OrangePi 安装到了打印机里面，那么当网络环境改变（比如带打印机外出），不方便连接网线的情况下，有没有事先登录过新环境的 WiFi的话，OctoPrint 几乎会变成废柴（因为无法从外部修改 OctoPrint 的设置，连接 WiFi 操纵打印机）。所以，这种情况下，最方便的还是让 OrangePi 自己变成一个热点。这样只需要用手机连接 OrangePi 的热点即可。</p>
-
+      <p>在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中不足是，如果像我这样，把 OrangePi 安装到了打印机里面，那么当网络环境改变（比如带打印机外出），不方便连接网线的情况下，有没有事先登录过新环境的 WiFi的话，OctoPrint 几乎会变成废柴（因为无法从外部修改 OctoPrint 的设置，连接 WiFi 操纵打印机）。所以，这种情况下，最方便的还是让 OrangePi 自己变成一个热点。这样只需要用手机连接 OrangePi 的热点即可。</p>
 <p>本文参考了<a href="https://medium.com/@kennethjiang/painless-wi-fi-for-octoprint-4e6b68005400">medium 用户 Kennethjiang 的文章</a>。</p>
-
 <ul>
-<li><p>当然，如果事先知道陌生环境的 WiFi 账号密码，那只需要事先将新环境下的 WiFi 信息写入到 OrangePi 中即可。写入的办法是编辑 /etc/wpa_supplicant/wpa_supplicant.conf 文件 （sudo nano /etc/wpa_supplicant/wpa_supplicant.conf) 增加一组 network 的 SSID 和 psk 。</p></li>
-
-<li><p>否则，那么就需要给 OrangePI 增加热点功能。当它搜索不到任何可用的 WiFi 时默认开启热点功能。</p></li>
-</ul>
-
+<li>
+<p>当然，如果事先知道陌生环境的 WiFi 账号密码，那只需要事先将新环境下的 WiFi 信息写入到 OrangePi 中即可。写入的办法是编辑 /etc/wpa_supplicant/wpa_supplicant.conf 文件 （sudo nano /etc/wpa_supplicant/wpa_supplicant.conf) 增加一组 network 的 SSID 和 psk 。</p>
+</li>
+<li>
+<p>否则，那么就需要给 OrangePI 增加热点功能。当它搜索不到任何可用的 WiFi 时默认开启热点功能。</p>
 <p>要想这样做，我参考了上述链接。有如下几个步骤：</p>
-
+</li>
+</ul>
 <h1 id="增加热点功能">增加热点功能</h1>
-
 <ol>
-<li>增加软件：</li>
+<li>
+<p>增加软件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo apt-get update
+sudo apt-get install hostapd dnsmasq iw
+sudo systemctl disable hostapd dnsmasq
+</code></pre></div></li>
+<li>
+<p>配置 hostapd</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo nano /etc/hostapd/hostapd.conf
+</code></pre></div><p>增加这样几行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">interface=wlan0
+<span style="color:#75715e">#driver=rtl871xdrv</span>
+driver=nl80211 <span style="color:#75715e">#updated 2020.5.8</span>
+ssid=CompactXY-Hotspot
+hw_mode=g
+channel=6
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=1234567890
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+</code></pre></div><p>保存文件后，</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo nano /etc/<span style="color:#66d9ef">default</span>/hostapd
+</code></pre></div><p>将 <code>#DAEMON_CONF=&quot;/etc/hostapd.conf&quot;</code> 改成 <code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;</code></p>
+</li>
+<li>
+<p><code>$ sudo nano /etc/dnsmasq.conf</code> 将如下几行加到文件的末尾</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#OctoHotspot Config</span>
+
+<span style="color:#75715e">#stop DNSmasq from using resolv.conf</span>
+
+no-resolv
+
+<span style="color:#75715e">#Interface to use</span>
+
+interface=wlan0
+<span style="color:#75715e">#bind-interfaces #updated 2020.5.8</span>
+dhcp-range=10.0.0.3,10.0.0.20,12h
+</code></pre></div></li>
+<li>
+<p><code>$ sudo nano /etc/network/interfaces</code> 将 wlan0 的 wpa-conf 语句注释掉</p>
+</li>
+<li>
+<p>增加一个脚本，当找不到合适的 WiFi 连接时启动热点</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo nano /usr/bin/autohotspot
+</code></pre></div><p>copy-paste 如下代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#!/bin/bash</span>
+<span style="color:#75715e">#</span>
+createAdHocNetwork()
+{
+    ip link set dev wlan0 down
+    ip a add 10.0.0.5/24 dev wlan0
+    ip link set dev wlan0 up
+    systemctl start dnsmasq
+    systemctl start hostapd
+}
+connected=false
+<span style="color:#66d9ef">while</span> read ssid
+<span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">if</span> iw dev wlan0 scan ap-force | grep $ssid &gt; /dev/null
+    then
+        wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf &gt; /dev/null 2&gt;&amp;1
+        <span style="color:#66d9ef">if</span> dhclient -1 wlan0 &amp;&amp; iwconfig wlan0 | grep $ssid &gt; /dev/null
+        then
+            connected=true
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">else</span>
+            wpa_cli terminate
+            <span style="color:#66d9ef">break</span>
+        fi
+    <span style="color:#66d9ef">else</span>
+        echo <span style="color:#e6db74">&#34;Not in range, WiFi with SSID:&#34;</span> $ssid
+    fi
+done &lt;&lt;&lt; <span style="color:#e6db74">&#34;</span>$(grep -i <span style="color:#e6db74">&#39;^[^#].*ssid=&#39;</span> /etc/wpa_supplicant/wpa_supplicant.conf | sed -n <span style="color:#e6db74">&#39;s/.*ssid=&#34;*\([^&#34;]*\)&#34;*/\1/ip&#39;</span>)<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">if</span> ! $connected; then
+    createAdHocNetwork
+fi
+</code></pre></div><p>增加一项服务，并将下面的代码写入到 <code>autohotspot.service</code> 文件中</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo nano /etc/systemd/system/autohotspot.service
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[Unit]</span>
+Description=Generates a non-internet Hotspot <span style="color:#66d9ef">for</span> ssh when no wifi network is <span style="color:#66d9ef">in</span> range.
+After=network-online.target
+<span style="color:#66d9ef">[Service]</span>
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/autohotspot
+<span style="color:#66d9ef">[Install]</span>
+WantedBy=multi-user.target
+</code></pre></div><p>激活服务使得在它启动的时候可以运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">sudo chmod +x /usr/bin/autohotspot
+sudo systemctl enable autohotspot.service
+</code></pre></div></li>
+<li>
+<p>下一次在启动 Octoprint 的时候如果找不到任何 WiFi，可以打开电脑寻找名为 CompactXY-Hotspot 的热点，密码为 1234567890，连上以后，Octoprint 的地址为 http://10.0.0.5/。</p>
+</li>
 </ol>
-
-<pre><code class="language-powershell">   sudo apt-get update
-   sudo apt-get install hostapd dnsmasq iw
-   sudo systemctl disable hostapd dnsmasq
-</code></pre>
-
-<ol>
-<li>配置 hostapd</li>
-</ol>
-
-<pre><code class="language-powershell">   sudo nano /etc/hostapd/hostapd.conf
-</code></pre>
-
-<p>增加这样几行</p>
-
-<pre><code class="language-powershell">   interface=wlan0
-   #driver=rtl871xdrv
-   driver=nl80211 #updated 2020.5.8
-   ssid=CompactXY-Hotspot
-   hw_mode=g
-   channel=6
-   wmm_enabled=0
-   macaddr_acl=0
-   auth_algs=1
-   ignore_broadcast_ssid=0
-   wpa=2
-   wpa_passphrase=1234567890
-   wpa_key_mgmt=WPA-PSK
-   wpa_pairwise=TKIP
-   rsn_pairwise=CCMP
-</code></pre>
-
-<p>保存文件后，</p>
-
-<pre><code class="language-powershell">   sudo nano /etc/default/hostapd
-</code></pre>
-
-<p>将 <code>#DAEMON_CONF=&quot;/etc/hostapd.conf&quot;</code> 改成 <code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;</code></p>
-
-<ol>
-<li><code>$ sudo nano /etc/dnsmasq.conf</code> 将如下几行加到文件的末尾</li>
-</ol>
-
-<pre><code class="language-powershell">   #OctoHotspot Config
-   
-   #stop DNSmasq from using resolv.conf
-   
-   no-resolv
-   
-   #Interface to use
-   
-   interface=wlan0
-   #bind-interfaces #updated 2020.5.8
-   dhcp-range=10.0.0.3,10.0.0.20,12h
-</code></pre>
-
-<ol>
-<li><p><code>$ sudo nano /etc/network/interfaces</code> 将 wlan0 的 wpa-conf 语句注释掉</p></li>
-
-<li><p>增加一个脚本，当找不到合适的 WiFi 连接时启动热点</p></li>
-</ol>
-
-<pre><code class="language-powershell">   sudo nano /usr/bin/autohotspot
-</code></pre>
-
-<p>copy-paste 如下代码</p>
-
-<pre><code class="language-powershell">   #!/bin/bash
-   #
-   createAdHocNetwork()
-   {
-       ip link set dev wlan0 down
-       ip a add 10.0.0.5/24 dev wlan0
-       ip link set dev wlan0 up
-       systemctl start dnsmasq
-       systemctl start hostapd
-   }
-   connected=false
-   while read ssid
-   do
-       if iw dev wlan0 scan ap-force | grep $ssid &gt; /dev/null
-       then
-           wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf &gt; /dev/null 2&gt;&amp;1
-           if dhclient -1 wlan0 &amp;&amp; iwconfig wlan0 | grep $ssid &gt; /dev/null
-           then
-               connected=true
-               break
-           else
-               wpa_cli terminate
-               break
-           fi
-       else
-           echo &quot;Not in range, WiFi with SSID:&quot; $ssid
-       fi
-   done &lt;&lt;&lt; &quot;$(grep -i '^[^#].*ssid=' /etc/wpa_supplicant/wpa_supplicant.conf | sed -n 's/.*ssid=&quot;*\([^&quot;]*\)&quot;*/\1/ip')&quot;
-   if ! $connected; then
-       createAdHocNetwork
-   fi
-</code></pre>
-
-<p>增加一项服务，并将下面的代码写入到 <code>autohotspot.service</code> 文件中</p>
-
-<pre><code class="language-powershell">   sudo nano /etc/systemd/system/autohotspot.service
-</code></pre>
-
-<pre><code class="language-powershell">   [Unit]
-   Description=Generates a non-internet Hotspot for ssh when no wifi network is in range.
-   After=network-online.target
-   [Service]
-   Type=oneshot
-   RemainAfterExit=yes
-   ExecStart=/usr/bin/autohotspot
-   [Install]
-   WantedBy=multi-user.target
-</code></pre>
-
-<p>激活服务使得在它启动的时候可以运行</p>
-
-<pre><code class="language-powershell">   sudo chmod +x /usr/bin/autohotspot
-   sudo systemctl enable autohotspot.service
-</code></pre>
-
-<ol>
-<li>下一次在启动 Octoprint 的时候如果找不到任何 WiFi，可以打开电脑寻找名为 CompactXY-Hotspot 的热点，密码为 1234567890，连上以后，Octoprint 的地址为 <a href="http://10.0.0.5/。">http://10.0.0.5/。</a></li>
-</ol>
-
 <h1 id="测试">测试</h1>
-
 <p>今天启动机器发现，无论如何设置，OrangePi 都只会连接热点，不会连接 WiFi，并且 IP 地址是 169.254.7.49。初步判断是自动连接的脚本出了问题。待今后有时间我要做进一步的分析。</p>
-
 <h1 id="更新">更新</h1>
-
 <p>也许应该参考这篇<a href="http://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/158-raspberry-pi-auto-wifi-hotspot-switch-direct-connection">文章</a> 。</p>
-
 <h1 id="更新-2020">更新 2020</h1>
-
 <p>事实上，一个明显的问题是，我应该创建 <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> 这个文件。</p>
 
     </div>
@@ -406,7 +355,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

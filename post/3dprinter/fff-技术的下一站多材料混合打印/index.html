@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/fff-%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%8B%E4%B8%80%E7%AB%99%E5%A4%9A%E6%9D%90%E6%96%99%E6%B7%B7%E5%90%88%E6%89%93%E5%8D%B0/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="FFM 技术的下一站：多材料混合打印" />
 <meta property="og:description" content="这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/fff-%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%8B%E4%B8%80%E7%AB%99%E5%A4%9A%E6%9D%90%E6%96%99%E6%B7%B7%E5%90%88%E6%89%93%E5%8D%B0/" />
-<meta property="article:published_time" content="2016-09-08T18:54:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-09-08T18:54:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/fff-%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%8B%E4%B8%80%E7%AB%99%E5%A4%9A%E6%9D%90%E6%96%99%E6%B7%B7%E5%90%88%E6%89%93%E5%8D%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-09-08T18:54:00+00:00" />
+<meta property="article:modified_time" content="2016-09-08T18:54:00+00:00" />
 
 <meta itemprop="name" content="FFM 技术的下一站：多材料混合打印">
-<meta itemprop="description" content="这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前">
-
-
-<meta itemprop="datePublished" content="2016-09-08T18:54:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-09-08T18:54:00&#43;00:00" />
-<meta itemprop="wordCount" content="304">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前"><meta itemprop="datePublished" content="2016-09-08T18:54:00+00:00" />
+<meta itemprop="dateModified" content="2016-09-08T18:54:00+00:00" />
+<meta itemprop="wordCount" content="302">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="FFM 技术的下一站：多材料混合打印"/>
 <meta name="twitter:description" content="这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -157,7 +150,7 @@
 
     
     <div class="post-content">
-      <p>这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前我就见过类似的设计，两种耗材在进入 E3D 这样的挤出头之前，先经过一个 Y 字形的两进一出机构。两种耗材先在 Y 字形的两个分叉处&rdquo;待命&rdquo;，如果想用耗材 A 打印，那么耗材 A 就从 Y 字形的一个分叉进入下面 Y 的主干，经过一段特殊材料制成的细管，进入挤出头。当需要切换耗材的时候，耗材 A 回缩到之前的 Y 字形分叉，然后，另一种耗材经过 Y 的主干，进入挤出头。这种设计的优点是简洁，但是，缺点也十分明显。我一直担忧，回抽的速度和挤出头的温度一旦设定不好，挤出头就有拥堵的危险。</p>
+      <p>这两天业界的最大新闻，莫过于 Kickstarter 上 Premethus 的两色混合打印头的众筹成功了。坦率的讲，我并不以为然，因为这项技术并不是革新性的新发明了！事实上，很早以前我就见过类似的设计，两种耗材在进入 E3D 这样的挤出头之前，先经过一个 Y 字形的两进一出机构。两种耗材先在 Y 字形的两个分叉处&quot;待命&quot;，如果想用耗材 A 打印，那么耗材 A 就从 Y 字形的一个分叉进入下面 Y 的主干，经过一段特殊材料制成的细管，进入挤出头。当需要切换耗材的时候，耗材 A 回缩到之前的 Y 字形分叉，然后，另一种耗材经过 Y 的主干，进入挤出头。这种设计的优点是简洁，但是，缺点也十分明显。我一直担忧，回抽的速度和挤出头的温度一旦设定不好，挤出头就有拥堵的危险。</p>
 
     </div>
 
@@ -230,7 +223,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

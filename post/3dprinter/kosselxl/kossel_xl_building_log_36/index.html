@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件" />
 <meta property="og:description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/" />
-<meta property="article:published_time" content="2015-03-03T15:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2015-03-03T15:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_36/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-03-03T15:00:00+00:00" />
+<meta property="article:modified_time" content="2015-03-03T15:00:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件">
-<meta itemprop="description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。">
-
-
-<meta itemprop="datePublished" content="2015-03-03T15:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2015-03-03T15:00:00&#43;00:00" />
+<meta itemprop="description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。"><meta itemprop="datePublished" content="2015-03-03T15:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-03-03T15:00:00+00:00" />
 <meta itemprop="wordCount" content="1546">
-
-
-
-<meta itemprop="keywords" content="3dp,deltabot,Kossel,Marlin,auto-levelling,auto-calibration,G29,G30," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3dp,deltabot,Kossel,Marlin,auto-levelling,auto-calibration,G29,G30," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (36) ---- 关于 Kossel 带有自动调平功能的 Marlin 固件"/>
 <meta name="twitter:description" content="自动调平与自动校正 首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。"/>
 
@@ -149,23 +142,13 @@
   
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#自动调平与自动校正">自动调平与自动校正</a></li>
-<li><a href="#marlin-固件对于自动调平和自动校正的支持现状">Marlin 固件对于自动调平和自动校正的支持现状</a></li>
-<li><a href="#jcrocholl-的-marlin-代码">Jcrocholl 的 Marlin 代码</a>
-<ul>
-<li><a href="#g29-和-g30">G29 和 G30</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -175,236 +158,213 @@
 
     
     <div class="post-content">
-      
-
-<h4 id="自动调平与自动校正">自动调平与自动校正</h4>
-
+      <h4 id="自动调平与自动校正">自动调平与自动校正</h4>
 <p>首先要澄清一下，自动调平（auto-leveling）和自动校正（auto-calibration）是两个容易混淆的概念。自动调
 平，一般是指调节热床的平整度；而自动校正是一个更复杂的过程，不但包括校正热床的平整度，还包括调整三个
 塔（Towers）的对称性，限位开关的高度，杆长等等，是一个相当复杂的过程。</p>
-
 <h4 id="marlin-固件对于自动调平和自动校正的支持现状">Marlin 固件对于自动调平和自动校正的支持现状</h4>
-
 <p>Marlin 固件的碎片化越来越严重了！如果上 Github, 你会发现目前 Marlin 至少有 1800 多个 fork。最最正宗的
 Marlin 固件是由 Erik 维护的。不幸的是，尽管已经存在了很久，但是目前对于 Deltabot 的自动调平支持的还
 不是很好（原因嘛~也许 Marlin 固件要做到大而全，尽量支持各种结构和机型，当然不可能在短时间内将所有事
 情都做完美）。</p>
-
 <p>目前支持 Deltabot 自动调平的固件可以参考 Jcrocholl 的 Marlin 固件；而『支持』自动校正的是
 RichCattell 的 Marlin 固件。</p>
-
 <h4 id="jcrocholl-的-marlin-代码">Jcrocholl 的 Marlin 代码</h4>
-
 <h5 id="g29-和-g30">G29 和 G30</h5>
-
 <p>阅读 Marlin 的代码，可以发现控制 Deltabot 运动的全部代码几乎都在 Marlin_main.cpp 这个文件的
 Process_commands() 文件里。通过 switch 语句来处理不同的 G-Code, M-Code 指令。在 Jcrocholl 版本的
 Marlin 中，G30 的作用是探测某一点的 Z-高度。让我们来研究一下代码：</p>
-
-<pre><code class="language-c++">    case 30: // G30 Single Z Probe
-        {
-            engage_z_probe(); // Engage Z Servo endstop if available
-			/* 这个函数是在 marlin_main.cpp 里面定义的，作用是放下Z-探测探针（当然有各种办法放下，比
-			   如用『伺服电机』或者干脆让 Z-探针接触皮带从而放下探针）。崩溃的是，让 Z-探针接触皮带的
-			   坐标是写死在固件里的（并没有提供设置参数），因此 Jcrocholl 的 Marlin 注定是高度定制化
-		       的。
-			*/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">30</span><span style="color:#f92672">:</span> <span style="color:#75715e">// G30 Single Z Probe
+</span><span style="color:#75715e"></span>        {
+            engage_z_probe(); <span style="color:#75715e">// Engage Z Servo endstop if available
+</span><span style="color:#75715e"></span>			<span style="color:#75715e">/* 这个函数是在 marlin_main.cpp 里面定义的，作用是放下Z-探测探针（当然有各种办法放下，比
+</span><span style="color:#75715e">			   如用『伺服电机』或者干脆让 Z-探针接触皮带从而放下探针）。崩溃的是，让 Z-探针接触皮带的
+</span><span style="color:#75715e">			   坐标是写死在固件里的（并没有提供设置参数），因此 Jcrocholl 的 Marlin 注定是高度定制化
+</span><span style="color:#75715e">		       的。
+</span><span style="color:#75715e">			*/</span>
             st_synchronize();
-			/* 这个函数的定义可以在 Stepper.cpp 这个文件里面找到，是直接控制步进电机用的。作用是完成
-			   缓充区里暂存的命令，并负责管理热床的状态、更新 LCD 显示等等。
-		    */
+			<span style="color:#75715e">/* 这个函数的定义可以在 Stepper.cpp 这个文件里面找到，是直接控制步进电机用的。作用是完成
+</span><span style="color:#75715e">			   缓充区里暂存的命令，并负责管理热床的状态、更新 LCD 显示等等。
+</span><span style="color:#75715e">		    */</span>
 
-            // TODO: make sure the bed_level_rotation_matrix is identity or the planner will get set incorectly
-            setup_for_endstop_move();
-			/* 设定 feedrate 等等，但最重要的是 enable_endstops(true)，即把一个检测 endstop 状态的变
-               量：check_endstops 的值设为 true。
-		    */
+            <span style="color:#75715e">// TODO: make sure the bed_level_rotation_matrix is identity or the planner will get set incorectly
+</span><span style="color:#75715e"></span>            setup_for_endstop_move();
+			<span style="color:#75715e">/* 设定 feedrate 等等，但最重要的是 enable_endstops(true)，即把一个检测 endstop 状态的变
+</span><span style="color:#75715e">               量：check_endstops 的值设为 true。
+</span><span style="color:#75715e">		    */</span>
 
-            feedrate = homing_feedrate[Z_AXIS];
+            feedrate <span style="color:#f92672">=</span> homing_feedrate[Z_AXIS];
 
             run_z_probe();
-			/* 这才是最重要的一句：开始 z-探测。这个函数也是 Jcrocholl 特有的，下面我们将分析这个函
-			   数的功能。
-			*/
+			<span style="color:#75715e">/* 这才是最重要的一句：开始 z-探测。这个函数也是 Jcrocholl 特有的，下面我们将分析这个函
+</span><span style="color:#75715e">			   数的功能。
+</span><span style="color:#75715e">			*/</span>
 
             SERIAL_PROTOCOLPGM(MSG_BED);
-            SERIAL_PROTOCOLPGM(&quot; X: &quot;);
+            SERIAL_PROTOCOLPGM(<span style="color:#e6db74">&#34; X: &#34;</span>);
             SERIAL_PROTOCOL(current_position[X_AXIS]);
-            SERIAL_PROTOCOLPGM(&quot; Y: &quot;);
+            SERIAL_PROTOCOLPGM(<span style="color:#e6db74">&#34; Y: &#34;</span>);
             SERIAL_PROTOCOL(current_position[Y_AXIS]);
-            SERIAL_PROTOCOLPGM(&quot; Z: &quot;);
+            SERIAL_PROTOCOLPGM(<span style="color:#e6db74">&#34; Z: &#34;</span>);
             SERIAL_PROTOCOL(current_position[Z_AXIS]);
-            SERIAL_PROTOCOLPGM(&quot;\n&quot;);
+            SERIAL_PROTOCOLPGM(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
 
             clean_up_after_endstop_move();
-            retract_z_probe(); // Retract Z Servo endstop if available
-        }
-        break;
+            retract_z_probe(); <span style="color:#75715e">// Retract Z Servo endstop if available
+</span><span style="color:#75715e"></span>        }
+        <span style="color:#66d9ef">break</span>;
 
-</code></pre>
-
-<p>run_z_probe() 的代码：</p>
-
-<pre><code class="language-c++">static void run_z_probe() {
+</code></pre></div><p>run_z_probe() 的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run_z_probe</span>() {
     plan_bed_level_matrix.set_to_identity();
 
-#ifdef DELTA
-    enable_endstops(true);
-    float start_z = current_position[Z_AXIS];
-	// 当前的打印头位置的 z 坐标
+<span style="color:#75715e">#ifdef DELTA
+</span><span style="color:#75715e"></span>    enable_endstops(true);
+    <span style="color:#66d9ef">float</span> start_z <span style="color:#f92672">=</span> current_position[Z_AXIS];
+	<span style="color:#75715e">// 当前的打印头位置的 z 坐标
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">long</span> start_steps <span style="color:#f92672">=</span> st_get_position(Z_AXIS);
+	<span style="color:#75715e">/* 这句很奇怪，得到 Z-柱的步进电机当前的步数，但是对于 Deltabot 来说，Z-柱的步数和打印头的 Z-坐
+</span><span style="color:#75715e">	 标之间有直接关系吗？
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	*/</span>
 
-    long start_steps = st_get_position(Z_AXIS);
-	/* 这句很奇怪，得到 Z-柱的步进电机当前的步数，但是对于 Deltabot 来说，Z-柱的步数和打印头的 Z-坐
-	 标之间有直接关系吗？
+    feedrate <span style="color:#f92672">=</span> homing_feedrate[Z_AXIS]<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>; <span style="color:#75715e">// 让移动速度是 Homing 速度的十分之一
+</span><span style="color:#75715e"></span>    destination[Z_AXIS] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>; <span style="color:#75715e">// 设置打印头 z-坐标的预期值为 -10
+</span><span style="color:#75715e"></span>    prepare_move_raw(); <span style="color:#75715e">// 规划运动
+</span><span style="color:#75715e"></span>    st_synchronize(); <span style="color:#75715e">// 完成缓冲
+</span><span style="color:#75715e"></span>    endstops_hit_on_purpose(); <span style="color:#75715e">// 设置三个轴 hit 的值为 false
+</span><span style="color:#75715e"></span>
+    enable_endstops(false); <span style="color:#75715e">//设置 check_endstops 这个变量为 false
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">long</span> stop_steps <span style="color:#f92672">=</span> st_get_position(Z_AXIS);
 
-	*/
-
-    feedrate = homing_feedrate[Z_AXIS]/10; // 让移动速度是 Homing 速度的十分之一
-    destination[Z_AXIS] = -10; // 设置打印头 z-坐标的预期值为 -10
-    prepare_move_raw(); // 规划运动
-    st_synchronize(); // 完成缓冲
-    endstops_hit_on_purpose(); // 设置三个轴 hit 的值为 false
-
-    enable_endstops(false); //设置 check_endstops 这个变量为 false
-    long stop_steps = st_get_position(Z_AXIS);
-
-    float mm = start_z - float(start_steps - stop_steps) / axis_steps_per_unit[Z_AXIS];
-    current_position[Z_AXIS] = mm;
+    <span style="color:#66d9ef">float</span> mm <span style="color:#f92672">=</span> start_z <span style="color:#f92672">-</span> <span style="color:#66d9ef">float</span>(start_steps <span style="color:#f92672">-</span> stop_steps) <span style="color:#f92672">/</span> axis_steps_per_unit[Z_AXIS];
+    current_position[Z_AXIS] <span style="color:#f92672">=</span> mm;
     calculate_delta(current_position);
     plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
-#else
-    feedrate = homing_feedrate[Z_AXIS];
+<span style="color:#75715e">#else
+</span><span style="color:#75715e"></span>    feedrate <span style="color:#f92672">=</span> homing_feedrate[Z_AXIS];
 
-    // move down until you find the bed
-    float zPosition = -10;
-    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    <span style="color:#75715e">// move down until you find the bed
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">float</span> zPosition <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>;
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span>, active_extruder);
     st_synchronize();
 
-        // we have to let the planner know where we are right now as it is not where we said to go.
-    zPosition = st_get_position_mm(Z_AXIS);
+        <span style="color:#75715e">// we have to let the planner know where we are right now as it is not where we said to go.
+</span><span style="color:#75715e"></span>    zPosition <span style="color:#f92672">=</span> st_get_position_mm(Z_AXIS);
     plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS]);
 
-    // move up the retract distance
-    zPosition += home_retract_mm(Z_AXIS);
-    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    <span style="color:#75715e">// move up the retract distance
+</span><span style="color:#75715e"></span>    zPosition <span style="color:#f92672">+=</span> home_retract_mm(Z_AXIS);
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span>, active_extruder);
     st_synchronize();
 
-    // move back down slowly to find bed
-    feedrate = homing_feedrate[Z_AXIS]/4;
-    zPosition -= home_retract_mm(Z_AXIS) * 2;
-    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate/60, active_extruder);
+    <span style="color:#75715e">// move back down slowly to find bed
+</span><span style="color:#75715e"></span>    feedrate <span style="color:#f92672">=</span> homing_feedrate[Z_AXIS]<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>;
+    zPosition <span style="color:#f92672">-=</span> home_retract_mm(Z_AXIS) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], zPosition, current_position[E_AXIS], feedrate<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span>, active_extruder);
     st_synchronize();
 
-    current_position[Z_AXIS] = st_get_position_mm(Z_AXIS);
-    // make sure the planner knows where we are as it may be a bit different than we last said to move to
-    plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]);
-#endif
-}
+    current_position[Z_AXIS] <span style="color:#f92672">=</span> st_get_position_mm(Z_AXIS);
+    <span style="color:#75715e">// make sure the planner knows where we are as it may be a bit different than we last said to move to
+</span><span style="color:#75715e"></span>    plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]);
+<span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>}
 
-</code></pre>
-
-<p>prepare_move_raw() 的代码，在 Marlin_main.cpp 里定义：</p>
-
-<pre><code class="language-c++">void prepare_move_raw()
+</code></pre></div><p>prepare_move_raw() 的代码，在 Marlin_main.cpp 里定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">prepare_move_raw</span>()
 {
-  previous_millis_cmd = millis();
-  // 这是一个 Arduino 内部函数，得到 Arduino 运行到现在的时间（是个
-  // 无符号长整型），Arduino 将会在 50 天后重置时间
-
+  previous_millis_cmd <span style="color:#f92672">=</span> millis();
+  <span style="color:#75715e">// 这是一个 Arduino 内部函数，得到 Arduino 运行到现在的时间（是个
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 无符号长整型），Arduino 将会在 50 天后重置时间
+</span><span style="color:#75715e"></span>
   calculate_delta(destination);
-  // 输入打印头的笛卡尔坐标，得到打印头的 delta 坐标（三个滑车向下移动的距离）
-
+  <span style="color:#75715e">// 输入打印头的笛卡尔坐标，得到打印头的 delta 坐标（三个滑车向下移动的距离）
+</span><span style="color:#75715e"></span>
   plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
-                   destination[E_AXIS], feedrate*feedmultiply/60/100.0,
+                   destination[E_AXIS], feedrate<span style="color:#f92672">*</span>feedmultiply<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">/</span><span style="color:#ae81ff">100.0</span>,
                    active_extruder);
-  // 将线性运动加入 buffer, x, y, z 是带符号的目标位置，单位是 mm
-
-  for(int8_t i=0; i &lt; NUM_AXIS; i++) {
-    current_position[i] = destination[i];
+  <span style="color:#75715e">// 将线性运动加入 buffer, x, y, z 是带符号的目标位置，单位是 mm
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int8_t</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> NUM_AXIS; i<span style="color:#f92672">++</span>) {
+    current_position[i] <span style="color:#f92672">=</span> destination[i];
   }
-  // 将当前打印头位置位置设为目标位置，表明运动完成
-}
-</code></pre>
-
-<p>以下是 RichCattell 的z_probe() 代码，在 Marlin_main.cpp 文件里定义：</p>
-
-<pre><code class="language-c++">float z_probe() {
-  feedrate = AUTOCAL_TRAVELRATE * 60;
+  <span style="color:#75715e">// 将当前打印头位置位置设为目标位置，表明运动完成
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>以下是 RichCattell 的z_probe() 代码，在 Marlin_main.cpp 文件里定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">z_probe</span>() {
+  feedrate <span style="color:#f92672">=</span> AUTOCAL_TRAVELRATE <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
   prepare_move();
   st_synchronize();
 
   enable_endstops(true);
-  float start_z = current_position[Z_AXIS];
-  long start_steps = st_get_position(Z_AXIS);
+  <span style="color:#66d9ef">float</span> start_z <span style="color:#f92672">=</span> current_position[Z_AXIS];
+  <span style="color:#66d9ef">long</span> start_steps <span style="color:#f92672">=</span> st_get_position(Z_AXIS);
 
-  feedrate = AUTOCAL_PROBERATE * 60;
-  destination[Z_AXIS] = -20;
+  feedrate <span style="color:#f92672">=</span> AUTOCAL_PROBERATE <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
+  destination[Z_AXIS] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>;
   prepare_move_raw();
   st_synchronize();
   endstops_hit_on_purpose();
 
   enable_endstops(false);
-  long stop_steps = st_get_position(Z_AXIS);
+  <span style="color:#66d9ef">long</span> stop_steps <span style="color:#f92672">=</span> st_get_position(Z_AXIS);
 
-  //saved_position[X_AXIS] = float((st_get_position(X_AXIS)) / axis_steps_per_unit[X_AXIS]);
-  //saved_position[Y_AXIS] = float((st_get_position(Y_AXIS)) / axis_steps_per_unit[Y_AXIS]);
-  //saved_position[Z_AXIS] = float((st_get_position(Z_AXIS)) / axis_steps_per_unit[Z_AXIS]);
-
-  float mm = start_z -
-    float(start_steps - stop_steps) / axis_steps_per_unit[Z_AXIS];
-  current_position[Z_AXIS] = mm;
+  <span style="color:#75715e">//saved_position[X_AXIS] = float((st_get_position(X_AXIS)) / axis_steps_per_unit[X_AXIS]);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//saved_position[Y_AXIS] = float((st_get_position(Y_AXIS)) / axis_steps_per_unit[Y_AXIS]);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//saved_position[Z_AXIS] = float((st_get_position(Z_AXIS)) / axis_steps_per_unit[Z_AXIS]);
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">float</span> mm <span style="color:#f92672">=</span> start_z <span style="color:#f92672">-</span>
+    <span style="color:#66d9ef">float</span>(start_steps <span style="color:#f92672">-</span> stop_steps) <span style="color:#f92672">/</span> axis_steps_per_unit[Z_AXIS];
+  current_position[Z_AXIS] <span style="color:#f92672">=</span> mm;
   calculate_delta(current_position);
   plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
 		    current_position[E_AXIS]);
 
-  for(int8_t i=0; i &lt; 3; i++) {
-    saved_position[i] = float(st_get_position(i) / axis_steps_per_unit[i]);
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int8_t</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>) {
+    saved_position[i] <span style="color:#f92672">=</span> <span style="color:#66d9ef">float</span>(st_get_position(i) <span style="color:#f92672">/</span> axis_steps_per_unit[i]);
     }
 
-  destination[Z_AXIS] = mm + AUTOCAL_PROBELIFT;
+  destination[Z_AXIS] <span style="color:#f92672">=</span> mm <span style="color:#f92672">+</span> AUTOCAL_PROBELIFT;
   prepare_move_raw();
   st_synchronize();
-  return mm;
+  <span style="color:#66d9ef">return</span> mm;
 }
-</code></pre>
-
-<p>以下是 prepare_move() 的代码，在 Marlin_main.cpp 里定义：</p>
-
-<pre><code class="language-c++">void prepare_move()
+</code></pre></div><p>以下是 prepare_move() 的代码，在 Marlin_main.cpp 里定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">prepare_move</span>()
 {
   clamp_to_software_endstops(destination);
 
-  previous_millis_cmd = millis();
-#ifdef DELTA
-  float difference[NUM_AXIS];
-  for (int8_t i=0; i &lt; NUM_AXIS; i++) {
-    difference[i] = destination[i] - current_position[i];
+  previous_millis_cmd <span style="color:#f92672">=</span> millis();
+<span style="color:#75715e">#ifdef DELTA
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">float</span> difference[NUM_AXIS];
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int8_t</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> NUM_AXIS; i<span style="color:#f92672">++</span>) {
+    difference[i] <span style="color:#f92672">=</span> destination[i] <span style="color:#f92672">-</span> current_position[i];
   }
-  float cartesian_mm = sqrt(sq(difference[X_AXIS]) +
-                            sq(difference[Y_AXIS]) +
+  <span style="color:#66d9ef">float</span> cartesian_mm <span style="color:#f92672">=</span> sqrt(sq(difference[X_AXIS]) <span style="color:#f92672">+</span>
+                            sq(difference[Y_AXIS]) <span style="color:#f92672">+</span>
                             sq(difference[Z_AXIS]));
-  if (cartesian_mm &lt; 0.000001) { cartesian_mm = abs(difference[E_AXIS]); }
-  if (cartesian_mm &lt; 0.000001) { return; }
-  float seconds = 6000 * cartesian_mm / feedrate / feedmultiply;
-  int steps = max(1, int(DELTA_SEGMENTS_PER_SECOND * seconds));
-  // SERIAL_ECHOPGM(&quot;mm=&quot;); SERIAL_ECHO(cartesian_mm);
-  // SERIAL_ECHOPGM(&quot; seconds=&quot;); SERIAL_ECHO(seconds);
-  // SERIAL_ECHOPGM(&quot; steps=&quot;); SERIAL_ECHOLN(steps);
-  for (int s = 1; s &lt;= steps; s++) {
-    float fraction = float(s) / float(steps);
-    for(int8_t i=0; i &lt; NUM_AXIS; i++) {
-      destination[i] = current_position[i] + difference[i] * fraction;
+  <span style="color:#66d9ef">if</span> (cartesian_mm <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.000001</span>) { cartesian_mm <span style="color:#f92672">=</span> abs(difference[E_AXIS]); }
+  <span style="color:#66d9ef">if</span> (cartesian_mm <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.000001</span>) { <span style="color:#66d9ef">return</span>; }
+  <span style="color:#66d9ef">float</span> seconds <span style="color:#f92672">=</span> <span style="color:#ae81ff">6000</span> <span style="color:#f92672">*</span> cartesian_mm <span style="color:#f92672">/</span> feedrate <span style="color:#f92672">/</span> feedmultiply;
+  <span style="color:#66d9ef">int</span> steps <span style="color:#f92672">=</span> max(<span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">int</span>(DELTA_SEGMENTS_PER_SECOND <span style="color:#f92672">*</span> seconds));
+  <span style="color:#75715e">// SERIAL_ECHOPGM(&#34;mm=&#34;); SERIAL_ECHO(cartesian_mm);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// SERIAL_ECHOPGM(&#34; seconds=&#34;); SERIAL_ECHO(seconds);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// SERIAL_ECHOPGM(&#34; steps=&#34;); SERIAL_ECHOLN(steps);
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> s <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; s <span style="color:#f92672">&lt;=</span> steps; s<span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">float</span> fraction <span style="color:#f92672">=</span> <span style="color:#66d9ef">float</span>(s) <span style="color:#f92672">/</span> <span style="color:#66d9ef">float</span>(steps);
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int8_t</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> NUM_AXIS; i<span style="color:#f92672">++</span>) {
+      destination[i] <span style="color:#f92672">=</span> current_position[i] <span style="color:#f92672">+</span> difference[i] <span style="color:#f92672">*</span> fraction;
     }
     calculate_delta(destination);
     adjust_delta(destination);
     plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
-                     destination[E_AXIS], feedrate*feedmultiply/60/100.0,
+                     destination[E_AXIS], feedrate<span style="color:#f92672">*</span>feedmultiply<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">/</span><span style="color:#ae81ff">100.0</span>,
                      active_extruder);
   }
-#else
-
-</code></pre>
-
+<span style="color:#75715e">#else
+</span><span style="color:#75715e"></span>
+</code></pre></div>
     </div>
 
     
@@ -494,7 +454,7 @@ Marlin 中，G30 的作用是探测某一点的 Z-高度。让我们来研究一
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

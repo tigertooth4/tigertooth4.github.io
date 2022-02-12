@@ -17,11 +17,7 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Blender Project (III)
-Date: 2012-11-08 18:19:35
-Actually when I wrote this blog, I&amp;rsquo;m waiting for the result of rendering the coffee cup. I&amp;rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.
-more
-In the last post, we talked about the process of making the body of coffee cup from a cylinder." />
+  <meta name="description" content="Title: Blender Project (III) Date: 2012-11-08 18:19:35 Actually when I wrote this blog, I&amp;rsquo;m waiting for the result of rendering the coffee cup. I&amp;rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down. more In the last post, we" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -30,7 +26,7 @@ In the last post, we talked about the process of making the body of coffee cup f
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dmodeling/blender-project-iii/" />
@@ -54,36 +50,19 @@ In the last post, we talked about the process of making the body of coffee cup f
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Blender Project (III)
-Date: 2012-11-08 18:19:35
-Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.
-more
-In the last post, we talked about the process of making the body of coffee cup from a cylinder." />
+<meta property="og:description" content="Title: Blender Project (III) Date: 2012-11-08 18:19:35 Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down. more In the last post, we" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dmodeling/blender-project-iii/" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dmodeling/blender-project-iii/" /><meta property="article:section" content="post" />
+
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Blender Project (III)
-Date: 2012-11-08 18:19:35
-Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.
-more
-In the last post, we talked about the process of making the body of coffee cup from a cylinder.">
-
-
+<meta itemprop="description" content="Title: Blender Project (III) Date: 2012-11-08 18:19:35 Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down. more In the last post, we">
 
 <meta itemprop="wordCount" content="407">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Blender Project (III)
-Date: 2012-11-08 18:19:35
-Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.
-more
-In the last post, we talked about the process of making the body of coffee cup from a cylinder."/>
+<meta name="twitter:description" content="Title: Blender Project (III) Date: 2012-11-08 18:19:35 Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down. more In the last post, we"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -162,7 +141,7 @@ In the last post, we talked about the process of making the body of coffee cup f
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -172,32 +151,19 @@ In the last post, we talked about the process of making the body of coffee cup f
     
     <div class="post-content">
       <p>Title: Blender Project (III)</p>
-
 <p>Date: 2012-11-08 18:19:35</p>
-
 <p>Actually when I wrote this blog, I&rsquo;m waiting for the result of rendering the coffee cup. I&rsquo;ll try to memorize every detail and important things for making a 3D model by using blender.BTW: I can hear the CPU fan is speeding up for rendering, letting me getting a little bit warm. Oh, now it is slowing down.</p>
-
 <p>more</p>
-
 <p>In the last post, we talked about the process of making the body of coffee cup from a cylinder. But normally, everything is not that easy. This time we will make a handle and attach it to the body part. The handle is made by letting a circle moving along a certain handle like path. So this is accomplished by select the path, and looking for circle object in the right panel.</p>
-
 <p>After doing so, you may want to get the ability of editing the handle, so you need to change the handle to a mesh surface.</p>
-
 <p>My favorite part of modeling is to join the body and handle together. We would use control + J to join two things, and delete some of the surfaces of body. And making new faces bridging between body and handle. This step is done by selection some edges and press F to make a face.</p>
-
 <p>The model will looks pretty rough after join two components together. But don&rsquo;t worry, Blender has the tools to smooth everything out.</p>
-
 <p>The material of a coffee cup is very important. However I guess I don&rsquo;t really understand the material selection part. It&rsquo;s skillful, isn&rsquo;t it?</p>
-
 <p>Then the things I was not thought of is they add a reflection plane to reflect light to the whole scene by selecting a highly light emission material for the plane.</p>
-
 <p>And the final thing is you can switch between 3D modeling and rendering by press a key (which I forgot). And the quality of rendering is determined by how many samples you want to choose. The more the samples, the higher the rendering quality, at same time, the longer the time.</p>
-
 <p>Yeah! That&rsquo;s it! I think I should practice more to remember the functions and shortcuts in Blender. Now, I just enjoy the accomplishment and start loving Blender! A great tool for making things. Next time, let&rsquo;s try painting my manuscript on the coffee cup!</p>
-
 <p>Here is the final look of the cup! ;)</p>
-
-<p>[caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;]<a href="http://www.flickr.com/photos/liuxiaojun/8166353447/" title="Flickr 上 Liu Xiaojun 的 coffee cup"><img src="http://farm8.staticflickr.com/7135/8166353447_59368d9437.jpg &quot;Coffee Cup (Made by Blender" alt="coffee cup" />&rdquo;)</a> Coffee Cup (Made by Blender)[/caption]</p>
+<p>[caption id=&quot;&quot; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;]<a href="http://www.flickr.com/photos/liuxiaojun/8166353447/" title="Flickr 上 Liu Xiaojun 的 coffee cup"><img src="http://farm8.staticflickr.com/7135/8166353447_59368d9437.jpg" alt="coffee cup" title="Coffee Cup (Made by Blender)"></a> Coffee Cup (Made by Blender)[/caption]</p>
 
     </div>
 
@@ -270,7 +236,7 @@ In the last post, we talked about the process of making the body of coffee cup f
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -36,7 +36,7 @@ NSPopover *popover = [[NSPopover alloc] init];
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/" />
@@ -72,7 +72,8 @@ NSPopover *popover = [[NSPopover alloc] init];
 [popover setAnimates:YES];
 [popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/" /><meta property="article:section" content="post" />
+
 
 
 <meta itemprop="name" content="">
@@ -88,14 +89,8 @@ NSPopover *popover = [[NSPopover alloc] init];
 [popover setAnimates:YES];
 [popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];">
 
-
-
-<meta itemprop="wordCount" content="195">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="196">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Title: NSPopover &#43; Custom view inside
 Date: 2013-04-09 11:21:32
@@ -186,7 +181,7 @@ NSPopover *popover = [[NSPopover alloc] init];
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -196,45 +191,30 @@ NSPopover *popover = [[NSPopover alloc] init];
     
     <div class="post-content">
       <p>Title: NSPopover + Custom view inside</p>
-
 <p>Date: 2013-04-09 11:21:32</p>
-
 <p>Today I would like to implement a [cciN_objc]NSPopover[/cciN_objc] view with a subclass of [cciN_objc]NSTableView[/cciN_objc] in it.</p>
-
 <p>Here is a solution of how to display [cciN_objc]NSPopover[/cciN_objc] programmatically from stackoverflow : <a href="http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically">http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically</a> , I&rsquo;ll quote the code below:</p>
-
 <p>[cc_objc]</p>
-
 <p>NSViewController *controller = [[NSViewController alloc] initWithNibName:@&ldquo;View&rdquo; bundle:nil];</p>
-
 <p>NSPopover *popover = [[NSPopover alloc] init];</p>
-
 <p>[popover setContentSize:NSMakeSize(100.0f, 100.0f)];</p>
-
 <p>[popover setContentViewController:controller];</p>
-
 <p>[popover setAnimates:YES];</p>
-
 <p>[popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];</p>
-
 <p>[popover release];</p>
-
 <p>[controller release];</p>
-
 <p>[/cc_objc]</p>
-
 <p>And here&rsquo;s the comment, which seems to be very important for this implementation:</p>
-
 <blockquote>
-<p>The problem is not in NSPopover; the exception is thrown by NSViewController, and it says that although nib load was successful, it&rsquo;s view property is still nil.</p>
-
+<p>The problem is not in NSPopover; the exception is thrown by NSViewController, and it says that although nib load was successful, it&rsquo;s view property is still nil.&gt;</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
 <p>Open “View.nib” in Interface Builder and assign File Owner&rsquo;s view outlet to the view object that the controller is supposed to represent (NSViewContoller becomes the file owner when it loads a nib). This is done by Ctrl-dragging from File Owner icon to the view&rsquo;s icon, then choosing view from the list of outlets.</p>
 </blockquote>
-
 <p>Here is another link, which I think could be helpful:</p>
-
 <p><a href="https://www.gargoylesoft.com/blog/2011/08/using-nspopover/">https://www.gargoylesoft.com/blog/2011/08/using-nspopover/</a>.</p>
-
 <p>The problem now seems I haven&rsquo;t set [cciN_objc]contentViewController[/cciN_objc] for the [cciN_objc]NSPopover[/cciN_objc] . I&rsquo;ll check it.</p>
 
     </div>
@@ -262,13 +242,13 @@ NSPopover *popover = [[NSPopover alloc] init];
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/3dprinter/kosselxl/kossel_xl_building_log_32/">
+          <a class="prev" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default"></span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/">
+          <a class="next" href="/post/cocoa/%E5%87%A0%E4%B8%AA%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B5%84%E6%BA%90/">
             <span class="next-text nav-default"></span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
@@ -308,7 +288,7 @@ NSPopover *popover = [[NSPopover alloc] init];
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

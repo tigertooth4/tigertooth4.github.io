@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (27) ---- The frustrating stepper motors" />
 <meta property="og:description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/" />
-<meta property="article:published_time" content="2014-09-17T09:35:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-09-17T09:35:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-17T09:35:00+00:00" />
+<meta property="article:modified_time" content="2014-09-17T09:35:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (27) ---- The frustrating stepper motors">
-<meta itemprop="description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开">
-
-
-<meta itemprop="datePublished" content="2014-09-17T09:35:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-09-17T09:35:00&#43;00:00" />
+<meta itemprop="description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开"><meta itemprop="datePublished" content="2014-09-17T09:35:00+00:00" />
+<meta itemprop="dateModified" content="2014-09-17T09:35:00+00:00" />
 <meta itemprop="wordCount" content="1442">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,Arduino,Bluetooth,Wiring,Frame,StepperMotor," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3DP,Kossel,Arduino,Bluetooth,Wiring,Frame,StepperMotor," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (27) ---- The frustrating stepper motors"/>
 <meta name="twitter:description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开"/>
 
@@ -149,13 +142,10 @@
   
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#步进电机和-a4988">步进电机和 A4988</a></li>
-<li><a href="#步进马达的测试">步进马达的测试</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#步进电机和-a4988">步进电机和 A4988</a></li>
+    <li><a href="#步进马达的测试">步进马达的测试</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -165,34 +155,19 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="步进电机和-a4988">步进电机和 A4988</h2>
-
+      <h2 id="步进电机和-a4988">步进电机和 A4988</h2>
 <p>先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开始的时候是一阵抖动，然后貌似还闻到了一些焦糊的味道-.- 电源风扇也在狂转，好像是在输出很大的功率一样！看情况不妙，急忙关掉电源开关，之后无论怎么换接口，调整步进电机的线序，马达都不!会!转！</p>
-
 <p>所以我花了一阵子来了解步进马达的基本知识： 在3D 打印机上面最常用的是 NEMA17 的两相四线 1.8 度步进的步进马达，所谓两相（2-phase），作为理科生，粗略的理解就是有两匝线圈吧！每匝都是电阻极小的铜导线，铜导线的两端引出的接线构成一对 (pairing)。 要检测哪两条线是一对，方法很简单，如果有万用表的话，可以测量一下任意两条线之间的电阻，电阻小的应该是一对；如果没有万用表也没关系，只需要把任意两条导线接在一起，根据电磁感应，如果两条导线接在一起的时候转动马达明显感到比以前费力的话，那么这两条线就是一对儿了。</p>
-
 <p>关于电流和扭矩，我的理解是：电机标定的额定电流假设是 1.7A， 那么当输入电流接近额定电流时，应该能输出到最大扭矩，额定电压我也不知道有什么关系。如何知道当前输入给电机的电流是多少呢？在这个台湾朋友的<a href="http://diy3dprint.blogspot.tw/2013/11/4988.html">博客</a> 中有详细的解释，或者在创客基地的<a href="http://flyway97.blog.163.com/blog/static/2220320412013111910433463/">博客</a> 中也有解释：基本上要测量 A4988 电机驱动芯片上的电压 V_ref，将万用表的两个针脚分别接在 A4988 的调压旋钮 和 A4988 的 GRD 针脚上。如果想调整电压，只要记住往顺时针方向旋转是增加电压就可以了，调节旋钮上有一个平的缺口，还是非常精确和灵敏的，转动的角度一般不超过360度，观察那个平的缺口的朝向，很容易判断出转动了多少。不过，最好还是去看 Pololu 的 A4988 <a href="http://www.pololu.com/product/1182">产品页</a>啦! 看到产品页上的电路图，我好像明白为什么了，我可能把1A-1B-2B-2A 的意义理解错了。也许 A 和 B 应该是一对的才对(额，等等，还要观察 Ramps 板子上的走线来确定是否是这样)。</p>
-
-<p><img src="/3DP/_images/A4988.png" alt="" /></p>
-
-<p>仔细看了 Pololu 的产品页，发现还有一种 <a href="http://www.pololu.com/product/2133">DRV8825</a> 驱动芯片，提供 <sup>1</sup>&frasl;<sub>32</sub> 的分度和更大的电流，某宝也有销售（比 A4988 略贵).</p>
-
-<p><img src="/3DP/_images/DRV8825.png" alt="" /></p>
-
+<p><img src="/3DP/_images/A4988.png" alt=""></p>
+<p>仔细看了 Pololu 的产品页，发现还有一种 <a href="http://www.pololu.com/product/2133">DRV8825</a> 驱动芯片，提供 1/32 的分度和更大的电流，某宝也有销售（比 A4988 略贵).</p>
+<p><img src="/3DP/_images/DRV8825.png" alt=""></p>
 <p>根据产品页上的说明，在16分步时电机通过的电流有下面的计算公式：</p>
-
-<pre><code class="language-mathjax">I = V_{\text{ref}} \times 2.5 \times 0.7.
-</code></pre>
-
-<p>其中 V_ref 是 A4988 芯片上测得的电压， I 是电机通过的电流. 因此，对于我所使用的电机来说，由于相电流为 1.7A，所以16分步时要把电压设在 1V 左右即可。</p>
-
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">I = V_{\text{ref}} \times 2.5 \times 0.7.
+</code></pre><p>其中 V_ref 是 A4988 芯片上测得的电压， I 是电机通过的电流. 因此，对于我所使用的电机来说，由于相电流为 1.7A，所以16分步时要把电压设在 1V 左右即可。</p>
 <h2 id="步进马达的测试">步进马达的测试</h2>
-
 <p>在 Reprap Wiki 上面有测试步进电机的代码：</p>
-
-<pre><code class="language-c++:n">#define X_STEP_PIN         54
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n">#define X_STEP_PIN         54
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
 #define X_MIN_PIN           3
@@ -320,10 +295,7 @@ void loop () {
     digitalWrite(Q_STEP_PIN    , LOW);
 
 }
-</code></pre>
-
-<hr />
-
+</code></pre><hr>
 <p>【更新】 今天终于把线序问题搞清楚了，电机也能正确工作了！实际上正确的解法是不要管 Ramps 板子上的顺序，直接看上述 A4988 的原理图，图上一对的接线是挨在一起的，那么接的时候也是。这样就对了。现在还剩下计算驱动电流的问题，待有时间继续研究！现在到了研究 Marlin 的时候了！我发现，固件上传以后，电机仍然不能正常工作，好像是限位开关已经被触发了，还得研究一下，说不定得要连上 z-probe 的限位开关才可以用。</p>
 
     </div>
@@ -413,7 +385,7 @@ void loop () {
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

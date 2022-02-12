@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/coding/%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9C%A8%E4%BB%BB%E6%84%8F%E5%8F%AF%E5%88%97%E9%9B%86%E4%B8%8A%E9%97%B4%E6%96%AD%E7%9A%84%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="构造一个在任意可列集上间断的单调函数" />
 <meta property="og:description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/coding/%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9C%A8%E4%BB%BB%E6%84%8F%E5%8F%AF%E5%88%97%E9%9B%86%E4%B8%8A%E9%97%B4%E6%96%AD%E7%9A%84%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" />
-<meta property="article:published_time" content="2012-07-13T21:37:19&#43;00:00"/>
-<meta property="article:modified_time" content="2012-07-13T21:37:19&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/coding/%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9C%A8%E4%BB%BB%E6%84%8F%E5%8F%AF%E5%88%97%E9%9B%86%E4%B8%8A%E9%97%B4%E6%96%AD%E7%9A%84%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-07-13T21:37:19+00:00" />
+<meta property="article:modified_time" content="2012-07-13T21:37:19+00:00" />
 
 <meta itemprop="name" content="构造一个在任意可列集上间断的单调函数">
-<meta itemprop="description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函">
-
-
-<meta itemprop="datePublished" content="2012-07-13T21:37:19&#43;00:00" />
-<meta itemprop="dateModified" content="2012-07-13T21:37:19&#43;00:00" />
+<meta itemprop="description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函"><meta itemprop="datePublished" content="2012-07-13T21:37:19+00:00" />
+<meta itemprop="dateModified" content="2012-07-13T21:37:19+00:00" />
 <meta itemprop="wordCount" content="660">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="构造一个在任意可列集上间断的单调函数"/>
 <meta name="twitter:description" content="[mathjax] 几天前，小木虫 上有人提问这样一个问题： 在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？ 由于连续的凸函"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,43 +151,24 @@
     
     <div class="post-content">
       <p>[mathjax]</p>
-
 <p>几天前，<a href="http://emuch.net" title="小木虫">小木虫</a> 上有人提问这样一个问题：</p>
-
 <p><em>在一个有界闭区间 (例如[0,1]) 上连续的凸函数其不可微点构成的集合是否可能没有内点？</em></p>
-
 <p>由于连续的凸函数在有界闭区间的每个点上至少存在左右导数，也就是说，连续凸函数的导函数至多只有第一类间断点。并且，由凸函数的性质，我们还能证明凸函数的导函数一定是单调函数。因此，要回答上述问题，我们只需要说明：</p>
-
 <p><em>是否存在这样的单调函数，它的间断点的集合在有界闭区间上稠密？</em></p>
-
 <p>more</p>
-
 <p>事实上，这样的单调函数是存在的。经过一番搜索，我发现前人已经研究过类似的问题，其结论是：</p>
-
-<p>对于任意可列集 ({a<em>k}</em>{k\in\mathbb{N}}), 都能找到一个单调函数 (F(x))，使得 (F(x)) 以 (a_k) 为其间断点。</p>
-
+<p>对于任意可列集 ({a_k}_{k\in\mathbb{N}}), 都能找到一个单调函数 (F(x))，使得 (F(x)) 以 (a_k) 为其间断点。</p>
 <p>构造方法很简单，只要令：[ F(x) = \sum_{a_k &lt; x} \frac{1}{r^k} ] 即可，其中(r)是一个大于1的常数。证明 (F(x)) 是单调函数，并且以 (a_k) 为间断点，可以参考</p>
-
 <p><a href="http://166.111.121.20:9080/mathjournal/GKSX704/gksx704029.caj.pdf">论文一</a> 或者 <a href="http://wenku.baidu.com/view/9e228260783e0912a2162a0a.html">论文二</a>。</p>
-
 <p>下面，以 [0,1] 中的有理数集为对象，我给出函数 (F(x)) 的大致图像:</p>
-
-<p>[caption id=&ldquo;attachment_165&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc.png"><img src="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc-300x189.png" alt="" title="在 [0,1] 中有理数集上间断的单调函数" /></a> 在 [0,1] 中有理数集上间断的单调函数[/caption]</p>
-
+<p>[caption id=&ldquo;attachment_165&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc.png"><img src="http://www.xjliu.net/blog/wp-content/uploads/2012/07/MonotoneFunc-300x189.png" alt="" title="在 [0,1] 中有理数集上间断的单调函数"></a> 在 [0,1] 中有理数集上间断的单调函数[/caption]</p>
 <p>为画出这样的图像，我们使用了 Mathematica. 其关键是不重复地列出所有 [0,1] 中分母小于 (n) 的有理数，并对于 (a_k &lt; x) 的 (k) 求和。为此，我们使用了 Table 命令来创建有理数列表，并用 Total 命令对于 (\frac{1}{r^k}) 的列表进行加和，代码如下：</p>
-
 <p>`</p>
-
 <p>n = 20; r = 1.05;</p>
-
 <p>a = DeleteDuplicates[Flatten[Table[Table[i/j, {i, j}], {j, n}]]];</p>
-
 <p>F[x_] := Total[Table[If[a[[i]] &lt; x, 1/r^i, 0], {i, Length[a]}]];</p>
-
 <p>Plot[F[x], {x, 0, 1}]</p>
-
 <p>`</p>
-
 <p>注意，Flatten 命令的目的是把多层列表（nested list）转化为一普通列表，而 DeleteDuplicates 的作用是去掉列表中的重复项。Mathematica 中，取列表中第 i 号元素的方式是两层中括号 a[[i]]。Mathematica 中对于列表的处理是异常强大的，大家可以慢慢体会它的强大与灵活。</p>
 
     </div>
@@ -268,7 +242,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

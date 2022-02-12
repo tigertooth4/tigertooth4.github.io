@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geometry on 思｜製 - A guy&#39;s thinking and making</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Geometry on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Nov 2014 17:47:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://tigertooth4.github.io/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 25 Nov 2014 17:47:00 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Book List After Interstellar</title>
       <link>http://tigertooth4.github.io/post/math/book-list-after-interstellar/</link>
@@ -30,7 +26,7 @@
 Date:
 [mathjax]
 These days I was fiddling around with one particular parameterization for Lambert curve. Although it was not that hard, I was happy that finally I made it clear.
-The problem is like this: a Lambert curve is a curve given by [C = {(z,w) \; | \; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z).</description>
+The problem is like this: a Lambert curve is a curve given by [C = {(z,w) ; | ; z = w e^w } \subset \mathbb{C}^* \times \mathbb{C}^*.] Note that the above equation defines (w) as an implicit function of (z).</description>
     </item>
     
   </channel>

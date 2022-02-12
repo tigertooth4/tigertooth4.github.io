@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_04/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (4) Auto-leveling thoughts" />
 <meta property="og:description" content="今天基本确定了框架的方案，ming 的方案中螺丝孔似乎大了点，我还是换用了 @Jaydmdigital 的方案，见 GitHub. 所以下面可做的事情是，用 Jaydmdigital 的 Visual Calc 画出一个效果图。与之相" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_04/" />
-<meta property="article:published_time" content="2014-07-26T12:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-07-26T12:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_04/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-07-26T12:00:00+00:00" />
+<meta property="article:modified_time" content="2014-07-26T12:00:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (4) Auto-leveling thoughts">
-<meta itemprop="description" content="今天基本确定了框架的方案，ming 的方案中螺丝孔似乎大了点，我还是换用了 @Jaydmdigital 的方案，见 GitHub. 所以下面可做的事情是，用 Jaydmdigital 的 Visual Calc 画出一个效果图。与之相">
-
-
-<meta itemprop="datePublished" content="2014-07-26T12:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-07-26T12:00:00&#43;00:00" />
+<meta itemprop="description" content="今天基本确定了框架的方案，ming 的方案中螺丝孔似乎大了点，我还是换用了 @Jaydmdigital 的方案，见 GitHub. 所以下面可做的事情是，用 Jaydmdigital 的 Visual Calc 画出一个效果图。与之相"><meta itemprop="datePublished" content="2014-07-26T12:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-07-26T12:00:00+00:00" />
 <meta itemprop="wordCount" content="456">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,DIY," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3DP,Kossel,DIY," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (4) Auto-leveling thoughts"/>
 <meta name="twitter:description" content="今天基本确定了框架的方案，ming 的方案中螺丝孔似乎大了点，我还是换用了 @Jaydmdigital 的方案，见 GitHub. 所以下面可做的事情是，用 Jaydmdigital 的 Visual Calc 画出一个效果图。与之相"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -160,19 +153,15 @@
       <p>今天基本确定了框架的方案，ming 的方案中螺丝孔似乎大了点，我还是换用了 @Jaydmdigital 的方案，见
 <a href="https://github.com/Jaydmdigital/Kossel_2020">GitHub</a>. 所以下面可做的事情是，用 Jaydmdigital 的 Visual Calc 画出一个效果图。与之相关的事宜请看：
 <a href="https://groups.google.com/forum/#!topic/deltabot/DSCs4O8fn00">Google论坛</a> 或者 <a href="http://forums.reprap.org/read.php?178,342575">Reprap论坛</a>。</p>
-
 <p>我似乎还需要一个皮带张紧机构的设计方案，台湾朋友的博客中有一个现成的：
 <a href="http://diy3dprint.blogspot.tw/2014/07/blog-post.html">http://diy3dprint.blogspot.tw/2014/07/blog-post.html</a> 但是我觉得还是太复杂了，如果能够和滑块结合
 在一起就好了。</p>
-
 <p>关于平台的自动校准，用的最多的方法是探针（在加热头旁边加一个可以收缩的探针）当探针碰到打印平台时触发
 微动开关，从而探测到探针触及的地方的高度信息，用以修正平台的起伏。这个设计有很多衍生的设计，例如用
 Hall-磁效应代替微动开关、用加热头代替探针触碰打印平台，或者，将触碰开关的触发设计改成压感电阻的设计
 (FSR)，当探针下降到碰触到打印平台时，平台下的压感电阻电阻上升，形成开关效应。</p>
-
 <p>我个人更倾向于采取机械的方式，因此，我觉得用打印头代替探针的方案比较容易操作。这个方案最早是 David 在
 <a href="https://groups.google.com/forum/#!msg/deltabot/lJqDukVk9PA/ofv9ccMdheUJ">Google论坛</a> 上公布的，Steve Graber 给出了一个实现，见 <a href="https://github.com/grabercars/Cerberus_Pup_170_GT2_belt_drive">GitHub</a>, <a href="https://www.youtube.com/watch?v=e119OXzkk7s&amp;feature=youtu.be">YT</a>。</p>
-
 <p>这里是另外一组关于加热头标定的<a href="https://groups.google.com/forum/#!searchin/deltabot/probeless/deltabot/_O8cKhLWcuc/ppdQh_bhup8J">讨论</a>（以及方案）。</p>
 
     </div>
@@ -254,7 +243,7 @@ Hall-磁效应代替微动开关、用加热头代替探针触碰打印平台，
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

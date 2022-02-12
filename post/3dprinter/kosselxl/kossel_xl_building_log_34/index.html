@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_34/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (34) ---- The Printer Calibration" />
 <meta property="og:description" content="简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_34/" />
-<meta property="article:published_time" content="2014-11-08T20:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-11-08T20:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_34/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-11-08T20:00:00+00:00" />
+<meta property="article:modified_time" content="2014-11-08T20:00:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (34) ---- The Printer Calibration">
-<meta itemprop="description" content="简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单">
-
-
-<meta itemprop="datePublished" content="2014-11-08T20:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-11-08T20:00:00&#43;00:00" />
+<meta itemprop="description" content="简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单"><meta itemprop="datePublished" content="2014-11-08T20:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-11-08T20:00:00+00:00" />
 <meta itemprop="wordCount" content="1226">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,GCode,G29,G30,Calibration," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3DP,Kossel,GCode,G29,G30,Calibration," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (34) ---- The Printer Calibration"/>
 <meta name="twitter:description" content="简单人肉校正 忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。 简单"/>
 
@@ -149,21 +142,13 @@
   
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#简单人肉校正">简单人肉校正</a></li>
-<li><a href="#校正办法">校正办法</a></li>
-<li><a href="#打印件误差校正">打印件误差校正</a></li>
-<li><a href="#自动校正">自动校正</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -173,49 +158,38 @@
 
     
     <div class="post-content">
-      
-
-<h4 id="简单人肉校正">简单人肉校正</h4>
-
+      <h4 id="简单人肉校正">简单人肉校正</h4>
 <p>忘了哪个人的博客里面曾经提到，Delta 系的打印机最重要的是对称，自认为我的这台 Kossel XL, 每个环节都力图精准，对称的问题应该不大。</p>
-
 <p>简单调平可以这样做：</p>
-
 <ul>
-<li><p>用皮尺测量一下 XYZ 三轴的限位器是不是一样高，尽量使得三个限位器在同一高度上。</p></li>
-
-<li><p>首先看看 Z 轴的最大值是多少：G28 让打印机Home, 记住 LCD 上 Z 的取值, 我的是 258 (mm)，然后 G1 Z200, G1 Z100, G1 50, &hellip; 直到喷头碰到玻璃板，限位器开关触发（可以用 M119 来检测限位器的状态，这里 z_min 应该 Triggered.） 再一次记下 Z 的值（这次是 11 mm）. 说明 Z-Max 应该是 258-11 = 247mm.</p></li>
-
-<li><p>然后将打印头移到玻璃板上方 1~2 mm 处， 例如用： G1 Z12 或 G1 Z13. 然后前后左右移动打印头，用 G1 X10, X20, X30 &hellip; G1 X-10， X-20,&hellip; G1 Y10, Y-10, &hellip;. 看看喷头是否会撞到玻璃板。</p></li>
-
-<li><p>我这里的情况是四个方向都撞到了，说明打印头 X Y 方向不是水平的，而是一个向上凸的曲面。</p></li>
+<li>
+<p>用皮尺测量一下 XYZ 三轴的限位器是不是一样高，尽量使得三个限位器在同一高度上。</p>
+</li>
+<li>
+<p>首先看看 Z 轴的最大值是多少：G28 让打印机Home, 记住 LCD 上 Z 的取值, 我的是 258 (mm)，然后 G1 Z200, G1 Z100, G1 50, &hellip; 直到喷头碰到玻璃板，限位器开关触发（可以用 M119 来检测限位器的状态，这里 z_min 应该 Triggered.） 再一次记下 Z 的值（这次是 11 mm）. 说明 Z-Max 应该是 258-11 = 247mm.</p>
+</li>
+<li>
+<p>然后将打印头移到玻璃板上方 1~2 mm 处， 例如用： G1 Z12 或 G1 Z13. 然后前后左右移动打印头，用 G1 X10, X20, X30 &hellip; G1 X-10， X-20,&hellip; G1 Y10, Y-10, &hellip;. 看看喷头是否会撞到玻璃板。</p>
+</li>
+<li>
+<p>我这里的情况是四个方向都撞到了，说明打印头 X Y 方向不是水平的，而是一个向上凸的曲面。</p>
+</li>
 </ul>
-
 <p>如果是我这种情况，这个网站：<a href="http://www.builda3dprinter.eu/build-manuals/kossel_mini_build_manual/calibration-2/">builda3dprinter</a></p>
-
 <h4 id="校正办法">校正办法</h4>
-
 <ul>
 <li>中间向上凸的时候：增加 DELTA_RADIUS 的值以变平。增加的办法是 M666 R设定值（参考下文中表格）然后 M500 保存，M501 检查新值。根据我的经验，增加的量和边缘的 Z 高度成正比。作者用 DELTA_SMOOTH_ROD_OFFSET 的值也是等效的。</li>
 <li>中间向下凸的时候：减少 DELTA_RADIUS 的值以变平。</li>
 </ul>
-
 <p>人肉校正的结果是不错的！DELTA_RADIUS 设置为 146mm, Z_HEIGHT 设为 245mm。整体中心与最靠近三柱的 ABC 三点的高度差可以控制在 ± 1mm 之内！【更新：实际上我们可以手动调平到四周三点和中心点的误差不超过 0.3mm】</p>
-
 <h4 id="打印件误差校正">打印件误差校正</h4>
-
 <ul>
 <li>可以打印一个 100x2x2 mm 的长方形，用 OpenSCAD 很容易实现（cube([100,2,2]) 即可）。然后打印出来，测量打印件的长度，修正 Diagonal_Rod 的长度：</li>
 </ul>
-
 <p>测量值/100 * 原长度就是杆子的新长度。</p>
-
 <h4 id="自动校正">自动校正</h4>
-
 <p>我用的是 RichCattell 的 Marlin 固件。自动调平号称这个固件的强项。今天我们来谈谈 RichCattell 的自动校正设置。</p>
-
 <p>这里的自动校正可以自动纠正如下设置：</p>
-
 <ul>
 <li>Delta Radius</li>
 <li>Delta Rod Length</li>
@@ -223,29 +197,21 @@
 <li>Z-Height correction</li>
 <li>Tower Position Error Correction (独立于半径和每个柱的径向位置调节)</li>
 </ul>
-
 <p>上述这些变量都可以通过 M666 手动调节。</p>
-
 <p>下面这些命令是这个版本新增的：</p>
-
 <ul>
-<li>G30: G30 会检测 指定点，或者默认情况下检测圆心以及圆周上点的 Z 高度，</li>
-</ul>
-
+<li>
+<p>G30: G30 会检测 指定点，或者默认情况下检测圆心以及圆周上点的 Z 高度，</p>
 <p>G30 Probe bed and produce a report of the current state of the printer, e.g.:</p>
-
 <p>Z-Tower Endstop Offsets -0.0125 X:-3.05 Y:-1.83 Z:-2.69 -0.0000 -0.0000</p>
-
 <p>Tower Position Adjust -0.0625 A:-0.04 B:0.05 C:-0.01 -0.0375 -0.0250 I:0.25 J:-1.25 K:-0.37 -0.0250
-  Delta Radius: 109.5965
-  X-Tower Y-Tower Diag Rod: 224.5935</p>
-
+Delta Radius: 109.5965
+X-Tower Y-Tower Diag Rod: 224.5935</p>
 <p>This option does not change any settings, but is useful when manually calibrating a printer, using the M666 command to change values.</p>
-
 <p>G30 Xnn Ynn Probe bed at specified X,Y point and show z-height and delta carriage positions, e.g.: Bed Z-Height at X:30.00 Y:30.00 = 0.0000 Carriage Positions: [176.40, 207.77, 209.52]</p>
-
 <p>G30 A 会开始自动校正所有参数，最好之前用 M502 导入默认值，M500 保存之，然后再 G30 A. 自动校正之后，用 M500 保存。</p>
-
+</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -254,110 +220,92 @@
 <th>结果</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>M666 L</td>
 <td>列出当前设置</td>
 <td>M666 L</td>
 </tr>
-
 <tr>
-<td></td>
 <td></td>
 <td>Current Delta geometry values:</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>X (Endstop Adj): -3.05</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>Y (Endstop Adj): -1.83</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>Z (Endstop Adj): -2.69</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>P (Z-Probe Offset): X0.00 Y10.00 Z-5.60</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>A (Tower A Position Correction): -0.04</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>B (Tower B Position Correction): 0.05</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>C (Tower C Position Correction): -0.02</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>I (Tower A Radius Correction): 0.25</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>J (Tower B Radius Correction): -1.25</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>K (Tower C Radius Correction): -0.37</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>R (Delta Radius): 109.60</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>D (Diagonal Rod Length): 224.59</td>
-</tr>
-
-<tr>
 <td></td>
+</tr>
+<tr>
 <td></td>
 <td>H (Z-Height): 255.73</td>
+<td></td>
 </tr>
-
 <tr>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>M666 R200</td>
 <td>设置 delta radius 至 200mm</td>
 <td></td>
 </tr>
-
 <tr>
 <td>M666 H350.0</td>
 <td>设置 Z-Height 为 350.0mm</td>
@@ -365,29 +313,18 @@
 </tr>
 </tbody>
 </table>
-
-<hr />
-
+<hr>
 <p>要设置那条命令，只需要加参数名：见上表，以及参数值（和参数名连在一起书写）即可。</p>
-
 <p>所有参数值都可以通过 M501 从 EEPROM 中读取；或通过 M500 保存到 EEPROM 中。</p>
-
-<pre><code class="language-c++">#define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}
-#define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}
-#define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}
-#define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}
-</code></pre>
-
-<p>Set precision for autocalibration G30 function – calibration will complete when this value is reached – all probed point have to be at 0 +/- 0.015mm (for 0.03 setting below)</p>
-
-<pre><code class="language-c++">#define AUTOCALIBRATION_PRECISION 0.03 // mm
-</code></pre>
-
-<p>Set distance to probe bed at for G30 function</p>
-
-<pre><code class="language-c++">#define BED_DIAMETER 170 // mm
-</code></pre>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}
+</span><span style="color:#75715e">#define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}
+</span><span style="color:#75715e">#define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}
+</span><span style="color:#75715e">#define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}
+</span></code></pre></div><p>Set precision for autocalibration G30 function – calibration will complete when this value is reached – all probed point have to be at 0 +/- 0.015mm (for 0.03 setting below)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define AUTOCALIBRATION_PRECISION 0.03 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>Set distance to probe bed at for G30 function</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define BED_DIAMETER 170 </span><span style="color:#75715e">// mm
+</span></code></pre></div>
     </div>
 
     
@@ -473,7 +410,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

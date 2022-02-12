@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="试验 Ultimaker 固件模拟器" />
 <meta property="og:description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/" />
-<meta property="article:published_time" content="2019-08-26T15:29:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-08-26T15:29:00&#43;08:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-08/adventure-ultimaker-simulator/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-08-26T15:29:00+08:00" />
+<meta property="article:modified_time" content="2019-08-26T15:29:00+08:00" />
 
 <meta itemprop="name" content="试验 Ultimaker 固件模拟器">
-<meta itemprop="description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的">
-
-
-<meta itemprop="datePublished" content="2019-08-26T15:29:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-26T15:29:00&#43;08:00" />
+<meta itemprop="description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的"><meta itemprop="datePublished" content="2019-08-26T15:29:00+08:00" />
+<meta itemprop="dateModified" content="2019-08-26T15:29:00+08:00" />
 <meta itemprop="wordCount" content="957">
-
-
-
-<meta itemprop="keywords" content="Ultimaker,Simulator,Marlin,C&#43;&#43;," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Ultimaker,Simulator,Marlin,C&#43;&#43;," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="试验 Ultimaker 固件模拟器"/>
 <meta name="twitter:description" content="觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的"/>
 
@@ -148,13 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#原理">原理</a></li>
-<li><a href="#准备工作">准备工作</a></li>
-<li><a href="#后续工作">后续工作</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -163,39 +150,24 @@
 
     
     <div class="post-content">
-      
-
-<p>觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的位置。</p>
-
+      <p>觊觎 Ultimaker2Marlin 中的模拟器 (simulator) 已经有很长时间了，这是一款桌面应用，打开它以后可以模拟 UM2 的屏幕显示效果，甚至可以模拟打印机的升温、降温过程和打印头、平台的位置。</p>
 <p>虽然每份 Ultimaker2Marlin 的源代码中都包含模拟器的全部源代码，但这部分功能却一直是非常神秘的存在，因为几乎没有人（也许夸张了点）懂得如何使用它。17年 UM 社区的一篇帖子曾经让我非常兴奋，因为这篇帖子详细描述了如何编译、运行模拟器代码。但是，那时的我一看到代码是在 Windows 下编译运行的就退缩了，因为手边并没有一台合适的运行 Windows 的机器 。有人要问了：难道你就没想过使用虚拟机吗？是的，当时的我确实脑子短路了，根本没想有虚拟机这回事。</p>
-
 <p>直到不久前，我重新会看那篇帖子的时候，才想起来我其实是有 VMware Fusion 和 Windows 7 虚拟机的。正巧，一个群友想给 UM2 固件添加新的调平功能。我想这是个绝好的机会，既可以帮他的忙，也可以顺便改变一下我以前开发固件的操作方式。</p>
-
 <p>于是，从重新温习17年的旧帖子开始，花了两天时间，我把 UM2 的模拟器搞通了。中间遇到了一些问题（在原帖中没有提及）我觉得有必要把解决方案记录下来，以备将来查阅。</p>
-
 <p>前面的步骤完全仿照<a href="https://community.ultimaker.com/topic/16856-how-to-build-marlin-the-way-tinkergnome-and-ultimaker-do-it-if-you-have-windows/">17年的帖子: How to build Marlin the way tinkergnome and Ultimaker do it if you have windows</a> .</p>
-
 <h1 id="原理">原理</h1>
-
 <p>利用 <a href="https://libsdl.org/">SDL</a> （Simple Direct Media Layer）库，这个库的用途是：Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including <a href="http://valvesoftware.com/">Valve</a>&rsquo;s award winning catalog and many <a href="https://www.humblebundle.com/">Humble Bundle</a> games.</p>
-
 <p>为了编译，我们要有一个工程文件，Ultimaker2Marlin 源代码中的 UltiLCD2_sim.cbp，这个工程文件是在 code::block 这款开发环境中建立的。这是一款轻量级、免费、跨平台、多语言的 IDE.</p>
-
 <p>为了编译，我们还要有 C++ 的编译器，这里用了 g++，所以在 Windows 下需要使用 MingW32。</p>
-
 <p>有了这三样东西，基本上就大功告成了，需要注意的只有 cbp 的编译、链接参数，这个将在后文中重点讲述。</p>
-
 <h1 id="准备工作">准备工作</h1>
-
 <ol>
 <li>下载 Ultimaker2Marlin 的源代码（原版的在<a href="https://github.com/Ultimaker/Ultimaker2Marlin">这里</a> ，Mark2 版的在 <a href="https://github.com/TinkerGnome/Ultimaker2Marlin">这里</a> ）。</li>
 <li>下载 MingW32，<a href="https://sourceforge.net/projects/mingw/files/">这里</a>，完全不熟悉 MingW 的我发现 MingW 有点类似 Linux 下的包管理工具，下载它的包管理工具，并且安装 <strong>mingw32-base</strong> 和 <strong>mingw32-gcc-g++</strong> (gnu c++ 编译器) 后，就成功搭建了一个基本 gcc 的编译环境。</li>
 <li>下载 <a href="https://www.arduino.cc/">Arduino IDE</a> （ 不要下载最新版，因为 Ultimaker2Marlin 不能在最新版下编译成功）下载 1.6.10 版即可。</li>
 <li>下载 SDL （注意 SDL 即可，不需要 SDL2 ），点 <a href="https://www.libsdl.org/download-1.2.php">这里</a>，并翻到最后 Development Library, 下载 <a href="SDL-devel-1.2.15-mingw32.tar.gz">MingW32 对应的开发库</a>。</li>
 </ol>
-
 <h1 id="后续工作">后续工作</h1>
-
 <p>很遗憾，没有时间把它写完，只好等用空的时候再写。</p>
 
     </div>
@@ -279,7 +251,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

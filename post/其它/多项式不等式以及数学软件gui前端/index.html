@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="多项式不等式以及数学软件GUI前端" />
 <meta property="og:description" content="[mathjax] 看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。 今天看到了" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/" />
-<meta property="article:published_time" content="2013-01-22T14:27:58&#43;00:00"/>
-<meta property="article:modified_time" content="2013-01-22T14:27:58&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%A6%E8%BD%AF%E4%BB%B6gui%E5%89%8D%E7%AB%AF/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-01-22T14:27:58+00:00" />
+<meta property="article:modified_time" content="2013-01-22T14:27:58+00:00" />
 
 <meta itemprop="name" content="多项式不等式以及数学软件GUI前端">
-<meta itemprop="description" content="[mathjax] 看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。 今天看到了">
-
-
-<meta itemprop="datePublished" content="2013-01-22T14:27:58&#43;00:00" />
-<meta itemprop="dateModified" content="2013-01-22T14:27:58&#43;00:00" />
-<meta itemprop="wordCount" content="535">
-
-
-
-<meta itemprop="keywords" content="Unix,前端,多项式,天气,球面," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="[mathjax] 看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。 今天看到了"><meta itemprop="datePublished" content="2013-01-22T14:27:58+00:00" />
+<meta itemprop="dateModified" content="2013-01-22T14:27:58+00:00" />
+<meta itemprop="wordCount" content="530">
+<meta itemprop="keywords" content="Unix,前端,多项式,天气,球面," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="多项式不等式以及数学软件GUI前端"/>
 <meta name="twitter:description" content="[mathjax] 看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。 今天看到了"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,17 +151,11 @@
     
     <div class="post-content">
       <p>[mathjax]</p>
-
 <p>看了一眼今天的 wedget。真罕见，北京本周的天气居然和戴维斯当地的天气情况做了个置换。以往戴维斯都是晴空万里的，这次换北京了。</p>
-
 <p>今天看到了 @goldengrape 的光学视频，知道了球面镜是无法汇聚平行光的。遂徒手制作了一个演示用的 Grapher 文件，见 <a href="http://d.pr/f/8CaN" title="http://d.pr/f/8CaN">http://d.pr/f/8CaN</a>。</p>
-
-<p>还看见一条推：如果一个多项式 (p(x)) 的所有根全为实数的话，那么必有 (p&rsquo;(x)^2 \ge p(x) p&rdquo;(x))。证明嘛~~我只会假设 (p(x)) 的根为 (\alpha_1,\dots,\alpha<em>n)，写出 (p(x)) 的表达式 [p(x)=c \prod</em>{i=1}^n (x-\alpha_i).]然后 (p&rsquo;(x)) 与 (p&rdquo;(x)) 的表达式便都可以给出。这时，要证明的不等式就等价于[\left[\sum \frac{p(x)}{(x-\alpha_i)}\right]^2 \ge p(x) \sum<em>i\sum</em>{j\neq i} \frac{p(x)}{(x-\alpha_i)(x-\alpha_j)}.] 然后，就没有然后了！显然成立。</p>
-
-<p>这个性质我总觉的有其他的证明方法，例如使用 _Lagrange 中值定理_，只是我现在只能想到这一种方法。</p>
-
+<p>还看见一条推：如果一个多项式 (p(x)) 的所有根全为实数的话，那么必有 (p'(x)^2 \ge p(x) p''(x))。证明嘛~~我只会假设 (p(x)) 的根为 (\alpha_1,\dots,\alpha_n)，写出 (p(x)) 的表达式 [p(x)=c \prod_{i=1}^n (x-\alpha_i).]然后 (p'(x)) 与 (p''(x)) 的表达式便都可以给出。这时，要证明的不等式就等价于[\left[\sum \frac{p(x)}{(x-\alpha_i)}\right]^2 \ge p(x) \sum_i\sum_{j\neq i} \frac{p(x)}{(x-\alpha_i)(x-\alpha_j)}.] 然后，就没有然后了！显然成立。</p>
+<p>这个性质我总觉的有其他的证明方法，例如使用 <em>Lagrange 中值定理</em>，只是我现在只能想到这一种方法。</p>
 <p>这两天我在设计一个数学软件 <strong>FriCAS</strong>，或者 <strong>SageMath</strong> 的 GUI 前端。因为我觉得现有的前端都太不适合做很长篇幅的计算问题了（通过我在研究留数问题时的体会，得出结论：当时的 <strong>Mathematica</strong> 代码，虽然有很好的注解，但是时间长了以后还是很难明白当时代码的意图）。另外，做一个优雅的前端有助于提高学习 FriCAS 或者 Sagemath 的兴趣。毕竟目前没有人搞过这些东西。</p>
-
 <p>好了，这就是今天的记录。还有其他一些关于科研的想法，留到以后再说吧！继续 coding 了。</p>
 
     </div>
@@ -254,7 +241,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

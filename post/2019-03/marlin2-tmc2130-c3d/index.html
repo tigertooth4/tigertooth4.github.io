@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&amp;rdquo;失速检测&amp;rdquo; （Stall-detection) 功能，以及由此而来的&amp;" />
+  <meta name="description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&amp;quot;失速检测&amp;quot; （Stall-detection) 功能，以及由此而来的&amp;qu" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-03/marlin2-tmc2130-c3d/" />
@@ -50,26 +50,19 @@
 
 
 <meta property="og:title" content="Marlin2.0 bugfix &#43; Cohesion3D-remix 上使用 TMC2130 驱动" />
-<meta property="og:description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&rdquo;失速检测&rdquo; （Stall-detection) 功能，以及由此而来的&" />
+<meta property="og:description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&quot;失速检测&quot; （Stall-detection) 功能，以及由此而来的&qu" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/2019-03/marlin2-tmc2130-c3d/" />
-<meta property="article:published_time" content="2019-03-21T23:30:38&#43;08:00"/>
-<meta property="article:modified_time" content="2019-03-21T23:30:38&#43;08:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-03/marlin2-tmc2130-c3d/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-03-21T23:30:38+08:00" />
+<meta property="article:modified_time" content="2019-03-21T23:30:38+08:00" />
 
 <meta itemprop="name" content="Marlin2.0 bugfix &#43; Cohesion3D-remix 上使用 TMC2130 驱动">
-<meta itemprop="description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&rdquo;失速检测&rdquo; （Stall-detection) 功能，以及由此而来的&">
-
-
-<meta itemprop="datePublished" content="2019-03-21T23:30:38&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-21T23:30:38&#43;08:00" />
-<meta itemprop="wordCount" content="1223">
-
-
-
-<meta itemprop="keywords" content="TMC2130,Cohesion3d,Marlin,Wiring,StealthChop,SpreadCycle," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&quot;失速检测&quot; （Stall-detection) 功能，以及由此而来的&qu"><meta itemprop="datePublished" content="2019-03-21T23:30:38+08:00" />
+<meta itemprop="dateModified" content="2019-03-21T23:30:38+08:00" />
+<meta itemprop="wordCount" content="1217">
+<meta itemprop="keywords" content="TMC2130,Cohesion3d,Marlin,Wiring,StealthChop,SpreadCycle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Marlin2.0 bugfix &#43; Cohesion3D-remix 上使用 TMC2130 驱动"/>
-<meta name="twitter:description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&rdquo;失速检测&rdquo; （Stall-detection) 功能，以及由此而来的&"/>
+<meta name="twitter:description" content="TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&quot;失速检测&quot; （Stall-detection) 功能，以及由此而来的&qu"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -148,13 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#软件准备">软件准备</a></li>
-<li><a href="#硬件准备">硬件准备</a></li>
-<li><a href="#上电测试">上电测试</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -163,292 +150,217 @@
 
     
     <div class="post-content">
-      
-
-<p>TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&rdquo;失速检测&rdquo; （Stall-detection) 功能，以及由此而来的&rdquo;无传感器归零&rdquo; （Homeless-sensing). 对我这个电路外行，也只有在这块驱动芯片发布多年，各种视频、资料都齐备之后，才有机会尝试.</p>
-
-<p>由于家里有很多块定制的 C3D-remix 主板<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下. <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
-
+      <p>TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是&quot;失速检测&quot; （Stall-detection) 功能，以及由此而来的&quot;无传感器归零&quot; （Homeless-sensing). 对我这个电路外行，也只有在这块驱动芯片发布多年，各种视频、资料都齐备之后，才有机会尝试.</p>
+<p>由于家里有很多块定制的 C3D-remix 主板<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下. <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <p>注意：要使用 TMC2130 的这些功能，需要开启它的 SPI 模式，在有些驱动板上，这个模式是被禁用的，需要去掉一块焊锡才可以开启。</p>
-
-<p><img src="./images/open-spi.png" alt="开启spi (图片来自 YouTube )" /></p>
-
+<p><img src="./images/open-spi.png" alt="开启spi (图片来自 YouTube )"></p>
 <h1 id="软件准备">软件准备</h1>
-
 <ul>
-<li><p>PlatformIO 要安装 TMC2130Stepper 的库文件(by teemuatlut). 直接搜索并安装即可</p></li>
-
-<li><p>主板通电设置 TMC2130 工作电压（此步骤先略过）</p></li>
-
-<li><p>固件设置的更改：</p>
-
+<li>
+<p>PlatformIO 要安装 TMC2130Stepper 的库文件(by teemuatlut). 直接搜索并安装即可</p>
+</li>
+<li>
+<p>主板通电设置 TMC2130 工作电压（此步骤先略过）</p>
+</li>
+<li>
+<p>固件设置的更改：</p>
 <ul>
-<li>在 Configuration.h 中若只在 X, Y 轴使用 TMC2130 ，则更改如下语句</li>
+<li>
+<p>在 Configuration.h 中若只在 X, Y 轴使用 TMC2130 ，则更改如下语句</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define X_DRIVER_TYPE TMC2130
+</span><span style="color:#75715e">#define Y_DRIVER_TYPE TMC2130
+</span></code></pre></div></li>
+<li>
+<p>在 Configuration_adv.h 中，需要开启 Software SPI 模式，将 TMC_USE_SW_SPI 前的注视取消，如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * Use software SPI for TMC2130.
+</span><span style="color:#75715e">   * Software option for SPI driven drivers (TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160).
+</span><span style="color:#75715e">   * The default SW SPI pins are defined the respective pins files,
+</span><span style="color:#75715e">   * but you can override or define them here.
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#define TMC_USE_SW_SPI
+</span></code></pre></div><p>另外开启 debug 功能：使用 M122 命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * Enable M122 debugging command for TMC stepper drivers.
+</span><span style="color:#75715e">   * M122 S0/1 will enable continous reporting.
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#define TMC_DEBUG
+</span></code></pre></div></li>
+<li>
+<p>在 pins_COHESION3D_REMIX.h 中已经定义好了使用 GPIO pins 作为与 TMC2130 驱动板进行 SPI 通信所需要的端口，端口定义如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">//
+</span><span style="color:#75715e">// Default pins for TMC software SPI
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e"></span><span style="color:#75715e">#if ENABLED(TMC_USE_SW_SPI)
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#ifndef TMC_SW_MOSI
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">#define TMC_SW_MOSI    P1_16   </span><span style="color:#75715e">// Ethernet Expansion - Pin 5
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#ifndef TMC_SW_MISO
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">#define TMC_SW_MISO    P1_17   </span><span style="color:#75715e">// Ethernet Expansion - Pin 6
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#ifndef TMC_SW_SCK
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">#define TMC_SW_SCK     P1_08   </span><span style="color:#75715e">// Ethernet Expansion - Pin 7
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#endif
+</span><span style="color:#75715e">#endif
+</span></code></pre></div></li>
+<li>
+<p>在 pins_COHESION3D_REMIX.h 中还定义好了 X, Y 的 CS pin，如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define X_CS_PIN           P1_10   </span><span style="color:#75715e">// Ethernet Expansion - Pin 9
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define Y_CS_PIN           P1_09   </span><span style="color:#75715e">// Ethernet Expansion - Pin 10
+</span></code></pre></div></li>
+<li>
+<p>注意：要注释掉 pins_COHESION3D_REMIX.h 中的 Ethernet pins:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">/*
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Ethernet pins
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">#define ENET_MDIO          P1_17
+</span><span style="color:#75715e">#define ENET_RX_ER         P1_14
+</span><span style="color:#75715e">#define ENET_RXD1          P1_10
+</span><span style="color:#75715e">#define ENET_MOC           P1_16
+</span><span style="color:#75715e">#define REF_CLK            P1_15
+</span><span style="color:#75715e">#define ENET_RXD0          P1_09
+</span><span style="color:#75715e">#define ENET_CRS           P1_08
+</span><span style="color:#75715e">#define ENET_TX_EN         P1_04
+</span><span style="color:#75715e">#define ENET_TXD0          P1_00
+</span><span style="color:#75715e">#define ENET_TXD1          P1_01
+</span><span style="color:#75715e">*/</span>
+</code></pre></div></li>
 </ul>
-
-<pre><code class="language-c++">#define X_DRIVER_TYPE TMC2130
-#define Y_DRIVER_TYPE TMC2130
-</code></pre>
-
-<ul>
-<li>在 Configuration_adv.h 中，需要开启 Software SPI 模式，将 TMC_USE_SW_SPI 前的注视取消，如下</li>
+</li>
 </ul>
-
-<pre><code class="language-c++">  /**
-   * Use software SPI for TMC2130.
-   * Software option for SPI driven drivers (TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160).
-   * The default SW SPI pins are defined the respective pins files,
-   * but you can override or define them here.
-   */
-  #define TMC_USE_SW_SPI
-</code></pre>
-
-<p>另外开启 debug 功能：使用 M122 命令</p>
-
-<pre><code class="language-c++">  /**
-   * Enable M122 debugging command for TMC stepper drivers.
-   * M122 S0/1 will enable continous reporting.
-   */
-  #define TMC_DEBUG
-</code></pre>
-
-<ul>
-<li>在 pins_COHESION3D_REMIX.h 中已经定义好了使用 GPIO pins 作为与 TMC2130 驱动板进行 SPI 通信所需要的端口，端口定义如下：</li>
-</ul>
-
-<pre><code class="language-c++">//
-// Default pins for TMC software SPI
-//
-#if ENABLED(TMC_USE_SW_SPI)
-  #ifndef TMC_SW_MOSI
-    #define TMC_SW_MOSI    P1_16   // Ethernet Expansion - Pin 5
-  #endif
-  #ifndef TMC_SW_MISO
-    #define TMC_SW_MISO    P1_17   // Ethernet Expansion - Pin 6
-  #endif
-  #ifndef TMC_SW_SCK
-    #define TMC_SW_SCK     P1_08   // Ethernet Expansion - Pin 7
-  #endif
-#endif
-</code></pre>
-
-<ul>
-<li>在 pins_COHESION3D_REMIX.h 中还定义好了 X, Y 的 CS pin，如下</li>
-</ul>
-
-<pre><code class="language-c++">#define X_CS_PIN           P1_10   // Ethernet Expansion - Pin 9
-    
-#define Y_CS_PIN           P1_09   // Ethernet Expansion - Pin 10
-</code></pre>
-
-<ul>
-<li>注意：要注释掉 pins_COHESION3D_REMIX.h 中的 Ethernet pins:</li>
-</ul>
-
-<pre><code class="language-c++">/*
-//
-// Ethernet pins
-//
-#define ENET_MDIO          P1_17
-#define ENET_RX_ER         P1_14
-#define ENET_RXD1          P1_10
-#define ENET_MOC           P1_16
-#define REF_CLK            P1_15
-#define ENET_RXD0          P1_09
-#define ENET_CRS           P1_08
-#define ENET_TX_EN         P1_04
-#define ENET_TXD0          P1_00
-#define ENET_TXD1          P1_01
-*/
-</code></pre></li>
-</ul>
-
 <h1 id="硬件准备">硬件准备</h1>
-
 <ul>
-<li><p>参考 thingiverse 上  MKS Gen L 的连线图，如下
-<img src="./images/mks-genl-wiring.png" alt="MKS Gen L Wiring (From thingiverse)" /></p></li>
-
-<li><p>Cohesion3D-Remix 主板上使用了网络接口的 3 个 pin, 来实现主板和 TMC2130 驱动的 SPI 通信，所用的 3个 pin 为<img src="./images/c3d-pinout.png" alt="c3d-pinout" /></p></li>
-</ul>
-
+<li>
+<p>参考 thingiverse 上  MKS Gen L 的连线图，如下
+<img src="./images/mks-genl-wiring.png" alt="MKS Gen L Wiring (From thingiverse)"></p>
+</li>
+<li>
+<p>Cohesion3D-Remix 主板上使用了网络接口的 3 个 pin, 来实现主板和 TMC2130 驱动的 SPI 通信，所用的 3个 pin 为<img src="./images/c3d-pinout.png" alt="c3d-pinout"></p>
 <p>这些接口对应的功能见下表</p>
-
+</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th align="center">PIN #</th>
-<th align="center">PORT #</th>
-<th align="center">ON BOARD PORT NAME</th>
-<th align="center">FUNCTIONALITY</th>
-<th align="center">TMC2130 Pin</th>
+<th style="text-align:center">PIN #</th>
+<th style="text-align:center">PORT #</th>
+<th style="text-align:center">ON BOARD PORT NAME</th>
+<th style="text-align:center">FUNCTIONALITY</th>
+<th style="text-align:center">TMC2130 Pin</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="center">5</td>
-<td align="center">P1.16</td>
-<td align="center">ENET_MDC</td>
-<td align="center">MOSI</td>
-<td align="center">SDI</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">P1.16</td>
+<td style="text-align:center">ENET_MDC</td>
+<td style="text-align:center">MOSI</td>
+<td style="text-align:center">SDI</td>
 </tr>
-
 <tr>
-<td align="center">6</td>
-<td align="center">P1.17</td>
-<td align="center">ENET_MDIO</td>
-<td align="center">MISO</td>
-<td align="center">SDO</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">P1.17</td>
+<td style="text-align:center">ENET_MDIO</td>
+<td style="text-align:center">MISO</td>
+<td style="text-align:center">SDO</td>
 </tr>
-
 <tr>
-<td align="center">7</td>
-<td align="center">P1.08</td>
-<td align="center">ENET_CRS</td>
-<td align="center">SCK</td>
-<td align="center">SCK</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">P1.08</td>
+<td style="text-align:center">ENET_CRS</td>
+<td style="text-align:center">SCK</td>
+<td style="text-align:center">SCK</td>
 </tr>
-
 <tr>
-<td align="center">9</td>
-<td align="center">P1.10</td>
-<td align="center">ENET_PIN</td>
-<td align="center">X_CS_PIN</td>
-<td align="center">X_CS PIN</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">P1.10</td>
+<td style="text-align:center">ENET_PIN</td>
+<td style="text-align:center">X_CS_PIN</td>
+<td style="text-align:center">X_CS PIN</td>
 </tr>
-
 <tr>
-<td align="center">10</td>
-<td align="center">P1.09</td>
-<td align="center">ENET_PIN</td>
-<td align="center">Y_CS_PIN</td>
-<td align="center">Y_CS PIN</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">P1.09</td>
+<td style="text-align:center">ENET_PIN</td>
+<td style="text-align:center">Y_CS_PIN</td>
+<td style="text-align:center">Y_CS PIN</td>
 </tr>
 </tbody>
 </table>
-
 <ul>
 <li>TMC2130 上对应的 pin 的位置见 MKS Gen L 的连线图。</li>
 </ul>
-
 <h1 id="上电测试">上电测试</h1>
-
 <ul>
-<li>编译好固件，上传到 C3D 的 SD 卡上，重启机器后，可以用 M122 命令查看当前 TMC2130 的状态，我的显示状态如下：</li>
-</ul>
-
+<li>
+<p>编译好固件，上传到 C3D 的 SD 卡上，重启机器后，可以用 M122 命令查看当前 TMC2130 的状态，我的显示状态如下：</p>
 <blockquote>
-<p>&gt;&gt;&gt; M122</p>
-
+<p>&gt;&raquo; M122</p>
 <p>SENDING:M122</p>
-
-<p>​       X   Y   E</p>
-
-<p>Enabled     false   false   false</p>
-
-<p>Set current 800 800 800</p>
-
-<p>RMS current 795 795 795</p>
-
-<p>MAX current 1121    1121    1121</p>
-
-<p>Run current <sup>25</sup>&frasl;<sub>31</sub>   <sup>25</sup>&frasl;<sub>31</sub>   <sup>25</sup>&frasl;<sub>31</sub></p>
-
-<p>Hold current    <sup>12</sup>&frasl;<sub>31</sub>   <sup>12</sup>&frasl;<sub>31</sub>   <sup>12</sup>&frasl;<sub>31</sub></p>
-
-<p>CS actual       <sup>12</sup>&frasl;<sub>31</sub>   <sup>12</sup>&frasl;<sub>31</sub>   <sup>12</sup>&frasl;<sub>31</sub></p>
-
-<p>PWM scale   0   0   0</p>
-
-<p>vsense      1=.18   1=.18   1=.18</p>
-
-<p>stealthChop false   false   false</p>
-
-<p>msteps      16  16  16</p>
-
-<p>tstep       max max max</p>
-
+<p>​		X	Y	E</p>
+<p>Enabled		false	false	false</p>
+<p>Set current	800	800	800</p>
+<p>RMS current	795	795	795</p>
+<p>MAX current	1121	1121	1121</p>
+<p>Run current	25/31	25/31	25/31</p>
+<p>Hold current	12/31	12/31	12/31</p>
+<p>CS actual		12/31	12/31	12/31</p>
+<p>PWM scale	0	0	0</p>
+<p>vsense		1=.18	1=.18	1=.18</p>
+<p>stealthChop	false	false	false</p>
+<p>msteps		16	16	16</p>
+<p>tstep		max	max	max</p>
 <p>pwm</p>
-
-<p>threshold       0   0   0</p>
-
+<p>threshold		0	0	0</p>
 <p>【mm/s】</p>
-
-<p>OT prewarn  false   false   false</p>
-
-<p>off time        3   3   3</p>
-
-<p>blank time  24  24  24</p>
-
+<p>OT prewarn	false	false	false</p>
+<p>off time		3	3	3</p>
+<p>blank time	24	24	24</p>
 <p>hysteresis</p>
-
-<p>-end        -1  -1  -1</p>
-
-<p>-start      1   1   1</p>
-
-<p>Stallguard thrs 0   0   0</p>
-
-<p>DRVSTATUS   X   Y   E</p>
-
-<p>stallguard      X   X</p>
-
-<p>sg_result       143 115 0</p>
-
+<p>-end		-1	-1	-1</p>
+<p>-start		1	1	1</p>
+<p>Stallguard thrs	0	0	0</p>
+<p>DRVSTATUS	X	Y	E</p>
+<p>stallguard		X	X</p>
+<p>sg_result		143	115	0</p>
 <p>fsactive</p>
-
-<p>stst        X   X   X</p>
-
+<p>stst		X	X	X</p>
 <p>olb</p>
-
 <p>ola</p>
-
 <p>s2gb</p>
-
 <p>s2ga</p>
-
 <p>otpw</p>
-
 <p>ot</p>
-
 <p>Driver registers:</p>
-
-<p>​       X   0x81:0C:00:8F</p>
-
-<p>​       Y   0x81:0C:00:73</p>
-
-<p>​       E   0x80:0C:00:00</p>
-
+<p>​		X	0x81:0C:00:8F</p>
+<p>​		Y	0x81:0C:00:73</p>
+<p>​		E	0x80:0C:00:00</p>
 <p>Testing X connection&hellip; OK</p>
-
 <p>Testing Y connection&hellip; OK</p>
-
 <p>Testing E connection&hellip; OK</p>
 </blockquote>
-
 <p>注意，正常情况下，Driver 应该可以注册到不同的地址，如果地址相同，可能是初始化出现了问题，我的解决办法是切断打印机电源，然后重新上电。</p>
-
-<ul>
-<li>令人意外的是，stealth chop 模式并没有启动。起初，我以为是固件设置问题，后来才发现，stealth chop 模式为否，是因为 EEPROM 中存储的 stepper mode 并不是 stealth chop. 解决办法是用 M569 命令；这个命令可以独立开启某个电机的 stealth chop 模式。</li>
+</li>
+<li>
+<p>令人意外的是，stealth chop 模式并没有启动。起初，我以为是固件设置问题，后来才发现，stealth chop 模式为否，是因为 EEPROM 中存储的 stepper mode 并不是 stealth chop. 解决办法是用 M569 命令；这个命令可以独立开启某个电机的 stealth chop 模式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">M569 S1 Z E 
+</code></pre></div><p>这句话的意思是在 Z 和 E 轴开启 stealth chop 模式.  开启后，别忘了用 M500 命令保存。</p>
+</li>
 </ul>
-
-<pre><code class="language-c++">  M569 S1 Z E 
-</code></pre>
-
-<p>这句话的意思是在 Z 和 E 轴开启 stealth chop 模式.  开启后，别忘了用 M500 命令保存。</p>
-
 <p>从现在开始，我们就正式进入智能驱动的神奇世界了！</p>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">Cohesion3d-Remix 主板可以在某宝买到，见某宝链接 <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <a href="https://www.youtube.com/watch?v=OUadiW5QLBE">https://www.youtube.com/watch?v=OUadiW5QLBE</a>
- <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>Cohesion3d-Remix 主板可以在某宝买到，见某宝链接 <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail">https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&amp;id=558549657644&amp;ns=1&amp;abbucket=10#detail</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <a href="https://www.youtube.com/watch?v=OUadiW5QLBE">https://www.youtube.com/watch?v=OUadiW5QLBE</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -535,7 +447,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

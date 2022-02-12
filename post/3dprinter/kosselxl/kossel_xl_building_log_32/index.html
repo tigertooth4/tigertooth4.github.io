@@ -17,12 +17,7 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (32) &amp;mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
-最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
-最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
-于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
-突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
-// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。" />
+  <meta name="description" content="Title: Kossel XL 构建记 (32) &amp;mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -31,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/" />
@@ -55,39 +50,19 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
-最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
-最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
-于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
-突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
-// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_32/" /><meta property="article:section" content="post" />
+
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
-最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
-最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
-于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
-突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
-// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。">
+<meta itemprop="description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价">
 
-
-
-<meta itemprop="wordCount" content="118">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="735">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public
-最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。
-最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。
-于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？
-突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的
-// 0 is not used // 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) // 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) // ... #define TEMP_SENSOR_BED 0  看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。"/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (32) &mdash;- The Heatbed Problem Date: 2014-10-21 23:00:00 Tag: 3dp, Kossel, Marlin, Heatbed Status: public 最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -166,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -179,34 +154,21 @@
 Date: 2014-10-21 23:00:00
 Tag: 3dp, Kossel, Marlin, Heatbed
 Status: public</p>
-
 <p>最近一直没时间折腾打印机。不过，今天突然糊里糊涂的有了点空闲时间（但愿不要为今天的忙里偷闲付出代价），于是试了一把热床加热。事实上，这还是我第一次真正让打印机加热起来。但是，液晶屏上并没有现实热床温度，让我十分困惑。</p>
-
 <p>最初以为是热床上的热敏电阻坏了，于是吧热床拆下来，用万用表测量了一下热敏电阻的阻值。发现大概 120K Ohm 左右（这个值决定了热敏电阻的参数，重要性下面会说）。然后热床上内嵌的铜丝，电阻只有1.2 Ohm，出乎意料的小（后来查了一下，发现正常阻值就是几欧，没问题）。</p>
-
 <p>于是，更我摸不着头脑了。下午想起来试了试热敏电阻的阻值会不会随温度而变化。用手捂住，果然电阻减小了！说明热敏电阻没有问题。所以，到底是什么问题呢？</p>
-
 <p>突然想起，Marlin 里有根据热敏的不同型号来选参数的，在 Configuration.h 文件里。根据我的</p>
-
-<pre><code class="language-c++">// 0 is not used
-// 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup)
-// 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup)
-// ...
-
-#define TEMP_SENSOR_BED 0
-</code></pre>
-
-<p>看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// 0 is not used
+</span><span style="color:#75715e">// 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup)
+</span><span style="color:#75715e">// 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup)
+</span><span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define TEMP_SENSOR_BED 0
+</span></code></pre></div><p>看到了吧？最后一句设置 bed 的温度感应为 0 (not used) ，这个当然不对啦！根据电阻的值，应该选 1 比较合适。既然这样，我顺手又把热床的温度微调（PID tuning）打开了（之前设为禁用）。刷新固件之后用 G-Code 指令调整温度到 45℃。发现升温极慢。于是又去网上找答案，在 Reprap wiki 中了解到，一般热床是不需要微调温度的，这样做会使得升温缓慢，而且也不必要。于是好吧，注销掉再试一次喽。</p>
 <p>但是之后的测试发现，从 30℃ 升温到 60℃ 还是需要 12 分钟时间。是因为加热板面积太大了吗？</p>
-
 <p>接着，我又尝试了加热头的 PID tuning, 很简单，用如下命令：</p>
-
-<pre><code class="language-c++">M303 E0 S200 C8
-</code></pre>
-
-<p>M303 是 PID 自动调节指令，E0 是指第一个加热头，S200 是指设置温度为 200 度，C8 是循环8次，最后测得的结果是</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">M303 E0 S200 C8
+</code></pre></div><p>M303 是 PID 自动调节指令，E0 是指第一个加热头，S200 是指设置温度为 200 度，C8 是循环8次，最后测得的结果是</p>
 <table>
 <thead>
 <tr>
@@ -214,25 +176,21 @@ Status: public</p>
 <th>值</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Kp</td>
 <td>16.47</td>
 </tr>
-
 <tr>
 <td>Ki</td>
 <td>0.92</td>
 </tr>
-
 <tr>
 <td>Kd</td>
 <td>73.42</td>
 </tr>
 </tbody>
 </table>
-
 <p>下次把这个结果记录到 Marlin 固件的 Configuration.h 里就好了 O(∩_∩)O~~</p>
 
     </div>
@@ -266,7 +224,7 @@ Status: public</p>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/cocoa/nspopover-&#43;-custom-view-inside/">
+          <a class="next" href="/post/cocoa/notable-things-irreducible-repre-for-abelian-grp-build-vpn-by-aws/">
             <span class="next-text nav-default"></span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
@@ -306,7 +264,7 @@ Status: public</p>
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_01/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals" />
 <meta property="og:description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_01/" />
-<meta property="article:published_time" content="2014-07-22T17:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-07-22T17:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_01/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-07-22T17:00:00+00:00" />
+<meta property="article:modified_time" content="2014-07-22T17:00:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals">
-<meta itemprop="description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰">
-
-
-<meta itemprop="datePublished" content="2014-07-22T17:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-07-22T17:00:00&#43;00:00" />
+<meta itemprop="description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰"><meta itemprop="datePublished" content="2014-07-22T17:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-07-22T17:00:00+00:00" />
 <meta itemprop="wordCount" content="569">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,DIY," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3DP,Kossel,DIY," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (1) Shift of linear carriage design, design goals"/>
 <meta name="twitter:description" content="今天果断放弃了 Johann 的 塑料滚珠线性滑轨方案 主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -157,18 +150,15 @@
 
     
     <div class="post-content">
-      <p>今天果断放弃了 Johann 的 <a href="https://github.com/jcrocholl/recirculating" title="recirculating"> 塑料滚珠线性滑轨方案 </a> <img src="/3DP/_images/DSC00372.jpg" alt="" title="滚珠线性滑轨（正面）" />  <img src="/3DP/_images/DSC00373.jpg" alt="" title="滚珠线性滑轨（背面）" />主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰撞的声音，以及和铝合金框架碰撞的噪音，噪音问题在 google 论坛 Delta robot 3D printer 中也有提及，可是我找不到出处了 😓）</p>
-
+      <p>今天果断放弃了 Johann 的 <a href="https://github.com/jcrocholl/recirculating" title="recirculating"> 塑料滚珠线性滑轨方案 </a> <img src="/3DP/_images/DSC00372.jpg" alt="" title="滚珠线性滑轨（正面）">  <img src="/3DP/_images/DSC00373.jpg" alt="" title="滚珠线性滑轨（背面）">主要原因是因为成本（一个 POM 塑料珠的成本大概是 0.3RMB，三块滑轨大概需要 100 颗）以及噪音（塑料珠彼此碰撞的声音，以及和铝合金框架碰撞的噪音，噪音问题在 google 论坛 Delta robot 3D printer 中也有提及，可是我找不到出处了 😓）</p>
 <p>剩下的问题有以下几点</p>
-
 <ul>
-<li>铝框架的选择：目前看来，考虑到整体结构的刚性 2020 型铝型材是比较理想的方案，需要确定的是使用欧标的 T-型铝 <img src="/3DP/_images/DSC00374.jpg" alt="" title="T-型铝材打印件" />还是国标的铝材 <img src="/3DP/_images/DSC00375.jpg" alt="" title="欧标铝材打印件" /> 貌似 kossel 800 使用了 T-型铝。T-型铝的不便之处是还要使用特定的 T-型螺母；而 国标的貌似用 M4 螺母就可以了，但是不清楚 2020 的打印件是否会预留了 M4 的螺丝孔）。</li>
+<li>铝框架的选择：目前看来，考虑到整体结构的刚性 2020 型铝型材是比较理想的方案，需要确定的是使用欧标的 T-型铝 <img src="/3DP/_images/DSC00374.jpg" alt="" title="T-型铝材打印件">还是国标的铝材 <img src="/3DP/_images/DSC00375.jpg" alt="" title="欧标铝材打印件"> 貌似 kossel 800 使用了 T-型铝。T-型铝的不便之处是还要使用特定的 T-型螺母；而 国标的貌似用 M4 螺母就可以了，但是不清楚 2020 的打印件是否会预留了 M4 的螺丝孔）。</li>
 <li>2020 的打印件：头疼！今天找了好久都没看到有一个详细的解决方案&hellip;</li>
 <li>滑轨的设计：也许会采用 Kossel 800 的三滑轮滑轨，滑轮需要卡在铝型材的凹槽中，要找到合适宽度的滑轮才可以（某宝搜索要给力才行啊！）</li>
 <li>连杆、万向轮：有两种方案（确切说是三种）用万向节（有国外进口的车模用塑料万向节或者国内产廉价碳钢万向节。当然塑料万向节看起来颜色统一，更高大上一些，但是碳钢万向节的好处是更精密），或者使用磁球连接，磁球的方案会有磨损，因此虽然看起来非常酷，也方便拆卸，但是是否选用还有待考虑（最怕当挤出头碰到打印件时把挤出头碰掉就麻烦了）</li>
 <li>最后，挤出头：采用金属的还是 Peek 管的 J-head? 也许我会采用金属的（最后说不定会考虑一下 E3D 😊）</li>
 </ul>
-
 <p>问题远比想象的多。。。</p>
 
     </div>
@@ -250,7 +240,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

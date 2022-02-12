@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 思｜製 - A guy&#39;s thinking and making</title>
@@ -6,10 +6,15 @@
     <description>Recent content in Tags on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Sep 2020 13:46:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 29 Sep 2020 13:46:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>life</title>
+      <link>http://tigertooth4.github.io/tags/life/</link>
+      <pubDate>Tue, 29 Sep 2020 13:46:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/life/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Math</title>
@@ -17,15 +22,6 @@
       <pubDate>Tue, 29 Sep 2020 13:46:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>http://tigertooth4.github.io/tags/life/</link>
-      <pubDate>Tue, 29 Sep 2020 13:46:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/life/</guid>
       <description></description>
     </item>
     
@@ -138,11 +134,20 @@
     </item>
     
     <item>
-      <title>OctoPrint</title>
+      <title>Octoprint</title>
       <link>http://tigertooth4.github.io/tags/octoprint/</link>
       <pubDate>Sat, 05 Oct 2019 22:15:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/octoprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hotspot</title>
+      <link>http://tigertooth4.github.io/tags/hotspot/</link>
+      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/hotspot/</guid>
       <description></description>
     </item>
     
@@ -165,29 +170,20 @@
     </item>
     
     <item>
-      <title>WiFi</title>
-      <link>http://tigertooth4.github.io/tags/wifi/</link>
-      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/wifi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hotspot</title>
-      <link>http://tigertooth4.github.io/tags/hotspot/</link>
-      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/hotspot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ssh</title>
       <link>http://tigertooth4.github.io/tags/ssh/</link>
       <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WiFi</title>
+      <link>http://tigertooth4.github.io/tags/wifi/</link>
+      <pubDate>Sat, 07 Sep 2019 23:13:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/wifi/</guid>
       <description></description>
     </item>
     
@@ -228,24 +224,6 @@
     </item>
     
     <item>
-      <title>Series</title>
-      <link>http://tigertooth4.github.io/tags/series/</link>
-      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Weyl</title>
-      <link>http://tigertooth4.github.io/tags/weyl/</link>
-      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/weyl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>convergence</title>
       <link>http://tigertooth4.github.io/tags/convergence/</link>
       <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
@@ -264,11 +242,38 @@
     </item>
     
     <item>
+      <title>Series</title>
+      <link>http://tigertooth4.github.io/tags/series/</link>
+      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weyl</title>
+      <link>http://tigertooth4.github.io/tags/weyl/</link>
+      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/weyl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cohesion3d</title>
       <link>http://tigertooth4.github.io/tags/cohesion3d/</link>
       <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/cohesion3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i2c</title>
+      <link>http://tigertooth4.github.io/tags/i2c/</link>
+      <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/i2c/</guid>
       <description></description>
     </item>
     
@@ -305,15 +310,6 @@
       <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/ssd1306/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>i2c</title>
-      <link>http://tigertooth4.github.io/tags/i2c/</link>
-      <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/i2c/</guid>
       <description></description>
     </item>
     
@@ -435,11 +431,38 @@
     </item>
     
     <item>
+      <title>dualextrusion</title>
+      <link>http://tigertooth4.github.io/tags/dualextrusion/</link>
+      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/dualextrusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eSUN</title>
+      <link>http://tigertooth4.github.io/tags/esun/</link>
+      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/esun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>FDM</title>
       <link>http://tigertooth4.github.io/tags/fdm/</link>
       <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/fdm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kexcelled</title>
+      <link>http://tigertooth4.github.io/tags/kexcelled/</link>
+      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/kexcelled/</guid>
       <description></description>
     </item>
     
@@ -489,29 +512,20 @@
     </item>
     
     <item>
-      <title>dualextrusion</title>
-      <link>http://tigertooth4.github.io/tags/dualextrusion/</link>
-      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      <title>design</title>
+      <link>http://tigertooth4.github.io/tags/design/</link>
+      <pubDate>Sat, 23 Feb 2019 16:45:52 +0800</pubDate>
       
-      <guid>http://tigertooth4.github.io/tags/dualextrusion/</guid>
+      <guid>http://tigertooth4.github.io/tags/design/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>eSUN</title>
-      <link>http://tigertooth4.github.io/tags/esun/</link>
-      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
+      <title>extruder</title>
+      <link>http://tigertooth4.github.io/tags/extruder/</link>
+      <pubDate>Sat, 23 Feb 2019 16:45:52 +0800</pubDate>
       
-      <guid>http://tigertooth4.github.io/tags/esun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kexcelled</title>
-      <link>http://tigertooth4.github.io/tags/kexcelled/</link>
-      <pubDate>Sun, 03 Mar 2019 23:00:35 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/kexcelled/</guid>
+      <guid>http://tigertooth4.github.io/tags/extruder/</guid>
       <description></description>
     </item>
     
@@ -543,20 +557,11 @@
     </item>
     
     <item>
-      <title>design</title>
-      <link>http://tigertooth4.github.io/tags/design/</link>
-      <pubDate>Sat, 23 Feb 2019 16:45:52 +0800</pubDate>
+      <title>armbian</title>
+      <link>http://tigertooth4.github.io/tags/armbian/</link>
+      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
       
-      <guid>http://tigertooth4.github.io/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>extruder</title>
-      <link>http://tigertooth4.github.io/tags/extruder/</link>
-      <pubDate>Sat, 23 Feb 2019 16:45:52 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/extruder/</guid>
+      <guid>http://tigertooth4.github.io/tags/armbian/</guid>
       <description></description>
     </item>
     
@@ -566,15 +571,6 @@
       <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/diy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>armbian</title>
-      <link>http://tigertooth4.github.io/tags/armbian/</link>
-      <pubDate>Tue, 04 Sep 2018 15:54:33 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/armbian/</guid>
       <description></description>
     </item>
     
@@ -651,33 +647,6 @@
     </item>
     
     <item>
-      <title>G29</title>
-      <link>http://tigertooth4.github.io/tags/g29/</link>
-      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/g29/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>G30</title>
-      <link>http://tigertooth4.github.io/tags/g30/</link>
-      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/g30/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kossel</title>
-      <link>http://tigertooth4.github.io/tags/kossel/</link>
-      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/kossel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>auto-calibration</title>
       <link>http://tigertooth4.github.io/tags/auto-calibration/</link>
       <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
@@ -701,6 +670,33 @@
       <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/deltabot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>G29</title>
+      <link>http://tigertooth4.github.io/tags/g29/</link>
+      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/g29/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>G30</title>
+      <link>http://tigertooth4.github.io/tags/g30/</link>
+      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/g30/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kossel</title>
+      <link>http://tigertooth4.github.io/tags/kossel/</link>
+      <pubDate>Tue, 03 Mar 2015 15:00:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/kossel/</guid>
       <description></description>
     </item>
     
@@ -903,6 +899,15 @@
     </item>
     
     <item>
+      <title>mainboard</title>
+      <link>http://tigertooth4.github.io/tags/mainboard/</link>
+      <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/mainboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>RAMBo</title>
       <link>http://tigertooth4.github.io/tags/rambo/</link>
       <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
@@ -917,15 +922,6 @@
       <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/rumba/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mainboard</title>
-      <link>http://tigertooth4.github.io/tags/mainboard/</link>
-      <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/mainboard/</guid>
       <description></description>
     </item>
     

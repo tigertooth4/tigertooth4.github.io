@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt" />
 <meta property="og:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/" />
-<meta property="article:published_time" content="2014-09-11T09:20:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-09-11T09:20:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-11T09:20:00+00:00" />
+<meta property="article:modified_time" content="2014-09-11T09:20:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt">
-<meta itemprop="description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目">
-
-
-<meta itemprop="datePublished" content="2014-09-11T09:20:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-09-11T09:20:00&#43;00:00" />
-<meta itemprop="wordCount" content="1651">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,DIY,Marlin,Firmware," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目"><meta itemprop="datePublished" content="2014-09-11T09:20:00+00:00" />
+<meta itemprop="dateModified" content="2014-09-11T09:20:00+00:00" />
+<meta itemprop="wordCount" content="1765">
+<meta itemprop="keywords" content="3DP,Kossel,DIY,Marlin,Firmware," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt"/>
 <meta name="twitter:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,96 +151,60 @@
     
     <div class="post-content">
       <p>画好的电路盒已经开始打印了，这个是正在打印的前面板：
-<img src="/3DP/_images/DSC00557.JPG" alt="" />
+<img src="/3DP/_images/DSC00557.JPG" alt="">
 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/</p>
-
 <p>这是组装好的前面板：
-<img src="/3DP/_images/DSC00558.JPG" alt="" />
+<img src="/3DP/_images/DSC00558.JPG" alt="">
 Kossel XL 赫然在目；）</p>
-
 <p>熬夜组装前面板及防滚架：
-<img src="/3DP/_images/DSC00560.JPG" alt="" />
+<img src="/3DP/_images/DSC00560.JPG" alt="">
 顺便等凌晨 1 点的水果新品发布会（结果视频直播状况频发: 首先是全世界都注意到的中国 lady 的同声传译；然后又遇到无数次的视频中断，甚至水果的官网都一度瘫痪了。。。）</p>
-
 <p>跑题了，抱歉！上图中右侧的防滚架没有考虑到 LCD 面板后面的凸起，装不上。于是人工打磨了一下，开了几个槽 ;/ （懒得再画新的了，反正安慰自己在里面看不见。可见我是一个“看脸”的人&hellip;）</p>
-
 <p>装好防滚架的前面板：
-<img src="/3DP/_images/DSC00561.JPG" alt="" /></p>
-
-<hr />
-
+<img src="/3DP/_images/DSC00561.JPG" alt=""></p>
+<hr>
 <p>前天看到这个网站，说明如何修改 Marlin 的参数 <a href="http://www.hkepc.com/forum/viewthread.php?tid=2084008">http://www.hkepc.com/forum/viewthread.php?tid=2084008</a>。然后他推荐了一个 Marlin 的衍生版，由 RichCattell 编写。我看了眼，发现更新的比较频繁，有对自动调平的功能有了改进，于是决定采用，地址是：<a href="https://github.com/RichCattell/Marlin/releases/tag/v1.04">https://github.com/RichCattell/Marlin/releases/tag/v1.04</a></p>
-
-<hr />
-
+<hr>
 <p>好了，现在就开始修改 Marlin 的参数了！在 Marlin 的目录中找到 Configuration.h 这个文件。 Marlin 的设置主要在 Configuration.h 和 Configuration_adv.h 中。</p>
-
 <p>其实也没有多少要改的：主要涉及到 Delta 系打印机的几何参数，例如连杆长度等等。但是这些参数对于 Kossel 的打印质量影响很大，所以要仔细测量并更新 Configuration.h 。</p>
-
-<pre><code class="language-c++">// Center-to-center distance of the holes in the diagonal push rods.
- # define DEFAULT_DELTA_DIAGONAL_ROD 275.0 // mm
-</code></pre>
-
-<p>这是连杆从球头中心到球头中心的距离，卷尺测量了下，近 275 毫米。</p>
-
-<pre><code class="language-c++">// Horizontal offset from middle of printer to smooth rod center.
- #define DELTA_SMOOTH_ROD_OFFSET 214.8 //=372/sqrt(3) mm
-</code></pre>
-
-<p>这是从挤出头中心点到垂直铝框架中轴的距离。我是量了两个垂直铝框架中轴间的距离，除以√{3} 这样来算的。</p>
-
-<pre><code class="language-c++">// Horizontal offset of the universal joints on the end effector.
- #define DELTA_EFFECTOR_OFFSET 39  // mm
-</code></pre>
-
-<p>这是 Effector 中心到 effector 的球头连接头中心的距离。</p>
-
-<pre><code class="language-c++">// Horizontal offset of the universal joints on the carriages.
- #define DELTA_CARRIAGE_OFFSET 38 // mm
-</code></pre>
-
-<p>这是从垂直铝框架中轴，到滑车上的球头中心的距离。</p>
-
-<pre><code class="language-c++">// Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
- # define BED_DIAMETER 260 // mm
-</code></pre>
-
-<p>这是热床的直径，我用的近 260 毫米的大床;)</p>
-
-<pre><code class="language-c++"> // Z-Probe variables
- // Start and end location values are used to deploy/retract the probe (will move from start to end and back again)
- # define Z_PROBE_OFFSET {0, 10, -5.6, 0}  // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.
- # define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}   // X, Y, Z, E start location for z-probe deployment sequence
- # define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}    // X, Y, Z, E end location for z-probe deployment sequence
- # define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}  // X, Y, Z, E start location for z-probe retract sequence
- # define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     // X, Y, Z, E end location for z-probe retract sequence
-
- # define AUTOLEVEL_GRID 24 // Distance between autolevel Z probing points, should be less than print surface radius/3.
-</code></pre>
-
-<p>这些是有关自调平系统的一些参数，先不管。自调平总是最后关心的问题。</p>
-
-<pre><code class="language-c++">// Travel limits after homing
- # define X_MAX_POS 130
- # define X_MIN_POS -130
- # define Y_MAX_POS 130
- # define Y_MIN_POS -130
- # define Z_MAX_POS MANUAL_Z_HOME_POS
- # define Z_MIN_POS 0
-</code></pre>
-
-<p>这些是根据热床大小定的。Z_MAX_POS 需要测量一下，是从挤出头到热床的距离。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Center-to-center distance of the holes in the diagonal push rods.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define DEFAULT_DELTA_DIAGONAL_ROD 275.0 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是连杆从球头中心到球头中心的距离，卷尺测量了下，近 275 毫米。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset from middle of printer to smooth rod center.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_SMOOTH_ROD_OFFSET 214.8 </span><span style="color:#75715e">//=372/sqrt(3) mm
+</span></code></pre></div><p>这是从挤出头中心点到垂直铝框架中轴的距离。我是量了两个垂直铝框架中轴间的距离，除以√{3} 这样来算的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset of the universal joints on the end effector.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_EFFECTOR_OFFSET 39  </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是 Effector 中心到 effector 的球头连接头中心的距离。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset of the universal joints on the carriages.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_CARRIAGE_OFFSET 38 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是从垂直铝框架中轴，到滑车上的球头中心的距离。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define BED_DIAMETER 260 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是热床的直径，我用的近 260 毫米的大床;)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"> <span style="color:#75715e">// Z-Probe variables
+</span><span style="color:#75715e"></span> <span style="color:#75715e">// Start and end location values are used to deploy/retract the probe (will move from start to end and back again)
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_OFFSET {0, 10, -5.6, 0}  </span><span style="color:#75715e">// X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}   </span><span style="color:#75715e">// X, Y, Z, E start location for z-probe deployment sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}    </span><span style="color:#75715e">// X, Y, Z, E end location for z-probe deployment sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}  </span><span style="color:#75715e">// X, Y, Z, E start location for z-probe retract sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     </span><span style="color:#75715e">// X, Y, Z, E end location for z-probe retract sequence
+</span><span style="color:#75715e"></span>
+ <span style="color:#75715e"># define AUTOLEVEL_GRID 24 </span><span style="color:#75715e">// Distance between autolevel Z probing points, should be less than print surface radius/3.
+</span></code></pre></div><p>这些是有关自调平系统的一些参数，先不管。自调平总是最后关心的问题。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Travel limits after homing
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define X_MAX_POS 130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define X_MIN_POS -130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Y_MAX_POS 130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Y_MIN_POS -130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_MAX_POS MANUAL_Z_HOME_POS
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_MIN_POS 0
+</span></code></pre></div><p>这些是根据热床大小定的。Z_MAX_POS 需要测量一下，是从挤出头到热床的距离。</p>
 <p>除此之外，还有一个重要参数，就是：</p>
-
-<pre><code class="language-c++"> # define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 439.5} //{80, 80, 80, 439.5}
-</code></pre>
-
-<p>这是和传动机构相关的（单位运行距离（1mm）下步进电机前进的步数。200,200,200 分别代表 x,y,z 方向的步进量，439.5(用的默认值，还没改)是挤出机步进电机的步数。 我用的是 0.9 步进，GT2 的皮带（即齿间距2mm），以及 16齿的同步轮。带入网上的计算器：<a href="http://prusaprinters.org/calculator/">http://prusaprinters.org/calculator/</a></p>
-
-<p>或者把上述宏定义修改为下面这若干行代码<sup class="footnote-ref" id="fnref:http-www-hkepc-com-forum-viewthread-php-tid-2084008"><a href="#fn:http-www-hkepc-com-forum-viewthread-php-tid-2084008">1</a></sup></p>
-
-<pre><code class="language-c++:n"> # define STEPS_PER_REVOLUTION_X 3200
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"> <span style="color:#75715e"># define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 439.5} </span><span style="color:#75715e">//{80, 80, 80, 439.5}
+</span></code></pre></div><p>这是和传动机构相关的（单位运行距离（1mm）下步进电机前进的步数。200,200,200 分别代表 x,y,z 方向的步进量，439.5(用的默认值，还没改)是挤出机步进电机的步数。 我用的是 0.9 步进，GT2 的皮带（即齿间距2mm），以及 16齿的同步轮。带入网上的计算器：<a href="http://prusaprinters.org/calculator/">http://prusaprinters.org/calculator/</a></p>
+<p>或者把上述宏定义修改为下面这若干行代码<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n"> # define STEPS_PER_REVOLUTION_X 3200
  # define STEPS_PER_REVOLUTION_Z 3200
  # define STEPS_PER_REVOLUTION_E 3200
  # define STEPS_PER_REVOLUTION_Y 6400
@@ -269,17 +226,12 @@ Kossel XL 赫然在目；）</p>
  # define AXIS_STEPS_PER_UNIT_Z (STEPS_PER_REVOLUTION_Z / PITCH_OF_Z_ROD)
  # define AXIS_STEPS_PER_UNIT_E (STEPS_PER_REVOLUTION_E \* EXTRUDER_GEAR_RATIO / (PINCH_WHEEL_DIAMETER \* PI))
  # define DEFAULT_AXIS_STEPS_PER_UNIT {AXIS_STEPS_PER_UNIT_X, AXIS_STEPS_PER_UNIT_Y, AXIS_STEPS_PER_UNIT_Z, AXIS_STEPS_PER_UNIT_E}
-</code></pre>
-
-<p>其中 STEPS_PER_REVOLUTION 是指电机转动一圈的步数（对于 0.9 步进来说是 <sup>360</sup>&frasl;<sub>0</sub>.9 = 400 步，但是还有 MicroStepping，在
+</code></pre><p>其中 STEPS_PER_REVOLUTION 是指电机转动一圈的步数（对于 0.9 步进来说是 360/0.9 = 400 步，但是还有 MicroStepping，在
 Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电机转动一周实际上会有 6400 个分度。这就是这个参数的由来 ）</p>
-
-<hr />
-
+<hr>
 <p>【更新】今天看到这个不错：Hacking Marlin to add extruder load/unload: <a href="http://3dwest.blogspot.hk">http://3dwest.blogspot.hk</a>
 以往更换料丝的时候进料、退料都要的拧半天调节旋钮，有了这个进料、退料的命令后一切就应该方便了。按照这个博客所说，只需要修改：ultralcd.cpp 文件：</p>
-
-<pre><code class="language-c++:n"> static void lcd_prepare_menu()
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n"> static void lcd_prepare_menu()
  {
      START_MENU();
      MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
@@ -306,18 +258,16 @@ Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电�
     MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu);
     END_MENU();
 }
-</code></pre>
-
-<p>唯一需要注意的是按照你的 Bowden 管长度来调整 MENU_ITEM 的响应代码，作者的 Bowden 管是 1米长的，所以
+</code></pre><p>唯一需要注意的是按照你的 Bowden 管长度来调整 MENU_ITEM 的响应代码，作者的 Bowden 管是 1米长的，所以
 用了 E1000 。</p>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:http-www-hkepc-com-forum-viewthread-php-tid-2084008"> <a class="footnote-return" href="#fnref:http-www-hkepc-com-forum-viewthread-php-tid-2084008"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>参考：<a href="http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration">http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -402,7 +352,7 @@ Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电�
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

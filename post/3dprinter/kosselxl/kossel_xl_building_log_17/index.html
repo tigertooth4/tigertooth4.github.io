@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_17/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Kossel XL 构建记 (17) Stepper motors" />
 <meta property="og:description" content="Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。 今天又在研究步进马达，这个型号 42BYGHM810 在某宝中可" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_17/" />
-<meta property="article:published_time" content="2014-08-15T14:30:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-15T14:30:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_17/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-08-15T14:30:00+00:00" />
+<meta property="article:modified_time" content="2014-08-15T14:30:00+00:00" />
 
 <meta itemprop="name" content="Kossel XL 构建记 (17) Stepper motors">
-<meta itemprop="description" content="Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。 今天又在研究步进马达，这个型号 42BYGHM810 在某宝中可">
-
-
-<meta itemprop="datePublished" content="2014-08-15T14:30:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-08-15T14:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="444">
-
-
-
-<meta itemprop="keywords" content="3DP,Kossel,DIY,MIY," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。 今天又在研究步进马达，这个型号 42BYGHM810 在某宝中可"><meta itemprop="datePublished" content="2014-08-15T14:30:00+00:00" />
+<meta itemprop="dateModified" content="2014-08-15T14:30:00+00:00" />
+<meta itemprop="wordCount" content="443">
+<meta itemprop="keywords" content="3DP,Kossel,DIY,MIY," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (17) Stepper motors"/>
 <meta name="twitter:description" content="Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。 今天又在研究步进马达，这个型号 42BYGHM810 在某宝中可"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,32 +151,25 @@
     
     <div class="post-content">
       <p>Effector 一定是我用 OpenSCAD 实现的最复杂的模型了。而且，布线都藏在了 effector 底部，精细程度是目前我设计的模型中最高的。</p>
-
 <p>今天又在研究步进马达，这个型号 <a href="http://item.taobao.com/item.htm?spm=a230r.1.14.1.CsWZR2&amp;id=1708079780&amp;ns=1&amp;_u=g7veq783097#detail">42BYGHM810</a> 在某宝中可以找到，是 Wantai 出品。0.9°步进，静力矩
 4800 g.cm。（绝定用0.9步进的了！）这台电机目前看唯一的缺点是只有光轴电机（也许拿到以后要打磨一下才可
 以用 o(╯□╰)o）</p>
-
 <p><a href="Reprap.org">Reprap.org</a> 中关于步进马达的介绍（搜索 step motor） 还是值得一看的！额哦，某宝的这款马达是 2.4v,
-2.4A 的，而 Reprap 中说
-&gt; stepper motors rated for 3-5 V and 1-1.5 A are generally recommended</p>
-
+2.4A 的，而 Reprap 中说</p>
+<blockquote>
+<p>stepper motors rated for 3-5 V and 1-1.5 A are generally recommended</p>
+</blockquote>
 <p>看来我不能选这款马达了，因为</p>
-
 <blockquote>
 <p>If a motor is rated to more amps or volts than your driver can produce, your motor will not produce the manufacturer&rsquo;s rated torque.</p>
 </blockquote>
-
 <p>这是不好的，扭矩对于稳定性还是非常重要的。所以看来我要在精度和稳定性之间做一个平衡了。不过这里还有一
 款 0.9 步进的，基本能够达到我的要求：<a href="http://item.taobao.com/item.htm?spm=a1z10.5.w4002-2933553768.15.sa7Fpz&amp;id=1708088130">42BYGHM809</a> (2.8v, 1.7A, 4200g.cm )</p>
-
 <p>如果是发烧友，对精度有偏执的追求的话，可以考虑加上减速齿轮，这样可以减小步进角，加大扭矩（当然代价就
 是降低了最高转速）。步进角对于 3D 打印机的意义可以参考我之前的博文 <a href="kossel-planning-12">Kossel Log(12)</a>.</p>
-
-<hr />
-
+<hr>
 <p>【更新】这里有一个关于 Marlin 使用的介绍：
 <a href="http://solidutopia.com/marlin-firmware-user-guide-basic/">http://solidutopia.com/marlin-firmware-user-guide-basic/</a></p>
-
 <p>哈！Marlin builder! <a href="http://marlinbuilder.robotfuzz.com">http://marlinbuilder.robotfuzz.com</a></p>
 
     </div>
@@ -267,7 +253,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Skew-Laurent on 思｜製 - A guy&#39;s thinking and making</title>
@@ -6,18 +6,14 @@
     <description>Recent content in Skew-Laurent on 思｜製 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Aug 2014 12:16:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://tigertooth4.github.io/tags/skew-laurent/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 05 Aug 2014 12:16:00 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/skew-laurent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ORESUS 中的求逆</title>
       <link>http://tigertooth4.github.io/post/math/inverse-in-oresus/</link>
       <pubDate>Tue, 05 Aug 2014 12:16:00 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/math/inverse-in-oresus/</guid>
-      <description>我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*</description>
+      <description>我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（IntegralDomain, 即无零因子交换环），</description>
     </item>
     
   </channel>

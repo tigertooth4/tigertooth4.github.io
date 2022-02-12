@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="tt4" />
-  <meta name="description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*" />
+  <meta name="description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（IntegralDomain, 即无零因子交换环），" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/math/inverse-in-oresus/" />
@@ -50,26 +50,19 @@
 
 
 <meta property="og:title" content="ORESUS 中的求逆" />
-<meta property="og:description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*" />
+<meta property="og:description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（IntegralDomain, 即无零因子交换环），" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/math/inverse-in-oresus/" />
-<meta property="article:published_time" content="2014-08-05T12:16:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-05T12:16:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/math/inverse-in-oresus/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-08-05T12:16:00+00:00" />
+<meta property="article:modified_time" content="2014-08-05T12:16:00+00:00" />
 
 <meta itemprop="name" content="ORESUS 中的求逆">
-<meta itemprop="description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*">
-
-
-<meta itemprop="datePublished" content="2014-08-05T12:16:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-08-05T12:16:00&#43;00:00" />
-<meta itemprop="wordCount" content="367">
-
-
-
-<meta itemprop="keywords" content="Math,ORESUS,Skew-Laurent,FriCAS," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（IntegralDomain, 即无零因子交换环），"><meta itemprop="datePublished" content="2014-08-05T12:16:00+00:00" />
+<meta itemprop="dateModified" content="2014-08-05T12:16:00+00:00" />
+<meta itemprop="wordCount" content="363">
+<meta itemprop="keywords" content="Math,ORESUS,Skew-Laurent,FriCAS," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ORESUS 中的求逆"/>
-<meta name="twitter:description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（*IntegralDomain, 即无零因子交换环*"/>
+<meta name="twitter:description" content="我发现之前对于斜洛朗级数的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是整环（IntegralDomain, 即无零因子交换环），"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -157,12 +150,9 @@
 
     
     <div class="post-content">
-      <p>我发现之前对于<strong>斜洛朗级数</strong>的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是<strong>整环</strong>（*IntegralDomain, 即无零因子交换环*），这样的话很多环（例如*矩阵环*）就不满足要求了。这是一个很强的限制，会使得 ORESUS 的应用范围减小不少。</p>
-
+      <p>我发现之前对于<strong>斜洛朗级数</strong>的求逆要求过于严苛了。之前我假设的是斜洛朗级数的系数环必须是<strong>整环</strong>（<em>IntegralDomain, 即无零因子交换环</em>），这样的话很多环（例如<em>矩阵环</em>）就不满足要求了。这是一个很强的限制，会使得 ORESUS 的应用范围减小不少。</p>
 <p>今天再检查原先的代码，发现斜洛朗级数的求逆其实只依赖其首相系数是否可逆，在 <strong>FriCAS</strong> 中有两个函数可以判断是否可逆，一个是<code>recip()</code>, 另一个是 <code>exquo(a,b)</code>，<code>recip</code> 会试图计算某元素 <code>x</code> 的逆，若不可逆返回 <code>failed</code>。而 <code>exquo</code> 会尝试用 <code>a</code> 除以 <code>b</code>，同样如果可行则返回结果，否则返回 <code>failed</code>。求逆的过程也用到之前写的乘法的代码，所以我要检查一下，看看乘法代码里面是否用到了交换环这个性质。</p>
-
-<hr />
-
+<hr>
 <p>【更新】求逆的部分修改完毕！今天要被 <code>rule</code> 的使用折腾死了！不知道怎么用这个命令去化简一个表达式。。。还在试验中。。。</p>
 
     </div>
@@ -246,7 +236,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

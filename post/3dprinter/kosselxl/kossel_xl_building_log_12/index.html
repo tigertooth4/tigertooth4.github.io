@@ -17,13 +17,7 @@
 
 
 <meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
-今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
-但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
-又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
-对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
-其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
-假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以" />
+  <meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -32,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" />
@@ -56,42 +50,19 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
-今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
-但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
-又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
-对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
-其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
-假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" /><meta property="article:section" content="post" />
+
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
-今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
-但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
-又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
-对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
-其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
-假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以">
+<meta itemprop="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是">
 
-
-
-<meta itemprop="wordCount" content="255">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="1739">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public
-今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：
-但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！
-又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：
-对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。
-其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：
-假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以"/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -183,96 +154,61 @@
 Date: 2014-8-7 16:48:00
 Tags: 3dp, Kossel, DIY, Math
 Status: public</p>
-
 <p>今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这
 样：</p>
-
-<p><img src="/3DP/_images/Y-C-Shorter.png" alt="" /></p>
-
+<p><img src="/3DP/_images/Y-C-Shorter.png" alt=""></p>
 <p>但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再
 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！</p>
-
 <p>又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打
 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计
 很心水，于是就自己想法实现了一下：</p>
-
-<p><img src="/3DP/_images/Y-star-pilliars.png" alt="" /></p>
-
+<p><img src="/3DP/_images/Y-star-pilliars.png" alt=""></p>
 <p>对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4
 螺母的位置，可以说固定住是绝对没有问题的。</p>
-
 <p>其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机
 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：</p>
-
-<p><img src="/3DP/_images/DSC00423.jpg" alt="" /></p>
-
+<p><img src="/3DP/_images/DSC00423.jpg" alt=""></p>
 <p>假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴
 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的，
 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以</p>
-
-<pre><code class="language-mathjax">\rho + \delta \geq r_0 + r_1;
-</code></pre>
-
-<p>另一方面，当喷嘴走到玻璃板近端时，有</p>
-
-<pre><code class="language-mathjax">\rho^2 = (r_0 -r_1-\delta)^2+ z_i^2;
-</code></pre>
-
-<p>事实上，假设喷嘴停留在距中心 x 处，则有</p>
-
-<pre><code class="language-mathjax">(x - \delta + r_0)^2 + z_i^2 = \rho^2.
-</code></pre>
-
-<p>解出 x 与 zᵢ 的关系后，可以看到：当 zᵢ 变化 Δ 时，x 相应地会变化 dx/dzᵢ Δ，因此若想使得定位更精确的
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">\rho + \delta \geq r_0 + r_1;
+</code></pre><p>另一方面，当喷嘴走到玻璃板近端时，有</p>
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">\rho^2 = (r_0 -r_1-\delta)^2+ z_i^2;
+</code></pre><p>事实上，假设喷嘴停留在距中心 x 处，则有</p>
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">(x - \delta + r_0)^2 + z_i^2 = \rho^2.
+</code></pre><p>解出 x 与 zᵢ 的关系后，可以看到：当 zᵢ 变化 Δ 时，x 相应地会变化 dx/dzᵢ Δ，因此若想使得定位更精确的
 话，我们自然要求 dx/dzᵢ 要不太大（例如与 1 相当，越小越好），根据这个道理，我们来计算</p>
-
-<pre><code class="language-mathjax">|\frac{dx}{dz_i}| = \frac{z_i}{|x-\delta+r_0|} = 1/\tan(\theta(x)),
-</code></pre>
-
-<p>其中，θ(x) 是连杆与 zᵢ 轴的夹角。也就是说，定位精度与 tan(θ) 的大小有关，当这个值越大时，定位精度就
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">|\frac{dx}{dz_i}| = \frac{z_i}{|x-\delta+r_0|} = 1/\tan(\theta(x)),
+</code></pre><p>其中，θ(x) 是连杆与 zᵢ 轴的夹角。也就是说，定位精度与 tan(θ) 的大小有关，当这个值越大时，定位精度就
 越高；所以，在越远离 z-轴的区域，定位精度是越高的；而在离 z-轴 距离最近的区域，定位精度越低。那么，我
 们可以计算出，要想使得 Kossel 打印机能够达到一定的定位精度， θ 角最小不能小于多少：</p>
-
 <p>假设我们要求的整体定位精度为 0.5mm (注意：对 Delta 型打印机来说，在打印区域的边缘，这已经是一个不错的
 定位精度了；某些市面上 Delta 打印机所谓精度能达到 50 微米，应该值得是 z-轴（堆积方向）的定位精度，而
 不是水平方向的（再次强调：Delta 型打印机各个区域的水平定位精度是不同的，这与 XYZ 笛卡尔坐标的打印机有
 很大区别）)。</p>
-
 <p>那么，在定位精度最差的玻璃板近端（θ=θ₀最小），定位精度也要有 0.5mm。注意到如果我们采用的是 1.8° 步
 进电机，配 5mm 半径的同步齿轮的话，当步进电机转动 1.8°时，同步带会移动 π/100*5 mm，这就是zᵢ 运动的
 距离了 Δ，所以 x 方向运动的距离应该是：Δ/tan(θ₀)≤ 0.5, 可以算出 θ₀ ≥ arctan(π/10) =
 17.4406°.</p>
-
 <p>根据上述计算，我们对杆长就有一个估计了：</p>
-
-<pre><code class="language-mathjax">r_0+r_1-\delta\leq\rho\leq (r_0-r_1-\delta)\csc(\theta_0) =(r_0-r_1-\delta)\sqrt{1+\frac{100}{\pi^2}}
-</code></pre>
-
-<p>综合上述几个关系，我们得到：</p>
-
-<pre><code class="language-mathjax">\rho \leq \frac{2\sqrt{1+ (A/\Delta)^2}}{\sqrt{1+ (A/\Delta)^2} + 1}(r_0-\delta).
-</code></pre>
-
-<p>其中 A = 0.5mm 是 x 方向的定位精度, Δ 是 z 方向的最小步长（也可以理解为 z 方向的定位精度）一般情况下
-A &gt;&gt; Δ，因此上式中的分式的比值会小于并接近于 2.</p>
-
-<pre><code class="language-mathjax">r_1 \le \frac{\sqrt{1+ (A/\Delta)^2}-1}{\sqrt{1+ (A/\Delta)^2}+1} (r_0-\delta).
-</code></pre>
-
-<p>根据这个测算结果，我计划做的这台 Kossel XL, 其铝框架部分长度为 330mm, 底边三角形的中垂线长度如果按照
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">r_0+r_1-\delta\leq\rho\leq (r_0-r_1-\delta)\csc(\theta_0) =(r_0-r_1-\delta)\sqrt{1+\frac{100}{\pi^2}}
+</code></pre><p>综合上述几个关系，我们得到：</p>
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">\rho \leq \frac{2\sqrt{1+ (A/\Delta)^2}}{\sqrt{1+ (A/\Delta)^2} + 1}(r_0-\delta).
+</code></pre><p>其中 A = 0.5mm 是 x 方向的定位精度, Δ 是 z 方向的最小步长（也可以理解为 z 方向的定位精度）一般情况下
+A &raquo; Δ，因此上式中的分式的比值会小于并接近于 2.</p>
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">r_1 \le \frac{\sqrt{1+ (A/\Delta)^2}-1}{\sqrt{1+ (A/\Delta)^2}+1} (r_0-\delta).
+</code></pre><p>根据这个测算结果，我计划做的这台 Kossel XL, 其铝框架部分长度为 330mm, 底边三角形的中垂线长度如果按照
 310mm 计算，则 r₀ 约等于 210mm, 效应器的半径 δ 若按照 35mm 计算，则杆长约为 ρ = 270mm, 而玻璃板的半
 径约为 r₁ = 94mm. 杆长和我之前用 Excel 表计算的长度 264mm 很接近。这时 x 方向的定位精度可达 0.5mm.</p>
-
-<hr />
-
-<p>【更新】这两个公式说明：
-- 如果想在其他条件不变的情况下让定位精度更高的话，那么必须采用更短的连杆以及更小的打印面积；
-- 如果采用 0.9° 步进电机的话，在保证精度不变的情况下，连杆长度和打印面积都可以适当增加；
-- 当喷嘴移动到玻璃板边缘时的连杆与铅垂方向夹角决定了边缘处的精度；所以当你看到市面上的Delta 3D 打印机
-  时，可以观察它的这个角度，来判断它的设计是否合理。</p>
-
-<hr />
-
+<hr>
+<p>【更新】这两个公式说明：</p>
+<ul>
+<li>如果想在其他条件不变的情况下让定位精度更高的话，那么必须采用更短的连杆以及更小的打印面积；</li>
+<li>如果采用 0.9° 步进电机的话，在保证精度不变的情况下，连杆长度和打印面积都可以适当增加；</li>
+<li>当喷嘴移动到玻璃板边缘时的连杆与铅垂方向夹角决定了边缘处的精度；所以当你看到市面上的Delta 3D 打印机
+时，可以观察它的这个角度，来判断它的设计是否合理。</li>
+</ul>
+<hr>
 <p>【再次更新】目前所做的仅仅是一个非常粗略的一维近似，实际的运动是二维的，涉及到三个连杆的联动。目前，
 我还不清楚当三个连杆联动时，精度是由那个连杆决定的（而且令我不解的是，三根杆所决定的定位精度是有很大
 差别的，这种情况下三根 z 轴上滑轨的运动，电机的运动是如何配合决定定位情况的？）这是我没有将二维运动精
@@ -349,7 +285,7 @@ A &gt;&gt; Δ，因此上式中的分式的比值会小于并接近于 2.</p>
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

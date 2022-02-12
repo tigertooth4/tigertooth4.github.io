@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Calculate PDOs using AXIOM / FriCAS" />
 <meta property="og:description" content="For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2&#43;u(x,t)```, (A=\partial^3&#43;4u(x,t)\partial&#43;2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/" />
-<meta property="article:published_time" content="2012-05-03T00:46:30&#43;00:00"/>
-<meta property="article:modified_time" content="2012-05-03T00:46:30&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/coding/calculate-pdos-by-using-axiom/fricas/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-05-03T00:46:30+00:00" />
+<meta property="article:modified_time" content="2012-05-03T00:46:30+00:00" />
 
 <meta itemprop="name" content="Calculate PDOs using AXIOM / FriCAS">
-<meta itemprop="description" content="For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2&#43;u(x,t)```, (A=\partial^3&#43;4u(x,t)\partial&#43;2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers.">
-
-
-<meta itemprop="datePublished" content="2012-05-03T00:46:30&#43;00:00" />
-<meta itemprop="dateModified" content="2012-05-03T00:46:30&#43;00:00" />
+<meta itemprop="description" content="For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2&#43;u(x,t)```, (A=\partial^3&#43;4u(x,t)\partial&#43;2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers."><meta itemprop="datePublished" content="2012-05-03T00:46:30+00:00" />
+<meta itemprop="dateModified" content="2012-05-03T00:46:30+00:00" />
 <meta itemprop="wordCount" content="622">
-
-
-
-<meta itemprop="keywords" content="FriCAS,PDO,Coding,Math," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="FriCAS,PDO,Coding,Math," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Calculate PDOs using AXIOM / FriCAS"/>
 <meta name="twitter:description" content="For years, the computation of Lax equations is a tedious and time-consuming task. For example, KdV equation has the following type of Lax equation: ```mathjax L_t = [A, L], ``` where ```mathjax L=\partial^2&#43;u(x,t)```, (A=\partial^3&#43;4u(x,t)\partial&#43;2u_x). Having been a graduate student majoring in integrable systems for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers."/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -162,19 +155,12 @@
 L_t = [A, L],
 ```
 where ```mathjax L=\partial^2+u(x,t)```, (A=\partial^3+4u(x,t)\partial+2u_x). Having been a graduate student majoring in <em>integrable systems</em> for years, I always had to work on such kind of computations. It was frustrating. At that time, I was thinking of a way to speed up the computation with the power of computers. After a long time searching, I realized there was no software with built in support for such computations.  Although many people might have their own tricks to do such computation with the aid of symbolic software, for example <em>Mathematics</em>, <em>Maple</em>, I think it was not the most efficient way.</p>
-
 <p>After graduate, I found a paper dealing with the computation of PDOs. This paper was written by <em>W. Seiler</em>, who wrote an <em>AXIOM</em> package to calculate pseudo-differential operators. However, his package was so old to work properly under AXIOM. But his idea was great: Using <em>stream</em> to store the coefficients of each PDO, which may contain an infinite number of elements, and using two indices to maintain the leading and last orders for this PDO. The arithmetic operations of PDOs was realized by adding up or multiplying the corresponding elements of streams. Note that when doing such kinds of computations, a internal mechanism  of AXIOM would ensure the adding or multiplying to be <em>lazy</em>. Namely, the computation was done when it was necessary.</p>
-
 <p>I had noticed this package also contains type coerce functions which can convert a differential operator in PDO to a <em>Linear Ordinary Differential Operator</em> (LODO in short). And, for ordinary differential operators, the addition and multiplication are identical with the PDO case. Curiously, I decided to check the source code of LODO, see how the LODO functions. To my surprise, the LODO can be defined in a very general manner. In the source code, I found the LODO was a very special case of a more general domain: <em>skew-polynomial</em>.</p>
-
 <p>What is a skew-polynomial? Well, simply speaking, skew-polynomial is a polynomial, for example (\sum_{0\le i\le n} a_i x^i), except that the coefficient does not commute with indeterminate (x). In general, supposing (a_i) are elements of some Ring (do not need to be commutative), say (R). Let (\sigma: R\longrightarrow R) be an automorphism of (R), and (\delta:R\longrightarrow R) be a (\sigma)-derivative, which is to say [\delta(ab) = \sigma(a)\delta(b)+\delta(a)b.] Then the multiplication of (x) and (a\in R) is defined by [x\cdot a = \sigma(a) x + \delta(a).]</p>
-
 <p>Such skew-polynomial have many special cases. Many of them have very broad uses.</p>
-
-<p>Suppose Ring (R) to be the ring of smooth functions of single variable. And Suppose indeterminate (x) to be noted by (\partial). If we set the automorphism (\sigma) be identity map, while the (\delta)-derivative be the usual derivative for single variable function, then the product of (f) and (\partial) is [\partial f = f \partial + f&rsquo;,] which is exactly the basic product law for pseudo-differential operators.</p>
-
+<p>Suppose Ring (R) to be the ring of smooth functions of single variable. And Suppose indeterminate (x) to be noted by (\partial). If we set the automorphism (\sigma) be identity map, while the (\delta)-derivative be the usual derivative for single variable function, then the product of (f) and (\partial) is [\partial f = f \partial + f',] which is exactly the basic product law for pseudo-differential operators.</p>
 <p>If the Ring (R) is set to be the ring of functions with a discrete variable (n), the indeterminate (x) be the <em>shift operator</em> (\Lambda), the automorphism (\sigma) be the mapping maps (f(n)\to f(n+1)), the (\delta)-derivative be the vanishing map, then the product is [\Lambda f(n)= f(n+1) \Lambda,] which defines the basic product law for shift operators.</p>
-
 <p>If the Ring (R) is still the ring of functions with a discrete variable (n), the indeterminate (x) be the <em>difference operator</em> (\Delta), the automorphism (\sigma) be the mapping maps (f(n)\to f(n+1)), the (\delta)-derivative be the difference operation, which maps (f(n)) to (\Delta(f(n))=f(n+1)-f(n)), then the product is [\Delta f(n)= f(n+1) \Delta + \Delta(f(n)),] which defines the basic product law for difference operators.</p>
 
     </div>
@@ -258,7 +244,7 @@ where ```mathjax L=\partial^2+u(x,t)```, (A=\partial^3+4u(x,t)\partial+2u_x). Ha
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

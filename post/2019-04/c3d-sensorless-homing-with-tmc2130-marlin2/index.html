@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零" />
 <meta property="og:description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/" />
-<meta property="article:published_time" content="2019-04-20T22:47:37&#43;08:00"/>
-<meta property="article:modified_time" content="2019-04-20T22:47:37&#43;08:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-04-20T22:47:37+08:00" />
+<meta property="article:modified_time" content="2019-04-20T22:47:37+08:00" />
 
 <meta itemprop="name" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零">
-<meta itemprop="description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无">
-
-
-<meta itemprop="datePublished" content="2019-04-20T22:47:37&#43;08:00" />
-<meta itemprop="dateModified" content="2019-04-20T22:47:37&#43;08:00" />
-<meta itemprop="wordCount" content="925">
-
-
-
-<meta itemprop="keywords" content="TMC2130,Cohesion3d,Remix,Marlin2.0,Sensorless,Homing," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无"><meta itemprop="datePublished" content="2019-04-20T22:47:37+08:00" />
+<meta itemprop="dateModified" content="2019-04-20T22:47:37+08:00" />
+<meta itemprop="wordCount" content="926">
+<meta itemprop="keywords" content="TMC2130,Cohesion3d,Remix,Marlin2.0,Sensorless,Homing," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零"/>
 <meta name="twitter:description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无"/>
 
@@ -148,16 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#固件设置">固件设置</a></li>
-<li><a href="#硬件部分的改变">硬件部分的改变</a></li>
-<li><a href="#上传固件">上传固件</a></li>
-<li><a href="#上电测试">上电测试</a></li>
-<li><a href="#更新">更新</a></li>
-<li><a href="#更新-二">更新 （二）</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -166,59 +150,39 @@
 
     
     <div class="post-content">
-      
-
-<p>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
-
+      <p>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h1 id="固件设置">固件设置</h1>
-
 <ul>
-<li>将 X, Y 方向的<em>归零回弹</em> (home_bump) 设为 0</li>
+<li>
+<p>将 X, Y 方向的_归零回弹_ (home_bump) 设为 0</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define X_HOME_BUMP_MM 0
+</span><span style="color:#75715e">#define Y_HOME_BUMP_MM 0
+</span></code></pre></div></li>
+<li>
+<p>开启 Sensorless_homing</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define SENSORLESS_HOMING </span><span style="color:#75715e">// TMC2130 only
+</span></code></pre></div><p>注意到后面有固件默认的归零敏感度：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">#define X_STALL_SENSITIVITY  8
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">#define Y_STALL_SENSITIVITY  8
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//#define Z_STALL_SENSITIVITY  8
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">#endif
+</span></code></pre></div><p>将来可以使用 M914 X/Y/Z  去实时调整这个敏感度，不必再使用固件调整。</p>
+</li>
+<li>
+<p>在 configuration.h 文件中找到 X_MIN_ENDSTOP , 将其设置为 true, Y 也同理</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Mechanical endstop with COM to ground and NC to Signal uses &#34;false&#34; here (most common setup).
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define X_MIN_ENDSTOP_INVERTING true </span><span style="color:#75715e">// set to true to invert the logic of the endstop.
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define Y_MIN_ENDSTOP_INVERTING true </span><span style="color:#75715e">// set to true to invert the logic of the endstop.
+</span></code></pre></div></li>
 </ul>
-
-<pre><code class="language-c++">  #define X_HOME_BUMP_MM 0
-  #define Y_HOME_BUMP_MM 0
-</code></pre>
-
-<ul>
-<li>开启 Sensorless_homing</li>
-</ul>
-
-<pre><code class="language-c++">  #define SENSORLESS_HOMING // TMC2130 only
-</code></pre>
-
-<p>注意到后面有固件默认的归零敏感度：</p>
-
-<pre><code class="language-c++">  #if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)
-      #define X_STALL_SENSITIVITY  8
-      #define Y_STALL_SENSITIVITY  8
-      //#define Z_STALL_SENSITIVITY  8
-    #endif
-</code></pre>
-
-<p>将来可以使用 M914 X/Y/Z  去实时调整这个敏感度，不必再使用固件调整。</p>
-
-<ul>
-<li>在 configuration.h 文件中找到 X_MIN_ENDSTOP , 将其设置为 true, Y 也同理</li>
-</ul>
-
-<pre><code class="language-c++">  // Mechanical endstop with COM to ground and NC to Signal uses &quot;false&quot; here (most common setup).
-  #define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-  #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-</code></pre>
-
 <h1 id="硬件部分的改变">硬件部分的改变</h1>
-
 <ul>
-<li>将 TMC2130 上的 Diag1 pin 与 C3D 板子上的限位开关 signal pin 连起来。我这里使用的是 X_MIN_ENDSTOP 和 Y_MIN_ENDSTOP，C3D 上的 pin 的位置见下图<img src="./images/endstop-wiring.png" alt="Endstop pins" /></li>
+<li>将 TMC2130 上的 Diag1 pin 与 C3D 板子上的限位开关 signal pin 连起来。我这里使用的是 X_MIN_ENDSTOP 和 Y_MIN_ENDSTOP，C3D 上的 pin 的位置见下图<img src="./images/endstop-wiring.png" alt="Endstop pins"></li>
 </ul>
-
 <h1 id="上传固件">上传固件</h1>
-
 <p>这一步是显然的。</p>
-
 <h1 id="上电测试">上电测试</h1>
-
 <ul>
 <li>使用 G28 X, G28 Y 可以让 X, Y 轴单独归零，输入后观察归零情况。若撞到边框还不停止，则要调整归零灵敏度（使用 M914 命令）。在我这里的情况是 X 轴 归零正常，Y 轴没有归零就停住了。</li>
 <li>M914 命令的使用方法是：若只输入 M914，则显示当前灵敏度，marlin 规定的灵敏度范围是从 -63 到 64，数值越大越不敏感；初始时的灵敏度应该都为 0;</li>
@@ -226,41 +190,32 @@
 <li>最后记得用 M500 保存设置。</li>
 <li>不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。</li>
 </ul>
-
 <h1 id="更新">更新</h1>
-
 <ul>
-<li>可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：</li>
+<li>
+<p>可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define DEBUG_LEVELING_FEATURE
+</span></code></pre></div></li>
+<li>
+<p>使用 M111 S32 或 M111 S247 使系统信息能够被最大程度的记录下来</p>
+</li>
+<li>
+<p>使用 G28 归零。</p>
+</li>
 </ul>
-
-<pre><code class="language-c++">  #define DEBUG_LEVELING_FEATURE
-</code></pre>
-
-<ul>
-<li><p>使用 M111 S32 或 M111 S247 使系统信息能够被最大程度的记录下来</p></li>
-
-<li><p>使用 G28 归零。</p></li>
-</ul>
-
 <h1 id="更新-二">更新 （二）</h1>
-
 <p>经调试，发现主要问题是：当 X Y 同时归零时，总是 X 可以归零，但 Y 在归零途中就会停下；如果分别归零，当 Y 归零后，X 可以顺利归零；反之则不行。量了一下 X 导轨与前边框的间距，发现左侧比右侧稍大。左侧是归零方向。以此判断，不能实现同时归零的原因是线性导轨与框架不完全平行，导致 X 方向归零后， Y 在归零途中撞到框架而提前归零。</p>
-
 <p>由于调节导轨平行度工作量实在太大，无奈之下，只好先在固件 Configuration_adv.h 中设置归零顺序为先 Y 再 X</p>
-
-<pre><code class="language-c++">#define HOME_Y_BEFORE_X
-</code></pre>
-
-<p>临时解决问题。</p>
-<div class="footnotes">
-
-<hr />
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define HOME_Y_BEFORE_X
+</span></code></pre></div><p>临时解决问题。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <a href="https://www.youtube.com/watch?v=OUadiW5QLBE">https://www.youtube.com/watch?v=OUadiW5QLBE</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <a href="https://www.youtube.com/watch?v=OUadiW5QLBE">https://www.youtube.com/watch?v=OUadiW5QLBE</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -347,7 +302,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

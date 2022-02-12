@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="斜洛朗级数环的软件包现在可以计算一个算子的分数次方了！" />
 <meta property="og:description" content="先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/" />
-<meta property="article:published_time" content="2014-07-26T18:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-07-26T18:00:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/math/oresus-now-understand-fractional-powers/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-07-26T18:00:00+00:00" />
+<meta property="article:modified_time" content="2014-07-26T18:00:00+00:00" />
 
 <meta itemprop="name" content="斜洛朗级数环的软件包现在可以计算一个算子的分数次方了！">
-<meta itemprop="description" content="先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！">
-
-
-<meta itemprop="datePublished" content="2014-07-26T18:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2014-07-26T18:00:00&#43;00:00" />
+<meta itemprop="description" content="先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！"><meta itemprop="datePublished" content="2014-07-26T18:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-07-26T18:00:00+00:00" />
 <meta itemprop="wordCount" content="845">
-
-
-
-<meta itemprop="keywords" content="Math,FriCAS,Coding,PDO,ORESUS," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Math,FriCAS,Coding,PDO,ORESUS," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="斜洛朗级数环的软件包现在可以计算一个算子的分数次方了！"/>
 <meta name="twitter:description" content="先上张代码的图吧！FriCAS 虽然是从 AXIOM 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -157,77 +150,53 @@
 
     
     <div class="post-content">
-      <p>先上张代码的图吧！<img src="/Math/_images/fraction.png" alt="" /></p>
-
+      <p>先上张代码的图吧！<img src="/Math/_images/fraction.png" alt=""></p>
 <p><strong>FriCAS</strong> 虽然是从 <strong>AXIOM</strong> 这门古董级语言中 fork 出来的一个分支，目前仍处在活跃开发期，但是很多功能仍然缺失，尤其是：调试的功能基！本！没！有！</p>
-
 <p>有些时候，这门语言很灵活，例如：变量没有声明类型也可以使用；有些时候又严格得要命，例如：函数的参数必须是指定类型，你一个函数，
 以 <code>Expression(Integer)</code> 为参数，给它传个 <code>Integer</code> 类型的变量，就不认了！必须要先转换成 <code>Expression(Integer)</code> 才可以。
 所以，写个程序非常蛋疼。。。</p>
-
 <p>编写程序的时候出了不少问题，错误信息有时候非常令人迷惑，例如：</p>
-
 <ul>
-<li><p>这个错误信息：</p>
-
+<li>
+<p>这个错误信息：</p>
 <blockquote>
 <p>Error detected within library code: (1 . failed) cannot be coerced to mode (Expression (Integer))</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ul>
-
 <p>不是说你传递的参数类型有问题，而八成是你的代码中对类型的处理不够谨慎：例如 <code>Ring</code> 中的 <code>exquo</code> 运算
 （消去运算），会返回一个 <code>Union</code> 类型的变量：要么成功了，得到这个环中的元素，要么失败了，返回一个
 字符串 <code>“failed”</code>。所以，不要以为消去一下，就直接可以用了，还要顾及到有可能返回的是字符串，这时候
 需要这样：</p>
-
-<pre><code class="language-Haskell">    (a exquo b) case &quot;failed&quot; =&gt; &quot;failed&quot;
-</code></pre>
-
-<p>表示直接返回字符串 <code>“failed”</code>. 或者，</p>
-
-<pre><code class="language-Haskell">	(a exquo b) case &quot;failed&quot; =&gt; error &quot;Through some error message...&quot;
-</code></pre>
-
-<p>哦，会报这个错误的另一个原因就是这个 <code>exquo</code> 函数，在命令行中你可以写</p>
-
-<pre><code class="language-Haskell">	exquo(a,b)
-</code></pre>
-
-<p>但在 <code>spad</code> 文件中却不行，必须要写成二元运算的样子</p>
-
-<pre><code class="language-Haskell">	(a exquo b)
-</code></pre>
-
-<ul>
-<li><p>这样的错误：</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">    (a exquo b) <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;failed&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;failed&#34;</span>
+</code></pre></div><p>表示直接返回字符串 <code>“failed”</code>. 或者，</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">	(a exquo b) <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;failed&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">error</span> <span style="color:#e6db74">&#34;Through some error message...&#34;</span>
+</code></pre></div><p>哦，会报这个错误的另一个原因就是这个 <code>exquo</code> 函数，在命令行中你可以写</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">	exquo(a,b)
+</code></pre></div><p>但在 <code>spad</code> 文件中却不行，必须要写成二元运算的样子</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">	(a exquo b)
+</code></pre></div><ul>
+<li>
+<p>这样的错误：</p>
 <blockquote>
 <p>******** Spad syntax error detected ********
 Expected: BACKTAB
 The prior line was:
-129&gt;             &ldquo;^&rdquo;:(%,I) -&gt; Union(%, &ldquo;failed&rdquo;)
+129&gt;             &ldquo;^&quot;:(%,I) -&gt; Union(%, &ldquo;failed&rdquo;)
 The current line is:
 136&gt;             fracStream (%, R, I, NNI, %) -&gt; SC</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ul>
-
 <p>出错原因，一定是你 129 附近的哪行类型处理不当，或者少写括号了等等。了如，我在这里犯下的错误就是 <code>fracStream</code> 后面少了冒号</p>
-
 <ul>
 <li>最后，貌似一切的错误，类型转换都已经处理到了，但是还是不行，一运行就死在那了，原因是：我在 delay 里用了这样的递归调用：假设</li>
 </ul>
-
-<pre><code class="language-Haskell">	foo: (param1,...) -&gt; Stream(R)
-</code></pre>
-
-<p>在函数体里面，用了延迟运算和递归：</p>
-
-<pre><code class="language-Haskell">	delay
-		concat(foo(param1,...),b)
-</code></pre>
-
-<p>这里的问题是：每次函数被调用的时候，都会先去运行 <code>foo</code>,然后在 <code>foo</code> 返回 <code>Stream(R)</code> 类型的值后，再和元素 <code>b</code> 合并。可是 <code>foo</code> 并没有终止条件，每次先运行 <code>foo</code>, 就算已经用延迟计算 <code>delay</code> 了，也会陷入无休止的循环。正确的做法（我不知道为什么这样），只要把 <code>b</code> 放前面就行了 （囧）。。。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">	foo<span style="color:#66d9ef">:</span> (param1,<span style="color:#f92672">...</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Stream</span>(<span style="color:#66d9ef">R</span>)
+</code></pre></div><p>在函数体里面，用了延迟运算和递归：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Haskell" data-lang="Haskell">	delay
+		concat(foo(param1,<span style="color:#f92672">...</span>),b)
+</code></pre></div><p>这里的问题是：每次函数被调用的时候，都会先去运行 <code>foo</code>,然后在 <code>foo</code> 返回 <code>Stream(R)</code> 类型的值后，再和元素 <code>b</code> 合并。可是 <code>foo</code> 并没有终止条件，每次先运行 <code>foo</code>, 就算已经用延迟计算 <code>delay</code> 了，也会陷入无休止的循环。正确的做法（我不知道为什么这样），只要把 <code>b</code> 放前面就行了 （囧）。。。</p>
 <p>好吧！无论如何经过两天的努力，耐心的在命令行里逐步运行代码，所有的错误都已经基本解决了。当然还有一些细节需要处理，但总算是迈出了里程碑式的一步！</p>
 
     </div>
@@ -313,7 +282,7 @@ The current line is:
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

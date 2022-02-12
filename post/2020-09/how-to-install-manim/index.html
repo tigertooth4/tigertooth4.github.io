@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/2020-09/how-to-install-manim/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="如何在 Mac 下安装 Manim" />
 <meta property="og:description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/2020-09/how-to-install-manim/" />
-<meta property="article:published_time" content="2020-09-02T23:43:00&#43;08:00"/>
-<meta property="article:modified_time" content="2020-09-02T23:43:00&#43;08:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/2020-09/how-to-install-manim/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-09-02T23:43:00+08:00" />
+<meta property="article:modified_time" content="2020-09-02T23:43:00+08:00" />
 
 <meta itemprop="name" content="如何在 Mac 下安装 Manim">
-<meta itemprop="description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim">
-
-
-<meta itemprop="datePublished" content="2020-09-02T23:43:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-09-02T23:43:00&#43;08:00" />
-<meta itemprop="wordCount" content="718">
-
-
-
-<meta itemprop="keywords" content="Manim,Math,3b1b," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim"><meta itemprop="datePublished" content="2020-09-02T23:43:00+08:00" />
+<meta itemprop="dateModified" content="2020-09-02T23:43:00+08:00" />
+<meta itemprop="wordCount" content="717">
+<meta itemprop="keywords" content="Manim,Math,3b1b," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何在 Mac 下安装 Manim"/>
 <meta name="twitter:description" content="安装并使用 3b1b (3blue1brown) 的数学可视化系统 Manim@Github 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！ 参考了我保存许久的一个关于 Manim"/>
 
@@ -149,15 +142,10 @@
   
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#一-安装过程">一、安装过程</a>
-<ul>
-<li><a href="#一-安装依赖的包">（一）. 安装依赖的包</a></li>
-<li><a href="#二-安装-manim">（二）. 安装 Manim</a></li>
-</ul></li>
-<li><a href="#二-manim-的使用">二、Manim 的使用</a></li>
-<li><a href="#三-更新-manim-的使用范例">三、更新 （ Manim 的使用范例 ）</a></li>
-</ul>
+  <ul>
+    <li><a href="#一-安装依赖的包">（一）. 安装依赖的包</a></li>
+    <li><a href="#二-安装-manim">（二）. 安装 Manim</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -167,87 +155,55 @@
 
     
     <div class="post-content">
-      
-
-<p>安装并使用 3b1b (<a href="https://www.blogger.com/">3blue1brown</a>) 的数学可视化系统 <a href="https://github.com/3b1b/manim">Manim@Github</a> 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！</p>
-
+      <p>安装并使用 3b1b (<a href="https://www.blogger.com/">3blue1brown</a>) 的数学可视化系统 <a href="https://github.com/3b1b/manim">Manim@Github</a> 一直是我的一个愿望。可惜一直懒得动手，直到拖到现在😓。不过，今晚终于打算动手了！</p>
 <p>参考了我保存许久的一个关于 Manim 安装的 <a href="https://repperiumsci.blogspot.com/2019/12/my-adventures-with-manim-part_22.html">博客</a>，发现博主有了重大更新！为了方便爱好者们的使用，博主和其他一些小伙伴们 fork 了 3b1b 本身的代码，新建了一个 <a href="https://github.com/ManimCommunity/manim">社区版的 Manim</a>。 这下就更方便了。于是，下面的安装流程，基本上参照 <a href="https://github.com/ManimCommunity/manim">社区版 Manim</a> 的 <a href="https://manimce.readthedocs.io/en/latest/installation.html">安装文档</a>。</p>
-
-<h1 id="一-安装过程">一、安装过程</h1>
-
+<h1 id="一安装过程">一、安装过程</h1>
 <h2 id="一-安装依赖的包">（一）. 安装依赖的包</h2>
-
 <ol>
-<li><p>安装 Homebrew (这部分由于我已经装过，故省略)</p></li>
-
-<li><p>安装 Cairo</p></li>
+<li>
+<p>安装 Homebrew (这部分由于我已经装过，故省略)</p>
+</li>
+<li>
+<p>安装 Cairo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">brew install cairo
+</code></pre></div></li>
+<li>
+<p>安装 ffmpeg</p>
+<pre tabindex="0"><code class="language-pow" data-lang="pow">brew install ffmpeg
+</code></pre></li>
+<li>
+<p>安装 Sox (非必须)</p>
+<pre tabindex="0"><code class="language-pow" data-lang="pow">brew install sox
+</code></pre></li>
+<li>
+<p>安装 LaTeX （这一步基本上可以跳过了）。下面就是安装 TeXLive 的一些额外工具包：</p>
+<pre tabindex="0"><code class="language-pow" data-lang="pow">sudo tlmgr install standalone preview doublestroke relsize fundus-calligra \
+wasysym physics dvisvgm.x86_64-darwin dvisvgm rsfs wasy cm-super
+</code></pre></li>
 </ol>
-
-<pre><code class="language-powershell">   brew install cairo
-</code></pre>
-
-<ol>
-<li>安装 ffmpeg</li>
-</ol>
-
-<pre><code class="language-pow">   brew install ffmpeg
-</code></pre>
-
-<ol>
-<li>安装 Sox (非必须)</li>
-</ol>
-
-<pre><code class="language-pow">   brew install sox
-</code></pre>
-
-<ol>
-<li>安装 LaTeX （这一步基本上可以跳过了）。下面就是安装 TeXLive 的一些额外工具包：</li>
-</ol>
-
-<pre><code class="language-pow">   sudo tlmgr install standalone preview doublestroke relsize fundus-calligra \
-   wasysym physics dvisvgm.x86_64-darwin dvisvgm rsfs wasy cm-super
-</code></pre>
-
 <p>可以运行 <code>ffmpeg --version</code>, <code>latex</code>, <code>sox</code> 等命令检查上述安装。</p>
-
 <h2 id="二-安装-manim">（二）. 安装 Manim</h2>
-
 <p>为简便起见，我选择了通过 python 的包管理工具直接安装：</p>
+<pre tabindex="0"><code class="language-pow" data-lang="pow">pip3 install manimce
+</code></pre><h1 id="二manim-的使用">二、Manim 的使用</h1>
+<p>根据文档所述，Manim 还是基于 python 的，它的使用有点像 LaTeX，首先建立一个文件夹，比如 <code>test</code>，然后将所有的代码、文件都放在这个文件夹中，并且使用 manim 编译。一段简单的代码如下所示 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,  让我来搬运一下！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># scene.py</span>
+<span style="color:#f92672">from</span> manim <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 
-<pre><code class="language-pow">pip3 install manimce
-</code></pre>
-
-<h1 id="二-manim-的使用">二、Manim 的使用</h1>
-
-<p>根据文档所述，Manim 还是基于 python 的，它的使用有点像 LaTeX，首先建立一个文件夹，比如 <code>test</code>，然后将所有的代码、文件都放在这个文件夹中，并且使用 manim 编译。一段简单的代码如下所示 <sup class="footnote-ref" id="fnref:link"><a href="#fn:link">1</a></sup>,  让我来搬运一下！</p>
-
-<pre><code class="language-py"># scene.py
-from manim import *
-
-# all code must be contained inside the construct
-# method of a class that inherits from Scene
-class SquareToCircle(Scene):
-    def construct(self):
-        circle = Circle()                   # create a circle
-        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-        self.play(ShowCreation(circle))     # show the circle on screen
-</code></pre>
-
-<p>将这段代码保存成 <code>test/scene.py</code> 后，就可以使用命令行来编译了：</p>
-
-<pre><code class="language-pow">manim scene.py SquareToCircle -pl
-</code></pre>
-
-<p>酷！实验成功！这里是真的要感谢 Manim 社区所有热心人的贡献🎉，是他们把安装使用过程讲解得如此清楚！此刻我的内心稍稍有点激动～</p>
-
+<span style="color:#75715e"># all code must be contained inside the construct</span>
+<span style="color:#75715e"># method of a class that inherits from Scene</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SquareToCircle</span>(Scene):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">construct</span>(self):
+        circle <span style="color:#f92672">=</span> Circle()                   <span style="color:#75715e"># create a circle</span>
+        circle<span style="color:#f92672">.</span>set_fill(PINK, opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)  <span style="color:#75715e"># set the color and transparency</span>
+        self<span style="color:#f92672">.</span>play(ShowCreation(circle))     <span style="color:#75715e"># show the circle on screen</span>
+</code></pre></div><p>将这段代码保存成 <code>test/scene.py</code> 后，就可以使用命令行来编译了：</p>
+<pre tabindex="0"><code class="language-pow" data-lang="pow">manim scene.py SquareToCircle -pl
+</code></pre><p>酷！实验成功！这里是真的要感谢 Manim 社区所有热心人的贡献🎉，是他们把安装使用过程讲解得如此清楚！此刻我的内心稍稍有点激动～</p>
 <p>当然，冷静一下，看代码如此简单，实现的功能也不复杂。看来，真正的功夫是要下在如何讲故事，如何几何化上面，这方面我应该还有很长的路要走。</p>
-
 <p>好了，今天就到这里了！Happy Manim ! Bye!</p>
-
-<hr />
-
-<h1 id="三-更新-manim-的使用范例">三、更新 （ Manim 的使用范例 ）</h1>
-
+<hr>
+<h1 id="三更新--manim-的使用范例-">三、更新 （ Manim 的使用范例 ）</h1>
 <ol>
 <li><a href="https://github.com/TannerGilbert/Manim-Examples">Gilbert Tanner 的 github</a> 及 <a href="https://gilberttanner.com/blog/creating-math-animations-in-python-with-manim">博客</a></li>
 <li><a href="https://github.com/malhotra5/Manim-Tutorial">Rohit Malhortra 的 github</a></li>
@@ -258,15 +214,14 @@ class SquareToCircle(Scene):
 <li><a href="https://azarzadavila-manim.readthedocs.io/en/latest/index.html">Manim documentation</a></li>
 <li><a href="https://manimce.readthedocs.io/en/latest/index.html">ManimCE(社区版) documentation</a></li>
 </ol>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:link">代码出自 <a href="https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html">https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html</a>
- <a class="footnote-return" href="#fnref:link"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>代码出自 <a href="https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html">https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -347,7 +302,7 @@ class SquareToCircle(Scene):
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

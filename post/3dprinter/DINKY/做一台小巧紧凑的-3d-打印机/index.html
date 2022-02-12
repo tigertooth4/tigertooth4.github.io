@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/dinky/%E5%81%9A%E4%B8%80%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%B4%A7%E5%87%91%E7%9A%84-3d-%E6%89%93%E5%8D%B0%E6%9C%BA/" />
@@ -52,22 +52,15 @@
 <meta property="og:title" content="做一台小巧紧凑的 3D 打印机" />
 <meta property="og:description" content="大约一年之前，为了给 LP 大人设计一款小巧的 3d 打印机，我萌生了这样一个念头：在将打印机做小巧的同时，到底能把打印机做的多紧凑？所谓『紧凑』，就是" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/dinky/%E5%81%9A%E4%B8%80%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%B4%A7%E5%87%91%E7%9A%84-3d-%E6%89%93%E5%8D%B0%E6%9C%BA/" />
-<meta property="article:published_time" content="2016-07-31T16:22:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-07-31T16:22:00&#43;00:00"/>
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/dinky/%E5%81%9A%E4%B8%80%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%B4%A7%E5%87%91%E7%9A%84-3d-%E6%89%93%E5%8D%B0%E6%9C%BA/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-07-31T16:22:00+00:00" />
+<meta property="article:modified_time" content="2016-07-31T16:22:00+00:00" />
 
 <meta itemprop="name" content="做一台小巧紧凑的 3D 打印机">
-<meta itemprop="description" content="大约一年之前，为了给 LP 大人设计一款小巧的 3d 打印机，我萌生了这样一个念头：在将打印机做小巧的同时，到底能把打印机做的多紧凑？所谓『紧凑』，就是">
-
-
-<meta itemprop="datePublished" content="2016-07-31T16:22:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-07-31T16:22:00&#43;00:00" />
+<meta itemprop="description" content="大约一年之前，为了给 LP 大人设计一款小巧的 3d 打印机，我萌生了这样一个念头：在将打印机做小巧的同时，到底能把打印机做的多紧凑？所谓『紧凑』，就是"><meta itemprop="datePublished" content="2016-07-31T16:22:00+00:00" />
+<meta itemprop="dateModified" content="2016-07-31T16:22:00+00:00" />
 <meta itemprop="wordCount" content="909">
-
-
-
-<meta itemprop="keywords" content="3dp,Ultimaker2,3dprinter,DINKY,DIY," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="3dp,Ultimaker2,3dprinter,DINKY,DIY," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="做一台小巧紧凑的 3D 打印机"/>
 <meta name="twitter:description" content="大约一年之前，为了给 LP 大人设计一款小巧的 3d 打印机，我萌生了这样一个念头：在将打印机做小巧的同时，到底能把打印机做的多紧凑？所谓『紧凑』，就是"/>
 
@@ -148,7 +141,7 @@
   <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
@@ -158,7 +151,6 @@
     
     <div class="post-content">
       <p>大约一年之前，为了给 LP 大人设计一款小巧的 3d 打印机，我萌生了这样一个念头：在将打印机做小巧的同时，到底能把打印机做的多紧凑？所谓『紧凑』，就是说打印机的『成型体积』（Build volume）和 『整机体积』(Printer volume)之比 『B/P』（简称 BP 比），要尽可能的大。为此，我做了一番调研，目前市场上一些知名的 FDM 打印机的 B/P 比值如下</p>
-
 <table>
 <thead>
 <tr>
@@ -168,7 +160,6 @@
 <th>B/P</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Ultimaker 2(+)</td>
@@ -176,84 +167,72 @@
 <td>342 x 357 x 388</td>
 <td>21.0%</td>
 </tr>
-
 <tr>
 <td>Ultimaker 2 extended</td>
 <td>223 x 223 x 305</td>
 <td>342 x 357 x 488</td>
 <td>25.5%</td>
 </tr>
-
 <tr>
 <td>Ultimaker 2 Go</td>
 <td>120 x 120 x 115</td>
 <td>258 x 250 x 287.5</td>
 <td>8.9%</td>
 </tr>
-
 <tr>
 <td>Makerbot Raplicator 5Gen</td>
 <td>252 x 199 x 150</td>
 <td>528 x 441 x 410</td>
 <td>7.9%</td>
 </tr>
-
 <tr>
 <td>Makerbot Z18</td>
 <td>300 x 305 x 457</td>
 <td>493 x 565 x 861</td>
 <td>17.4%</td>
 </tr>
-
 <tr>
 <td>Makerbot Raplicator Mini</td>
 <td>100 x 100 x 125</td>
 <td>295 x 310 x 381</td>
 <td>3.6%</td>
 </tr>
-
 <tr>
 <td>Makerbot Raplicator 2x</td>
 <td>246 x 152 x 155</td>
 <td>490 x 320 x 531</td>
 <td>7.0%</td>
 </tr>
-
 <tr>
 <td>LulzBot Mini</td>
 <td>152 x 152 x 158</td>
 <td>435 x 340 x 385</td>
 <td>6.4%</td>
 </tr>
-
 <tr>
 <td>LulzBot TAZ 6</td>
 <td>280 x 280 x 250</td>
 <td>660 x 520 x 520</td>
 <td>11.0%</td>
 </tr>
-
 <tr>
 <td>Zortrax M200</td>
 <td>200 x 200 x 180</td>
 <td>345 x 360 x 430</td>
 <td>13.5%</td>
 </tr>
-
 <tr>
 <td>Zortrax M300</td>
 <td>300 x 300 x 300</td>
 <td>490 x 490 x 590</td>
 <td>19.1%</td>
 </tr>
-
 <tr>
 <td>云+ （Cloud+）</td>
 <td>Φ180 x 200</td>
 <td>332 x 288 x 605</td>
 <td>17.6%</td>
 </tr>
-
 <tr>
 <td>DICE</td>
 <td>90 x 75 x 80</td>
@@ -262,21 +241,14 @@
 </tr>
 </tbody>
 </table>
-
-<hr />
-
+<hr>
 <p>PS：令人惊讶的是，作为 Delta 型的打印机，云+ 的 B/P 比竟比大多数笛卡尔坐标系的机器还要高！？
 可以看到，其实，打印机的尺寸越大是越容易做紧凑的（也就是高 B/P 比），毕竟非打印空间无非就是摆些结构件、电机之类的，这些尺寸不会很大。所以，相对来说，Ultimaker 系列在 B/P 比上是做的最好的，UM2 extended 居然达到了惊人的 25.5%！ 而在整体尺寸大致 300mm 左右的机型中，Ultimaker2 Go 的B/P 比也比较高，达到了 8% 左右。</p>
-
 <p>在研究了 Ultimaker 系列的机型结构以后，我在想怎样改进才能使打印体积控制在 100x100x100 mm^3 的同时，尽量能压缩整体体积，达到尽可能大的 B/P 比。</p>
-
 <p>为了达到这个目的，过程并不轻松，并不是简简单单把 UM2 的图纸等比例缩小就行，而是要几乎从头开始。为了节省出空间，我真是『寸土必争』，连 1mm 的得失都要仔细考虑。</p>
-
 <p>最后，我设计出了一台 B/P 比超大的微型打印机，与此同时，又在功能上没有妥协。这台打印机有 LCD 控制面板，SD 卡插槽，热床，打印头和打印件散热风扇，LED 照明等等。并且，还具有模块化的打印头，拆卸打印头只需要拧下两颗螺丝即可。我把这台打印机命名为 &ldquo;Dinky&rdquo;。</p>
-
 <p>Dinky 的有效成型体积为：125 x 113 x 140，外形尺寸为：271 x 235 x 289，B/P 比达到了将近 10.7%! 她有超过 200 个零件！下面是爆炸图一枚。</p>
-
-<p><img src="~/explod.png" alt="" /></p>
+<p><img src="~/explod.png" alt=""></p>
 
     </div>
 
@@ -361,7 +333,7 @@
     &copy; 
     
       2013 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
