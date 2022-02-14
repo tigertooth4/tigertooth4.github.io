@@ -1,156 +1,224 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器 - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器 | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="i2c, Cohesion3d, Remix, Marlin2.0, OLED, SSD1306, SH1106" />
+<meta name="description" content="在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器" />
+    </style>
+</noscript><meta property="og:title" content="为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器" />
 <meta property="og:description" content="在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-07-23T22:58:00+08:00" />
-<meta property="article:modified_time" content="2019-07-23T22:58:00+08:00" />
+<meta property="article:published_time" content="2019-07-23T22:58:00&#43;08:00" />
+<meta property="article:modified_time" content="2019-07-23T22:58:00&#43;08:00" />
 
-<meta itemprop="name" content="为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器">
-<meta itemprop="description" content="在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾"><meta itemprop="datePublished" content="2019-07-23T22:58:00+08:00" />
-<meta itemprop="dateModified" content="2019-07-23T22:58:00+08:00" />
-<meta itemprop="wordCount" content="2721">
-<meta itemprop="keywords" content="i2c,Cohesion3d,Remix,Marlin2.0,OLED,SSD1306,SH1106," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器"/>
 <meta name="twitter:description" content="在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器",
+      "item": "http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器",
+  "name": "为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器",
+  "description": "在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾",
+  "keywords": [
+    "i2c", "Cohesion3d", "Remix", "Marlin2.0", "OLED", "SSD1306", "SH1106"
+  ],
+  "articleBody": "在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾经也多次尝试 Smoothie 的固件，但现在想想，它的 SPI 接口代码可能是有问题的），而是改用了 Marlin 2.0。\n不要以为 Marlin是拥有最多用户的开源固件，就一定是最接近完美的。经我使用下来，发现 Marlin 2.0中的坑丝毫不比 Smoothieware 要少，但所幸 Marlin 会提供更丰富的接口种类（Smoothieware 甚至放弃了对 i2c接口的支持），代码的风格我也比较熟悉。下面就跟各位介绍介绍我是怎么爬完这些深坑的。\n由于 C3D 板子上的 SPI 接口被我设成了软 SPI，如果要使用 SPI 接口的 OLED 屏就必须和 TMC2130 的 SPI 分享 SPI，这又得费一番周折；于是，我果断放弃了 SPI接口，转而考虑 i2c 接口。注意到 C3D 这块板子的主控芯片是 LPC1769 （32位），而在Marlin 的硬件抽象层 HAL 中封装了对 LPC1768(9) 系列的硬、软件 SPI，以及硬件 i2c的支持（软 i2c 还在开发中)，因此理论上我只要买一块支持 i2c 接口的显示屏，连到我的 C3D板子上预留的硬件i2c接口，一切都应该顺理成章地完成了。而且，i2c接口的数据连接线理论说只要两条数据线就够了。但现实并不是这样美好，第一个大坑就隐藏在i2c 的接口位置。\n如果仔细查看 Marlin bugfix 2.0.x 的代码，可以发现，对不同类型的主板，Marlin 进行了封装（封装的意思就是具体的功能实现都放在 HAL（硬件抽象层）里面，外部预留的接口都是一致的。对 LPC1768 系列的 32 位板，HAL层有一个目录就称为 HAL_LPC1768。在这个目录之下，有个子目录u8g，这个目录就是负责图形图像的显示的。因此，我的 SH1106 OLED显示屏的一切相关操作，原则上说都应该在这个子目录里定义。\nHAL 中的坑 在 u8g 子目录中，有 HAL_LCD_I2C_routines.c 文件，此文件的作用是负责和 i2c slave设备的直接通信。即使作为非程序猿的我，稍加观察以后也发现了这个程序的问题：\nuint8_t u8g_i2c_start(uint8_t sla) { // send slave address and write bit  // Sometimes TX data ACK or NAK status is returned. That mean the start state didn't  // happen which means only the value of the slave address was send. Keep looping until  // the slave address and write bit are actually sent.  do{ _I2C_Stop(I2CDEV_M); // output stop state on I2C bus  _I2C_Start(I2CDEV_M); // output start state on I2C bus  while ((I2C_status != I2C_I2STAT_M_TX_START) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_RESTART) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_DAT_ACK) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_DAT_NACK)); //wait for start to be asserted  LPC_I2C1-I2CONCLR = I2C_I2CONCLR_STAC; // clear start state before tansmitting slave address  LPC_I2C1-I2DAT = I2CDEV_S_ADDR \u0026 I2C_I2DAT_BITMASK; // transmit slave address \u0026 write bit  LPC_I2C1-I2CONSET = I2C_I2CONSET_AA; LPC_I2C1-I2CONCLR = I2C_I2CONCLR_SIC; while ((I2C_status != I2C_I2STAT_M_TX_SLAW_ACK) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_SLAW_NACK) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_DAT_ACK) \u0026\u0026 (I2C_status != I2C_I2STAT_M_TX_DAT_NACK)); //wait for slaw to finish  }while ( (I2C_status == I2C_I2STAT_M_TX_DAT_ACK) || (I2C_status == I2C_I2STAT_M_TX_DAT_NACK)); return 1; } 看到没，这个函数的参数居然没有在函数体中被用到！这个函数的作用是将连接到主板的i2c 设备启动，显然，传递的参数是设备的地址，不知道地址怎么启动设备呢？\n仔细再看，可以发现，除了这个问题之外，程序中段出现的 LPC_I2C1也很突兀。仔细一查，发现. LPC1768/1769 系列的芯片有三个硬件 i2c 接口，分别称为LPC_I2C0, LPC_I2C1,和 LPC_I2C2。在先前的代码 ：\n#define U8G_I2C_OPT_FAST 16 // from u8g.h  #define USEDI2CDEV_M 1  #define I2CDEV_S_ADDR 0x78 // from SSD1306 //actual address is 0x3C - shift left 1 with LSB set to 0 to indicate write  #define BUFFER_SIZE 0x1 // only do single byte transfers with LCDs  #if (USEDI2CDEV_M == 0)  #define I2CDEV_M LPC_I2C0 #elif (USEDI2CDEV_M == 1)  #define I2CDEV_M LPC_I2C1 #elif (USEDI2CDEV_M == 2)  #define I2CDEV_M LPC_I2C2 #else  #error \"Master I2C device not defined!\" #endif  PINSEL_CFG_Type PinCfg; I2C_M_SETUP_Type transferMCfg; #define I2C_status (LPC_I2C1-I2STAT \u0026 I2C_STAT_CODE_BITMASK) 中其实提到了，USEDI2CDEV_M 这个变量可以决定选择用哪个 i2c接口。这下就明白了，原来 marlin 给我们留了个坑在这里！如果你的硬件 i2c没有选第一个接口，那么 99.999% 的可能性是你没法看到接入的 i2c设备能够正常运行了（因为所有的信息都会默认使用 LPC_I2C1 传输。）\n看到这里，心里豁然开朗，因为稍稍改动一下，这部分的代码是可以纠正的。\n具体的纠正，请见我的源代码仓库 (http://www.github.com/tigertooth4/)\n纠正屏幕显示错乱的问题 在成功让 i2c 的屏幕显示出文字后，我又发现了新的问题。当屏幕正常工作一段时间后，最后一行的文字会有一部分跑到屏幕的顶端去，然后就保持这个错乱的状态直到重新启动。上网搜索了一通，发现有个叫 obertr0n 的 GitHub 用户也有同样的问题，可惜的是当时我对 u8g 的代码还不够熟悉，没能注意到他的代码实际上可以解决我的问题。\n于是，在继续在网上游游荡荡寻找了好久后，终于另一天另外一个 ＧitHub 用户也提出了这个问题。他发了一个 issue 后，获得了 Marlin 大佬的注意。这位用户在提出问题之后，就很快提出了解决方案，在 i2c 屏幕的 SDA, SCL pin 上增加两个 pull-up 电阻。看到这个解决方法，我赶紧自学了一下 i2c bus 的 pull-up 电阻是什么，为什么需要它。然后直接翻出家里的 3k 电阻 pull-up 了一把，没想到屏幕一下子变黑不工作了。于是又在网上继续恶补了一下 pull-up 电阻的原理，发现 pull-up 电阻是有取值范围的。GitHub 上建议的 pull-up 电阻是 4.7k，但我家里现有的电阻没有这个阻值。于是我又尝试了一下 10k 和 5k 的电阻，兴奋的期待屏幕可以恢复正常。没想到，两个阻值的电阻都还是会出现屏幕错乱的问题。这两次失败让我非常失望。\n回头又去翻看 GitHub 上关于这个 bug 的 issue，竟发现原来提出这个问题的那位网友也提到他下定论太早了， pull-up 电阻尝试也不能解决他的问题。惊喜之余又感到庆幸终于不是一个人在战斗了。Marlin 大佬建议看一下 u8g HAL 这部分的代码，尝试修改下，看看有什么后果，即使坏的结果也没所谓。于是我又把 HAL，u8g 这部分的逻辑重新捋了几遍。并尝试用基于 LPC1789 的 mbed 开发板的 i2c 代码对 Marlin 的 i2c 部分进行了检查，发现 Marlin 的这部分确实比较粗糙，有些函数中的分支判断并不完整。我把 mbed 开发板的 i2c 代码片段移植到 Marlin 后，发现仍然不能解决问题。于是，我又把思路转向了 u8g 部分，这部分是负责图形图像输出的。我研究了 Marlin 的 u8g 部分（这部分分散在几个文件中，例如 ultralcd.cpp, ultra_dogm.cpp，等等）。我尝试注释掉了 u8g 的主循环中的两行代码，这两行代码会取消掉除 Splash 图像之外的所有图形输出。这么改了以后，屏幕的问题也消失了。那么，是不是能确定问题出现在 u8g 部分呢？另一个 GitHub 网友指出这并不能断定问题出现在 u8g，因为这时候只有一帧图像。\n又过了几天，最开始的那位 GitHub 网友提到 obertr0n 的 Ｍarlin 可以解决屏幕错乱的问题，但是把 obertr0n 所改动的两个文件 - HAL_LCD_I2C_routines.c u8g_com_HAL_LPC1768_ssd_hw_i2c.cpp 贴到他的 Marlin 之后，屏幕依然存在问题，所以他怀疑他的 Marlin 的其它部分还有问题。我其实没太认真读他的帖子，惊喜之余，赶快拿出 FileMerge.app ，把 obertr0n 的 这两个文件和我的版本比较了一下，果然发现在 u8g_com_HAL_LPC1768_ssd_hw_i2c.cpp 中找到我的版本里面缺失了的两行：\ncase U8G_COM_MSG_ADDRESS: /* define cmd (arg_val = 0) or data mode (arg_val = 1) */ u8g-pin_list[U8G_PI_A0_STATE] = arg_val; u8g-pin_list[U8G_PI_SET_A0] = 1; /* force a0 to set again */ // 缺失以下两行，需要添加上，以使屏幕正常显示  u8g_i2c_start(0); // send slave address and write bit  u8g_i2c_send_byte(arg_val ? 0x40 : 0x80); // Write to ? Graphics DRAM mode : Command mode 贴到我的版本的 Marlin 之后，果然屏幕恢复正常了！\nEncoder 的坑 原以为，屏幕的显示是最大的问题，解决了屏幕，配一个编码器不是个问题，没想到买来编码器按照 pin_Cohesion3d_remix.h 的针脚定义接好线以后，编码器并不工作。\n经过对 Marlin 代码进一步研究后，发现 Marlin 的主屏幕就是显示状态，要想进入菜单，让编码器生效，我所定义的屏幕必须要定义过 HAS_LCD_MENU 这个宏。而支持这个宏的屏幕，必须是一块 ULTIPANEL。\n于是，我在 Conditionals_LCD.h 文件中增加了两行代码：\n#elif ANY(SH1106_STANDALONE,SSD1306_STANDALONE) #define ULTIPANEL // to enable rotary encoder (actually invoke NEWPANEL option) 这样定义后，编码器果然工作了。\n最终的连线图 Marlin 代码 见 我的 Marlin . 关于我对 Marlin 中代码修改的细节，将在今后的文章中进一步介绍。\n",
+  "wordCount" : "2721",
+  "inLanguage": "zh-cn",
+  "datePublished": "2019-07-23T22:58:00+08:00",
+  "dateModified": "2019-07-23T22:58:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器
+    </h1>
+    <div class="post-meta"><span title='2019-07-23 22:58:00 +0800 CST'>July 23, 2019</span>
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2019-07-23 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix
+  </header> 
+  <div class="post-content"><p>在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix
 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix
 （以下简称 C3D）的原生 Smoothieware 固件（曾经也多次尝试 Smoothie
 的固件，但现在想想，它的 SPI 接口代码可能是有问题的），而是改用了 Marlin 2.0。</p>
@@ -161,7 +229,7 @@
 接口的显示屏，连到我的 C3D板子上预留的硬件i2c接口，一切都应该顺理成章地完成了。而且，i2c接口的数据连接线理论说只要两条数据线就够了。但现实并不是这样美好，第一个大坑就隐藏在i2c 的接口位置。</p>
 <p>如果仔细查看 Marlin bugfix 2.0.x 的代码，可以发现，对不同类型的主板，Marlin
 进行了封装（封装的意思就是具体的功能实现都放在 HAL（硬件抽象层）里面，外部预留的接口都是一致的。对 LPC1768 系列的 32 位板，HAL层有一个目录就称为 HAL_LPC1768。在这个目录之下，有个子目录u8g，这个目录就是负责图形图像的显示的。因此，我的 SH1106 OLED显示屏的一切相关操作，原则上说都应该在这个子目录里定义。</p>
-<h1 id="hal-中的坑">HAL 中的坑</h1>
+<h1 id="hal-中的坑">HAL 中的坑<a hidden class="anchor" aria-hidden="true" href="#hal-中的坑">#</a></h1>
 <p>在 u8g 子目录中，有 HAL_LCD_I2C_routines.c 文件，此文件的作用是负责和 i2c slave设备的直接通信。即使作为非程序猿的我，稍加观察以后也发现了这个程序的问题：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">uint8_t</span> <span style="color:#a6e22e">u8g_i2c_start</span>(<span style="color:#66d9ef">uint8_t</span> sla) {  <span style="color:#75715e">// send slave address and write bit
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// Sometimes TX data ACK or NAK status is returned.  That mean the start state didn&#39;t
@@ -213,7 +281,7 @@ I2C_M_SETUP_Type transferMCfg;
 </span></code></pre></div><p>中其实提到了，USEDI2CDEV_M 这个变量可以决定选择用哪个 i2c接口。这下就明白了，原来 marlin 给我们留了个坑在这里！如果你的硬件 i2c没有选第一个接口，那么 99.999% 的可能性是你没法看到接入的 i2c设备能够正常运行了（因为所有的信息都会默认使用 LPC_I2C1 传输。）</p>
 <p>看到这里，心里豁然开朗，因为稍稍改动一下，这部分的代码是可以纠正的。</p>
 <p>具体的纠正，请见我的源代码仓库 (<a href="http://www.github.com/tigertooth4/">http://www.github.com/tigertooth4/</a>)</p>
-<h1 id="纠正屏幕显示错乱的问题">纠正屏幕显示错乱的问题</h1>
+<h1 id="纠正屏幕显示错乱的问题">纠正屏幕显示错乱的问题<a hidden class="anchor" aria-hidden="true" href="#纠正屏幕显示错乱的问题">#</a></h1>
 <p>在成功让 i2c
 的屏幕显示出文字后，我又发现了新的问题。当屏幕正常工作一段时间后，最后一行的文字会有一部分跑到屏幕的顶端去，然后就保持这个错乱的状态直到重新启动。上网搜索了一通，发现有个叫
 obertr0n 的 GitHub 用户也有同样的问题，可惜的是当时我对 u8g
@@ -257,7 +325,7 @@ u8g，因为这时候只有一帧图像。</p>
 </span><span style="color:#75715e"></span>      u8g_i2c_start(<span style="color:#ae81ff">0</span>); <span style="color:#75715e">// send slave address and write bit
 </span><span style="color:#75715e"></span>      u8g_i2c_send_byte(arg_val <span style="color:#f92672">?</span> <span style="color:#ae81ff">0x40</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0x80</span>);  <span style="color:#75715e">// Write to ? Graphics DRAM mode : Command mode
 </span></code></pre></div><p>贴到我的版本的 Marlin 之后，果然屏幕恢复正常了！</p>
-<h1 id="encoder-的坑">Encoder 的坑</h1>
+<h1 id="encoder-的坑">Encoder 的坑<a hidden class="anchor" aria-hidden="true" href="#encoder-的坑">#</a></h1>
 <p>原以为，屏幕的显示是最大的问题，解决了屏幕，配一个编码器不是个问题，没想到买来编码器按照
 pin_Cohesion3d_remix.h 的针脚定义接好线以后，编码器并不工作。</p>
 <p>经过对 Marlin 代码进一步研究后，发现 Marlin
@@ -267,149 +335,97 @@ HAS_LCD_MENU 这个宏。而支持这个宏的屏幕，必须是一块 ULTIPANEL
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#elif ANY(SH1106_STANDALONE,SSD1306_STANDALONE)
 </span><span style="color:#75715e">#define ULTIPANEL  </span><span style="color:#75715e">// to enable rotary encoder (actually invoke NEWPANEL option)
 </span></code></pre></div><p>这样定义后，编码器果然工作了。</p>
-<h1 id="最终的连线图">最终的连线图</h1>
-<p><img src="./images/wiring.png" alt="连线图"></p>
-<h1 id="marlin-代码">Marlin 代码</h1>
+<h1 id="最终的连线图">最终的连线图<a hidden class="anchor" aria-hidden="true" href="#最终的连线图">#</a></h1>
+<p><img loading="lazy" src="./images/wiring.png" alt="连线图"  />
+</p>
+<h1 id="marlin-代码">Marlin 代码<a hidden class="anchor" aria-hidden="true" href="#marlin-代码">#</a></h1>
 <p>见 <a href="https://github.com/tigertooth4/Marlin/tree/bugfix-2.0.x">我的 Marlin </a>. 关于我对 Marlin 中代码修改的细节，将在今后的文章中进一步介绍。</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2019-07-23</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/i2c/">i2c</a>
-          
-          <a href="/tags/cohesion3d/">Cohesion3d</a>
-          
-          <a href="/tags/remix/">Remix</a>
-          
-          <a href="/tags/marlin2.0/">Marlin2.0</a>
-          
-          <a href="/tags/oled/">OLED</a>
-          
-          <a href="/tags/ssd1306/">SSD1306</a>
-          
-          <a href="/tags/sh1106/">SH1106</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Weyl 的等分布定理与数项级数的收敛性</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2019-04/galois-theory-in-a-naive-point-of-view/">
-            <span class="next-text nav-default">Galois理论：一篇粗浅的介绍</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/i2c/">i2c</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/cohesion3d/">Cohesion3d</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/remix/">Remix</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/marlin2.0/">Marlin2.0</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/oled/">OLED</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/ssd1306/">SSD1306</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/sh1106/">SH1106</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

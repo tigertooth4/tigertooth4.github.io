@@ -1,173 +1,244 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="" />
+    </style>
+</noscript><meta property="og:title" content="" />
 <meta property="og:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/" /><meta property="article:section" content="post" />
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是">
-
-<meta itemprop="wordCount" content="1739">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public 今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样： 但是",
+  "keywords": [
+    
+  ],
+  "articleBody": "Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate Date: 2014-8-7 16:48:00 Tags: 3dp, Kossel, DIY, Math Status: public\n今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这 样：\n但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！\n又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计 很心水，于是就自己想法实现了一下：\n对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4 螺母的位置，可以说固定住是绝对没有问题的。\n其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：\n假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的， 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以\n\\rho + \\delta \\geq r_0 + r_1; 另一方面，当喷嘴走到玻璃板近端时，有\n\\rho^2 = (r_0 -r_1-\\delta)^2+ z_i^2; 事实上，假设喷嘴停留在距中心 x 处，则有\n(x - \\delta + r_0)^2 + z_i^2 = \\rho^2. 解出 x 与 zᵢ 的关系后，可以看到：当 zᵢ 变化 Δ 时，x 相应地会变化 dx/dzᵢ Δ，因此若想使得定位更精确的 话，我们自然要求 dx/dzᵢ 要不太大（例如与 1 相当，越小越好），根据这个道理，我们来计算\n|\\frac{dx}{dz_i}| = \\frac{z_i}{|x-\\delta+r_0|} = 1/\\tan(\\theta(x)), 其中，θ(x) 是连杆与 zᵢ 轴的夹角。也就是说，定位精度与 tan(θ) 的大小有关，当这个值越大时，定位精度就 越高；所以，在越远离 z-轴的区域，定位精度是越高的；而在离 z-轴 距离最近的区域，定位精度越低。那么，我 们可以计算出，要想使得 Kossel 打印机能够达到一定的定位精度， θ 角最小不能小于多少：\n假设我们要求的整体定位精度为 0.5mm (注意：对 Delta 型打印机来说，在打印区域的边缘，这已经是一个不错的 定位精度了；某些市面上 Delta 打印机所谓精度能达到 50 微米，应该值得是 z-轴（堆积方向）的定位精度，而 不是水平方向的（再次强调：Delta 型打印机各个区域的水平定位精度是不同的，这与 XYZ 笛卡尔坐标的打印机有 很大区别）)。\n那么，在定位精度最差的玻璃板近端（θ=θ₀最小），定位精度也要有 0.5mm。注意到如果我们采用的是 1.8° 步 进电机，配 5mm 半径的同步齿轮的话，当步进电机转动 1.8°时，同步带会移动 π/100*5 mm，这就是zᵢ 运动的 距离了 Δ，所以 x 方向运动的距离应该是：Δ/tan(θ₀)≤ 0.5, 可以算出 θ₀ ≥ arctan(π/10) = 17.4406°.\n根据上述计算，我们对杆长就有一个估计了：\nr_0+r_1-\\delta\\leq\\rho\\leq (r_0-r_1-\\delta)\\csc(\\theta_0) =(r_0-r_1-\\delta)\\sqrt{1+\\frac{100}{\\pi^2}} 综合上述几个关系，我们得到：\n\\rho \\leq \\frac{2\\sqrt{1+ (A/\\Delta)^2}}{\\sqrt{1+ (A/\\Delta)^2} + 1}(r_0-\\delta). 其中 A = 0.5mm 是 x 方向的定位精度, Δ 是 z 方向的最小步长（也可以理解为 z 方向的定位精度）一般情况下 A » Δ，因此上式中的分式的比值会小于并接近于 2.\nr_1 \\le \\frac{\\sqrt{1+ (A/\\Delta)^2}-1}{\\sqrt{1+ (A/\\Delta)^2}+1} (r_0-\\delta). 根据这个测算结果，我计划做的这台 Kossel XL, 其铝框架部分长度为 330mm, 底边三角形的中垂线长度如果按照 310mm 计算，则 r₀ 约等于 210mm, 效应器的半径 δ 若按照 35mm 计算，则杆长约为 ρ = 270mm, 而玻璃板的半 径约为 r₁ = 94mm. 杆长和我之前用 Excel 表计算的长度 264mm 很接近。这时 x 方向的定位精度可达 0.5mm.\n 【更新】这两个公式说明：\n 如果想在其他条件不变的情况下让定位精度更高的话，那么必须采用更短的连杆以及更小的打印面积； 如果采用 0.9° 步进电机的话，在保证精度不变的情况下，连杆长度和打印面积都可以适当增加； 当喷嘴移动到玻璃板边缘时的连杆与铅垂方向夹角决定了边缘处的精度；所以当你看到市面上的Delta 3D 打印机 时，可以观察它的这个角度，来判断它的设计是否合理。   【再次更新】目前所做的仅仅是一个非常粗略的一维近似，实际的运动是二维的，涉及到三个连杆的联动。目前， 我还不清楚当三个连杆联动时，精度是由那个连杆决定的（而且令我不解的是，三根杆所决定的定位精度是有很大 差别的，这种情况下三根 z 轴上滑轨的运动，电机的运动是如何配合决定定位情况的？）这是我没有将二维运动精 度分析放上来的原因。\n",
+  "wordCount" : "1739",
+  "inLanguage": "zh-cn",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_12/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      
+    </h1>
+    <div class="post-meta">
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title"></h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate
+  </header> 
+  <div class="post-content"><p>Title: Kossel XL 构建记 (12) Y shape carriage and accuracy etimate
 Date: 2014-8-7 16:48:00
 Tags: 3dp, Kossel, DIY, Math
 Status: public</p>
 <p>今天宅在家里，修改着 Y 型滑轨的方案。起先我总觉得设计一款可以调整同步带松紧度的，例如这
 样：</p>
-<p><img src="/3DP/_images/Y-C-Shorter.png" alt=""></p>
+<p><img loading="lazy" src="/3DP/_images/Y-C-Shorter.png" alt=""  />
+</p>
 <p>但是发现，已经有不少可以调整的空间啊！例如顶部的锁紧螺丝，还有手动拉紧皮带固定，还有锁紧弹簧，想想再
 增加一个锁紧装置除了增加复杂度以外实在没有必要，于是作罢！</p>
 <p>又回来折腾 Y 型滑轨的外形。总觉得打印质量不令人满意，原因就是那个 Y 滑轨上向下倾斜的部分倒置的时候打
 印没有开支撑（但是支撑其实也不能完全解决问题）。又对 YT 上看到的 Cerberus 的 Y 型滑轨三个腿的支柱设计
 很心水，于是就自己想法实现了一下：</p>
-<p><img src="/3DP/_images/Y-star-pilliars.png" alt=""></p>
+<p><img loading="lazy" src="/3DP/_images/Y-star-pilliars.png" alt=""  />
+</p>
 <p>对目前这个方案还比较满意，强度应该是足够了，M4 固定滑轮用的螺丝贯穿 Y 字形的支架，并且在上部留有 M4
 螺母的位置，可以说固定住是绝对没有问题的。</p>
 <p>其实这两天组装毫无进展的原因主要是我计算了 Kossel 能够达到的精度：其实 Kossel （或者 Delta 系）打印机
 的运作原理很简单，用勾股定理就可以计算清楚. 为简单起见，我就不用电脑作图了：</p>
-<p><img src="/3DP/_images/DSC00423.jpg" alt=""></p>
+<p><img loading="lazy" src="/3DP/_images/DSC00423.jpg" alt=""  />
+</p>
 <p>假设我们单根杆的长度为 ρ, 滑轨对应的轴（应该看与滑块上连杆的链接处垂直的轴）为 zᵢ, (i=1,2,3). zᵢ 轴
 到底面中心的距离为 r₀, 底面玻璃盘的半径为 r₁, 如果有效应器的话，连杆的另一端应该是连接在效应器上的，
 假设连接点到效应器中心的距离是 δ, 那么很显然，连杆要能达到玻璃板上的最远端，所以</p>
@@ -214,128 +285,82 @@ A &raquo; Δ，因此上式中的分式的比值会小于并接近于 2.</p>
 差别的，这种情况下三根 z 轴上滑轨的运动，电机的运动是如何配合决定定位情况的？）这是我没有将二维运动精
 度分析放上来的原因。</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">0001-01-01</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/3dprinter/kosselxl/kossel_xl_building_log_10/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/3dprinter/kosselxl/kossel_xl_building_log_29/">
-            <span class="next-text nav-default"></span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

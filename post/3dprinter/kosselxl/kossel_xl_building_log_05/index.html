@@ -1,156 +1,224 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="" />
+    </style>
+</noscript><meta property="og:title" content="" />
 <meta property="og:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/" /><meta property="article:section" content="post" />
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja">
-
-<meta itemprop="wordCount" content="1030">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public 今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。 其实，昨天完成了 Kossel 框架的修改，基于：Ja",
+  "keywords": [
+    
+  ],
+  "articleBody": "Title: Kossel XL 构建记 (5) Kossel frame decision, design goals Date: 2014-7-28 15:40:00 Tags: 3dp, Kossel, DIY, MIY Status: public\n今天学了个新词汇：MIY (make it yourself). 昨天因为出去吃饭没有记录。\n其实，昨天完成了 Kossel 框架的修改，基于：Jaydmdigital@GitHub，使用 2020 框架铝。他是基于 Johann 的设计。要说 Johann 的设计其实已经顾及到了铝材的尺寸，只要铝材相应的 Channel_deep 和 Channel_width 就可以了。在 Jaydmdigital 的代码中，这两个参数没有修改，而是绕过重新定义了两个新的参数 fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝材，因此我又做了调整。另外一处关键的 修改是 frame-motor 上的文字。之前是 Kossel。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：Kossel XL. XL 意思是 extra large，当然指的 我的机器尺寸会比较大。另外，XL 还是我的名字（以及mvip名字）的缩写，发音还像 excel (excellant). 最后在 OpenSCAD 中做出图来是这样：顺便说说 Kossel XL 的设计目标，有以下几点：\n 能够达到我现在这台 Prusa i3 的打印尺寸，即约 200x200x200 mm³，同时又可以放在桌面上；由于 Delta 打 印机的自身结构，要想达到这个尺寸，计算可知框架需要的大致尺寸，最后我选择的尺寸为：330x650，其中 330mm 为底边三角形长度，650mm 是大致高度。具体打印尺寸可以看 Johann 的 Excel 表格，我已经转换成了 Numbers 文件，见 这里。 用铝框架本身做导轨，不使用线性滑轨（为节约成本）。 挤出头 (hotend) 部分要方便拆卸或者更（升）换（级），以便堵头时的清理。为此，考虑使用磁关节连接吊台 （effector）和吊臂（rods）, 这也是 Kossel 800 和 ATOM 使用的方案；使用线缆插头（连接器）连接吊台上 的器件。 无探针的平台自调平（Probeless auto-levelling）：最近饱受堵头之苦，大部分情况都是热床和挤出头靠的太 近了，使得耗材无法被挤出…… 我喜欢机械开关的方式，所以最可能的选择是利用挤出头作为探针，这方面的 设计在 google 论坛和 github 上都可以找到，但我发现，实际打印出来的模型并不令人满意（要么是关节不灵 活或无法触发微动开关；要么是整个设计强度不够）。ATOM 采用了自己的设计实现，但网上只能找到基座的 STL 文件，活动部分无法找到。看来只能自己动手对现有的设计做修改了。 简洁、布线合理、Bowden 管要尽可能短（因为 Bowden 的远端寄出方式经常会浪费掉和 Bowden 管同样长度的 耗材）因此好的解决方式也许是把挤出机吊在框架的中部位置（或者顶部）？具体设计方案还未确定。  最终配色方案会是这样（说实话原色铝合金配什么都不是太好看了）和分解图：  UPDATE: 在 Prusa i3 上把框架打出来了，打印质量还不错！",
+  "wordCount" : "1030",
+  "inLanguage": "zh-cn",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_05/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      
+    </h1>
+    <div class="post-meta">
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title"></h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>Title: Kossel XL 构建记 (5) Kossel frame decision, design goals
+  </header> 
+  <div class="post-content"><p>Title: Kossel XL 构建记 (5) Kossel frame decision, design goals
 Date: 2014-7-28 15:40:00
 Tags: 3dp, Kossel, DIY, MIY
 Status: public</p>
@@ -162,7 +230,8 @@ fin_w 和 fin_d。Jaydmdigital 的版本这两个参数不适合 2020 国标铝�
 修改是 frame-motor 上的文字。之前是 <em>Kossel</em>。但是因为我正做的这台是基于 2020 铝的，而且要根据我的要
 求做很多修改，因此我就改了一个更适合我的 MIY 的名字：<em>Kossel XL</em>. <em>XL</em> 意思是 <em>extra large</em>，当然指的
 我的机器尺寸会比较大。另外，<em>XL</em> 还是我的名字<!-- raw HTML omitted -->（以及mvip名字）<!-- raw HTML omitted --> 的缩写，发音还像 excel
-(excellant). 最后在 OpenSCAD 中做出图来是这样：<img src="/3DP/_images/frame_motor.png" alt=""></p>
+(excellant). 最后在 OpenSCAD 中做出图来是这样：<img loading="lazy" src="/3DP/_images/frame_motor.png" alt=""  />
+</p>
 <p>顺便说说 Kossel XL 的设计目标，有以下几点：</p>
 <ol>
 <li>能够达到我现在这台 Prusa i3 的打印尺寸，即约 200x200x200 mm³，同时又可以放在桌面上；由于 Delta 打
@@ -181,132 +250,91 @@ STL 文件，活动部分无法找到。看来只能自己动手对现有的设�
 <li>简洁、布线合理、Bowden 管要尽可能短（因为 Bowden 的远端寄出方式经常会浪费掉和 Bowden 管同样长度的
 耗材）因此好的解决方式也许是把挤出机吊在框架的中部位置（或者顶部）？具体设计方案还未确定。</li>
 </ol>
-<p>最终配色方案会是这样（说实话原色铝合金配什么都不是太好看了）<img src="/3DP/_images/blueprint.png" alt=""> 和分解图： <img src="/3DP/_images/blueprint-exploded.png" alt=""></p>
+<p>最终配色方案会是这样（说实话原色铝合金配什么都不是太好看了）<img loading="lazy" src="/3DP/_images/blueprint.png" alt=""  />
+ 和分解图： <img loading="lazy" src="/3DP/_images/blueprint-exploded.png" alt=""  />
+</p>
 <hr>
-<p>UPDATE: 在 Prusa i3 上把框架打出来了，打印质量还不错！<img src="/3DP/_images/DSC00379.jpg" alt=""> <img src="/3DP/_images/DSC00380.jpg" alt=""> <img src="/3DP/_images/DSC00381.jpg" alt=""></p>
+<p>UPDATE: 在 Prusa i3 上把框架打出来了，打印质量还不错！<img loading="lazy" src="/3DP/_images/DSC00379.jpg" alt=""  />
+ <img loading="lazy" src="/3DP/_images/DSC00380.jpg" alt=""  />
+ <img loading="lazy" src="/3DP/_images/DSC00381.jpg" alt=""  />
+</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">0001-01-01</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/3dmodeling/todays-project-knot/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default"></span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/3dprinter/kosselxl/kossel_xl_building_log_10/">
-            <span class="next-text nav-default"></span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

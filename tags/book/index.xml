@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Book on 思｜製 - A guy&#39;s thinking and making</title>
+    <title>Book on 思｜制 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/tags/book/</link>
-    <description>Recent content in Book on 思｜製 - A guy&#39;s thinking and making</description>
+    <description>Recent content in Book on 思｜制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 25 Nov 2014 17:47:00 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/book/index.xml" rel="self" type="application/rss+xml" />

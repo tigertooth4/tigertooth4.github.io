@@ -1,169 +1,231 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Online FriCAS Notebooks (ft. Jupyter Notebook) - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Online FriCAS Notebooks (ft. Jupyter Notebook) | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="Math, CAS, FriCAS, Online, Remote, 日精一技" />
+<meta name="description" content="1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="Online FriCAS Notebooks (ft. Jupyter Notebook)" />
+    </style>
+</noscript><meta property="og:title" content="Online FriCAS Notebooks (ft. Jupyter Notebook)" />
 <meta property="og:description" content="1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-01-28T10:07:00+08:00" />
-<meta property="article:modified_time" content="2022-01-28T10:07:00+08:00" />
+<meta property="article:published_time" content="2022-01-28T10:07:00&#43;08:00" />
+<meta property="article:modified_time" content="2022-01-28T10:07:00&#43;08:00" />
 
-<meta itemprop="name" content="Online FriCAS Notebooks (ft. Jupyter Notebook)">
-<meta itemprop="description" content="1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he"><meta itemprop="datePublished" content="2022-01-28T10:07:00+08:00" />
-<meta itemprop="dateModified" content="2022-01-28T10:07:00+08:00" />
-<meta itemprop="wordCount" content="749">
-<meta itemprop="keywords" content="Math,CAS,FriCAS,Online,Remote,日精一技," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Online FriCAS Notebooks (ft. Jupyter Notebook)"/>
 <meta name="twitter:description" content="1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Online FriCAS Notebooks (ft. Jupyter Notebook)",
+      "item": "http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Online FriCAS Notebooks (ft. Jupyter Notebook)",
+  "name": "Online FriCAS Notebooks (ft. Jupyter Notebook)",
+  "description": "1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now. Here’s the instruction to run jFriCAS on Ubuntu. I’ve changed to AliYun afterwards, he",
+  "keywords": [
+    "Math", "CAS", "FriCAS", "Online", "Remote", "日精一技"
+  ],
+  "articleBody": "1. Remote Computation Service I selected Ubuntu Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now.\nHere’s the instruction to run jFriCAS on Ubuntu.\n\nI’ve changed to AliYun afterwards, here’s the AliYun application info.\n【阿里云】尊敬的用户：您的云服务器ECS创建成功（实例名称：，公网IP：..150.204）。系统用户名： root；若您忘记或未设置密码可进入ECS控制台-实例列表-重置密码。如您购买了数据盘请在实例创建后手动磁盘格式化分区，更多信息请查看站内信或邮件。\n2. Installation Steps 2.1 Install jFriCAS and Jupyter   Install Python3\nsudo apt install python3   Install Pip3\nsudo apt install python3-pip   Install ASDF\nsudo apt install cl-asdf   Install Hunchentoot Webserver\nsudo apt install cl-hunchentoot   Install Jupyter\nsudo apt install jupyter   Install jFriCAS from PyPI\npip3 install jfricas   Install FriCAS I have noticed the installation must be done by compile from the source. Since the available Debian build was not based on sbcl.\n~~apt install fricas~~   Customize Jupyter notebook. See the following page for detail.\nCustomize your Jupyter Notebook Theme in 2 lines of code\npip3 install jupyterthemes I found the following creates some satisfied result:\n!jt -t solarizedl -f firacode -fs 9 -tf georgiaserif -tfs 11 -mathfs 100 -T -N -kl   2.2 Add New Sudoer   First, we have to add a new user to the linux system\nadduser lxj   Add user to the sudoer group\nusermod -aG sudo lxj   Verify the user groups\ngroups lxj   Verify the sudo access\nsu - lxj   2.3 Compile FriCAS from source   Install git tools\napt install git   git pull the FriCAS source file in lxj’s directory (not in root’s home)\ngit clone --depth 1 https://github.com/fricas/fricas.git In my case, the git clone command failed. So I just use wget with the source link of FriCAS 1.3.7-full.tar.bz2. And extract the file with\ntar -xf ./fricas-1.3.7-full.tar.bz2   Install libx11 libs, xvfb, gimp-dev tool, texlive, dvipng, Sphinx\nsudo apt install libx11-dev libxt-dev libice-dev \\  libsm-dev libxau-dev libxdmcp-dev libxpm-dev sudo apt install xvfb sudo apt install libgmp-dev sudo apt install texlive dvipng pip3 install -U Sphinx   Make a directory called fr-build, and build fricas into that directory, install it in /usr/local/\nmkdir fr-build cd fr-build ../fricas-1.3.7/configure --with-lisp=\"sbcl\" --enable-gmp make \u0026\u0026 sudo make install   3. Running Jupyter Remotely As a Service This part will configure the Jupyter Environment for Remote Access\n  Generate Jupyter configuration file in the newuser account’s home directory\njupyter notebook --generate-config   Add new user password to the notebook\njupyter notebook password   Edit the configuration file for remote access\nvim ~/.jupyter/jupyter_notebook_config.py Input the following contents in the beginning of the file\nc.NotebookApp.ip='*' # 代表任意ip是都可以访问jupyter c.NotebookApp.notebook_dir='/home/lxj/jupyter' # notebook的工作目录，可以自己的实际情况修改，注意要确保目录存在 c.NotebookApp.open_browser = False # 不打开浏览器 c.NotebookApp.port =8888 #可自行指定一个端口, 访问时使用该端口   Configure firewall rules for port accessing in your server side, then type (according to the following link)\nSBCL_HOME=/usr/lib/sbcl/ nohup jupyter notebook  jupyter.log 2\u00261 \u0026 to run jupyter notebook no hang up. And finally you can run jupyter remotely.\n  4. Setup Pseudo-differential Operator Computation Environment   **scp** ORESUS library to the server. I put the spad file in the jupyter directory under my home.\nscp ./ORESUS-patched.spad lxj@xxx.xxx.xxx.xxx:/home/lxj/jupyter   Open this Kuperschmidt deformation notebook to try 😄\n  References   Here’s the official page for deploying jupyter notebook\nRunning a notebook server - Jupyter Notebook 6.4.8 documentation\n  ",
+  "wordCount" : "749",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-01-28T10:07:00+08:00",
+  "dateModified": "2022-01-28T10:07:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Online FriCAS Notebooks (ft. Jupyter Notebook)
+    </h1>
+    <div class="post-meta"><span title='2022-01-28 10:07:00 +0800 CST'>January 28, 2022</span>
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Online FriCAS Notebooks (ft. Jupyter Notebook)</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2022-01-28 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#21-install-jfricas-and-jupyter">2.1 Install jFriCAS and Jupyter</a></li>
-    <li><a href="#22-add-new-sudoer">2.2 Add New Sudoer</a></li>
-    <li><a href="#23-compile-fricas-from-source">2.3 Compile FriCAS from source</a></li>
-  </ul>
-</nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <h1 id="1-remote-computation-service">1. Remote Computation Service</h1>
+  </header> 
+  <div class="post-content"><h1 id="1-remote-computation-service">1. Remote Computation Service<a hidden class="anchor" aria-hidden="true" href="#1-remote-computation-service">#</a></h1>
 <p>I selected <del>Ubuntu</del> Debian Linux (Debian 11, the latest Debian Linux supported by the AliYun). The reason for selecting Debian over Ubuntu is the support for FriCAS is only available on Ubuntu 21.4, but Ubuntu 21.4 is not supported by AliYun for now.</p>
 <p>Here’s the instruction to run jFriCAS on Ubuntu.</p>
 <p><a href="https://jfricas.readthedocs.io/_/downloads/en/latest/pdf/"></a></p>
 <p>I’ve changed to AliYun afterwards, here’s the AliYun application info.</p>
 <p>【阿里云】尊敬的<strong><strong>用户：您的云服务器ECS创建成功（实例名称：</strong></strong>，公网IP：<em><strong>.</strong></em>.150.204）。系统用户名： root；若您忘记或未设置密码可进入ECS控制台-实例列表-重置密码。如您购买了数据盘请在实例创建后手动磁盘格式化分区，更多信息请查看站内信或邮件。</p>
-<h1 id="2-installation-steps">2. Installation Steps</h1>
-<h2 id="21-install-jfricas-and-jupyter">2.1 Install jFriCAS and Jupyter</h2>
+<h1 id="2-installation-steps">2. Installation Steps<a hidden class="anchor" aria-hidden="true" href="#2-installation-steps">#</a></h1>
+<h2 id="21-install-jfricas-and-jupyter">2.1 Install jFriCAS and Jupyter<a hidden class="anchor" aria-hidden="true" href="#21-install-jfricas-and-jupyter">#</a></h2>
 <ul>
 <li>
 <p>Install Python3</p>
@@ -201,7 +263,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">!jt -t solarizedl -f firacode -fs <span style="color:#ae81ff">9</span> -tf georgiaserif -tfs <span style="color:#ae81ff">11</span> -mathfs <span style="color:#ae81ff">100</span> -T -N -kl
 </code></pre></div></li>
 </ul>
-<h2 id="22-add-new-sudoer">2.2 Add New Sudoer</h2>
+<h2 id="22-add-new-sudoer">2.2 Add New Sudoer<a hidden class="anchor" aria-hidden="true" href="#22-add-new-sudoer">#</a></h2>
 <ul>
 <li>
 <p>First, we have to add a new user to the linux system</p>
@@ -220,7 +282,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - lxj
 </code></pre></div></li>
 </ul>
-<h2 id="23-compile-fricas-from-source">2.3 Compile FriCAS from source</h2>
+<h2 id="23-compile-fricas-from-source">2.3 Compile FriCAS from source<a hidden class="anchor" aria-hidden="true" href="#23-compile-fricas-from-source">#</a></h2>
 <ul>
 <li>
 <p>Install git tools</p>
@@ -249,7 +311,7 @@ cd fr-build
 make <span style="color:#f92672">&amp;&amp;</span> sudo make install
 </code></pre></div></li>
 </ul>
-<h1 id="3-running-jupyter-remotely-as-a-service">3. Running Jupyter Remotely As a Service</h1>
+<h1 id="3-running-jupyter-remotely-as-a-service">3. Running Jupyter Remotely As a Service<a hidden class="anchor" aria-hidden="true" href="#3-running-jupyter-remotely-as-a-service">#</a></h1>
 <p>This part will  configure the Jupyter Environment for Remote Access</p>
 <ul>
 <li>
@@ -275,7 +337,7 @@ c.NotebookApp.port <span style="color:#f92672">=</span><span style="color:#ae81f
 </code></pre></div><p>to run jupyter notebook no hang up.  And finally you can run jupyter remotely.</p>
 </li>
 </ul>
-<h1 id="4-setup-pseudo-differential-operator-computation-environment">4. Setup Pseudo-differential Operator Computation Environment</h1>
+<h1 id="4-setup-pseudo-differential-operator-computation-environment">4. Setup Pseudo-differential Operator Computation Environment<a hidden class="anchor" aria-hidden="true" href="#4-setup-pseudo-differential-operator-computation-environment">#</a></h1>
 <ul>
 <li>
 <p><code>**scp**</code> ORESUS library to the server. I put the spad file in the jupyter directory under my home.</p>
@@ -285,7 +347,7 @@ c.NotebookApp.port <span style="color:#f92672">=</span><span style="color:#ae81f
 <p>Open this <a href="http://101.200.150.204:8888/notebooks/jfricas/Kuperschmidt-Deformation.ipynb">Kuperschmidt deformation notebook</a> to try 😄</p>
 </li>
 </ul>
-<h1 id="references">References</h1>
+<h1 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
 <ul>
 <li>
 <p>Here’s the official page for deploying jupyter notebook</p>
@@ -293,137 +355,90 @@ c.NotebookApp.port <span style="color:#f92672">=</span><span style="color:#ae81f
 </li>
 </ul>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2022-01-28</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/math/">Math</a>
-          
-          <a href="/tags/cas/">CAS</a>
-          
-          <a href="/tags/fricas/">FriCAS</a>
-          
-          <a href="/tags/online/">Online</a>
-          
-          <a href="/tags/remote/">Remote</a>
-          
-          <a href="/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/">日精一技</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-        
-          <a class="next" href="/post/2020-09/write-after-the-competition/">
-            <span class="next-text nav-default">写在比赛结束之后</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/cas/">CAS</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/fricas/">FriCAS</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/online/">Online</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/remote/">Remote</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/">日精一技</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

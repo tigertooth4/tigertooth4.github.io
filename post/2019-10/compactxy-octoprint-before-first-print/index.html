@@ -1,156 +1,224 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>多灾多难的 CompactXY 终于快迎来第一次打印了 - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>多灾多难的 CompactXY 终于快迎来第一次打印了 | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="CompactXY, Marlin2.0, OctoPrint" />
+<meta name="description" content="本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="多灾多难的 CompactXY 终于快迎来第一次打印了" />
+    </style>
+</noscript><meta property="og:title" content="多灾多难的 CompactXY 终于快迎来第一次打印了" />
 <meta property="og:description" content="本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-10-05T22:15:00+08:00" />
-<meta property="article:modified_time" content="2019-10-05T22:15:00+08:00" />
+<meta property="article:published_time" content="2019-10-05T22:15:00&#43;08:00" />
+<meta property="article:modified_time" content="2019-10-05T22:15:00&#43;08:00" />
 
-<meta itemprop="name" content="多灾多难的 CompactXY 终于快迎来第一次打印了">
-<meta itemprop="description" content="本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的"><meta itemprop="datePublished" content="2019-10-05T22:15:00+08:00" />
-<meta itemprop="dateModified" content="2019-10-05T22:15:00+08:00" />
-<meta itemprop="wordCount" content="1179">
-<meta itemprop="keywords" content="CompactXY,Marlin2.0,OctoPrint," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="多灾多难的 CompactXY 终于快迎来第一次打印了"/>
 <meta name="twitter:description" content="本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "多灾多难的 CompactXY 终于快迎来第一次打印了",
+      "item": "http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "多灾多难的 CompactXY 终于快迎来第一次打印了",
+  "name": "多灾多难的 CompactXY 终于快迎来第一次打印了",
+  "description": "本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的",
+  "keywords": [
+    "CompactXY", "Marlin2.0", "OctoPrint"
+  ],
+  "articleBody": "本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的方式工作，unload filament 时一切正常，但 load filament 只能让耗材前进几厘米. 原以为是固件中关于 change filament 部分的设置不太对，于是我想还是先升级一下固件看看.\n所以就产生了另一个问题：机器已经全部安装好了，外部并没有留 usb 接口，如何给机器刷新固件呢？灵机一动，想到 OctoPrint 也许有插件能够完成此事，查询之后发现，还真有固件更新的插件，可是它要输入固件所在的路径，这怎么写呢？原以为这是固件在电脑上存储的目录，实际上应该是固件想要存储到的路径（固件应该是应该存储在主板的 sd 卡上），这块 sd 卡并不是运行 octoprint 的那块 sd 卡，octoprint 是安装在香橙派上的，而香橙派与主板通过 usb 线相连. 研究了一下，发现香橙派上的 armbian 系统可以 mount 主板上的那块 sd 卡，只需要先 ssh 到香橙派上，然后找到那块主板上的 sd 卡，并挂载，具体的过程如下\nfdisk -l # list all mountable devices, let's say sd card may be called /dev/sda1 mkdir /mnt/SD # create a directory under /mnt  mount -t vfat -o rw /dev/sda1 /mnt/SD 本以为这样应该没有问题了，可是谁知道将这个目录填写到到 octoprint 的固件更新插件里却发现这个目录不可写. 仔细想了想，发现 octoprint 账户并不是直接使用的 armbian 的 root 账户，所以上述操作实际上只适合 root 账户，并没有给 octoprint 账户写入的权限，既然问题找到了，改如何解决呢？\n又经过一番搜索后，我找到了答案：\nmount -t vfat -o rw,umask=000 /dev/sda1 /mnt/SD 就可以赋予任何用户读写的权限，这样做虽然有一定风险，但对我来说，已经是可以接受的答案了！当然，今后还可以考虑在 armbian 系统启动时自动加载这块 sd 卡，但就现在来说，暂且不深究了！\n成功刷新了固件后，发现 load filament 的问题仍然存在. 于是我查看了一下 marlin-bugfix 2.0 的源代码，我的版本比较老旧了，但我即使翻出较新的固件，也仍能发现 change filament 这部分简直太坑爹了. 首先，lcd 菜单上的 change filament 基本上是废柴；其次，configuration_adv.h 中明明可以设置载入耗材时的加速度，但在执行时，却根本没有地方使用过这个加速度的参数. 难怪 load filament 会这么诡异.\n顺便说说 marlin 在处理更换耗材这件任务时的过程，首先 retract 一点点距离，然后 park nozzle 到指定的 x y z 处，unload filament ( 这里没有加速度，只有预设的速度 (feedrate) 会起作用.)，之后便是加热喷嘴；然后停住等待用户按键后插入耗材然后 load 指定的长度（这一步在 lcd 上进行操作时无效）最后会 purge 掉一些耗材（从喷嘴流出来）直到用户按停止为止.\n本来这个过程大体是没问题的，但无奈 lcd 菜单系统并不完善. 那么该如何解决呢？之后我发现，更换耗材的 G-Code M600 可以跟许多参数，这些参数可以明确的指定退出/导入耗材时应该使用的量. 经试验发现，使用命令直接更换耗材是没问题的. 这条 G-Code 命令为\nM600 L460 T0 U460; Lxxx代表导入的耗材长度，Uxxx 代表退出的耗材长度，T0 代表 0 号挤出机 但注意，使用之前要先将喷头加热到指定温度.\n至此为止，最重要的问题解决了，也许明天就可以进行第一次打印试验了！\n",
+  "wordCount" : "1179",
+  "inLanguage": "zh-cn",
+  "datePublished": "2019-10-05T22:15:00+08:00",
+  "dateModified": "2019-10-05T22:15:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      多灾多难的 CompactXY 终于快迎来第一次打印了
+    </h1>
+    <div class="post-meta"><span title='2019-10-05 22:15:00 +0800 CST'>October 5, 2019</span>
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">多灾多难的 CompactXY 终于快迎来第一次打印了</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2019-10-05 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的方式工作，unload filament 时一切正常，但 load filament 只能让耗材前进几厘米. 原以为是固件中关于 change filament 部分的设置不太对，于是我想还是先升级一下固件看看.</p>
+  </header> 
+  <div class="post-content"><p>本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的方式工作，unload filament 时一切正常，但 load filament 只能让耗材前进几厘米. 原以为是固件中关于 change filament 部分的设置不太对，于是我想还是先升级一下固件看看.</p>
 <p>所以就产生了另一个问题：机器已经全部安装好了，外部并没有留 usb 接口，如何给机器刷新固件呢？灵机一动，想到 OctoPrint 也许有插件能够完成此事，查询之后发现，还真有固件更新的插件，可是它要输入固件所在的路径，这怎么写呢？原以为这是固件在电脑上存储的目录，实际上应该是固件想要存储到的路径（固件应该是应该存储在主板的 sd 卡上），这块 sd 卡并不是运行 octoprint 的那块 sd 卡，octoprint 是安装在香橙派上的，而香橙派与主板通过 usb 线相连. 研究了一下，发现香橙派上的 armbian 系统可以 mount 主板上的那块 sd 卡，只需要先 ssh 到香橙派上，然后找到那块主板上的 sd 卡，并挂载，具体的过程如下</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk -l <span style="color:#75715e"># list all mountable devices, let&#39;s say sd card may be called /dev/sda1</span>
 mkdir /mnt/SD <span style="color:#75715e"># create a directory under /mnt </span>
@@ -166,136 +234,87 @@ mount -t vfat -o rw /dev/sda1 /mnt/SD
 </code></pre><p>但注意，使用之前要先将喷头加热到指定温度.</p>
 <p>至此为止，最重要的问题解决了，也许明天就可以进行第一次打印试验了！</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2019-10-05</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/compactxy/">CompactXY</a>
-          
-          <a href="/tags/marlin2.0/">Marlin2.0</a>
-          
-          <a href="/tags/octoprint/">OctoPrint</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2020-09/how-to-install-manim/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">如何在 Mac 下安装 Manim</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2019-09/how-to-add-hotspot-for-orangepi-zero/">
-            <span class="next-text nav-default">如何给 OrangePi zero plus 增加热点功能</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/compactxy/">CompactXY</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/marlin2.0/">Marlin2.0</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/octoprint/">Octoprint</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

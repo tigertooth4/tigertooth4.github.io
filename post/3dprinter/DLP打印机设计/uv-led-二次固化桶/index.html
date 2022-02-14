@@ -1,180 +1,249 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>UV-LED 二次固化桶 - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="tt4" />
-  <meta name="description" content="本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>UV-LED 二次固化桶 | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="" />
+<meta name="description" content="本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料">
+<meta name="author" content="tt4">
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/dlp%E6%89%93%E5%8D%B0%E6%9C%BA%E8%AE%BE%E8%AE%A1/uv-led-%E4%BA%8C%E6%AC%A1%E5%9B%BA%E5%8C%96%E6%A1%B6/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="UV-LED 二次固化桶" />
+    </style>
+</noscript><meta property="og:title" content="UV-LED 二次固化桶" />
 <meta property="og:description" content="本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/dlp%E6%89%93%E5%8D%B0%E6%9C%BA%E8%AE%BE%E8%AE%A1/uv-led-%E4%BA%8C%E6%AC%A1%E5%9B%BA%E5%8C%96%E6%A1%B6/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-10-31T17:47:00+00:00" />
-<meta property="article:modified_time" content="2015-10-31T17:47:00+00:00" />
+<meta property="article:published_time" content="2015-10-31T17:47:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-10-31T17:47:00&#43;00:00" />
 
-<meta itemprop="name" content="UV-LED 二次固化桶">
-<meta itemprop="description" content="本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料"><meta itemprop="datePublished" content="2015-10-31T17:47:00+00:00" />
-<meta itemprop="dateModified" content="2015-10-31T17:47:00+00:00" />
-<meta itemprop="wordCount" content="713">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="UV-LED 二次固化桶"/>
 <meta name="twitter:description" content="本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "UV-LED 二次固化桶",
+      "item": "http://tigertooth4.github.io/post/3dprinter/dlp%E6%89%93%E5%8D%B0%E6%9C%BA%E8%AE%BE%E8%AE%A1/uv-led-%E4%BA%8C%E6%AC%A1%E5%9B%BA%E5%8C%96%E6%A1%B6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "UV-LED 二次固化桶",
+  "name": "UV-LED 二次固化桶",
+  "description": "本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料",
+  "keywords": [
+    
+  ],
+  "articleBody": "本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 文章。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料全部可在某宝购买。在本文的最后，将给出 BOM 和购买链接。以下是制作好的成品：\n制作步骤  打印电源插座组件（共两个stl文件，见下图）。打印好的部件将会用两颗 M3x8 的螺丝固定在铁皮桶的底部。 根据打印件的孔位，在白铁皮桶的侧面底部用钻头、剪刀等工具开三个孔（中间的大孔是用来固定电源插座的，旁边的两个小孔是用来穿 M3 螺丝的。注意：孔不必非常圆，只要比打印件的孔稍大即可）。 用两颗 M3 的螺丝将打印件固定在桶的底部，大的打印件贴在外侧，小的贴在内侧。里面用两颗 M3 螺母拧紧。 将 LED 灯条的一端引线从桶的内侧穿过打印件中心的圆孔，穿出桶外，然后将引线的两端焊在插座的接线端子上。 将插座旋入打印件并拧紧。 将 LED 灯条的贴纸撕下，并将 5 米的 LED 灯条螺旋地贴在铁桶的内壁上（注意：这一步要控制好灯条的粘贴方向和角度，使得 LED 灯条间的空隙尽量小） 打印托盘 裁一片圆形的铝箔纸，并用 502胶 将铝箔纸粘在托盘的底部。 至此，UV-LED 固化桶就制作完成了！ 打印件可以放在托盘上然后放入桶中进行固化。固化时间一般为 5-10 分钟。  BOM  打印件 x3 M3x8 螺丝螺母 x2 17cm直径的4升带提手白铁皮油漆桶, ￥8 某宝链接 12V 5050 紫光 LED 软灯条（5米）, ￥19/米，共 ￥95 某宝链接（建议使用不防水的，这样固化效果可能更好） DC5.5-2.1mm圆孔直流电源插座 带螺丝固定，￥0.48/个，某宝链接 220V转DC12V/2A 电源适配器，￥23.5某宝链接 铝箔纸，￥10，超市有售。  总成本约 ￥137.\n改进 鉴于 LED 灯条发热，筒壁可升温至 60 度左右，今后可能在筒壁外侧加装散热风扇以降温。\n",
+  "wordCount" : "713",
+  "inLanguage": "zh-cn",
+  "datePublished": "2015-10-31T17:47:00Z",
+  "dateModified": "2015-10-31T17:47:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/dlp%E6%89%93%E5%8D%B0%E6%9C%BA%E8%AE%BE%E8%AE%A1/uv-led-%E4%BA%8C%E6%AC%A1%E5%9B%BA%E5%8C%96%E6%A1%B6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      UV-LED 二次固化桶
+    </h1>
+    <div class="post-meta"><span title='2015-10-31 17:47:00 +0000 UTC'>October 31, 2015</span>&nbsp;·&nbsp;tt4
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">UV-LED 二次固化桶</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2015-10-31 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 <a href="http://www.instructables.com/id/Make-a-VU-LED-Oven-for-curing-DLP-Resin-3D-prints/">文章</a>。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料全部可在某宝购买。在本文的最后，将给出 BOM 和购买链接。以下是制作好的成品：</p>
-<p><img src="~/thumb_IMG_2296_1024.jpg" alt=""></p>
-<p><img src="~/thumb_IMG_2297_1024.jpg" alt=""></p>
-<h4 id="制作步骤">制作步骤</h4>
+  </header> 
+  <div class="post-content"><p>本文介绍如何自制一个 UV-LED 二次光固化桶。想法来自 instructable 的 <a href="http://www.instructables.com/id/Make-a-VU-LED-Oven-for-curing-DLP-Resin-3D-prints/">文章</a>。本文作者在原作基础上略有改进。树脂打印件放在此桶中 5~10 分钟即可实现固化。DIY 所需的材料全部可在某宝购买。在本文的最后，将给出 BOM 和购买链接。以下是制作好的成品：</p>
+<p><img loading="lazy" src="~/thumb_IMG_2296_1024.jpg" alt=""  />
+</p>
+<p><img loading="lazy" src="~/thumb_IMG_2297_1024.jpg" alt=""  />
+</p>
+<h4 id="制作步骤">制作步骤<a hidden class="anchor" aria-hidden="true" href="#制作步骤">#</a></h4>
 <ol>
-<li>打印电源插座组件（共两个stl文件，见下图）。打印好的部件将会用两颗 M3x8 的螺丝固定在铁皮桶的底部。<img src="~/17-59-14.jpg" alt="">
-<img src="~/17-59-54.jpg" alt=""></li>
+<li>打印电源插座组件（共两个stl文件，见下图）。打印好的部件将会用两颗 M3x8 的螺丝固定在铁皮桶的底部。<img loading="lazy" src="~/17-59-14.jpg" alt=""  />
+
+<img loading="lazy" src="~/17-59-54.jpg" alt=""  />
+</li>
 <li>根据打印件的孔位，在白铁皮桶的侧面底部用钻头、剪刀等工具开三个孔（中间的大孔是用来固定电源插座的，旁边的两个小孔是用来穿 M3 螺丝的。注意：孔不必非常圆，只要比打印件的孔稍大即可）。</li>
 <li>用两颗 M3 的螺丝将打印件固定在桶的底部，大的打印件贴在外侧，小的贴在内侧。里面用两颗 M3 螺母拧紧。</li>
 <li>将 LED 灯条的一端引线从桶的内侧穿过打印件中心的圆孔，穿出桶外，然后将引线的两端焊在插座的接线端子上。</li>
 <li>将插座旋入打印件并拧紧。</li>
 <li>将 LED 灯条的贴纸撕下，并将 5 米的 LED 灯条螺旋地贴在铁桶的内壁上（注意：这一步要控制好灯条的粘贴方向和角度，使得 LED 灯条间的空隙尽量小）</li>
-<li>打印托盘<img src="~/18-09-10.jpg" alt=""></li>
+<li>打印托盘<img loading="lazy" src="~/18-09-10.jpg" alt=""  />
+</li>
 <li>裁一片圆形的铝箔纸，并用 502胶 将铝箔纸粘在托盘的底部。
 至此，UV-LED 固化桶就制作完成了！ 打印件可以放在托盘上然后放入桶中进行固化。固化时间一般为 5-10 分钟。</li>
 </ol>
-<h4 id="bom">BOM</h4>
+<h4 id="bom">BOM<a hidden class="anchor" aria-hidden="true" href="#bom">#</a></h4>
 <ol>
 <li>打印件 x3</li>
 <li>M3x8 螺丝螺母 x2</li>
@@ -185,131 +254,85 @@
 <li>铝箔纸，￥10，超市有售。</li>
 </ol>
 <p>总成本约 ￥137.</p>
-<h4 id="改进">改进</h4>
+<h4 id="改进">改进<a hidden class="anchor" aria-hidden="true" href="#改进">#</a></h4>
 <p>鉴于 LED 灯条发热，筒壁可升温至 60 度左右，今后可能在筒壁外侧加装散热风扇以降温。</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">tt4</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2015-10-31</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/3dprinter/dinky/%E5%81%9A%E4%B8%80%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%B4%A7%E5%87%91%E7%9A%84-3d-%E6%89%93%E5%8D%B0%E6%9C%BA/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">做一台小巧紧凑的 3D 打印机</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/3dmodeling/medusas-ball/">
-            <span class="next-text nav-default">Medusa ball</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

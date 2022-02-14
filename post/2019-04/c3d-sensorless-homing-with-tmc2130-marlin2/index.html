@@ -1,157 +1,225 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零 - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零 | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="TMC2130, Cohesion3d, Remix, Marlin2.0, Sensorless, Homing" />
+<meta name="description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零" />
+    </style>
+</noscript><meta property="og:title" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零" />
 <meta property="og:description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-04-20T22:47:37+08:00" />
-<meta property="article:modified_time" content="2019-04-20T22:47:37+08:00" />
+<meta property="article:published_time" content="2019-04-20T22:47:37&#43;08:00" />
+<meta property="article:modified_time" content="2019-04-20T22:47:37&#43;08:00" />
 
-<meta itemprop="name" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零">
-<meta itemprop="description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无"><meta itemprop="datePublished" content="2019-04-20T22:47:37+08:00" />
-<meta itemprop="dateModified" content="2019-04-20T22:47:37+08:00" />
-<meta itemprop="wordCount" content="926">
-<meta itemprop="keywords" content="TMC2130,Cohesion3d,Remix,Marlin2.0,Sensorless,Homing," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零"/>
 <meta name="twitter:description" content="自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零",
+      "item": "http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零",
+  "name": "Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零",
+  "description": "自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无",
+  "keywords": [
+    "TMC2130", "Cohesion3d", "Remix", "Marlin2.0", "Sensorless", "Homing"
+  ],
+  "articleBody": "自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。1\n固件设置   将 X, Y 方向的_归零回弹_ (home_bump) 设为 0\n#define X_HOME_BUMP_MM 0 #define Y_HOME_BUMP_MM 0   开启 Sensorless_homing\n#define SENSORLESS_HOMING // TMC2130 only 注意到后面有固件默认的归零敏感度：\n#if ENABLED(SENSORLESS_HOMING) || ENABLED(SENSORLESS_PROBING)  #define X_STALL_SENSITIVITY 8  #define Y_STALL_SENSITIVITY 8  //#define Z_STALL_SENSITIVITY 8  #endif 将来可以使用 M914 X/Y/Z 去实时调整这个敏感度，不必再使用固件调整。\n  在 configuration.h 文件中找到 X_MIN_ENDSTOP , 将其设置为 true, Y 也同理\n// Mechanical endstop with COM to ground and NC to Signal uses \"false\" here (most common setup). #define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop. #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.   硬件部分的改变  将 TMC2130 上的 Diag1 pin 与 C3D 板子上的限位开关 signal pin 连起来。我这里使用的是 X_MIN_ENDSTOP 和 Y_MIN_ENDSTOP，C3D 上的 pin 的位置见下图  上传固件 这一步是显然的。\n上电测试  使用 G28 X, G28 Y 可以让 X, Y 轴单独归零，输入后观察归零情况。若撞到边框还不停止，则要调整归零灵敏度（使用 M914 命令）。在我这里的情况是 X 轴 归零正常，Y 轴没有归零就停住了。 M914 命令的使用方法是：若只输入 M914，则显示当前灵敏度，marlin 规定的灵敏度范围是从 -63 到 64，数值越大越不敏感；初始时的灵敏度应该都为 0; 我将 X Y 方向的灵敏度设置为 1: M914 X1 Y1; 发现 Y 轴可以正常归零了。 最后记得用 M500 保存设置。 不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。  更新   可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：\n#define DEBUG_LEVELING_FEATURE   使用 M111 S32 或 M111 S247 使系统信息能够被最大程度的记录下来\n  使用 G28 归零。\n  更新 （二） 经调试，发现主要问题是：当 X Y 同时归零时，总是 X 可以归零，但 Y 在归零途中就会停下；如果分别归零，当 Y 归零后，X 可以顺利归零；反之则不行。量了一下 X 导轨与前边框的间距，发现左侧比右侧稍大。左侧是归零方向。以此判断，不能实现同时归零的原因是线性导轨与框架不完全平行，导致 X 方向归零后， Y 在归零途中撞到框架而提前归零。\n由于调节导轨平行度工作量实在太大，无奈之下，只好先在固件 Configuration_adv.h 中设置归零顺序为先 Y 再 X\n#define HOME_Y_BEFORE_X 临时解决问题。\n  本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing https://www.youtube.com/watch?v=OUadiW5QLBE ↩︎\n   ",
+  "wordCount" : "926",
+  "inLanguage": "zh-cn",
+  "datePublished": "2019-04-20T22:47:37+08:00",
+  "dateModified": "2019-04-20T22:47:37+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零
+    </h1>
+    <div class="post-meta"><span title='2019-04-20 22:47:37 +0800 CST'>April 20, 2019</span>
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2019-04-20 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<h1 id="固件设置">固件设置</h1>
+  </header> 
+  <div class="post-content"><p>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h1 id="固件设置">固件设置<a hidden class="anchor" aria-hidden="true" href="#固件设置">#</a></h1>
 <ul>
 <li>
 <p>将 X, Y 方向的_归零回弹_ (home_bump) 设为 0</p>
@@ -176,13 +244,14 @@
 </span><span style="color:#75715e"></span><span style="color:#75715e">#define Y_MIN_ENDSTOP_INVERTING true </span><span style="color:#75715e">// set to true to invert the logic of the endstop.
 </span></code></pre></div></li>
 </ul>
-<h1 id="硬件部分的改变">硬件部分的改变</h1>
+<h1 id="硬件部分的改变">硬件部分的改变<a hidden class="anchor" aria-hidden="true" href="#硬件部分的改变">#</a></h1>
 <ul>
-<li>将 TMC2130 上的 Diag1 pin 与 C3D 板子上的限位开关 signal pin 连起来。我这里使用的是 X_MIN_ENDSTOP 和 Y_MIN_ENDSTOP，C3D 上的 pin 的位置见下图<img src="./images/endstop-wiring.png" alt="Endstop pins"></li>
+<li>将 TMC2130 上的 Diag1 pin 与 C3D 板子上的限位开关 signal pin 连起来。我这里使用的是 X_MIN_ENDSTOP 和 Y_MIN_ENDSTOP，C3D 上的 pin 的位置见下图<img loading="lazy" src="./images/endstop-wiring.png" alt="Endstop pins"  />
+</li>
 </ul>
-<h1 id="上传固件">上传固件</h1>
+<h1 id="上传固件">上传固件<a hidden class="anchor" aria-hidden="true" href="#上传固件">#</a></h1>
 <p>这一步是显然的。</p>
-<h1 id="上电测试">上电测试</h1>
+<h1 id="上电测试">上电测试<a hidden class="anchor" aria-hidden="true" href="#上电测试">#</a></h1>
 <ul>
 <li>使用 G28 X, G28 Y 可以让 X, Y 轴单独归零，输入后观察归零情况。若撞到边框还不停止，则要调整归零灵敏度（使用 M914 命令）。在我这里的情况是 X 轴 归零正常，Y 轴没有归零就停住了。</li>
 <li>M914 命令的使用方法是：若只输入 M914，则显示当前灵敏度，marlin 规定的灵敏度范围是从 -63 到 64，数值越大越不敏感；初始时的灵敏度应该都为 0;</li>
@@ -190,7 +259,7 @@
 <li>最后记得用 M500 保存设置。</li>
 <li>不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。</li>
 </ul>
-<h1 id="更新">更新</h1>
+<h1 id="更新">更新<a hidden class="anchor" aria-hidden="true" href="#更新">#</a></h1>
 <ul>
 <li>
 <p>可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：</p>
@@ -203,7 +272,7 @@
 <p>使用 G28 归零。</p>
 </li>
 </ul>
-<h1 id="更新-二">更新 （二）</h1>
+<h1 id="更新-二">更新 （二）<a hidden class="anchor" aria-hidden="true" href="#更新-二">#</a></h1>
 <p>经调试，发现主要问题是：当 X Y 同时归零时，总是 X 可以归零，但 Y 在归零途中就会停下；如果分别归零，当 Y 归零后，X 可以顺利归零；反之则不行。量了一下 X 导轨与前边框的间距，发现左侧比右侧稍大。左侧是归零方向。以此判断，不能实现同时归零的原因是线性导轨与框架不完全平行，导致 X 方向归零后， Y 在归零途中撞到框架而提前归零。</p>
 <p>由于调节导轨平行度工作量实在太大，无奈之下，只好先在固件 Configuration_adv.h 中设置归零顺序为先 Y 再 X</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define HOME_Y_BEFORE_X
@@ -217,142 +286,90 @@
 </ol>
 </section>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">XL</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2019-04-20</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/tmc2130/">TMC2130</a>
-          
-          <a href="/tags/cohesion3d/">Cohesion3d</a>
-          
-          <a href="/tags/remix/">Remix</a>
-          
-          <a href="/tags/marlin2.0/">Marlin2.0</a>
-          
-          <a href="/tags/sensorless/">Sensorless</a>
-          
-          <a href="/tags/homing/">Homing</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2019-04/galois-theory-in-a-naive-point-of-view/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Galois理论：一篇粗浅的介绍</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2019-03/marlin2-tmc2130-c3d/">
-            <span class="next-text nav-default">Marlin2.0 bugfix &#43; Cohesion3D-remix 上使用 TMC2130 驱动</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/tmc2130/">TMC2130</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/cohesion3d/">Cohesion3d</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/remix/">Remix</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/marlin2.0/">Marlin2.0</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/sensorless/">Sensorless</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/homing/">Homing</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

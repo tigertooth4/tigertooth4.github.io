@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Course on 思｜製 - A guy&#39;s thinking and making</title>
+    <title>Course on 思｜制 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/tags/course/</link>
-    <description>Recent content in Course on 思｜製 - A guy&#39;s thinking and making</description>
+    <description>Recent content in Course on 思｜制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 12 May 2014 23:10:53 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/course/index.xml" rel="self" type="application/rss+xml" />

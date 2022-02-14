@@ -1,162 +1,229 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Kossel XL 构建记 (33) ---- The Extruder Test and Calibration - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="tt4" />
-  <meta name="description" content="很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kossel XL 构建记 (33) ---- The Extruder Test and Calibration | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="3DP, Kossel, Marlin, Extruder, Calibration" />
+<meta name="description" content="很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺">
+<meta name="author" content="tt4">
 <link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="Kossel XL 构建记 (33) ---- The Extruder Test and Calibration" />
+    </style>
+</noscript><meta property="og:title" content="Kossel XL 构建记 (33) ---- The Extruder Test and Calibration" />
 <meta property="og:description" content="很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-11-07T12:00:00+00:00" />
-<meta property="article:modified_time" content="2014-11-07T12:00:00+00:00" />
+<meta property="article:published_time" content="2014-11-07T12:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2014-11-07T12:00:00&#43;00:00" />
 
-<meta itemprop="name" content="Kossel XL 构建记 (33) ---- The Extruder Test and Calibration">
-<meta itemprop="description" content="很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺"><meta itemprop="datePublished" content="2014-11-07T12:00:00+00:00" />
-<meta itemprop="dateModified" content="2014-11-07T12:00:00+00:00" />
-<meta itemprop="wordCount" content="727">
-<meta itemprop="keywords" content="3DP,Kossel,Marlin,Extruder,Calibration," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kossel XL 构建记 (33) ---- The Extruder Test and Calibration"/>
 <meta name="twitter:description" content="很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Kossel XL 构建记 (33) ---- The Extruder Test and Calibration",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kossel XL 构建记 (33) ---- The Extruder Test and Calibration",
+  "name": "Kossel XL 构建记 (33) ---- The Extruder Test and Calibration",
+  "description": "很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺",
+  "keywords": [
+    "3DP", "Kossel", "Marlin", "Extruder", "Calibration"
+  ],
+  "articleBody": "很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺母。\n步进数的计算 设置挤出机的 AXIS_PER_UNIT. 这个数值是用来确定送料 1 个单位（一般是 1mm 时），挤出机的电机要转动多少步的。\n我用的挤出机电机是普通的 NEMA17 1.8 度步进电机，配了齿比是 5.18:1 的行星齿轮。这样，挤出机的齿轮轴转动一周的时候，步进电机实际上要转动的步数是\n\\frac{360}{1.8}\\times 16 \\times 5.18 这里 16 是 A4988 控制芯片所允许的微步数，即通过控制芯片可以让步进电机再把1步分成16个分步（当然电机在这些分步的位置要想得到较高的扭矩必须更大的电流才可以）。\n咬合齿轮的直径是 11.4 mm, 因此要想进1mm 的料，电机所转过的步数应该是\n\\frac{360\\times 16\\times 5.18}{1.8\\times \\pi\\times 11.4} = 469.4 这就是挤出机的 AXIS_PER_UNIT. 设置好后更新 Marlin 固件。上机实验。在 Pronterface 里面直接输入下面的指令：\nG1 E10 F200 这条G-Code命令可以让挤出机送 10mm 的料，后面 F200 是设置挤出速度的。注意，Marlin 中默认情况下是开启挤出头保护功能的，也就是说在挤出头不升到默认温度的情况下挤出机是不会工作的。默认温度可以设置，一般是170度以上。\n看看挤出机齿轮有没有转动？转动的方向是否正确？如果不正确的话，可以把 RAMPS 板子上的排插转个方向接上。注意，G-Code 里面这个 E10 是进料的绝对长度，不是增量。我之前就没注意这一点，试验的时候一直用 E10， 还在想为什么挤出机转一次就不再转了 -_-b.\n挤出机的标定 主要是看看当输入 E10 的时候，实际进料的长度是不是 10 毫米。如果不是的话需要在固件里调整这个参数。这个过程很简单，只要在进料开始之前和结束之后分别标记一下，然后测量两个标记之间的距离就可以了。幸运的是，我之前的测量都比较准确，所以进料的长度恰好是 10毫米。\n下次就可以做平台的调平，然后装上特氟龙管开始打印了！\n",
+  "wordCount" : "727",
+  "inLanguage": "zh-cn",
+  "datePublished": "2014-11-07T12:00:00Z",
+  "dateModified": "2014-11-07T12:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_33/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Kossel XL 构建记 (33) ---- The Extruder Test and Calibration
+    </h1>
+    <div class="post-meta"><span title='2014-11-07 12:00:00 +0000 UTC'>November 7, 2014</span>&nbsp;·&nbsp;tt4
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Kossel XL 构建记 (33) ---- The Extruder Test and Calibration</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2014-11-07 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#步进数的计算">步进数的计算</a></li>
-    <li><a href="#挤出机的标定">挤出机的标定</a></li>
-  </ul>
-</nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺母。</p>
-<h2 id="步进数的计算">步进数的计算</h2>
+  </header> 
+  <div class="post-content"><p>很早以前就已经把远端挤出机装好了，还是用的之前 Rostock Mini 的设计。上 m4 螺丝的时候手都要废了。最后想了一招，把强磁铁吸在内六角螺丝刀上，这样能够吸住螺母。</p>
+<h2 id="步进数的计算">步进数的计算<a hidden class="anchor" aria-hidden="true" href="#步进数的计算">#</a></h2>
 <p>设置挤出机的 AXIS_PER_UNIT. 这个数值是用来确定送料 1 个单位（一般是 1mm 时），挤出机的电机要转动多少步的。</p>
 <p>我用的挤出机电机是普通的 NEMA17 1.8 度步进电机，配了齿比是 5.18:1 的行星齿轮。这样，挤出机的齿轮轴转动一周的时候，步进电机实际上要转动的步数是</p>
 <pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">\frac{360}{1.8}\times 16 \times 5.18
@@ -167,144 +234,93 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">G1 E10 F200
 </code></pre></div><p>这条G-Code命令可以让挤出机送 10mm 的料，后面 F200 是设置挤出速度的。注意，Marlin 中默认情况下是开启挤出头保护功能的，也就是说在挤出头不升到默认温度的情况下挤出机是不会工作的。默认温度可以设置，一般是170度以上。</p>
 <p>看看挤出机齿轮有没有转动？转动的方向是否正确？如果不正确的话，可以把 RAMPS 板子上的排插转个方向接上。注意，G-Code 里面这个 E10 是进料的绝对长度，不是增量。我之前就没注意这一点，试验的时候一直用 E10， 还在想为什么挤出机转一次就不再转了 -_-b.</p>
-<h2 id="挤出机的标定">挤出机的标定</h2>
+<h2 id="挤出机的标定">挤出机的标定<a hidden class="anchor" aria-hidden="true" href="#挤出机的标定">#</a></h2>
 <p>主要是看看当输入 E10 的时候，实际进料的长度是不是 10 毫米。如果不是的话需要在固件里调整这个参数。这个过程很简单，只要在进料开始之前和结束之后分别标记一下，然后测量两个标记之间的距离就可以了。幸运的是，我之前的测量都比较准确，所以进料的长度恰好是 10毫米。</p>
 <p>下次就可以做平台的调平，然后装上特氟龙管开始打印了！</p>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">tt4</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2014-11-07</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/3dp/">3DP</a>
-          
-          <a href="/tags/kossel/">Kossel</a>
-          
-          <a href="/tags/marlin/">Marlin</a>
-          
-          <a href="/tags/extruder/">Extruder</a>
-          
-          <a href="/tags/calibration/">Calibration</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/3dprinter/kosselxl/kossel_xl_building_log_34/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Kossel XL 构建记 (34) ---- The Printer Calibration</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/3dprinter/kosselxl/kossel_xl_building_log_31/">
-            <span class="next-text nav-default">Kossel XL 构建记 (31) ---- The G-Code Summary </span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/kossel/">Kossel</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/marlin/">Marlin</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/extruder/">extruder</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calibration/">Calibration</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

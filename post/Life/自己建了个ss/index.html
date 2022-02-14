@@ -1,159 +1,231 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>自己建了一个SS - 思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="tt4" />
-  <meta name="description" content="趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.88.1" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>自己建了一个SS | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="SS, VPN" />
+<meta name="description" content="趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日">
+<meta name="author" content="tt4">
 <link rel="canonical" href="http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="自己建了一个SS" />
+    </style>
+</noscript><meta property="og:title" content="自己建了一个SS" />
 <meta property="og:description" content="趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-10-03T12:15:00+00:00" />
-<meta property="article:modified_time" content="2015-10-03T12:15:00+00:00" />
+<meta property="article:published_time" content="2015-10-03T12:15:00&#43;00:00" />
+<meta property="article:modified_time" content="2015-10-03T12:15:00&#43;00:00" />
 
-<meta itemprop="name" content="自己建了一个SS">
-<meta itemprop="description" content="趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日"><meta itemprop="datePublished" content="2015-10-03T12:15:00+00:00" />
-<meta itemprop="dateModified" content="2015-10-03T12:15:00+00:00" />
-<meta itemprop="wordCount" content="1332">
-<meta itemprop="keywords" content="SS,VPN," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="自己建了一个SS"/>
 <meta name="twitter:description" content="趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "自己建了一个SS",
+      "item": "http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "自己建了一个SS",
+  "name": "自己建了一个SS",
+  "description": "趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日",
+  "keywords": [
+    "SS", "VPN"
+  ],
+  "articleBody": "趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日本的 Conoha.jp 。选择了 50G SSD 和 1G 内存的日本主机，搭配 CentOS 7 操作系统。 整个建立虚拟主机的过程都比较顺利，付出了一个月 900 日元的代价。具体过程就不再赘述了。 下面主要说说建立 SS 的过程。我用的是 SS 的 Python 版。\n安装SS 分两步，先安装 python 和 包管理工具 pip，再直接安装 ss，至于 ss 是什么，你懂的 ：）今后遇到 ss 的地方，请用你知道的单词代替（如果不明确指出，全用小写）。\n首先连接到 conoha 的 VPS 服务器，使用 usr@ip 的方式\nssh root@VPS_IP yum install python-setuptools \u0026\u0026 easy_install pip pip install ss 安装到这一步的时候出现了 InsecurePlatformWarning 的警告，不知所措，google 了一下以后开始有病乱投医：\npip install pyopenssl ndg-httpsclient pyasn1 pip install libffi pip install requests==2.5.3 pip install ss (这一步说 requirement already satisfied！) 建立 ss 配置文件 mkdir -p /etc/ss vim /etc/ss/config.json 在 config.json 中输入以下内容：\n{ \"server\":\"Conoha 的 server ip\", \"server_port\":（端口，可以自己定义）, \"local_address\": \"127.0.0.1\", \"local_port\":1080, \"password\":\"（你的连接密码）\", \"timeout\":300, \"method\":\"aes-256-cfb\", \"fast_open\": false, \"workers\": 1 } 新建服务文件 vim /etc/systemd/system/ss-server.service 输入以下内容\n[Unit] Description=Ss Server After=network.target [Service] Type=forking PIDFile=/run/ss/server.pid PermissionsStartOnly=true ExecStartPre=/bin/mkdir -p /run/ss ExecStartPre=/bin/chown root:root /run/ss ExecStart=/usr/bin/ssserver (这里不替换) --pid-file /var/run/ss/server.pid -c /etc/ss/config.json -d start Restart=on-abort User=root Group=root UMask=0027 [Install] WantedBy=multi-user.target 运行 ss 服务，设为开机自启动 systemctl start ss-server.service systemctl enable ss-server.service 防火墙开启你指定的端口 firewall-cmd --permanent --add-port=指定端口/tcp firewall-cmd --reload 如果要配置多用户，参考了 QQ 群中的代码 类似这样：\n{ \"server\":\"0.0.0.0\", \"local_address\":\"127.0.0.1\", \"local_port\":1080, \"port_password\":{ \"8989\":\"password0\", \"9001\":\"password1\", \"9002\":\"password2\", \"9003\":\"password3\", \"9004\":\"password4\" }, \"timeout\":300, \"method\":\"chacha20\", \"fast_open\": false } 常见维护操作 升级 ss\npip install -U shadowsocks 卸载 ss\npip uninstall shadowsocks 停止 ss 服务\nsystemctl stop shadowsocks-server.service 让 Mail.app 复活 我用了 Proximac，但是，鉴于苹果在升级到 10.11 El Capitan 之后，不允许哪怕 root 用户修改 /usr，所以 homebrew 没办法用了。必须要先修改权限。官方的解释请看这里。\nsudo chown $(whoami):admin /usr/local \u0026\u0026 sudo chown -R $(whoami):admin /usr/local 注意，要使 /usr/local/sbin 也在你的路径变量里面。因为我是用的 fish, 其环境变量是在 .config/fish/config.fish 里面设置。于是，添加这个路径可以这样写：\nset PATH /usr/local/sbin $PATH 可以用 echo “$PATH” 来检查路径好了没。然后，我们来试试 homebrew 好了没。 [未完，待续…] 【更新】下面就是安装 proximac 了！我已经 fork 了这个项目。根据作者的指导，第一步要安装 libuv 这个库。\nbrew install libuv 然后下载安装文件\ncurl -fsSL https://raw.githubusercontent.com/proximac-org/proximac-install/master/install.py |python 其实这一步就是从网上把写好的 zip 包下载下来，解压，改权限，放到 /usr/local/proximac 目录下面。最重要的就是 kext 内核扩展文件。运行 /usr/local/bin/proximac 的时候主要调用的是这个。但是，从 Mac OSX El Capitan 以后，系统引进了所谓 rootless 的特性，就是不再允许哪怕是 root 用户修改特定的系统文件（苹果这么做的原因可以参考WWDC15的视频）\n因此，如果想继续使用 proximac 只有一种办法，那就是禁用掉这个新特性，public beta 版本中的修改内核参数的方法在正式版中会失效，唯一的办法就是在启动的时候用 csrutil 这个工具:\n 启动时按住 command+R 直到进入保护模式 在保护模式中打开终端，输入如下指令 csrutil disable (注意：csrutil enable –without debug 这种写法将来恐怕也会失效，所以最好还是用 disable 这个选项） 正常重启动 用了这招，proximac 就可以正常启动了！  ![](~/屏幕快照 2015-10-05 上午12.25.28.png)\n参考  IFshow（主要参考） IFshow 优化 史上最详细教程 破.前路的 CentOS7 libev 配置 aa65535 的 gist vfasky 的在 CentOS6 上部署（要用 iptables） teddysun 的一键安装脚本 libev 版 teddysun 的 python 版(含加密方式讨论) CentOS 7 中使用的防火墙 firewalld 的使用说明 Stackoverflow 中关于 InsecurePlatformWarning 关于安装中的 InsecurePlatformWarning WWDC15 v2ex 上面的讨论 Quora 上面的讨论 Macworld 上面关于如何修改的讨论 Apple 官方论坛上的讨论  ",
+  "wordCount" : "1332",
+  "inLanguage": "zh-cn",
+  "datePublished": "2015-10-03T12:15:00Z",
+  "dateModified": "2015-10-03T12:15:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/life/%E8%87%AA%E5%B7%B1%E5%BB%BA%E4%BA%86%E4%B8%AAss/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      自己建了一个SS
+    </h1>
+    <div class="post-meta"><span title='2015-10-03 12:15:00 +0000 UTC'>October 3, 2015</span>&nbsp;·&nbsp;tt4
+
 </div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">自己建了一个SS</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2015-10-03 </span>
-        
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    
-    
-
-    
-    <div class="post-content">
-      <p>趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日本的 Conoha.jp 。选择了 50G SSD 和 1G 内存的日本主机，搭配 CentOS 7 操作系统。
+  </header> 
+  <div class="post-content"><p>趁着国庆假期，终于有时间把SS搞好了。自从上次qiang变高以后，就萌生了自己建站的念头。没有选择 Linode 的主机，因为树大招风嘛。选择了同样来自日本的 Conoha.jp 。选择了 50G SSD 和 1G 内存的日本主机，搭配 CentOS 7 操作系统。
 整个建立虚拟主机的过程都比较顺利，付出了一个月 900 日元的代价。具体过程就不再赘述了。
 下面主要说说建立 SS 的过程。我用的是 SS 的 Python 版。</p>
-<h1 id="安装ss">安装SS</h1>
+<h1 id="安装ss">安装SS<a hidden class="anchor" aria-hidden="true" href="#安装ss">#</a></h1>
 <p>分两步，先安装 python 和 包管理工具 pip，再直接安装 ss，至于 ss 是什么，你懂的 ：）今后遇到 ss 的地方，请用你知道的单词代替（如果不明确指出，全用小写）。</p>
 <p>首先连接到 conoha 的 VPS 服务器，使用 usr@ip 的方式</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ssh root@VPS_IP
@@ -164,7 +236,7 @@ pip install ss
 pip install libffi
 pip install requests<span style="color:#f92672">==</span>2.5.3
 pip install ss <span style="color:#f92672">(</span>这一步说 requirement already satisfied！<span style="color:#f92672">)</span>
-</code></pre></div><h1 id="建立-ss-配置文件">建立 ss 配置文件</h1>
+</code></pre></div><h1 id="建立-ss-配置文件">建立 ss 配置文件<a hidden class="anchor" aria-hidden="true" href="#建立-ss-配置文件">#</a></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir -p /etc/ss
 vim /etc/ss/config.json
 </code></pre></div><p>在 config.json 中输入以下内容：</p>
@@ -179,7 +251,7 @@ vim /etc/ss/config.json
  <span style="color:#e6db74">&#34;fast_open&#34;</span>: false,
  <span style="color:#e6db74">&#34;workers&#34;</span>: <span style="color:#ae81ff">1</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h1 id="新建服务文件">新建服务文件</h1>
+</code></pre></div><h1 id="新建服务文件">新建服务文件<a hidden class="anchor" aria-hidden="true" href="#新建服务文件">#</a></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">vim /etc/systemd/system/ss-server.service
 </code></pre></div><p>输入以下内容</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
@@ -200,13 +272,13 @@ UMask<span style="color:#f92672">=</span><span style="color:#ae81ff">0027</span>
 
 <span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
 WantedBy<span style="color:#f92672">=</span>multi-user.target
-</code></pre></div><h1 id="运行-ss-服务设为开机自启动">运行 ss 服务，设为开机自启动</h1>
+</code></pre></div><h1 id="运行-ss-服务设为开机自启动">运行 ss 服务，设为开机自启动<a hidden class="anchor" aria-hidden="true" href="#运行-ss-服务设为开机自启动">#</a></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">systemctl start ss-server.service
 systemctl enable ss-server.service
-</code></pre></div><h1 id="防火墙开启你指定的端口">防火墙开启你指定的端口</h1>
+</code></pre></div><h1 id="防火墙开启你指定的端口">防火墙开启你指定的端口<a hidden class="anchor" aria-hidden="true" href="#防火墙开启你指定的端口">#</a></h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">firewall-cmd --permanent --add-port<span style="color:#f92672">=</span>指定端口/tcp
 firewall-cmd --reload
-</code></pre></div><h1 id="如果要配置多用户参考了-qq-群中的代码">如果要配置多用户，参考了 QQ 群中的代码</h1>
+</code></pre></div><h1 id="如果要配置多用户参考了-qq-群中的代码">如果要配置多用户，参考了 QQ 群中的代码<a hidden class="anchor" aria-hidden="true" href="#如果要配置多用户参考了-qq-群中的代码">#</a></h1>
 <p>类似这样：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">{</span>
     <span style="color:#e6db74">&#34;server&#34;</span>:<span style="color:#e6db74">&#34;0.0.0.0&#34;</span>,
@@ -223,14 +295,14 @@ firewall-cmd --reload
     <span style="color:#e6db74">&#34;method&#34;</span>:<span style="color:#e6db74">&#34;chacha20&#34;</span>,
     <span style="color:#e6db74">&#34;fast_open&#34;</span>: false
 <span style="color:#f92672">}</span>
-</code></pre></div><h1 id="常见维护操作">常见维护操作</h1>
+</code></pre></div><h1 id="常见维护操作">常见维护操作<a hidden class="anchor" aria-hidden="true" href="#常见维护操作">#</a></h1>
 <p>升级 ss</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pip install -U shadowsocks
 </code></pre></div><p>卸载 ss</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pip uninstall shadowsocks
 </code></pre></div><p>停止 ss 服务</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">systemctl stop shadowsocks-server.service
-</code></pre></div><h1 id="让-mailapp-复活">让 Mail.app 复活</h1>
+</code></pre></div><h1 id="让-mailapp-复活">让 Mail.app 复活<a hidden class="anchor" aria-hidden="true" href="#让-mailapp-复活">#</a></h1>
 <p>我用了 Proximac，但是，鉴于苹果在升级到 10.11 El Capitan 之后，不允许哪怕 root 用户修改 /usr，所以 homebrew 没办法用了。必须要先<a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md">修改权限</a>。官方的解释请看<a href="https://developer.apple.com/videos/play/wwdc2015-706/">这里</a>。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo chown <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span>:admin /usr/local <span style="color:#f92672">&amp;&amp;</span> sudo chown -R <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span>:admin /usr/local
 </code></pre></div><p>注意，要使 /usr/local/sbin 也在你的路径变量里面。因为我是用的 fish, 其环境变量是在 .config/fish/config.fish 里面设置。于是，添加这个路径可以这样写：</p>
@@ -250,7 +322,7 @@ firewall-cmd --reload
 用了这招，proximac 就可以正常启动了！</li>
 </ol>
 <p>![](~/屏幕快照 2015-10-05 上午12.25.28.png)</p>
-<h1 id="参考">参考</h1>
+<h1 id="参考">参考<a hidden class="anchor" aria-hidden="true" href="#参考">#</a></h1>
 <ul>
 <li><a href="https://www.ifshow.com/centos-7-installation-and-configuration-shadowsocks/">IFshow（主要参考）</a></li>
 <li><a href="https://www.ifshow.com/centos-7-shadowsocks-optimization/">IFshow 优化</a></li>
@@ -270,134 +342,86 @@ firewall-cmd --reload
 <li><a href="https://forums.developer.apple.com/thread/3981">Apple 官方论坛上的讨论</a></li>
 </ul>
 
-    </div>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">tt4</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2015-10-03</span>
-  </p>
-  
-  
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/ss/">SS</a>
-          
-          <a href="/tags/vpn/">VPN</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/3dprinter/lcd3dp/lcd-3d-printer/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">LCD 3d printer</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/life/%E7%BF%BB%E8%B6%8A%E7%9A%84%E6%96%B0%E6%96%B9%E6%B3%95/">
-            <span class="next-text nav-default">翻越长城的新方法</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2022
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/ss/">SS</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/vpn/">VPN</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
-
+</script>
 </body>
+
 </html>

@@ -1,407 +1,343 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>思｜製 - A guy&#39;s thinking and making</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="zh-cn" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="XL" />
-  <meta name="description" content="Hugo theme even example site." />
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.55.6" />
-
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="Hugo, theme, PaperMod" />
+<meta name="description" content="Powered by PaperMod theme.">
+<meta name="author" content="">
 <link rel="canonical" href="http://tigertooth4.github.io/" />
-<link href="http://tigertooth4.github.io/index.xml" rel="alternate" type="application/rss+xml" title="思｜製 - A guy&#39;s thinking and making" />
-  <link href="http://tigertooth4.github.io/index.xml" rel="feed" type="application/rss+xml" title="思｜製 - A guy&#39;s thinking and making" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<link rel="alternate" type="application/rss+xml" href="http://tigertooth4.github.io/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="思｜製 - A guy&#39;s thinking and making" />
-<meta property="og:description" content="Hugo theme even example site." />
+    </style>
+</noscript><meta property="og:title" content="思｜制 - A guy&#39;s thinking and making" />
+<meta property="og:description" content="Powered by PaperMod theme." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://tigertooth4.github.io/" />
 
-<meta property="og:updated_time" content="2020-09-29T13:46:00&#43;08:00"/>
-
-<meta itemprop="name" content="思｜製 - A guy&#39;s thinking and making">
-<meta itemprop="description" content="Hugo theme even example site.">
-
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="思｜製 - A guy&#39;s thinking and making"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta name="twitter:title" content="思｜制 - A guy&#39;s thinking and making"/>
+<meta name="twitter:description" content="Powered by PaperMod theme."/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "思｜制 - A guy's thinking and making",
+  "url": "http://tigertooth4.github.io",
+  "description": "Powered by PaperMod theme.",
+  "thumbnailUrl": "http://tigertooth4.github.io/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">思｜製</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">思｜製</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Eynard-Orantin 以及疑问
-Date: 2013-01-20 22:29:12
-[mathjax]
-[caption id=&ldquo;&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] genus=3 Riemann Surface[/caption]
-今天是无所事事的一天。上午晚起，中午和 Simon 等人吃饭又被雨淋，下午待在办公室在网上闲逛。唯一的收获似乎就是知道上个月的手机费少交了大概十美元，是家庭套餐每人应付的月缴。不过，待在办公室里时间长了，人就会有各种各样的想法，比如今天，我就在想，到目前为之我究竟学到了什么呢？Principal specialization? Laplace 变换 还是 Enyard-Orantin 理论呢？学会了这些到底有什么用呢？
-随便在网上逛了逛，发现了一些文章和资源，于是干脆把别人的结论罗列一下，以便自己以后参考。
-more
- Sergei Gukov, Witten 的学生，在 YT 上有几段视频，题目是”Quantization and Categorification”. Gukov 和 Sulkowski 合写过一篇文章&rdquo;A-polynomial, B-model and Quantization&rdquo; (arXiv:1108.0002v2),讲的是从经典曲线 (A(x,y)=0) 如何得到其量子对应，以及如何判断经典曲线一定有量子对应。将经典曲线量子化，意欲何为？这是我想了解的问题。另外，似乎 Eynard-Orantin 递推公式是得到量子曲线的方法之一，这与我所接触的 principal specialization 似乎有点关系，我要理解清楚。  
-    </div>
-    <div class="read-more">
-      <a href="/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/misc/a-dream/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: A dream
-Date: 2012-02-22 15:54:00
-Status: private
-Suddenly I&rsquo;ve got the idea about my life.
-I had a unpleasant dream yesterday. About you&hellip;
-more
-I&rsquo;ve heard a lot of sad news today.
-I know I can do nothing about this.
-Hopeless moment.
-But, I do believe it&rsquo;s part of life.
-Everything will be fine.
-We won&rsquo;t lose hope.
-So, to help, to give, to do meaningful things.
-And, bless&hellip;
-    </div>
-    <div class="read-more">
-      <a href="/post/misc/a-dream/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Draw graphic inside NSTextView
-Date: 2013-04-08 13:18:49
-Tags: Cocoa , Drawing , Image , NSTextView , Text
-After long time search, I found some examples:
- Re: Drawing a line in NSTextView  _http://lists.apple.com/archives/cocoa-dev/2012/Apr/msg00003.html
- Aligning a subview element with text in an NSTextView :  [http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html](http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html
- google: [drawViewBackgroundInRect](https://www.google.com/search?client=safari&amp;rls=en&amp;q=drawViewBackgroundInRect&amp;ie=UTF-8&amp;oe=UTF-8#hl=en&amp;client=safari&amp;rls=en&amp;sclient=psy-ab&amp;q=drawViewBackgroundInRect&amp;oq=drawViewBackgroundInRect&amp;gs_l=serp.12...0.0.0.161000408.0.0.0.0.0.0.0.0..0.0...0.0...1c..8.psy-ab.UOTMcpaPkiM&amp;pbx=1&amp;bav=on.2,or.r_cp.r_qf.&amp;bvm=bv.44770516,d.cGE&amp;fp=3d1005b8c6da64ce&amp;biw=1235&amp;bih=625
- Drawing in NSTextField
-  [http://stackoverflow.com/questions/1777444/drawing-in-nstextfield](http://stackoverflow.com/questions/1777444/drawing-in-nstextfield
- CocoaHeads Atlanta May &lsquo;09: Aaron Hillegass on the Text System  [http://vimeo.
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Emacs 的 bookmark 插件
-Date: 2013-12-23 05:53:47
-有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
-[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
-可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
-设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
-(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
-(require &lsquo;bm)
-快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
-(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
-(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
-这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Emacs 的颜色补强计划
-Date: 2013-04-04 22:05:21
-用了 Emacs Carbon 这么久，这次才发现真的落伍了！今天想要安装 Paul Onion 开发的 axiom-environment，不料一个关于 color-theme 的变量老是出错。上网搜了一下，才发现原来从 Emacs24 开始，改变了以前的颜色机制，这样文本高亮比以前似乎要更加犀利了（没有仔细读文献，只是看了看图直观的感觉是这样）。
-但是，在 Emacs24 之前的版本，必须要手动加入这项功能。具体的包见：
-https://github.com/sellout/emacs-color-theme-solarized
-安装很简单，这里是针对我这个 pre emacs24 来说的，我就犯懒直接复制 github 里的说明好了：
- Download and install color-theme
- Add the &lt;cci_lisp&gt;emacs-color-theme-solarized directory to your Emacs &lt;cci_lisp&gt;load-path
- Add &lt;cci_lisp&gt;(require &lsquo;color-theme-solarized) to your Emacs init file (usually &lt;cci_bash&gt;~/.emacs)
- Reload the init file, or restart Emacs
- Use the usual color-theme mechanism to select one of the Solarized themes, or &lt;cci_lisp&gt;M-x color-theme-solarized-[light|dark].
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Title: Fixie: bikes without brakes
-Date: 2012-12-02 15:26:13
-Recently I found something that is really cool! It&rsquo;s called fixed gear bike, or &ldquo;死飞&rdquo; in Chinese. Basically, it is just a bike but the rear wheel and gear are fixed. That&rsquo;s the major point unlike an ordinary bike. Because of it, the crank would be always rotating regardless whither your bike is moving forward or backward!
-more
-When I first understand the word fixed gear bike, I actually learned from the Chinese phrase &ldquo;死飞&rdquo;.
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B6%E5%AE%83/fixie-bikes-without-brakes/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-  </section>
-  
-  <nav class="pagination">
-    
-      <a class="prev" href="/page/18/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
-    
-      <a class="next" href="/page/20/">
-        <span class="next-text">下一页</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
-
-        </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
-  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2013 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">XL</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-
-
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]
-    displayMath: [['$$','$$'], ['\[','\]']],},
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async
-	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
 
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
 
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+</header>
+<main class="main"> 
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: NSPopover &#43; Custom view inside
+Date: 2013-04-09 11:21:32
+Today I would like to implement a [cciN_objc]NSPopover[/cciN_objc] view with a subclass of [cciN_objc]NSTableView[/cciN_objc] in it.
+Here is a solution of how to display [cciN_objc]NSPopover[/cciN_objc] programmatically from stackoverflow : http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically , I’ll quote the code below:
+[cc_objc]
+NSViewController *controller = [[NSViewController alloc] initWithNibName:@“View” bundle:nil];
+NSPopover *popover = [[NSPopover alloc] init];
+[popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+[popover setContentViewController:controller];
+[popover setAnimates:YES];
+[popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: 几个开发相关的资源 Date: 2013-05-01 21:37:32 今天在 V2ex.com 发现了一些有用的资源： XCode-themes: [https://github.com/tursunovic/xcode-themes](https://github.com/tursunovic/xcode-themes Letterpress - Lightweight blogging system: [http://wangling.me/2013/01/letterpress.html](http://wangling.me/2013/01/letterpress.html AppCode - An alternative IDE for obj-c dev: [http://www.jetbrains.com/objc/](http://www.jetbrains.com/objc/ Monospace font: Source Code Pro http://slant.co/topics/67/~what-are-the-best-programming-fonts 话说 FriCAS 的 Mac OSX binary 也可以直接下载了，终于不...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/cocoa/%E5%87%A0%E4%B8%AA%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84%E8%B5%84%E6%BA%90/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: W1-S1-Parametrized Curves Date: 2015-3-1 23:00 Tags: DifferentialGeometry, Examples, Curves Status: public 在 do Carmo 的书中有一些简单的参数曲线的例子，我们可以用 Mathematica 做出它的图像，以及切线的变化情况。 螺旋线 看似不可微，实则可微的曲...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/differentialgeometry/w1-s1/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: 败了Lunatik的表带和手写笔 Date: 2012-11-16 16:18:39 Lunatik的 手写笔 和 表带 原先都是在 kickstarter 上的项目. 目前，表带正打五折优惠，确实很诱人.最终还是经不起...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/gadget/%E8%B4%A5%E4%BA%86lunatik%E7%9A%84%E8%A1%A8%E5%B8%A6%E5%92%8C%E6%89%8B%E5%86%99%E7%AC%94/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: Eynard-Orantin 以及疑问 Date: 2013-01-20 22:29:12 [mathjax] [caption id=&#34;&#34; align=“aligncenter” width=“500”] genus=3 Riemann Surface[/caption] 今天是无所事事的一天。上午晚起，中午和 Simon 等人吃饭又被雨淋，下午待在办公室在网上闲逛。唯一的收获似乎就是知道...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/life/eynard-orantin-%E4%BB%A5%E5%8F%8A%E7%96%91%E9%97%AE/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Title: A dream
+Date: 2012-02-22 15:54:00
+Status: private
+Suddenly I’ve got the idea about my life.
+I had a unpleasant dream yesterday. About you…
+more
+I’ve heard a lot of sad news today.
+I know I can do nothing about this.
+Hopeless moment.
+But, I do believe it’s part of life.
+Everything will be fine.
+We won’t lose hope.
+So, to help, to give, to do meaningful things.
+And, bless…...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/misc/a-dream/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://tigertooth4.github.io/page/18/">« </a>
+    <a class="next" href="http://tigertooth4.github.io/page/20/"> »</a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

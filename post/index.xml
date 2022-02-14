@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 思｜製 - A guy&#39;s thinking and making</title>
+    <title>Posts on 思｜制 - A guy&#39;s thinking and making</title>
     <link>http://tigertooth4.github.io/post/</link>
-    <description>Recent content in Posts on 思｜製 - A guy&#39;s thinking and making</description>
+    <description>Recent content in Posts on 思｜制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 28 Jan 2022 10:07:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -714,7 +714,7 @@ Here&amp;rsquo;s some beautiful piece performed by other people in YouTube:
       <pubDate>Mon, 25 Feb 2013 23:31:09 +0000</pubDate>
       
       <guid>http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E6%88%B4%E7%BB%B4%E6%96%AF%E7%9A%84%E8%A1%97%E9%81%93%E5%92%8C%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/</guid>
-      <description>为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了... 今天我想说说 &amp;quot;戴维斯的街道和生成函数</description>
+      <description>为什么每次想编程的时候总是不能坚持编下去呢？好吧！我承认刚才本来想编程的，结果编不下去了&amp;hellip; 今天我想说说 &amp;ldquo;戴维斯的街</description>
     </item>
     
     <item>
