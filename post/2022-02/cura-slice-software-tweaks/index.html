@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cura Slice Software Tweaks | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="3dp, cura, dual, G-code" />
+<meta name="description" content="简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Cura Slice Software Tweaks" />
+<meta property="og:description" content="简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-02-16T16:34:07&#43;08:00" />
+<meta property="article:modified_time" content="2022-02-16T16:34:07&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cura Slice Software Tweaks"/>
+<meta name="twitter:description" content="简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Cura Slice Software Tweaks",
+      "item": "http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cura Slice Software Tweaks",
+  "name": "Cura Slice Software Tweaks",
+  "description": "简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新",
+  "keywords": [
+    "3dp", "cura", "dual", "G-code"
+  ],
+  "articleBody": "简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新开始研究双头，发现 Cura 还是最熟悉的工具。不过，经过了几年，Cura 已经大大进步了。于是，有需要重新研究一下。\n今早进行双头打印的时候，我发现无论怎么切片，都是只有第二个喷头在打印。检查的结果让我怀疑是我设置的起始代码有问题。于是就有了下面的讨论。\nStart G-code 起始代码部分，Cura 会自动启动加热命令，在 g-code 起始代码前。但亲测发现还是可以在起始代码中自定义加热方式，并且 Cura 若看到了起始代码中的自定加热命令后，便不会自动在起始代码前加入加热命令。怀疑自动加热的功能是对 Ultimaker 机型说的。\n这里我们要使用 {initial_extruder_nr} 来指定最初加热的喷嘴编号（喷嘴编号是从 0 开始的）。如下是我目前的起始代码：\n; Custom Start G-code Written by XJ G28 ; Home axis while heating G1 Z10 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed T{initial_extruder_nr} ; Switch to the tool that should start with M140 S{material_bed_temperature_layer_0} ; Heating bed to the initial temp M190 S{material_bed_temperature_layer_0} ; Wait for bed temp to reach M104 T{initial_extruder_nr} S{material_print_temperature_layer_0}; Heating up the tool M109 T{initial_extruder_nr} S{material_print_temperature_layer_0}; Wait for the tool G1 X40 Y30 Z0.3 F3000.0 ; Move to start position G92 E0 ; Reset Extruder G1 X200 Y30 Z0.3 F1500.0 E15 ; Draw the first line G1 X200 Y30.5 Z0.3 F3000.0 ; Move to inside a little G1 X40 Y30.5 Z0.3 F1500.0 E25 ; Draw the second line G1 X45 Y30.5 Z0.3 F1500.0 ; Draw the second line without filament G92 E0 ; Reset Extruder G1 Z3.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed 检查发现，上述 G-代码不会生成正确的 {initial_extruder_nr}, 至少对 Cura 4.13.1 不会，除非明确在 Cura 中设置了首先使用的是哪个挤出机（比如增加 skirt，设置其使用第一个挤出机）。以下是 Cura 中关于 {initial_extruder_nr} 相关部分的代码。\nCura/StartSliceJob.py at 6a053a9f46c56a94cfaf611cb55376b4d0ad09d1 · Ultimaker/Cura\n一些解决 {initial_extruder_nr} 问题的方法 Cura 总是在用户定义的起始代码前加入切换挤出机的命令 T[nr]，并且切换是在归零之前。但是，Marlin 固件中的设定是，若没有归零，则无法切换挤出机。这样，T[nr] 实际上并没有执行，在后续加热、打印过程中会产生一系列问题。目前不知道官方的解决方法是什么，我的想法是\n1. 方式一 （Keep Everything Simple，目前我采取的方式）  在 Marlin 固件里，除非没有归零，否则总是执行实际切换（即使 old_tool = active_tool）。 G28 命令如果对 X 方向进行了归零，则总是将 active_extruder 设为 0（默认等效于执行了一次 T0 命令） 在切片时，需要对第一个 Cura 生成的实际打印的操作明确指定一个挤出机，例如对 skirt（这是实际打印的第一部分）设定使用 extruder_0 或者 extruder_1 。  这样在 Cura 的起始代码部分，就可以随心所欲设定加热顺序和清理喷嘴的操作，并获得正确的 {initial_extruder_nr} 了。\n2. 方式二（Home keeping track of the active_extruder，但很可能难以实现） 利用 Marlin 官方设定的机制，就是若在 active_extruder  0 的情况下，G28 会先做归零操作，然后切换回 active_extruder 和其所在的原始位置。\n Cura 会自动在自定起始代码开始之前加入 T[nr]，切换到将要使用的挤出机，然后执行归零操作，这时，如果机器是刚打开的，各方向坐标未知，则这条切换指令将被固件跳过，所以，当前的挤出机可能为缺省挤出机 extruder_0. 我们是否可以在固件中修改 tool_change 的代码，让其在 X 方向未归零的前提下仍执行切换呢？可以，但这会增加编程难度）。 倘若上一步切换操作成功了了，我们已经切换到了 active_extruder，然后在起始代码中，我们是可以随意执行 G28 归零指令的，因为归零后 Marlin 会再执行一次切换操作，切换到之前的 active_extruder 这时候，在起始代码中的一切加热指令，均不用设置对哪个挤出机加热（因为默认的就是对当前的 active_extruder 进行加热)，因此 {initial_extruder_nr} 参数都无需使用。所有的起始代码设置都可以如同单头打印机一样设置。 为使 a. 步骤中的 T[nr] 能够正确执行，或许一种简单的方法是在每个 G-code 文件执行之前先加入 G28 命令，这或许可以通过 octoprint 的插件实现。  End G-code 这是我目前的结束代码\nM104 T0 S0 M104 T1 S0 M140 S0 ;Retract the filament G92 E0 G1 E-2 F300 T0 ; back to the first tool G28 X0 Y0 M84 ",
+  "wordCount" : "1443",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-02-16T16:34:07+08:00",
+  "dateModified": "2022-02-16T16:34:07+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Cura Slice Software Tweaks
+    </h1>
+    <div class="post-meta"><span title='2022-02-16 16:34:07 +0800 CST'>February 16, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="简介">简介<a hidden class="anchor" aria-hidden="true" href="#简介">#</a></h1>
+<p>在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新开始研究双头，发现 Cura 还是最熟悉的工具。不过，经过了几年，Cura 已经大大进步了。于是，有需要重新研究一下。</p>
+<p>今早进行双头打印的时候，我发现无论怎么切片，都是只有第二个喷头在打印。检查的结果让我怀疑是我设置的起始代码有问题。于是就有了下面的讨论。</p>
+<h1 id="start-g-code">Start G-code<a hidden class="anchor" aria-hidden="true" href="#start-g-code">#</a></h1>
+<p><img loading="lazy" src="./imgs/start.png" alt="Start G-code Introduction"  />
+</p>
+<p>起始代码部分，Cura 会自动启动加热命令，在 g-code 起始代码前。但亲测发现还是可以在起始代码中自定义加热方式，并且 Cura 若看到了起始代码中的自定加热命令后，便不会自动在起始代码前加入加热命令。怀疑自动加热的功能是对 Ultimaker 机型说的。</p>
+<p>这里我们要使用 <code>{initial_extruder_nr}</code> 来指定最初加热的喷嘴编号（喷嘴编号是从 0 开始的）。如下是我目前的起始代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">; Custom Start G-code Written by XJ 
+
+G28 ; Home axis <span style="color:#66d9ef">while</span> heating
+G1 Z10 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+
+T<span style="color:#f92672">{</span>initial_extruder_nr<span style="color:#f92672">}</span> ; Switch to the tool that should start with 
+
+M140 S<span style="color:#f92672">{</span>material_bed_temperature_layer_0<span style="color:#f92672">}</span> ; Heating bed to the initial temp
+M190 S<span style="color:#f92672">{</span>material_bed_temperature_layer_0<span style="color:#f92672">}</span> ; Wait <span style="color:#66d9ef">for</span> bed temp to reach
+M104 T<span style="color:#f92672">{</span>initial_extruder_nr<span style="color:#f92672">}</span> S<span style="color:#f92672">{</span>material_print_temperature_layer_0<span style="color:#f92672">}</span>; Heating up the tool 
+M109 T<span style="color:#f92672">{</span>initial_extruder_nr<span style="color:#f92672">}</span> S<span style="color:#f92672">{</span>material_print_temperature_layer_0<span style="color:#f92672">}</span>; Wait <span style="color:#66d9ef">for</span> the tool
+
+G1 X40 Y30 Z0.3 F3000.0 ; Move to start position
+G92 E0 ; Reset Extruder
+G1 X200 Y30 Z0.3 F1500.0 E15 ; Draw the first line
+G1 X200 Y30.5 Z0.3 F3000.0 ; Move to inside a little
+G1 X40 Y30.5 Z0.3 F1500.0 E25 ; Draw the second line
+G1 X45 Y30.5 Z0.3 F1500.0 ; Draw the second line without filament
+G92 E0 ; Reset Extruder
+
+G1 Z3.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+</code></pre></div><p>检查发现，上述 G-代码不会生成正确的 <code>{initial_extruder_nr}</code>, 至少对 Cura 4.13.1 不会，除非明确在 Cura 中设置了首先使用的是哪个挤出机（比如增加 skirt，设置其使用第一个挤出机）。以下是 Cura 中关于 <code>{initial_extruder_nr}</code> 相关部分的代码。</p>
+<p><a href="https://github.com/Ultimaker/Cura/blob/6a053a9f46c56a94cfaf611cb55376b4d0ad09d1/plugins/CuraEngineBackend/StartSliceJob.py#L275-L283">Cura/StartSliceJob.py at 6a053a9f46c56a94cfaf611cb55376b4d0ad09d1 · Ultimaker/Cura</a></p>
+<h2 id="一些解决-initial_extruder_nr-问题的方法">一些解决 <code>{initial_extruder_nr}</code> 问题的方法<a hidden class="anchor" aria-hidden="true" href="#一些解决-initial_extruder_nr-问题的方法">#</a></h2>
+<p>Cura 总是在用户定义的<strong>起始代码前</strong>加入切换挤出机的命令 <code>T[nr]</code>，并且切换是在<strong>归零之前。但是，Marlin</strong> 固件中的设定是，若没有归零，则无法切换挤出机。这样，<code>T[nr]</code> 实际上并没有执行，在后续加热、打印过程中会产生一系列问题。目前不知道官方的解决方法是什么，我的想法是</p>
+<h3 id="1-方式一-keep-everything-simple目前我采取的方式">1. 方式一 （Keep Everything Simple，目前我采取的方式）<a hidden class="anchor" aria-hidden="true" href="#1-方式一-keep-everything-simple目前我采取的方式">#</a></h3>
+<ul>
+<li>在 Marlin 固件里，除非没有归零，否则总是执行实际切换（即使 <code>old_tool = active_tool</code>）。</li>
+<li>G28 命令如果对 X 方向进行了归零，则总是将 <code>active_extruder</code> 设为 0（默认等效于执行了一次 <code>T0</code> 命令）</li>
+<li>在切片时，需要对第一个 Cura 生成的实际打印的操作<strong>明确指定</strong>一个挤出机，例如对 skirt（这是实际打印的第一部分）设定使用 <code>extruder_0</code> 或者 <code>extruder_1</code> 。</li>
+</ul>
+<p>这样在 Cura 的起始代码部分，就可以随心所欲设定加热顺序和清理喷嘴的操作，并获得正确的 <code>{initial_extruder_nr}</code> 了。</p>
+<h3 id="2-方式二home-keeping-track-of-the-active_extruder但很可能难以实现">2. 方式二（Home keeping track of the active_extruder，但很可能难以实现）<a hidden class="anchor" aria-hidden="true" href="#2-方式二home-keeping-track-of-the-active_extruder但很可能难以实现">#</a></h3>
+<p>利用 Marlin 官方设定的机制，就是若在 <code>active_extruder &lt;&gt; 0</code> 的情况下，G28 会先做归零操作，然后切换回 <code>active_extruder</code> 和其所在的原始位置。</p>
+<ol>
+<li>Cura 会自动在自定起始代码开始之前加入 <code>T[nr]</code>，切换到将要使用的挤出机，然后执行归零操作，这时，如果机器是刚打开的，各方向坐标未知，则这条切换指令将被固件跳过，所以，当前的挤出机可能为缺省挤出机 <code>extruder_0</code>. 我们是否可以在固件中修改 tool_change 的代码，让其在 X 方向未归零的前提下仍执行切换呢？<em>可以，但这会增加编程难度</em>）。</li>
+<li>倘若上一步切换操作成功了了，我们已经切换到了 <code>active_extruder</code>，然后在起始代码中，我们是可以随意执行 G28 归零指令的，因为归零后 Marlin 会再执行一次切换操作，切换到之前的 <code>active_extruder</code></li>
+<li>这时候，在起始代码中的一切加热指令，均不用设置对哪个挤出机加热（因为默认的就是对当前的 active_extruder 进行加热)，因此 <code>{initial_extruder_nr}</code> 参数都无需使用。所有的起始代码设置都可以如同单头打印机一样设置。</li>
+<li>为使 a. 步骤中的 <code>T[nr]</code> 能够正确执行，或许一种简单的方法是在每个 G-code 文件执行之前先加入 G28 命令，这或许可以通过 octoprint 的插件实现。</li>
+</ol>
+<h2 id="end-g-code">End G-code<a hidden class="anchor" aria-hidden="true" href="#end-g-code">#</a></h2>
+<p><img loading="lazy" src="./imgs/end.png" alt="End G-code Introduction"  />
+</p>
+<p>这是我目前的结束代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">M104 T0 S0
+M104 T1 S0
+M140 S0
+
+;Retract the filament
+G92 E0
+G1 E-2 F300
+T0 ; back to the first tool
+G28 X0 Y0
+M84
+</code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/cura/">cura</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/dual/">dual</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/g-code/">G-code</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

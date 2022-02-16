@@ -2,53 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tigertooth4.github.io/tags/cas/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/3dp/</loc>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/cura/</loc>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/math/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/</loc>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/online/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/dual/</loc>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/g-code/</loc>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/remote/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/cas/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/fricas/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/math/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/online/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/remote/</loc>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/</loc>
-    <lastmod>2022-01-28T10:07:00+08:00</lastmod>
+    <lastmod>2022-02-14T10:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -324,11 +349,6 @@
   </url><url>
     <loc>http://tigertooth4.github.io/tags/wiring/</loc>
     <lastmod>2019-03-21T23:30:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/3dp/</loc>
-    <lastmod>2019-03-03T23:00:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

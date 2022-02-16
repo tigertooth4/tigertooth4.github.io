@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>G-code on 思｜制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/g-code/</link>
+    <description>Recent content in G-code on 思｜制 - A guy&#39;s thinking and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 16 Feb 2022 16:34:07 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/g-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cura Slice Software Tweaks</title>
+      <link>http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/</link>
+      <pubDate>Wed, 16 Feb 2022 16:34:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-02/cura-slice-software-tweaks/</guid>
+      <description>简介 在进行双喷头打印的时候，切片是重要一步。几年前，我的默认切片软件一直是 Cura，但是双头打印却有好几年没玩过了。最近，因为开发的原因重新</description>
+    </item>
+    
+  </channel>
+</rss>
