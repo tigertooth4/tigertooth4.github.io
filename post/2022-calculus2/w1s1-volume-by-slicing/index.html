@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W1s1 Volume by Slicing | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="calculus, teach, volume, demos" />
+<meta name="description" content="W1-S1 Volumes by Slicing and Rotation About an Axis 周次: 1 日期: February 23, 2022 节次: 1 In this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis). Outline Review: Riemann sums &amp; Definite Integral Definite integral is dealing with">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w1s1-volume-by-slicing/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W1s1 Volume by Slicing" />
+<meta property="og:description" content="W1-S1 Volumes by Slicing and Rotation About an Axis 周次: 1 日期: February 23, 2022 节次: 1 In this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis). Outline Review: Riemann sums &amp; Definite Integral Definite integral is dealing with" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w1s1-volume-by-slicing/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-02-23T12:36:54&#43;08:00" />
+<meta property="article:modified_time" content="2022-02-23T12:36:54&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W1s1 Volume by Slicing"/>
+<meta name="twitter:description" content="W1-S1 Volumes by Slicing and Rotation About an Axis 周次: 1 日期: February 23, 2022 节次: 1 In this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis). Outline Review: Riemann sums &amp; Definite Integral Definite integral is dealing with"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W1s1 Volume by Slicing",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w1s1-volume-by-slicing/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W1s1 Volume by Slicing",
+  "name": "W1s1 Volume by Slicing",
+  "description": "W1-S1 Volumes by Slicing and Rotation About an Axis 周次: 1 日期: February 23, 2022 节次: 1 In this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis). Outline Review: Riemann sums \u0026amp; Definite Integral Definite integral is dealing with",
+  "keywords": [
+    "calculus", "teach", "volume", "demos"
+  ],
+  "articleBody": "W1-S1 Volumes by Slicing and Rotation About an Axis 周次: 1 日期: February 23, 2022 节次: 1\nIn this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis).\nOutline Review: Riemann sums \u0026 Definite Integral Definite integral is dealing with summations of infinite many tiny quantities. For example, to calculate the area of region under the curve $y= f(x)$ .\nThe approximate “area” is given by Riemann sums associating with a partition $P$ of the finite closed interval $[a,b]$ .\n$$ S_P = \\sum_{i=1}^n f(x_i) \\Delta x_i $$\nThis is a finite sum, and each term has a finite (not infinitely small) area.\nTo define the “area” precisely, we take the limit of $S_P$ as the norm of the partition $||P||$ approaches zero. The number we get is the following, called the definite integral of $f(x)$.\n$$ \\int_a^b f(x)dx. $$\nTo evaluate this integral, we have to find the anti-derivative of $f(x)$, i.e. $F(x)$ with $F'(x)\\equiv f(x)$. Then the fundamental theorem of calculus shows\n$$ \\int_a^b f(x)dx = F(b)-F(a). $$\nVolumes by Slicing In this section, we will apply this idea to the calculation of volumes. We can show that for certain regular solid ( shape), we can calculate the volume if the area for cross-sections can be known in prior.\nBasic Knowledge For any cylindrical solid, if the base area is $A$ and height is $h$ , the volume is\n$$ \\text{Volume} = A \\times h $$\nFor solids that are not in cylindrical shape, the volume can be found by the method of slicing.\n Definition (Cross-section)\n A cross-section of a solid $S$ is the plane region formed by intersecting $S$ with a plane. E.g. the following graph shows a solid $S$ has a cross-section with plane $P:{ x=x_0 }$\nMethod of Finding the Volumes by Slicing Suppose a solid $S$ can be positioned between two parallel planes $x=a$ and $x=b$.\nTo find the volume $V$ of $S$, assuming we know the area for any cross-section of $S$ with any plane $P$ perpendicular to the $x$ -axis and positioned at $x$. The area for the cross-section will be denoted by $A(x)$.\nThen to find the approximation for volume $V$, we will go through the following steps.\n Partition $[a,b]$ into subintervals, i.e.  $$ P: a = x_0  The planes $P_{x_i}$ at $x=x_i$ slice $S$ into thin “slabs”.\n  These slabs are approximated by cylindrical solid with base area $A(x_k)$ (How to estimate the inaccuracy ?), and thickness $\\Delta x_k.$ The volume for this slab is approximately the same as the volume of cylindrical solid\n$$ \\text{Volume of the }k\\text{-th slab} \\approx V_k = A(x_k)\\Delta x_k $$\n The volume $V$ of the entire solid $S$ is approximated by the sum of cylindrical volumes  $$ V\\approx \\sum_{k=1}^n V_k = \\sum_{k=1}^n A(x_k)\\Delta x_k $$\nThis is a Riemann sum for the function $A(x)$ on $[a,b]$. Assuming $A(x)$ is a continuous function on $[a,b]$, then we can expect the approximation to improve as the norm $||P||\\to 0$. (❓Which means the approximation is approaching the real value, why.)\nThen the volume is defined by\n$$ V = \\int_a^b A(x) dx. $$\n Definition. (Volume)\n The volume of a solid with known integral equation cross-section area $A(x)$ from $x=a$ to $x=b$ is given by the integral\n$$ V = \\int_a^b A(x) dx. $$\nCalculating the Volume of a Solid  Sketch the solid and a typical cross-section Find the formula of the area $A(x)$ for general cross-section Find the upper and lower limits of integration Calculate the definite integral using the Fundamental Theorem.   Example 1. Volume of a Pyramid\n A pyramid $3$ meter high has a square base that is $3$ meter on a side.\n$$ V = \\int_0^3 A(x)dx = \\int_0^3 x^2 dx = \\left.\\frac{x^3}{3}\\right]_{0}^3 = 9. $$\n Example 2. Volume of a Wedge\n A curved wedge is cut from a cylinder of radius 3 by two planes. The first plane is perpendicular to the axis of the cylinder. The second one crosses the first one at a $45^\\circ$ angle at the center of the of the cylinder. What is the volume $V$ for the wedge ?\n What is the area of the cross section $A(x)=?$   Example 3. Volume of a Cone (why $1/3$ that of the cylinder?)\n A cone is $h$ in height, and $R$ in radius for the base.\nCavalieri’s Principle (祖暅原理) Two solids with equal altitudes and identical cross-sectional areas at each height have the same volume. (Why?)\n Example 4. The hemisphere and the cylinder with a cone been removed\n A hemisphere with $R$ in radius, the cylinder has radius $R$ and height $R$ , the cone is described as in Example 3, but with $h=R$. What is the relation for the volume of the two solids?\nSolids of Revolution  The solid generated by rotating a plane region about an axis in its plane is called a solid of revolution.\n In this case, the area of cross-section is usually easy to find. There are a lot of examples.\nSolids of Revolution: The Disk Method ( Disks as Slabs)  Example 5. A Solid of Revolution (About the $x$-axis)\n The region between the curve $y=\\sqrt{x}$, $0\\le x\\le 4$ about the $x$-axis.\n Example 6. Volume of a sphere (omitted)\n A sphere with radius $R$.\n Example 7. Rotation about a line $y=1$\n A solid is generated by revolving the region bounded by $y=\\sqrt{x}$ and the lines $y=1,$ $x=4$ about the line $y=1.$\n Example 8. Rotation about the $y$-axis\n Find the volume by revolving the region between the $y$ -axis and the curve $x=2/y$ , $1\\le y\\le 4$ , about the $y$-axis.\n Example 9. Rotation about a vertical axis\n Find the volume of the solid generated by revolving the region between the parabola $x=y^2+1$ and the line $x=3$ about the line $x=3.$\nSolids of Revolution: The Washer Method (Washers as Slabs)  Example 10. A Washer Cross-Section (Rotation about the $x$-axis)\n The region bounded by the curve $y=x^2+1$ and the line $y=-x+3$ is revolved about the $x$-axis to generate a solid.\n Example 11. A Washer Cross-Section ( Rotation about the $y$-axis)\n The region bounded by the parabola $y=x^2$ and the line $y=2x$ in the first quadrant is revolved about the $y$-axis to generate a solid. (Omitted)\n",
+  "wordCount" : "1101",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-02-23T12:36:54+08:00",
+  "dateModified": "2022-02-23T12:36:54+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w1s1-volume-by-slicing/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W1s1 Volume by Slicing
+    </h1>
+    <div class="post-meta"><span title='2022-02-23 12:36:54 +0800 CST'>February 23, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="w1-s1-volumes-by-slicing-and-rotation-about-an-axis">W1-S1 Volumes by Slicing and Rotation About an Axis<a hidden class="anchor" aria-hidden="true" href="#w1-s1-volumes-by-slicing-and-rotation-about-an-axis">#</a></h1>
+<p>周次: 1
+日期: February 23, 2022
+节次: 1</p>
+<p>In this semester, we will be beginning with the applications of definite integrals. Today’s course is the contents in section 6.1 (Volumes by Slicing and Rotation About an Axis).</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="review-riemann-sums--definite-integral">Review: Riemann sums &amp; Definite Integral<a hidden class="anchor" aria-hidden="true" href="#review-riemann-sums--definite-integral">#</a></h1>
+<p>Definite integral is dealing with summations of infinite many tiny quantities. For example, to calculate the area of region under the curve $y= f(x)$
+.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/Untitled.png" alt="Untitled"  />
+</p>
+<p>The approximate “area” is given by Riemann sums associating with a partition $P$ of the finite closed interval $[a,b]$
+.</p>
+<p>$$
+S_P = \sum_{i=1}^n f(x_i) \Delta x_i
+$$</p>
+<p>This is a finite sum, and each term has a finite (not infinitely small) area.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>To define the “area” precisely, we take the limit of $S_P$
+as the norm of the partition $||P||$ approaches zero. The number we get is the following, called the definite integral of $f(x)$.</p>
+<p>$$
+\int_a^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/RiemannIntegralShow.gif" alt="RiemannIntegralShow.gif"  />
+</p>
+<p>To evaluate this integral, we have to find the anti-derivative of $f(x)$, i.e. $F(x)$ with $F'(x)\equiv f(x)$. Then the fundamental theorem of calculus shows</p>
+<p>$$
+\int_a^b f(x)dx = F(b)-F(a).
+$$</p>
+<h1 id="volumes-by-slicing">Volumes by Slicing<a hidden class="anchor" aria-hidden="true" href="#volumes-by-slicing">#</a></h1>
+<p>In this section, we will apply this idea to the calculation of volumes. We can show that for certain regular solid ( shape), we can calculate the volume if the area for cross-sections can be known in prior.</p>
+<p><strong><code>Basic Knowledge</code> For any cylindrical solid, if the base area is $A$ and height is $h$
+, the volume is</strong></p>
+<p>$$
+\text{Volume} = A \times h
+$$</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>For solids  that are not in cylindrical shape, the volume can be found by the <em><strong>method of slicing</strong></em>.</p>
+<blockquote>
+<p><strong>Definition (Cross-section)</strong></p>
+</blockquote>
+<p>A <strong>cross-section</strong> of a solid $S$ is the plane region formed by intersecting $S$ with a plane. E.g. the following graph shows a solid $S$ has a cross-section with plane $P:{ x=x_0 }$</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/Untitled%203.png" alt="Untitled"  />
+</p>
+<h2 id="method-of-finding-the-volumes-by-slicing">Method of Finding the Volumes by Slicing<a hidden class="anchor" aria-hidden="true" href="#method-of-finding-the-volumes-by-slicing">#</a></h2>
+<p>Suppose a solid $S$ can be positioned between two parallel planes $x=a$ and $x=b$.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/generalSolidShow.png" alt="generalSolidShow.png"  />
+</p>
+<p>To find the volume $V$ of $S$, <strong>assuming</strong> we know the area for any cross-section of $S$ with any plane $P$ perpendicular to the $x$
+-axis and positioned at $x$. The area for the cross-section will be denoted by $A(x)$.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/generalCrossSection.gif" alt="generalCrossSection.gif"  />
+</p>
+<p>Then to find the approximation for volume $V$, we will go through the following steps.</p>
+<ol>
+<li>Partition $[a,b]$ into subintervals, i.e.</li>
+</ol>
+<p>$$
+P: a = x_0 &lt; x_1 &lt; \cdots&lt; x_n = b
+$$</p>
+<ol>
+<li>
+<p>The planes $P_{x_i}$ at $x=x_i$ slice $S$ into thin “slabs”.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/generalSolidSlice.gif" alt="generalSolidSlice.gif"  />
+</p>
+</li>
+</ol>
+<p>These slabs are approximated by cylindrical solid with base area $A(x_k)$ (How to estimate the inaccuracy ?), and thickness $\Delta x_k.$ The volume for this slab is approximately the same as the volume of cylindrical solid</p>
+<p>$$
+\text{Volume of the }k\text{-th slab} \approx V_k = A(x_k)\Delta x_k
+$$</p>
+<ol>
+<li>The volume $V$ of the entire solid $S$ is approximated by the sum of cylindrical volumes</li>
+</ol>
+<p>$$
+V\approx \sum_{k=1}^n V_k = \sum_{k=1}^n A(x_k)\Delta x_k
+$$</p>
+<p>This is a Riemann sum for the function $A(x)$ on $[a,b]$. <strong>Assuming $A(x)$ is a continuous function on $[a,b]$,</strong> then we can expect the approximation to <strong>improve</strong> as the norm $||P||\to 0$. (❓Which means the approximation is approaching the real value, why.)</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/generalSolidApprox.gif" alt="generalSolidApprox.gif"  />
+</p>
+<p>Then the volume is defined by</p>
+<p>$$
+V = \int_a^b A(x) dx.
+$$</p>
+<blockquote>
+<p><strong>Definition. (Volume)</strong></p>
+</blockquote>
+<p>The volume of a solid with known integral equation cross-section area $A(x)$ from $x=a$ to $x=b$ is given by the integral</p>
+<p>$$
+V = \int_a^b A(x) dx.
+$$</p>
+<h2 id="calculating-the-volume-of-a-solid">Calculating the Volume of a Solid<a hidden class="anchor" aria-hidden="true" href="#calculating-the-volume-of-a-solid">#</a></h2>
+<ol>
+<li>Sketch the solid and a typical cross-section</li>
+<li>Find the formula of the area $A(x)$
+for general cross-section</li>
+<li>Find the upper and lower limits of integration</li>
+<li>Calculate the definite integral using the Fundamental Theorem.</li>
+</ol>
+<blockquote>
+<p><strong>Example 1</strong>. <strong>Volume of a Pyramid</strong></p>
+</blockquote>
+<p>A pyramid $3$
+meter high has a square base that is $3$ meter on a side.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/pyramid.gif" alt="pyramid.gif"  />
+</p>
+<p>$$
+V = \int_0^3 A(x)dx = \int_0^3 x^2 dx = \left.\frac{x^3}{3}\right]_{0}^3 = 9.
+$$</p>
+<blockquote>
+<p><strong>Example 2. Volume of a Wedge</strong></p>
+</blockquote>
+<p>A curved wedge is cut from a cylinder of radius 3 by two planes. The first plane is perpendicular to the axis of the cylinder. The second one crosses the first one at a  $45^\circ$
+angle at the center of the  of the cylinder. What is the volume $V$
+for the wedge ?</p>
+<ul>
+<li>What is the area of the cross section $A(x)=?$</li>
+</ul>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/wedge.gif" alt="wedge.gif"  />
+</p>
+<blockquote>
+<p><strong>Example 3. Volume of a Cone (why $1/3$ that of the cylinder?)</strong></p>
+</blockquote>
+<p>A cone is $h$ in height, and $R$
+in radius for the base.</p>
+<h2 id="cavalieris-principle-祖暅原理">Cavalieri’s Principle (<strong>祖暅</strong>原理)<a hidden class="anchor" aria-hidden="true" href="#cavalieris-principle-祖暅原理">#</a></h2>
+<p>Two solids with equal altitudes and identical <strong>cross-sectional areas</strong> at each height have the same volume. (Why?)</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/cavalieri.png" alt="cavalieri.png"  />
+</p>
+<blockquote>
+<p><strong>Example 4. The hemi<em>sphere</em> and the <em>cylinder with a cone been removed</em></strong></p>
+</blockquote>
+<p>A hemisphere with $R$
+in radius, the cylinder has radius $R$
+and height $R$
+, the cone is described as in Example 3, but with $h=R$.  What is the relation for the volume of  the two solids?</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/cavShow.png" alt="cavShow.png"  />
+</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/cavAni.gif" alt="cavAni.gif"  />
+</p>
+<h2 id="solids-of-revolution">Solids of Revolution<a hidden class="anchor" aria-hidden="true" href="#solids-of-revolution">#</a></h2>
+<blockquote>
+<p>The solid generated by rotating a plane region about an axis in its plane is called a <strong>solid of revolution.</strong></p>
+</blockquote>
+<p>In this case, the area of cross-section is usually easy to find. There are a lot of examples.</p>
+<h2 id="solids-of-revolution-the-disk-method--disks-as-slabs">Solids of Revolution: The Disk Method ( Disks as Slabs)<a hidden class="anchor" aria-hidden="true" href="#solids-of-revolution-the-disk-method--disks-as-slabs">#</a></h2>
+<blockquote>
+<p><strong>Example 5. A Solid of Revolution (About the $x$-axis)</strong></p>
+</blockquote>
+<p>The region between the curve $y=\sqrt{x}$, $0\le x\le 4$ about the $x$-axis.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidAni1.gif" alt="revSolidAni1.gif"  />
+</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidSliceAni1.gif" alt="revSolidSliceAni1.gif"  />
+</p>
+<blockquote>
+<p><strong>Example 6. Volume of a sphere (omitted)</strong></p>
+</blockquote>
+<p>A sphere with radius $R$.</p>
+<blockquote>
+<p><strong>Example 7. Rotation about a line $y=1$</strong></p>
+</blockquote>
+<p>A solid is generated by revolving the region bounded by $y=\sqrt{x}$
+and the lines $y=1,$
+$x=4$
+about the line $y=1.$</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidAni2.gif" alt="revSolidAni2.gif"  />
+</p>
+<blockquote>
+<p><strong>Example 8. Rotation about the $y$-axis</strong></p>
+</blockquote>
+<p>Find the volume by revolving the region between the $y$
+-axis and the curve $x=2/y$
+, $1\le y\le 4$
+, about the $y$-axis.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidAni3.gif" alt="revSolidAni3.gif"  />
+</p>
+<blockquote>
+<p><strong>Example 9. Rotation about a vertical axis</strong></p>
+</blockquote>
+<p>Find the volume of the solid generated by revolving the region between the parabola $x=y^2+1$
+and the line $x=3$
+about the line $x=3.$</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidAni4.gif" alt="revSolidAni4.gif"  />
+</p>
+<h2 id="solids-of-revolution-the-washer-method-washers-as-slabs">Solids of Revolution: The Washer Method (Washers as Slabs)<a hidden class="anchor" aria-hidden="true" href="#solids-of-revolution-the-washer-method-washers-as-slabs">#</a></h2>
+<blockquote>
+<p><strong>Example 10. A Washer Cross-Section (Rotation about the $x$-axis)</strong></p>
+</blockquote>
+<p>The region bounded by the curve $y=x^2+1$ and the line $y=-x+3$ is revolved about the $x$-axis to generate a solid.</p>
+<p><img loading="lazy" src="W1-S1%20Volu%20246ad/revSolidAni6.gif" alt="revSolidAni6.gif"  />
+</p>
+<blockquote>
+<p><strong>Example 11. A Washer Cross-Section ( Rotation about the $y$-axis)</strong></p>
+</blockquote>
+<p>The region bounded by the parabola $y=x^2$
+and the line $y=2x$
+in the first quadrant is revolved about the $y$-axis to generate a solid. (Omitted)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/teach/">teach</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/volume/">volume</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/demos/">demos</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

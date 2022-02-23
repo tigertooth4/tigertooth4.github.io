@@ -2,6 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/demos/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/teach/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/volume/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w1s1-volume-by-slicing/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-02-23T12:36:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://tigertooth4.github.io/tags/3dp/</loc>
     <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,21 +63,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/g-code/</loc>
-    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-02-16T16:34:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-02-16T16:34:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -78,11 +103,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/life/</loc>
-    <lastmod>2020-09-29T13:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/teach/</loc>
     <lastmod>2020-09-29T13:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
