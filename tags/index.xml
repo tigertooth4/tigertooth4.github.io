@@ -6,29 +6,47 @@
     <description>Recent content in Tags on 思｜制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Feb 2022 21:44:36 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Mar 2022 15:33:34 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>calculus2</title>
-      <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
+      <title>calculus</title>
+      <link>http://tigertooth4.github.io/tags/calculus/</link>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
       
-      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <guid>http://tigertooth4.github.io/tags/calculus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curves</title>
+      <link>http://tigertooth4.github.io/tags/curves/</link>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/curves/</guid>
       <description></description>
     </item>
     
     <item>
       <title>demos</title>
       <link>http://tigertooth4.github.io/tags/demos/</link>
-      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/demos/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Length</title>
+      <link>http://tigertooth4.github.io/tags/length/</link>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/length/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Math</title>
       <link>http://tigertooth4.github.io/tags/math/</link>
-      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/math/</guid>
       <description></description>
@@ -37,9 +55,18 @@
     <item>
       <title>teach</title>
       <link>http://tigertooth4.github.io/tags/teach/</link>
-      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
+      <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/teach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calculus2</title>
+      <link>http://tigertooth4.github.io/tags/calculus2/</link>
+      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
       <description></description>
     </item>
     

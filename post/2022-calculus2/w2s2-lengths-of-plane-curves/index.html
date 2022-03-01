@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W2-S1 Lengths of Plane Curves | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="calculus, teach, Length, curves, math, demos" />
+<meta name="description" content="周次: 2 备注: Attendance check 日期: March 2, 2022 节次: 1 Outline We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w2s2-lengths-of-plane-curves/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W2-S1 Lengths of Plane Curves" />
+<meta property="og:description" content="周次: 2 备注: Attendance check 日期: March 2, 2022 节次: 1 Outline We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w2s2-lengths-of-plane-curves/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-01T15:33:34&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-01T15:33:34&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W2-S1 Lengths of Plane Curves"/>
+<meta name="twitter:description" content="周次: 2 备注: Attendance check 日期: March 2, 2022 节次: 1 Outline We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W2-S1 Lengths of Plane Curves",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w2s2-lengths-of-plane-curves/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W2-S1 Lengths of Plane Curves",
+  "name": "W2-S1 Lengths of Plane Curves",
+  "description": "周次: 2 备注: Attendance check 日期: March 2, 2022 节次: 1 Outline We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating",
+  "keywords": [
+    "calculus", "teach", "Length", "curves", "math", "demos"
+  ],
+  "articleBody": "周次: 2 备注: Attendance check 日期: March 2, 2022 节次: 1\nOutline We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating a volume. By subdividing the curve into many pieces and joining successive points of division by straight line segments, we can then pass through a limit process to find the “real” length of a curve. In this lecture, we show this process and discuss some examples and consequences.\nParametric Plane Curves Let $C$ be a curve given parametrically by the equation\n$$ x =f(t),\\quad \\text{and}\\quad y = g(t),\\quad a\\le t\\le b. $$\n Definition. (Smooth (Plane) Curve)\n If the functions $f$ and $g$ have continuous derivatives on $[a,b]$ ( that is, $f'(t)$ and $g'(t)$ are both continuous functions, such functions are called continuously differentiable) and $f'$ and $g'$ are not simultaneously zero. Then the curve $C$ is called a smooth curve.\nRemark\nIt is helpful to imagine the curve as the path of a particle moving from point $A = (f(a),g(a))$ at time $t=a$ to point $B=(f(b),g(b))$.\nExample. (Why $f'$ and $g'$ cannot be simultaneously zero?) A plane curve $x=t^2$ and $y=t^3$ ($t\\in[-1,1]$) are defined by functions with continuous derivatives. However, the plot shows there is a cusp when $t=0$, the reason being $f'(0)= g'(0)=0$.\nLength of a Parametrically Defined Curve For a plane curve $C: (x=f(t), y=g(t))$ , ($a\\le t\\le b$). Suppose $f$ and $g$ are continuously differentiable. Set points $A = (f(a),g(a))$ and $B = (f(b),g(b))$. In sequel, we always assume the path from $A$ to $B$ is traversed exactly once as $t$ increases from $t=a$ to $t=b$.\n1. Partition We subdivide the closed interval $[a,b]$ into $n$ pieces\n$$ P: a=t_0 The partition $P$ induces a partition on the curve, as\n$$ A = P_0, P_1, \\cdots, P_n = B,\\quad \\text{where}\\quad P_k = (f(t_k),g(t_k)) $$\n2. Length for the straight line segments Each straight line segment joining the successive points of the partition has length\n$$ L_k = \\sqrt{(\\Delta x_k)^2 + (\\Delta y_k)^2} \\ = \\sqrt{[f(t_k)-f(t_{k-1}]^2 + [g(t_k) - g(t_{k-1})]^2} $$\n3. Approximating the curve length The summation of all the lengths for straight line segment is assumed to be a good approximation for the length of the curve.\n$$ \\text{Length of the curve }C\\approx \\sum_{k=1}^n L_k $$\nBy the Lagrange Mean Value Theorem , there are numbers $t_k^*$ and $t_k^{**}$ $\\in[t_{k-1},t_k]$ such that\n$$ \\Delta x_k = f(t_k)-f(t_{k-1}) = f'(t_k^*), \\Delta t_k,\\ \\Delta y_k = g(t_k)- g(t_{k-1}) = g'(t_k^{**}) , \\Delta t_k. $$\nThen\n$$ \\sum_{k=1}^n L_k = \\sum_{k=1}^n \\sqrt{(\\Delta x_k)^2 + (\\Delta y_k)^2}\\ = \\sum_{k=1}^n \\sqrt{[f'(t_k^)]^2 + [g'(t_k^{**})]^2},\\Delta t_k\\=\\sum_{k=1}^n \\sqrt{[f'(t_k^)]^2 + [g'(t_k^{*})]^2},\\Delta t_k + \\text{error} $$\n4. Pass through the limit The above summation is not exactly a Riemann sum (It is a Riemann summation up to an “error term”). However, a theorem in Advanced Calculus shows the error approaches $0$ as $||P||\\to 0$. Therefore by passing through the limit process as $||P||\\to 0$, we obtain the following formula for the length of the curve $C$.\n Definition. (Length of a Parametric Curve)\n If a curve is defined parametrically by $x=f(t)$ and $y=g(t)$, $a\\le t\\le b$, where $f'$ and $g'$are continuous on $[a,b]$, and $C$ is traversed exactly once as $t$ increases from $t=a$ to $t=b$, then the length of $C$ is the definite integral\n$$ L = \\int_a^b \\sqrt{[f'(t)]^2 + [g'(t)]^2} dt $$\nRemark\nThe different choices for the parametrization of the curve $C$ doesn’t affect the value $L$ at all. As long as the parametrization meets the conditions stated in the definition of the length of $C$.\nExample 1. The Circumference of a Circle A circle with radius $r$ can be defined parametrically by\n$$ x=r\\cos(t),\\quad\\text{and}\\quad y=r\\sin(t),\\quad 0\\le t\\le 2\\pi. $$\nTherefore by using the definite integral we can see the length is $L=2\\pi r$.\nExample 2. The length of an astroid An astroid is defined by $x=\\cos^3(t)$ and $y=\\sin^3(t)$, with $0\\le t\\le 2\\pi.$\nThe length of the curve in the first-quadrant is $L=\\dfrac32.$\nSpecial Case: The Length of a Curve $y=f(x)$ Given a continuously differentiable function $y=f(x)$, $a\\le x\\le b$, we can assign $x=t$ as a parameter. The graph of the function $f$ is then the curve $C$ defined parametrically by\n$$ x=t,\\quad \\text{and} \\quad y=f(t),\\quad a\\le t\\le b. $$\nThen as a special case of parametric curve, the length of the graph $C$ is defined by\n Definition. The length of curve $y=f(x)$\n If $f$ is continuously differentiable on the closed interval $[a,b]$, then the length of the curve $y=f(x)$ from $x=a$ to $x=b$ is\n$$ L = \\int_a^b \\sqrt{1+\\left(\\frac{dy}{dx}\\right)^2}dx = \\int_a^b \\sqrt{1+[f'(x)]^2} dx. $$\nExample 3. The arc-length of a graph A graph defined by\n$$ y=\\frac{4\\sqrt2}{3}x^{3/2} -1,\\quad 0\\le x\\le 1. $$\nis $L = \\dfrac{13}{6}.$\nExample 4. The length of a catenary A catenary is typically expressed as\n$$ y = c \\cosh(x/c),\\quad \\text a\\le x \\le b. $$\nDealing with Discontinuities in $dy/dx$ As a case when $dy/dx$ fails to exist, $dx/dy$ may exist. Therefore, we may be able to find the curve length by expressing $x$ as a function of $y$ instead.\nExample 5. Inverse the expression $y=f(x)$ to $x=g(y)$ Find the length of the curve $y=(x/2)^{2/3}$ from $x=0$ to $x=2.$ By express $x$ as a function of $y$ we find the length is approximately $L\\approx 2.27.$\nRefined Differential Formula for Length The length is frequently written in terms of differentials in place of derivatives. Recall that for function $x=f(t)$, the differential $dx$ is defined as\n$$ dx = df = f'(t) dt = \\frac{d x}{dt} dt $$\nSo the equation for length is written by\n$$ L = \\int_a^b \\sqrt{(dx)^2+(dy)^2}. $$\nIt is customary to eliminate the parentheses in $(dx)^2$ and write $dx^2$ instead. So\n$$ L = \\int_a^b \\sqrt{dx^2+dy^2} $$\nThis is a unified formula for length. For different cases, one must express $x$ and $y$ in suitable parametrization and restore the formula $L = \\int_a^b \\sqrt{dx^2+dy^2} = \\int_a^b \\sqrt{g'(t)^2+g'(t)^2}dt$ to compute.\nA useful way is to write\n$$ ds = \\sqrt{dx^2+dy^2} $$\nand treat $ds$ as the differential of arc-length (弧长微元), which can be integrated between appropriate limits to give the total length of a curve. The geometric meaning of $ds$ is shown below, as an approximation of length for tiny arc-segment. Then to memorize, first recall the shortest expression\n$$ L = \\int ds $$\nThen recall $ds = \\sqrt{dx^2+dy^2}$, finally choose appropriate parametrization to expand $dx^2+dy^2$, as well as specify the the integral limits $a$ and $b$.\n",
+  "wordCount" : "1149",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-01T15:33:34+08:00",
+  "dateModified": "2022-03-01T15:33:34+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w2s2-lengths-of-plane-curves/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W2-S1 Lengths of Plane Curves
+    </h1>
+    <div class="post-meta"><span title='2022-03-01 15:33:34 +0800 CST'>March 1, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 2
+备注: Attendance check
+日期: March 2, 2022
+节次: 1</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<p>We knew what is meant by the length of a straight line segment, but without calculus, we have no precise notion of the length of a general winding curve. The idea of approximating the length of a curve has no difference with the idea of approximating an area or approximating a volume. By subdividing the curve into many pieces and joining successive points of division by straight line segments, we can then pass through a limit process to find the “real” length of a curve. In this lecture, we show this process and discuss some examples and consequences.</p>
+<h1 id="parametric-plane-curves">Parametric Plane Curves<a hidden class="anchor" aria-hidden="true" href="#parametric-plane-curves">#</a></h1>
+<p>Let $C$ be a curve given parametrically by the equation</p>
+<p>$$
+x =f(t),\quad \text{and}\quad y = g(t),\quad a\le t\le b.
+$$</p>
+<blockquote>
+<p><strong>Definition. (Smooth  (Plane) Curve)</strong></p>
+</blockquote>
+<p>If the functions $f$  and $g$ have <strong>continuous derivatives</strong>  on $[a,b]$ ( that is,  $f'(t)$  and $g'(t)$ are both continuous functions, such functions are called <strong>continuously differentiable</strong>) and $f'$ and $g'$ are not simultaneously zero. Then the curve $C$ is called  a <strong>smooth curve</strong>.</p>
+<p><strong><code>Remark</code></strong></p>
+<p>It is helpful to imagine the curve as the path of a particle moving from point $A = (f(a),g(a))$ at time $t=a$ to point $B=(f(b),g(b))$.</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/generalCurve.gif" alt="generalCurve.gif"  />
+</p>
+<h3 id="example-why-f-and-g-cannot-be-simultaneously-zero"><strong>Example. (Why $f'$ and $g'$ cannot be simultaneously zero?)</strong><a hidden class="anchor" aria-hidden="true" href="#example-why-f-and-g-cannot-be-simultaneously-zero">#</a></h3>
+<p>A plane curve $x=t^2$ and $y=t^3$ ($t\in[-1,1]$) are defined by functions with continuous derivatives. However, the plot shows there is a cusp when $t=0$, the reason being $f'(0)= g'(0)=0$.</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/nonSmooth.gif" alt="nonSmooth.gif"  />
+</p>
+<h1 id="length-of-a-parametrically-defined-curve">Length of a Parametrically Defined Curve<a hidden class="anchor" aria-hidden="true" href="#length-of-a-parametrically-defined-curve">#</a></h1>
+<p>For a plane curve $C: (x=f(t), y=g(t))$ , ($a\le t\le b$). Suppose $f$ and $g$ are continuously differentiable. Set points $A = (f(a),g(a))$ and $B = (f(b),g(b))$. In sequel, <em>we always assume the path from $A$ to $B$ is traversed exactly once as $t$ increases from $t=a$ to $t=b$.</em></p>
+<h3 id="1-partition">1. Partition<a hidden class="anchor" aria-hidden="true" href="#1-partition">#</a></h3>
+<p>We subdivide the closed interval $[a,b]$ into $n$ pieces</p>
+<p>$$
+P: a=t_0 &lt; t_1 &lt; \cdots &lt; t_n = b.
+$$</p>
+<p>The partition $P$ induces a partition on the curve, as</p>
+<p>$$
+A = P_0, P_1, \cdots, P_n = B,\quad \text{where}\quad P_k = (f(t_k),g(t_k))
+$$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/Untitled.png" alt="Untitled"  />
+</p>
+<h3 id="2-length-for-the-straight-line-segments">2. Length for the straight line segments<a hidden class="anchor" aria-hidden="true" href="#2-length-for-the-straight-line-segments">#</a></h3>
+<p>Each straight line segment joining the successive points of the partition has length</p>
+<p>$$
+L_k = \sqrt{(\Delta x_k)^2 + (\Delta y_k)^2} \ = \sqrt{[f(t_k)-f(t_{k-1}]^2 + [g(t_k) - g(t_{k-1})]^2}
+$$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/Untitled%201.png" alt="Untitled"  />
+</p>
+<h3 id="3-approximating-the-curve-length">3. Approximating the curve length<a hidden class="anchor" aria-hidden="true" href="#3-approximating-the-curve-length">#</a></h3>
+<p>The summation of all the lengths for straight line segment is assumed to be a good approximation for the length of the curve.</p>
+<p>$$
+\text{Length of the curve }C\approx \sum_{k=1}^n L_k
+$$</p>
+<p>By the <strong>Lagrange Mean Value Theorem</strong> , there are numbers $t_k^*$ and $t_k^{**}$ $\in[t_{k-1},t_k]$ such that</p>
+<p>$$
+\Delta x_k = f(t_k)-f(t_{k-1}) = f'(t_k^*), \Delta t_k,\ \Delta y_k = g(t_k)- g(t_{k-1}) = g'(t_k^{**}) , \Delta t_k.
+$$</p>
+<p>Then</p>
+<p>$$
+\sum_{k=1}^n L_k = \sum_{k=1}^n \sqrt{(\Delta x_k)^2 + (\Delta y_k)^2}\ = \sum_{k=1}^n \sqrt{[f'(t_k^<em>)]^2 + [g'(t_k^{**})]^2},\Delta t_k\=\sum_{k=1}^n \sqrt{[f'(t_k^</em>)]^2 + [g'(t_k^{*})]^2},\Delta t_k + \text{error}
+$$</p>
+<h3 id="4-pass-through-the-limit">4. Pass through the limit<a hidden class="anchor" aria-hidden="true" href="#4-pass-through-the-limit">#</a></h3>
+<p>The above summation is not exactly a Riemann sum (It is a Riemann summation up to an “error term”). However, a theorem in Advanced Calculus shows the error approaches $0$ as $||P||\to 0$. Therefore by passing through the limit process as $||P||\to 0$, we obtain the following  formula for the length of the curve $C$.</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/limit.gif" alt="limit.gif"  />
+</p>
+<blockquote>
+<p><strong>Definition. (Length of a Parametric Curve)</strong></p>
+</blockquote>
+<p>If a curve is defined parametrically by $x=f(t)$ and $y=g(t)$, $a\le t\le b$, where $f'$ and $g'$are continuous on $[a,b]$, and $C$ is traversed exactly once as $t$ increases from $t=a$ to $t=b$, then <strong>the length of $C$</strong> is the definite integral</p>
+<p>$$
+L = \int_a^b \sqrt{[f'(t)]^2 + [g'(t)]^2} dt
+$$</p>
+<p><strong><code>Remark</code></strong></p>
+<p>The different choices for the parametrization of the curve $C$ doesn’t affect the value $L$ at all. As long as the parametrization meets the conditions stated in the definition of the length of $C$.</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/circPara.gif" alt="circPara.gif"  />
+</p>
+<h3 id="example-1-the-circumference-of-a-circle"><strong>Example 1. The Circumference of a Circle</strong><a hidden class="anchor" aria-hidden="true" href="#example-1-the-circumference-of-a-circle">#</a></h3>
+<p>A circle with radius $r$ can be defined parametrically by</p>
+<p>$$
+x=r\cos(t),\quad\text{and}\quad y=r\sin(t),\quad 0\le t\le 2\pi.
+$$</p>
+<p>Therefore by using the definite integral we can see the length is $L=2\pi r$.</p>
+<h3 id="example-2-the-length-of-an-astroid"><strong>Example 2. The length of an astroid</strong><a hidden class="anchor" aria-hidden="true" href="#example-2-the-length-of-an-astroid">#</a></h3>
+<p>An astroid is defined by $x=\cos^3(t)$ and $y=\sin^3(t)$, with $0\le t\le 2\pi.$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>The length of the curve in the first-quadrant is  $L=\dfrac32.$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/astroid.gif" alt="astroid.gif"  />
+</p>
+<h1 id="special-case-the-length-of-a-curve-yfx">Special Case: The Length of a Curve $y=f(x)$<a hidden class="anchor" aria-hidden="true" href="#special-case-the-length-of-a-curve-yfx">#</a></h1>
+<p>Given a continuously differentiable function $y=f(x)$, $a\le x\le b$, we can assign $x=t$ as a parameter. The graph of the function $f$ is then the curve $C$ defined parametrically by</p>
+<p>$$
+x=t,\quad \text{and} \quad y=f(t),\quad a\le t\le b.
+$$</p>
+<p>Then as a special case of parametric curve, the length of the graph $C$ is defined by</p>
+<blockquote>
+<p><strong>Definition. The length of curve $y=f(x)$</strong></p>
+</blockquote>
+<p>If $f$ is continuously differentiable on the closed interval $[a,b]$, then the length of the curve $y=f(x)$ from $x=a$ to $x=b$ is</p>
+<p>$$
+L = \int_a^b \sqrt{1+\left(\frac{dy}{dx}\right)^2}dx = \int_a^b \sqrt{1+[f'(x)]^2} dx.
+$$</p>
+<h3 id="example-3-the-arc-length-of-a-graph">Example 3. The arc-length of a graph<a hidden class="anchor" aria-hidden="true" href="#example-3-the-arc-length-of-a-graph">#</a></h3>
+<p>A graph defined by</p>
+<p>$$
+y=\frac{4\sqrt2}{3}x^{3/2} -1,\quad 0\le x\le 1.
+$$</p>
+<p>is  $L = \dfrac{13}{6}.$</p>
+<h3 id="example-4-the-length-of-a-catenary">Example 4. The length of a catenary<a hidden class="anchor" aria-hidden="true" href="#example-4-the-length-of-a-catenary">#</a></h3>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>A catenary is typically expressed as</p>
+<p>$$
+y = c \cosh(x/c),\quad \text a\le x \le b.
+$$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/catenary.gif" alt="catenary.gif"  />
+</p>
+<h2 id="dealing-with-discontinuities-in-dydx">Dealing with Discontinuities in $dy/dx$<a hidden class="anchor" aria-hidden="true" href="#dealing-with-discontinuities-in-dydx">#</a></h2>
+<p>As a case when $dy/dx$ fails to exist, $dx/dy$ may exist. Therefore, we may be able to find the curve length by expressing $x$ as a function of $y$ instead.</p>
+<h3 id="example-5-inverse-the-expression-yfx-to-xgy">Example 5. Inverse the expression $y=f(x)$ to $x=g(y)$<a hidden class="anchor" aria-hidden="true" href="#example-5-inverse-the-expression-yfx-to-xgy">#</a></h3>
+<p>Find the length of the curve $y=(x/2)^{2/3}$ from $x=0$ to $x=2.$ By express $x$ as a function of $y$ we find the length is approximately $L\approx 2.27.$</p>
+<p><img loading="lazy" src="W2-S1%20Leng%20114cd/Untitled%204.png" alt="Untitled"  />
+</p>
+<h1 id="refined-differential-formula-for-length">Refined Differential Formula for Length<a hidden class="anchor" aria-hidden="true" href="#refined-differential-formula-for-length">#</a></h1>
+<p>The length is frequently written in terms of differentials in place of derivatives. Recall that for function $x=f(t)$, the differential $dx$ is defined as</p>
+<p>$$
+dx = df = f'(t) dt = \frac{d x}{dt} dt
+$$</p>
+<p>So the equation for length is written by</p>
+<p>$$
+L = \int_a^b \sqrt{(dx)^2+(dy)^2}.
+$$</p>
+<p>It is customary to eliminate the parentheses in $(dx)^2$ and write $dx^2$ instead. So</p>
+<p>$$
+L = \int_a^b \sqrt{dx^2+dy^2}
+$$</p>
+<p>This is a unified formula for length. For different cases, one must express $x$ and $y$ in suitable parametrization and restore the formula $L = \int_a^b \sqrt{dx^2+dy^2} = \int_a^b \sqrt{g'(t)^2+g'(t)^2}dt$ to compute.</p>
+<p>A useful way is to write</p>
+<p>$$
+ds = \sqrt{dx^2+dy^2}
+$$</p>
+<p>and treat $ds$ as the <strong>differential of arc-length (弧长微元)</strong>, which can be integrated between appropriate limits to give the total length of a curve. The geometric meaning of $ds$ is shown below, as an approximation of length for tiny arc-segment. Then to memorize, first recall the shortest expression</p>
+<p>$$
+L = \int ds
+$$</p>
+<p>Then recall $ds = \sqrt{dx^2+dy^2}$, finally choose appropriate parametrization to expand $dx^2+dy^2$, as well as specify the the integral limits $a$ and $b$.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/teach/">teach</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/length/">Length</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/curves/">curves</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/demos/">demos</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

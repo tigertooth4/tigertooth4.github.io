@@ -2,32 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/curves/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/demos/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/length/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/math/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/teach/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w2s2-lengths-of-plane-curves/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-03-01T15:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
     <lastmod>2022-02-24T21:44:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,11 +63,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w1s2-volume-by-cylindrical-shells/</loc>
-    <lastmod>2022-02-24T21:44:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-02-24T21:44:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
