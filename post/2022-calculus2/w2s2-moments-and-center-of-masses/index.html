@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W2-S2 Moments and Center of Masses | 思｜制 - A guy&#39;s thinking and making</title>
+<meta name="keywords" content="moment, center of mass, math, lecture, calculus" />
+<meta name="description" content="周次: 2 日期: March 4, 2022 节次: 2 Outline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension). Basic Principle for Center of Mass and Moment Definition. (Center of Mass) For">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W2-S2 Moments and Center of Masses" />
+<meta property="og:description" content="周次: 2 日期: March 4, 2022 节次: 2 Outline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension). Basic Principle for Center of Mass and Moment Definition. (Center of Mass) For" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-04T13:33:29&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-04T13:33:29&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W2-S2 Moments and Center of Masses"/>
+<meta name="twitter:description" content="周次: 2 日期: March 4, 2022 节次: 2 Outline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension). Basic Principle for Center of Mass and Moment Definition. (Center of Mass) For"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W2-S2 Moments and Center of Masses",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W2-S2 Moments and Center of Masses",
+  "name": "W2-S2 Moments and Center of Masses",
+  "description": "周次: 2 日期: March 4, 2022 节次: 2 Outline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension). Basic Principle for Center of Mass and Moment Definition. (Center of Mass) For",
+  "keywords": [
+    "moment", "center of mass", "math", "lecture", "calculus"
+  ],
+  "articleBody": "周次: 2 日期: March 4, 2022 节次: 2\nOutline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension).\nBasic Principle for Center of Mass and Moment  Definition. (Center of Mass)\n For a system of point masses (质点系统), the center of mass is a weighted average of coordinates of all the points, where each weight is the ratio of individual mass over the total mass.\n$$ \\overline{x} = \\sum_{i=1}^n \\frac{m_i}{M}x_i, \\quad \\text{where}\\quad M=\\sum_{i=1}^n m_i. $$\nRed arrow indicates the coordinate for center of mass. Different dots’ sizes indicate different masses.\n**Remark**\nThis principle is easily applicable to higher dimensions. For two-dimensional center of mass, simply change $x_i$ and $\\overline{x}$ to two-dimensional vectors $\\mathbf{x}_i$ and $\\overline{\\mathbf{x}}$, then the formula reads\n$$ \\overline{\\mathbf{x}} = \\sum_{i}\\frac{m_i}{M} \\mathbf{x}_i. $$\nRed cross indicates the position for center of mass. Different dots with different sizes indicate the different masses.\n Definition. (Moment (质量矩) of the system)\n  For a point mass object, the moment of the object (about the origin) is its mass times coordinate. For a system of point masses, the moment of the system (about the origin) is the sum of the moments $m_i x_i$ of the individual masses.  $$ M_0 = \\text{Moment of system about origin} = \\sum_{i} m_i x_k. $$\n**Remark**\nThe relation between center of mass and moment is obvious: $\\overline{x} = M_0 / M$.\nAlternative Approach to Understand the Principle  Definition (Torque (扭矩) About a Point)\n Suppose a point mass $m$ is located at coordinate $x$ on the $x$-axis. The torque of $m$ about a point $x_0$ on the $x$-axis is defined by\n$$ \\text{Torque of }m\\text{ about }x_0 = (x-x_0)m g $$\nwhere $g$ is the acceleration of gravity.\n Definition (System Torque)\n The system torque (about point $x_0$) is the sum of all the torques (about the same point $x_0$).\n$$ \\text{System torque} = \\sum_i (x_i-x_0)m_i g. $$\nThe sum of the torques (about the point $x_0$) measures the tendency of a system to rotate about the given point $x_0$. The system will balance about the fulcrum if and only if its total torque is zero.\nImagine masses $m_1$, $m_2$ , $\\cdots,m_n$ on a rigid $x$ -axis supported by a fulcrum at the point $x_0$ . We usually want to know where $x_0$ is, to make the system balance.\nThe total torque about $x_0$ is given by\n$$ \\text{Total Torque}=\\sum_{i} m_i g (x_i - x_0) = g\\sum_{i}m_i x_i - g x_0\\sum_i m_i $$\nIf the system is balanced at $x_0$, the total torque will be zero, which gives $x_0$\n$$ x_0 = \\frac{\\sum_{i}m_i x_i}{\\sum_i m_i}. $$\nThus, the fulcrum is supported at the center of masses.\nOne-dimensional Applications Wires and Thin Rods In many applications, we want to know the center of mass of a rod or a thin strip of metal. In this case the distribution of mass is a continuous function. The summation signs become integrals in the following manner.\n Imaging a long, thin strip lying along the $x$-axis from $x=a$ to $x=b$. We partition the strip into small pieces, with length $\\Delta x_i$ for each piece.  $$ P: a=x_0The mass for the $k$th small piece is denoted by $\\Delta m_k$. Choose $c_k \\in[x_{k-1},x_k]$ to be any point in the $k$th subinterval.\n Think of each piece as a point mass, then the system moment (about origin) is roughly  $$ \\text{System moment} \\approx \\sum_k c_k \\Delta m_k $$\nAnd the center of mass is located at\n$$ \\text{Center of mass} = \\overline{x} \\approx \\dfrac{\\sum_k c_k \\Delta m_k}{\\sum_k \\Delta m_k}. $$\n Furthermore, suppose the thin strip has density $\\delta$ as a function of $x$ (Assume $\\delta(x)$ is a continuous function of $x$), the mass $\\Delta m_k$ for the $k$th piece is approximately  $$ \\Delta m_k \\approx \\delta(c_k)\\Delta x_k $$\n Combining these observations gives  $$ \\overline{x} \\approx \\dfrac{\\sum_k c_k \\delta(c_k)\\Delta x_k}{\\sum_k \\delta(c_k)\\Delta x_k}. $$\n The sums in the last numerator and denominator are Riemann sums. We expect the approximation to improve as $||P||\\to 0$. This leads to the equation  $$ \\overline{x} = \\dfrac{\\int_a^b x\\delta(x) dx}{\\int_a^b \\delta(x) dx} $$\nSummary: Moment, Mass, and Center of Mass of a Strip Along the $x$-Axis with Density Function $$ \\text{Moment about the origin:}\\quad M_0 = \\int_a^b x\\delta(x) dx. $$\n$$ \\text{Mass:}\\quad M = \\int_a^b \\delta(x) dx. $$\n$$ \\text{Center of mass:}\\quad \\overline{x} = \\dfrac{M_0}{M}. $$\nExample 1. Strips and Rods of Constant Density For a straight, thin strip of uniform density, the center of mass lies halfway between its two ends.\n**Solution**\nExample 2. Variable-Density Rod The $10$-m-long rod thickens from left to right so that its density $\\delta(x) = 1+x/10$ kg-per-m. Find the rod’s center of mass.\n**Solution**\nTwo Dimensional Center of Mass Suppose we have a finite collection of masses located in the plane, with mass $m_k$ at the point $\\mathbf{x}_k = (x_k,y_k)$ . The mass of the system is\n$$ \\text{System of mass:}\\ \\quad M = \\sum m_k $$\nDecomposing the two-dimensional problem into two one-dimensional problems, we find that the moments of the entire system about the two axes are\n$$ \\text{Moment about }x\\text{ axis:}\\quad M_x = \\sum m_k y_k\n$$\n$$ \\text{Moment about }y\\text{ axis:}\\quad M_y = \\sum m_k x_k\n$$\nSo the $x$\n and $y$-coordinate of the system’s center of mass is defined to be  $$ \\overline{x} = \\dfrac{M_y}{M} = \\dfrac{\\sum m_k x_k}{\\sum m_k},\\quad \\overline{y}=\\dfrac{M_x}{M} = \\dfrac{\\sum m_k y_k}{\\sum m_k}. $$\nReal World Applications Fosbury Flop Technique\nThin, Flat Plates In many applications, we need to find the center of mass of a thin, flat plate. In such cases, the formulas we use to calculate $\\overline{x}$ and $\\overline{y}$ contain integrals instead of finite sums.\nImagine the plate occupying a region in the $xy$ -plane, cut into thin strips parallel to one of the axes. The center of mass of a typical strip is $(\\tilde{x},\\tilde{y})$ . The strip’s mass $\\Delta m$ is thought of concentrated at $(\\tilde{x},\\tilde{y})$.\nThen the moment of about $x$- and $y$-axis are $\\tilde{y} \\Delta m$ and $\\tilde{x}\\Delta m$, respectively. Then the center of mass are\n$$ \\overline{x} \\approx \\dfrac{\\sum \\tilde{x} \\Delta m}{\\sum \\Delta m}, \\quad \\overline{y} \\approx \\dfrac{\\sum \\tilde{y} \\Delta m}{\\sum \\Delta m}. $$\nBy taking the limits, the center of masses are symbolically written as\n$$ \\overline{x} = \\dfrac{\\int x dm}{\\int dm},\\quad \\overline{y} = \\dfrac{\\int y dm}{\\int dm}. $$\nHere $dm$ is an abbreviation of density multiplies by the tiny area, which can be written clearly for each specified examples.\nSummary: Moments, Mass, and Center of Mass of a Thin Plate Covering a Region in the $xy$-Plane $$ \\text{Moment about the }x\\text{-axis}:\\quad M_x = \\int y dm\\ \\text{Moment about the }y\\text{-axis}:\\quad M_y = \\int x dm $$\n$$ \\text{Mass:}\\quad M = \\int dm. $$\n$$ \\text{Center of mass:}\\quad \\overline{x} = \\frac{M_y}{M},\\quad \\overline{y} = \\frac{M_x}{M}. $$\nExample 3. Constant-Density Plate The triangular plate shown has a constant density $\\delta=3$. Find\n The plate’s mass; The plate’s center of mass in $x$ -direction.  **Solution**\nExample 4. Constant-Density Plate Find the center of mass of a thin plate of constant density $\\delta$ covering the region bounded above by the parabola $y=4-x^2$ and below by the $x$-axis.\n**Solution**\nExample 5. Variable-Density Plate Find the center of mass of the plate in Example 4 if the density at the point $(x,y)$ is $\\delta = 2x^2$.\n**Solution**\nExample 6. Constant-Density Wire Find the center of mass of a wire of constant density $\\delta$ shaped like a semicircle of radius $a$.\nSolution\nCentroid （质心） When the density is constant, where the center of mass is located is called centroid (of the object | shape). It’s a feature of the geometry of the object and not the material from which it is made.\n Section 6.5 Areas of Surfaces of Revolution Revolving a curve about one axis results a surface in the space, which is called a surface of revolution. The “area” of this surface depends on the length for each portion of the curve and the distance for each portion to the axis of revolution. We discuss the surface area for revolution of plane curves in this section. The case of revolution of space curves has to be treated in multi-variable calculus.\nBasic Principle for the Surface Area Case 1. Cylindrical surface The lateral (侧) surface area of cylindrical surface is defined as\n$$ \\text{Lateral Surface Area:}\\quad A=2\\pi y \\Delta x $$\nCase 2. Frustum of a cone The lateral surface area of a frustum of a cone is defined as\n$$ \\text{Lateral Surface Area:}\\quad A = 2\\pi y^* \\Delta s = \\frac12(2\\pi y_1 + 2\\pi y_2)\\Delta s $$\n",
+  "wordCount" : "1503",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-04T13:33:29+08:00",
+  "dateModified": "2022-03-04T13:33:29+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - A guy's thinking and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - A guy&#39;s thinking and making (Alt + H)">思｜制 - A guy&#39;s thinking and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W2-S2 Moments and Center of Masses
+    </h1>
+    <div class="post-meta"><span title='2022-03-04 13:33:29 +0800 CST'>March 4, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 2
+日期: March 4, 2022
+节次: 2</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<p>In this lecture, we discuss <em>moments</em> ( 质量矩）and <em>centers of mass.</em> Two concepts are related.  In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension).</p>
+<h1 id="basic-principle-for-center-of-mass-and-moment">Basic Principle for Center of Mass and Moment<a hidden class="anchor" aria-hidden="true" href="#basic-principle-for-center-of-mass-and-moment">#</a></h1>
+<blockquote>
+<p><strong>Definition. (Center of Mass)</strong></p>
+</blockquote>
+<p>For a system of  point masses (质点系统), the <strong>center of mass</strong> is a weighted average of coordinates of  all the points, where each weight is the ratio of individual mass over the total mass.</p>
+<p>$$
+\overline{x} = \sum_{i=1}^n \frac{m_i}{M}x_i, \quad \text{where}\quad M=\sum_{i=1}^n m_i.
+$$</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/w2s2-com1.gif" alt="Red arrow indicates the coordinate for center of mass. Different dots’ sizes indicate different masses."  />
+</p>
+<p>Red arrow indicates the coordinate for center of mass. Different dots’ sizes indicate different masses.</p>
+<p><code>**Remark**</code></p>
+<p>This principle is easily applicable to higher dimensions. For two-dimensional center of mass, simply change $x_i$ and $\overline{x}$ to two-dimensional vectors $\mathbf{x}_i$ and $\overline{\mathbf{x}}$, then the formula reads</p>
+<p>$$
+\overline{\mathbf{x}} = \sum_{i}\frac{m_i}{M} \mathbf{x}_i.
+$$</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/w2s2com2.gif" alt="Red cross indicates the position for center of mass. Different dots with different sizes indicate the different masses."  />
+</p>
+<p>Red cross indicates the position for center of mass. Different dots with different sizes indicate the different masses.</p>
+<blockquote>
+<p><strong>Definition. (Moment (质量矩) of the system)</strong></p>
+</blockquote>
+<ul>
+<li>For a point mass object, the moment of the object (about the origin) is its mass times coordinate.</li>
+<li>For a system of point masses, the moment of the system (about the origin) is the sum of the moments $m_i x_i$ of the individual masses.</li>
+</ul>
+<p>$$
+M_0 = \text{Moment of system about origin} = \sum_{i} m_i x_k.
+$$</p>
+<p><code>**Remark**</code></p>
+<p>The relation between center of mass and moment is obvious: $\overline{x} = M_0 / M$.</p>
+<h2 id="alternative-approach-to-understand-the-principle">Alternative Approach to Understand the Principle<a hidden class="anchor" aria-hidden="true" href="#alternative-approach-to-understand-the-principle">#</a></h2>
+<blockquote>
+<p><strong>Definition (Torque (扭矩) About a Point)</strong></p>
+</blockquote>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>Suppose a point mass $m$ is located at coordinate $x$ on the $x$-axis. The torque of $m$ about a point $x_0$ on the $x$-axis is defined by</p>
+<p>$$
+\text{Torque of }m\text{ about }x_0 = (x-x_0)m g
+$$</p>
+<p>where $g$ is the <em>acceleration of  gravity</em>.</p>
+<blockquote>
+<p><strong>Definition (System Torque)</strong></p>
+</blockquote>
+<p>The <strong>system torque (about point $x_0$)</strong> is the sum of all the torques (about the same point $x_0$).</p>
+<p>$$
+\text{System torque} = \sum_i (x_i-x_0)m_i g.
+$$</p>
+<p>The sum of the torques (about the point $x_0$) measures the tendency of a system to rotate about the given point $x_0$. The system will balance about the fulcrum if and only if its total torque is zero.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>Imagine masses $m_1$, $m_2$
+, $\cdots,m_n$
+on a rigid $x$
+-axis supported by a fulcrum at the point $x_0$
+. We usually want to know where $x_0$
+is, to make the system balance.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/w2s2fulcrum.gif" alt="w2s2fulcrum.gif"  />
+</p>
+<p>The total torque about $x_0$
+is given by</p>
+<p>$$
+\text{Total Torque}=\sum_{i} m_i g (x_i - x_0) = g\sum_{i}m_i x_i - g x_0\sum_i m_i
+$$</p>
+<p>If the system is balanced at $x_0$, the total torque will be zero, which gives $x_0$</p>
+<p>$$
+x_0 = \frac{\sum_{i}m_i x_i}{\sum_i m_i}.
+$$</p>
+<p>Thus, the fulcrum is supported at the center of masses.</p>
+<h1 id="one-dimensional-applications">One-dimensional Applications<a hidden class="anchor" aria-hidden="true" href="#one-dimensional-applications">#</a></h1>
+<h2 id="wires-and-thin-rods">Wires and Thin Rods<a hidden class="anchor" aria-hidden="true" href="#wires-and-thin-rods">#</a></h2>
+<p>In many applications, we want to know the center of mass of a rod or a thin strip of metal. In this case the distribution of mass is a continuous function. The summation signs become integrals in the following manner.</p>
+<ul>
+<li>Imaging a long, thin strip lying along the $x$-axis from $x=a$ to $x=b$. We partition the strip into small pieces, with length $\Delta x_i$ for each piece.</li>
+</ul>
+<p>$$
+P: a=x_0&lt;x_1&lt;\cdots&lt;x_n=b.
+$$</p>
+<p>The mass for the $k$th small piece is denoted by $\Delta m_k$. Choose $c_k \in[x_{k-1},x_k]$ to be any point in the $k$th subinterval.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%203.png" alt="Untitled"  />
+</p>
+<ul>
+<li>Think of each piece as a <strong>point mass,</strong>  then the system moment (about origin) is roughly</li>
+</ul>
+<p>$$
+\text{System moment} \approx \sum_k c_k \Delta m_k
+$$</p>
+<p>And the center of mass is located at</p>
+<p>$$
+\text{Center of mass} = \overline{x} \approx \dfrac{\sum_k c_k \Delta m_k}{\sum_k \Delta m_k}.
+$$</p>
+<ul>
+<li>Furthermore, suppose the thin strip has density $\delta$  as a function of $x$ (Assume $\delta(x)$ is a continuous function of $x$), the mass $\Delta m_k$ for the $k$th piece is approximately</li>
+</ul>
+<p>$$
+\Delta m_k \approx \delta(c_k)\Delta x_k
+$$</p>
+<ul>
+<li>Combining these observations gives</li>
+</ul>
+<p>$$
+\overline{x} \approx \dfrac{\sum_k c_k \delta(c_k)\Delta x_k}{\sum_k \delta(c_k)\Delta x_k}.
+$$</p>
+<ul>
+<li>The sums in the last numerator and denominator are Riemann sums. We expect the approximation to improve as $||P||\to 0$. This leads to the equation</li>
+</ul>
+<p>$$
+\overline{x} = \dfrac{\int_a^b x\delta(x) dx}{\int_a^b \delta(x) dx}
+$$</p>
+<h2 id="summary-moment-mass-and-center-of-mass-of-a-strip-along-the-x-axis-with-density-function">Summary: Moment, Mass, and Center of Mass of a Strip Along the $x$-Axis with Density Function<a hidden class="anchor" aria-hidden="true" href="#summary-moment-mass-and-center-of-mass-of-a-strip-along-the-x-axis-with-density-function">#</a></h2>
+<p>$$
+\text{Moment about the origin:}\quad M_0 = \int_a^b x\delta(x) dx.
+$$</p>
+<p>$$
+\text{Mass:}\quad M = \int_a^b \delta(x) dx.
+$$</p>
+<p>$$
+\text{Center of mass:}\quad \overline{x} = \dfrac{M_0}{M}.
+$$</p>
+<h2 id="example-1-strips-and-rods-of-constant-density">Example 1. Strips and Rods of Constant Density<a hidden class="anchor" aria-hidden="true" href="#example-1-strips-and-rods-of-constant-density">#</a></h2>
+<p>For a straight, thin strip of uniform density, the center of mass lies halfway between its two ends.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%204.png" alt="Untitled"  />
+</p>
+<p><code>**Solution**</code></p>
+<h2 id="example-2-variable-density-rod">Example 2. Variable-Density Rod<a hidden class="anchor" aria-hidden="true" href="#example-2-variable-density-rod">#</a></h2>
+<p>The $10$-m-long rod thickens from left to right so that its density $\delta(x) = 1+x/10$ kg-per-m. Find the rod’s center of mass.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%205.png" alt="Untitled"  />
+</p>
+<p><code>**Solution**</code></p>
+<h1 id="two-dimensional-center-of-mass">Two Dimensional Center of Mass<a hidden class="anchor" aria-hidden="true" href="#two-dimensional-center-of-mass">#</a></h1>
+<p>Suppose we have a finite collection of masses located in the plane, with mass $m_k$ at the point $\mathbf{x}_k = (x_k,y_k)$
+. The mass of the system is</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%206.png" alt="Untitled"  />
+</p>
+<p>$$
+\text{System of mass:}\ \quad M = \sum m_k
+$$</p>
+<p>Decomposing the two-dimensional problem into two one-dimensional problems, we find that the moments of the entire system about the two axes are</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%207.png" alt="Untitled"  />
+</p>
+<p>$$
+\text{Moment about }x\text{ axis:}\quad M_x = \sum m_k y_k<br>
+$$</p>
+<p>$$
+\text{Moment about }y\text{ axis:}\quad M_y = \sum m_k x_k<br>
+$$</p>
+<p>So the $x$</p>
+<ul>
+<li>and $y$-coordinate of the system’s center of mass is defined to be</li>
+</ul>
+<p>$$
+\overline{x} = \dfrac{M_y}{M} = \dfrac{\sum m_k x_k}{\sum m_k},\quad \overline{y}=\dfrac{M_x}{M} = \dfrac{\sum m_k y_k}{\sum m_k}.
+$$</p>
+<h2 id="real-world-applications">Real World Applications<a hidden class="anchor" aria-hidden="true" href="#real-world-applications">#</a></h2>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%208.png" alt="Fosbury Flop Technique "  />
+</p>
+<p>Fosbury Flop Technique</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%209.png" alt="Untitled"  />
+</p>
+<h2 id="thin-flat-plates">Thin, Flat Plates<a hidden class="anchor" aria-hidden="true" href="#thin-flat-plates">#</a></h2>
+<p>In many applications, we need to find the center of mass of a thin, flat plate. In such cases, the formulas we use to calculate $\overline{x}$
+and $\overline{y}$ contain integrals instead of finite sums.</p>
+<p>Imagine the plate occupying a region in the $xy$
+-plane, cut into thin strips parallel to one of the axes. The center of mass of a typical strip is $(\tilde{x},\tilde{y})$
+. The strip’s mass $\Delta m$ is thought of concentrated at $(\tilde{x},\tilde{y})$.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2010.png" alt="Untitled"  />
+</p>
+<p>Then the moment of  about $x$- and $y$-axis are $\tilde{y} \Delta m$
+and $\tilde{x}\Delta m$, respectively. Then the center of mass are</p>
+<p>$$
+\overline{x} \approx \dfrac{\sum \tilde{x} \Delta m}{\sum \Delta m}, \quad \overline{y} \approx \dfrac{\sum \tilde{y} \Delta m}{\sum \Delta m}.
+$$</p>
+<p>By taking the limits, the center of masses are symbolically written as</p>
+<p>$$
+\overline{x} = \dfrac{\int x dm}{\int dm},\quad \overline{y} = \dfrac{\int y dm}{\int dm}.
+$$</p>
+<p>Here $dm$ is an abbreviation of density multiplies by the tiny area, which can be written clearly for each specified examples.</p>
+<h2 id="summary-moments-mass-and-center-of-mass-of-a-thin-plate-covering-a-region-in-the-xy-plane">Summary: Moments, Mass, and Center of Mass of a Thin Plate Covering a Region in the $xy$-Plane<a hidden class="anchor" aria-hidden="true" href="#summary-moments-mass-and-center-of-mass-of-a-thin-plate-covering-a-region-in-the-xy-plane">#</a></h2>
+<p>$$
+\text{Moment about the }x\text{-axis}:\quad M_x = \int y dm\ \text{Moment about the }y\text{-axis}:\quad M_y = \int x dm
+$$</p>
+<p>$$
+\text{Mass:}\quad M = \int dm.
+$$</p>
+<p>$$
+\text{Center of mass:}\quad \overline{x} = \frac{M_y}{M},\quad \overline{y} = \frac{M_x}{M}.
+$$</p>
+<h2 id="example-3-constant-density-plate">Example 3. Constant-Density Plate<a hidden class="anchor" aria-hidden="true" href="#example-3-constant-density-plate">#</a></h2>
+<p>The triangular plate shown has a constant density $\delta=3$. Find</p>
+<ol>
+<li>The plate’s mass;</li>
+<li>The plate’s center of mass in $x$
+-direction.</li>
+</ol>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2011.png" alt="Untitled"  />
+</p>
+<p><code>**Solution**</code></p>
+<h2 id="example-4-constant-density-plate">Example 4. Constant-Density Plate<a hidden class="anchor" aria-hidden="true" href="#example-4-constant-density-plate">#</a></h2>
+<p>Find the center of mass of a thin plate of constant density $\delta$ covering the region bounded above by the parabola $y=4-x^2$ and below by the $x$-axis.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2012.png" alt="Untitled"  />
+</p>
+<p><code>**Solution**</code></p>
+<h2 id="example-5-variable-density-plate">Example 5. Variable-Density Plate<a hidden class="anchor" aria-hidden="true" href="#example-5-variable-density-plate">#</a></h2>
+<p>Find the center of mass of the plate in Example 4 if the density at the point $(x,y)$ is $\delta = 2x^2$.</p>
+<p><code>**Solution**</code></p>
+<h2 id="example-6-constant-density-wire">Example 6. Constant-Density Wire<a hidden class="anchor" aria-hidden="true" href="#example-6-constant-density-wire">#</a></h2>
+<p>Find the center of mass of a wire of constant density $\delta$ shaped like a semicircle of radius $a$.</p>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2013.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h1 id="centroid-质心">Centroid （质心）<a hidden class="anchor" aria-hidden="true" href="#centroid-质心">#</a></h1>
+<p>When the density is constant, where the center of mass is located is called <strong>centroid (of the object | shape).</strong> It’s a feature of the geometry of the object and not the material from which it is made.</p>
+<hr>
+<h1 id="section-65-areas-of-surfaces-of-revolution">Section 6.5 Areas of Surfaces of Revolution<a hidden class="anchor" aria-hidden="true" href="#section-65-areas-of-surfaces-of-revolution">#</a></h1>
+<p>Revolving a curve about one axis results a surface in the space, which is called a <em>surface of revolution.</em> The “area” of this surface depends on the length for each portion of the curve and the distance for each portion to the axis of revolution.  We discuss the surface area for  revolution of plane curves in this section. The case of revolution of space curves has to be treated in multi-variable calculus.</p>
+<h2 id="basic-principle-for-the-surface-area">Basic Principle for the Surface Area<a hidden class="anchor" aria-hidden="true" href="#basic-principle-for-the-surface-area">#</a></h2>
+<h3 id="case-1-cylindrical-surface">Case 1. Cylindrical surface<a hidden class="anchor" aria-hidden="true" href="#case-1-cylindrical-surface">#</a></h3>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2014.png" alt="Untitled"  />
+</p>
+<p>The lateral (侧) surface area of cylindrical surface is defined as</p>
+<p>$$
+\text{Lateral Surface Area:}\quad A=2\pi y \Delta x
+$$</p>
+<h3 id="case-2-frustum-of-a-cone">Case 2. Frustum of a cone<a hidden class="anchor" aria-hidden="true" href="#case-2-frustum-of-a-cone">#</a></h3>
+<p><img loading="lazy" src="W2-S2%20Mome%209cfeb/Untitled%2015.png" alt="Untitled"  />
+</p>
+<p>The lateral surface area of a frustum of a cone is defined as</p>
+<p>$$
+\text{Lateral Surface Area:}\quad A = 2\pi y^* \Delta s = \frac12(2\pi y_1 + 2\pi y_2)\Delta s
+$$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/moment/">moment</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/center-of-mass/">center of mass</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - A guy&#39;s thinking and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
