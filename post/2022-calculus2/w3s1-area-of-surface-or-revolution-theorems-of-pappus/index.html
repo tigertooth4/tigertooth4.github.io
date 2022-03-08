@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="area, revolution, lecture, math, Pappus" />
+<meta name="description" content="周次: 3 日期: March 9, 2022 节次: 1 A curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus" />
+<meta property="og:description" content="周次: 3 日期: March 9, 2022 节次: 1 A curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-08T14:16:08&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-08T14:16:08&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus"/>
+<meta name="twitter:description" content="周次: 3 日期: March 9, 2022 节次: 1 A curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus",
+  "name": "W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus",
+  "description": "周次: 3 日期: March 9, 2022 节次: 1 A curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of",
+  "keywords": [
+    "area", "revolution", "lecture", "math", "Pappus"
+  ],
+  "articleBody": "周次: 3 日期: March 9, 2022 节次: 1\nA curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of revolution. Two theorems are given for volumes and areas.\nOutline Basic Principle for the Surface Area Case 1. Cylindrical surface The lateral (侧) surface area of cylindrical surface is defined as\n$$ \\text{Lateral Surface Area:}\\A=2\\pi y \\Delta x $$\nCase 2. Frustum of a cone The lateral surface area of a frustum of a cone is defined as\n$$ \\text{Lateral Surface Area:}\\A = 2\\pi y^* \\Delta s \\= \\frac12(2\\pi y_1 + 2\\pi y_2)\\Delta s $$\n**Note**\nThe frustum has the same surface area as that of a rectangle with side lengths $\\Delta s$ and $2\\pi y^*$.\nSurface Area for Revolving the Graph of a function Suppose $y = f(x)$ , $a\\le x\\le b$ is a non-negative continuous function. The surface sweeps out by revolving about the $x$-axis.\nWe partition the interval $[a,b]$ in the usual way. The partition subdivide the graph into short arcs.\nA typical arc $PQ$ sweeps out a frustum of a cone. The surface area of the frustum is $2\\pi y^* L$, where $y^*$ is the average height of the line segment joining $P$ and $Q$, and $L$ is the length of the arc.\n$$ \\text{Frustum surface area} \\approx 2\\pi \\cdot \\frac{f(x_{k-1}) + f(x_k)}{2}\\cdot \\sqrt{(\\Delta x_k)^2 + (\\Delta y_k)^2}\\=\\pi(f(x_{k-1}) + f(x_k))\\sqrt{(\\Delta x_k)^2 + (f(x_k)-f(x_{k-1}))^2} $$\nIf the function $f(x)$ is differentiable, then by the Mean Value Theorem, there is a point $c_k\\in(x_{k-1},x_k)$ such that\n$$ f(x_k) - f(x_{k-1}) = f'(c_k) \\Delta x_k. $$\nThen the area of surface of revolution is approximately\n$$ \\text{Surface area}\\approx \\sum_{k=1}^n \\pi (f(x_{k-1}) + f(x_k)) \\sqrt{1 + f'(c_k)^2}\\Delta x_k\\ = \\sum_{k=1}^n 2\\pi f(\\xi_k) \\sqrt{1+f'(c_k)^2}\\Delta x_k. $$\nThis is not a Riemann sum. However, a theorem from advanced calculus assures as $||P||\\to 0$, the sum converges to the integral\n$$ \\int_a^b 2\\pi f(x) \\sqrt{1+f'(x)^2}dx. $$\n Definition. Surface Area for Revolution About the $x$-Axis\n If the function $f(x)\\ge 0$ is continuously differentiable on $[a,b]$, the area of the surface generated by revolving the curve $y=f(x)$ about the $x$-axis is\n$$ S = \\int_a^b 2\\pi f(x) \\sqrt{1+f'(x)^2}dx = \\int_a^b 2\\pi y \\sqrt{1+y'(x)^2}dx. $$\nExample 1. Applying the Surface Area Formula Find the area of the surface generated by revolving the curve $y=2\\sqrt{x}$, $1\\le x \\le 2,$ about the $x$-axis.\n**Solution ($\\frac{8\\pi}{3}(3\\sqrt3 - 2\\sqrt2 )$)**\nRevolution About the $y$-Axis  Definition. Surface Area for Revolution About the $y$-Axis\n If the function $x = g(y)\\ge 0$ is continuously differentiable on $[c,d]$, the area of the surface generated by revolving the curve $x=g(y)$ about the $y$-axis is\n$$ S = \\int_c^d 2\\pi g(y) \\sqrt{1+g'(y)^2}dy = \\int_c^d 2\\pi x \\sqrt{1+x'(y)^2}dy. $$\nExample 2. Revolution about the $y$-Axis The line segment $x=1-y$, $0\\le y\\le 1$ is revolved about the $y$-axis to generate the cone. Find its lateral surface area.\nSolution ($\\sqrt2 \\pi$)\nParametrized Curves For general parametrized curve $x=f(t)$, $y=g(t)$, we could derive the surface area formula from the above formulae. Recall that $\\sqrt{1+y'(x)^2 }dx = ds = \\sqrt{f'(t)^2 + g'(t)^2}dt$. We could get the following formula.\n Definition. Surface Area of Revolution for Parametrized Curve\n If a smooth curve $x=f(t)$, $y=g(t)$, $a\\le t\\le b$, is traversed exactly once as $t$ increases from $a$ to $b$, then the areas of the surfaces generated by revolving the curve about the coordinate axes are as follows.\n Revolution about the $x$-axis ($y\\ge 0$)  $$ S = \\int_a^b 2\\pi y(t) \\sqrt{x'(t)^2+y'(t)^2}dt. $$\n Revolution about the $y$-axis ($x\\ge 0$)  $$ S = \\int_a^b 2\\pi x(t)\\sqrt{x'(t)^2 + y'(t)^2}dt. $$\nExample 3. Applying Surface Area Formula The standard parametrization of the circle of radius $1$ centered at the point $(0,1)$ in the $xy$-plane is\n$$ x=\\cos(t),\\quad y=1+\\sin(t),\\quad 0\\le t\\le 2\\pi. $$\nUse this parametrization to find the area of the surface swept out by revolving the circle about the $x$-axis.\nSolution ($4\\pi^2$)\nThe Differential Form Note that the differential of arc-length has appeared in the formula. Regardless of axis of revolution, the surface area has the form \\\n$$ S = \\int 2\\pi \\text{(radius)}\\text{(band width)} =\\int 2\\pi \\rho, ds $$\nIn any particular problem, express the radius function $\\rho$ and the arc-length differential $ds$ in terms of a common variable and supply limits of integration for that variable.\nExample 4. Using the Differential Form for Surface Areas Find the area of the surface generate by revolving the curve $y=x^3$, $0\\le x\\le 1/2$, about the $x$-axis.\nSolution($\\frac{\\pi}{27}(\\frac{125}{64}-1)$)\nCylindrical Versus Conical Bands Why not find the surface area by approximating with cylindrical bands instead of frustum? As we do so, we got a much simpler integral formula,\n$$ S = \\int_a^b 2\\pi f(x)dx. $$\nHowever, this formula is incorrect!\nThe Theorems of Pappus In the third century, a Greek named Pappus discovered two formulas related with centroids to surfaces and solids of revolution. The formulas provide shortcuts to a number of otherwise length calculations.\n Theorem 1. Pappus’s Theorem for Volumes\n If a plane region is revolved once about a line in the plane that does not cut through the region’s interior, then the volume of the solid it generates is\n$$ \\text{Volume} = \\text{(Region’s Area)}\\times \\text{(Distance traveled by the region’s centroid)}\\ = 2\\pi \\rho , A. $$\nProof\nExample 5. Volume of a Torus The volume of the torus (doughnut) generated by revolving a circular disk of radius $a$ about an axis in its plane at a distance $b\\ge a$ from its center is $V = 2\\pi b (\\pi a^2)$.\nSolution\nExample 6. Locate the Centroid of a Semicircular Region Solution\n Theorem 2. Pappus’s Theorem for Surface Areas\n If an arc of a smooth plane curve is revolved once about a line in the plane that does not cut through the arc’s interior, then the area of the surface generated by the arc is\n$$ \\text{Area} = \\text{(Length of the arc)}\\times \\text{(Distance traveled by the arc’s centroid)}\\ = 2\\pi \\rho, L. $$\nProof\nExample 7. Surface Area of a Torus Solution\n",
+  "wordCount" : "1057",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-08T14:16:08+08:00",
+  "dateModified": "2022-03-08T14:16:08+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus
+    </h1>
+    <div class="post-meta"><span title='2022-03-08 14:16:08 +0800 CST'>March 8, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 3
+日期: March 9, 2022
+节次: 1</p>
+<p>A curve sweeps out a surface in the space around is called a <em>surface of revolution.</em> The “area” of this surface depends on the length of the rope  and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of revolution. Two theorems are given for volumes and areas.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="basic-principle-for-the-surface-area">Basic Principle for the Surface Area<a hidden class="anchor" aria-hidden="true" href="#basic-principle-for-the-surface-area">#</a></h1>
+<h3 id="case-1-cylindrical-surface">Case 1. Cylindrical surface<a hidden class="anchor" aria-hidden="true" href="#case-1-cylindrical-surface">#</a></h3>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled.png" alt="Untitled"  />
+</p>
+<p>The lateral (侧) surface area of cylindrical surface is defined as</p>
+<p>$$
+\text{Lateral Surface Area:}\A=2\pi y \Delta x
+$$</p>
+<h3 id="case-2-frustum-of-a-cone">Case 2. Frustum of a cone<a hidden class="anchor" aria-hidden="true" href="#case-2-frustum-of-a-cone">#</a></h3>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>The lateral surface area of a frustum of a cone is defined as</p>
+<p>$$
+\text{Lateral Surface Area:}\A = 2\pi y^* \Delta s \= \frac12(2\pi y_1 + 2\pi y_2)\Delta s
+$$</p>
+<p><code>**Note**</code></p>
+<p>The frustum has the same surface area as that of a rectangle with side lengths $\Delta s$ and $2\pi y^*$.</p>
+<h1 id="surface-area-for-revolving-the-graph-of-a-function">Surface Area for Revolving the Graph of a function<a hidden class="anchor" aria-hidden="true" href="#surface-area-for-revolving-the-graph-of-a-function">#</a></h1>
+<p>Suppose $y = f(x)$ , $a\le x\le b$ is a non-negative continuous function. The surface sweeps out by revolving about the $x$-axis.</p>
+<p>We partition the interval $[a,b]$ in the usual way. The partition subdivide the graph into short arcs.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>A typical arc $PQ$ sweeps out a frustum of a cone. The surface area of the frustum is $2\pi y^* L$, where $y^*$ is the average height of the line segment joining $P$ and $Q$, and $L$ is the length of the arc.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>$$
+\text{Frustum surface area} \approx 2\pi \cdot \frac{f(x_{k-1}) + f(x_k)}{2}\cdot \sqrt{(\Delta x_k)^2 + (\Delta y_k)^2}\=\pi(f(x_{k-1}) + f(x_k))\sqrt{(\Delta x_k)^2 + (f(x_k)-f(x_{k-1}))^2}
+$$</p>
+<p>If the function $f(x)$ is differentiable, then by the <strong>Mean Value Theorem,</strong> there is a point $c_k\in(x_{k-1},x_k)$ such that</p>
+<p>$$
+f(x_k) - f(x_{k-1}) = f'(c_k) \Delta x_k.
+$$</p>
+<p>Then the area of surface of revolution is approximately</p>
+<p>$$
+\text{Surface area}\approx \sum_{k=1}^n \pi (f(x_{k-1}) + f(x_k)) \sqrt{1 + f'(c_k)^2}\Delta x_k\ = \sum_{k=1}^n 2\pi f(\xi_k) \sqrt{1+f'(c_k)^2}\Delta x_k.
+$$</p>
+<p>This is not a Riemann sum. However, a theorem from advanced calculus assures as $||P||\to 0$, the sum converges to the integral</p>
+<p>$$
+\int_a^b 2\pi f(x) \sqrt{1+f'(x)^2}dx.
+$$</p>
+<blockquote>
+<p><strong>Definition. Surface Area for Revolution About the $x$-Axis</strong></p>
+</blockquote>
+<p>If the function $f(x)\ge 0$ is continuously differentiable on $[a,b]$, the <strong>area</strong> of the surface generated by revolving the curve $y=f(x)$ about the $x$-axis is</p>
+<p>$$
+S = \int_a^b 2\pi f(x) \sqrt{1+f'(x)^2}dx = \int_a^b 2\pi y \sqrt{1+y'(x)^2}dx.
+$$</p>
+<h2 id="example-1-applying-the-surface-area-formula">Example 1. Applying the Surface Area Formula<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-surface-area-formula">#</a></h2>
+<p>Find the area of the surface generated by revolving the curve $y=2\sqrt{x}$, $1\le x \le 2,$ about the $x$-axis.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%204.png" alt="Untitled"  />
+</p>
+<p><code>**Solution</code> ($\frac{8\pi}{3}(3\sqrt3 - 2\sqrt2 )$)**</p>
+<h2 id="revolution-about-the-y-axis">Revolution About the $y$-Axis<a hidden class="anchor" aria-hidden="true" href="#revolution-about-the-y-axis">#</a></h2>
+<blockquote>
+<p><strong>Definition. Surface Area for Revolution About the $y$-Axis</strong></p>
+</blockquote>
+<p>If the function $x = g(y)\ge 0$ is continuously differentiable on $[c,d]$, the <strong>area</strong> of the surface generated by revolving the curve $x=g(y)$ about the $y$-axis is</p>
+<p>$$
+S = \int_c^d 2\pi g(y) \sqrt{1+g'(y)^2}dy = \int_c^d 2\pi x \sqrt{1+x'(y)^2}dy.
+$$</p>
+<h2 id="example-2-revolution-about-the-y-axis">Example 2. Revolution about the $y$-Axis<a hidden class="anchor" aria-hidden="true" href="#example-2-revolution-about-the-y-axis">#</a></h2>
+<p>The line segment $x=1-y$, $0\le y\le 1$ is revolved about the $y$-axis to generate the cone. Find its lateral surface area.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%205.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code> ($\sqrt2 \pi$)</strong></p>
+<h1 id="parametrized-curves">Parametrized Curves<a hidden class="anchor" aria-hidden="true" href="#parametrized-curves">#</a></h1>
+<p>For general parametrized curve $x=f(t)$, $y=g(t)$, we could derive the surface area formula from the above formulae. Recall that $\sqrt{1+y'(x)^2 }dx = ds = \sqrt{f'(t)^2 + g'(t)^2}dt$. We could get the following formula.</p>
+<blockquote>
+<p><strong>Definition. Surface Area of Revolution for Parametrized Curve</strong></p>
+</blockquote>
+<p>If a smooth curve $x=f(t)$, $y=g(t)$, $a\le t\le b$, is traversed exactly once as $t$ increases from $a$ to $b$, then the areas of the surfaces generated by revolving the curve about the coordinate axes are as follows.</p>
+<ol>
+<li>Revolution about the $x$-axis ($y\ge 0$)</li>
+</ol>
+<p>$$
+S = \int_a^b 2\pi y(t) \sqrt{x'(t)^2+y'(t)^2}dt.
+$$</p>
+<ol>
+<li>Revolution about the $y$-axis ($x\ge 0$)</li>
+</ol>
+<p>$$
+S = \int_a^b 2\pi x(t)\sqrt{x'(t)^2 + y'(t)^2}dt.
+$$</p>
+<h2 id="example-3-applying-surface-area-formula">Example 3. Applying Surface Area Formula<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-surface-area-formula">#</a></h2>
+<p>The standard parametrization of the circle of radius $1$ centered at the point $(0,1)$ in the $xy$-plane is</p>
+<p>$$
+x=\cos(t),\quad y=1+\sin(t),\quad 0\le t\le 2\pi.
+$$</p>
+<p>Use this parametrization to find the area of the surface swept out by revolving the circle about the $x$-axis.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/%E6%88%AA%E5%B1%8F2022-03-08_%E4%B8%8A%E5%8D%8811.19.29.png" alt="截屏2022-03-08 上午11.19.29.png"  />
+</p>
+<p><strong><code>Solution</code></strong> ($4\pi^2$)</p>
+<h1 id="the-differential-form">The Differential Form<a hidden class="anchor" aria-hidden="true" href="#the-differential-form">#</a></h1>
+<p>Note that the differential of arc-length has appeared in the formula. Regardless of axis of revolution, the surface area has the form \</p>
+<p>$$
+S = \int 2\pi \text{(radius)}\text{(band width)} =\int 2\pi \rho, ds
+$$</p>
+<p>In any particular problem, express the radius function $\rho$ and the arc-length differential $ds$ in terms of a common variable and supply limits of integration for that variable.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%206.png" alt="Untitled"  />
+</p>
+<h2 id="example-4-using-the-differential-form-for-surface-areas">Example 4. Using the Differential Form for Surface Areas<a hidden class="anchor" aria-hidden="true" href="#example-4-using-the-differential-form-for-surface-areas">#</a></h2>
+<p>Find the area of the surface generate by revolving the curve $y=x^3$, $0\le x\le 1/2$, about the $x$-axis.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%207.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code>($\frac{\pi}{27}(\frac{125}{64}-1)$)</strong></p>
+<h1 id="cylindrical-versus-conical-bands">Cylindrical Versus Conical Bands<a hidden class="anchor" aria-hidden="true" href="#cylindrical-versus-conical-bands">#</a></h1>
+<p>Why not find the surface area by approximating with cylindrical bands instead of frustum? As we do so, we got a much simpler integral formula,</p>
+<p>$$
+S = \int_a^b 2\pi f(x)dx.
+$$</p>
+<p>However, this formula is <strong>incorrect</strong>!</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%208.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%209.png" alt="Untitled"  />
+</p>
+<h1 id="the-theorems-of-pappus">The Theorems of Pappus<a hidden class="anchor" aria-hidden="true" href="#the-theorems-of-pappus">#</a></h1>
+<p>In the third century, a Greek named Pappus discovered two formulas related with centroids to surfaces and solids of revolution. The formulas provide shortcuts to a number of otherwise length calculations.</p>
+<blockquote>
+<p><strong>Theorem 1. Pappus’s Theorem for Volumes</strong></p>
+</blockquote>
+<p>If a plane region is revolved once about a line in the plane that does not cut through the region’s interior, then the volume of the solid it generates is</p>
+<p>$$
+\text{Volume} = \text{(Region&rsquo;s Area)}\times \text{(Distance traveled by the region&rsquo;s centroid)}\ = 2\pi \rho , A.
+$$</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%2010.png" alt="Untitled"  />
+</p>
+<p><strong><code>Proof</code></strong></p>
+<h2 id="example-5-volume-of-a-torus">Example 5. Volume of a Torus<a hidden class="anchor" aria-hidden="true" href="#example-5-volume-of-a-torus">#</a></h2>
+<p>The volume of the torus (doughnut) generated by revolving a circular disk of radius $a$ about an axis in its plane at a distance $b\ge a$ from its center is $V = 2\pi b (\pi a^2)$.</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%2011.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h2 id="example-6-locate-the-centroid-of-a-semicircular-region">Example 6. Locate the Centroid of a Semicircular Region<a hidden class="anchor" aria-hidden="true" href="#example-6-locate-the-centroid-of-a-semicircular-region">#</a></h2>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%2012.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<blockquote>
+<p><strong>Theorem 2. Pappus’s Theorem for Surface Areas</strong></p>
+</blockquote>
+<p>If an arc of a smooth plane curve is revolved once about a line in the plane that does not cut through the arc’s interior, then the area of the surface generated by the arc is</p>
+<p>$$
+\text{Area} = \text{(Length of the arc)}\times \text{(Distance traveled by the arc&rsquo;s centroid)}\ = 2\pi \rho, L.
+$$</p>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%2013.png" alt="Untitled"  />
+</p>
+<p><strong><code>Proof</code></strong></p>
+<h2 id="example-7-surface-area-of-a-torus">Example 7. Surface Area of a Torus<a hidden class="anchor" aria-hidden="true" href="#example-7-surface-area-of-a-torus">#</a></h2>
+<p><img loading="lazy" src="W3-S1%20Area%203139b/Untitled%2014.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/area/">area</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/revolution/">revolution</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/pappus/">Pappus</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

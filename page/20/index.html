@@ -174,6 +174,28 @@
     </h2>
   </header>
   <section class="entry-content">
+    <p>Title: NSPopover &#43; Custom view inside
+Date: 2013-04-09 11:21:32
+Today I would like to implement a [cciN_objc]NSPopover[/cciN_objc] view with a subclass of [cciN_objc]NSTableView[/cciN_objc] in it.
+Here is a solution of how to display [cciN_objc]NSPopover[/cciN_objc] programmatically from stackoverflow : http://stackoverflow.com/questions/7858765/how-to-create-nspopover-programmatically , I’ll quote the code below:
+[cc_objc]
+NSViewController *controller = [[NSViewController alloc] initWithNibName:@“View” bundle:nil];
+NSPopover *popover = [[NSPopover alloc] init];
+[popover setContentSize:NSMakeSize(100.0f, 100.0f)];
+[popover setContentViewController:controller];
+[popover setAnimates:YES];
+[popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxXEdge];...</p>
+  </section>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/cocoa/nspopover-&#43;-custom-view-inside/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <section class="entry-content">
     <p>Title: 几个开发相关的资源 Date: 2013-05-01 21:37:32 今天在 V2ex.com 发现了一些有用的资源： XCode-themes: [https://github.com/tursunovic/xcode-themes](https://github.com/tursunovic/xcode-themes Letterpress - Lightweight blogging system: [http://wangling.me/2013/01/letterpress.html](http://wangling.me/2013/01/letterpress.html AppCode - An alternative IDE for obj-c dev: [http://www.jetbrains.com/objc/](http://www.jetbrains.com/objc/ Monospace font: Source Code Pro http://slant.co/topics/67/~what-are-the-best-programming-fonts 话说 FriCAS 的 Mac OSX binary 也可以直接下载了，终于不...</p>
   </section>
   <footer class="entry-footer"></footer>
@@ -239,27 +261,6 @@ And, bless…...</p>
   </section>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/misc/a-dream/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Title: Draw graphic inside NSTextView
-Date: 2013-04-08 13:18:49
-Tags: Cocoa , Drawing , Image , NSTextView , Text
-After long time search, I found some examples:
- Re: Drawing a line in NSTextView  _http://lists.apple.com/archives/cocoa-dev/2012/Apr/msg00003.html
- Aligning a subview element with text in an NSTextView :  [http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html](http://www.cocoabuilder.com/archive/cocoa/123842-aligning-subview-element-with-text-in-an-nstextview-was-finding-vertical-pos.html
-  google: [drawViewBackgroundInRect](https://www.google.com/search?client=safari&amp;amp;rls=en&amp;amp;q=drawViewBackgroundInRect&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8#hl=en&amp;amp;client=safari&amp;amp;rls=en&amp;amp;sclient=psy-ab&amp;amp;q=drawViewBackgroundInRect&amp;amp;oq=drawViewBackgroundInRect&amp;amp;gs_l=serp.12...0.0.0.161000408.0.0.0.0.0.0.0.0..0.0...0.0...1c..8.psy-ab.UOTMcpaPkiM&amp;amp;pbx=1&amp;amp;bav=on.2,or.r_cp.r_qf.&amp;amp;bvm=bv.44770516,d.cGE&amp;amp;fp=3d1005b8c6da64ce&amp;amp;biw=1235&amp;amp;bih=625
-  Drawing in NSTextField
-  [http://stackoverflow.com/questions/1777444/drawing-in-nstextfield](http://stackoverflow.com/questions/1777444/drawing-in-nstextfield
- CocoaHeads Atlanta May ‘09: Aaron Hillegass on the Text System  [http://vimeo....</p>
-  </section>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to " href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
