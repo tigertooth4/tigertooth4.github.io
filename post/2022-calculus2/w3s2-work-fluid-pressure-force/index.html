@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W3-S2 Work, Fluid Pressure and Forces | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="lecture, calculus, work, pressure, forces" />
+<meta name="description" content="周次: 3 日期: March 11, 2022 节次: 2 In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7. Outline Work Work refers specifically to a force acting on a body and the body">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W3-S2 Work, Fluid Pressure and Forces" />
+<meta property="og:description" content="周次: 3 日期: March 11, 2022 节次: 2 In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7. Outline Work Work refers specifically to a force acting on a body and the body" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-11T13:24:26&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-11T13:24:26&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W3-S2 Work, Fluid Pressure and Forces"/>
+<meta name="twitter:description" content="周次: 3 日期: March 11, 2022 节次: 2 In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7. Outline Work Work refers specifically to a force acting on a body and the body"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W3-S2 Work, Fluid Pressure and Forces",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W3-S2 Work, Fluid Pressure and Forces",
+  "name": "W3-S2 Work, Fluid Pressure and Forces",
+  "description": "周次: 3 日期: March 11, 2022 节次: 2 In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7. Outline Work Work refers specifically to a force acting on a body and the body",
+  "keywords": [
+    "lecture", "calculus", "work", "pressure", "forces"
+  ],
+  "articleBody": "周次: 3 日期: March 11, 2022 节次: 2\nIn this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7.\nOutline Work Work refers specifically to a force acting on a body and the body’s subsequent displacement.\nBasic Principle: Work Done by a Constant Force If the force $F$ is a constant in magnitude along the direction of motion, then\n$$ W = F\\cdot d. $$\nThe unit of work is a newton-meter ($N\\cdot m$), or joule ($J$).\nWork Done by a Variable Force Along a Line Suppose that the force acts along a line in $x$-axis, and the magnitude $F$ is a continuous function depending on the position. We want to find the work done over the interval from $x=a$ to $x=b$.\n Partition $[a,b]$ in the usual way and choose an arbitrary point $c_k$ in each subinterval $[x_{k-1},x_k]$. Think $F$ as a constant force $F(c_k)$ during $[x_{k-1},x_k]$, then the work is $F(c_k)\\Delta x_k$ The total work is approximately  $$ \\text{Work} \\approx \\sum_{k=1}^n F(c_k) \\Delta x_k. $$\n As $||P||\\to 0$, the Riemann sum converges definite integral  $$ W = \\int_a^ b F(x) dx. $$\n Definition (Work)\n The work done by a variable force $F(x)$ directed along the $x$-axis from $x=a$ to $x=b$ is\n$$ W = \\int_a^b F(x)dx. $$\nThe units of the integral are joules if $F$ is in newtons and $x$ is in meters, and foot-pounds if $F$ is in pounds and $x$ in feet.\nHooke’s Law for Springs: $F=kx$ Hooke’s Law says that the force it takes to stretch or compress a spring $x$ length units from its natural (unstressed) length is proportional to $x$.\n$$ F=kx. $$\nThe constant $k$ is called the force constant (or spring constant).\nExample 2. Compressing a Spring Find the work required to compress a spring from its natural length of $1$ ft to a length of $0.75$ ft if the force constant is $k=16$ lb/ft.\nSolution. (0.5 ft-lb)\nExample 3. Stretching a Spring A spring has a natural length of $1$ m. A force of $24$ N stretches the spring to a length of $1.8$ m.\n Find the force constant $k$. How much work will it take to stretch the spring $2$ m beyond its natural length? How far will a $45$-N force stretch the spring?  Solution\nExample 4. Lifting a Rope and Bucket A $5$-lb bucket is lifted from the ground into the air by pulling in $20$ ft of rope at a constant speed. The rope weighs $0.08$ lb/ft. How much work was spent lifting the bucket and rope?\nSolution (116 ft-lb)\nPumping Liquids from Containers How much work does it take to pump all or part of the liquid from a container? We imagine lifting the liquid out one thin horizontal slab at a time and applying the equation $W=Fd$ to each slab.\nExample 5. Pumping Oil from a Conical Tank The conical tank is filled to within $2$ ft of the top with olive oil weighing $57\\text{ lb/ft}^3$. How much work does it take to pump the oil to the rim of the tank?\nSolution\nExample 6. Pumping water from a Glory Hole A glory hole is a vertical drain pipe that keeps the water behind a dam from getting too high. The top of the glory hole for a dam is $14$ ft below the top of the dam and $375$ ft above the bottom. The hole needs to be pumped out from time to time to permit the removal of seasonal debris.\nThe glory hole is a funnel-shaped drain. The throat of the funnel is $20$ ft wide and the head is $120$ ft across. The outside boundary of the head cross-section are quarter circles formed with $50$-ft radii.\nWe calculate the work required to pump water from\n the throat of the hole the funnel portion.  Solution\nFluid Pressures and Forces Fluid pressure depends only on how far below the surface the point is and not on how much the surface of the dam happens to be tilted at that point.\nBasic Fact 1 (The pressure-Depth Equation) In a fluid that is standing still, the pressure $p$ at depth $h$ is the fluid’s weight-density $w$ times $h$:\n$$ p = w\\cdot h = \\rho \\cdot g\\cdot h $$\nWe use the formula to derive a formula for the total force exerted by a fluid against all or part of a vertical or horizontal containing wall.\nBasic Fact 2 (The Pressure and the Force) For plate being exerting a constant pressure everywhere, the force exerted on the plate is equal to the pressure times area for the plate.\n$$ F = p\\cdot A $$\nBasic Fact 3 (The Fluid Pressure) Under the surface of the fluid, at the same depth, the pressure is identical on each direction.\nWe use these facts, to calculate fluid force on a horizontal or vertical wall submerged into the fluid. For a flat plate submerged horizontally, like the bottom of the swimming pool, the downward force acting on its upper face is given by $F = p A = \\rho ghA.$ Let’s discuss the case of a vertical wall. The pressure will be different at each depth.\nThe Variable-Depth Formula Suppose we want to know the force exerted by a fluid against one side of a vertical plate submerged in a fluid of weight-density $w$.\nWe model the plate as a region extending from $y=a$ to $y=b$ in the $xy$-plane. We partition $[a,b]$ in the usual way and imagine the region to be cut into thin horizontal strips. The typical strip at depth $y$ is assumed to be $L(y)$ units long and $\\Delta y$ units wide.\nThen the force exerted on the strip is\n$$ \\Delta F_k = w \\cdot y_k\\cdot L(y_k)\\cdot \\Delta y_k $$\nSo the total force is approximately\n$$ F\\approx \\sum_{k=1}^n w y_k L(y_k)\\Delta y_k $$\nPassing to the limit, the force will become an integral\n$$ F = \\int_a^b w y L(y) dy. $$\nExample 1. Applying the Integral for Fluid Force A flat isosceles right triangular plate with base $6$ ft and height $3$ ft is submerged vertically, base up, $2$ ft below the surface of a swimming pool. Find the force exerted by the water against one side of the plate.\nSolution\nFluid Forces and Controids If we know the depth of the centroid for the flat plate submerged vertically, we can take a shortcut to find the force against one side of the plate.\nSuppose a plate is submerged into the fluid, extending from $y=a$ to $y=b$. Establish the coordinate system with $y$-axis pointing downward, we see\n$$ F = \\int_a^b w, y, L(y), dy\\ = w \\int_a^b y, L(y), dy \\ = w \\cdot \\bar{h}\\cdot \\int_a^b L(y) ,dy\\ = w \\cdot \\bar{h} \\cdot A\n$$\n Fluid Forces and Centroids\n The force of a fluid of wight-density $w$ against one side of a submerged flat vertical plate is the product of $w$, the distance $\\bar{h}$ from the plate’s centroid to th fluid surface, and the plate’s area:\n$$ F = w , \\bar{h}, A. $$\nExample 2. Finding Fluid Force Using Centroid Use centroid to find the force in the previous example.\n",
+  "wordCount" : "1260",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-11T13:24:26+08:00",
+  "dateModified": "2022-03-11T13:24:26+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W3-S2 Work, Fluid Pressure and Forces
+    </h1>
+    <div class="post-meta"><span title='2022-03-11 13:24:26 +0800 CST'>March 11, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 3
+日期: March 11, 2022
+节次: 2</p>
+<p>In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="work">Work<a hidden class="anchor" aria-hidden="true" href="#work">#</a></h1>
+<p>Work refers specifically to a force acting on a body and the body’s subsequent displacement.</p>
+<h2 id="basic-principle-work-done-by-a-constant-force">Basic Principle: Work Done by a Constant Force<a hidden class="anchor" aria-hidden="true" href="#basic-principle-work-done-by-a-constant-force">#</a></h2>
+<p>If the force $F$ is a constant in magnitude along the direction of motion, then</p>
+<p>$$
+W = F\cdot d.
+$$</p>
+<p>The unit of work is a newton-meter ($N\cdot m$), or <strong>joule ($J$).</strong></p>
+<h2 id="work-done-by-a-variable-force-along-a-line">Work Done by a Variable Force Along a Line<a hidden class="anchor" aria-hidden="true" href="#work-done-by-a-variable-force-along-a-line">#</a></h2>
+<p>Suppose that the force acts along a line in $x$-axis, and the magnitude $F$ is a continuous function depending on the position. We want to find the work done over the interval from $x=a$ to $x=b$.</p>
+<ol>
+<li>Partition $[a,b]$ in the usual way and choose an arbitrary point $c_k$ in each subinterval $[x_{k-1},x_k]$.</li>
+<li>Think $F$ as a constant force $F(c_k)$ during $[x_{k-1},x_k]$, then the work is $F(c_k)\Delta x_k$</li>
+<li>The total work is approximately</li>
+</ol>
+<p>$$
+\text{Work} \approx \sum_{k=1}^n F(c_k) \Delta x_k.
+$$</p>
+<ol>
+<li>As $||P||\to 0$, the Riemann sum converges definite integral</li>
+</ol>
+<p>$$
+W = \int_a^ b F(x) dx.
+$$</p>
+<blockquote>
+<p><strong>Definition (Work)</strong></p>
+</blockquote>
+<p>The <strong>work</strong> done by a variable force $F(x)$ directed along the $x$-axis from $x=a$ to $x=b$ is</p>
+<p>$$
+W = \int_a^b F(x)dx.
+$$</p>
+<p>The units of the integral are joules if $F$ is in <strong>newtons</strong> and $x$ is in <strong>meters,</strong> and <strong>foot-pounds</strong> if $F$ is in <strong>pounds</strong> and $x$ in <strong>feet.</strong></p>
+<h2 id="hookes-law-for-springs-fkx">Hooke’s Law for Springs: $F=kx$<a hidden class="anchor" aria-hidden="true" href="#hookes-law-for-springs-fkx">#</a></h2>
+<p><strong>Hooke’s Law</strong> says that the force it takes to stretch or compress a spring $x$ length units from its natural (unstressed) length is proportional to $x$.</p>
+<p>$$
+F=kx.
+$$</p>
+<p>The constant $k$ is called the <strong>force constant (or spring constant).</strong></p>
+<h3 id="example-2-compressing-a-spring">Example 2. Compressing a Spring<a hidden class="anchor" aria-hidden="true" href="#example-2-compressing-a-spring">#</a></h3>
+<p>Find the work required to compress a spring from its natural length of $1$ ft to a length of $0.75$ ft if the force constant is  $k=16$ lb/ft.</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution.</code> (0.5 ft-lb)</strong></p>
+<h3 id="example-3-stretching-a-spring">Example 3. Stretching a Spring<a hidden class="anchor" aria-hidden="true" href="#example-3-stretching-a-spring">#</a></h3>
+<p>A spring has a natural length of $1$ m. A force of $24$ N stretches the spring to a length of $1.8$ m.</p>
+<ol>
+<li>Find the force constant $k$.</li>
+<li>How much work will it take to stretch the spring $2$ m beyond its natural length?</li>
+<li>How far will a $45$-N force stretch the spring?</li>
+</ol>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%201.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h3 id="example-4-lifting-a-rope-and-bucket">Example 4. Lifting a Rope and Bucket<a hidden class="anchor" aria-hidden="true" href="#example-4-lifting-a-rope-and-bucket">#</a></h3>
+<p>A $5$-lb bucket is lifted from the ground into the air by pulling in $20$ ft of rope at a constant speed. The rope weighs $0.08$ lb/ft.  How much work was spent lifting the bucket and rope?</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%202.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code> (116 ft-lb)</strong></p>
+<h2 id="pumping-liquids-from-containers">Pumping Liquids from Containers<a hidden class="anchor" aria-hidden="true" href="#pumping-liquids-from-containers">#</a></h2>
+<p>How much work does it take to pump all or part of the liquid from a container? We imagine lifting the liquid out one thin horizontal slab at a time and applying the equation $W=Fd$ to each slab.</p>
+<h3 id="example-5-pumping-oil-from-a-conical-tank">Example 5. Pumping Oil from a Conical Tank<a hidden class="anchor" aria-hidden="true" href="#example-5-pumping-oil-from-a-conical-tank">#</a></h3>
+<p>The conical tank is filled to within $2$ ft of the top with olive oil weighing $57\text{ lb/ft}^3$. How much work does it take to pump the oil to the rim of the tank?</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%203.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h3 id="example-6-pumping-water-from-a-glory-hole">Example 6. Pumping water from a Glory Hole<a hidden class="anchor" aria-hidden="true" href="#example-6-pumping-water-from-a-glory-hole">#</a></h3>
+<p>A glory hole is a vertical drain pipe that keeps the water behind a dam from getting too high. The top of the glory hole for a dam is $14$ ft below the top of the dam and $375$ ft above the bottom. The hole needs to be pumped out from time to time to permit the removal of seasonal debris.</p>
+<p>The glory hole is a funnel-shaped drain. The throat of the funnel is $20$ ft wide and the head is $120$ ft across. The outside boundary of the head cross-section are quarter circles formed with $50$-ft radii.</p>
+<p>We calculate the work required to pump water from</p>
+<ol>
+<li>the throat of the hole</li>
+<li>the funnel portion.</li>
+</ol>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%204.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%205.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h1 id="fluid-pressures-and-forces">Fluid Pressures and Forces<a hidden class="anchor" aria-hidden="true" href="#fluid-pressures-and-forces">#</a></h1>
+<p>Fluid pressure depends only on how far below the surface the point is and not on how much the surface of the dam happens to be tilted at that point.</p>
+<h2 id="basic-fact-1-the-pressure-depth-equation"><strong>Basic Fact 1 (The pressure-Depth Equation)</strong><a hidden class="anchor" aria-hidden="true" href="#basic-fact-1-the-pressure-depth-equation">#</a></h2>
+<p>In a fluid that is standing still, the pressure $p$ at depth $h$ is the fluid’s weight-density $w$ times $h$:</p>
+<p>$$
+p = w\cdot h = \rho \cdot g\cdot h
+$$</p>
+<p>We use the formula to derive a formula for the total force exerted by a fluid against all or part of a vertical or horizontal containing wall.</p>
+<h2 id="basic-fact-2-the-pressure-and-the-force"><strong>Basic Fact 2 (The Pressure and the Force)</strong><a hidden class="anchor" aria-hidden="true" href="#basic-fact-2-the-pressure-and-the-force">#</a></h2>
+<p>For plate being exerting a constant pressure everywhere, the force exerted on the plate is equal to the pressure times area for the plate.</p>
+<p>$$
+F = p\cdot A
+$$</p>
+<h2 id="basic-fact-3-the-fluid-pressure">Basic Fact 3 (The Fluid Pressure)<a hidden class="anchor" aria-hidden="true" href="#basic-fact-3-the-fluid-pressure">#</a></h2>
+<p>Under the surface of the fluid, at the same depth, the pressure is identical on each direction.</p>
+<p>We use these facts, to calculate fluid force on a horizontal or vertical wall submerged into the fluid. For a flat plate submerged horizontally, like the bottom of the swimming pool, the downward force acting on its upper face is given by $F = p A = \rho ghA.$ Let’s discuss the case of a vertical wall. The pressure will be different at each depth.</p>
+<h2 id="the-variable-depth-formula">The Variable-Depth Formula<a hidden class="anchor" aria-hidden="true" href="#the-variable-depth-formula">#</a></h2>
+<p>Suppose we want to know the force exerted by a fluid against <em>one side</em> of a vertical plate submerged in a fluid of weight-density $w$.</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%206.png" alt="Untitled"  />
+</p>
+<p>We model the plate as a region extending from $y=a$ to $y=b$ in the $xy$-plane. We partition $[a,b]$ in the usual way and imagine the region to be cut into thin horizontal strips. The typical strip  at depth $y$ is assumed to be $L(y)$ units long and $\Delta y$ units wide.</p>
+<p>Then the force exerted on the strip is</p>
+<p>$$
+\Delta F_k = w \cdot y_k\cdot L(y_k)\cdot \Delta y_k
+$$</p>
+<p>So the total force is approximately</p>
+<p>$$
+F\approx \sum_{k=1}^n w y_k L(y_k)\Delta y_k
+$$</p>
+<p>Passing to the limit, the force will become an integral</p>
+<p>$$
+F = \int_a^b w y L(y) dy.
+$$</p>
+<h3 id="example-1-applying-the-integral-for-fluid-force">Example 1. Applying the Integral for Fluid Force<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-integral-for-fluid-force">#</a></h3>
+<p>A flat isosceles right triangular plate with base $6$ ft and height $3$ ft is submerged vertically, base up, $2$ ft below the surface of a swimming pool. Find the force exerted by the water against one side of the plate.</p>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%207.png" alt="Untitled"  />
+</p>
+<p><strong><code>Solution</code></strong></p>
+<h2 id="fluid-forces-and-controids">Fluid Forces and Controids<a hidden class="anchor" aria-hidden="true" href="#fluid-forces-and-controids">#</a></h2>
+<p><img loading="lazy" src="W3-S2%20Work%20cc685/Untitled%208.png" alt="Untitled"  />
+</p>
+<p>If we know the depth of the centroid for the flat plate submerged vertically, we can take a shortcut to find the force against one side of the plate.</p>
+<p>Suppose a plate is submerged into the fluid, extending from $y=a$ to $y=b$. Establish the coordinate system with $y$-axis pointing downward, we see</p>
+<p>$$
+F = \int_a^b w, y, L(y), dy\ = w \int_a^b y, L(y), dy \ = w \cdot \bar{h}\cdot \int_a^b L(y) ,dy\ = w \cdot \bar{h} \cdot A<br>
+$$</p>
+<blockquote>
+<p><strong>Fluid Forces and Centroids</strong></p>
+</blockquote>
+<p>The force of a fluid of wight-density $w$ against one side of a submerged flat vertical plate is the product of $w$, the distance $\bar{h}$ from the plate’s centroid to th fluid surface, and the plate’s area:</p>
+<p>$$
+F = w , \bar{h}, A.
+$$</p>
+<h3 id="example-2-finding-fluid-force-using-centroid">Example 2. Finding Fluid Force Using Centroid<a hidden class="anchor" aria-hidden="true" href="#example-2-finding-fluid-force-using-centroid">#</a></h3>
+<p>Use centroid to find the force in the previous example.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/work/">work</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/pressure/">pressure</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/forces/">forces</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
