@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT) | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="slidev, nodejs, ppt" />
+<meta name="description" content="为何要使用 Node.js 我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 slidev 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markd">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-03/use-markdown-write-ppt-ft-nodejs-and-slidev/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)" />
+<meta property="og:description" content="为何要使用 Node.js 我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 slidev 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markd" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-03/use-markdown-write-ppt-ft-nodejs-and-slidev/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-14T12:07:33&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-14T12:07:33&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)"/>
+<meta name="twitter:description" content="为何要使用 Node.js 我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 slidev 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markd"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)",
+      "item": "http://tigertooth4.github.io/post/2022-03/use-markdown-write-ppt-ft-nodejs-and-slidev/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)",
+  "name": "在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)",
+  "description": "为何要使用 Node.js 我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 slidev 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markd",
+  "keywords": [
+    "slidev", "nodejs", "ppt"
+  ],
+  "articleBody": "为何要使用 Node.js 我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 slidev 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markdown， 再转成 ppt 了，省却了重新制作 ppt 的烦恼。看到公众号上的介绍，我其实是很期待使用 slidev 的。\n安装 Node.js 官网介绍说推荐使用 nvm 安装和更新 node.js，我也找到下面的网站，来学习如何安装 nvm.\n\n 首先安装 nvm (注意，newline.co 中的版本已经比较老了，所以最好用 github 官网提供的脚本)。 系统会自动更新 .zshrc 文件  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash  为保险起见，我还是重载了一下系统配置  source ~/.zshrc  检验安装 (应该打印出 nvm 字样来)  command -v nvm  安装 Node.js  nvm install node 上述命令将默认安装最新的 node.js. 运行不到一分钟，安装成功了，显示的 node.js 版本为 17.7.1.\n 安装 npm  nvm install-latest-npm 安装 sli.dev Sli.dev 官方有安装的详细说明\nSlidev\n如果只想试玩一下，可以用\nnpm init slidev@latest 它会上网下载很多额外的包，并询问你要生成的 ppt 的名称是什么，给你一个默认的 markdown 文件。这写都是在命令行完成的。若一切顺利，可以打开 http://localhost:3030 查看 ppt. （事实上，我最需要的功能并不是在线播放，而是打印出来，变成 pdf 文件。这些也是可以实现的。可参见官网）\n不过，我有很多不同的 ppt 要做，所以我选全局安装（估计是安装到我的系统里面）\nnpm i -g @slidev/cli 这样，每次要使用 sli.dev 的时候，只要\nslidev 即可.\nSlidev 的使用逻辑是，寻找当前目录下的 slidev.md 文件，然后生成 ppt，通过 localhost:3030 端口查看（PPT 中可以实现浏览全部页面，动画，批注）等等效果。操作是在命令行下实现的。\n如何输出 PPT? 需要安装 playwright-chromium\nnpm i -D playwright-chromium 然后\nslidev export 即可\n",
+  "wordCount" : "600",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-14T12:07:33+08:00",
+  "dateModified": "2022-03-14T12:07:33+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-03/use-markdown-write-ppt-ft-nodejs-and-slidev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)
+    </h1>
+    <div class="post-meta"><span title='2022-03-14 12:07:33 +0800 CST'>March 14, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="为何要使用-nodejs">为何要使用 Node.js<a hidden class="anchor" aria-hidden="true" href="#为何要使用-nodejs">#</a></h1>
+<p>我并不是程序员，安装 Node.js 其实唯一的目的就是要使用 <a href="https://sli.dev/">slidev</a> 这个包，它能方便的将 markdown 转为 ppt. 这样，我在 notion 上写的讲义就可以方便的先转换成 markdown， 再转成 ppt 了，省却了重新制作 ppt 的烦恼。看到公众号上的介绍，我其实是很期待使用 slidev 的。</p>
+<h1 id="安装-nodejs">安装 Node.js<a hidden class="anchor" aria-hidden="true" href="#安装-nodejs">#</a></h1>
+<p><a href="https://github.com/nvm-sh/nvm">官网</a>介绍说推荐使用 nvm 安装和更新 node.js，我也找到下面的网站，来学习如何安装 nvm.</p>
+<p><a href="https://www.newline.co/@Adele/how-to-install-nodejs-and-npm-on-macos--22782681"></a></p>
+<ol>
+<li>首先安装 nvm (注意，newline.co 中的版本已经比较老了，所以最好用 github 官网提供的脚本)。 系统会自动更新 .zshrc 文件</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+</code></pre></div><ol>
+<li>为保险起见，我还是重载了一下系统配置</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source ~/.zshrc
+</code></pre></div><ol>
+<li>检验安装  (应该打印出 nvm 字样来)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">command -v nvm
+</code></pre></div><ol>
+<li>安装 Node.js</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install node
+</code></pre></div><p>上述命令将默认安装最新的 node.js. 运行不到一分钟，安装成功了，显示的 node.js 版本为 17.7.1.</p>
+<ol>
+<li>安装 npm</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install-latest-npm
+</code></pre></div><h1 id="安装-slidev">安装 sli.dev<a hidden class="anchor" aria-hidden="true" href="#安装-slidev">#</a></h1>
+<p><a href="http://Sli.dev">Sli.dev</a> 官方有安装的详细说明</p>
+<p><a href="https://sli.dev/guide/install.html">Slidev</a></p>
+<p>如果只想试玩一下，可以用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm init slidev@latest
+</code></pre></div><p>它会上网下载很多额外的包，并询问你要生成的 ppt 的名称是什么，给你一个默认的 markdown 文件。这写都是在命令行完成的。若一切顺利，可以打开 <a href="http://localhost:3030">http://localhost:3030</a> 查看 ppt. （事实上，我最需要的功能并不是在线播放，而是打印出来，变成 pdf 文件。这些也是可以实现的。可参见官网）</p>
+<p>不过，我有很多不同的 ppt 要做，所以我选全局安装（估计是安装到我的系统里面）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -g @slidev/cli
+</code></pre></div><p>这样，每次要使用 <a href="http://sli.dev">sli.dev</a> 的时候，只要</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slidev
+</code></pre></div><p>即可.</p>
+<p>Slidev 的使用逻辑是，寻找当前目录下的 <a href="http://slidev.md">slidev.md</a> 文件，然后生成 ppt，通过 <a href="http://localhost:3030">localhost:3030</a> 端口查看（PPT 中可以实现浏览全部页面，动画，批注）等等效果。操作是在命令行下实现的。</p>
+<h1 id="如何输出-ppt">如何输出 PPT?<a hidden class="anchor" aria-hidden="true" href="#如何输出-ppt">#</a></h1>
+<p>需要安装 <code>playwright-chromium</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D playwright-chromium
+</code></pre></div><p>然后</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">slidev export
+</code></pre></div><p>即可</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/slidev/">slidev</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/nodejs/">nodejs</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/ppt/">ppt</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
