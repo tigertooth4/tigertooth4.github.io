@@ -2,12 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tigertooth4.github.io/tags/nodejs/</loc>
-    <lastmod>2022-03-14T12:07:33+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/anti-derivative/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/exponential/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/logarithmic/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w4s1-transcendental-functions/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-03-15T16:44:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/nodejs/</loc>
     <lastmod>2022-03-14T12:07:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22,32 +62,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-03-14T12:07:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/post/2022-03/use-markdown-write-ppt-ft-nodejs-and-slidev/</loc>
     <lastmod>2022-03-14T12:07:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2022-03-14T12:07:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
-    <lastmod>2022-03-11T13:24:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/forces/</loc>
-    <lastmod>2022-03-11T13:24:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
     <lastmod>2022-03-11T13:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
