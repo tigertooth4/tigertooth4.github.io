@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>transcendental on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/transcendental/</link>
+    <description>Recent content in transcendental on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 17 Mar 2022 12:26:22 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/transcendental/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W4-S2 Transcendental Functions (2)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w4s2-transcendental-functions-2/</link>
+      <pubDate>Thu, 17 Mar 2022 12:26:22 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w4s2-transcendental-functions-2/</guid>
+      <description>周次: 4 备注: Attendance check 日期: March 18, 2022 节次: 2 In this lecture, we continue on the discussion of logarithmic and exponential functions. The simplest differential equation is discussed, there are a lot of real applications even for such simple equations. And the definitions of growth rates are given in terms of the notation “big-oh</description>
+    </item>
+    
+  </channel>
+</rss>
