@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W5-S1 Transcendental Functions (3) and Integration Techniques | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="transcendental, calculus, integration, technique, inverse, trigonometric, hyperbolic" />
+<meta name="description" content="周次: 5 日期: March 23, 2022 节次: 1 In this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given. As the second half, we discuss some integration techniques. Those techniques could help">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w5s1-transcendental-functions-3-and-integration-techniques/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W5-S1 Transcendental Functions (3) and Integration Techniques" />
+<meta property="og:description" content="周次: 5 日期: March 23, 2022 节次: 1 In this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given. As the second half, we discuss some integration techniques. Those techniques could help" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w5s1-transcendental-functions-3-and-integration-techniques/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-22T15:10:00&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-22T15:10:00&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W5-S1 Transcendental Functions (3) and Integration Techniques"/>
+<meta name="twitter:description" content="周次: 5 日期: March 23, 2022 节次: 1 In this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given. As the second half, we discuss some integration techniques. Those techniques could help"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W5-S1 Transcendental Functions (3) and Integration Techniques",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w5s1-transcendental-functions-3-and-integration-techniques/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W5-S1 Transcendental Functions (3) and Integration Techniques",
+  "name": "W5-S1 Transcendental Functions (3) and Integration Techniques",
+  "description": "周次: 5 日期: March 23, 2022 节次: 1 In this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given. As the second half, we discuss some integration techniques. Those techniques could help",
+  "keywords": [
+    "transcendental", "calculus", "integration", "technique", "inverse", "trigonometric", "hyperbolic"
+  ],
+  "articleBody": "周次: 5 日期: March 23, 2022 节次: 1\nIn this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given.\nAs the second half, we discuss some integration techniques. Those techniques could help us to find more anti-derivatives and as a result, evaluate more definite integrals.\n§ 7.7 Inverse Trigonometric Functions The six basic trigonometric functions are not one-to-one. However, we can restrict their domain to intervals on which they are one-to-one. The sine function increases from $-1$ at $x=-\\pi/2$ to $1$ when $x=\\pi/2$. By restricting its domain to the interval $[-\\pi/2,\\pi/2]$ we make it one-to-one, so it has an inverse $\\sin^{-1}(x)$.\nThe cosine function is one-to-one on $[0,\\pi]$.\nThe tangent function is one-to-one on $(-\\pi/2,\\pi/2)$.\nThe cotangent function is one-to-one on $(0,\\pi)$.\nThe secant function is one-to-one on $[0,\\pi/2)\\cup (\\pi/2,\\pi]$.\nThe cosecant function is one-to-one on $[-\\pi/2,0)\\cup(0,\\pi/2].$\nThose restricted trigonometric functions have inverses, denoted by (arc). So we have $\\arcsin(x)$, $\\arccos(x)$, $\\arctan(x)$, $\\mathrm{arccot}(x)$, $\\mathrm{arcsec}(x)$ and $\\mathrm{arccsc}(x)$.\nThe Arcsine and Arccosine Functions  Definition. Arcsine and Arccosine Functions\n  $y=\\sin^{-1}(x)=\\arcsin(x)$ is the angle in $[-\\pi/2,\\pi/2]$ whose sine is $x$. $y=\\cos^{-1}(x) = \\arccos(x)$ is the angle in $[0,\\pi]$ whose cosine is $x$.  Sine (blue) and arcsine (yellow) functions\nThe graph of $y=\\arcsin(x)$ is symmetric about the origin, therefore an odd function.\n$$ \\arcsin(-x) = -\\arcsin(x). $$\nCosine (blue) and arccosine (yellow) functions\nThe graph of $y=\\arccos(x)$ does not have symmetry about the origin or about the $y$-axis.\nExample 1. Common values of arcsine function  $\\arcsin(\\frac12) = \\frac\\pi6$ ; $\\arcsin(\\frac{\\sqrt{3}}{2}) = \\frac{\\pi}{3}; \\arcsin(\\frac{\\sqrt{2}}{2}) = \\frac\\pi 4.$ $\\arcsin(0) = 0$; $\\arcsin(1) = \\frac\\pi2$; $\\arcsin(-1) = -\\frac\\pi2.$  Example 2. Common values of arccosine function  $\\arccos(\\frac12) = \\frac\\pi3$; $\\arccos(\\frac{\\sqrt3}{2}) = \\frac\\pi 6$; $\\arccos(\\frac{\\sqrt2}{2}) = \\frac{\\pi}{4}.$ $\\arccos(0) = \\frac{\\pi}{2};$ $\\arccos(1) = 0$; $\\arccos(-1) = \\pi$.  Identities Involving Arcsine and Arccosine  Basic Identities\n Since $\\cos(\\pi-x) = -\\cos(x)$, we have\n$$ \\arccos(-x) = \\pi - \\arccos(x),\\quad \\text{or}\\quad \\arccos(x) + \\arccos(-x) = \\pi. $$\nSince $\\cos(\\frac\\pi2-x) = \\sin(x),$ we have\n$$ \\arcsin(x) = \\frac{\\pi}2 - \\arccos(x), \\quad or \\quad \\arcsin(x) + \\arccos(x) = \\frac\\pi2. $$\nInverses of $\\tan(x)$, $\\cot(x)$, $\\sec(x)$ ,and $\\csc(x)$  Definition. Arctangent and Arccotangent Function\n  $y=\\arctan(x)$ is the angle in $(-\\pi/2,\\pi/2)$ for which $\\tan(y) = x$ $y=\\mathrm{arccot}(x)$ is the angle in $(0,\\pi)$ for which $\\cot(y) =x.$  The graph of arctan(x)\nThe graph of $\\arctan(x)$ is symmetric with respect to the origin. Namely, And $\\mathrm{arccot}(x)$ has no such symmetries.\n$$ \\tan(-x) = - \\tan(x). $$\nThe graph of arccot(x)\nExample 3. Common Values of Arctangent Function  $\\arctan(\\frac1{\\sqrt{3}}) = \\frac\\pi6$; $\\arctan(\\pm\\sqrt{3}) = \\pm \\frac{\\pi}{3}.$  Example 4. Find $\\cos(\\alpha)$, $\\tan(\\alpha)$, $\\sec(\\alpha)$, if $$ \\alpha = \\arcsin\\left(\\frac23\\right) $$\nExample 5. Find $\\sec(\\arctan\\frac{x}{3})$ The Derivative of Arcsine Function Find $\\frac{d}{dx} \\arcsin(x)$ by using the formula\n$$ \\frac{d}{dx} f^{-1}(x) = \\frac{1}{f'(f^{-1}(x))} $$\nThe Chain Rule shows\n$$ \\frac{d}{dx}\\arcsin (g(x)) = $$\nExample 7. Applying the Derivative Formula $$ \\frac{d}{dx} \\arcsin(x^2) = $$\nThe Derivative of Arctangent Function Find $\\frac{d}{dx} \\arctan(x) =$\nDerivatives of the Other Two  Inverse Function-Inverse Cofunction Identities\n $$ \\arccos(x) = \\frac{\\pi}{2} - \\arcsin(x),\\ \\mathrm{arccot}(x) =\\frac{\\pi}{2}-\\arctan(x) $$\nThus\n$$ \\frac{d}{dx} \\arccos(x) = -\\frac{1}{\\sqrt{1-x^2}},\\ \\frac{d}{dx}\\mathrm{arccot}(x) = -\\frac{1}{1+x^2} $$\nExample 10. A Tangent Line to the Arccotangent Curve Find an equation for the line tangent to the graph of $y=\\mathrm{arccot}(x)$ at $x=-1$.\nDerivatives Table Integration Formulas  The Integration Formulas\n $$ \\int \\frac{1}{\\sqrt{1-x^2}}dx = \\arcsin(x) + C $$\n$$ \\int\\frac{1}{1+x^2}dx = \\arctan(x) + C $$\nFor integrations like $\\int\\frac{1}{\\sqrt{a^2-x^2}}dx$ and $\\int \\frac{1}{a^2+x^2} dx$, we can use substitution of variables\n$$ \\int\\frac{1}{\\sqrt{a^2-x^2}}dx = \\int\\frac{1}{a\\sqrt{1-(x/a)^2}}dx = \\int\\frac{d(x/a)}{\\sqrt{1-(x/a)^2}} = \\arcsin(x/a) + C $$\nSimilarly,\n$$ \\int\\frac{1}{a^2+x^2}dx = \\frac1a \\arctan(x/a) + C. $$\nExample 11. Using the Integral Formulas  $\\int_{\\sqrt2/2}^{\\sqrt3/2}\\frac{dx}{\\sqrt{1-x^2}} = \\frac{\\pi}{2}$ $\\int_0^1 \\frac{dx}{1+x^2} = \\frac{\\pi}{4}$ $\\int\\frac{dx}{\\sqrt{9-x^2}}$ $\\int\\frac{dx}{\\sqrt{3-4x^2}}$  Example 13. Completing the Square  Evaluate  $$ \\int \\frac{dx}{\\sqrt{4x-x^2}}. $$\n Evaluate  $$ \\int \\frac{dx}{4x^2+4x + 2}. $$\nExample 15. Using Substitution Evaluate\n$$ \\int\\frac{dx}{\\sqrt{e^{2x} - 6}}. $$\n§ 7.8 A Brief Introduction on Hyperbolic Functions Let’s recall the odd and even functions. We have stated that for every function $f$ defined on an interval centered at the origin can be written in a unique way as the sum of one even function and one odd function. The decomposition is\n$$ f(x) = \\underbrace{\\frac{f(x) + f(-x)}{2}}{\\text{even part}} + \\underbrace{\\frac{f(x)-f(-x)}{2}}{\\text{odd part}} $$\nNo exception for exponential function $e^x$ , it can be decomposed. And we assigned two new functions to the decomposition.\n$$ \\cosh(x) := \\text{even part of }e^x = \\frac{e^x + e^{-x}}{2} $$\n$$ \\sinh(x) := \\text{odd part of }e^x = \\frac{e^x - e^{-x}}{2} $$\n$\\cosh(x)$ is pronounced as “kosh $x$”, rhyming with “gosh $x$”, and $\\sinh(x)$ is pronounced as “cinch $x$”, rhyming with “pinch $x$”.\nGraphs of Hyperbolic Functions Identities for Hyperbolic Functions $$ \\cosh^2(x) - \\sinh^2(x) = 1 $$\n$$ \\sinh(2x) = 2\\sinh(x)\\cosh(x) $$\n$$ \\cosh(2x) = \\cosh^2(x) + \\sinh^2(x) $$\nOther Hyperbolic Functions Analogous to trigonometric functions, the $\\tanh(x)$, $\\coth(x)$, $\\mathrm{sech}(x)$ and $\\mathrm{csch}(x)$ can all be defined, following the same pattern.\n$$ \\tanh(x) :=\\dfrac{\\sinh(x)}{\\cosh(x)},\\quad \\coth(x):=\\dfrac{\\cosh(x)}{\\sinh(x)}, \\quad \\text{etc.} $$\nThe Derivative and Anti-derivative of Hyperbolic Functions $$ \\frac{d}{dx}\\sinh(x) = \\cosh(x),\\quad \\frac{d}{dx}\\cosh(x) = \\sinh(x) $$\nTherefore the anti-derivatives read\n$$ \\int\\sinh(x) = \\cosh(x) + C,\\quad \\int\\cosh(x) = \\sinh(x) + C. $$\nChapter 8. Techniques of Integration In this chapter we study a number of important techniques for finding indefinite integrals of more complicated functions\n§ 8.1 Basic Integration Formulas Try to match integrals that confront us against one of the standard types. This usually involves a certain amount of algebraic manipulation as well as use of the substitution rules.\nRecall that the substitution rule is\n$$ \\int f(g(x))g'(x)dx = \\int f(u) du, $$\nwhere $u=g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I.$ Success in integration often hinges on the ability to spot what part of the integrand should be called $u$ in order that one will also have $du$, so that a known formula can be applied. This means that the first requirement for skill in integration is a thorough mastery of the formulas for differentiation.\n**Note** Students should have a good mastery of formulas 12, 13, 18, 19. For 20 and 22, we provide an alternative (equivalent) anti-derivative\n$$ \\int\\dfrac{du}{\\sqrt{u^2\\pm a^2}} = \\ln |u+\\sqrt{u^2\\pm a^2}| + C $$\nFor 20, we have an alternative way to show the anti-derivative, by applying the integration table.\n$$ \\int\\dfrac{du}{u\\sqrt{u^2-a^2}} = \\int \\dfrac{du}{u^2\\sqrt{1-\\left(\\frac{a}{u}\\right)^2}}=-\\frac1a\\int \\dfrac{d\\left(\\frac{a}u\\right)}{\\sqrt{1-\\left(\\frac{a}{u}\\right)^2}}=-\\frac1a \\arcsin\\left(\\frac{a}{u}\\right) + C $$\nExample 1. Making a Simplifying Substitution Evaluate\n$$ \\int\\dfrac{2x-9}{\\sqrt{x^2-9x+1}}dx $$\nExample 2. Completing the Square Evaluate\n$$ \\int\\dfrac{dx}{\\sqrt{8x-x^2}}dx $$\nExample 3. Expanding a Power and Using a Trigonometric Identity Evaluate\n$$ \\int (\\sec x + \\tan x)^2 dx. $$\nExample 4. Eliminating a Square Root Evaluate\n$$ \\int_0^{\\pi/4} \\sqrt{1+\\cos 4x} ,dx. $$\nExample 5. Reducing an Improper Fraction Evaluate\n$$ \\int \\dfrac{3x^2-7x}{3x+2},dx. $$\nExample 6. Separating a Fraction Evaluate\n$$ \\int \\dfrac{3x+2}{\\sqrt{1-x^2}},dx. $$\nExample 7. Integral of $y=\\sec(x)$ — Multiplying by a Form of $1$ Evaluate\n$$ \\int \\sec x ,,dx $$\nSimilarly, one can find\n$$ \\int \\csc x,, dx $$\n",
+  "wordCount" : "1219",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-22T15:10:00+08:00",
+  "dateModified": "2022-03-22T15:10:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w5s1-transcendental-functions-3-and-integration-techniques/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W5-S1 Transcendental Functions (3) and Integration Techniques
+    </h1>
+    <div class="post-meta"><span title='2022-03-22 15:10:00 +0800 CST'>March 22, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 5
+日期: March 23, 2022
+节次: 1</p>
+<p>In this lecture, we define the inverse trigonometric functions, and develop some basic properties. The properties we are focusing on are the differentiation and integration properties. A brief introduction on hyperbolic functions, in particular the hyperbolic cosine and hyperbolic sine functions are given.</p>
+<p>As the second half, we discuss some integration techniques. Those techniques could help us to find more anti-derivatives and as a result, evaluate more definite integrals.</p>
+<h1 id="-77-inverse-trigonometric-functions">§ 7.7 Inverse Trigonometric Functions<a hidden class="anchor" aria-hidden="true" href="#-77-inverse-trigonometric-functions">#</a></h1>
+<p>The six basic trigonometric functions are not one-to-one. However, we can restrict their domain to intervals on which they are one-to-one. The sine function increases from $-1$ at $x=-\pi/2$ to $1$ when $x=\pi/2$. By restricting its domain to the interval $[-\pi/2,\pi/2]$ we make it one-to-one, so it has an inverse $\sin^{-1}(x)$.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled.png" alt="Untitled"  />
+</p>
+<p>The cosine function is one-to-one on $[0,\pi]$.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>The tangent function is one-to-one on $(-\pi/2,\pi/2)$.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>The cotangent function is  one-to-one on $(0,\pi)$.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>The secant function is one-to-one on $[0,\pi/2)\cup (\pi/2,\pi]$.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%204.png" alt="Untitled"  />
+</p>
+<p>The cosecant function is one-to-one on $[-\pi/2,0)\cup(0,\pi/2].$</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%205.png" alt="Untitled"  />
+</p>
+<p>Those restricted trigonometric functions have inverses, denoted by (arc). So we have $\arcsin(x)$, $\arccos(x)$, $\arctan(x)$, $\mathrm{arccot}(x)$, $\mathrm{arcsec}(x)$ and $\mathrm{arccsc}(x)$.</p>
+<h2 id="the-arcsine-and-arccosine-functions">The Arcsine and Arccosine Functions<a hidden class="anchor" aria-hidden="true" href="#the-arcsine-and-arccosine-functions">#</a></h2>
+<blockquote>
+<p><strong>Definition.</strong>  <strong>Arcsine and Arccosine Functions</strong></p>
+</blockquote>
+<ul>
+<li>$y=\sin^{-1}(x)=\arcsin(x)$ is the angle in $[-\pi/2,\pi/2]$ whose sine is $x$.</li>
+<li>$y=\cos^{-1}(x) = \arccos(x)$ is the angle in $[0,\pi]$ whose cosine is $x$.</li>
+</ul>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%206.png" alt="Sine (blue) and arcsine (yellow) functions "  />
+</p>
+<p>Sine (blue) and arcsine (yellow) functions</p>
+<p>The graph of $y=\arcsin(x)$ is symmetric about the origin, therefore an odd function.</p>
+<p>$$
+\arcsin(-x) = -\arcsin(x).
+$$</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%207.png" alt="Cosine (blue) and arccosine (yellow) functions"  />
+</p>
+<p>Cosine (blue) and arccosine (yellow) functions</p>
+<p>The graph of $y=\arccos(x)$ does not have symmetry about the origin or about the $y$-axis.</p>
+<h3 id="example-1-common-values-of-arcsine-function">Example 1. Common values of arcsine function<a hidden class="anchor" aria-hidden="true" href="#example-1-common-values-of-arcsine-function">#</a></h3>
+<ul>
+<li>$\arcsin(\frac12) = \frac\pi6$ ; $\arcsin(\frac{\sqrt{3}}{2}) = \frac{\pi}{3}; \arcsin(\frac{\sqrt{2}}{2}) = \frac\pi 4.$</li>
+<li>$\arcsin(0) = 0$; $\arcsin(1) = \frac\pi2$; $\arcsin(-1) = -\frac\pi2.$</li>
+</ul>
+<h3 id="example-2-common-values-of-arccosine-function">Example 2. Common values of arccosine function<a hidden class="anchor" aria-hidden="true" href="#example-2-common-values-of-arccosine-function">#</a></h3>
+<ul>
+<li>$\arccos(\frac12) = \frac\pi3$; $\arccos(\frac{\sqrt3}{2}) = \frac\pi 6$; $\arccos(\frac{\sqrt2}{2}) = \frac{\pi}{4}.$</li>
+<li>$\arccos(0) = \frac{\pi}{2};$ $\arccos(1) = 0$; $\arccos(-1) = \pi$.</li>
+</ul>
+<h2 id="identities-involving-arcsine-and-arccosine">Identities Involving Arcsine and Arccosine<a hidden class="anchor" aria-hidden="true" href="#identities-involving-arcsine-and-arccosine">#</a></h2>
+<blockquote>
+<p><strong>Basic Identities</strong></p>
+</blockquote>
+<p>Since $\cos(\pi-x) = -\cos(x)$, we have</p>
+<p>$$
+\arccos(-x) = \pi - \arccos(x),\quad \text{or}\quad \arccos(x) + \arccos(-x) = \pi.
+$$</p>
+<p>Since $\cos(\frac\pi2-x) = \sin(x),$ we have</p>
+<p>$$
+\arcsin(x) = \frac{\pi}2 - \arccos(x), \quad or \quad \arcsin(x) + \arccos(x) = \frac\pi2.
+$$</p>
+<h2 id="inverses-of-tanx-cotx-secx-and-cscx">Inverses of $\tan(x)$, $\cot(x)$, $\sec(x)$ ,and $\csc(x)$<a hidden class="anchor" aria-hidden="true" href="#inverses-of-tanx-cotx-secx-and-cscx">#</a></h2>
+<blockquote>
+<p><strong>Definition. Arctangent and Arccotangent Function</strong></p>
+</blockquote>
+<ul>
+<li>$y=\arctan(x)$ is the angle in $(-\pi/2,\pi/2)$ for which $\tan(y) = x$</li>
+<li>$y=\mathrm{arccot}(x)$ is the angle in  $(0,\pi)$ for which $\cot(y) =x.$</li>
+</ul>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%208.png" alt="The graph of arctan(x)"  />
+</p>
+<p>The graph of arctan(x)</p>
+<p>The graph of $\arctan(x)$ is symmetric with respect to the origin. Namely, And $\mathrm{arccot}(x)$ has no such symmetries.</p>
+<p>$$
+\tan(-x) = - \tan(x).
+$$</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%209.png" alt="The graph of arccot(x)"  />
+</p>
+<p>The graph of arccot(x)</p>
+<h3 id="example-3-common-values-of-arctangent-function">Example 3. Common Values of Arctangent Function<a hidden class="anchor" aria-hidden="true" href="#example-3-common-values-of-arctangent-function">#</a></h3>
+<ul>
+<li>$\arctan(\frac1{\sqrt{3}}) = \frac\pi6$; $\arctan(\pm\sqrt{3}) = \pm \frac{\pi}{3}.$</li>
+</ul>
+<h3 id="example-4-find-cosalpha-tanalpha-secalpha-if">Example 4. Find $\cos(\alpha)$, $\tan(\alpha)$, $\sec(\alpha)$, if<a hidden class="anchor" aria-hidden="true" href="#example-4-find-cosalpha-tanalpha-secalpha-if">#</a></h3>
+<p>$$
+\alpha = \arcsin\left(\frac23\right)
+$$</p>
+<h3 id="example-5-find-secarctanfracx3">Example 5. Find $\sec(\arctan\frac{x}{3})$<a hidden class="anchor" aria-hidden="true" href="#example-5-find-secarctanfracx3">#</a></h3>
+<h2 id="the-derivative-of-arcsine-function">The Derivative of Arcsine Function<a hidden class="anchor" aria-hidden="true" href="#the-derivative-of-arcsine-function">#</a></h2>
+<p>Find $\frac{d}{dx} \arcsin(x)$ by using the formula</p>
+<p>$$
+\frac{d}{dx} f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}
+$$</p>
+<p>The Chain Rule shows</p>
+<p>$$
+\frac{d}{dx}\arcsin (g(x)) =
+$$</p>
+<h3 id="example-7-applying-the-derivative-formula">Example 7. Applying the Derivative Formula<a hidden class="anchor" aria-hidden="true" href="#example-7-applying-the-derivative-formula">#</a></h3>
+<p>$$
+\frac{d}{dx} \arcsin(x^2) =
+$$</p>
+<h2 id="the-derivative-of-arctangent-function">The Derivative of Arctangent Function<a hidden class="anchor" aria-hidden="true" href="#the-derivative-of-arctangent-function">#</a></h2>
+<p>Find $\frac{d}{dx} \arctan(x) =$</p>
+<h2 id="derivatives-of-the-other-two">Derivatives of the Other Two<a hidden class="anchor" aria-hidden="true" href="#derivatives-of-the-other-two">#</a></h2>
+<blockquote>
+<p><strong>Inverse Function-Inverse Cofunction Identities</strong></p>
+</blockquote>
+<p>$$
+\arccos(x) = \frac{\pi}{2} - \arcsin(x),\ \mathrm{arccot}(x) =\frac{\pi}{2}-\arctan(x)
+$$</p>
+<p>Thus</p>
+<p>$$
+\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{1-x^2}},\ \frac{d}{dx}\mathrm{arccot}(x) = -\frac{1}{1+x^2}
+$$</p>
+<h3 id="example-10-a-tangent-line-to-the-arccotangent-curve">Example 10. A Tangent Line to the Arccotangent Curve<a hidden class="anchor" aria-hidden="true" href="#example-10-a-tangent-line-to-the-arccotangent-curve">#</a></h3>
+<p>Find an equation for the line tangent to the graph of $y=\mathrm{arccot}(x)$ at $x=-1$.</p>
+<h3 id="derivatives-table">Derivatives Table<a hidden class="anchor" aria-hidden="true" href="#derivatives-table">#</a></h3>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%2010.png" alt="Untitled"  />
+</p>
+<h2 id="integration-formulas">Integration Formulas<a hidden class="anchor" aria-hidden="true" href="#integration-formulas">#</a></h2>
+<blockquote>
+<p><strong>The Integration Formulas</strong></p>
+</blockquote>
+<p>$$
+\int \frac{1}{\sqrt{1-x^2}}dx = \arcsin(x) + C
+$$</p>
+<p>$$
+\int\frac{1}{1+x^2}dx = \arctan(x) + C
+$$</p>
+<p>For integrations like $\int\frac{1}{\sqrt{a^2-x^2}}dx$ and $\int \frac{1}{a^2+x^2} dx$, we can use substitution of variables</p>
+<p>$$
+\int\frac{1}{\sqrt{a^2-x^2}}dx = \int\frac{1}{a\sqrt{1-(x/a)^2}}dx = \int\frac{d(x/a)}{\sqrt{1-(x/a)^2}} = \arcsin(x/a) + C
+$$</p>
+<p>Similarly,</p>
+<p>$$
+\int\frac{1}{a^2+x^2}dx = \frac1a \arctan(x/a) + C.
+$$</p>
+<h3 id="example-11-using-the-integral-formulas">Example 11. Using the Integral Formulas<a hidden class="anchor" aria-hidden="true" href="#example-11-using-the-integral-formulas">#</a></h3>
+<ol>
+<li>$\int_{\sqrt2/2}^{\sqrt3/2}\frac{dx}{\sqrt{1-x^2}} = \frac{\pi}{2}$</li>
+<li>$\int_0^1 \frac{dx}{1+x^2} = \frac{\pi}{4}$</li>
+<li>$\int\frac{dx}{\sqrt{9-x^2}}$</li>
+<li>$\int\frac{dx}{\sqrt{3-4x^2}}$</li>
+</ol>
+<h3 id="example-13-completing-the-square">Example 13. Completing the Square<a hidden class="anchor" aria-hidden="true" href="#example-13-completing-the-square">#</a></h3>
+<ul>
+<li>Evaluate</li>
+</ul>
+<p>$$
+\int \frac{dx}{\sqrt{4x-x^2}}.
+$$</p>
+<ul>
+<li>Evaluate</li>
+</ul>
+<p>$$
+\int \frac{dx}{4x^2+4x + 2}.
+$$</p>
+<h3 id="example-15-using-substitution">Example 15. Using Substitution<a hidden class="anchor" aria-hidden="true" href="#example-15-using-substitution">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int\frac{dx}{\sqrt{e^{2x} - 6}}.
+$$</p>
+<h1 id="-78-a-brief-introduction-on-hyperbolic-functions">§ 7.8 A Brief Introduction on Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#-78-a-brief-introduction-on-hyperbolic-functions">#</a></h1>
+<p>Let’s recall the odd and even functions. We have stated that for every function $f$ defined on an interval centered at the origin can be written in a unique way as the sum of one even function and one odd function. The decomposition is</p>
+<p>$$
+f(x) = \underbrace{\frac{f(x) + f(-x)}{2}}<em>{\text{even part}} + \underbrace{\frac{f(x)-f(-x)}{2}}</em>{\text{odd part}}
+$$</p>
+<p>No exception for exponential function $e^x$ , it can be decomposed. And we assigned two new functions to the decomposition.</p>
+<p>$$
+\cosh(x) := \text{even part of }e^x = \frac{e^x + e^{-x}}{2}
+$$</p>
+<p>$$
+\sinh(x) := \text{odd part of }e^x = \frac{e^x - e^{-x}}{2}
+$$</p>
+<p>$\cosh(x)$ is pronounced as “kosh $x$”, rhyming with “gosh $x$”, and $\sinh(x)$ is pronounced as “cinch $x$”, rhyming with “pinch $x$”.</p>
+<h2 id="graphs-of-hyperbolic-functions">Graphs of Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#graphs-of-hyperbolic-functions">#</a></h2>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%2011.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%2012.png" alt="Untitled"  />
+</p>
+<h2 id="identities-for-hyperbolic-functions">Identities for Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#identities-for-hyperbolic-functions">#</a></h2>
+<p>$$
+\cosh^2(x) - \sinh^2(x) = 1
+$$</p>
+<p>$$
+\sinh(2x) = 2\sinh(x)\cosh(x)
+$$</p>
+<p>$$
+\cosh(2x) = \cosh^2(x) + \sinh^2(x)
+$$</p>
+<h2 id="other-hyperbolic-functions">Other Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#other-hyperbolic-functions">#</a></h2>
+<p>Analogous to trigonometric functions, the $\tanh(x)$, $\coth(x)$, $\mathrm{sech}(x)$ and $\mathrm{csch}(x)$ can all be defined, following the same pattern.</p>
+<p>$$
+\tanh(x) :=\dfrac{\sinh(x)}{\cosh(x)},\quad \coth(x):=\dfrac{\cosh(x)}{\sinh(x)}, \quad \text{etc.}
+$$</p>
+<h2 id="the-derivative-and-anti-derivative-of-hyperbolic-functions">The Derivative and Anti-derivative of Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#the-derivative-and-anti-derivative-of-hyperbolic-functions">#</a></h2>
+<p>$$
+\frac{d}{dx}\sinh(x) = \cosh(x),\quad \frac{d}{dx}\cosh(x) = \sinh(x)
+$$</p>
+<p>Therefore the anti-derivatives read</p>
+<p>$$
+\int\sinh(x) = \cosh(x) + C,\quad \int\cosh(x) = \sinh(x) + C.
+$$</p>
+<h1 id="chapter-8-techniques-of-integration">Chapter 8. Techniques of Integration<a hidden class="anchor" aria-hidden="true" href="#chapter-8-techniques-of-integration">#</a></h1>
+<p>In this chapter we study a number of important techniques for finding indefinite integrals of more complicated functions</p>
+<h2 id="-81-basic-integration-formulas">§ 8.1 Basic Integration Formulas<a hidden class="anchor" aria-hidden="true" href="#-81-basic-integration-formulas">#</a></h2>
+<p>Try to match integrals that confront us against one of the standard types. This usually involves a certain amount of algebraic manipulation as well as use of the substitution rules.</p>
+<p>Recall that the substitution rule is</p>
+<p>$$
+\int f(g(x))g'(x)dx = \int f(u) du,
+$$</p>
+<p>where $u=g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I.$ Success in integration often hinges on the ability to spot what part of the integrand should be called $u$ in order that one will also have $du$, so that a known formula can be applied. This means that the first requirement for skill in integration is a thorough mastery of the formulas for differentiation.</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%2013.png" alt="Untitled"  />
+</p>
+<p><code>**Note</code>** Students should have a good mastery of formulas 12, 13, 18, 19. For 20 and 22, we provide an alternative (equivalent) anti-derivative</p>
+<p>$$
+\int\dfrac{du}{\sqrt{u^2\pm a^2}} = \ln |u+\sqrt{u^2\pm a^2}| + C
+$$</p>
+<p>For 20, we have an alternative way to show the anti-derivative, by applying the integration table.</p>
+<p>$$
+\int\dfrac{du}{u\sqrt{u^2-a^2}} = \int \dfrac{du}{u^2\sqrt{1-\left(\frac{a}{u}\right)^2}}=-\frac1a\int \dfrac{d\left(\frac{a}u\right)}{\sqrt{1-\left(\frac{a}{u}\right)^2}}=-\frac1a \arcsin\left(\frac{a}{u}\right) + C
+$$</p>
+<h3 id="example-1-making-a-simplifying-substitution">Example 1. Making a Simplifying Substitution<a hidden class="anchor" aria-hidden="true" href="#example-1-making-a-simplifying-substitution">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int\dfrac{2x-9}{\sqrt{x^2-9x+1}}dx
+$$</p>
+<h3 id="example-2-completing-the-square">Example 2. Completing the Square<a hidden class="anchor" aria-hidden="true" href="#example-2-completing-the-square">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int\dfrac{dx}{\sqrt{8x-x^2}}dx
+$$</p>
+<h3 id="example-3-expanding-a-power-and-using-a-trigonometric-identity">Example 3. Expanding a Power and Using a Trigonometric Identity<a hidden class="anchor" aria-hidden="true" href="#example-3-expanding-a-power-and-using-a-trigonometric-identity">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int (\sec x + \tan x)^2 dx.
+$$</p>
+<h3 id="example-4-eliminating-a-square-root">Example 4. Eliminating a Square Root<a hidden class="anchor" aria-hidden="true" href="#example-4-eliminating-a-square-root">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_0^{\pi/4} \sqrt{1+\cos 4x} ,dx.
+$$</p>
+<h3 id="example-5-reducing-an-improper-fraction">Example 5. Reducing an Improper Fraction<a hidden class="anchor" aria-hidden="true" href="#example-5-reducing-an-improper-fraction">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{3x^2-7x}{3x+2},dx.
+$$</p>
+<h3 id="example-6-separating-a-fraction">Example 6. Separating a Fraction<a hidden class="anchor" aria-hidden="true" href="#example-6-separating-a-fraction">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{3x+2}{\sqrt{1-x^2}},dx.
+$$</p>
+<h3 id="example-7-integral-of-ysecx--multiplying-by-a-form-of-1">Example 7. Integral of $y=\sec(x)$ — Multiplying by a Form of $1$<a hidden class="anchor" aria-hidden="true" href="#example-7-integral-of-ysecx--multiplying-by-a-form-of-1">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sec x ,,dx
+$$</p>
+<p>Similarly, one can find</p>
+<p>$$
+\int \csc x,, dx
+$$</p>
+<p><img loading="lazy" src="W5-S1%20Tran%208d9bc/Untitled%2014.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/transcendental/">transcendental</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/integration/">integration</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/technique/">technique</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/inverse/">inverse</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/trigonometric/">trigonometric</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/hyperbolic/">hyperbolic</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
