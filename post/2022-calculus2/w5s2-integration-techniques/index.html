@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W5-S2 Integration Techniques | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="integration, Integration-by-parts, calculus, lecture, techniques" />
+<meta name="description" content="周次: 5 日期: March 25, 2022 节次: 2 In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well.">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W5-S2 Integration Techniques" />
+<meta property="og:description" content="周次: 5 日期: March 25, 2022 节次: 2 In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-24T11:20:27&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-24T11:20:27&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W5-S2 Integration Techniques"/>
+<meta name="twitter:description" content="周次: 5 日期: March 25, 2022 节次: 2 In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W5-S2 Integration Techniques",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W5-S2 Integration Techniques",
+  "name": "W5-S2 Integration Techniques",
+  "description": "周次: 5 日期: March 25, 2022 节次: 2 In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well.",
+  "keywords": [
+    "integration", "Integration-by-parts", "calculus", "lecture", "techniques"
+  ],
+  "articleBody": "周次: 5 日期: March 25, 2022 节次: 2\nIn this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well.\n§ 7.8 A Brief Introduction on Hyperbolic Functions Let’s recall the odd and even functions. We have stated that for every function $f$ defined on an interval centered at the origin can be written in a unique way as the sum of one even function and one odd function. The decomposition is\n$$ f(x) = \\underbrace{\\frac{f(x) + f(-x)}{2}}{\\text{even part}} + \\underbrace{\\frac{f(x)-f(-x)}{2}}{\\text{odd part}} $$\nNo exception for exponential function $e^x$ , it can be decomposed. And we assigned two new functions to the decomposition.\n$$ \\cosh(x) := \\text{even part of }e^x = \\frac{e^x + e^{-x}}{2} $$\n$$ \\sinh(x) := \\text{odd part of }e^x = \\frac{e^x - e^{-x}}{2} $$\n$\\cosh(x)$ is pronounced as “kosh $x$”, rhyming with “gosh $x$”, and $\\sinh(x)$ is pronounced as “cinch $x$”, rhyming with “pinch $x$”.\nGraphs of Hyperbolic Functions Identities for Hyperbolic Functions $$ \\cosh^2(x) - \\sinh^2(x) = 1 $$\n$$ \\sinh(2x) = 2\\sinh(x)\\cosh(x) $$\n$$ \\cosh(2x) = \\cosh^2(x) + \\sinh^2(x) $$\nOther Hyperbolic Functions Analogous to trigonometric functions, the $\\tanh(x)$, $\\coth(x)$, $\\mathrm{sech}(x)$ and $\\mathrm{csch}(x)$ can all be defined, following the same pattern.\n$$ \\tanh(x) :=\\dfrac{\\sinh(x)}{\\cosh(x)},\\quad \\coth(x):=\\dfrac{\\cosh(x)}{\\sinh(x)}, \\quad \\text{etc.} $$\nThe Derivative and Anti-derivative of Hyperbolic Functions $$ \\frac{d}{dx}\\sinh(x) = \\cosh(x),\\quad \\frac{d}{dx}\\cosh(x) = \\sinh(x) $$\nTherefore the anti-derivatives read\n$$ \\int\\sinh(x) = \\cosh(x) + C,\\quad \\int\\cosh(x) = \\sinh(x) + C. $$\nChapter 8. Techniques of Integration In this chapter we study a number of important techniques for finding indefinite integrals of more complicated functions\n§ 8.1 Basic Integration Formulas Try to match integrals that confront us against one of the standard types. This usually involves a certain amount of algebraic manipulation as well as use of the substitution rules.\nRecall that the substitution rule is\n$$ \\int f(g(x))g'(x)dx = \\int f(u) du, $$\nwhere $u=g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I.$ Success in integration often hinges on the ability to spot what part of the integrand should be called $u$ in order that one will also have $du$, so that a known formula can be applied. This means that the first requirement for skill in integration is a thorough mastery of the formulas for differentiation.\n**Note** Students should have a good mastery of formulas 12, 13, 18, 19. For 20 and 22, we provide an alternative (equivalent) anti-derivative\n$$ \\int\\dfrac{du}{\\sqrt{u^2\\pm a^2}} = \\ln |u+\\sqrt{u^2\\pm a^2}| + C $$\nFor 20, we have an alternative way to show the anti-derivative, by applying the integration table.\n$$ \\int\\dfrac{du}{u\\sqrt{u^2-a^2}} = \\int \\dfrac{du}{u^2\\sqrt{1-\\left(\\frac{a}{u}\\right)^2}}=-\\frac1a\\int \\dfrac{d\\left(\\frac{a}u\\right)}{\\sqrt{1-\\left(\\frac{a}{u}\\right)^2}}=-\\frac1a \\arcsin\\left(\\frac{a}{u}\\right) + C $$\nExample 1. Making a Simplifying Substitution Evaluate\n$$ \\int\\dfrac{2x-9}{\\sqrt{x^2-9x+1}}dx $$\nExample 2. Completing the Square Evaluate\n$$ \\int\\dfrac{dx}{\\sqrt{8x-x^2}}dx $$\nExample 3. Expanding a Power and Using a Trigonometric Identity Evaluate\n$$ \\int (\\sec x + \\tan x)^2 dx. $$\nExample 4. Eliminating a Square Root Evaluate\n$$ \\int_0^{\\pi/4} \\sqrt{1+\\cos 4x} ,dx. $$\nExample 5. Reducing an Improper Fraction Evaluate\n$$ \\int \\dfrac{3x^2-7x}{3x+2},dx. $$\nExample 6. Separating a Fraction Evaluate\n$$ \\int \\dfrac{3x+2}{\\sqrt{1-x^2}},dx. $$\nExample 7. Integral of $y=\\sec(x)$ — Multiplying by a Form of $1$ Evaluate\n$$ \\int \\sec x ,,dx $$\nSimilarly, one can find\n$$ \\int \\csc x,, dx $$\n§ 8.2 Integration by Parts Integration by parts is a technique for simplifying integrals of the form\n$$ \\int f(x)g(x)dx. $$\nIt is useful when $f$ can be differentiated repeatedly and $g$ can be integrated repeatedly without difficulty. For example the integral $\\int x e^x dx$ and $\\int e^x \\sin(x)d x$ can be such type.\nProduct Rule in Integral Form  Integration by Parts Formula\n $$ \\int u(x), v'(x) , dx = u(x), v(x) -\\int u'(x) , v(x) , dx. $$\nThe mindset behind the formula is that to transfer a difficult integration to an easier one.\nSometimes it is easier to remember the formula if we write it in differential form.\n$$ \\int u dv = uv - \\int v du. $$\nWhy it works? The formula for integration by parts is coming from the Product Rule for derivatives\n$$ \\frac{d}{dx}\\left(u(x) v(x)\\right) = u'(x) v(x) + u(x) v'(x). $$\nExample 1. Using Integration by Parts Find\n$$ \\int x\\cos(x) , dx. $$\nExample 3. Integral of the Natural Logarithm Find\n$$ \\int \\ln(x) dx. $$\nExample 4. Repeated Use of Integration by Parts Find\n$$ \\int x^2 e^x dx $$\nExample 5. Solving for the Unknown Integral (An Circling-Back Integration) Find\n$$ \\int e^x \\cos(x) dx. $$\nEvaluating Definite Integrals by Parts Combining the Fundamental Theorem of Calculus with the Product Rule, we find the following formula for definite integrals\n$$ u(x) v(x) \\bigg]_a^b = \\int_a^b u'(x) v(x) dx + \\int_a^b u(x) v'(x) dx. $$\nTherefore we can find the following integration by parts formula for definite integrals.\n Integration by Parts Formula for Definite Integrals\n $$ \\int_a^b u(x) v'(x) dx= u(x) v(x) \\bigg]_a^b - \\int_a^b u'(x) v(x) dx. $$\nExample 6. Finding Area Find the area of the region bounded by the curve $y=x e^{-x}$ and the $x$-axis from $x=0$ to $x=4.$\nExample 7. Repeating Multiple Times. Ft. The Tabular Integration Method Find\n$$ \\int x^3 \\sin(x) dx. $$\nExample 9. A Reduction Formula (Iterative Formulas) Find the integral\n$$ I_n = \\int \\cos^n(x) dx $$\nExample 10. Using the Reduction Formula Find\n$$ \\int \\cos^3(x) dx. $$\n",
+  "wordCount" : "975",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-24T11:20:27+08:00",
+  "dateModified": "2022-03-24T11:20:27+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W5-S2 Integration Techniques
+    </h1>
+    <div class="post-meta"><span title='2022-03-24 11:20:27 +0800 CST'>March 24, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 5
+日期: March 25, 2022
+节次: 2</p>
+<p>In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well.</p>
+<h1 id="-78-a-brief-introduction-on-hyperbolic-functions">§ 7.8 A Brief Introduction on Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#-78-a-brief-introduction-on-hyperbolic-functions">#</a></h1>
+<p>Let’s recall the odd and even functions. We have stated that for every function $f$ defined on an interval centered at the origin can be written in a unique way as the sum of one even function and one odd function. The decomposition is</p>
+<p>$$
+f(x) = \underbrace{\frac{f(x) + f(-x)}{2}}<em>{\text{even part}} + \underbrace{\frac{f(x)-f(-x)}{2}}</em>{\text{odd part}}
+$$</p>
+<p>No exception for exponential function $e^x$ , it can be decomposed. And we assigned two new functions to the decomposition.</p>
+<p>$$
+\cosh(x) := \text{even part of }e^x = \frac{e^x + e^{-x}}{2}
+$$</p>
+<p>$$
+\sinh(x) := \text{odd part of }e^x = \frac{e^x - e^{-x}}{2}
+$$</p>
+<p>$\cosh(x)$ is pronounced as “kosh $x$”, rhyming with “gosh $x$”, and $\sinh(x)$ is pronounced as “cinch $x$”, rhyming with “pinch $x$”.</p>
+<h2 id="graphs-of-hyperbolic-functions">Graphs of Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#graphs-of-hyperbolic-functions">#</a></h2>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled%201.png" alt="Untitled"  />
+</p>
+<h2 id="identities-for-hyperbolic-functions">Identities for Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#identities-for-hyperbolic-functions">#</a></h2>
+<p>$$
+\cosh^2(x) - \sinh^2(x) = 1
+$$</p>
+<p>$$
+\sinh(2x) = 2\sinh(x)\cosh(x)
+$$</p>
+<p>$$
+\cosh(2x) = \cosh^2(x) + \sinh^2(x)
+$$</p>
+<h2 id="other-hyperbolic-functions">Other Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#other-hyperbolic-functions">#</a></h2>
+<p>Analogous to trigonometric functions, the $\tanh(x)$, $\coth(x)$, $\mathrm{sech}(x)$ and $\mathrm{csch}(x)$ can all be defined, following the same pattern.</p>
+<p>$$
+\tanh(x) :=\dfrac{\sinh(x)}{\cosh(x)},\quad \coth(x):=\dfrac{\cosh(x)}{\sinh(x)}, \quad \text{etc.}
+$$</p>
+<h2 id="the-derivative-and-anti-derivative-of-hyperbolic-functions">The Derivative and Anti-derivative of Hyperbolic Functions<a hidden class="anchor" aria-hidden="true" href="#the-derivative-and-anti-derivative-of-hyperbolic-functions">#</a></h2>
+<p>$$
+\frac{d}{dx}\sinh(x) = \cosh(x),\quad \frac{d}{dx}\cosh(x) = \sinh(x)
+$$</p>
+<p>Therefore the anti-derivatives read</p>
+<p>$$
+\int\sinh(x) = \cosh(x) + C,\quad \int\cosh(x) = \sinh(x) + C.
+$$</p>
+<h1 id="chapter-8-techniques-of-integration">Chapter 8. Techniques of Integration<a hidden class="anchor" aria-hidden="true" href="#chapter-8-techniques-of-integration">#</a></h1>
+<p>In this chapter we study a number of important techniques for finding indefinite integrals of more complicated functions</p>
+<h2 id="-81-basic-integration-formulas">§ 8.1 Basic Integration Formulas<a hidden class="anchor" aria-hidden="true" href="#-81-basic-integration-formulas">#</a></h2>
+<p>Try to match integrals that confront us against one of the standard types. This usually involves a certain amount of algebraic manipulation as well as use of the substitution rules.</p>
+<p>Recall that the substitution rule is</p>
+<p>$$
+\int f(g(x))g'(x)dx = \int f(u) du,
+$$</p>
+<p>where $u=g(x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I.$ Success in integration often hinges on the ability to spot what part of the integrand should be called $u$ in order that one will also have $du$, so that a known formula can be applied. This means that the first requirement for skill in integration is a thorough mastery of the formulas for differentiation.</p>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled%202.png" alt="Untitled"  />
+</p>
+<p><code>**Note</code>** Students should have a good mastery of formulas 12, 13, 18, 19. For 20 and 22, we provide an alternative (equivalent) anti-derivative</p>
+<p>$$
+\int\dfrac{du}{\sqrt{u^2\pm a^2}} = \ln |u+\sqrt{u^2\pm a^2}| + C
+$$</p>
+<p>For 20, we have an alternative way to show the anti-derivative, by applying the integration table.</p>
+<p>$$
+\int\dfrac{du}{u\sqrt{u^2-a^2}} = \int \dfrac{du}{u^2\sqrt{1-\left(\frac{a}{u}\right)^2}}=-\frac1a\int \dfrac{d\left(\frac{a}u\right)}{\sqrt{1-\left(\frac{a}{u}\right)^2}}=-\frac1a \arcsin\left(\frac{a}{u}\right) + C
+$$</p>
+<h3 id="example-1-making-a-simplifying-substitution">Example 1. Making a Simplifying Substitution<a hidden class="anchor" aria-hidden="true" href="#example-1-making-a-simplifying-substitution">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int\dfrac{2x-9}{\sqrt{x^2-9x+1}}dx
+$$</p>
+<h3 id="example-2-completing-the-square">Example 2. Completing the Square<a hidden class="anchor" aria-hidden="true" href="#example-2-completing-the-square">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int\dfrac{dx}{\sqrt{8x-x^2}}dx
+$$</p>
+<h3 id="example-3-expanding-a-power-and-using-a-trigonometric-identity">Example 3. Expanding a Power and Using a Trigonometric Identity<a hidden class="anchor" aria-hidden="true" href="#example-3-expanding-a-power-and-using-a-trigonometric-identity">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int (\sec x + \tan x)^2 dx.
+$$</p>
+<h3 id="example-4-eliminating-a-square-root">Example 4. Eliminating a Square Root<a hidden class="anchor" aria-hidden="true" href="#example-4-eliminating-a-square-root">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_0^{\pi/4} \sqrt{1+\cos 4x} ,dx.
+$$</p>
+<h3 id="example-5-reducing-an-improper-fraction">Example 5. Reducing an Improper Fraction<a hidden class="anchor" aria-hidden="true" href="#example-5-reducing-an-improper-fraction">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{3x^2-7x}{3x+2},dx.
+$$</p>
+<h3 id="example-6-separating-a-fraction">Example 6. Separating a Fraction<a hidden class="anchor" aria-hidden="true" href="#example-6-separating-a-fraction">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{3x+2}{\sqrt{1-x^2}},dx.
+$$</p>
+<h3 id="example-7-integral-of-ysecx--multiplying-by-a-form-of-1">Example 7. Integral of $y=\sec(x)$ — Multiplying by a Form of $1$<a hidden class="anchor" aria-hidden="true" href="#example-7-integral-of-ysecx--multiplying-by-a-form-of-1">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sec x ,,dx
+$$</p>
+<p>Similarly, one can find</p>
+<p>$$
+\int \csc x,, dx
+$$</p>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled%203.png" alt="Untitled"  />
+</p>
+<h1 id="-82-integration-by-parts">§ 8.2 Integration by Parts<a hidden class="anchor" aria-hidden="true" href="#-82-integration-by-parts">#</a></h1>
+<p>Integration by parts is a technique for simplifying integrals of the form</p>
+<p>$$
+\int f(x)g(x)dx.
+$$</p>
+<p>It is useful when $f$ can be differentiated repeatedly and $g$ can be integrated repeatedly without difficulty. For example the integral $\int x e^x dx$ and $\int e^x \sin(x)d x$ can be such type.</p>
+<h2 id="product-rule-in-integral-form">Product Rule in Integral Form<a hidden class="anchor" aria-hidden="true" href="#product-rule-in-integral-form">#</a></h2>
+<blockquote>
+<p><strong>Integration by Parts Formula</strong></p>
+</blockquote>
+<p>$$
+\int u(x), v'(x) , dx = u(x), v(x) -\int u'(x) , v(x) , dx.
+$$</p>
+<p>The mindset behind the formula is that to transfer a difficult integration to an easier one.</p>
+<p>Sometimes it is easier to remember the formula if we write it in differential form.</p>
+<p>$$
+\int u dv = uv - \int v du.
+$$</p>
+<h2 id="why-it-works">Why it works?<a hidden class="anchor" aria-hidden="true" href="#why-it-works">#</a></h2>
+<p>The formula for integration by parts is coming from the Product Rule for derivatives</p>
+<p>$$
+\frac{d}{dx}\left(u(x) v(x)\right) = u'(x) v(x) + u(x) v'(x).
+$$</p>
+<h3 id="example-1-using-integration-by-parts">Example 1. Using Integration by Parts<a hidden class="anchor" aria-hidden="true" href="#example-1-using-integration-by-parts">#</a></h3>
+<p>Find</p>
+<p>$$
+\int x\cos(x) , dx.
+$$</p>
+<h3 id="example-3-integral-of-the-natural-logarithm">Example 3. Integral of the Natural Logarithm<a hidden class="anchor" aria-hidden="true" href="#example-3-integral-of-the-natural-logarithm">#</a></h3>
+<p>Find</p>
+<p>$$
+\int \ln(x) dx.
+$$</p>
+<h3 id="example-4-repeated-use-of-integration-by-parts">Example 4. Repeated Use of Integration by Parts<a hidden class="anchor" aria-hidden="true" href="#example-4-repeated-use-of-integration-by-parts">#</a></h3>
+<p>Find</p>
+<p>$$
+\int x^2 e^x dx
+$$</p>
+<h3 id="example-5-solving-for-the-unknown-integral-an-circling-back-integration">Example 5. Solving for the Unknown Integral (An Circling-Back Integration)<a hidden class="anchor" aria-hidden="true" href="#example-5-solving-for-the-unknown-integral-an-circling-back-integration">#</a></h3>
+<p>Find</p>
+<p>$$
+\int e^x \cos(x) dx.
+$$</p>
+<h2 id="evaluating-definite-integrals-by-parts">Evaluating Definite Integrals by Parts<a hidden class="anchor" aria-hidden="true" href="#evaluating-definite-integrals-by-parts">#</a></h2>
+<p>Combining the Fundamental Theorem of Calculus with the Product Rule, we find the following formula for definite integrals</p>
+<p>$$
+u(x) v(x) \bigg]_a^b = \int_a^b u'(x) v(x) dx + \int_a^b u(x) v'(x) dx.
+$$</p>
+<p>Therefore we can find the following integration by parts formula for definite integrals.</p>
+<blockquote>
+<p><strong>Integration by Parts Formula for Definite Integrals</strong></p>
+</blockquote>
+<p>$$
+\int_a^b u(x) v'(x) dx= u(x) v(x) \bigg]_a^b - \int_a^b u'(x) v(x) dx.
+$$</p>
+<h3 id="example-6-finding-area">Example 6. Finding Area<a hidden class="anchor" aria-hidden="true" href="#example-6-finding-area">#</a></h3>
+<p>Find the area of the region bounded by the curve $y=x e^{-x}$ and the $x$-axis from $x=0$ to $x=4.$</p>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled%204.png" alt="Untitled"  />
+</p>
+<h3 id="example-7-repeating-multiple-times-ft-the-tabular-integration-method">Example 7. Repeating Multiple Times. Ft. The Tabular Integration Method<a hidden class="anchor" aria-hidden="true" href="#example-7-repeating-multiple-times-ft-the-tabular-integration-method">#</a></h3>
+<p>Find</p>
+<p>$$
+\int x^3 \sin(x) dx.
+$$</p>
+<p><img loading="lazy" src="W5-S2%20Inte%20f45f7/Untitled%205.png" alt="Untitled"  />
+</p>
+<h3 id="example-9-a-reduction-formula-iterative-formulas">Example 9. A Reduction Formula (Iterative Formulas)<a hidden class="anchor" aria-hidden="true" href="#example-9-a-reduction-formula-iterative-formulas">#</a></h3>
+<p>Find the integral</p>
+<p>$$
+I_n = \int \cos^n(x) dx
+$$</p>
+<h3 id="example-10-using-the-reduction-formula">Example 10. Using the Reduction Formula<a hidden class="anchor" aria-hidden="true" href="#example-10-using-the-reduction-formula">#</a></h3>
+<p>Find</p>
+<p>$$
+\int \cos^3(x) dx.
+$$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/integration/">integration</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/integration-by-parts/">Integration-by-parts</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/techniques/">techniques</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
