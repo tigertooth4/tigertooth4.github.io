@@ -6,13 +6,49 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Mar 2022 11:20:27 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Mar 2022 14:07:16 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>calculus</title>
       <link>http://tigertooth4.github.io/tags/calculus/</link>
-      <pubDate>Thu, 24 Mar 2022 11:20:27 +0800</pubDate>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/calculus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integration-by-parts</title>
+      <link>http://tigertooth4.github.io/tags/integration-by-parts/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/integration-by-parts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lecture</title>
+      <link>http://tigertooth4.github.io/tags/lecture/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>partial-fraction</title>
+      <link>http://tigertooth4.github.io/tags/partial-fraction/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/partial-fraction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rational</title>
+      <link>http://tigertooth4.github.io/tags/rational/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/rational/</guid>
       <description></description>
     </item>
     
@@ -22,24 +58,6 @@
       <pubDate>Thu, 24 Mar 2022 11:20:27 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/integration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Integration-by-parts</title>
-      <link>http://tigertooth4.github.io/tags/integration-by-parts/</link>
-      <pubDate>Thu, 24 Mar 2022 11:20:27 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/integration-by-parts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lecture</title>
-      <link>http://tigertooth4.github.io/tags/lecture/</link>
-      <pubDate>Thu, 24 Mar 2022 11:20:27 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
       <description></description>
     </item>
     

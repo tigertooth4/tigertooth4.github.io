@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>rational on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/rational/</link>
+    <description>Recent content in rational on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 29 Mar 2022 14:07:16 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/rational/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W6-S1 Integration by Parts and Integration of Rational Functions</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w6s1-integration-by-parts-integration-of-rational-functions/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w6s1-integration-by-parts-integration-of-rational-functions/</guid>
+      <description>周次: 6 日期: March 30, 2022 节次: 1 In this lecture, we’ll learn a new technique for integration, called Integration by Parts. The second part of the lecture will be devoted to the partial fractions decomposition of rational functions. By using such technique, we are able to integrate all the rational functions! § 8.2 Integration by Parts Integration by parts</description>
+    </item>
+    
+  </channel>
+</rss>
