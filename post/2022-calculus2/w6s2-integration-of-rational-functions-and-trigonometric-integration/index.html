@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W6-S2 Integration of Rational Functions and Trigonometric Integrals | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="rational, integration, trigonometric, calculus, lecture" />
+<meta name="description" content="周次: 6 日期: April 1, 2022 节次: 2 In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques. Outline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper) Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W6-S2 Integration of Rational Functions and Trigonometric Integrals" />
+<meta property="og:description" content="周次: 6 日期: April 1, 2022 节次: 2 In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques. Outline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper) Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-31T11:42:35&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-31T11:42:35&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W6-S2 Integration of Rational Functions and Trigonometric Integrals"/>
+<meta name="twitter:description" content="周次: 6 日期: April 1, 2022 节次: 2 In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques. Outline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper) Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W6-S2 Integration of Rational Functions and Trigonometric Integrals",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W6-S2 Integration of Rational Functions and Trigonometric Integrals",
+  "name": "W6-S2 Integration of Rational Functions and Trigonometric Integrals",
+  "description": "周次: 6 日期: April 1, 2022 节次: 2 In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques. Outline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper) Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In",
+  "keywords": [
+    "rational", "integration", "trigonometric", "calculus", "lecture"
+  ],
+  "articleBody": "周次: 6 日期: April 1, 2022 节次: 2\nIn this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques.\nOutline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper)  Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In general, the denominator has the factorization looks like  $$ \\dfrac{f(x)}{g(x)} = \\dfrac{f(x)}{(x-r_1)^{m_1}\\cdots (x-r_k)^{m_k} (x^2+p_1 x + q_1)^{n_1}\\cdots(x^2+p_l x + q_l)^{n_l}} $$\nwhere all the linear and quadratic factors are distinct. And $x^2+p_i x +q_i$ should not be factorized anymore ( called irreducible ).\n**Note The feasibility of this factorization is guaranteed by the Fundamental Theorem of Algebra.**\n For each linear factor $(x-r)^m$ of $g(x)$, the fraction $f(x)/g(x)$ should include the following partial fractions, with undetermined coefficients $A_k$.  $$ \\dfrac{A_1}{(x-r)} + \\dfrac{A_2}{(x-r)^2} + \\cdots \\dfrac{A_m}{(x-r)^m} $$\n For each quadratic factor $(x^2+px+q)^n$ of $g(x)$, the obtained partial fractions should include  $$ \\dfrac{B_1 x + C_1}{x^2+px+q} + \\dfrac{B_2 x + C_2}{(x^2+px+q)^2} +\\cdots + \\dfrac{B_n x + C_n}{(x^2+px+q)^n} $$\n Set the original fraction $f(x)/g(x)$ equal to the sum of all these partial fractions. Clear the resulting equation of fractions and arrange the terms in decreasing powers of $x$. Equate the coefficients of corresponding powers of $x$ and solve the resulting equations for the undetermined coefficients.  Example 1. Distinct Linear Factors Evaluate\n$$ \\int \\dfrac{x^2+4x+1}{(x-1)(x+1)(x+3)}dx $$\nusing partial fractions.\n( Solution: $\\frac34 \\ln|x-1|+\\frac12\\ln |x+1| -\\frac14 \\ln |x+3| + C$ .)\nExample 2. A Repeated Linear Factor Evaluate\n$$ \\int \\dfrac{6x+7}{(x+2)^2}dx $$\n( Solution: $6\\ln|x+2| + \\frac{5}{x+2} + C$ )\nExample 3. Integrating an Improper Fraction Evaluate\n$$ \\int \\dfrac{2x^3-4x^2-x-3}{x^2-2x-3}dx $$\n( Solution: $x^2 + 2\\ln |x+1| + 3\\ln |x-3| + C$ )\nExample 4. Integrating with an Irreducible Quadratic Factor Evaluate\n$$ \\int \\dfrac{-2x+4}{(x^2+1)(x-1)^2}dx $$\n(Solution: $\\ln(x^2+1) + \\arctan x - 2\\ln|x-1| - \\frac1{x-1} + C$ )\nExample 5. A Repeated Irreducible Quadratic Factor Evaluate\n$$ \\int \\dfrac{dx}{x(x^2+1)^2}. $$\n( Solution: $\\ln \\dfrac{|x|}{\\sqrt{x^2+1}} + \\dfrac1{2(x^2+1)} + C.$ )\nThe Heaviside “Cover-up” Method for Linear Factors For proper fraction $f(x)/g(x)$, if $g(x) = (x-r_1) (x-r_2) \\cdots (x-r_n)$ is a product of $n$ distinct linear factors, each raised to the first power, there is a quick way to find the undetermined coefficients.\nLearn Heaviside “Cover-up” Method by Example Find $A$, $B$ and $C$ in the partial-fraction expansion\n$$ \\dfrac{x^2+1}{(x-1)(x-2)(x-3)}= \\dfrac{A}{x-1} + \\dfrac{B}{x-2} + \\dfrac{C}{x-3}. $$\nExample 7. Integrating with the Heaviside Method Evaluate\n$$ \\int \\dfrac{x+4}{x^3+3x^2-10 x}dx. $$\n( Solution : $-\\frac25 \\ln |x| + \\frac37 \\ln |x-2| - \\frac1{35} \\ln |x+5| + C$. )\nOther ways to Determine the Coefficients Example 8. Using Differentiation Find $A$, $B$ and $C$ in the equation\n$$ \\frac{x-1}{(x+1)^3}= \\dfrac{A}{x+1} + \\dfrac{B}{(x+1)^2} + \\dfrac{C}{(x+1)^3}. $$\n( Solution : $A=0$, $B=1$ , $C=-2$ )\nExample 9. Assigning Numerical Values to $x$ (Equivalent to “Cover-up” Method) Find $A$, $B$ and $C$ in\n$$ \\dfrac{x^2+1}{(x-1)(x-2)(x-3)} = \\dfrac{A}{x-1} + \\dfrac{B}{x-2} + \\dfrac{C}{x-3} $$\n( Solution : $A=1$, $B=-5$, $C=5$ )\n§ 8.4 Trigonometric Integrals In this section, we consider the integrals involving algebraic combinations of the six basic trigonometric functions. For example the integration $\\int \\sec^2(x) dx$ , $\\int \\sec^3(x) \\cot(x) dx$ etc.\nProducts of Powers of Sines and Cosines Consider the integrals of the form\n$$ \\int \\sin^m(x)\\cos^n(x) dx $$\nwhere $m$ and $n$ are nonnegative integers.\nCase 1. If $m$ is odd, set $m = 2k+1$ $$ \\int \\sin^m(x) \\cos^n(x)dx = -\\int \\sin^{2k}(x) \\cos^n(x) d(\\cos x) $$\nIt suggests changing $\\sin^2(x)$ by $1-\\cos^2(x)$ then the integration is reduced to a polynomial in $\\cos(x)$\n$$ -\\int \\left(1-\\cos^2 x\\right)^k \\cos^n (x) d(\\cos x) $$\nCase 2. If $n$ is odd, set $n=2l+1$ Then similarly, we can change\n$$ \\int \\sin^m(x) \\cos^n(x) dx = \\int \\sin^m (x) \\cos^{2l}(x) d(\\sin x) = \\int \\sin ^m(x) \\left(1-\\sin^2 x\\right)^l d(\\sin x) $$\nThen integrated by the substitution $y=\\sin(x)$.\nCase 3. If both $m$ and $n$ are even In this case we use the substitution\n$$ \\sin^2(x) = \\dfrac{1-\\cos 2x}{2},\\quad \\cos^2(x) = \\dfrac{1+\\cos 2x}{2} $$\nto reduce the integrand to one in lower powers of $\\cos 2x$.\nExample 1. $m$ is odd Evaluate\n$$ \\int \\sin^3 x \\cos^2 x dx. $$\n(Solution : $\\frac15 \\cos^5 x - \\frac13 \\cos^3 x + C.$ )\nExample 2. $m$ is even, $n$ is odd Evaluate\n$$ \\int \\sin^2 x \\cos^5 x dx $$\nSolution.\nExample 3. $m$ and $n$ are both even Evaluate\n$$ \\int \\sin^2(x) \\cos^4(x) dx $$\n(Solution: $\\frac1{16} \\left(x - \\frac14 \\sin 4x + \\frac13 \\sin^3(2x)\\right) + C$ )\nEliminating Square Roots Sometimes we can use the identity\n$$ \\cos^2 x = \\dfrac{1+\\cos 2x}{2} $$\nto eliminate a square root.\nExample 4. Evaluate\n$$ \\int_0^{\\pi/4}\\sqrt{1+\\cos 4x }dx. $$\n( Solution: $\\frac{\\sqrt2}{2}$ )\nIntegrals of Powers of $\\tan x$ and $\\sec x$ To integrate higher powers of $\\tan x$ and $\\sec x$, we use the identities $\\tan^2 x = \\sec^2 x -1$ and $\\sec^2 x = \\tan^2 +1$ to reduce the higher powers to lower powers.\nExample 5. Evaluate\n$$ \\int \\tan^4 x dx. $$\n( Solution: $\\frac13 \\tan^3 x - \\tan x + x + C$ )\nExample 6. Evaluate\n$$ \\int \\sec^3 x dx. $$\n( Solution: $\\frac12 \\sec x \\tan x + \\frac12 \\ln |\\sec x + \\tan x| + C.$ )\nProducts of Sines and Cosines The integrals\n$$ \\int \\sin mx \\sin nx , dx, \\quad \\int \\sin mx \\cos nx , dx, \\quad \\text{and} \\int \\cos mx \\cos nx, dx $$\ncan be evaluated by integration by parts. But also more conveniently by using the following identities\n$$ \\sin mx \\sin nx = - \\frac12 \\left[\\cos (m+n) x -\\cos (m-n) x\\right] $$\n$$ \\sin mx \\cos nx = \\frac12 \\left[\\sin(m-n) x + \\sin (m+n) x\\right] $$\n$$ \\cos mx \\cos nx = \\frac12 \\left[\\cos (m-n) x + \\cos (m+n) x\\right] $$\nExample 7. Evaluate\n$$ \\int \\sin 3x \\cos 5x, dx $$\n(Solution: $-\\frac{\\cos 8x}{16} + \\frac{\\cos 2x }{4} +C$ )\n",
+  "wordCount" : "1023",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-03-31T11:42:35+08:00",
+  "dateModified": "2022-03-31T11:42:35+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W6-S2 Integration of Rational Functions and Trigonometric Integrals
+    </h1>
+    <div class="post-meta"><span title='2022-03-31 11:42:35 +0800 CST'>March 31, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 6
+日期: April 1, 2022
+节次: 2</p>
+<p>In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="-83-integration-of-rational-functions">§ 8.3 Integration of Rational Functions<a hidden class="anchor" aria-hidden="true" href="#-83-integration-of-rational-functions">#</a></h1>
+<h2 id="method-of-partial-fractions--for-fxgx-proper">Method of Partial Fractions ( for $f(x)/g(x)$ Proper)<a hidden class="anchor" aria-hidden="true" href="#method-of-partial-fractions--for-fxgx-proper">#</a></h2>
+<ol>
+<li>Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In general, the denominator has the factorization looks like</li>
+</ol>
+<p>$$
+\dfrac{f(x)}{g(x)} = \dfrac{f(x)}{(x-r_1)^{m_1}\cdots (x-r_k)^{m_k} (x^2+p_1 x + q_1)^{n_1}\cdots(x^2+p_l x + q_l)^{n_l}}
+$$</p>
+<p>where all the linear and quadratic factors are distinct. And $x^2+p_i x +q_i$ should not be factorized anymore ( called <em>irreducible</em> ).</p>
+<p><code>**Note</code> The feasibility of this factorization is guaranteed  by the Fundamental Theorem of Algebra.**</p>
+<ol>
+<li>For each linear factor   $(x-r)^m$ of $g(x)$,  the fraction $f(x)/g(x)$ should include the following partial fractions, with undetermined coefficients $A_k$.</li>
+</ol>
+<p>$$
+\dfrac{A_1}{(x-r)} + \dfrac{A_2}{(x-r)^2} + \cdots \dfrac{A_m}{(x-r)^m}
+$$</p>
+<ol>
+<li>For each quadratic factor  $(x^2+px+q)^n$ of $g(x)$, the obtained partial fractions should include</li>
+</ol>
+<p>$$
+\dfrac{B_1 x + C_1}{x^2+px+q} + \dfrac{B_2 x + C_2}{(x^2+px+q)^2} +\cdots + \dfrac{B_n x + C_n}{(x^2+px+q)^n}
+$$</p>
+<ol>
+<li>Set the original fraction $f(x)/g(x)$ equal to the sum of all these partial fractions. Clear the resulting equation of fractions and arrange the terms in decreasing powers of $x$.</li>
+<li>Equate the coefficients of corresponding powers of $x$ and solve the resulting equations for the undetermined coefficients.</li>
+</ol>
+<h3 id="example-1-distinct-linear-factors">Example 1. Distinct Linear Factors<a hidden class="anchor" aria-hidden="true" href="#example-1-distinct-linear-factors">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{x^2+4x+1}{(x-1)(x+1)(x+3)}dx
+$$</p>
+<p>using partial fractions.</p>
+<p>( Solution: $\frac34 \ln|x-1|+\frac12\ln |x+1| -\frac14 \ln |x+3| + C$ .)</p>
+<h3 id="example-2-a-repeated-linear-factor">Example 2. A Repeated Linear Factor<a hidden class="anchor" aria-hidden="true" href="#example-2-a-repeated-linear-factor">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{6x+7}{(x+2)^2}dx
+$$</p>
+<p>( Solution: $6\ln|x+2| + \frac{5}{x+2} + C$ )</p>
+<h3 id="example-3-integrating-an-improper-fraction">Example 3. Integrating an Improper Fraction<a hidden class="anchor" aria-hidden="true" href="#example-3-integrating-an-improper-fraction">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{2x^3-4x^2-x-3}{x^2-2x-3}dx
+$$</p>
+<p>( Solution: $x^2 + 2\ln |x+1| + 3\ln |x-3| + C$ )</p>
+<h3 id="example-4-integrating-with-an-irreducible-quadratic-factor">Example 4. Integrating with an Irreducible Quadratic Factor<a hidden class="anchor" aria-hidden="true" href="#example-4-integrating-with-an-irreducible-quadratic-factor">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{-2x+4}{(x^2+1)(x-1)^2}dx
+$$</p>
+<p>(Solution: $\ln(x^2+1) + \arctan x - 2\ln|x-1| - \frac1{x-1} + C$  )</p>
+<h3 id="example-5-a-repeated-irreducible-quadratic-factor">Example 5. A Repeated Irreducible Quadratic Factor<a hidden class="anchor" aria-hidden="true" href="#example-5-a-repeated-irreducible-quadratic-factor">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{dx}{x(x^2+1)^2}.
+$$</p>
+<p>( Solution: $\ln \dfrac{|x|}{\sqrt{x^2+1}} + \dfrac1{2(x^2+1)} + C.$  )</p>
+<h2 id="the-heaviside-cover-up-method-for-linear-factors">The Heaviside “Cover-up” Method for Linear Factors<a hidden class="anchor" aria-hidden="true" href="#the-heaviside-cover-up-method-for-linear-factors">#</a></h2>
+<p>For proper fraction $f(x)/g(x)$, if $g(x) = (x-r_1) (x-r_2) \cdots (x-r_n)$ is a product of $n$ distinct linear factors, each raised to the first power, there is a quick way to find the undetermined coefficients.</p>
+<h3 id="learn-heaviside--cover-up-method-by-example">Learn Heaviside  “Cover-up” Method by Example<a hidden class="anchor" aria-hidden="true" href="#learn-heaviside--cover-up-method-by-example">#</a></h3>
+<p>Find $A$, $B$ and $C$ in the partial-fraction expansion</p>
+<p>$$
+\dfrac{x^2+1}{(x-1)(x-2)(x-3)}= \dfrac{A}{x-1} + \dfrac{B}{x-2} + \dfrac{C}{x-3}.
+$$</p>
+<h3 id="example-7--integrating-with-the-heaviside-method">Example 7.  Integrating with the Heaviside Method<a hidden class="anchor" aria-hidden="true" href="#example-7--integrating-with-the-heaviside-method">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{x+4}{x^3+3x^2-10 x}dx.
+$$</p>
+<p>( Solution : $-\frac25 \ln |x| + \frac37 \ln |x-2| - \frac1{35} \ln |x+5| + C$. )</p>
+<h2 id="other-ways-to-determine-the-coefficients">Other ways to Determine the Coefficients<a hidden class="anchor" aria-hidden="true" href="#other-ways-to-determine-the-coefficients">#</a></h2>
+<h3 id="example-8--using-differentiation">Example 8.  Using Differentiation<a hidden class="anchor" aria-hidden="true" href="#example-8--using-differentiation">#</a></h3>
+<p>Find $A$, $B$ and $C$ in the equation</p>
+<p>$$
+\frac{x-1}{(x+1)^3}= \dfrac{A}{x+1} + \dfrac{B}{(x+1)^2} + \dfrac{C}{(x+1)^3}.
+$$</p>
+<p>( Solution : $A=0$, $B=1$ , $C=-2$ )</p>
+<h3 id="example-9-assigning-numerical-values-to-x-equivalent-to-cover-up-method">Example 9. Assigning Numerical Values to $x$ (Equivalent to “Cover-up” Method)<a hidden class="anchor" aria-hidden="true" href="#example-9-assigning-numerical-values-to-x-equivalent-to-cover-up-method">#</a></h3>
+<p>Find $A$, $B$ and $C$ in</p>
+<p>$$
+\dfrac{x^2+1}{(x-1)(x-2)(x-3)} = \dfrac{A}{x-1} + \dfrac{B}{x-2} + \dfrac{C}{x-3}
+$$</p>
+<p>( Solution : $A=1$, $B=-5$, $C=5$ )</p>
+<h1 id="-84-trigonometric-integrals">§ 8.4 Trigonometric Integrals<a hidden class="anchor" aria-hidden="true" href="#-84-trigonometric-integrals">#</a></h1>
+<p>In this section, we consider the integrals involving algebraic combinations of the six basic trigonometric functions. For example the integration $\int \sec^2(x) dx$ , $\int \sec^3(x) \cot(x) dx$ etc.</p>
+<h2 id="products-of-powers-of-sines-and-cosines">Products of Powers of Sines and Cosines<a hidden class="anchor" aria-hidden="true" href="#products-of-powers-of-sines-and-cosines">#</a></h2>
+<p>Consider the integrals of the form</p>
+<p>$$
+\int \sin^m(x)\cos^n(x) dx
+$$</p>
+<p>where $m$ and $n$ are nonnegative integers.</p>
+<h3 id="case-1--if-m-is-odd-set-m--2k1">Case 1.  If $m$ is odd, set $m = 2k+1$<a hidden class="anchor" aria-hidden="true" href="#case-1--if-m-is-odd-set-m--2k1">#</a></h3>
+<p>$$
+\int \sin^m(x) \cos^n(x)dx = -\int \sin^{2k}(x) \cos^n(x) d(\cos x)
+$$</p>
+<p>It suggests changing $\sin^2(x)$  by $1-\cos^2(x)$ then the integration is reduced to a polynomial in $\cos(x)$</p>
+<p>$$
+-\int \left(1-\cos^2 x\right)^k \cos^n (x) d(\cos x)
+$$</p>
+<h3 id="case-2-if-n-is-odd--set-n2l1">Case 2. If $n$ is odd,  set $n=2l+1$<a hidden class="anchor" aria-hidden="true" href="#case-2-if-n-is-odd--set-n2l1">#</a></h3>
+<p>Then similarly, we can change</p>
+<p>$$
+\int \sin^m(x) \cos^n(x) dx = \int \sin^m (x) \cos^{2l}(x) d(\sin x) = \int \sin ^m(x) \left(1-\sin^2 x\right)^l d(\sin x)
+$$</p>
+<p>Then integrated by the substitution $y=\sin(x)$.</p>
+<h3 id="case-3-if-both-m-and-n-are-even">Case 3. If both $m$ and $n$ are even<a hidden class="anchor" aria-hidden="true" href="#case-3-if-both-m-and-n-are-even">#</a></h3>
+<p>In this case we use the substitution</p>
+<p>$$
+\sin^2(x) = \dfrac{1-\cos 2x}{2},\quad \cos^2(x) = \dfrac{1+\cos 2x}{2}
+$$</p>
+<p>to reduce the integrand to one in lower powers of $\cos 2x$.</p>
+<h3 id="example-1--m-is-odd">Example 1.  $m$ is odd<a hidden class="anchor" aria-hidden="true" href="#example-1--m-is-odd">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sin^3 x \cos^2 x dx.
+$$</p>
+<p>(Solution : $\frac15 \cos^5 x - \frac13 \cos^3 x + C.$ )</p>
+<h3 id="example-2-m-is-even-n-is-odd">Example 2.  $m$ is even, $n$ is odd<a hidden class="anchor" aria-hidden="true" href="#example-2-m-is-even-n-is-odd">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sin^2 x \cos^5 x dx
+$$</p>
+<p>Solution.</p>
+<h3 id="example-3-m-and-n-are-both-even">Example 3. $m$ and $n$ are both even<a hidden class="anchor" aria-hidden="true" href="#example-3-m-and-n-are-both-even">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sin^2(x) \cos^4(x) dx
+$$</p>
+<p>(Solution: $\frac1{16} \left(x - \frac14 \sin 4x + \frac13 \sin^3(2x)\right) + C$ )</p>
+<h2 id="eliminating-square-roots">Eliminating Square Roots<a hidden class="anchor" aria-hidden="true" href="#eliminating-square-roots">#</a></h2>
+<p>Sometimes we can use the identity</p>
+<p>$$
+\cos^2 x = \dfrac{1+\cos 2x}{2}
+$$</p>
+<p>to eliminate a square root.</p>
+<h3 id="example-4">Example 4.<a hidden class="anchor" aria-hidden="true" href="#example-4">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_0^{\pi/4}\sqrt{1+\cos 4x }dx.
+$$</p>
+<p>( Solution: $\frac{\sqrt2}{2}$ )</p>
+<h2 id="integrals-of-powers-of-tan-x-and-sec-x">Integrals of Powers of $\tan x$ and $\sec x$<a hidden class="anchor" aria-hidden="true" href="#integrals-of-powers-of-tan-x-and-sec-x">#</a></h2>
+<p>To integrate higher powers of $\tan x$ and $\sec x$, we use the identities $\tan^2 x = \sec^2 x -1$ and $\sec^2 x = \tan^2 +1$ to reduce the higher powers to lower powers.</p>
+<h3 id="example-5">Example 5.<a hidden class="anchor" aria-hidden="true" href="#example-5">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \tan^4 x dx.
+$$</p>
+<p>( Solution: $\frac13 \tan^3 x - \tan x + x + C$ )</p>
+<h3 id="example-6">Example 6.<a hidden class="anchor" aria-hidden="true" href="#example-6">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sec^3 x dx.
+$$</p>
+<p>( Solution: $\frac12 \sec x  \tan x + \frac12 \ln |\sec x + \tan x| + C.$ )</p>
+<h2 id="products-of-sines-and-cosines">Products of Sines and Cosines<a hidden class="anchor" aria-hidden="true" href="#products-of-sines-and-cosines">#</a></h2>
+<p>The integrals</p>
+<p>$$
+\int \sin mx \sin nx , dx, \quad \int \sin mx \cos nx , dx, \quad \text{and} \int \cos mx \cos nx, dx
+$$</p>
+<p>can be evaluated by integration by parts. But also more conveniently by using the following identities</p>
+<p>$$
+\sin mx \sin nx = - \frac12 \left[\cos (m+n) x -\cos (m-n) x\right]
+$$</p>
+<p>$$
+\sin mx \cos nx = \frac12 \left[\sin(m-n) x + \sin (m+n) x\right]
+$$</p>
+<p>$$
+\cos mx \cos nx = \frac12 \left[\cos (m-n) x + \cos (m+n) x\right]
+$$</p>
+<h3 id="example-7">Example 7.<a hidden class="anchor" aria-hidden="true" href="#example-7">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \sin 3x \cos 5x, dx
+$$</p>
+<p>(Solution: $-\frac{\cos 8x}{16} + \frac{\cos 2x }{4} +C$  )</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/rational/">rational</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/integration/">integration</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/trigonometric/">trigonometric</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
