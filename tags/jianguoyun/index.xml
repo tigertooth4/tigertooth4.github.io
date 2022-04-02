@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jianguoyun on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/jianguoyun/</link>
+    <description>Recent content in jianguoyun on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Apr 2022 13:33:08 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/jianguoyun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用坚果云备份 Notability 笔记</title>
+      <link>http://tigertooth4.github.io/post/2022-04/notability-webdav-backup-use-jianguoyun/</link>
+      <pubDate>Sat, 02 Apr 2022 13:33:08 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-04/notability-webdav-backup-use-jianguoyun/</guid>
+      <description>前几天在电脑上使用 Notability 客户端批量修改笔记名称的时候，曾一度出现了 notability 笔记全部丢失的情况。所幸的是 iPad 上显示一切正常，赶紧把 iPad 的笔记同步到 iCloud 后才松了</description>
+    </item>
+    
+  </channel>
+</rss>
