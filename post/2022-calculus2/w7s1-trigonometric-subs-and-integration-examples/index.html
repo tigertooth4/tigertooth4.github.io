@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W7-S1 Trigonometric Substitutions and Integration Examples | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="trigonometric, substitutions, calculus, lectures" />
+<meta name="description" content="周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W7-S1 Trigonometric Substitutions and Integration Examples" />
+<meta property="og:description" content="周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-06T12:09:32&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-06T12:09:32&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W7-S1 Trigonometric Substitutions and Integration Examples"/>
+<meta name="twitter:description" content="周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W7-S1 Trigonometric Substitutions and Integration Examples",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W7-S1 Trigonometric Substitutions and Integration Examples",
+  "name": "W7-S1 Trigonometric Substitutions and Integration Examples",
+  "description": "周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\\tan\\theta$, $a=\\sin\\theta$, and $x=a\\sec\\theta$. They can be useful for dealing with the integrals involving",
+  "keywords": [
+    "trigonometric", "substitutions", "calculus", "lectures"
+  ],
+  "articleBody": "周次: 7 日期: April 6, 2022 节次: 1\nIn this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands.\n§ 8.5 Three Basic Substitutions The most common substitutions are $x=a\\tan\\theta$, $a=\\sin\\theta$, and $x=a\\sec\\theta$. They can be useful for dealing with the integrals involving $\\sqrt{a^2-x^2}$, $\\sqrt{a^2+x^2}$ and $\\sqrt{x^2-a^2}$.\n With integrals involving $\\sqrt{a^2-x^2}$, we often use the substitution $x=a\\sin(\\theta)$ (or $x=a\\cos(\\theta)$) With integrals involving $\\sqrt{a^2+x^2}$, we often use the substitution $x=a\\tan(\\theta)$ With integrals involving $\\sqrt{x^2-a^2}$, we often use the substitution $x=a \\sec(\\theta)$ (For the integrals involving $\\sqrt{x^2-a^2}$ and $\\sqrt{x^2+a^2}$ we can also apply the known result $\\int\\frac{dx}{\\sqrt{x^2\\pm a^2}}=\\ln |x+\\sqrt{x^2\\pm a^2}| + C$)  Remark As doing these substitutions, we need them to be reversible, so that we can change back to the original variable afterward.\nFor reversibility,\n $x=a\\tan\\theta$ requires $\\theta = \\arctan \\left(x/a\\right)$, with $-\\frac{\\pi}{2} $x = a \\sin \\theta$ requires $\\theta = \\arcsin(x/a)$, with $-\\frac{\\pi}{2}\\le \\theta \\le \\frac{\\pi}{2}$, $x=a\\sec \\theta$ requires $\\theta = \\mathrm{arcsec}(x/a)$, with $\\begin{cases}0\\le \\theta  Example 1. Using the Substitution $x=a\\tan\\theta$ Evaluate\n$$ \\int \\dfrac{dx}{\\sqrt{4+x^2}} $$\nSolution. $\\ln |\\sqrt{4+x^2}+x|+ C.$\nExample 2. Using the Substitution $x=a\\sin\\theta$ Evaluate\n$$ \\int \\dfrac{x^2 dx}{\\sqrt{9-x^2}} $$\nSolution. $\\frac{9}{2}\\arcsin\\frac{x}{3}-\\frac{x}{2}\\sqrt{9-x^2}+C$\nExample 3. Using the Substitution $x=a\\sec\\theta$ Evaluate\n$$ \\int \\dfrac{dx}{\\sqrt{25x^2-4}}, \\quad x \\frac{5}{2}. $$\nSolution. $\\frac15 \\ln \\left|\\frac{5x}{2}+\\frac{\\sqrt{25x^2-4}}{2}\\right| + C.$\nExample 4. Finding the Volume of a Solid of Revolution Find the volume of the solid generated by revolving about the $x$-axis the region bounded by the curve $y=\\dfrac{4}{x^2+4}$, the $x$-axis, and the lines $x=0$ and $x=2.$\nSolution. $\\pi\\left[\\frac\\pi4 + \\frac12\\right]$.\nExample 5. Finding the Area of an Ellipse Find the area enclosed by the ellipse\n$$ \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1. $$\nSolution. $\\pi a b$.\n§ 8.6 Integral Tables and Computer Algebra Systems Integral Tables A Brief Table of Integrals is provided at the back of the book. The integration formulas are stated in terms of constants $a$, $b$, $c$, $m$, $n$ and so on. The limitations on their values are stated with the formulas. The formulas also assume that the constants do not take on values that require dividing by $0$ or taking even roots of negative numbers.\nNote that the following examples can also be evaluated using algebraic manipulation, substitution or integration by parts.\nExample 1. Find $$ \\int \\dfrac{x}{2x+5}dx $$\nExample 2. Find $$ \\int \\frac{dx}{x\\sqrt{2x+4}} $$\nExample 3. Find $$ \\int \\dfrac{dx}{x\\sqrt{2x-4}} $$\nExample 4. Find $$ \\int\\frac{dx}{x^2\\sqrt{2x-4}} $$\nExample 5. Find $$ \\int x \\arcsin x dx $$\nReduction Formulas Some integrals can be reduced by integration by parts, for example\nExample 6. Reduce the Formula Find\n$$ \\int \\tan^n x dx, $$\nand evaluate the integral $\\int \\tan^5 dx.$\nSolution. $\\frac1{n-1}\\tan^{n-1}(x) - \\int \\tan^{n-2}xdx$, and $\\frac{1}4\\tan^4 x -\\frac12 \\tan^2 x -\\ln|\\cos x |+ C$Exa\nExample 7. Deriving a Reduction Formula Show that for any positive integer $n$\n$$ \\int(\\ln x)^ndx = x\\ln(x)^n-n\\int (\\ln x)^{n-1} dx. $$\nExample 8. Find $$ \\int \\sin^2 x \\cos^3 xdx. $$\nNote that this integrand has an odd power in $\\cos$ part, therefore can be evaluated by substitution $u=\\sin(x)$. The integral can also be evaluated by looking up the integration table.\nNon-elementary Integrals The integrals of functions that do not have elementary antiderivatives are called non-elementary integrals. For example,\n$$ \\int e^{-t^2}dt,\\quad \\int \\sin x^2 dx, \\quad \\int \\sqrt{1+x^4}dx, \\int \\frac{e^x}{x}dx,\\quad \\int \\frac{1}{\\ln x}dx, \\quad \\int \\frac{\\sin x}{x}dx, \\ \\int\\sqrt{1-k^2\\sin^2 x}dx, \\quad 0Integration with a CAS (Computer Algebraic System) For example, the integrations can be evaluated by using Mathematica, Maple , or Python (SymPy). Here we illustrate the use of Mathematica and Python.\nExample. Integrating via Mathematica. $$ \\int x^2 \\sqrt{a^2+x^2}dx. $$\nIn Python, one has to import SymPy first by using\nfrom sympy import * To perform any integration, first one needs to declare the variable.\nu = Symbol('u') Note that sometimes CASs may give totally different looking results.\nExample 10. Integrate $$ \\int \\sin^2 x \\cos^3 x dx $$\nExample 11. Integrate $$ \\int \\arccos(ax)^2 dx. $$\n",
+  "wordCount" : "692",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-06T12:09:32+08:00",
+  "dateModified": "2022-04-06T12:09:32+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W7-S1 Trigonometric Substitutions and Integration Examples
+    </h1>
+    <div class="post-meta"><span title='2022-04-06 12:09:32 +0800 CST'>April 6, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 7
+日期: April 6, 2022
+节次: 1</p>
+<p>In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands.</p>
+<h1 id="-85-three-basic-substitutions">§ 8.5 Three Basic Substitutions<a hidden class="anchor" aria-hidden="true" href="#-85-three-basic-substitutions">#</a></h1>
+<p>The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$ and $\sqrt{x^2-a^2}$.</p>
+<ul>
+<li>With integrals involving $\sqrt{a^2-x^2}$, we often use the substitution $x=a\sin(\theta)$ (or $x=a\cos(\theta)$)</li>
+<li>With integrals involving $\sqrt{a^2+x^2}$, we often use the substitution $x=a\tan(\theta)$</li>
+<li>With integrals involving $\sqrt{x^2-a^2}$, we often use the substitution $x=a \sec(\theta)$ (For the integrals involving $\sqrt{x^2-a^2}$ and $\sqrt{x^2+a^2}$ we can also apply the known result $\int\frac{dx}{\sqrt{x^2\pm a^2}}=\ln |x+\sqrt{x^2\pm a^2}| + C$)</li>
+</ul>
+<p><strong><code>Remark</code> As doing these substitutions, we need them to be reversible, so that we can change back to the original variable afterward.</strong></p>
+<p>For reversibility,</p>
+<ul>
+<li>$x=a\tan\theta$  requires $\theta = \arctan \left(x/a\right)$, with $-\frac{\pi}{2}&lt;\theta&lt;\frac{\pi}{2}$,</li>
+<li>$x = a \sin \theta$ requires $\theta = \arcsin(x/a)$, with $-\frac{\pi}{2}\le \theta \le \frac{\pi}{2}$,</li>
+<li>$x=a\sec \theta$ requires $\theta = \mathrm{arcsec}(x/a)$, with $\begin{cases}0\le \theta &lt; \frac\pi2 &amp; \text{if  }x/a\ge 1,\ \frac\pi2 &lt; \theta \le \pi &amp; \text{if  } x/a \le -1.\end{cases}$</li>
+</ul>
+<h3 id="example-1-using-the-substitution-xatantheta">Example 1. Using the Substitution $x=a\tan\theta$<a hidden class="anchor" aria-hidden="true" href="#example-1-using-the-substitution-xatantheta">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{dx}{\sqrt{4+x^2}}
+$$</p>
+<p>Solution. $\ln |\sqrt{4+x^2}+x|+ C.$</p>
+<h3 id="example-2-using-the-substitution-xasintheta">Example 2. Using the Substitution $x=a\sin\theta$<a hidden class="anchor" aria-hidden="true" href="#example-2-using-the-substitution-xasintheta">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{x^2 dx}{\sqrt{9-x^2}}
+$$</p>
+<p>Solution. $\frac{9}{2}\arcsin\frac{x}{3}-\frac{x}{2}\sqrt{9-x^2}+C$</p>
+<h3 id="example-3-using-the-substitution-xasectheta">Example 3. Using the Substitution $x=a\sec\theta$<a hidden class="anchor" aria-hidden="true" href="#example-3-using-the-substitution-xasectheta">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int \dfrac{dx}{\sqrt{25x^2-4}}, \quad x&gt; \frac{5}{2}.
+$$</p>
+<p>Solution. $\frac15 \ln \left|\frac{5x}{2}+\frac{\sqrt{25x^2-4}}{2}\right| + C.$</p>
+<h3 id="example-4-finding-the-volume-of-a-solid-of-revolution">Example 4. Finding the Volume of a Solid of Revolution<a hidden class="anchor" aria-hidden="true" href="#example-4-finding-the-volume-of-a-solid-of-revolution">#</a></h3>
+<p>Find the volume of the solid generated by revolving about the $x$-axis the region bounded by the curve $y=\dfrac{4}{x^2+4}$, the $x$-axis, and the lines $x=0$ and $x=2.$</p>
+<p>Solution. $\pi\left[\frac\pi4 + \frac12\right]$.</p>
+<h3 id="example-5-finding-the-area-of-an-ellipse">Example 5. Finding the Area of an Ellipse<a hidden class="anchor" aria-hidden="true" href="#example-5-finding-the-area-of-an-ellipse">#</a></h3>
+<p>Find the area enclosed by the ellipse</p>
+<p>$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
+$$</p>
+<p>Solution. $\pi a b$.</p>
+<h1 id="-86-integral-tables-and-computer-algebra-systems">§ 8.6 Integral Tables and Computer Algebra Systems<a hidden class="anchor" aria-hidden="true" href="#-86-integral-tables-and-computer-algebra-systems">#</a></h1>
+<h2 id="integral-tables">Integral Tables<a hidden class="anchor" aria-hidden="true" href="#integral-tables">#</a></h2>
+<p>A Brief Table of Integrals is provided at the back of the book. The integration formulas are stated in terms of constants $a$, $b$, $c$, $m$, $n$ and so on. The limitations on their values are stated with the formulas. The formulas also assume that the constants do not take on values that require dividing by $0$ or taking even roots of negative numbers.</p>
+<p>Note that the following examples can also be evaluated using algebraic manipulation, substitution or integration by parts.</p>
+<h3 id="example-1-find">Example 1. Find<a hidden class="anchor" aria-hidden="true" href="#example-1-find">#</a></h3>
+<p>$$
+\int \dfrac{x}{2x+5}dx
+$$</p>
+<h3 id="example-2-find">Example 2. Find<a hidden class="anchor" aria-hidden="true" href="#example-2-find">#</a></h3>
+<p>$$
+\int \frac{dx}{x\sqrt{2x+4}}
+$$</p>
+<h3 id="example-3-find">Example 3. Find<a hidden class="anchor" aria-hidden="true" href="#example-3-find">#</a></h3>
+<p>$$
+\int \dfrac{dx}{x\sqrt{2x-4}}
+$$</p>
+<h3 id="example-4-find">Example 4. Find<a hidden class="anchor" aria-hidden="true" href="#example-4-find">#</a></h3>
+<p>$$
+\int\frac{dx}{x^2\sqrt{2x-4}}
+$$</p>
+<h3 id="example-5-find">Example 5. Find<a hidden class="anchor" aria-hidden="true" href="#example-5-find">#</a></h3>
+<p>$$
+\int x \arcsin x dx
+$$</p>
+<h2 id="reduction-formulas">Reduction Formulas<a hidden class="anchor" aria-hidden="true" href="#reduction-formulas">#</a></h2>
+<p>Some integrals can be reduced by integration by parts, for example</p>
+<h3 id="example-6-reduce-the-formula">Example 6. Reduce the Formula<a hidden class="anchor" aria-hidden="true" href="#example-6-reduce-the-formula">#</a></h3>
+<p>Find</p>
+<p>$$
+\int \tan^n x dx,
+$$</p>
+<p>and evaluate the integral $\int \tan^5 dx.$</p>
+<p>Solution. $\frac1{n-1}\tan^{n-1}(x) - \int \tan^{n-2}xdx$, and $\frac{1}4\tan^4 x -\frac12 \tan^2 x -\ln|\cos x |+ C$Exa</p>
+<h3 id="example-7-deriving-a-reduction-formula">Example 7. Deriving a Reduction Formula<a hidden class="anchor" aria-hidden="true" href="#example-7-deriving-a-reduction-formula">#</a></h3>
+<p>Show that for any positive integer $n$</p>
+<p>$$
+\int(\ln x)^ndx = x\ln(x)^n-n\int (\ln x)^{n-1} dx.
+$$</p>
+<h3 id="example-8-find">Example 8. Find<a hidden class="anchor" aria-hidden="true" href="#example-8-find">#</a></h3>
+<p>$$
+\int \sin^2 x \cos^3 xdx.
+$$</p>
+<p>Note that this integrand has an odd power in $\cos$ part, therefore can be evaluated by substitution $u=\sin(x)$. The integral can also be evaluated by looking up the integration table.</p>
+<h2 id="non-elementary-integrals">Non-elementary Integrals<a hidden class="anchor" aria-hidden="true" href="#non-elementary-integrals">#</a></h2>
+<p>The integrals of functions that do not have elementary antiderivatives are called non-elementary integrals. For example,</p>
+<p>$$
+\int e^{-t^2}dt,\quad \int \sin x^2 dx, \quad \int \sqrt{1+x^4}dx, \int \frac{e^x}{x}dx,\quad \int \frac{1}{\ln x}dx, \quad \int \frac{\sin x}{x}dx, \ \int\sqrt{1-k^2\sin^2 x}dx, \quad 0&lt;k&lt;1.
+$$</p>
+<h2 id="integration-with-a-cas-computer-algebraic-system">Integration with a CAS (Computer Algebraic System)<a hidden class="anchor" aria-hidden="true" href="#integration-with-a-cas-computer-algebraic-system">#</a></h2>
+<p>For example, the integrations can be evaluated by using <code>Mathematica</code>, <code>Maple</code> , or <code>Python</code> (<code>SymPy</code>). Here we illustrate the use of <code>Mathematica</code> and <code>Python</code>.</p>
+<h3 id="example-integrating-via-mathematica">Example. Integrating via Mathematica.<a hidden class="anchor" aria-hidden="true" href="#example-integrating-via-mathematica">#</a></h3>
+<p>$$
+\int x^2 \sqrt{a^2+x^2}dx.
+$$</p>
+<p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled.png" alt="Untitled"  />
+</p>
+<p>In <code>Python</code>, one has to import <code>SymPy</code> first by using</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sympy <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</code></pre></div><p>To perform any integration, first one needs to declare the variable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">u <span style="color:#f92672">=</span> Symbol(<span style="color:#e6db74">&#39;u&#39;</span>)
+</code></pre></div><p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>Note that sometimes CASs may give totally different looking results.</p>
+<h3 id="example-10-integrate">Example 10. Integrate<a hidden class="anchor" aria-hidden="true" href="#example-10-integrate">#</a></h3>
+<p>$$
+\int \sin^2 x \cos^3 x dx
+$$</p>
+<p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled%202.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled%203.png" alt="Untitled"  />
+</p>
+<h3 id="example-11-integrate">Example 11. Integrate<a hidden class="anchor" aria-hidden="true" href="#example-11-integrate">#</a></h3>
+<p>$$
+\int \arccos(ax)^2 dx.
+$$</p>
+<p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled%204.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W7-S1%20Trig%201be21/Untitled%205.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/trigonometric/">trigonometric</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/substitutions/">substitutions</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lectures/">lectures</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

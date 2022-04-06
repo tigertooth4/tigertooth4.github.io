@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Apr 2022 13:33:08 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Apr 2022 12:09:32 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W7-S1 Trigonometric Substitutions and Integration Examples</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/</link>
+      <pubDate>Wed, 06 Apr 2022 12:09:32 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/</guid>
+      <description>周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving</description>
+    </item>
+    
     <item>
       <title>利用坚果云备份 Notability 笔记</title>
       <link>http://tigertooth4.github.io/post/2022-04/notability-webdav-backup-use-jianguoyun/</link>
