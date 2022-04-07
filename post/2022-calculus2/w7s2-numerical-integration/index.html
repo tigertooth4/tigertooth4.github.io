@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W7-S2 Numerical Integration | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="numerical, integration, integral, simpson, trapezoidal, calculus, lecture" />
+<meta name="description" content="周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically,">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W7-S2 Numerical Integration" />
+<meta property="og:description" content="周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-07T14:47:12&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-07T14:47:12&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W7-S2 Numerical Integration"/>
+<meta name="twitter:description" content="周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically,"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W7-S2 Numerical Integration",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W7-S2 Numerical Integration",
+  "name": "W7-S2 Numerical Integration",
+  "description": "周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically,",
+  "keywords": [
+    "numerical", "integration", "integral", "simpson", "trapezoidal", "calculus", "lecture"
+  ],
+  "articleBody": "周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2\nIn this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically, and how to predict the error the evaluation produces.\nGeneral Thoughts on Numerical Integrations Riemann Sum Provides a Good Approximation Indeed As evaluate a definite integral, we have seen that by subdividing the interval into several sub-intervals, we obtained a Riemann sum to the integration\n$$ \\sum_{i=1}^n f(\\xi_i)\\Delta x_i\\approx \\int_a^b f(x)dx. $$\nThe approximation has been approved by the definition of the definite integral. And we have shown by an example that as the mesh becomes finer and finer, the approximation is getting more and more accurate.\nAn integrable function does not constrain on how the meshes should be looked like. For our convenience, we make the subdivision evenly spaced. In this case, the Riemann sum is getting even more simplified\n$$ (b-a) \\dfrac{\\sum_{i=1}^n f(\\xi_i)}{n}. $$\nThat is, an average of $n$ samples $f(\\xi_i)$, multiplying the length of the interval.\nSo in principal, numerical integration is as easy as sampling and averaging. A crazier idea for numerical integration is called Monte Carlo Integration.\nMonte Carlo Integration To integrate a function $f(x)$ from $a$ to $b$, we could blindly (randomly) choose $n$ sampling points, evaluate the function at those points, and take an average. If the sampling is uniformly distributed, the average will eventually become a good approximation of the integration. (By applying the central limit theorem in statistics.)\n$$ \\int_a^b f(x) dx \\approx \\frac{b-a}{n}\\sum_{i=1}^n f(r_i) $$\nwhere $r_i$ is randomly chosen (with equal probability everywhere) sampling point inside of the interval $[a,b].$\nTrapezoidal Approximations The Trapezoidal rule for the value of a definite integral is based on approximating the region between a curve and the $x$-axis with trapezoids instead of rectangles. It is not necessary for the subdivision points $x_0$, $x_1$, $x_2,$ $\\cdots$, $x_n$ to be evenly spaced, but the resulting formula is simpler if they are.\nAssuming the length of each subinterval is\n$$ \\Delta x = \\frac{b-a}{n}. $$\nIt is called the step size or mesh size. The area of the trapezoid that lies above the $i$th subinterval is\n$$ \\Delta x \\left(\\dfrac{y_{i-1}+y_i}{2}\\right) = \\dfrac{\\Delta x}{2}\\left(y_{i-1}+y_i\\right) $$\nwhere $y_i = f(x_i)$.\nSo the area below the curve is approximated by\n$$ T = \\frac{1}{2}(y_0+y_1)\\Delta x + \\frac{1}{2}(y_1+y_2)\\Delta x + \\cdots + \\frac12 (y_{n-1}+y_n)\\Delta x \\ = \\frac{\\Delta x}{2}\\left(y_0 + 2 y_1 + 2y_2 +\\cdots + 2y_{n-1} + y_n\\right) $$\nwhere\n$$ y_0 = f(a),\\quad y_1 = f(x_1),\\quad \\cdots \\quad y_{n-1} = f(x_{n-1}),\\quad y_n = f(b). $$\n The Trapezoidal Rule\n To approximate $\\int_a^b f(x)dx,$ use\n$$ T = \\frac{\\Delta x}{2}\\left(y_0+2y_1 + 2y_2 + \\cdots + 2y_{n-1} + y_n\\right). $$\nThe $y$’s are the values of $f$ at the partition points $x_k = a + k \\Delta x$, where $\\Delta x = \\frac{b-a}{n}$.\nExample 1. Applying the Trapezoidal Rule Use the Trapezoidal rule with n=4 to estimate $\\int_1^2 x^2 dx$. Compare with the exact value.\nSolution.\n$$ T = \\frac{\\Delta x}{2}\\left(1 + 2 \\cdot \\frac{25}{16} + 2 \\cdot \\frac{36}{16} + 2\\cdot \\frac{49}{16} + 4\\right) = \\dfrac{75}{32} = 2.34375 $$\nAnd the exact value is $7/3$. The $T$ approximation overestimates the integral by about $0.446%$. The overestimation is expected, due to the curve being concave up.\nWe would also expect that a rectangle estimation on the same meshes will produce larger error.\nExample 2. Averaging Temperatures An observer measures the outside temperature every hour from noon until midnight, recording the temperatures in the following table.\n   Time N 1 2 3 4 5 6 7 8 9 10 11 M     Temp 63 65 66 68 70 69 68 68 65 64 62 58 55    What was the average temperature for the 12-hour period?\nSolution. We are looking for the average value of a continuous function (temperature). We need to find\n$$ \\text{av}(f) = \\frac{1}{b-a}\\int_a^b f(x) dx, $$\nwithout knowing a formula for $f(x)$. The integral can be approximated by the Trapezoidal rule.\n$$ T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + \\cdots + 2y_{11} + y_{12}\\right)\\ = \\frac12 \\left(63 + 2\\times 65 + 2\\times 66 + \\cdots + 2\\times 58 + 55\\right)=782. $$\nTherefore, $\\text{av}(f)\\approx \\frac{1}{b-a}T = 782/12\\approx 65.17.$\nError Estimates for the Trapezoidal Rule The $T$ approaches the exact integral $\\int_a^b f(x)dx.$ Since\n$$ T = \\Delta x \\left(\\frac12 y_0 + y_1 + y_2 + \\cdots + y_{n-1} + \\frac12 y_n\\right)\\ = (y_1 + y_2 + \\cdots + y_n )\\Delta x + \\frac12 (y_0-y_n)\\Delta x \\= \\sum_{k=1}^n f(x_k)\\Delta x + \\frac12 \\left[f(a)-f(b)\\right]\\Delta x. $$\nAs $n\\to \\infty$ and $\\Delta x\\to 0,$ we can clearly see that $\\lim_{n\\to\\infty} T = \\int_a^b f(x) dx.$\nIn practice, we want to know how fast the Trapezoidal method converges to the exact value, or how large $n$ should be for a given tolerance?\n RESULT. The error estimation\n If $f''$ is continuous on $[a,b]$, then\n$$ ｜E_T ｜:= \\left|\\int_a^b f(x)dx - T\\right|\\le \\dfrac{b-a}{12}\\max |f''(x)| (\\Delta x)^2 $$\nIf we substitute $\\frac{b-a}{n}$ for $\\Delta x$, and an upper bound $M$ for the $|f''(x)|$ on $[a,b]$, we get\n$$ |E_T|\\le \\dfrac{M(b-a)^3}{12n^2} $$\nExample 3. Bounding the Trapezoidal Rule Error Find an upper bound for the error incurred in estimating\n$$ \\int_0^\\pi x \\sin x dx, $$\nwith the Trapezoidal Rule with $n=10$ steps.\nSolution. Since\n$$ |f''(x)| = |2\\cos x - x\\sin x|\\le 2 |\\cos x| + |x||\\sin x|\\le 2 + \\pi $$\nThe error\n$$ |E_T| \\le \\frac{\\pi^3}{1200} M = \\frac{\\pi^3(2+\\pi)}{1200}For greater accuracy, we would increase the number of steps. As we can see for $n=100$ steps, the error is no more than $1.33\\times 10^{-3}$.\nExample 4. Finding How Many Steps Are Needed For a Specific Accuracy How many subdivisions should be used in the Trapezoidal Rule to approximate\n$$ \\ln 2 = \\int_1^2 \\frac1x dx, $$\nwith a tolerance less than $10^{-4}.$\nSolution. For function $f=1/x$, the upper bound for $f''$ on the interval $[1,2]$ is $2$. Hence\n$$ |E_T|\\le \\frac{(2-1)\\times 2}{12 n^2}=\\frac{1}{6n^2}. $$\nIn order to make error less than $10^{-4},$ we need $\\frac1{6n^2}40.83.$\nSimpson’s Rule: Approximations Using Parabolas Instead of using trapezoidal shapes for defining the area, we now use the shaded area beneath a parabola passing through three consecutive points. As illustrated in the following graph.\nTo obtain an estimation, we subdivide the interval $[a,b]$ into $n$ subintervals of equal length $h =\\Delta x = \\frac{b-a}{n}$, but this time we require that $n$ be an even number.\nOn each consecutive pair of intervals we approximate the curve $y=f(x)$ by a parabola, passing through consecutive points $(x_{i-1},y_{i-1})$, $(x_i,y_i)$ and $(x_{i+1},y_{i+1})$ on the curve.\nTo compute the shaded area, let’s move the $y$-axis to $x=x_i$ (which does not change the area). Suppose the parabola has the form $Ax^2+Bx + C$, then the area will be\n$$ A_p = \\int_{-h}^h (A x^2 + B x + C) dx = \\frac{h}{3}\\left(2A h^2 + 6C\\right). $$\nSince the parabola is passing through points $(-h,y_{0})$, $(0,y_1)$ and $(h,y_2)$, we can solve the equation to find\n$$ C = y_1,\\quad 2A h^2 = y_0+y_2 - 2y_1 $$\nTherefore the area $A_p$ is\n$$ A_p = \\frac{h}{3} (y_0 + 4 y_1 + y_2). $$\nThen approximating the integral $\\int_a^b f(x)dx$ obtains the following formula\n$$ \\int_a^b f(x)dx \\ \\approx \\frac{h}{3}(y_0 + 4y_1 + y_2) + \\frac{h}{3}(y_2+4y_3 + y_4) + \\cdots + \\frac{h}{3}(y_{n-2}+4y_{n-1} + y_n)\\ = \\frac{h}{3}\\left(y_0 + 4y_1+2y_2 + 4y_3 + 2 y_4 +\\cdots + 2y_{n-2}+4y_{n-1}+y_n\\right) $$\n Simpson’s Rule\n To approximate $\\int_a^b f(x)dx,$ use\n$$ S=\\frac{\\Delta x}{3}(y_0+4y_1 + 2y_2 + 4y_3 + \\cdots + 2y_{n-2} + 4y_{n-1} + y_n). $$\nThe $y$’s are the values of $f$ at the partition points $x_k = a + k \\Delta x$. And $n$ is even, $\\Delta x = (b-a)/n.$\nNote the pattern of the coefficients in Simpson’s rule: $1, 4, 2, 4, 2, \\cdots, 2,4, 1$.\nExample 5. Applying Simpson’s Rule Use Simpson’s Rule with $n=4$ to approximate $\\int_0^2 5x^4 dx$.\nSolution. Partition $[0,2]$ into four subintervals, then $\\Delta x = \\frac12.$\n$$ S = \\frac{\\Delta x}{3}\\left(y_0 + 4 y_1 + 2y_2 + 4y_3 + y_4\\right)=32\\frac{1}{12} $$\nThe exact value is $32$.\nError Estimates for Simpson’s Rule If $f^{(4)}$ is continuous and $M$ is any upper bound for the values of $|f^{(4)}|$ on $[a,b]$, then the error $E_S$ in the Simpson’s Rule approximation satisfies\n$$ |E_S|\\le \\dfrac{M(b-a)^5}{180 n^4}. $$\nExample 6. Bounding the Error in Simpson’s Rule Find an upper bound for the error in estimating $\\int_0^2 5x^4 dx$ using Simpson’s Rule with $n=4$.\nSolution. Since $f^{(4)}(x) = 120$. We take $M=120$, with $b-a=2$ and $n=4$, the error is no more than\n$$ |E_S|\\le \\frac{120 \\times 2^5}{180 \\times 4^4}=\\frac1{12} $$\nExample 7. Comparing the Trapezoidal’s and Simpson’s Rules Notice that if $f(x)$ is a polynomial of degree less than $4$, then $f^{(4)}$ is zero, and Simpson’s rule shows no error no matter how many steps. Similarly, for constant or linear functions, the $f''$ is zero, therefore the Trapezoidal rule shows no error.\nExample 8. Estimate $$ \\int_0^2 x^3 dx $$\nwith Simpson’s Rule.\nSolution. Indeed, with $n=2$ and $\\Delta x = 1$, we find\n$$ S = \\frac{1}{3}(y_0+4y_1+y_2) = 4 $$\nwhich is exactly the value of integration.\nExample 9. A Real Case ",
+  "wordCount" : "1689",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-07T14:47:12+08:00",
+  "dateModified": "2022-04-07T14:47:12+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W7-S2 Numerical Integration
+    </h1>
+    <div class="post-meta"><span title='2022-04-07 14:47:12 +0800 CST'>April 7, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 7
+备注: Attendance check
+日期: April 8, 2022
+节次: 2</p>
+<p>In this lecture, we will take a quick glance at the <em><strong>Numerical Integration</strong></em> methods. Numerical integrations are very useful in practice. The methods we are going to learn are <em><strong>Trapezoidal Method</strong></em> and <em><strong>Simpson’s Method</strong>.</em> We will learn how to evaluate an integration numerically, and how to predict the error the evaluation produces.</p>
+<h1 id="general-thoughts-on-numerical-integrations">General Thoughts on Numerical Integrations<a hidden class="anchor" aria-hidden="true" href="#general-thoughts-on-numerical-integrations">#</a></h1>
+<h2 id="riemann-sum-provides-a-good-approximation-indeed">Riemann Sum Provides a Good Approximation Indeed<a hidden class="anchor" aria-hidden="true" href="#riemann-sum-provides-a-good-approximation-indeed">#</a></h2>
+<p>As evaluate a definite integral, we have seen that by subdividing the interval into several sub-intervals, we obtained a Riemann sum to the integration</p>
+<p>$$
+\sum_{i=1}^n f(\xi_i)\Delta x_i\approx \int_a^b f(x)dx.
+$$</p>
+<p>The approximation has been approved by the definition of the definite integral. And we have shown by an example that as the mesh becomes finer and finer, the approximation is getting more and more accurate.</p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/RiemannIntegralShow.gif" alt="RiemannIntegralShow.gif"  />
+</p>
+<p>An integrable function does not constrain on how the meshes should be looked like. For our convenience, we make the subdivision evenly spaced. In this case, the Riemann sum is getting even more simplified</p>
+<p>$$
+(b-a) \dfrac{\sum_{i=1}^n f(\xi_i)}{n}.
+$$</p>
+<p>That is, an average of $n$ samples $f(\xi_i)$, multiplying the length of the interval.</p>
+<p>So in principal, numerical integration is as easy as sampling and averaging. A crazier idea for numerical integration is called <strong>Monte Carlo Integration.</strong></p>
+<h2 id="monte-carlo-integration">Monte Carlo Integration<a hidden class="anchor" aria-hidden="true" href="#monte-carlo-integration">#</a></h2>
+<p>To integrate a function $f(x)$ from $a$ to $b$, we could blindly (randomly) choose $n$ sampling points, evaluate the function at those points, and take an average. If the sampling is uniformly distributed, the average will eventually become a good approximation of the integration. (By applying the <strong>central limit theorem</strong> in statistics.)</p>
+<p>$$
+\int_a^b f(x) dx \approx \frac{b-a}{n}\sum_{i=1}^n f(r_i)
+$$</p>
+<p>where $r_i$ is randomly chosen (with equal probability everywhere) sampling point inside of the interval $[a,b].$</p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/MonteCarloShow.gif" alt="MonteCarloShow.gif"  />
+</p>
+<h1 id="trapezoidal-approximations">Trapezoidal Approximations<a hidden class="anchor" aria-hidden="true" href="#trapezoidal-approximations">#</a></h1>
+<p>The <strong>Trapezoidal rule</strong> for the value of a definite integral is based on approximating the region between a curve and the $x$-axis with <strong>trapezoids</strong> instead of <strong>rectangles</strong>. It is not necessary for the subdivision points $x_0$, $x_1$, $x_2,$ $\cdots$, $x_n$ to be evenly spaced, but the resulting formula is simpler if they are.</p>
+<p>Assuming the length of each subinterval is</p>
+<p>$$
+\Delta x = \frac{b-a}{n}.
+$$</p>
+<p>It is called the <strong>step size</strong>  or <strong>mesh size.</strong> The area of the trapezoid that lies above the $i$th subinterval is</p>
+<p>$$
+\Delta x \left(\dfrac{y_{i-1}+y_i}{2}\right) = \dfrac{\Delta x}{2}\left(y_{i-1}+y_i\right)
+$$</p>
+<p>where $y_i = f(x_i)$.</p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled.png" alt="Untitled"  />
+</p>
+<p>So the area below the curve is approximated by</p>
+<p>$$
+T = \frac{1}{2}(y_0+y_1)\Delta x + \frac{1}{2}(y_1+y_2)\Delta x + \cdots + \frac12 (y_{n-1}+y_n)\Delta x \ = \frac{\Delta x}{2}\left(y_0 + 2 y_1 + 2y_2 +\cdots + 2y_{n-1} + y_n\right)
+$$</p>
+<p>where</p>
+<p>$$
+y_0 = f(a),\quad y_1 = f(x_1),\quad \cdots \quad y_{n-1} = f(x_{n-1}),\quad y_n = f(b).
+$$</p>
+<blockquote>
+<p><strong>The Trapezoidal Rule</strong></p>
+</blockquote>
+<p>To approximate $\int_a^b f(x)dx,$ use</p>
+<p>$$
+T = \frac{\Delta x}{2}\left(y_0+2y_1 + 2y_2 + \cdots + 2y_{n-1} + y_n\right).
+$$</p>
+<p>The $y$’s are the values of $f$ at the partition points $x_k = a + k \Delta x$, where $\Delta x = \frac{b-a}{n}$.</p>
+<h3 id="example-1-applying-the-trapezoidal-rule">Example 1. Applying the Trapezoidal Rule<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-trapezoidal-rule">#</a></h3>
+<p>Use the Trapezoidal rule with <code>n=4</code> to estimate $\int_1^2 x^2 dx$. Compare with the exact value.</p>
+<p><strong>Solution.</strong></p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>$$
+T = \frac{\Delta x}{2}\left(1 + 2 \cdot \frac{25}{16} + 2 \cdot \frac{36}{16} + 2\cdot \frac{49}{16} + 4\right) = \dfrac{75}{32} = 2.34375
+$$</p>
+<p>And the exact value is $7/3$. The $T$ approximation overestimates the integral by about $0.446%$. The overestimation is expected, due to the curve being concave up.</p>
+<p>We would also expect that a rectangle estimation on the same meshes will produce larger error.</p>
+<h3 id="example-2-averaging-temperatures">Example 2. Averaging Temperatures<a hidden class="anchor" aria-hidden="true" href="#example-2-averaging-temperatures">#</a></h3>
+<p>An observer measures the outside temperature every hour from noon until midnight, recording the temperatures in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>N</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temp</td>
+<td>63</td>
+<td>65</td>
+<td>66</td>
+<td>68</td>
+<td>70</td>
+<td>69</td>
+<td>68</td>
+<td>68</td>
+<td>65</td>
+<td>64</td>
+<td>62</td>
+<td>58</td>
+<td>55</td>
+</tr>
+</tbody>
+</table>
+<p>What was the average temperature for the 12-hour period?</p>
+<p><strong>Solution.</strong>  We are looking for the average value of a continuous function (temperature). We need to find</p>
+<p>$$
+\text{av}(f) = \frac{1}{b-a}\int_a^b f(x) dx,
+$$</p>
+<p>without knowing a formula for $f(x)$. The integral can be approximated by the Trapezoidal rule.</p>
+<p>$$
+T = \frac{\Delta x}{2}\left(y_0 + 2y_1 + 2y_2 + \cdots + 2y_{11} + y_{12}\right)\ = \frac12 \left(63 + 2\times 65 + 2\times 66 + \cdots + 2\times 58 + 55\right)=782.
+$$</p>
+<p>Therefore, $\text{av}(f)\approx \frac{1}{b-a}T = 782/12\approx 65.17.$</p>
+<h2 id="error-estimates-for-the-trapezoidal-rule">Error Estimates for the Trapezoidal Rule<a hidden class="anchor" aria-hidden="true" href="#error-estimates-for-the-trapezoidal-rule">#</a></h2>
+<p>The $T$ approaches the exact integral $\int_a^b f(x)dx.$ Since</p>
+<p>$$
+T = \Delta x \left(\frac12 y_0 + y_1 + y_2 + \cdots + y_{n-1} + \frac12 y_n\right)\ = (y_1 + y_2 + \cdots + y_n )\Delta x + \frac12 (y_0-y_n)\Delta x \= \sum_{k=1}^n f(x_k)\Delta x + \frac12 \left[f(a)-f(b)\right]\Delta x.
+$$</p>
+<p>As $n\to \infty$ and $\Delta x\to 0,$ we can clearly see that $\lim_{n\to\infty} T = \int_a^b f(x) dx.$</p>
+<p>In practice, we want to know how fast the Trapezoidal method converges to the exact value, or how large $n$ should be for a given tolerance?</p>
+<blockquote>
+<p><strong>RESULT. The error estimation</strong></p>
+</blockquote>
+<p>If $f''$ is continuous on $[a,b]$, then</p>
+<p>$$
+｜E_T ｜:= \left|\int_a^b f(x)dx - T\right|\le \dfrac{b-a}{12}\max |f''(x)| (\Delta x)^2
+$$</p>
+<p>If we substitute $\frac{b-a}{n}$ for $\Delta x$, and an upper bound $M$ for the $|f''(x)|$ on $[a,b]$, we get</p>
+<p>$$
+|E_T|\le \dfrac{M(b-a)^3}{12n^2}
+$$</p>
+<h3 id="example-3-bounding-the-trapezoidal-rule-error">Example 3. Bounding the Trapezoidal Rule Error<a hidden class="anchor" aria-hidden="true" href="#example-3-bounding-the-trapezoidal-rule-error">#</a></h3>
+<p>Find an upper bound for the error incurred in estimating</p>
+<p>$$
+\int_0^\pi x \sin x dx,
+$$</p>
+<p>with the Trapezoidal Rule with $n=10$ steps.</p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>Solution. Since</p>
+<p>$$
+|f''(x)| = |2\cos x - x\sin x|\le 2 |\cos x| + |x||\sin x|\le 2 + \pi
+$$</p>
+<p>The error</p>
+<p>$$
+|E_T| \le \frac{\pi^3}{1200} M = \frac{\pi^3(2+\pi)}{1200}&lt; 0.133.
+$$</p>
+<p>For greater accuracy, we would increase the number of steps. As we can see for $n=100$ steps, the error is no more than $1.33\times 10^{-3}$.</p>
+<h3 id="example-4-finding-how-many-steps-are-needed-for-a-specific-accuracy">Example 4. Finding How Many Steps Are Needed For a Specific Accuracy<a hidden class="anchor" aria-hidden="true" href="#example-4-finding-how-many-steps-are-needed-for-a-specific-accuracy">#</a></h3>
+<p>How many subdivisions should be used in the Trapezoidal Rule to approximate</p>
+<p>$$
+\ln 2 = \int_1^2 \frac1x dx,
+$$</p>
+<p>with a tolerance less than $10^{-4}.$</p>
+<p>Solution. For function $f=1/x$, the upper bound for $f''$ on the interval $[1,2]$ is $2$. Hence</p>
+<p>$$
+|E_T|\le \frac{(2-1)\times 2}{12 n^2}=\frac{1}{6n^2}.
+$$</p>
+<p>In order to make error less than $10^{-4},$ we need $\frac1{6n^2}&lt;10^{-4}$, or $n&gt;40.83.$</p>
+<h1 id="simpsons-rule-approximations-using-parabolas">Simpson’s Rule: Approximations Using Parabolas<a hidden class="anchor" aria-hidden="true" href="#simpsons-rule-approximations-using-parabolas">#</a></h1>
+<p>Instead of using trapezoidal shapes for defining the area, we now use the shaded area beneath a parabola passing through three consecutive points. As illustrated in the following graph.</p>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>To obtain an estimation, we subdivide the interval $[a,b]$ into $n$ subintervals of equal length $h =\Delta x = \frac{b-a}{n}$, but this time we require that $n$ be an even number.</p>
+<p>On each consecutive pair of intervals we approximate the curve $y=f(x)$ by a parabola, passing through consecutive points $(x_{i-1},y_{i-1})$, $(x_i,y_i)$ and $(x_{i+1},y_{i+1})$ on the curve.</p>
+<p>To compute the shaded area, let’s move the $y$-axis to $x=x_i$ (which does not change the area). Suppose the parabola has the form $Ax^2+Bx + C$, then the area will be</p>
+<p>$$
+A_p = \int_{-h}^h (A x^2 + B x + C) dx = \frac{h}{3}\left(2A h^2 + 6C\right).
+$$</p>
+<p>Since the parabola is passing through points $(-h,y_{0})$, $(0,y_1)$ and $(h,y_2)$, we can solve the equation to find</p>
+<p>$$
+C = y_1,\quad 2A h^2 = y_0+y_2 - 2y_1
+$$</p>
+<p>Therefore the area $A_p$ is</p>
+<p>$$
+A_p = \frac{h}{3} (y_0 + 4 y_1 + y_2).
+$$</p>
+<p>Then approximating the integral $\int_a^b f(x)dx$  obtains the following formula</p>
+<p>$$
+\int_a^b f(x)dx \ \approx \frac{h}{3}(y_0 + 4y_1 + y_2) + \frac{h}{3}(y_2+4y_3 + y_4) + \cdots + \frac{h}{3}(y_{n-2}+4y_{n-1} + y_n)\ = \frac{h}{3}\left(y_0 + 4y_1+2y_2 + 4y_3 + 2 y_4 +\cdots + 2y_{n-2}+4y_{n-1}+y_n\right)
+$$</p>
+<blockquote>
+<p><strong>Simpson’s Rule</strong></p>
+</blockquote>
+<p>To approximate $\int_a^b f(x)dx,$ use</p>
+<p>$$
+S=\frac{\Delta x}{3}(y_0+4y_1 + 2y_2 + 4y_3 + \cdots + 2y_{n-2} + 4y_{n-1} + y_n).
+$$</p>
+<p>The $y$’s are the values of $f$ at the partition points $x_k = a + k \Delta x$. And $n$ is even, $\Delta x = (b-a)/n.$</p>
+<p>Note the pattern of the coefficients in Simpson’s rule: $1, 4, 2, 4, 2, \cdots, 2,4, 1$.</p>
+<h3 id="example-5-applying-simpsons-rule">Example 5. Applying Simpson’s Rule<a hidden class="anchor" aria-hidden="true" href="#example-5-applying-simpsons-rule">#</a></h3>
+<p>Use Simpson’s Rule with $n=4$ to approximate $\int_0^2 5x^4 dx$.</p>
+<p>Solution. Partition $[0,2]$ into four subintervals, then $\Delta x = \frac12.$</p>
+<p>$$
+S = \frac{\Delta x}{3}\left(y_0 + 4 y_1 + 2y_2 + 4y_3 + y_4\right)=32\frac{1}{12}
+$$</p>
+<p>The exact value is $32$.</p>
+<h2 id="error-estimates-for-simpsons-rule">Error Estimates for Simpson’s Rule<a hidden class="anchor" aria-hidden="true" href="#error-estimates-for-simpsons-rule">#</a></h2>
+<p>If $f^{(4)}$ is continuous and $M$ is any upper bound for the values of $|f^{(4)}|$ on $[a,b]$, then the error $E_S$ in the Simpson’s Rule approximation satisfies</p>
+<p>$$
+|E_S|\le \dfrac{M(b-a)^5}{180 n^4}.
+$$</p>
+<h3 id="example-6-bounding-the-error-in-simpsons-rule">Example 6. Bounding the Error in Simpson’s Rule<a hidden class="anchor" aria-hidden="true" href="#example-6-bounding-the-error-in-simpsons-rule">#</a></h3>
+<p>Find an upper bound for the error in estimating $\int_0^2 5x^4 dx$ using Simpson’s Rule with $n=4$.</p>
+<p>Solution. Since $f^{(4)}(x) = 120$. We take $M=120$, with $b-a=2$ and $n=4$, the error is no more than</p>
+<p>$$
+|E_S|\le \frac{120 \times 2^5}{180 \times 4^4}=\frac1{12}
+$$</p>
+<h3 id="example-7-comparing-the-trapezoidals-and-simpsons-rules">Example 7. Comparing the Trapezoidal’s and Simpson’s Rules<a hidden class="anchor" aria-hidden="true" href="#example-7-comparing-the-trapezoidals-and-simpsons-rules">#</a></h3>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled%204.png" alt="Untitled"  />
+</p>
+<p>Notice that if $f(x)$ is a polynomial of degree less than $4$, then $f^{(4)}$ is zero, and Simpson’s rule shows no error no matter how many steps. Similarly, for constant or linear functions, the $f''$ is zero, therefore the Trapezoidal rule shows no error.</p>
+<h3 id="example-8-estimate">Example 8. Estimate<a hidden class="anchor" aria-hidden="true" href="#example-8-estimate">#</a></h3>
+<p>$$
+\int_0^2 x^3 dx
+$$</p>
+<p>with Simpson’s Rule.</p>
+<p>Solution. Indeed, with $n=2$ and $\Delta x = 1$, we find</p>
+<p>$$
+S = \frac{1}{3}(y_0+4y_1+y_2) = 4
+$$</p>
+<p>which is exactly the value of integration.</p>
+<h3 id="example-9-a-real-case">Example 9. A Real Case<a hidden class="anchor" aria-hidden="true" href="#example-9-a-real-case">#</a></h3>
+<p><img loading="lazy" src="W7-S2%20Nume%201c898/Untitled%205.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/numerical/">numerical</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/integration/">integration</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/integral/">integral</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/simpson/">simpson</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/trapezoidal/">trapezoidal</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
