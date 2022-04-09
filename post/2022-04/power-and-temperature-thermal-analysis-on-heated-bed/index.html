@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>功率与加热温度的关系在3D打印机热床温度上的应用 | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="3DP, math, thermal, heated bed, carbon fiber, alluminum, glass" />
+<meta name="description" content="一. 背景介绍 设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-04/power-and-temperature-thermal-analysis-on-heated-bed/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="功率与加热温度的关系在3D打印机热床温度上的应用" />
+<meta property="og:description" content="一. 背景介绍 设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-04/power-and-temperature-thermal-analysis-on-heated-bed/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-10T07:28:47&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-10T07:28:47&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="功率与加热温度的关系在3D打印机热床温度上的应用"/>
+<meta name="twitter:description" content="一. 背景介绍 设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "功率与加热温度的关系在3D打印机热床温度上的应用",
+      "item": "http://tigertooth4.github.io/post/2022-04/power-and-temperature-thermal-analysis-on-heated-bed/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "功率与加热温度的关系在3D打印机热床温度上的应用",
+  "name": "功率与加热温度的关系在3D打印机热床温度上的应用",
+  "description": "一. 背景介绍 设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需",
+  "keywords": [
+    "3DP", "math", "thermal", "heated bed", "carbon fiber", "alluminum", "glass"
+  ],
+  "articleBody": "一. 背景介绍 设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需温度，是一个重要的问题。以前，在做打印机时，我经常使用 Tom 在早年视频中提到的经验公式。即要使热床能升温到 100 度的话，至少要达到每平方厘米 0.6 瓦的加热功率。使用这个原则倒是没出现过什么问题，我做的打印机一般都能升温到 100 度甚至更高。\n显然，提高功率会使升温更加轻松，但过高的功率又对电源产生较大的负载，甚至有时需要更换更大功率的电源。整体功率的增加又势必造成能耗的提升，想想一台中等大小的3D 打印机的电源功率都要近300瓦，对于电能的消耗确实是非常客观的。\n所以，能否通过理论计算，设计合理的热床功率呢？应用微积分，这个问题或许能够轻松解决了呢！\n二. 理论推导 以下部分，需要用到一点物理学知识。\n2.1 Newton 冷却定律 ${}^{[1]}$ Newton 得到的经验定律，论述为一个物体在冷却时的温度变化与它与周围环境的温度差成比例。设比例系数为 $k$, 则有\n$$ \\begin{equation}\\frac{dH}{dt} = -r(H-H_s)\\end{equation} $$\n其中 $H$ 代表物体在时间 $t$ 时的温度，$H$ 和 $H_s$ 分别代表物体与外界环境的温度。 $r$ 是一个衡量散热的综合指标，应与物体的表面积，对流、传导和辐射都有关系，对散热至关重要。\n从公式 (1)，可以得到没有热源的情况下，从 $t_0$ 到$t$ 的温度变化的大致规律为指数递减：\n$$ \\begin{equation}H(t) = H_s + (H(t_0)-H_s)e^{-r(t-t_0)}.\\end{equation} $$\n若考虑散热功率和表面积，有如下Newton散热公式\n$$ \\begin{equation}Q = K_t A (H-H_s)\\end{equation} $$\n其中 $K_t$ 为散热系数，$A$ 为表面积，$Q$ 为散热功率${}^{[1]}$。\n所以，从 (2) 可见，若能观察温度曲线的变化，就可以大致推测出 $r$ 的取值。 $r$ 是和散热系数 $K_t$，物体的比热，表面积 $A$、和物体的质量（记为 $m$）都有关的一个常数。关于 $r$ 的具体表示，我们将在后一小节中给出。显然，$r$ 是一个可实际测量的量，因此在实践阶段，我们可以尽量其他需要测量的物理量用 $r$ 来表示。\n2.2 公式 (2) 和 (3) 的关系 假设物体的平均比热(specific heat)为 $C$，总质量为 $m$。则耗散的热量与温度变化的关系为\n$$ \\begin{equation}C m (H(t+dt) - H(t))=- K_t A (H-H_s)dt.\\end{equation} $$\n从 (4) 中消去 $dt$ 可得到\n$$ \\frac{d H}{dt} = - \\frac{K_t A}{C m} (H-H_s). $$\n对比冷却定律的简单形式 (1)，我们得到\n$$ \\begin{equation}r = \\frac{K_t A}{C m}.\\end{equation} $$\n故散热能力 $r$ 将正比于面积，反比于比热和总质量。\n2.3 热能的输入和输出 下文将考虑一般的平均比热为 $C$，质量为 $m$ 的物体，在加热功率为 $P$ ，外界温度为常值 $H_s$ 时，自身温度 $H$ 随时间的变化情况。\n显然，热源输入到物体的功率为 $P$，假设输入的热量仅用于物体的温度升高，以及通过各种方式耗散到外部环境中，则经过 $dt$ 的时间，输入的热能为 $P dt$ ，物体的温度升高所需的热能为 $C m (H(t+dt)-H(t))=C m H'(t) dt$，耗散到外界的热能为 $Q dt = K_t A (H-H_s)dt$。\n所以，我们得到如下公式\n$$ P dt = C m H'(t) dt + K_t A (H-H_s)dt $$\n消去 $dt$ 后得到\n$$ P= C m H'(t) + K_t A (H-H_s). $$\n假设输入功率 $P$ 是常数，外界温度 $H_s$ 也是常数，则 $H'(t) = (H(t)-H_s)'$。这样，我们可以得到 $H(t)-H_s$ 所满足的微分方程\n$$ Cm\\frac{d}{dt} (H-H_s) + K_t A (H-H_s) = P $$\n假设是从 $t_0$ 时刻开始升温，则到 $t$ 时刻，对上式进行积分，得到\n$$ \\begin{equation}H(t) = H_s + \\frac{P}{K_t A}\\left(1-e^{\\frac{K_t A}{C m}(t_0-t)}\\right)=H_s + \\frac{P}{r Cm}\\left(1-e^{-r(t-t_0)}\\right).\\end{equation} $$\n2.4 对温度公式 (6) 的分析 显然，温度公式 (6) 告诉我们在功率一定的前提下，加热温度具有极限，且极限仅与环境温度 $H_s$，功率 $P$， 散热系数 $K_t$ 以及表面积 $A$ 有关。\n$$ \\begin{equation}H_{\\text{limit}}=\\lim_{t\\to+\\infty}H(t) = H_s + \\frac{P}{K_t A}=H_s + \\frac{P}{r C m}.\\end{equation} $$\n对于3D打印机的热床，其结构基本上是一片大电阻。如果使用 Bangbang 控制的话，当加热时功率是一定的，知道散热系数 $K_t$ 和表面积 $A$，就可以知道长时间加热下去能达到的最高温度是多少。另一方面，设定好理论最高温度，也可以帮助我们确定加热片的额定功率，也许能让我们对经验公式做出更好的改进。\n三. 实际分析 3.1 对 Ender3 Pro 的分析（铝基板+玻璃热床） 以下的图表为 Ender3 Pro 一段打印结束后，打印机的喷头，热床的降温曲线。\n可以从图中看到，在大约 -12 分钟时，热床停止了加热。在停止加热后， -12 至 -4 分钟范围内，热床（蓝色曲线）指示的温度从110度降到了 69 度。设环境温度为20度，则利用牛顿冷却定律，我们可以计算出 $r$ 的值 $r\\approx -\\frac{1}{60(12-4)}\\ln\\left(\\frac{69-20}{110-20}\\right)\\approx 0.001267$ 。\nEnder3 Pro 的热床材料主要为铝基板和上层的玻璃。通过查阅维基百科，结合 End3 Pro 的实际参数，计算得到如下数据。\n   材料 密度 ($\\text{g}/\\text{cm}^3$) 比热（specific heat $\\text{J}/\\text{g}\\text{K}$) 面积（$\\text{cm}^2$） 厚度（$\\text{cm}$） 质量（$\\text{g}$）     铝基板 2.7 0.897 $23.5\\times 23.5$ 0.4 596.43   不锈钢板 2.5 0.840 $23.5\\times 23.5$ 0.4 552.25    所以，\n$$ C m = 0.897\\times 596.43 + 0.840 \\times 552.25 = 998.888, \\ r Cm \\approx 0.001267\\times 998.888 = 1.26559. $$\n由 (5) 进一步计算可知\n$$ K_t = \\dfrac{r Cm}{A} \\approx \\dfrac{1.26559}{23.5\\times 23.5} \\approx 0.00229. $$\n3.1.1 升温的实际计算 若 Ender3 Pro 的热床功率为 200瓦，则公式 (7) 给出的理论极限温度为\n$$ H = H_s + \\frac{P}{r Cm} \\approx 20 + \\frac{200}{0.001267\\times 998.888}= 178.209^\\circ \\text{C} $$\n按照现有公式计算，200 瓦功率的热床在20度室温情况下的升温曲线如下图所示：在5分钟，10分钟范围内，将把热床分别加热到 69.9 和 104 度。要升温到 110度则需要 11 分钟。\n实际加热的结果如下图所示：\n可以发现，蓝色实线代表热床的升温曲线，从约-10min 开始加热，加热开始的时候的室温略低于上述计算时使用的温度 (约为18度），加热到 105度时大概是当前时间，故总用时大约为10分钟，与之前的计算还是十分吻合的。\n3.2 对 CompactXY 的分析 (碳纤维板+弹簧钢热床) CompactXY 将热床升温至 100 度后，关闭热床热源的加热，其降温曲线如下图所示。\n可以从图中看到，在大约 -10分钟时，热床停止了加热。在停止加热后， -10 至 0分钟范围内，热床（蓝色曲线）指示的温度从100度降到了 40 度。设环境温度为21度，则利用牛顿冷却定律，我们可以计算出 $r$ 的值 $r\\approx -\\frac{1}{60(10-0)}\\ln\\left(\\frac{40-21}{100-21}\\right)\\approx 0.00237501$.\n通过查询网上资料，结合 CompactXY 的实际参数，计算得到如下数据\n   材料 密度 ($\\text{g}/\\text{cm}^3$) 比热（specific heat $\\text{J}/\\text{g}\\text{K}$) 面积（$\\text{cm}^2$） 厚度（$\\text{cm}$） 质量（$\\text{g}$）     碳纤维板 2 1.075 ${}^{[2]}$ $11.8\\times 11.4$ 0.4 107.616   不锈钢板 7.87 0.466 $11.8\\times 11.4$ 0.05 52.934    所以，\n$$ rCm = 0.00237501\\times(1.075\\times 107.616+0.466\\times 52.934 )= 0.333 $$\n$$ K_t = rCm/A = \\frac{0.00237501\\times(1.075\\times 107.616+0.466\\times 52.934 ) }{11.8\\times 11.4}=0.002478 $$\n3.2.1 升温的实际计算 若 CompactXY 的热床功率为 80瓦，则公式 (7) 给出的理论极限温度为\n$$ H = H_s + \\frac{P}{r Cm} \\approx 20 + \\frac{80}{0.333}\\approx 260^\\circ \\text{C} $$\n按照现有公式计算，80 瓦功率的热床在20度室温情况下的升温曲线如下图所示：在1.5分钟，3分钟范围内，将把热床分别加热到 66 和 103 度。根据以上数据，绘制出理论的升温曲线，使用时间单位为分钟，见下图。\n实际的升温曲线如下图所示：\n可见，实际从室温升高到 100 度所需的时间约为 3 分钟，与升温曲线所示的结果比较吻合。\n3.3 有关于经验公式 利用极限温度公式 (7)\n$$ H_{\\text{limit}} = H_s + \\dfrac{P}{K_t A} = H_s + \\dfrac{P}{{r C m\\over A} \\cdot A} $$\n得到\n$$ \\begin{equation}P/A= (H_{\\text{limit}}-H_s) K_t = (H_{\\text{limit}}-H_s)\\dfrac{r C m}{A}.\\end{equation} $$\n可见，极限温度基本上与所需功率密度呈线性关系。以 Ender3 Pro 的热床为例，当极限温度是 120度，室温为20度时，最小功率密度约为\n$$ P/A \\approx (120-20)\\times 0.00229 = 0.2 \\text{W}/\\text{cm}^2. $$\n但是，考虑到极限温度是必须经历无穷长的时间才能达到的。现实中我们不可能等待那么久。比较合理的升温等待时间也许是 5-10 分钟。若按 8 分钟计算，我们可以得到一个更合理的功率/面积比值。利用公式 (6)，有\n$$ \\begin{equation}\\frac{P}{A} = \\dfrac{K_t (H(t)-H_s)}{1-e^{-r (t-t_0)}} = 0.50258 \\text{W}/\\text{cm}^2.\\end{equation} $$\n看来，经验公式还是比较可信的。因此，合理的 Ender3 Pro 热床功率应约为 280 瓦。\n3.4 两种热床加热效率的横向比较 我们假设两种热床的 $K_t$ 值是反应材质属性的常数，不随热床面积的变化而变化。则在同等功率 200 瓦，同等面积 $23.5\\times 23.5$ $\\text{cm}^2$ 的基础上，我们来比较两种热床的升温速度。\n其中，$\\mathrm{H_{cb}}(t)$ 代表碳纤维板的升温曲线，而 $\\mathrm{H_{al}}(t)$ 代表铝基板的升温曲线。可以看到，碳纤维板热床的升温速度超过了铝基板热床。\n四. 总结 基于微积分的基本规律和 Newton 冷却定律，我们得到了热床功率和实际升温关系的公式 (6) 和 (7)。我们验证了Tom 早期在视频中提到的经验结论，即每平方厘米 0.6 瓦的功率。但我们对经验结论有不同的解释：此功率可以保证热床在可以接受的时间内升温到100度。我们用升温公式，分析了两种热床的升温情况，得到的升温时间基本与实际情况吻合。这些实际计算的基础都是需要观测并利用公式 (2) 计算出 $r$ 的值。其他计算则需要了解热床的相关参数，例如材质、密度、比热、表面积等等。最后，我们还比较了两种典型的热床配置，即铝基板+玻璃、碳纤维板+弹簧钢的升温速度。发现，碳纤维板+弹簧钢的配置升温更快。这里，我们没有研究保温材料对于升温的影响。例如，可以问如下的问题：\n若增加保温材料，则会减小 $r$，使得极限温度升高。那么，增加保温材料究竟对升温的影响有多显著？\n这样的问题可以今后继续研究。\n参考材料 [1] Newton’s law of cooling - Wikipedia\n[2]\n Cp showed a linear dependence on temperature where the Cp values were around ~0.85 J/(gr·K) at 25 °C and ~1.30 J/(gr·K) at 200 °C\n \n",
+  "wordCount" : "3351",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-10T07:28:47+08:00",
+  "dateModified": "2022-04-10T07:28:47+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-04/power-and-temperature-thermal-analysis-on-heated-bed/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      功率与加热温度的关系在3D打印机热床温度上的应用
+    </h1>
+    <div class="post-meta"><span title='2022-04-10 07:28:47 +0800 CST'>April 10, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="一-背景介绍">一. 背景介绍<a hidden class="anchor" aria-hidden="true" href="#一-背景介绍">#</a></h1>
+<p>设计3D打印机的热床时，热床的升温能力关乎着打印的成功与否。过低的温度会造成打印件翘曲，导致打印失败。因此，热床是否能升温到所需温度，是一个重要的问题。以前，在做打印机时，我经常使用 Tom 在早年视频中提到的经验公式。即要使热床能升温到 100 度的话，至少要达到<strong>每平方厘米 0.6 瓦</strong>的加热功率。使用这个原则倒是没出现过什么问题，我做的打印机一般都能升温到 100 度甚至更高。</p>
+<p>显然，提高功率会使升温更加轻松，但过高的功率又对电源产生较大的负载，甚至有时需要更换更大功率的电源。整体功率的增加又势必造成能耗的提升，想想一台中等大小的3D 打印机的电源功率都要近300瓦，对于电能的消耗确实是非常客观的。</p>
+<p>所以，能否通过理论计算，设计合理的热床功率呢？应用微积分，这个问题或许能够轻松解决了呢！</p>
+<h1 id="二-理论推导">二. 理论推导<a hidden class="anchor" aria-hidden="true" href="#二-理论推导">#</a></h1>
+<p>以下部分，需要用到一点物理学知识。</p>
+<h2 id="21-newton-冷却定律-1">2.1 Newton 冷却定律 ${}^{[1]}$<a hidden class="anchor" aria-hidden="true" href="#21-newton-冷却定律-1">#</a></h2>
+<p>Newton 得到的经验定律，论述为一个物体在冷却时的温度变化与它与周围环境的温度差成比例。设比例系数为 $k$, 则有</p>
+<p>$$
+\begin{equation}\frac{dH}{dt} = -r(H-H_s)\end{equation}
+$$</p>
+<p>其中 $H$ 代表物体在时间 $t$  时的温度，$H$ 和 $H_s$ 分别代表物体与外界环境的温度。 $r$ 是一个衡量散热的综合指标，应与物体的表面积，对流、传导和辐射都有关系，对散热至关重要。</p>
+<p>从公式 (1)，可以得到没有热源的情况下，从 $t_0$ 到$t$  的温度变化的大致规律为指数递减：</p>
+<p>$$
+\begin{equation}H(t) = H_s + (H(t_0)-H_s)e^{-r(t-t_0)}.\end{equation}
+$$</p>
+<p>若考虑散热功率和表面积，有如下Newton散热公式</p>
+<p>$$
+\begin{equation}Q = K_t A (H-H_s)\end{equation}
+$$</p>
+<p>其中 $K_t$ 为散热系数，$A$ 为表面积，$Q$ 为散热功率${}^{[1]}$。</p>
+<p>所以，从 (2) 可见，若能观察温度曲线的变化，就可以大致推测出 $r$  的取值。 $r$  是和散热系数 $K_t$，物体的比热，表面积 $A$、和物体的质量（记为 $m$）都有关的一个常数。关于 $r$ 的具体表示，我们将在后一小节中给出。显然，$r$  是一个可实际测量的量，因此在实践阶段，我们可以尽量其他需要测量的物理量用 $r$ 来表示。</p>
+<h2 id="22-公式-2-和-3-的关系">2.2 公式 (2) 和 (3) 的关系<a hidden class="anchor" aria-hidden="true" href="#22-公式-2-和-3-的关系">#</a></h2>
+<p>假设物体的平均比热(specific heat)为 $C$，总质量为 $m$。则耗散的热量与温度变化的关系为</p>
+<p>$$
+\begin{equation}C m (H(t+dt) - H(t))=- K_t A (H-H_s)dt.\end{equation}
+$$</p>
+<p>从 (4) 中消去 $dt$ 可得到</p>
+<p>$$
+\frac{d H}{dt} = - \frac{K_t A}{C m} (H-H_s).
+$$</p>
+<p>对比冷却定律的简单形式 (1)，我们得到</p>
+<p>$$
+\begin{equation}r = \frac{K_t A}{C m}.\end{equation}
+$$</p>
+<p>故散热能力 $r$ 将正比于面积，反比于比热和总质量。</p>
+<h2 id="23-热能的输入和输出">2.3 热能的输入和输出<a hidden class="anchor" aria-hidden="true" href="#23-热能的输入和输出">#</a></h2>
+<p>下文将考虑一般的平均比热为 $C$，质量为 $m$ 的物体，在加热功率为 $P$ ，外界温度为常值 $H_s$ 时，自身温度 $H$  随时间的变化情况。</p>
+<p>显然，热源输入到物体的功率为 $P$，假设输入的热量仅用于物体的温度升高，以及通过各种方式耗散到外部环境中，则经过 $dt$ 的时间，输入的热能为  $P dt$ ，物体的温度升高所需的热能为 $C m (H(t+dt)-H(t))=C m H'(t) dt$，耗散到外界的热能为 $Q dt = K_t A (H-H_s)dt$。</p>
+<p>所以，我们得到如下公式</p>
+<p>$$
+P dt = C m H'(t) dt + K_t A (H-H_s)dt
+$$</p>
+<p>消去 $dt$ 后得到</p>
+<p>$$
+P= C m H'(t) + K_t A (H-H_s).
+$$</p>
+<p>假设输入功率 $P$ 是常数，外界温度 $H_s$ 也是常数，则 $H'(t) = (H(t)-H_s)'$。这样，我们可以得到 $H(t)-H_s$ 所满足的微分方程</p>
+<p>$$
+Cm\frac{d}{dt} (H-H_s) + K_t A (H-H_s) = P
+$$</p>
+<p>假设是从 $t_0$  时刻开始升温，则到 $t$ 时刻，对上式进行积分，得到</p>
+<p>$$
+\begin{equation}H(t) = H_s + \frac{P}{K_t A}\left(1-e^{\frac{K_t A}{C m}(t_0-t)}\right)=H_s + \frac{P}{r Cm}\left(1-e^{-r(t-t_0)}\right).\end{equation}
+$$</p>
+<h2 id="24-对温度公式-6-的分析">2.4 对温度公式 (6) 的分析<a hidden class="anchor" aria-hidden="true" href="#24-对温度公式-6-的分析">#</a></h2>
+<p>显然，温度公式 (6) 告诉我们在功率一定的前提下，加热温度具有极限，且极限仅与环境温度 $H_s$，功率 $P$， 散热系数 $K_t$ 以及表面积 $A$ 有关。</p>
+<p>$$
+\begin{equation}H_{\text{limit}}=\lim_{t\to+\infty}H(t) = H_s + \frac{P}{K_t A}=H_s + \frac{P}{r C m}.\end{equation}
+$$</p>
+<p>对于3D打印机的热床，其结构基本上是一片大电阻。如果使用 Bangbang 控制的话，当加热时功率是一定的，知道散热系数 $K_t$ 和表面积 $A$，就可以知道长时间加热下去能达到的最高温度是多少。另一方面，设定好理论最高温度，也可以帮助我们确定加热片的额定功率，也许能让我们对经验公式做出更好的改进。</p>
+<h1 id="三-实际分析">三. 实际分析<a hidden class="anchor" aria-hidden="true" href="#三-实际分析">#</a></h1>
+<h2 id="31-对-ender3-pro-的分析铝基板玻璃热床">3.1 对 Ender3 Pro 的分析（铝基板+玻璃热床）<a hidden class="anchor" aria-hidden="true" href="#31-对-ender3-pro-的分析铝基板玻璃热床">#</a></h2>
+<p>以下的图表为 Ender3 Pro 一段打印结束后，打印机的喷头，热床的降温曲线。</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/Untitled.png" alt="Untitled"  />
+</p>
+<p>可以从图中看到，在大约 -12 分钟时，热床停止了加热。在停止加热后， -12 至 -4 分钟范围内，热床（蓝色曲线）指示的温度从110度降到了 69 度。设环境温度为20度，则利用牛顿冷却定律，我们可以计算出 $r$ 的值 $r\approx -\frac{1}{60(12-4)}\ln\left(\frac{69-20}{110-20}\right)\approx 0.001267$ 。</p>
+<p>Ender3 Pro 的热床材料主要为铝基板和上层的玻璃。通过查阅维基百科，结合 End3 Pro 的实际参数，计算得到如下数据。</p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>密度 ($\text{g}/\text{cm}^3$)</th>
+<th>比热（specific heat $\text{J}/\text{g}\text{K}$)</th>
+<th>面积（$\text{cm}^2$）</th>
+<th>厚度（$\text{cm}$）</th>
+<th>质量（$\text{g}$）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>铝基板</td>
+<td>2.7</td>
+<td>0.897</td>
+<td>$23.5\times 23.5$</td>
+<td>0.4</td>
+<td>596.43</td>
+</tr>
+<tr>
+<td>不锈钢板</td>
+<td>2.5</td>
+<td>0.840</td>
+<td>$23.5\times 23.5$</td>
+<td>0.4</td>
+<td>552.25</td>
+</tr>
+</tbody>
+</table>
+<p>所以，</p>
+<p>$$
+C m = 0.897\times 596.43 + 0.840 \times 552.25 = 998.888, \ r Cm \approx 0.001267\times 998.888 = 1.26559.
+$$</p>
+<p>由 (5) 进一步计算可知</p>
+<p>$$
+K_t = \dfrac{r Cm}{A} \approx \dfrac{1.26559}{23.5\times 23.5} \approx 0.00229.
+$$</p>
+<h3 id="311-升温的实际计算">3.1.1 升温的实际计算<a hidden class="anchor" aria-hidden="true" href="#311-升温的实际计算">#</a></h3>
+<p>若 Ender3 Pro 的热床功率为 200瓦，则公式 (7) 给出的理论极限温度为</p>
+<p>$$
+H = H_s + \frac{P}{r Cm} \approx 20 + \frac{200}{0.001267\times 998.888}= 178.209^\circ \text{C}
+$$</p>
+<p>按照现有公式计算，200 瓦功率的热床在20度室温情况下的升温曲线如下图所示：在5分钟，10分钟范围内，将把热床分别加热到 69.9 和 104 度。要升温到 110度则需要 11 分钟。</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>实际加热的结果如下图所示：</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/%E6%9C%AA%E5%91%BD%E5%90%8D.png" alt="未命名.png"  />
+</p>
+<p>可以发现，蓝色实线代表热床的升温曲线，从约-10min 开始加热，加热开始的时候的室温略低于上述计算时使用的温度 (约为18度），加热到 105度时大概是当前时间，故总用时大约为10分钟，与之前的计算还是十分吻合的。</p>
+<h2 id="32-对-compactxy-的分析-碳纤维板弹簧钢热床">3.2 对 CompactXY 的分析 (碳纤维板+弹簧钢热床)<a hidden class="anchor" aria-hidden="true" href="#32-对-compactxy-的分析-碳纤维板弹簧钢热床">#</a></h2>
+<p>CompactXY 将热床升温至 100 度后，关闭热床热源的加热，其降温曲线如下图所示。</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/%E6%88%AA%E5%B1%8F2022-04-08_22.42.59.png" alt="截屏2022-04-08 22.42.59.png"  />
+</p>
+<p>可以从图中看到，在大约 -10分钟时，热床停止了加热。在停止加热后， -10 至 0分钟范围内，热床（蓝色曲线）指示的温度从100度降到了 40 度。设环境温度为21度，则利用牛顿冷却定律，我们可以计算出 $r$ 的值 $r\approx -\frac{1}{60(10-0)}\ln\left(\frac{40-21}{100-21}\right)\approx 0.00237501$.</p>
+<p>通过查询网上资料，结合 CompactXY 的实际参数，计算得到如下数据</p>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>密度 ($\text{g}/\text{cm}^3$)</th>
+<th>比热（specific heat $\text{J}/\text{g}\text{K}$)</th>
+<th>面积（$\text{cm}^2$）</th>
+<th>厚度（$\text{cm}$）</th>
+<th>质量（$\text{g}$）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>碳纤维板</td>
+<td>2</td>
+<td>1.075 ${}^{[2]}$</td>
+<td>$11.8\times 11.4$</td>
+<td>0.4</td>
+<td>107.616</td>
+</tr>
+<tr>
+<td>不锈钢板</td>
+<td>7.87</td>
+<td>0.466</td>
+<td>$11.8\times 11.4$</td>
+<td>0.05</td>
+<td>52.934</td>
+</tr>
+</tbody>
+</table>
+<p>所以，</p>
+<p>$$
+rCm = 0.00237501\times(1.075\times 107.616+0.466\times 52.934 )= 0.333
+$$</p>
+<p>$$
+K_t = rCm/A = \frac{0.00237501\times(1.075\times 107.616+0.466\times 52.934 ) }{11.8\times 11.4}=0.002478
+$$</p>
+<h3 id="321-升温的实际计算">3.2.1 升温的实际计算<a hidden class="anchor" aria-hidden="true" href="#321-升温的实际计算">#</a></h3>
+<p>若 CompactXY 的热床功率为 80瓦，则公式 (7) 给出的理论极限温度为</p>
+<p>$$
+H = H_s + \frac{P}{r Cm} \approx 20 + \frac{80}{0.333}\approx 260^\circ \text{C}
+$$</p>
+<p>按照现有公式计算，80 瓦功率的热床在20度室温情况下的升温曲线如下图所示：在1.5分钟，3分钟范围内，将把热床分别加热到 66 和 103 度。根据以上数据，绘制出理论的升温曲线，使用时间单位为分钟，见下图。</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>实际的升温曲线如下图所示：</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/%E6%88%AA%E5%B1%8F2022-04-08_22.42.59%201.png" alt="截屏2022-04-08 22.42.59.png"  />
+</p>
+<p>可见，实际从室温升高到 100 度所需的时间约为 3 分钟，与升温曲线所示的结果比较吻合。</p>
+<h2 id="33-有关于经验公式">3.3 有关于经验公式<a hidden class="anchor" aria-hidden="true" href="#33-有关于经验公式">#</a></h2>
+<p>利用极限温度公式 (7)</p>
+<p>$$
+H_{\text{limit}} = H_s + \dfrac{P}{K_t A} = H_s + \dfrac{P}{{r C m\over A} \cdot A}
+$$</p>
+<p>得到</p>
+<p>$$
+\begin{equation}P/A= (H_{\text{limit}}-H_s) K_t = (H_{\text{limit}}-H_s)\dfrac{r C m}{A}.\end{equation}
+$$</p>
+<p>可见，极限温度基本上与所需功率密度呈线性关系。以 Ender3 Pro 的热床为例，当极限温度是 120度，室温为20度时，最小功率密度约为</p>
+<p>$$
+P/A \approx (120-20)\times 0.00229 = 0.2 \text{W}/\text{cm}^2.
+$$</p>
+<p>但是，考虑到极限温度是必须经历无穷长的时间才能达到的。现实中我们不可能等待那么久。比较合理的升温等待时间也许是 5-10 分钟。若按 8 分钟计算，我们可以得到一个更合理的功率/面积比值。利用公式 (6)，有</p>
+<p>$$
+\begin{equation}\frac{P}{A} = \dfrac{K_t (H(t)-H_s)}{1-e^{-r (t-t_0)}} = 0.50258  \text{W}/\text{cm}^2.\end{equation}
+$$</p>
+<p>看来，经验公式还是比较可信的。因此，合理的 Ender3 Pro 热床功率应约为 280 瓦。</p>
+<h2 id="34-两种热床加热效率的横向比较">3.4 两种热床加热效率的横向比较<a hidden class="anchor" aria-hidden="true" href="#34-两种热床加热效率的横向比较">#</a></h2>
+<p>我们假设两种热床的 $K_t$ 值是反应材质属性的常数，不随热床面积的变化而变化。则在同等功率 200 瓦，同等面积 $23.5\times 23.5$ $\text{cm}^2$ 的基础上，我们来比较两种热床的升温速度。</p>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>其中，$\mathrm{H_{cb}}(t)$ 代表碳纤维板的升温曲线，而 $\mathrm{H_{al}}(t)$ 代表铝基板的升温曲线。可以看到，碳纤维板热床的升温速度超过了铝基板热床。</p>
+<h1 id="四-总结">四. 总结<a hidden class="anchor" aria-hidden="true" href="#四-总结">#</a></h1>
+<p>基于微积分的基本规律和 Newton 冷却定律，我们得到了热床功率和实际升温关系的公式 (6) 和 (7)。我们验证了Tom 早期在视频中提到的经验结论，即每平方厘米 0.6 瓦的功率。但我们对经验结论有不同的解释：此功率可以保证热床在可以接受的时间内升温到100度。我们用升温公式，分析了两种热床的升温情况，得到的升温时间基本与实际情况吻合。这些实际计算的基础都是需要观测并利用公式 (2) 计算出 $r$ 的值。其他计算则需要了解热床的相关参数，例如材质、密度、比热、表面积等等。最后，我们还比较了两种典型的热床配置，即铝基板+玻璃、碳纤维板+弹簧钢的升温速度。发现，碳纤维板+弹簧钢的配置升温更快。这里，我们没有研究保温材料对于升温的影响。例如，可以问如下的问题：</p>
+<p>若增加保温材料，则会减小 $r$，使得极限温度升高。那么，增加保温材料究竟对升温的影响有多显著？</p>
+<p>这样的问题可以今后继续研究。</p>
+<h1 id="参考材料">参考材料<a hidden class="anchor" aria-hidden="true" href="#参考材料">#</a></h1>
+<p>[1]
+<a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling">Newton&rsquo;s law of cooling - Wikipedia</a></p>
+<p>[2]</p>
+<blockquote>
+<p>Cp showed a linear dependence on temperature where the Cp values were around ~0.85 J/(gr·K) at 25 °C and ~1.30 J/(gr·K) at 200 °C</p>
+</blockquote>
+<p><img loading="lazy" src="%E5%8A%9F%E7%8E%87%E4%B8%8E%E5%8A%A0%E7%83%AD%E6%B8%A9%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB%2035564/%E6%88%AA%E5%B1%8F2022-04-09_15.15.57.png" alt="截屏2022-04-09 15.15.57.png"  />
+</p>
+<p><a href="https://www.researchgate.net/profile/Ronald-Joven/publication/262007032_Thermal_properties_of_carbon_fiberepoxy_composites_with_different_fabric_weaves/links/5590497808ae47a3490ec81e/Thermal-properties-of-carbon-fiber-epoxy-composites-with-different-fabric-weaves.pdf?origin=publication_detail"></a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/thermal/">thermal</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/heated-bed/">heated bed</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/carbon-fiber/">carbon fiber</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/alluminum/">alluminum</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/glass/">glass</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
