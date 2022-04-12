@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W8-§1 Improper Integrals | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="Improper Integrals, Calculus, Lecture, Convergence, Tests" />
+<meta name="description" content="周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W8-§1 Improper Integrals" />
+<meta property="og:description" content="周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-12T16:22:15&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-12T16:22:15&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W8-§1 Improper Integrals"/>
+<meta name="twitter:description" content="周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W8-§1 Improper Integrals",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W8-§1 Improper Integrals",
+  "name": "W8-§1 Improper Integrals",
+  "description": "周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of",
+  "keywords": [
+    "Improper Integrals", "Calculus", "Lecture", "Convergence", "Tests"
+  ],
+  "articleBody": "周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1\nIn this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure.\nOutline  Improper Integrals of Type I Improper Integrals of Type II The Convergence Tests  Preliminary Examples Example (a). An integral defined on an infinite domain $$ \\int_1^{\\infty}{\\ln(x)\\over x^2}dx, $$ is integrated on $[1,+\\infty)$.\nExample (b). The range of the integrand is infinite $$ \\int_0^1 \\dfrac{1}{\\sqrt{x}}dx $$ is integrated on $[0,1]$, where the integrand is unbounded.\nInfinite Limits of Integration Type I Improper Integrals Definition. Integrals with infinite limits of integration, i.e. $$ \\int_a^{\\infty}f(x) dx,\\quad\\int_{-\\infty}^b f(x)dx,\\quad \\int_{-\\infty}^\\infty f(x)dx $$ are improper integrals of Type I.\nNOTE. The integrand $f(x)$ is considered integrable on every bounded sub-interval.\n➡️ If $f(x)$ is continuous on $[a,\\infty)$ , then the improper integral is defined by $$ \\int_a^\\infty f(x) dx := \\lim_{b\\to+\\infty}\\int_a^b f(x)dx. $$\n If the limit exists, we say that the improper integral converges and that the limit is the value of the improper integral. If the limit fails to exist, the improper integral diverges.  Example. The region lies under the curve $y=e^{-x/2}$ in the first quadrant. ➡️ If $f(x)$ is continuous on $(-\\infty,b]$, then the improper integral is given by\n$$ \\int_{\\infty}^b f(x) dx := \\lim_{a\\to-\\infty}\\int_a^b f(x)dx. $$\n If the limit exists, we say that the improper integral converges and that the limit is the value of the improper integral. If the limit fails to exist, the improper integral diverges.  ➡️ If $f(x)$ is continous on $(-\\infty,+\\infty)$, then\n$$ \\int_{-\\infty}^\\infty f(x)dx := \\int_{-\\infty}^c f(x)dx + \\int_c^\\infty f(x)d x $$\nwhere $c$ is any real number.\n If BOTH the limits exist, we say that the improper integral converges and that the sum of limits is the value of the improper integral. If ANY of the limits fails to exist, the improper integral diverges.  Note It can be shown that the choices of $c$ is unimportant. We can evaluate or determine the convergence or divergence of $\\int_{-\\infty}^\\infty f(x) dx$ with any convenient choice.\nExample 1. Evaluating an Improper Integral on $[1,+\\infty)$ Find the area under the curve $y=\\ln(x)/x^2$ from $x=1$ to $x=\\infty$, is it finite? If so, what is it?\nExample 2. Evaluating an Integral on $(-\\infty,+\\infty)$ Evaluate\n$$ \\int_{-\\infty}^\\infty \\dfrac{dx}{1+x^2}. $$\nThe Integral $\\int_{a}^\\infty \\frac{1}{x^p} dx$ ($a0$) Example 3. Determining Convergence For what values of $p$ does the integral $\\int_1^\\infty\\frac{1}{x^p}dx$ converge? When it converges, what is its value?\nIntegrands with Vertical Asymptotes Another type of improper integral arises when the integrand has a vertical asymptote — an infinite discontinuity — at a limit of integration or at some point between the limits of integration.\nExample Consider the region in the first quadrant that lies under the curve $y=1/\\sqrt{x}$ from $x=0$ to $x=1$.\nType II Improper Integrals Definition. Integrals of functions that becomes infinite at a point within the interval of integration are Improper integrals of Type II .\n➡️ If $f(x)$ is continuous on $(a,b]$ and is discontinuous at $a$ then\n$$ \\int_a^b f(x)dx := \\lim_{h\\to 0^+}\\int_{a+h}^b f(x)dx. $$\n If the limit is finite we say the improper integral converges and that the limit is the value of the improper integral. If the limit does not exist, the integral diverges .  ➡️ If $f(x)$ is continuous on $[a,b)$ and is discontinuous at $b$, then\n$$ \\int_a^b f(x)dx :=\\lim_{h\\to0^+}\\int_a^{b-h}f(x)dx. $$\n If the limit is finite we say the improper integral converges and that the limit is the value of the improper integral. If the limit does not exist, the integral diverges .  ➡️ If $f(x)$ is discontinuous at $c$, where $a$$ \\int_a^bf(x)dx :=\\lim_{h\\to0^+}\\int_a^{c-h} f(x)dx + \\lim_{s\\to0^+}\\int_{c+s}^b f(x)dx. $$\n If the limits are BOTH finite we say the improper integral converges and that the limit is the value of the improper integral. If ANY of the limit does not exist, the integral diverges.  Example 4. A Divergent Improper Integral Investigate the convergence of\n$$ \\int_0^1 \\dfrac{1}{1-x}dx. $$\nExample 5. Vertical Asymptote at an Interior Point Evaluate\n$$ \\int_0^3 \\dfrac{dx}{(x-1)^{2/3}}dx $$\nExample 6. A Convergent Improper integral Evaluate\n$$ \\int_2^\\infty \\dfrac{x+3}{(x-1)(x^2+1)}dx. $$\nExample 7. Finding the Volume of an Infinite Solid The cross-sections of the solid horn in this graph perpendicular to the $x$-axis are circular disks with diameters reaching from the $x$-axis to the curve $y=e^x$, $-\\inftyExample 8. An Incorrect Calculation $$ \\int_0^3 \\dfrac{dx}{x-1} = \\ln |x-1|\\bigg]_{0}^3 = \\ln 2- \\ln 1 = \\ln 2. $$\nThis example illustrates what can go wrong if you mistake an improper integral for an ordinary integral. Whenever you encounter an integral $\\int_a^b f(x)dx$ you MUST examine the function $f$ on $[a,b]$ and then decide if the integral is improper. If $f$ is continuous on $[a,b]$, it will be proper, an ordinary integral.\nTest for Convergence and Divergence Sometimes, the integral might be very hard to evaluate directly. A good strategy is trying to determine whether it converges or diverges. Then if it is converges, we can evaluate numerically to get an approximation at least.\nThe principal tests for convergence of divergence are the Direct Comparison Test and the Limit Comparison Test.\nNote The comparison tests only work for non-negative or non-positive functions.\nExample 9. Investigating Convergence Does the integral $\\int_1^\\infty e^{-x^2}dx$ converge?\nTheorem 1. Direct Comparison Test Let $f$ and $g$ be continuous on $[a,+\\infty)$ with $0\\le f(x)\\le g(x)$ for all $x\\ge a$. Then\n $\\int_a^\\infty f(x)dx$ converges if $\\int_a^\\infty g(x)dx$ does, $\\int_a^\\infty g(x)dx$ diverges if $\\int_a^\\infty f(x)dx$ does.  Proof.\nExample 10. Using the Direct Comparison Test $$ (a)\\qquad\\qquad\\qquad \\int_1^\\infty \\dfrac{\\sin^2 x}{x^2} dx\\quad \\text{converges} $$\n$$ (b) \\qquad\\qquad\\qquad\\int_1^\\infty \\dfrac{1}{\\sqrt{x^2-0.1}}dx\\qquad \\text{diverges} $$\nTheorem 2. Limit Comparison Test If the positive functions $f$ and $g$ are continuous on $[a,+\\infty)$ and if\n$$ \\lim_{x\\to+\\infty}\\dfrac{f(x)}{g(x)} = L,\\qquad 0then\n$$ \\int_a^\\infty f(x)dx\\quad \\text{and} \\quad \\int_a^\\infty g(x)dx $$\nboth converge or both diverge.\nSketch for the proof.\nExample 11. Using the Limit Comparison Test Show that\n$$ \\int_1^\\infty \\dfrac{dx}{1+x^2} $$\nconverges by comparison with $\\int_1^\\infty \\frac{dx}{x^2}$. Find and compare the two integral values.\nExample 12. using the Limit Comparison Test Show that\n$$ \\int_1^\\infty \\dfrac{3}{e^x+5}dx $$\nconverges.\n",
+  "wordCount" : "1060",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-12T16:22:15+08:00",
+  "dateModified": "2022-04-12T16:22:15+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W8-§1 Improper Integrals
+    </h1>
+    <div class="post-meta"><span title='2022-04-12 16:22:15 +0800 CST'>April 12, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 8
+备注: Attendance check
+日期: April 13, 2022
+节次: 1</p>
+<p>In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called <strong>improper integrals</strong>. We would like to manage the integrations for these cases, via some limit procedure.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<ul>
+<li>Improper Integrals of Type I</li>
+<li>Improper Integrals of Type II</li>
+<li>The Convergence Tests</li>
+</ul>
+<h1 id="preliminary-examples">Preliminary Examples<a hidden class="anchor" aria-hidden="true" href="#preliminary-examples">#</a></h1>
+<h3 id="example-a-an-integral-defined-on-an-infinite-domain">Example (a). An integral defined on an infinite domain<a hidden class="anchor" aria-hidden="true" href="#example-a-an-integral-defined-on-an-infinite-domain">#</a></h3>
+<p>$$
+\int_1^{\infty}{\ln(x)\over x^2}dx,
+$$
+is integrated on $[1,+\infty)$.</p>
+<p><img loading="lazy" src="public/Untitled.png" alt="Untitled"  />
+</p>
+<h3 id="example-b-the-range-of-the-integrand-is-infinite">Example (b). The range of the integrand is infinite<a hidden class="anchor" aria-hidden="true" href="#example-b-the-range-of-the-integrand-is-infinite">#</a></h3>
+<p>$$
+\int_0^1 \dfrac{1}{\sqrt{x}}dx
+$$
+is integrated on $[0,1]$, where the integrand is unbounded.</p>
+<p><img loading="lazy" src="public/Untitled1.png" alt="Untitled"  />
+</p>
+<h1 id="infinite-limits-of-integration">Infinite Limits of Integration<a hidden class="anchor" aria-hidden="true" href="#infinite-limits-of-integration">#</a></h1>
+<h2 id="type-i-improper-integrals">Type I Improper Integrals<a hidden class="anchor" aria-hidden="true" href="#type-i-improper-integrals">#</a></h2>
+<p><strong>Definition. Integrals with infinite limits of integration, i.e.</strong>
+$$
+\int_a^{\infty}f(x) dx,\quad\int_{-\infty}^b f(x)dx,\quad
+\int_{-\infty}^\infty f(x)dx
+$$
+are <strong>improper integrals of Type I.</strong></p>
+<p><strong>NOTE.</strong> The integrand $f(x)$ is considered <strong>integrable</strong> on every bounded sub-interval.</p>
+<p>➡️ If $f(x)$ is continuous on $[a,\infty)$ , then the improper integral is defined by
+$$
+\int_a^\infty f(x) dx := \lim_{b\to+\infty}\int_a^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="public/plot1.png" alt="Plot1"  />
+</p>
+<ul>
+<li>If the limit exists,  we say that the improper integral <em>converges</em> and that the limit is the <em>value</em> of the improper integral.</li>
+<li>If the limit fails to exist, the improper integral <em>diverges</em>.</li>
+</ul>
+<h3 id="example-the-region-lies-under-the-curve-ye-x2-in-the-first-quadrant">Example. The region lies under the curve $y=e^{-x/2}$ in the first quadrant.<a hidden class="anchor" aria-hidden="true" href="#example-the-region-lies-under-the-curve-ye-x2-in-the-first-quadrant">#</a></h3>
+<p><img loading="lazy" src="public/Untitled2.png" alt="untitiled2"  />
+</p>
+<p>➡️ If $f(x)$ is continuous on $(-\infty,b]$, then the improper integral is given by</p>
+<p>$$
+\int_{\infty}^b f(x) dx := \lim_{a\to-\infty}\int_a^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="public/plot2.png" alt="Plot2"  />
+</p>
+<ul>
+<li>If the limit exists,  we say that the improper integral <em>converges</em> and that the limit is the <em>value</em> of the improper integral.</li>
+<li>If the limit fails to exist, the improper integral <em>diverges</em>.</li>
+</ul>
+<p>➡️ If $f(x)$ is continous on $(-\infty,+\infty)$, then</p>
+<p>$$
+\int_{-\infty}^\infty f(x)dx := \int_{-\infty}^c f(x)dx + \int_c^\infty f(x)d x
+$$</p>
+<p>where $c$ is any real number.</p>
+<p><img loading="lazy" src="public/plot3.png" alt="plot3"  />
+</p>
+<ul>
+<li>If <em>BOTH</em> the limits exist,  we say that the improper integral <em>converges</em> and that the sum of  limits is the <em>value</em> of the improper integral.</li>
+<li>If <em>ANY</em> of the limits fails to exist, the improper integral <em>diverges</em>.</li>
+</ul>
+<p><strong>Note</strong> It can be shown that the choices of $c$ is unimportant. We can evaluate or determine the convergence or divergence of $\int_{-\infty}^\infty f(x) dx$ with any convenient choice.</p>
+<h3 id="example-1-evaluating-an-improper-integral-on-1infty">Example 1. Evaluating an Improper Integral on $[1,+\infty)$<a hidden class="anchor" aria-hidden="true" href="#example-1-evaluating-an-improper-integral-on-1infty">#</a></h3>
+<p>Find the area under the curve $y=\ln(x)/x^2$ from $x=1$ to $x=\infty$, is it finite? If so, what is it?</p>
+<p><img loading="lazy" src="public/Untitled3.png" alt="Untitled"  />
+</p>
+<h3 id="example-2-evaluating-an-integral-on--inftyinfty">Example 2. Evaluating an Integral on $(-\infty,+\infty)$<a hidden class="anchor" aria-hidden="true" href="#example-2-evaluating-an-integral-on--inftyinfty">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_{-\infty}^\infty \dfrac{dx}{1+x^2}.
+$$</p>
+<p><img loading="lazy" src="public/Untitled4.png" alt="Untitled"  />
+</p>
+<h2 id="the-integral-int_ainfty-frac1xp-dx-a0">The Integral $\int_{a}^\infty \frac{1}{x^p} dx$ ($a&gt;0$)<a hidden class="anchor" aria-hidden="true" href="#the-integral-int_ainfty-frac1xp-dx-a0">#</a></h2>
+<h3 id="example-3-determining-convergence">Example 3. Determining Convergence<a hidden class="anchor" aria-hidden="true" href="#example-3-determining-convergence">#</a></h3>
+<p>For what values of $p$ does the integral $\int_1^\infty\frac{1}{x^p}dx$ converge? When it converges, what is its value?</p>
+<p><img loading="lazy" src="public/plot.png" alt="plot"  />
+</p>
+<h1 id="integrands-with-vertical-asymptotes">Integrands with Vertical Asymptotes<a hidden class="anchor" aria-hidden="true" href="#integrands-with-vertical-asymptotes">#</a></h1>
+<p>Another type of improper integral arises when the integrand has a vertical asymptote — an infinite discontinuity — at a limit of integration or at some point between the limits of integration.</p>
+<h3 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h3>
+<p>Consider the region in the first quadrant that lies under the curve $y=1/\sqrt{x}$ from $x=0$ to $x=1$.</p>
+<p><img loading="lazy" src="public/Untitled5.png" alt="Untitiled5"  />
+</p>
+<h2 id="type-ii-improper-integrals">Type II Improper Integrals<a hidden class="anchor" aria-hidden="true" href="#type-ii-improper-integrals">#</a></h2>
+<p><strong>Definition. Integrals of functions that becomes infinite at a point within the interval of integration are <em>Improper integrals of Type II</em> .</strong></p>
+<p>➡️ If $f(x)$ is continuous on $(a,b]$ and is discontinuous at $a$ then</p>
+<p>$$
+\int_a^b f(x)dx := \lim_{h\to 0^+}\int_{a+h}^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="public/plot4.png" alt="plot4"  />
+</p>
+<ul>
+<li>If the limit is finite we say the improper integral <em>converges</em> and that the limit is the <em>value</em>  of the improper integral.</li>
+<li>If the limit does not exist, the integral <em>diverges</em> .</li>
+</ul>
+<p>➡️ If $f(x)$ is continuous on $[a,b)$ and is discontinuous at $b$, then</p>
+<p>$$
+\int_a^b f(x)dx :=\lim_{h\to0^+}\int_a^{b-h}f(x)dx.
+$$</p>
+<p><img loading="lazy" src="public/plot5.png" alt="plot5"  />
+</p>
+<ul>
+<li>If the limit is finite we say the improper integral <em>converges</em> and that the limit is the <em>value</em>  of the improper integral.</li>
+<li>If the limit does not exist, the integral <em>diverges</em> .</li>
+</ul>
+<p>➡️ If $f(x)$ is discontinuous at $c$, where $a&lt;c&lt;b$, and continuous on $[a,c)\cup (c,b]$, then</p>
+<p>$$
+\int_a^bf(x)dx :=\lim_{h\to0^+}\int_a^{c-h} f(x)dx + \lim_{s\to0^+}\int_{c+s}^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="public/plot6.png" alt="plot6"  />
+</p>
+<ul>
+<li>If the limits are <em>BOTH</em> finite we say the improper integral <strong>converges</strong> and that the limit is the <strong>value</strong> of the improper integral.</li>
+<li>If <em>ANY</em> of the limit does not exist, the integral <strong>diverges</strong>.</li>
+</ul>
+<h3 id="example-4-a-divergent-improper-integral">Example 4. A Divergent Improper Integral<a hidden class="anchor" aria-hidden="true" href="#example-4-a-divergent-improper-integral">#</a></h3>
+<p>Investigate the convergence of</p>
+<p>$$
+\int_0^1 \dfrac{1}{1-x}dx.
+$$</p>
+<p><img loading="lazy" src="public/Untitled6.png" alt="Untitled"  />
+</p>
+<h3 id="example-5-vertical-asymptote-at-an-interior-point">Example 5. Vertical Asymptote at an Interior Point<a hidden class="anchor" aria-hidden="true" href="#example-5-vertical-asymptote-at-an-interior-point">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_0^3 \dfrac{dx}{(x-1)^{2/3}}dx
+$$</p>
+<p><img loading="lazy" src="public/Untitled7.png" alt="Untitled"  />
+</p>
+<h3 id="example-6-a-convergent-improper-integral">Example 6. A Convergent Improper integral<a hidden class="anchor" aria-hidden="true" href="#example-6-a-convergent-improper-integral">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_2^\infty \dfrac{x+3}{(x-1)(x^2+1)}dx.
+$$</p>
+<h3 id="example-7-finding-the-volume-of-an-infinite-solid">Example 7. Finding the Volume of an Infinite Solid<a hidden class="anchor" aria-hidden="true" href="#example-7-finding-the-volume-of-an-infinite-solid">#</a></h3>
+<p><img loading="lazy" src="public/Untitled8.png" alt="Untitled"  />
+</p>
+<p>The cross-sections of the solid horn in this graph perpendicular to the $x$-axis are circular disks with diameters reaching from the $x$-axis to the curve $y=e^x$, $-\infty&lt;x\le \ln2.$ Find the volume of the horn.</p>
+<h3 id="example-8-an-incorrect-calculation">Example 8. An Incorrect Calculation<a hidden class="anchor" aria-hidden="true" href="#example-8-an-incorrect-calculation">#</a></h3>
+<p>$$
+\int_0^3 \dfrac{dx}{x-1} = \ln |x-1|\bigg]_{0}^3 = \ln 2- \ln 1 = \ln 2.
+$$</p>
+<p>This example illustrates what can go wrong if you mistake an improper integral for an ordinary integral. Whenever you encounter an integral $\int_a^b f(x)dx$  you <strong>MUST</strong> examine the function $f$ on $[a,b]$ and then decide if the integral is improper. If $f$ is continuous on $[a,b]$, it will be proper, an ordinary integral.</p>
+<h1 id="test-for-convergence-and-divergence">Test for Convergence and Divergence<a hidden class="anchor" aria-hidden="true" href="#test-for-convergence-and-divergence">#</a></h1>
+<p>Sometimes, the integral might be very hard to evaluate directly. A good strategy is trying to determine whether it converges or diverges. Then if it is converges, we can evaluate numerically to get an approximation at least.</p>
+<p>The principal tests for convergence of divergence are the <strong>Direct Comparison Test</strong> and the <strong>Limit Comparison Test.</strong></p>
+<p><strong>Note</strong>  The comparison tests only work for non-negative or non-positive functions.</p>
+<h3 id="example-9-investigating-convergence">Example 9. Investigating Convergence<a hidden class="anchor" aria-hidden="true" href="#example-9-investigating-convergence">#</a></h3>
+<p><img loading="lazy" src="public/Untitled9.png" alt="Untitled"  />
+</p>
+<p>Does the integral $\int_1^\infty e^{-x^2}dx$ converge?</p>
+<h2 id="theorem-1-direct-comparison-test">Theorem 1. Direct Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-1-direct-comparison-test">#</a></h2>
+<p>Let $f$ and $g$ be continuous on $[a,+\infty)$ with $0\le f(x)\le g(x)$ for all $x\ge a$. Then</p>
+<ul>
+<li>$\int_a^\infty f(x)dx$  converges if $\int_a^\infty g(x)dx$ does,</li>
+<li>$\int_a^\infty g(x)dx$ diverges if $\int_a^\infty f(x)dx$  does.</li>
+</ul>
+<p><strong>Proof.</strong></p>
+<h3 id="example-10-using-the-direct-comparison-test">Example 10. Using the Direct Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-10-using-the-direct-comparison-test">#</a></h3>
+<p>$$
+(a)\qquad\qquad\qquad \int_1^\infty \dfrac{\sin^2 x}{x^2} dx\quad \text{converges}
+$$</p>
+<p>$$
+(b) \qquad\qquad\qquad\int_1^\infty \dfrac{1}{\sqrt{x^2-0.1}}dx\qquad \text{diverges}
+$$</p>
+<h2 id="theorem-2-limit-comparison-test">Theorem 2. Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-2-limit-comparison-test">#</a></h2>
+<p>If the positive functions $f$ and $g$ are continuous on $[a,+\infty)$ and if</p>
+<p>$$
+\lim_{x\to+\infty}\dfrac{f(x)}{g(x)} = L,\qquad 0&lt;L&lt;\infty ,
+$$</p>
+<p>then</p>
+<p>$$
+\int_a^\infty f(x)dx\quad \text{and} \quad \int_a^\infty g(x)dx
+$$</p>
+<p>both converge or both diverge.</p>
+<p><strong>Sketch for the proof.</strong></p>
+<h3 id="example-11-using-the-limit-comparison-test">Example 11. Using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-11-using-the-limit-comparison-test">#</a></h3>
+<p>Show that</p>
+<p>$$
+\int_1^\infty \dfrac{dx}{1+x^2}
+$$</p>
+<p>converges by comparison with $\int_1^\infty \frac{dx}{x^2}$. Find and compare the two integral values.</p>
+<h3 id="example-12-using-the-limit-comparison-test">Example 12. using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-12-using-the-limit-comparison-test">#</a></h3>
+<p>Show that</p>
+<p>$$
+\int_1^\infty \dfrac{3}{e^x+5}dx
+$$</p>
+<p>converges.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/improper-integrals/">Improper Integrals</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/tests/">Tests</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

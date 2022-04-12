@@ -6,7 +6,16 @@
     <description>Recent content on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 Apr 2022 07:28:47 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 16:22:15 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W8-§1 Improper Integrals</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</link>
+      <pubDate>Tue, 12 Apr 2022 16:22:15 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</guid>
+      <description>周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of</description>
+    </item>
+    
     <item>
       <title>功率与加热温度的关系在3D打印机热床温度上的应用</title>
       <link>http://tigertooth4.github.io/post/2022-04/power-and-temperature-thermal-analysis-on-heated-bed/</link>
