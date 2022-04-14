@@ -3,31 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://tigertooth4.github.io/tags/calculus/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/convergence/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/improper-integrals/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/differential-eqaution/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/divergence/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/improper-integral/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/lecture/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/slope-field/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/improper-integrals/</loc>
     <lastmod>2022-04-12T16:22:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,11 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</loc>
-    <lastmod>2022-04-12T16:22:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-04-12T16:22:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

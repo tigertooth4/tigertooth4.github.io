@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Apr 2022 16:22:15 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 12:36:20 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W8-S2 Improper Integrals and Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</link>
+      <pubDate>Thu, 14 Apr 2022 12:36:20 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</guid>
+      <description>周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition.</description>
+    </item>
+    
     <item>
       <title>W8-§1 Improper Integrals</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</link>

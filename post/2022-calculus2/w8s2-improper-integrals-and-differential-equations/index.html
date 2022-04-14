@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W8-S2 Improper Integrals and Differential Equations | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="Improper Integral, Convergence, Divergence, calculus, lecture, Differential Eqaution, Slope field" />
+<meta name="description" content="周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition.">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W8-S2 Improper Integrals and Differential Equations" />
+<meta property="og:description" content="周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-14T12:36:20&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-14T12:36:20&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W8-S2 Improper Integrals and Differential Equations"/>
+<meta name="twitter:description" content="周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W8-S2 Improper Integrals and Differential Equations",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W8-S2 Improper Integrals and Differential Equations",
+  "name": "W8-S2 Improper Integrals and Differential Equations",
+  "description": "周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition.",
+  "keywords": [
+    "Improper Integral", "Convergence", "Divergence", "calculus", "lecture", "Differential Eqaution", "Slope field"
+  ],
+  "articleBody": "周次: 8 日期: April 15, 2022 节次: 2\nIn this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations.\nType II Improper Integrals Definition. Integrals of functions that becomes infinite at a point within the interval of integration are Improper integrals of Type II.\n If $f(x)$ is continuous on $(a,b]$ and is discontinuous at $a$ then  $$ \\int_a^b f(x)dx := \\lim_{h\\to 0^+}\\int_{a+h}^b f(x)dx. $$\n If $f(x)$ is continuous on $[a,b)$ and is discontinuous at $b$, then  $$ \\int_a^b f(x)dx :=\\lim_{h\\to0^+}\\int_a^{b-h}f(x)dx. $$\n If $f(x)$ is discontinuous at $c$, where $a $$ \\int_a^bf(x)dx :=\\lim_{h\\to0^+}\\int_a^{c-h} f(x)dx + \\lim_{s\\to0^+}\\int_{c+s}^b f(x)dx. $$\nIn each case, if the limit is finite we say the improper integral converges and that the limit is the value of the improper integral. If the limit does not exist, the integral diverges.\nNote In Part 3, the integral on the left side of equation converges if both integrals on the right side converge; otherwise it diverges.\nExample 4. A Divergent Improper Integral Investigate the convergence of\n$$ \\int_0^1 \\dfrac{1}{1-x}dx. $$\nSolution.\nExample 5. Vertical Asymptote at an Interior Point Evaluate\n$$ \\int_0^3 \\dfrac{dx}{(x-1)^{2/3}}dx $$\nSolution.\nExample 6. A Convergent Improper integral Evaluate\n$$ \\int_2^\\infty \\dfrac{x+3}{(x-1)(x^2+1)}dx. $$\nExample 7. Finding the Volume of an Infinite Solid The cross-sections of the solid horn in this graph perpendicular to the $x$-axis are circular disks with diameters reaching from the $x$-axis to the curve $y=e^x$, $-\\inftySolution.\nExample 8. An Incorrect Calculation $$ \\int_0^3 \\dfrac{dx}{x-1} = \\ln |x-1|\\bigg]_{0}^3 = \\ln 2- \\ln 1 = \\ln 2. $$\nThis example illustrates what can go wrong if you mistake an improper integral for an ordinary integral. Whenever you encounter an integral $\\int_a^b f(x)dx$ you MUST examine the function $f$ on $[a,b]$ and then decide if the integral is improper. If $f$ is continuous on $[a,b]$, it will be proper, an ordinary integral.\nTest for Convergence and Divergence Sometimes, the integral might be very hard to evaluate directly. A good strategy is trying to determine whether it converges or diverges. Then if it is converges, we can evaluate numerically to get an approximation at least.\nThe principal tests for convergence of divergence are the Direct Comparison Test and the Limit Comparison Test.\nNote The following tests only works for non-negative or non-positive functions.\nExample 9. Investigating Convergence Does the integral $\\int_1^\\infty e^{-x^2}dx$ converge?\nSolution.\nTheorem 1. Direct Comparison Test Let $f$ and $g$ be continuous on $[a,+\\infty)$ with $0\\le f(x)\\le g(x)$ for all $x\\ge a$. Then\n $\\int_a^\\infty f(x)dx$ converges if $\\int_a^\\infty g(x)dx$ does, $\\int_a^\\infty g(x)dx$ diverges if $\\int_a^\\infty f(x)dx$ does.  Proof.\nExample 10. Using the Direct Comparison Test $$ (a)\\qquad\\qquad\\qquad \\int_1^\\infty \\dfrac{\\sin^2 x}{x^2} dx\\quad \\text{converges} $$\n$$ (b) \\qquad\\qquad\\qquad\\int_1^\\infty \\dfrac{1}{\\sqrt{x^2-0.1}}dx\\qquad \\text{diverges} $$\nTheorem 2. Limit Comparison Test If the positive functions $f$ and $g$ are continuous on $[a,+\\infty)$ and if\n$$ \\lim_{x\\to+\\infty}\\dfrac{f(x)}{g(x)} = L,\\qquad 0then\n$$ \\int_a^\\infty f(x)dx\\quad \\text{and} \\quad \\int_a^\\infty g(x)dx $$\nboth converge or both diverge.\nSketch for the proof.\nExample 11. Using the Limit Comparison Test Show that\n$$ \\int_1^\\infty \\dfrac{dx}{1+x^2} $$\nconverges by comparison with $\\int_1^\\infty \\frac{dx}{x^2}$. Find and compare the two integral values.\nExample 12. using the Limit Comparison Test Show that\n$$ \\int_1^\\infty \\dfrac{3}{e^x+5}dx $$\nconverges.\nChapter 9. Further Applications of Integration Overview. Previously we’ve learned anti-derivative. For a continuous function $f$, we found the general solution $F(x)$, whose derivative is $f(x)$, can be expressed by indefinite integral $\\int f(x)dx$.\nAnother view for the concept of anti-derivative, is that we are solving an equation related with function $f$ and an unknown function $F$, such that\n$$ \\frac{d F}{dx} = f(x). $$\nAny equation involving the derivative for unknown functions can be called a differential equation. Therefore what we did, was to solve a simplest differential equation.\nIn this chapter, we study several more involved differential equations, having the form\n$$ \\frac{dy}{dx} = f(x,y), $$\nwhere $f$ is a function of both the independent and dependent variables. We use the theory of indefinite integration to solve these differential equations, and investigate analytic, graphical and numerical solution methods.\n§ 9.1 Slope Fields and Separable Differential Equations General First-Order Differential Equations and Solutions. Definition. A First-order differential equation is an equation\n$$ \\begin{equation}\\frac{dy}{dx} = f(x,y)\\end{equation} $$\nin which $f(x,y)$ is a function of $x$ and $y$ defined on a region in the $xy$-plane.\nThe term “first-order”, refers to the highest order of derivative is having order $1$ in the equation.\nDefinition. A Solution of equation (1) is a differentiable function $y=y(x)$ defined on an interval $I$ of $x$-values such that\n$$ \\frac{d}{dx}y(x) = f(x,y(x)) $$\non that interval.\nDefinition. A general solution to equation (1) is a solution that contains all possible solutions. It may contain arbitrary constants, so that when constants are being fixed, then we get a particular solution.\nExample 1. Verifying Solution Functions Show that every member of the family of functions\n$$ y=\\frac{C}{x}+2 $$\nis a solution of the first-order differential equation\n$$ \\frac{dy}{dx} = \\frac1x(2-y),\\quad \\text{on } (0,\\infty) $$\nSometimes we need a particular solution rather than the general one to a differential equation\n$y' = f(x,y).$ The particular solution satisfying the initial condition $y(x_0) = y_0$ is the solution for differential equation, whose value at $x_0$ is $y_0$. Thus the graph of the particular solution passes through the point $(x_0,y_0)$ in the $xy$-plane.\nThe first-order initial value problem is a differential equation $y'=f(x,y)$ whose solution must satisfy an initial condition $y(x_0) =y_0.$\nExample 2. Verifying That a Function Is a Particular Solution Show that the function\n$$ y=(x+1)-\\frac13 e^x $$\nis a solution to the first-order initial value problem\n$$ \\frac{dy}{dx} = y-x,\\quad y(0)=\\frac23. $$\nSlope Fields: Viewing Solution Curves Any particular solution to a differential equation can be viewed as a graph, a plane curve, at every point $(x,y)$ of the curve, the slope for the curve has been assigned with the value $f(x,y)$.\nIndeed, before solving the differential equation, we could illustrate the slope for each point on the plane by line segments. Each line segment has the slope indicating by $f(x,y)$. The resulting picture with those line segments is called a slope field ( or direction field) and gives a visualization for the general shape of the solution curves.\nSlope Field and General Solutions Here are some of the slope fields for particular $f(x,y)$ functions.\nFor Example 1 For Example 2 Separable Equations In the equation $y'(x) =f(x,y)$, if $f$ can be expressed as a product of two functions, one is a function of $x$, the other is a function of $y$, then the differential equation will be called separable. It has the following form\n$$ \\frac{dy}{dx} = g(x) H(y). $$\nFor our convenience, let’s rewrite it in the form\n$$ \\frac{dy}{dx} = \\frac{g(x)}{h(y)}. $$\nMoving terms with different variables to different sides, then we get\n$$ h(y) dy = g(x) dx. $$\nThen we simply integrate both sides of this equation:\n$$ \\begin{equation}\\int h(y)dy = \\int g(x) dx.\\end{equation} $$\nEquation (2) indication an implicit relation between $x$ and $y$, i.e. $H(y) = G(x)$. Then a general hope is to solve $y$ explicitly to get a solution in a “regular” form.\nThe Justification To justify the procedure, we use the differential relation $dy/dx = g(x)/h(y)$. For any solution $y(x)$ to the differential equation, the integral of $h(y)$ will satisfy the following\n$$ \\int h(y) dy = \\int h(y(x)) y'(x) dx = \\int h(y(x))\\frac{g(x)}{h(y(x))}dx = \\int g(x) dx. $$\nExample 3. Solving a Separable Equation Solving the differential equation\n$$ \\frac{dy}{dx} = (1+y^2) e^x. $$\nExample 4. Solve the equation $$ (x+1)\\frac{dy}{dx} = x(y^2+1). $$\nExample 5. The Initial Value Problem $$ \\frac{dy}{dx} = ky,\\quad y(0) = y_0. $$\nTorricelli’s Law If you drain a tank, the rate at which the water runs out is a constant times the square root of the water’s depth $x.$ the constant depends on the size of the drainage hole.\nExample 6. Drain a Tank A right circular cylindrical tank with radius $5$ ft and height $16$ ft that was initially full of water is being drained at the rate of $0.5\\sqrt{x}$ $\\text{ft}^3/\\text{min}$. Find a formula for the depth and the amount of water in the tank at any time $t$. How long will it take to empty the tank?\n",
+  "wordCount" : "1467",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-14T12:36:20+08:00",
+  "dateModified": "2022-04-14T12:36:20+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W8-S2 Improper Integrals and Differential Equations
+    </h1>
+    <div class="post-meta"><span title='2022-04-14 12:36:20 +0800 CST'>April 14, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 8
+日期: April 15, 2022
+节次: 2</p>
+<p>In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations.</p>
+<h2 id="type-ii-improper-integrals">Type II Improper Integrals<a hidden class="anchor" aria-hidden="true" href="#type-ii-improper-integrals">#</a></h2>
+<p><strong>Definition.</strong> Integrals of functions that becomes infinite at a point within the interval of integration are <strong>Improper integrals of Type II.</strong></p>
+<ol>
+<li>If $f(x)$ is continuous on $(a,b]$ and is discontinuous at $a$ then</li>
+</ol>
+<p>$$
+\int_a^b f(x)dx := \lim_{h\to 0^+}\int_{a+h}^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/plot4.png" alt="plot4.png"  />
+</p>
+<ol>
+<li>If $f(x)$ is continuous on $[a,b)$ and is discontinuous at $b$, then</li>
+</ol>
+<p>$$
+\int_a^b f(x)dx :=\lim_{h\to0^+}\int_a^{b-h}f(x)dx.
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/plot5.png" alt="plot5.png"  />
+</p>
+<ol>
+<li>If $f(x)$ is discontinuous at $c$, where $a&lt;c&lt;b$, and continuous on $[a,c)\cup (c,b]$, then</li>
+</ol>
+<p>$$
+\int_a^bf(x)dx :=\lim_{h\to0^+}\int_a^{c-h} f(x)dx + \lim_{s\to0^+}\int_{c+s}^b f(x)dx.
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/plot6.png" alt="plot6.png"  />
+</p>
+<p>In each case, if the limit is finite we say the improper integral <strong>converges</strong> and that the limit is the <strong>value</strong> of the improper integral. If the limit does not exist, the integral <strong>diverges</strong>.</p>
+<p><strong><code>Note</code> In Part 3, the integral on the left side of equation converges if <em>both</em> integrals on the right side converge; otherwise it diverges.</strong></p>
+<h3 id="example-4-a-divergent-improper-integral">Example 4. A Divergent Improper Integral<a hidden class="anchor" aria-hidden="true" href="#example-4-a-divergent-improper-integral">#</a></h3>
+<p>Investigate the convergence of</p>
+<p>$$
+\int_0^1 \dfrac{1}{1-x}dx.
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled.png" alt="Untitled"  />
+</p>
+<p><strong>Solution.</strong></p>
+<h3 id="example-5-vertical-asymptote-at-an-interior-point">Example 5. Vertical Asymptote at an Interior Point<a hidden class="anchor" aria-hidden="true" href="#example-5-vertical-asymptote-at-an-interior-point">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_0^3 \dfrac{dx}{(x-1)^{2/3}}dx
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%201.png" alt="Untitled"  />
+</p>
+<p><strong>Solution.</strong></p>
+<h3 id="example-6-a-convergent-improper-integral">Example 6. A Convergent Improper integral<a hidden class="anchor" aria-hidden="true" href="#example-6-a-convergent-improper-integral">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\int_2^\infty \dfrac{x+3}{(x-1)(x^2+1)}dx.
+$$</p>
+<h3 id="example-7-finding-the-volume-of-an-infinite-solid">Example 7. Finding the Volume of an Infinite Solid<a hidden class="anchor" aria-hidden="true" href="#example-7-finding-the-volume-of-an-infinite-solid">#</a></h3>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>The cross-sections of the solid horn in this graph perpendicular to the $x$-axis are circular disks with diameters reaching from the $x$-axis to the curve $y=e^x$, $-\infty&lt;x\le \ln2.$ Find the volume of the horn.</p>
+<p><strong>Solution.</strong></p>
+<h3 id="example-8-an-incorrect-calculation">Example 8. An Incorrect Calculation<a hidden class="anchor" aria-hidden="true" href="#example-8-an-incorrect-calculation">#</a></h3>
+<p>$$
+\int_0^3 \dfrac{dx}{x-1} = \ln |x-1|\bigg]_{0}^3 = \ln 2- \ln 1 = \ln 2.
+$$</p>
+<p>This example illustrates what can go wrong if you mistake an improper integral for an ordinary integral. Whenever you encounter an integral $\int_a^b f(x)dx$  you <strong>MUST</strong> examine the function $f$ on $[a,b]$ and then decide if the integral is improper. If $f$ is continuous on $[a,b]$, it will be proper, an ordinary integral.</p>
+<h1 id="test-for-convergence-and-divergence">Test for Convergence and Divergence<a hidden class="anchor" aria-hidden="true" href="#test-for-convergence-and-divergence">#</a></h1>
+<p>Sometimes, the integral might be very hard to evaluate directly. A good strategy is trying to determine whether it converges or diverges. Then if it is converges, we can evaluate numerically to get an approximation at least.</p>
+<p>The principal tests for convergence of divergence are the <strong>Direct Comparison Test</strong> and the <strong>Limit Comparison Test.</strong></p>
+<p><strong><code>Note</code></strong>  The following tests only works for non-negative or non-positive functions.</p>
+<h3 id="example-9-investigating-convergence">Example 9. Investigating Convergence<a hidden class="anchor" aria-hidden="true" href="#example-9-investigating-convergence">#</a></h3>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>Does the integral $\int_1^\infty e^{-x^2}dx$ converge?</p>
+<p><strong><code>Solution.</code></strong></p>
+<h2 id="theorem-1-direct-comparison-test">Theorem 1. Direct Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-1-direct-comparison-test">#</a></h2>
+<p>Let $f$ and $g$ be continuous on $[a,+\infty)$ with $0\le f(x)\le g(x)$ for all $x\ge a$. Then</p>
+<ol>
+<li>$\int_a^\infty f(x)dx$  converges if $\int_a^\infty g(x)dx$ does,</li>
+<li>$\int_a^\infty g(x)dx$ diverges if $\int_a^\infty f(x)dx$  does.</li>
+</ol>
+<p><strong><code>Proof.</code></strong></p>
+<h3 id="example-10-using-the-direct-comparison-test">Example 10. Using the Direct Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-10-using-the-direct-comparison-test">#</a></h3>
+<p>$$
+(a)\qquad\qquad\qquad \int_1^\infty \dfrac{\sin^2 x}{x^2} dx\quad \text{converges}
+$$</p>
+<p>$$
+(b) \qquad\qquad\qquad\int_1^\infty \dfrac{1}{\sqrt{x^2-0.1}}dx\qquad \text{diverges}
+$$</p>
+<h2 id="theorem-2-limit-comparison-test">Theorem 2. Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-2-limit-comparison-test">#</a></h2>
+<p>If the positive functions $f$ and $g$ are continuous on $[a,+\infty)$ and if</p>
+<p>$$
+\lim_{x\to+\infty}\dfrac{f(x)}{g(x)} = L,\qquad 0&lt;L&lt;\infty ,
+$$</p>
+<p>then</p>
+<p>$$
+\int_a^\infty f(x)dx\quad \text{and} \quad \int_a^\infty g(x)dx
+$$</p>
+<p>both converge or both diverge.</p>
+<p><strong><code>Sketch for the proof.</code></strong></p>
+<h3 id="example-11-using-the-limit-comparison-test">Example 11. Using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-11-using-the-limit-comparison-test">#</a></h3>
+<p>Show that</p>
+<p>$$
+\int_1^\infty \dfrac{dx}{1+x^2}
+$$</p>
+<p>converges by comparison with $\int_1^\infty \frac{dx}{x^2}$. Find and compare the two integral values.</p>
+<h3 id="example-12-using-the-limit-comparison-test">Example 12. using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-12-using-the-limit-comparison-test">#</a></h3>
+<p>Show that</p>
+<p>$$
+\int_1^\infty \dfrac{3}{e^x+5}dx
+$$</p>
+<p>converges.</p>
+<h1 id="chapter-9--further-applications-of-integration">Chapter 9.  Further Applications of Integration<a hidden class="anchor" aria-hidden="true" href="#chapter-9--further-applications-of-integration">#</a></h1>
+<h2 id="overview">Overview.<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>Previously we’ve learned anti-derivative. For a continuous function $f$, we found the general solution $F(x)$, whose derivative is $f(x)$, can be expressed by indefinite integral $\int f(x)dx$.</p>
+<p>Another view for the concept of anti-derivative, is that we are solving an equation related with function $f$ and an unknown function $F$, such that</p>
+<p>$$
+\frac{d F}{dx} = f(x).
+$$</p>
+<p>Any equation involving the derivative for unknown functions can be called a differential equation. Therefore what we did, was to solve a simplest differential equation.</p>
+<p>In this chapter, we study several more involved differential equations, having the form</p>
+<p>$$
+\frac{dy}{dx} = f(x,y),
+$$</p>
+<p>where $f$ is a function of <em>both</em> the independent and dependent variables. We use the theory of indefinite integration to solve these differential equations, and investigate analytic, graphical and numerical solution methods.</p>
+<h1 id="-91-slope-fields-and-separable-differential-equations">§ 9.1 Slope Fields and <em>Separable</em> Differential Equations<a hidden class="anchor" aria-hidden="true" href="#-91-slope-fields-and-separable-differential-equations">#</a></h1>
+<h2 id="general-first-order-differential-equations-and-solutions">General First-Order Differential Equations and Solutions.<a hidden class="anchor" aria-hidden="true" href="#general-first-order-differential-equations-and-solutions">#</a></h2>
+<p><strong>Definition.</strong> A <strong>First-order differential equation</strong>  is an equation</p>
+<p>$$
+\begin{equation}\frac{dy}{dx} = f(x,y)\end{equation}
+$$</p>
+<p>in which $f(x,y)$ is a function of $x$ and $y$ defined on a region in the $xy$-plane.</p>
+<p>The term “first-order”, refers to the highest order of derivative is having order $1$ in the equation.</p>
+<p><strong>Definition.</strong> A <strong>Solution</strong> of equation (1) is a differentiable function $y=y(x)$ defined on an interval $I$ of $x$-values such that</p>
+<p>$$
+\frac{d}{dx}y(x) = f(x,y(x))
+$$</p>
+<p>on that interval.</p>
+<p><strong>Definition.</strong> A <strong>general solution</strong> to equation (1) is a solution that contains all possible solutions. It may contain arbitrary constants, so that when constants are being fixed, then we get a particular solution.</p>
+<h3 id="example-1-verifying-solution-functions">Example 1. Verifying Solution Functions<a hidden class="anchor" aria-hidden="true" href="#example-1-verifying-solution-functions">#</a></h3>
+<p>Show that every member of the family of functions</p>
+<p>$$
+y=\frac{C}{x}+2
+$$</p>
+<p>is a solution of the first-order differential equation</p>
+<p>$$
+\frac{dy}{dx} = \frac1x(2-y),\quad \text{on } (0,\infty)
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%204.png" alt="Untitled"  />
+</p>
+<p>Sometimes we need a  <em>particular</em> solution rather than the general one to a differential equation</p>
+<p>$y' = f(x,y).$ The <strong>particular solution</strong> satisfying the initial condition $y(x_0) = y_0$ is the solution for differential equation, whose value at $x_0$ is $y_0$. Thus the graph of the particular solution passes through the point $(x_0,y_0)$ in the $xy$-plane.</p>
+<p>The <strong>first-order initial value problem</strong> is a differential equation $y'=f(x,y)$ whose solution must satisfy an initial condition $y(x_0) =y_0.$</p>
+<h3 id="example-2-verifying-that--a-function-is-a-particular-solution">Example 2. Verifying That  a Function Is a Particular Solution<a hidden class="anchor" aria-hidden="true" href="#example-2-verifying-that--a-function-is-a-particular-solution">#</a></h3>
+<p>Show that the function</p>
+<p>$$
+y=(x+1)-\frac13 e^x
+$$</p>
+<p>is a solution to the first-order initial value problem</p>
+<p>$$
+\frac{dy}{dx} = y-x,\quad y(0)=\frac23.
+$$</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%205.png" alt="Untitled"  />
+</p>
+<h2 id="slope-fields-viewing-solution-curves">Slope Fields: Viewing Solution Curves<a hidden class="anchor" aria-hidden="true" href="#slope-fields-viewing-solution-curves">#</a></h2>
+<p>Any particular solution to a differential equation can be viewed as a graph, a plane curve, at every point $(x,y)$ of the curve, the slope for the curve has been assigned with the value $f(x,y)$.</p>
+<p>Indeed, before solving the differential equation, we could illustrate the slope for each point on the plane by line segments. Each line segment has the slope indicating by $f(x,y)$. The resulting picture with those line segments is called a <strong>slope field ( or direction field)</strong> and gives a visualization for the general shape of the solution curves.</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%206.png" alt="Untitled"  />
+</p>
+<h3 id="slope-field-and-general-solutions">Slope Field and General Solutions<a hidden class="anchor" aria-hidden="true" href="#slope-field-and-general-solutions">#</a></h3>
+<p>Here are some of the slope fields for particular $f(x,y)$ functions.</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%207.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%208.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%209.png" alt="Untitled"  />
+</p>
+<h3 id="for-example-1">For Example 1<a hidden class="anchor" aria-hidden="true" href="#for-example-1">#</a></h3>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%2010.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%2011.png" alt="Untitled"  />
+</p>
+<h3 id="for-example-2">For Example 2<a hidden class="anchor" aria-hidden="true" href="#for-example-2">#</a></h3>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%2012.png" alt="Untitled"  />
+</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%2013.png" alt="Untitled"  />
+</p>
+<h2 id="separable-equations">Separable Equations<a hidden class="anchor" aria-hidden="true" href="#separable-equations">#</a></h2>
+<p>In the equation $y'(x) =f(x,y)$, if $f$ can be expressed as a product of two functions, one is a function of $x$, the other is a function of $y$, then the differential equation will be called separable. It has the following form</p>
+<p>$$
+\frac{dy}{dx} = g(x) H(y).
+$$</p>
+<p>For our convenience, let’s rewrite it in the form</p>
+<p>$$
+\frac{dy}{dx} = \frac{g(x)}{h(y)}.
+$$</p>
+<p>Moving terms with different variables to different sides, then we get</p>
+<p>$$
+h(y) dy = g(x) dx.
+$$</p>
+<p>Then we simply integrate both sides of this equation:</p>
+<p>$$
+\begin{equation}\int h(y)dy = \int g(x) dx.\end{equation}
+$$</p>
+<p>Equation (2) indication an implicit relation between $x$ and $y$, i.e. $H(y) = G(x)$. Then a general hope is to solve $y$ explicitly to get a solution in a “regular” form.</p>
+<h3 id="the-justification">The Justification<a hidden class="anchor" aria-hidden="true" href="#the-justification">#</a></h3>
+<p>To justify the procedure, we use the differential relation $dy/dx = g(x)/h(y)$.  For any solution $y(x)$ to the differential equation, the integral of $h(y)$ will satisfy the following</p>
+<p>$$
+\int h(y) dy = \int h(y(x)) y'(x) dx = \int h(y(x))\frac{g(x)}{h(y(x))}dx = \int g(x) dx.
+$$</p>
+<h3 id="example-3-solving-a-separable-equation">Example 3. Solving a Separable Equation<a hidden class="anchor" aria-hidden="true" href="#example-3-solving-a-separable-equation">#</a></h3>
+<p>Solving the differential equation</p>
+<p>$$
+\frac{dy}{dx} = (1+y^2) e^x.
+$$</p>
+<h3 id="example-4-solve-the-equation">Example 4. Solve the equation<a hidden class="anchor" aria-hidden="true" href="#example-4-solve-the-equation">#</a></h3>
+<p>$$
+(x+1)\frac{dy}{dx}  = x(y^2+1).
+$$</p>
+<h3 id="example-5-the-initial-value-problem">Example 5. The Initial Value Problem<a hidden class="anchor" aria-hidden="true" href="#example-5-the-initial-value-problem">#</a></h3>
+<p>$$
+\frac{dy}{dx} = ky,\quad y(0) = y_0.
+$$</p>
+<h3 id="torricellis-law">Torricelli’s Law<a hidden class="anchor" aria-hidden="true" href="#torricellis-law">#</a></h3>
+<p>If you drain a tank, the rate at which the water runs out is a constant times the square root of the water’s depth $x.$ the constant depends on the size of the drainage hole.</p>
+<h3 id="example-6-drain-a-tank">Example 6. Drain a Tank<a hidden class="anchor" aria-hidden="true" href="#example-6-drain-a-tank">#</a></h3>
+<p>A right circular cylindrical tank with radius $5$ ft and height $16$ ft that was initially full of water is being drained at the rate of $0.5\sqrt{x}$ $\text{ft}^3/\text{min}$. Find a formula for the depth and the amount of water in the tank at any time $t$. How long will it take to empty the tank?</p>
+<p><img loading="lazy" src="W8-S2%20Impr%20699d7/Untitled%2014.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/improper-integral/">Improper Integral</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/divergence/">Divergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/differential-eqaution/">Differential Eqaution</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/slope-field/">Slope field</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
