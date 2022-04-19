@@ -6,13 +6,67 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 14 Apr 2022 12:36:20 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 15:17:23 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>calculus</title>
       <link>http://tigertooth4.github.io/tags/calculus/</link>
-      <pubDate>Thu, 14 Apr 2022 12:36:20 +0800</pubDate>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/calculus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>differential equations</title>
+      <link>http://tigertooth4.github.io/tags/differential-equations/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/differential-equations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First-order</title>
+      <link>http://tigertooth4.github.io/tags/first-order/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/first-order/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lectures</title>
+      <link>http://tigertooth4.github.io/tags/lectures/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lectures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear</title>
+      <link>http://tigertooth4.github.io/tags/linear/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/linear/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Separable</title>
+      <link>http://tigertooth4.github.io/tags/separable/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/separable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slope</title>
+      <link>http://tigertooth4.github.io/tags/slope/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/slope/</guid>
       <description></description>
     </item>
     
@@ -193,15 +247,6 @@
       <pubDate>Thu, 07 Apr 2022 14:47:12 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/trapezoidal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lectures</title>
-      <link>http://tigertooth4.github.io/tags/lectures/</link>
-      <pubDate>Wed, 06 Apr 2022 12:09:32 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lectures/</guid>
       <description></description>
     </item>
     

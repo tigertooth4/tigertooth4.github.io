@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linear on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/linear/</link>
+    <description>Recent content in Linear on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 19 Apr 2022 15:17:23 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/linear/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W9-S1  Slop Fields, Separable and First-Order Linear Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</guid>
+      <description>周次: 9 日期: April 20, 2022 节次: 1 In this lecture, we introduce some basic concept for differential equations, how to think of them, how to describe them and how to solve them. The most important thing is to know how to solve a differential equation. We will solve typical separable differential equations as well as the first-order linear differential equations. Chapter 9. Further</description>
+    </item>
+    
+  </channel>
+</rss>
