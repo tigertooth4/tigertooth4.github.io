@@ -6,7 +6,16 @@
     <description>Recent content in lecture on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 14 Apr 2022 12:36:20 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Apr 2022 23:24:40 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W9-S2 Applications, Euler’s Method for Numerical DE  Solving</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</link>
+      <pubDate>Thu, 21 Apr 2022 23:24:40 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</guid>
+      <description>周次: 9 日期: April 22, 2022 节次: 2 In this lecture, we would like to give several examples on solving differential equations. Three examples will be shown. And Euler’s method for numerical solution for the initial value problem of differential equations will also be explored. Solving Linear Equations We solve the equation $$ \dfrac{dy}{dx} + P(x), y =</description>
+    </item>
+    
     <item>
       <title>W8-S2 Improper Integrals and Differential Equations</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</link>

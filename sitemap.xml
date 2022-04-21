@@ -2,8 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://tigertooth4.github.io/tags/application/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://tigertooth4.github.io/tags/calculus/</loc>
-    <lastmod>2022-04-19T15:17:23+08:00</lastmod>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/circuit/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/differential/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/euler/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/fat/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/weight/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-04-21T23:24:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -27,11 +82,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-04-19T15:17:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/separable/</loc>
     <lastmod>2022-04-19T15:17:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -42,17 +92,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-04-19T15:17:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</loc>
-    <lastmod>2022-04-19T15:17:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-04-19T15:17:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -73,11 +113,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/improper-integral/</loc>
-    <lastmod>2022-04-14T12:36:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
     <lastmod>2022-04-14T12:36:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

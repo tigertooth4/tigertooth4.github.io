@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>weight on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/weight/</link>
+    <description>Recent content in weight on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 21 Apr 2022 23:24:40 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/weight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W9-S2 Applications, Euler’s Method for Numerical DE  Solving</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</link>
+      <pubDate>Thu, 21 Apr 2022 23:24:40 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</guid>
+      <description>周次: 9 日期: April 22, 2022 节次: 2 In this lecture, we would like to give several examples on solving differential equations. Three examples will be shown. And Euler’s method for numerical solution for the initial value problem of differential equations will also be explored. Solving Linear Equations We solve the equation $$ \dfrac{dy}{dx} + P(x), y =</description>
+    </item>
+    
+  </channel>
+</rss>
