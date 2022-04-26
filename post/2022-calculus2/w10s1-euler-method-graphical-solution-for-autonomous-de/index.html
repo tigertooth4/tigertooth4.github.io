@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="euler-method, graphical-solution, autonomous, solve, differential, equation, calculus, lecture" />
+<meta name="description" content="周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE" />
+<meta property="og:description" content="周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-26T13:48:51&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-26T13:48:51&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE"/>
+<meta name="twitter:description" content="周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE",
+  "name": "W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE",
+  "description": "周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical",
+  "keywords": [
+    "euler-method", "graphical-solution", "autonomous", "solve", "differential", "equation", "calculus", "lecture"
+  ],
+  "articleBody": "周次: 10 日期: April 27, 2022 节次: 1\nIn this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical solution curves for a first-order autonomous differential equations and give some examples.\nOutline § 9.3 Euler’s Method In this section, we would like to take a glance at numerical method for solving the general first-order differential equation with the initial condition being proposed. The method is the simplest one, called the Euler’s method.\nAs a numerical solution to the differential equation, what we really need is not finding the solution as a function, but providing a table containing pairs of $x$’s and $y$’s, i.e. find the correspondence relation on some sampling points.\nSuppose a first-order initial value problem has the form\n$$ \\begin{align}\u0026\\dfrac{d y}{dx} = f(x,y),\\ \u0026y(x_0) = y_0.\\end{align} $$\nwith the initial condition (2). Geometrically, one can trace the slope field starting from the initial position $(x_0,y_0)$ to get a curve roughly demonstrating a solution. Euler’s method will be a mathematical realization of this idea.\nEuler’s Method Suppose we are starting from point $(x_0,y_0)$. Given a very small increment $\\Delta x$ in variable $x$, we would like to predict a $y$ from the equation (10). Denoting $x_1 = x_0+\\Delta x,$ the linearization for unknown function $y$ provides a very good approximation for $y(x_1)$. Indeed,\n$$ y(x_1)\\approx y(x_0) + y'(x_0) (x_1-x_0). $$\nBut according to the DE, $y'(x_0)$ is equal to $f(x_0,y_0)$, which can be computed directly. Therefore, we would like to think that, roughly speaking, $y(x_1)$ can be replaced with the linear approximation of it.\n$$ y(x_1) \\approx y(x_0) + f(x_0,y_0) (x_1-x_0):=L(x_1). $$\nThis completed the first Euler step.\nFor the second Euler step, we start from $(x_1,y_1),$ use linear approximation of $y$ at $x_1$ to predict a $y_2$\n$$ y_2 \\approx y_1 + f(x_1,y_1)(x_2-x_1) $$\nBy repeating this process again and again, we get an approximated solution to the DE.\nExample 1. Using Euler’s Method Find the first three approximations $y_1$, $y_2$, $y_3$ using Euler’s method for the initial value problem\n$$ y' = 1+y,\\quad y(0)=1, $$\nstarting at $x_0 = 0$ with $\\Delta x = 0.1.$\nSolution.\n Send $x_0 = 0,$ $y_0=1$, then $y_1 = y_0 + (1+y_0) \\Delta x = 1.2$ Send $x_1 = 0.1$, $y_1=1.2$, then $y_2 = y_1 + (1+y_1)\\Delta x = 1.42$ Send $x_2 = 0.2$, $y_2 = 1.42$, then $y_3 = y_2 + (1+y_2)\\Delta x = 1.662$.  Demonstrations On Euler’s Method  For $\\frac{dy}{dx} = (1-x)y+\\frac{x}{2}$, with initial value indicated by cross point. Blue curve shows the real solution, red curve shows the line segment obtained by Euler’s method.   Second Example $\\frac{dy}{dx} = y-x^2$   Third Example $y' = - \\frac{2xy}{1+x^2}$.  § 9.4 Graphical Solutions of Autonomous Differential Equations Autonomous Differential Equation For example, consider an implicit equation\n$$ \\frac15 \\ln(5y-15) = x+1. $$\nBy differentiating this equation, we obtain\n$$ \\frac15 \\left(\\frac{1}{y-3}\\right)\\frac{dy}{dx} = 1. $$\nTherefore the derivative $\\frac{dy}{dx}$ is a function of $y$ only. (Not explicitly depends on $x$).\nDefinition. A differential equation for which $dy/dx$ is a function of $y$ only is called an autonomous differential equation.\nExamples  $\\frac{dy}{dx} = 3 (y-1) \\sin (y)$ is an autonomous differential equation $\\frac{dy}{dx} = 3(y-x) sin(y)$ is not an autonomous DE.  Equilibrium Values Think of a differential equation is defining how the derivative $\\frac{dy}{dx}$ behaves.\n$$ \\frac{dy}{dx} = 5(y-3)(1-y) $$\nThen for an autonomous differential equation, at what value $y$ the the $\\frac{dy}{dx}$ vanishes is called an Equilibrium value or a\nrest point.\nThus, equilibrium values are those at which no change occurs in the dependent variable, so $y$ is at rest.\nExample 1. Finding Equilibrium Values The equilibrium values for autonomous differential equation\n$$ \\frac{dy}{dx} = (y+1)(y-2). $$\nExample. Finding Equilibrium Values The equilibrium values for autonomous differential equation\n$$ \\frac{dy}{dx} = k y. $$\nSketch the Graphical Solutions to an Autonomous DE To sketch graphical solutions to the autonomous differential equation, we need to analyze the signs of $y'$ and $y''$, these informations can be read from the differential equation.\nExample 2. Sketching Solution Curves Sketch solutions to the equation\n$$ \\frac{dy}{dx} = (y+1)(y-2). $$\nStep 1. Mark the equilibrium values on the $xy$-plane. The equilibrium values are $y=-1$ and $y=2$, where $dy/dx = 0.$\nStep 2. Identify and label the intervals (regions) where $y'0$ and $y' Step 3. Calculate $y''$ and mark the intervals where $y''0$ and $y'' Since\n$$ y' = (y+1)(y-2) = y^2 - y -2. $$\nDifferentiate both sides with respect to $x$, using implicit differentiation\n$$ y'' = 2yy'-y' = (2y-1)y' = (2y-1)(y+1)(y-2). $$\nThus we add the sign information to the phase line.\nStep 4. Sketch an assortment of solution curves in the $xy$-plane Example 3. Cooling Soup What happens to the temperature of the soup when a cup of hot soup is placed on a table in a room? What does a typical temperature curve look like as a function of time?\nBy Newton’s law of cooling, there is a constant $k$ such that\n$$ \\frac{dH}{dt} = -k(H-15), $$\nwhere $15$ is the ambient temperature in Celsius.\nSince $H'' = -k H' = k^2(H-15)$, we can sketch the phase line and general solutions on the $xy$-plane below.\nExample 4. Analyzing the Fall of a Body Encountering a Resistive Force (Omitted) Example 5. Analyzing Population Growth in a Limiting Environment If $P$ represents the number of individuals and we neglect departures and arrivals, then\n$$ \\frac{dP}{dt} = kP, $$\nwhere $k0$ is the birthrate minus the death rate per individual per unit time.\nAs the population approaches the limiting population or carrying capacity, resources become less abundant and the growth rate $k$ decreases. Suppose the limiting population is denoting by $M$. Then a simple relationship exhibiting this behavior is\n$$ k=r(M-P), $$\nwhere $r0$ is a constant. Notice that $k$ is negative if $P$ is greater than $M$. Then the model is\n$$ \\begin{equation}\\frac{dP}{dt} = r(M-P) P = rMP-rP^2\\end{equation} $$\nEquation (3) is referred to as logistic growth.\nSince\n$$ \\frac{d^2 P}{dt^2} = rM P' - 2r P P' = r(M-2P)P' = r^2(M-2P)(M-P)P, $$\nwe can analyze the phase line and sketch a graph on it.\n",
+  "wordCount" : "1124",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-26T13:48:51+08:00",
+  "dateModified": "2022-04-26T13:48:51+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE
+    </h1>
+    <div class="post-meta"><span title='2022-04-26 13:48:51 +0800 CST'>April 26, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 10
+日期: April 27, 2022
+节次: 1</p>
+<p>In this lecture, we talk briefly on the numerical method for solving an initial value problem for a  general first order differential equation. The method is called <strong>Euler’s Method,</strong> it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical solution curves for a first-order autonomous differential equations and give some examples.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="-93-eulers-method">§ 9.3 Euler’s Method<a hidden class="anchor" aria-hidden="true" href="#-93-eulers-method">#</a></h1>
+<p>In this section, we would like to take a glance at numerical method for solving the general first-order differential equation with the initial condition being proposed. The method is the simplest one, called the <strong>Euler’s method</strong>.</p>
+<p>As a numerical solution to the differential equation, what we really need is not finding the solution as a function,  but providing a table containing pairs of $x$’s and $y$’s, i.e. find the correspondence relation on some sampling points.</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled.png" alt="Untitled"  />
+</p>
+<p>Suppose a first-order initial value problem has the form</p>
+<p>$$
+\begin{align}&amp;\dfrac{d y}{dx} = f(x,y),\ &amp;y(x_0) = y_0.\end{align}
+$$</p>
+<p>with the initial condition (2). Geometrically, one can trace the slope field starting from the initial position $(x_0,y_0)$ to get a  curve roughly demonstrating a solution.  Euler’s method will be a mathematical realization of this idea.</p>
+<h2 id="eulers-method">Euler’s Method<a hidden class="anchor" aria-hidden="true" href="#eulers-method">#</a></h2>
+<p>Suppose we are starting from point $(x_0,y_0)$. Given a very small increment $\Delta x$ in variable $x$, we would like to predict a $y$ from the equation (10). Denoting $x_1 = x_0+\Delta x,$ the linearization for unknown function $y$ provides a very good approximation for $y(x_1)$. Indeed,</p>
+<p>$$
+y(x_1)\approx y(x_0) + y'(x_0) (x_1-x_0).
+$$</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>But according to the DE, $y'(x_0)$  is equal to $f(x_0,y_0)$, which can be computed directly. Therefore, we would like to think that, roughly speaking, $y(x_1)$  can be replaced with the linear approximation of it.</p>
+<p>$$
+y(x_1) \approx y(x_0) + f(x_0,y_0) (x_1-x_0):=L(x_1).
+$$</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>This completed the first Euler step.</p>
+<p>For the second Euler step, we start from $(x_1,y_1),$ use linear approximation of $y$ at $x_1$ to predict a $y_2$</p>
+<p>$$
+y_2 \approx y_1 + f(x_1,y_1)(x_2-x_1)
+$$</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>By repeating this process again and again, we get an approximated solution to the DE.</p>
+<h3 id="example-1-using-eulers-method">Example 1. Using Euler’s Method<a hidden class="anchor" aria-hidden="true" href="#example-1-using-eulers-method">#</a></h3>
+<p>Find the first three approximations $y_1$, $y_2$, $y_3$ using Euler’s method for the initial value problem</p>
+<p>$$
+y' = 1+y,\quad y(0)=1,
+$$</p>
+<p>starting at $x_0 = 0$ with $\Delta x = 0.1.$</p>
+<p><strong>Solution.</strong></p>
+<ol>
+<li>Send $x_0 = 0,$ $y_0=1$,  then $y_1 = y_0 + (1+y_0) \Delta x = 1.2$</li>
+<li>Send $x_1 = 0.1$, $y_1=1.2$, then $y_2 = y_1 + (1+y_1)\Delta x = 1.42$</li>
+<li>Send $x_2 = 0.2$, $y_2 = 1.42$, then $y_3 = y_2 + (1+y_2)\Delta x = 1.662$.</li>
+</ol>
+<h3 id="demonstrations-on-eulers-method">Demonstrations On Euler’s Method<a hidden class="anchor" aria-hidden="true" href="#demonstrations-on-eulers-method">#</a></h3>
+<ul>
+<li>For $\frac{dy}{dx} = (1-x)y+\frac{x}{2}$, with initial value indicated by cross point. Blue curve shows the real solution, red curve shows the line segment obtained by Euler’s method.</li>
+</ul>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%204.png" alt="Untitled"  />
+</p>
+<ul>
+<li>Second Example $\frac{dy}{dx} = y-x^2$</li>
+</ul>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%205.png" alt="Untitled"  />
+</p>
+<ul>
+<li>Third Example $y' = - \frac{2xy}{1+x^2}$.</li>
+</ul>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%206.png" alt="Untitled"  />
+</p>
+<h1 id="-94-graphical-solutions-of-autonomous-differential-equations">§ 9.4 Graphical Solutions of Autonomous Differential Equations<a hidden class="anchor" aria-hidden="true" href="#-94-graphical-solutions-of-autonomous-differential-equations">#</a></h1>
+<h2 id="autonomous-differential-equation">Autonomous Differential Equation<a hidden class="anchor" aria-hidden="true" href="#autonomous-differential-equation">#</a></h2>
+<p>For example, consider an implicit equation</p>
+<p>$$
+\frac15 \ln(5y-15) = x+1.
+$$</p>
+<p>By differentiating this equation, we obtain</p>
+<p>$$
+\frac15 \left(\frac{1}{y-3}\right)\frac{dy}{dx} = 1.
+$$</p>
+<p>Therefore the derivative $\frac{dy}{dx}$ is a function  of $y$ only. (Not explicitly depends on $x$).</p>
+<h3 id="definition">Definition.<a hidden class="anchor" aria-hidden="true" href="#definition">#</a></h3>
+<p>A differential equation for which $dy/dx$ is a function of $y$ only is called an <strong>autonomous</strong> differential equation.</p>
+<h3 id="examples">Examples<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h3>
+<ul>
+<li>$\frac{dy}{dx} = 3 (y-1) \sin (y)$ is an autonomous differential equation</li>
+<li>$\frac{dy}{dx} = 3(y-x) sin(y)$ is not an autonomous DE.</li>
+</ul>
+<h2 id="equilibrium-values">Equilibrium Values<a hidden class="anchor" aria-hidden="true" href="#equilibrium-values">#</a></h2>
+<p>Think of a differential equation is defining how the derivative $\frac{dy}{dx}$ behaves.</p>
+<p>$$
+\frac{dy}{dx} = 5(y-3)(1-y)
+$$</p>
+<p>Then for an autonomous differential equation,  at <strong>what value</strong> $y$ the the $\frac{dy}{dx}$ vanishes  is called an <strong>Equilibrium value</strong> or a</p>
+<p><strong>rest point.</strong></p>
+<p>Thus, equilibrium values are those at which no change occurs in the dependent variable, so $y$ is at <strong>rest</strong>.</p>
+<h3 id="example-1-finding-equilibrium-values">Example 1. Finding Equilibrium Values<a hidden class="anchor" aria-hidden="true" href="#example-1-finding-equilibrium-values">#</a></h3>
+<p>The equilibrium values for autonomous differential equation</p>
+<p>$$
+\frac{dy}{dx} = (y+1)(y-2).
+$$</p>
+<h3 id="example-finding-equilibrium-values">Example. Finding Equilibrium Values<a hidden class="anchor" aria-hidden="true" href="#example-finding-equilibrium-values">#</a></h3>
+<p>The equilibrium values for autonomous differential equation</p>
+<p>$$
+\frac{dy}{dx} = k y.
+$$</p>
+<h2 id="sketch-the-graphical-solutions-to-an-autonomous-de">Sketch the Graphical Solutions to an Autonomous DE<a hidden class="anchor" aria-hidden="true" href="#sketch-the-graphical-solutions-to-an-autonomous-de">#</a></h2>
+<p>To sketch graphical solutions to the autonomous differential equation, we need to analyze the signs of $y'$ and $y''$, these informations can be read from the differential equation.</p>
+<h3 id="example-2-sketching-solution-curves">Example 2. Sketching Solution Curves<a hidden class="anchor" aria-hidden="true" href="#example-2-sketching-solution-curves">#</a></h3>
+<p>Sketch solutions to the equation</p>
+<p>$$
+\frac{dy}{dx} = (y+1)(y-2).
+$$</p>
+<h3 id="step-1-mark-the-equilibrium-values-on-the-xy-plane">Step 1. Mark the equilibrium values on the $xy$-plane.<a hidden class="anchor" aria-hidden="true" href="#step-1-mark-the-equilibrium-values-on-the-xy-plane">#</a></h3>
+<p>The equilibrium values are $y=-1$ and $y=2$, where $dy/dx = 0.$</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%207.png" alt="Untitled"  />
+</p>
+<h3 id="step-2-identify-and-label-the-intervals-regions-where-y0-and-y0">Step 2. Identify and label the intervals (regions) where $y'&gt;0$ and $y'&lt;0.$<a hidden class="anchor" aria-hidden="true" href="#step-2-identify-and-label-the-intervals-regions-where-y0-and-y0">#</a></h3>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%208.png" alt="Untitled"  />
+</p>
+<h3 id="step-3-calculate-y-and-mark-the-intervals-where-y0-and-y0">Step 3. Calculate $y''$ and mark the intervals where $y''&gt;0$ and $y''&lt;0$.<a hidden class="anchor" aria-hidden="true" href="#step-3-calculate-y-and-mark-the-intervals-where-y0-and-y0">#</a></h3>
+<p>Since</p>
+<p>$$
+y' = (y+1)(y-2) = y^2 - y -2.
+$$</p>
+<p>Differentiate both sides with respect to $x$, using implicit differentiation</p>
+<p>$$
+y'' = 2yy'-y' = (2y-1)y' = (2y-1)(y+1)(y-2).
+$$</p>
+<p>Thus we add the sign information to the <strong>phase line</strong>.</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%209.png" alt="Untitled"  />
+</p>
+<h3 id="step-4-sketch-an-assortment-of-solution-curves-in-the-xy-plane">Step 4. Sketch an assortment of solution curves in the $xy$-plane<a hidden class="anchor" aria-hidden="true" href="#step-4-sketch-an-assortment-of-solution-curves-in-the-xy-plane">#</a></h3>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%2010.png" alt="Untitled"  />
+</p>
+<h3 id="example-3-cooling-soup">Example 3. Cooling Soup<a hidden class="anchor" aria-hidden="true" href="#example-3-cooling-soup">#</a></h3>
+<p>What happens to the temperature of the soup when a cup of hot soup is placed on a table in a room? What does a typical temperature curve look like as a function of time?</p>
+<p>By Newton’s law of cooling, there is a constant $k$ such that</p>
+<p>$$
+\frac{dH}{dt} = -k(H-15),
+$$</p>
+<p>where $15$ is the ambient temperature in Celsius.</p>
+<p>Since $H'' = -k H' = k^2(H-15)$, we can sketch the phase line and general solutions on the $xy$-plane below.</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%2011.png" alt="Untitled"  />
+</p>
+<h3 id="example-4-analyzing-the-fall-of-a-body-encountering-a-resistive-force-omitted">Example 4. Analyzing the Fall of a Body Encountering a Resistive Force (Omitted)<a hidden class="anchor" aria-hidden="true" href="#example-4-analyzing-the-fall-of-a-body-encountering-a-resistive-force-omitted">#</a></h3>
+<h3 id="example-5-analyzing-population-growth-in-a-limiting-environment">Example 5. Analyzing Population Growth in a Limiting Environment<a hidden class="anchor" aria-hidden="true" href="#example-5-analyzing-population-growth-in-a-limiting-environment">#</a></h3>
+<p>If $P$ represents the number of individuals and we neglect departures and arrivals, then</p>
+<p>$$
+\frac{dP}{dt} = kP,
+$$</p>
+<p>where $k&gt;0$ is the birthrate minus the death rate per individual per unit time.</p>
+<p>As the population approaches the <strong>limiting population</strong> or <strong>carrying capacity,</strong> resources become less abundant and the growth rate $k$ decreases. Suppose the limiting population is denoting by $M$. Then a simple relationship exhibiting this behavior is</p>
+<p>$$
+k=r(M-P),
+$$</p>
+<p>where $r&gt;0$ is a constant.  Notice that $k$ is negative if $P$ is greater than $M$. Then the model is</p>
+<p>$$
+\begin{equation}\frac{dP}{dt} = r(M-P) P = rMP-rP^2\end{equation}
+$$</p>
+<p>Equation (3) is referred to as <strong>logistic growth.</strong></p>
+<p>Since</p>
+<p>$$
+\frac{d^2 P}{dt^2} = rM P' - 2r P P' = r(M-2P)P' = r^2(M-2P)(M-P)P,
+$$</p>
+<p>we can analyze the phase line and sketch a graph on it.</p>
+<p><img loading="lazy" src="W10-S1%20Euler%E2%80%99s%20Method%20and%20Graphical%20Solutions%20for%20%203b6cdf3aefd244cc98c1da12597f5164/Untitled%2012.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/euler-method/">euler-method</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/graphical-solution/">graphical-solution</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/autonomous/">autonomous</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/solve/">solve</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/differential/">differential</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/equation/">equation</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

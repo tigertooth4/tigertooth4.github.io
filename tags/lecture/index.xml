@@ -6,7 +6,16 @@
     <description>Recent content in lecture on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 21 Apr 2022 23:24:40 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Apr 2022 13:48:51 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/</link>
+      <pubDate>Tue, 26 Apr 2022 13:48:51 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/</guid>
+      <description>周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical</description>
+    </item>
+    
     <item>
       <title>W9-S2 Applications, Euler’s Method for Numerical DE  Solving</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</link>
