@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>equations on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/equations/</link>
+    <description>Recent content in equations on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 28 Apr 2022 16:22:21 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/equations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W10-S2 Applications of First-Order Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/</link>
+      <pubDate>Thu, 28 Apr 2022 16:22:21 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/</guid>
+      <description>周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A</description>
+    </item>
+    
+  </channel>
+</rss>

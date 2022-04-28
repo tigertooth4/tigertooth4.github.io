@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W10-S2 Applications of First-Order Differential Equations | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="application, differential, equations, solve, coasting, population, orthogonal, lecture, calculus" />
+<meta name="description" content="周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W10-S2 Applications of First-Order Differential Equations" />
+<meta property="og:description" content="周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-28T16:22:21&#43;08:00" />
+<meta property="article:modified_time" content="2022-04-28T16:22:21&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W10-S2 Applications of First-Order Differential Equations"/>
+<meta name="twitter:description" content="周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W10-S2 Applications of First-Order Differential Equations",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W10-S2 Applications of First-Order Differential Equations",
+  "name": "W10-S2 Applications of First-Order Differential Equations",
+  "description": "周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A",
+  "keywords": [
+    "application", "differential", "equations", "solve", "coasting", "population", "orthogonal", "lecture", "calculus"
+  ],
+  "articleBody": "周次: 10 日期: April 29, 2022 节次: 2\nIn today’s lecture, we are going to look at three typical applications of first-order differential equations.\n Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A curve or curves intersecting each curve in a second family of curves orthogonally (at right angles).  The rest of the lecture will be devoted to the review of quiz2 exercises and a guideline for important contents from chapter 6 to the end of chapter 9.\nOutline Example. Resistance Proportional to Velocity Resistance encountered by a moving object, such as a car coasting (空驶) to a stop. The faster the object moves, the more its forward progress resisted by the air through which it passes.\nConsider an object with a mass $m$ moving along a coordinate line with position function $s(t)$ and velocity $v(t)$ at time $t$. Assume the resistance force is proportional to velocity by a factor $k$. According to Newton’s second law of motion,\n$$ \\text{(Force)} = \\text{(mass)}\\times \\text{(acceleration)} = m \\frac{dv}{dt}. $$\nThen we can express the velocity by writing down a differential equation\n$$ m \\frac{dv}{dt} = -k v. $$\nThis is a first-order linear differential equation and a separable equation as well. Therefore its solution is given by\n$$ v = v_0 \\exp\\left(-\\frac{k}{m}t\\right). $$\nSince\n$$ \\frac{ds}{dt} = v(t). $$\nWe can integrate this equation to find the general solution for $s(t)$\n$$ s(t) = \\int v_0 e^{-k,t/m} dt = -\\frac{m v_0}{k} e^{-k, t/m} + C. $$\nBy assuming an initial condition $s(0) = 0$, the constant $C$ is determined\n$$ C = \\frac{m v_0}{k}. $$\nThus the particular solution $s(t)$ is\n$$ s(t) = \\frac{m v_0}{k}\\left(1 - e^{-k t/m}\\right). $$\nTo find how far the body will coast, we find the limit of $s(t)$ as $t\\to \\infty$, which is\n$$ \\text{Distance coasted} = \\frac{m v_0}{k}. $$\nThis will be an upper bound. But in real cases, after a short while we will see the object can coast a distance that is very close to the upper bound, thanks to the rapidly decreases of $e^{-k t/m}$.\nExample 1. A Coasting Ice Skater For a $192$-$\\text{lb}$ ice skater, the $k$ is about $1/3$ $\\text{slug}/\\text{sec}$ and $m=192/32 = 6 \\text{ slugs}.$\n How long will it take the skater to coast from $11\\text{ ft/sec}$ to $1\\text{ ft/sec}$ ? How far did the skater coast when the speed is $1\\text{ ft/sec}$ ? How far will the skater coast before coming to a complete stop?  Example. Modeling Population Growth We have modeled population growth with the law of exponential change in section 7.5\n$$ \\frac{dP}{dt} = k P,\\quad P(0) = P_0, $$\nwhere $P$ is the population at time $t$, $k0$ is a constant growth rate, and $P_0$ is the size of the population at time $t=0$.\nThis equation is referring to the case when the relative growth rate $\\frac{dP}{dt}/ P = k$ is a constant. However, it is not usually the case, especially for recent decades. In practice, the coefficient $k$ is usually a dependent variable of time $t$ or population size $P$.\nThe Population Size for China in Recent Decades For example, according to the queries from WolframAlpha, the population size for China in recent 40 years is give by the following chart\n(Population size in the unit of billions)\nIf we take the increment $dt = 1 \\text{ year}$ , $dP/dt \\approx \\Delta P$ be the population difference in consecutive years, then the relative growth rate $k$ changes across year is given by the following chart\nRelative growth rate change across years\nThe Logistic Model To build a better model that can predict the population growth, we assume the relative growth rate as a linear function of population $P$, that is\n$$ k = {dP/dt \\over P} := r(M-P) = r M - rP. $$\nIn this expression, $r$ is the slope, $r M$ is the interception. Then we obtained the Logistic Growth Model\n$$ \\frac{dP}{dt} = r(M-P) P, $$\nwhere $M$ is called the limiting (maximum) population, or carrying capacity.\nData Fitting for China’s Carrying Capacity To find the carrying capacity for China, we first represent the relative growth rate as relating with population size, as shown in the following chart.\nAs shown in the chart, it is not quite linear! But if we consider data for the recent twenty years (from 1.2 billion to 1.45 billion), that portion of the chart is relatively linear. So by using linear fitting tools in Mathematica, we have found a linear relation according to the data, shown as the chart follows.\nThe straight line corresponds to a linear function\n$$ 0.035282 - 0.0217709 P = 0.0217709\\cdot (1.62061-P) = r(M-P). $$\nWhich means the carrying capacity will be roughly $1.62061 \\text{ billion people}$.\nSolve the Logistic Model The Logistic Model fitting the population growth for China is given by\n$$ \\frac{dP}{dt} = r(M-P)P, \\quad P(0) = 1.2, $$\nwhere $r=0.0217709$, $M=1.62061$.\nSlope field Graphical Solution Numerical Solution Euler’s method for predicting the Population.\nAnalytic Solution $$ P = \\dfrac{M}{1+A e^{-r M t}} $$\nExample. Orthogonal Trajectories An orthogonal trajectory of a family of curves is a curve that intersects each curve of the family at right angles, or orthogonally.\nExample 3. Finding Orthogonal Trajectories Find the orthogonal trajectories of the family of curves $xy = a$, where $a\\neq 0$ is an arbitrary constant.\n",
+  "wordCount" : "944",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-04-28T16:22:21+08:00",
+  "dateModified": "2022-04-28T16:22:21+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W10-S2 Applications of First-Order Differential Equations
+    </h1>
+    <div class="post-meta"><span title='2022-04-28 16:22:21 +0800 CST'>April 28, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 10
+日期: April 29, 2022
+节次: 2</p>
+<p>In today’s lecture, we are going to look at three typical applications of first-order differential equations.</p>
+<ol>
+<li>Analyzes an object moving along a straight line while subject to a force opposing its motion.</li>
+<li>A model of population growth which takes into account factors in the environment placing limits on growth.</li>
+<li>A curve or curves intersecting each curve in a second family of curves <em>orthogonally (at right angles).</em></li>
+</ol>
+<p>The rest of the lecture will be devoted to the review of quiz2 exercises and a guideline for important contents from chapter 6 to the end of chapter 9.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="example-resistance-proportional-to-velocity">Example. Resistance Proportional to Velocity<a hidden class="anchor" aria-hidden="true" href="#example-resistance-proportional-to-velocity">#</a></h1>
+<p>Resistance encountered by a moving object, such as a car <strong>coasting (空驶)</strong> to a stop. The faster the object moves, the more its forward progress resisted by the air through which it passes.</p>
+<p>Consider an object with a mass $m$ moving along a coordinate line with position function $s(t)$ and velocity $v(t)$ at time $t$. Assume the resistance force is proportional to velocity by a factor $k$. According to <em>Newton’s second law of motion,</em></p>
+<p>$$
+\text{(Force)} = \text{(mass)}\times \text{(acceleration)} = m \frac{dv}{dt}.
+$$</p>
+<p>Then we can express the velocity by writing down a differential equation</p>
+<p>$$
+m \frac{dv}{dt} = -k v.
+$$</p>
+<p>This is a first-order linear differential equation and a separable equation as well. Therefore its solution is given by</p>
+<p>$$
+v = v_0 \exp\left(-\frac{k}{m}t\right).
+$$</p>
+<p>Since</p>
+<p>$$
+\frac{ds}{dt} = v(t).
+$$</p>
+<p>We can integrate this equation to find the general solution for $s(t)$</p>
+<p>$$
+s(t) = \int v_0 e^{-k,t/m} dt = -\frac{m v_0}{k} e^{-k, t/m} + C.
+$$</p>
+<p>By assuming an initial condition $s(0) = 0$, the constant $C$ is determined</p>
+<p>$$
+C = \frac{m v_0}{k}.
+$$</p>
+<p>Thus the particular solution $s(t)$ is</p>
+<p>$$
+s(t) = \frac{m v_0}{k}\left(1 - e^{-k t/m}\right).
+$$</p>
+<p>To find how far the body will coast, we find the limit of $s(t)$ as $t\to \infty$, which is</p>
+<p>$$
+\text{Distance coasted} = \frac{m v_0}{k}.
+$$</p>
+<p>This will be an upper bound. But in real cases, after a short while we will see the object can coast a distance that is very close to the upper bound, thanks to the rapidly decreases of $e^{-k t/m}$.</p>
+<h3 id="example-1-a-coasting-ice-skater">Example 1. A Coasting Ice Skater<a hidden class="anchor" aria-hidden="true" href="#example-1-a-coasting-ice-skater">#</a></h3>
+<p>For a $192$-$\text{lb}$ ice skater, the $k$ is about $1/3$ $\text{slug}/\text{sec}$ and $m=192/32 = 6 \text{ slugs}.$</p>
+<ol>
+<li>How long will it take the skater to coast from $11\text{ ft/sec}$ to $1\text{ ft/sec}$ ?</li>
+<li>How far did the skater coast when the speed is $1\text{ ft/sec}$ ?</li>
+<li>How far will the skater coast before coming to a complete stop?</li>
+</ol>
+<h1 id="example-modeling-population-growth">Example. Modeling Population Growth<a hidden class="anchor" aria-hidden="true" href="#example-modeling-population-growth">#</a></h1>
+<p>We have modeled population growth with the law of exponential change in section 7.5</p>
+<p>$$
+\frac{dP}{dt} = k P,\quad P(0) = P_0,
+$$</p>
+<p>where $P$ is the population at time $t$, $k&gt;0$ is a constant growth rate, and $P_0$ is the size of the population at time $t=0$.</p>
+<p>This equation is referring to the case when the <strong>relative growth rate $\frac{dP}{dt}/ P = k$ is a constant.</strong> However, it is not usually the case, especially for recent decades. In practice, the coefficient $k$ is usually a dependent variable of time $t$ or population size $P$.</p>
+<h2 id="the-population-size-for-china-in-recent-decades">The Population Size for China in Recent Decades<a hidden class="anchor" aria-hidden="true" href="#the-population-size-for-china-in-recent-decades">#</a></h2>
+<p>For example, according to the queries from <code>WolframAlpha</code>, the population size for China in recent 40 years is give by the following chart</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled.png" alt="(Population size in the unit of billions)"  />
+</p>
+<p>(Population size in the unit of billions)</p>
+<p>If we take the increment $dt = 1 \text{ year}$ , $dP/dt \approx \Delta P$  be the population difference in consecutive years, then the relative growth rate $k$ changes across year is given by the following chart</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%201.png" alt="Relative growth rate change across years"  />
+</p>
+<p>Relative growth rate change across years</p>
+<h2 id="the-logistic-model">The Logistic Model<a hidden class="anchor" aria-hidden="true" href="#the-logistic-model">#</a></h2>
+<p>To build a better model that can predict the population growth, we assume the relative growth rate as a linear function of population $P$, that is</p>
+<p>$$
+k = {dP/dt \over P}  := r(M-P) = r M - rP.
+$$</p>
+<p>In this expression, $r$ is the slope, $r M$  is the interception. Then we obtained the <strong>Logistic Growth Model</strong></p>
+<p>$$
+\frac{dP}{dt} = r(M-P) P,
+$$</p>
+<p>where $M$ is called the <strong>limiting  (maximum) population</strong>, or <strong>carrying capacity</strong>.</p>
+<h3 id="data-fitting-for-chinas-carrying-capacity">Data Fitting for China’s Carrying Capacity<a hidden class="anchor" aria-hidden="true" href="#data-fitting-for-chinas-carrying-capacity">#</a></h3>
+<p>To find the carrying capacity for China, we first represent the relative growth rate as relating with population size, as shown in the following chart.</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%202.png" alt="Untitled"  />
+</p>
+<p>As shown in the chart, it is not quite linear! But if we consider data for the recent twenty years (from 1.2 billion to 1.45 billion), that portion of the chart is relatively linear. So by using linear fitting tools in Mathematica, we have found a linear relation according to the data, shown as the chart follows.</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>The straight line corresponds to a linear function</p>
+<p>$$
+0.035282 - 0.0217709 P = 0.0217709\cdot (1.62061-P) = r(M-P).
+$$</p>
+<p>Which means the carrying capacity will be roughly $1.62061 \text{ billion people}$.</p>
+<h2 id="solve-the-logistic-model">Solve the Logistic Model<a hidden class="anchor" aria-hidden="true" href="#solve-the-logistic-model">#</a></h2>
+<p>The Logistic Model fitting the population growth for China is given by</p>
+<p>$$
+\frac{dP}{dt} = r(M-P)P, \quad P(0) = 1.2,
+$$</p>
+<p>where $r=0.0217709$, $M=1.62061$.</p>
+<h3 id="slope-field">Slope field<a hidden class="anchor" aria-hidden="true" href="#slope-field">#</a></h3>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%204.png" alt="Untitled"  />
+</p>
+<h3 id="graphical-solution">Graphical Solution<a hidden class="anchor" aria-hidden="true" href="#graphical-solution">#</a></h3>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%205.png" alt="Untitled"  />
+</p>
+<h3 id="numerical-solution">Numerical Solution<a hidden class="anchor" aria-hidden="true" href="#numerical-solution">#</a></h3>
+<p>Euler’s method for predicting the Population.</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%206.png" alt="Untitled"  />
+</p>
+<h3 id="analytic-solution">Analytic Solution<a hidden class="anchor" aria-hidden="true" href="#analytic-solution">#</a></h3>
+<p>$$
+P = \dfrac{M}{1+A e^{-r M t}}
+$$</p>
+<h1 id="example-orthogonal-trajectories">Example. Orthogonal Trajectories<a hidden class="anchor" aria-hidden="true" href="#example-orthogonal-trajectories">#</a></h1>
+<p>An <strong>orthogonal trajectory</strong> of a family of curves is a curve that intersects each curve of the family at right angles, or <em>orthogonally.</em></p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%207.png" alt="Untitled"  />
+</p>
+<h2 id="example-3-finding-orthogonal-trajectories">Example 3. Finding Orthogonal Trajectories<a hidden class="anchor" aria-hidden="true" href="#example-3-finding-orthogonal-trajectories">#</a></h2>
+<p>Find the orthogonal trajectories of the family of curves $xy = a$, where $a\neq 0$ is an arbitrary constant.</p>
+<p><img loading="lazy" src="W10-S2%20Applications%20of%20First-Order%20Differential%20Eq%2083c371114ce147a49cc5b526b1ad5112/Untitled%208.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/application/">application</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/differential/">differential</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/equations/">equations</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/solve/">solve</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/coasting/">coasting</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/population/">population</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/orthogonal/">orthogonal</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
