@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>diverge on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/diverge/</link>
+    <description>Recent content in diverge on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 05 May 2022 11:43:25 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/diverge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W11-S1 Infinite Sequences and Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</link>
+      <pubDate>Thu, 05 May 2022 11:43:25 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</guid>
+      <description>周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes</description>
+    </item>
+    
+  </channel>
+</rss>

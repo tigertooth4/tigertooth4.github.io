@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W11-S1 Infinite Sequences and Series | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="series, sequence, converge, diverge, overview, calculus, lecture" />
+<meta name="description" content="周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W11-S1 Infinite Sequences and Series" />
+<meta property="og:description" content="周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-05T11:43:25&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-05T11:43:25&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W11-S1 Infinite Sequences and Series"/>
+<meta name="twitter:description" content="周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W11-S1 Infinite Sequences and Series",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W11-S1 Infinite Sequences and Series",
+  "name": "W11-S1 Infinite Sequences and Series",
+  "description": "周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes",
+  "keywords": [
+    "series", "sequence", "converge", "diverge", "overview", "calculus", "lecture"
+  ],
+  "articleBody": "周次: 11 日期: May 6, 2022 节次: 2\nIn this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences.\nOverview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series.\nIt is clear that infinite sum sometimes have a finite value, as in\n$$ \\frac12 + \\frac14 + \\frac18 + \\frac1{16} + \\cdots = 1 $$\nOther infinite series do not have a finite sum, as with\n$$ 1+2+3+ 4+5 + \\cdots $$\nWith some infinite series, such as the harmonic series\n$$ 1+\\frac12 + \\frac13 + \\frac14 + \\frac15 +\\frac16 + \\cdots $$\nit is not obvious whether a finite sum exists.\nTo explore such problems, we need to exam the limit for infinite many numbers first. A list of infinite many numbers is called a sequence.\n§ 11.1. Sequences Definition and Examples A sequence is a list of infinite many numbers\n$$ a_1, a_2, a_3,\\cdots, a_n,\\cdots $$\nin a given order. Each of $a_1,$ $a_2$, $a_3$ and so on represents a number. These are the terms of the sequence. For example the sequence\n$$ 2, 3, 5, 7, 11, 13, \\cdots $$\nhas first term $a_1 = 2$, second term $a_2 = 4$ and $n$th term $a_n$ is the $n$th prime number. The integer $n$ is called the index of $a_n$, indicating where $a_n$ occurs in the list. We can think of the sequence as a function of $n$.\nDefinition (Infinite Sequence) An infinite sequence of numbers is a function whose domain is the set of positive integers.\nExamples  The sequence  $$ 12, 14, 16, 18, 20, 22, \\cdots $$\nis described by the formula $a_n = 10 + 2n$. Or it can be described by the simpler formula $b_n = 2n$, where the index $n$ starts at $6$ and increases. To allow such simpler formulas, we let the first index of the sequence be any integer.\nWe denote a sequence by ${a_n}$. The order is important. The sequence $1,2,3,4,\\cdots$ is not the same as the sequence $2,1,3,4,\\cdots$\nWays to represent sequences  Sequence can be described by writing rules at specify their terms, such as  $$ a_n =\\sqrt{n},\\quad b_n = (-1)^{n+1} \\frac1n,\\quad c_n = \\frac{n-1}{n},\\quad d_n = (-1)^{n+1}. $$\nor by listing terms,\n$$ {a_n} = {\\sqrt1, \\sqrt 2, \\sqrt 3,\\cdots, \\sqrt{n},\\cdots} $$\n$$ {b_n} = {1, -\\frac12, \\frac13, -\\frac14,\\cdots,(-1)^{n+1}\\frac1n,\\cdots} $$\n$$ {c_n}={0, \\frac12, \\frac23,\\frac34,\\cdots, \\frac{n-1}{n},\\cdots} $$\n$$ {d_n}={1,-1,1,-1,1,-1,\\cdots, (-1)^{n+1},\\cdots}. $$\nSometimes write\n$$ {a_n} = {\\sqrt{n}}_{n=1}^\\infty. $$\n Two ways to represent sequences graphically.  Convergence and Divergence Sometimes the number in the sequence approach a single value as the index $n$ increases, as with ${a_n = \\frac1n}.$ In sequence ${c_n=\\frac{n-1}{n}}$， terms approach $1$. In sequence ${d_n = (-1)^{n+1}}$ the sequence bounce back and forth between $1$ and $-1$, never converging to a single value.\nDefinitions (Converges, Diverges, Limit) The sequence ${a_n}$ converges to the number $L$ if to every positive number $\\epsilon$ there corresponds an integer $N$ such that for all $nN$ it has\n$$ |a_n-L|If no such number $L$ exists, we say that ${a_n}$ diverges.\nIf ${a_n}$ converges to $L$, we write $\\lim_{n\\to\\infty}a_n= L,$ or simply $a_n\\to L$, and call $L$ the limit of the sequence.\n**Remark** The definition is very similar to the definition of the limit of a function $f(x)$ as $x$ approaches $\\infty$. We will exploit this connection to calculate limits of sequences.\nExample 1. Applying the definition Show that\n $\\lim_{n\\to\\infty}\\frac1n = 0$ $\\lim_{n\\to \\infty} c = c$, (for any constant sequence ${a_n \\equiv c}$)  Example 2. A divergent sequence Show that the sequence ${1,-1,1,-1,1,-1,\\cdots}$ diverges.\nExample 3. An unbounded sequence diverges Show that the sequence ${\\sqrt{n}}_{n=1}^\\infty$ diverges.\nDefinition (Diverge to Infinity) The sequence ${a_n}$ diverges to infinity if for every number $M$ there is an integer $N$ such that for all $n$ larger than $N$, $a_nM$. If this condition holds we write\n$$ \\lim_{n\\to \\infty} a_n = \\infty,\\quad \\text{or}\\quad a_n\\to \\infty. $$\nSimilarly if for every number $m$ there is an integer $N$ such that for all $nN$ we have $a_ndiverges to negative infinity and write\n$$ \\lim_{n\\to \\infty}a_n = -\\infty,\\quad \\text{or} \\quad a_n \\to -\\infty. $$\n**Remark** A sequence may diverge without diverging to infinity or negative infinity. As an example ${1, 0, 2,0, 3,0,\\cdots}$ is also divergence.\nCalculating limits of Sequences Theorem 1 Let ${a_n}$ and ${b_n}$ be sequences of real numbers and let $A$ and $B$ be real numbers. The following rules hold if $\\lim_{n\\to \\infty} a_n = A$ and $\\lim_{n\\to \\infty} b_n = B.$\n Linear Rule: $\\lim_{n\\to\\infty} (\\alpha a_n\\pm \\beta b_n) = \\alpha A \\pm \\beta B$, for constants $\\alpha$ and $\\beta$, Product Rule: $\\lim_{n\\to\\infty}(a_n\\cdot b_n) = A\\cdot B$, Quotient Rule: $\\lim_{n\\to\\infty} \\frac{a_n}{b_n} = \\frac{A}{B}$ if $B\\neq 0$.  Example 3. Applying Theorem 1 By combining Theorem 1 with the limits of Example 1, we have\n $\\lim_{n\\to\\infty}\\left(-\\frac{1}{n}\\right) = - \\lim_{n\\to \\infty}\\frac{1}{n} = 0$ $\\lim_{n\\to\\infty}\\left(\\frac{n-1}{n}\\right) = \\lim_{n\\to\\infty}\\left(1-\\frac{1}{n}\\right) = \\lim_n 1 - \\lim_n \\frac{1}{n} = 1.$ $\\lim_{n\\to\\infty}\\frac{4-7n^6}{n^6+3} = \\lim_{n\\to \\infty}\\frac{4/n^6 - 7}{1+3/n^6} = -7$  Remark It does not mean if the sum ${a_n+b_n}$ has a limit, then ${a_n}$ and ${b_n}$ both have limits.\nRemark Every non-zero multiple of a divergent sequence ${a_n}$ diverges.\nTheorem 2. The Sandwich Theorem for Sequences Let ${a_n}$, ${b_n}$ and ${c_n}$ be sequences of real numbers. If $a_n\\le b_n\\le c_n$ holds for all $n$ beyond some index $N$, and if $\\lim_{n\\to\\infty} a_n = \\lim_{n\\to\\infty} c_n = L$, then $\\lim_{n\\to\\infty}b_n = L$ as well.\nRemark An immediate consequence of Theorem 2 is that, if $|b_n|\\le c_n$ and $c_n\\to 0$, then $b_n\\to 0$ as well, because $-c_n \\le b_n \\le c_n$.\nExample 4. Applying the Sandwich Theorem Since $1/n\\to 0$, we know that\n $\\frac{\\cos n}{n} \\to 0$ $1/2^n\\to 0$ $(-1)^n \\frac1n \\to 0$  Theorem 3. The Continuous Function Theorem for Sequences Let ${a_n}$ be a sequence of real numbers. If $a_n\\to L$ and if $f$ is a function that is continuous at $L$ and defined at all ${a_n}$, then $f(a_n)\\to f(L)$.\nExample 5. Applying Theorem 3 Show that $\\sqrt{n/(n+1)}\\to 1$.\nExample 6. The Sequence ${\\sqrt[n]{k}}$ Show that $k^{1/n}\\to 0$\nUsing l’Hôpital’s Rule Theorem 4. Suppose that $f(x)$ is a function defined for all $x\\ge n_0$ and that ${a_n}$ is a sequence of real numbers such that $a_n = f(n)$ for $n\\ge n_0$. Then\n$$ \\lim_{x\\to\\infty} f(x) = L\\quad \\implies \\quad \\lim_{n\\to\\infty} a_n =L. $$\nExample 7. Applying L’Hôpital’s Rule Show that $\\lim_{n\\to\\infty} \\frac{\\ln n}{n} = 0$.\nExample 8. Applying L’Hôpital’s Rule Find $\\lim_{n\\to \\infty} \\frac{2^n}{5n}.$\nExample 9. Applying L’Hôpital’s Rule to Determine Convergence Does the sequence $a_n = \\left(\\frac{n+1}{n-1}\\right)^n$ converge?\nCommonly Occurring Limits Theorem 5. The following six sequences converges to the limits listed below:\n $\\lim_{n\\to \\infty}\\frac{\\ln n}{n} = 0$ $\\lim_{n\\to\\infty}\\sqrt[n]{n} = 1$ $\\lim_{n\\to\\infty}x^{1/n} = 1,\\quad (x0)$ $\\lim_{n\\to\\infty}x^n = 0,\\quad (|x| $\\lim_{n\\to\\infty}\\left(1+\\frac{x}{n}\\right)^n = e^x,\\quad (\\forall, x)$ $\\lim_{n\\to\\infty} \\frac{x^n}{n!} = 0,\\quad (\\forall, x)$  Example 10. Applying Theorem 5  $\\frac{\\ln(n^2)}{n} \\to ?$ $\\sqrt[n]{n^2}\\to ?$ $\\sqrt[n]{3n}\\to ?$ $\\left(-\\frac12\\right)^n\\to?$ $\\left(\\frac{n-2}{n}\\right)^n\\to ?$ $\\frac{100^n}{n!}\\to ?$  Recursive Definitions For the sequences that defined recursively by giving\n The value(s) of the initial term or terms, and A rule, called a recursion formula, for calculating any later term form terms that precede it.  Example 11. Sequence Constructed Recursively  $a_1 = 1$ and $a_n = a_{n-1} + 1$ $a_1 = 1$ and $a_n = n\\cdot a_{n-1}$ $a_1 = a_2 =1$ and $a_{n+1} = a_n + a_{n-1}$ (Fibonacci numbers) $x_0=1$ and $x_{n+1} = x_n - \\frac{\\sin x_n - x_n^2}{\\cos x_n - 2 x_n}$ defined a sequence that converges to a solution of the equation $\\sin x - x^2 = 0.$  Bounded Nondecreasing Sequences An important special type of sequence is one for which each term is at least as large as its predecessor.\nDefinition. Nondecreasing Sequence If a sequence ${a_n}$ has the property that $a_n\\le a_{n+1}$ for all $n$, then it is called a nondecreasing sequence.\nExample 12. Nondecreasing Sequences  $1,2,3,\\cdots, n,\\cdots$ $\\frac12, \\frac23,\\frac34,\\cdots, \\frac{n-1}{n},\\cdots$ $3,3,3,\\cdots, 3,\\cdots$ $\\frac21, (\\frac32)^2, (\\frac43)^3,\\cdots, (\\frac{n+1}{n})^n,\\cdots$  Definition. Bounded , Upper Bound, Least Upper Bound A sequence ${a_n}$ is bounded from above if there exists a number $M$ such that $a_n\\le M$ for all $n$. The number $M$ is an upper bound for ${a_n}$. If $M$ is the minimum upper bound among all the upper bounds for ${a_n}$, then $M$ is called least upper bound for ${a_n}.$\nExample 13. Applying the Definition for Boundedness  The sequence $1,2,3,\\cdots, n,\\cdots$ has no upper bound. $\\frac12, \\frac23,\\frac34,\\cdots, \\frac{n}{n+1},\\cdots$ is bounded above by $M=1.$  A nondecreasing sequence that is bounded from above always has a least upper bound. The existence for the least upper bound is the property of completeness of the real number system. We will prove that if $L$ is the least upper bound then the sequence converges to $L$.\nProposition. Suppose ${a_n}$ is a nondecreasing sequence with least upper bound $L$, then $\\lim_{n\\to\\infty}a_n = L.$\nTheorem 6. The Nondecreasing Sequence Theorem A nondecreasing sequence of real numbers converges if and only if it is bounded from above. If a nondecreasing sequence converges, it converges to its least upper bound.\n",
+  "wordCount" : "1573",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-05T11:43:25+08:00",
+  "dateModified": "2022-05-05T11:43:25+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W11-S1 Infinite Sequences and Series
+    </h1>
+    <div class="post-meta"><span title='2022-05-05 11:43:25 +0800 CST'>May 5, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 11
+日期: May 6, 2022
+节次: 2</p>
+<p>In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences.</p>
+<h1 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h1>
+<p>In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of <strong>infinite series</strong>.</p>
+<p>It is clear that infinite sum sometimes have a finite value, as in</p>
+<p>$$
+\frac12 + \frac14 + \frac18 + \frac1{16} + \cdots = 1
+$$</p>
+<p><img loading="lazy" src="W11-S1%20Infinite%20Sequences%20and%20Series%2018da047d3a0e44259dc04cc8ac2b8c3a/Untitled.png" alt="Untitled"  />
+</p>
+<p>Other infinite series do not have a finite sum, as with</p>
+<p>$$
+1+2+3+ 4+5 + \cdots
+$$</p>
+<p>With some infinite series, such as the <em>harmonic series</em></p>
+<p>$$
+1+\frac12 + \frac13 + \frac14 + \frac15 +\frac16 + \cdots
+$$</p>
+<p>it is not obvious whether a finite sum exists.</p>
+<p>To explore such problems, we need to exam the limit for infinite many numbers first. A list of infinite many numbers is called a <strong>sequence</strong>.</p>
+<h1 id="-111-sequences">§ 11.1. Sequences<a hidden class="anchor" aria-hidden="true" href="#-111-sequences">#</a></h1>
+<h2 id="definition-and-examples">Definition and Examples<a hidden class="anchor" aria-hidden="true" href="#definition-and-examples">#</a></h2>
+<p>A sequence is a list of infinite many numbers</p>
+<p>$$
+a_1, a_2, a_3,\cdots, a_n,\cdots
+$$</p>
+<p>in a given order. Each of $a_1,$ $a_2$, $a_3$ and so on represents a number. These are the <strong>terms</strong> of the sequence. For example the sequence</p>
+<p>$$
+2, 3, 5, 7, 11, 13, \cdots
+$$</p>
+<p>has first term $a_1 = 2$, second term $a_2 = 4$ and $n$th term $a_n$ is the $n$th prime number. The integer $n$ is called the <strong>index</strong> of $a_n$, indicating where $a_n$ occurs in the list. We can think of the sequence as a function of $n$.</p>
+<h3 id="definition-infinite-sequence">Definition (Infinite Sequence)<a hidden class="anchor" aria-hidden="true" href="#definition-infinite-sequence">#</a></h3>
+<p>An <strong>infinite sequence</strong> of numbers is a function whose domain is the set of positive integers.</p>
+<h3 id="examples">Examples<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h3>
+<ul>
+<li>The sequence</li>
+</ul>
+<p>$$
+12, 14, 16, 18, 20, 22, \cdots
+$$</p>
+<p>is described by the formula $a_n = 10 + 2n$. Or it can be described by the simpler formula $b_n = 2n$, where the index $n$  starts at $6$ and increases. To allow such simpler formulas, we let the first index of the sequence be any integer.</p>
+<p>We denote a sequence by ${a_n}$. The order is important. The sequence $1,2,3,4,\cdots$ is not the same as the sequence $2,1,3,4,\cdots$</p>
+<h3 id="ways-to-represent-sequences">Ways to represent sequences<a hidden class="anchor" aria-hidden="true" href="#ways-to-represent-sequences">#</a></h3>
+<ul>
+<li>Sequence can be described by writing rules at specify their terms, such as</li>
+</ul>
+<p>$$
+a_n =\sqrt{n},\quad b_n = (-1)^{n+1} \frac1n,\quad c_n = \frac{n-1}{n},\quad d_n = (-1)^{n+1}.
+$$</p>
+<p>or by listing terms,</p>
+<p>$$
+{a_n} = {\sqrt1, \sqrt 2, \sqrt 3,\cdots, \sqrt{n},\cdots}
+$$</p>
+<p>$$
+{b_n} = {1, -\frac12, \frac13, -\frac14,\cdots,(-1)^{n+1}\frac1n,\cdots}
+$$</p>
+<p>$$
+{c_n}={0, \frac12, \frac23,\frac34,\cdots, \frac{n-1}{n},\cdots}
+$$</p>
+<p>$$
+{d_n}={1,-1,1,-1,1,-1,\cdots, (-1)^{n+1},\cdots}.
+$$</p>
+<p>Sometimes write</p>
+<p>$$
+{a_n} = {\sqrt{n}}_{n=1}^\infty.
+$$</p>
+<ul>
+<li>Two ways to represent sequences graphically.</li>
+</ul>
+<p><img loading="lazy" src="W11-S1%20Infinite%20Sequences%20and%20Series%2018da047d3a0e44259dc04cc8ac2b8c3a/Untitled%201.png" alt="Untitled"  />
+</p>
+<h2 id="convergence-and-divergence">Convergence and Divergence<a hidden class="anchor" aria-hidden="true" href="#convergence-and-divergence">#</a></h2>
+<p>Sometimes the number in the sequence approach a single value as the index $n$ increases, as with ${a_n = \frac1n}.$  In sequence ${c_n=\frac{n-1}{n}}$， terms approach $1$. In sequence ${d_n = (-1)^{n+1}}$ the sequence bounce back and forth between $1$ and $-1$, never converging to a single value.</p>
+<h3 id="definitions-converges-diverges-limit">Definitions (Converges, Diverges, Limit)<a hidden class="anchor" aria-hidden="true" href="#definitions-converges-diverges-limit">#</a></h3>
+<p>The sequence ${a_n}$ <strong>converges</strong> to the number $L$ if to every positive number $\epsilon$ there corresponds an integer $N$ such that for all $n&gt;N$ it has</p>
+<p>$$
+|a_n-L|&lt; \epsilon.
+$$</p>
+<p>If no such number $L$ exists, we say that ${a_n}$ <strong>diverges.</strong></p>
+<p>If ${a_n}$ converges to $L$, we write $\lim_{n\to\infty}a_n= L,$ or simply $a_n\to L$, and call $L$ the <strong>limit</strong> of the sequence.</p>
+<p><code>**Remark**</code> The definition is very similar to the definition of the limit of a function $f(x)$ as $x$ approaches $\infty$. We will exploit this connection to calculate limits of sequences.</p>
+<h3 id="example-1-applying-the-definition">Example 1. Applying the definition<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-definition">#</a></h3>
+<p>Show that</p>
+<ol>
+<li>$\lim_{n\to\infty}\frac1n = 0$</li>
+<li>$\lim_{n\to \infty} c = c$, (for any constant sequence ${a_n \equiv c}$)</li>
+</ol>
+<h3 id="example-2-a-divergent-sequence">Example 2. A divergent sequence<a hidden class="anchor" aria-hidden="true" href="#example-2-a-divergent-sequence">#</a></h3>
+<p>Show that the sequence ${1,-1,1,-1,1,-1,\cdots}$ diverges.</p>
+<h3 id="example-3-an-unbounded-sequence-diverges">Example 3. An unbounded sequence diverges<a hidden class="anchor" aria-hidden="true" href="#example-3-an-unbounded-sequence-diverges">#</a></h3>
+<p>Show that the sequence ${\sqrt{n}}_{n=1}^\infty$ diverges.</p>
+<h3 id="definition-diverge-to-infinity">Definition (Diverge to Infinity)<a hidden class="anchor" aria-hidden="true" href="#definition-diverge-to-infinity">#</a></h3>
+<p>The sequence ${a_n}$ <strong>diverges to infinity</strong> if for every number $M$ there is an integer $N$ such that for all $n$ larger than $N$, $a_n&gt;M$. If this condition holds we write</p>
+<p>$$
+\lim_{n\to \infty} a_n  = \infty,\quad \text{or}\quad a_n\to \infty.
+$$</p>
+<p>Similarly if for every number $m$ there  is an integer $N$ such that for all $n&gt;N$ we have $a_n&lt;m$, then we say ${a_n}$ <strong>diverges to  negative infinity</strong> and write</p>
+<p>$$
+\lim_{n\to \infty}a_n = -\infty,\quad \text{or} \quad a_n \to -\infty.
+$$</p>
+<p><code>**Remark**</code> A sequence may diverge without diverging to infinity or negative infinity. As an example ${1, 0, 2,0, 3,0,\cdots}$ is also divergence.</p>
+<h2 id="calculating-limits-of-sequences">Calculating limits of Sequences<a hidden class="anchor" aria-hidden="true" href="#calculating-limits-of-sequences">#</a></h2>
+<h3 id="theorem-1">Theorem 1<a hidden class="anchor" aria-hidden="true" href="#theorem-1">#</a></h3>
+<p>Let ${a_n}$ and ${b_n}$ be sequences of real numbers and let $A$ and $B$ be real numbers. The following rules hold if $\lim_{n\to \infty} a_n = A$ and $\lim_{n\to \infty} b_n = B.$</p>
+<ol>
+<li><em>Linear Rule:</em>  $\lim_{n\to\infty} (\alpha a_n\pm \beta b_n) = \alpha A \pm \beta B$, for constants $\alpha$ and $\beta$,</li>
+<li><em>Product Rule: $\lim_{n\to\infty}(a_n\cdot b_n) = A\cdot B$,</em></li>
+<li><em>Quotient Rule: $\lim_{n\to\infty} \frac{a_n}{b_n} = \frac{A}{B}$</em> if <em>$B\neq 0$.</em></li>
+</ol>
+<h3 id="example-3-applying-theorem-1">Example 3. Applying Theorem 1<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-theorem-1">#</a></h3>
+<p>By combining Theorem 1 with the limits of Example 1, we have</p>
+<ol>
+<li>$\lim_{n\to\infty}\left(-\frac{1}{n}\right) = - \lim_{n\to \infty}\frac{1}{n} = 0$</li>
+<li>$\lim_{n\to\infty}\left(\frac{n-1}{n}\right) = \lim_{n\to\infty}\left(1-\frac{1}{n}\right) = \lim_n 1 - \lim_n \frac{1}{n} = 1.$</li>
+<li>$\lim_{n\to\infty}\frac{4-7n^6}{n^6+3} = \lim_{n\to \infty}\frac{4/n^6 - 7}{1+3/n^6} = -7$</li>
+</ol>
+<p><strong><code>Remark</code></strong> It does not mean if the sum ${a_n+b_n}$ has a limit, then ${a_n}$ and ${b_n}$ both have limits.</p>
+<p><strong><code>Remark</code></strong> Every non-zero multiple of a divergent sequence ${a_n}$ diverges.</p>
+<h3 id="theorem-2-the-sandwich-theorem-for-sequences">Theorem 2. The Sandwich Theorem for Sequences<a hidden class="anchor" aria-hidden="true" href="#theorem-2-the-sandwich-theorem-for-sequences">#</a></h3>
+<p>Let ${a_n}$, ${b_n}$ and ${c_n}$ be sequences of real numbers. If $a_n\le b_n\le c_n$ holds for all $n$ beyond some index $N$, and if $\lim_{n\to\infty} a_n = \lim_{n\to\infty} c_n = L$, then $\lim_{n\to\infty}b_n = L$  as well.</p>
+<p><strong><code>Remark</code></strong> An immediate consequence of <strong>Theorem 2</strong> is that, if $|b_n|\le c_n$ and $c_n\to 0$, then $b_n\to 0$ as well, because $-c_n \le b_n \le c_n$.</p>
+<h3 id="example-4-applying-the-sandwich-theorem">Example 4. Applying the Sandwich Theorem<a hidden class="anchor" aria-hidden="true" href="#example-4-applying-the-sandwich-theorem">#</a></h3>
+<p>Since $1/n\to 0$, we know that</p>
+<ol>
+<li>$\frac{\cos n}{n} \to 0$</li>
+<li>$1/2^n\to 0$</li>
+<li>$(-1)^n \frac1n \to 0$</li>
+</ol>
+<h3 id="theorem-3-the-continuous-function-theorem-for-sequences">Theorem 3. The Continuous Function Theorem for Sequences<a hidden class="anchor" aria-hidden="true" href="#theorem-3-the-continuous-function-theorem-for-sequences">#</a></h3>
+<p>Let ${a_n}$ be a sequence of real numbers. If $a_n\to L$ and if $f$ is a function that is continuous at $L$ and defined at all ${a_n}$, then $f(a_n)\to f(L)$.</p>
+<h3 id="example-5-applying-theorem-3">Example 5. Applying Theorem 3<a hidden class="anchor" aria-hidden="true" href="#example-5-applying-theorem-3">#</a></h3>
+<p>Show that $\sqrt{n/(n+1)}\to 1$.</p>
+<h3 id="example-6-the-sequence-sqrtnk">Example 6. The Sequence ${\sqrt[n]{k}}$<a hidden class="anchor" aria-hidden="true" href="#example-6-the-sequence-sqrtnk">#</a></h3>
+<p>Show that $k^{1/n}\to 0$</p>
+<h2 id="using-lhôpitals-rule">Using l’Hôpital’s Rule<a hidden class="anchor" aria-hidden="true" href="#using-lhôpitals-rule">#</a></h2>
+<h3 id="theorem-4">Theorem 4.<a hidden class="anchor" aria-hidden="true" href="#theorem-4">#</a></h3>
+<p>Suppose that $f(x)$ is a function defined for all $x\ge n_0$ and that ${a_n}$ is a sequence of real numbers such that $a_n = f(n)$ for $n\ge n_0$. Then</p>
+<p>$$
+\lim_{x\to\infty} f(x) = L\quad \implies \quad \lim_{n\to\infty} a_n =L.
+$$</p>
+<h3 id="example-7-applying-lhôpitals-rule">Example 7. Applying L’Hôpital’s Rule<a hidden class="anchor" aria-hidden="true" href="#example-7-applying-lhôpitals-rule">#</a></h3>
+<p>Show that $\lim_{n\to\infty} \frac{\ln n}{n} = 0$.</p>
+<h3 id="example-8-applying-lhôpitals-rule">Example 8. Applying L’Hôpital’s Rule<a hidden class="anchor" aria-hidden="true" href="#example-8-applying-lhôpitals-rule">#</a></h3>
+<p>Find $\lim_{n\to \infty} \frac{2^n}{5n}.$</p>
+<h3 id="example-9-applying-lhôpitals-rule-to-determine-convergence">Example 9. Applying L’Hôpital’s Rule to Determine Convergence<a hidden class="anchor" aria-hidden="true" href="#example-9-applying-lhôpitals-rule-to-determine-convergence">#</a></h3>
+<p>Does the sequence $a_n = \left(\frac{n+1}{n-1}\right)^n$ converge?</p>
+<h2 id="commonly-occurring-limits">Commonly Occurring Limits<a hidden class="anchor" aria-hidden="true" href="#commonly-occurring-limits">#</a></h2>
+<h3 id="theorem-5">Theorem 5.<a hidden class="anchor" aria-hidden="true" href="#theorem-5">#</a></h3>
+<p>The following six sequences converges to the limits listed below:</p>
+<ol>
+<li>$\lim_{n\to \infty}\frac{\ln n}{n} = 0$</li>
+<li>$\lim_{n\to\infty}\sqrt[n]{n} = 1$</li>
+<li>$\lim_{n\to\infty}x^{1/n} = 1,\quad (x&gt;0)$</li>
+<li>$\lim_{n\to\infty}x^n = 0,\quad (|x|&lt;1)$</li>
+<li>$\lim_{n\to\infty}\left(1+\frac{x}{n}\right)^n = e^x,\quad (\forall, x)$</li>
+<li>$\lim_{n\to\infty} \frac{x^n}{n!} = 0,\quad (\forall, x)$</li>
+</ol>
+<h3 id="example-10-applying-theorem-5">Example 10. Applying Theorem 5<a hidden class="anchor" aria-hidden="true" href="#example-10-applying-theorem-5">#</a></h3>
+<ol>
+<li>$\frac{\ln(n^2)}{n} \to ?$</li>
+<li>$\sqrt[n]{n^2}\to ?$</li>
+<li>$\sqrt[n]{3n}\to ?$</li>
+<li>$\left(-\frac12\right)^n\to?$</li>
+<li>$\left(\frac{n-2}{n}\right)^n\to ?$</li>
+<li>$\frac{100^n}{n!}\to ?$</li>
+</ol>
+<h2 id="recursive-definitions">Recursive Definitions<a hidden class="anchor" aria-hidden="true" href="#recursive-definitions">#</a></h2>
+<p>For the sequences that defined <strong>recursively</strong> by giving</p>
+<ol>
+<li>The value(s) of the initial term or terms, and</li>
+<li>A rule, called a <strong>recursion formula,</strong> for calculating any later term form terms that precede it.</li>
+</ol>
+<h3 id="example-11-sequence-constructed-recursively">Example 11. Sequence Constructed Recursively<a hidden class="anchor" aria-hidden="true" href="#example-11-sequence-constructed-recursively">#</a></h3>
+<ol>
+<li>$a_1 = 1$ and $a_n = a_{n-1} + 1$</li>
+<li>$a_1 = 1$ and $a_n = n\cdot a_{n-1}$</li>
+<li>$a_1 = a_2 =1$ and $a_{n+1} = a_n + a_{n-1}$ (<strong>Fibonacci numbers</strong>)</li>
+<li>$x_0=1$ and $x_{n+1} = x_n - \frac{\sin x_n - x_n^2}{\cos x_n - 2 x_n}$ defined a sequence that converges to a solution of the equation $\sin x - x^2 = 0.$</li>
+</ol>
+<h2 id="bounded-nondecreasing-sequences">Bounded Nondecreasing Sequences<a hidden class="anchor" aria-hidden="true" href="#bounded-nondecreasing-sequences">#</a></h2>
+<p>An important special type of sequence is one for which each term is at least as large as its predecessor.</p>
+<h3 id="definition-nondecreasing-sequence">Definition. Nondecreasing Sequence<a hidden class="anchor" aria-hidden="true" href="#definition-nondecreasing-sequence">#</a></h3>
+<p>If a sequence ${a_n}$ has the property that $a_n\le a_{n+1}$ for all $n$, then it is called a <strong>nondecreasing sequence.</strong></p>
+<h3 id="example-12-nondecreasing-sequences">Example 12. Nondecreasing Sequences<a hidden class="anchor" aria-hidden="true" href="#example-12-nondecreasing-sequences">#</a></h3>
+<ol>
+<li>$1,2,3,\cdots, n,\cdots$</li>
+<li>$\frac12, \frac23,\frac34,\cdots, \frac{n-1}{n},\cdots$</li>
+<li>$3,3,3,\cdots, 3,\cdots$</li>
+<li>$\frac21, (\frac32)^2, (\frac43)^3,\cdots, (\frac{n+1}{n})^n,\cdots$</li>
+</ol>
+<h3 id="definition-bounded--upper-bound-least-upper-bound">Definition. Bounded , Upper Bound, Least Upper Bound<a hidden class="anchor" aria-hidden="true" href="#definition-bounded--upper-bound-least-upper-bound">#</a></h3>
+<p>A sequence ${a_n}$ is <strong>bounded from above</strong> if there exists a number $M$ such that $a_n\le M$ for all $n$. The number $M$ is an <strong>upper bound</strong> for ${a_n}$. If $M$ is the <em>minimum</em> upper bound among all the upper bounds for ${a_n}$, then $M$ is called  <strong>least upper bound</strong> for ${a_n}.$</p>
+<h3 id="example-13-applying-the-definition-for-boundedness">Example 13. Applying the Definition for Boundedness<a hidden class="anchor" aria-hidden="true" href="#example-13-applying-the-definition-for-boundedness">#</a></h3>
+<ol>
+<li>The sequence $1,2,3,\cdots, n,\cdots$ has no upper bound.</li>
+<li>$\frac12, \frac23,\frac34,\cdots, \frac{n}{n+1},\cdots$ is bounded above by $M=1.$</li>
+</ol>
+<p>A nondecreasing sequence that is bounded from above always has a least upper bound. The existence for the least upper bound is the property of completeness of the real number system. We will prove that if $L$ is the least upper bound then the sequence converges to $L$.</p>
+<h3 id="proposition">Proposition.<a hidden class="anchor" aria-hidden="true" href="#proposition">#</a></h3>
+<p>Suppose ${a_n}$ is a nondecreasing sequence with least upper bound $L$, then $\lim_{n\to\infty}a_n = L.$</p>
+<h3 id="theorem-6-the-nondecreasing-sequence-theorem">Theorem 6. The Nondecreasing Sequence Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-6-the-nondecreasing-sequence-theorem">#</a></h3>
+<p>A nondecreasing sequence of real numbers converges if and only if it is bounded from above. If a nondecreasing sequence converges, it converges to its least upper bound.</p>
+<p><img loading="lazy" src="W11-S1%20Infinite%20Sequences%20and%20Series%2018da047d3a0e44259dc04cc8ac2b8c3a/Untitled%202.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/series/">Series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/sequence/">sequence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/converge/">converge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/diverge/">diverge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/overview/">overview</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus/">calculus</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

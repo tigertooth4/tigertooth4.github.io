@@ -2,12 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tigertooth4.github.io/tags/application/</loc>
-    <lastmod>2022-04-28T16:22:21+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/calculus/</loc>
+    <loc>http://tigertooth4.github.io/tags/converge/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/diverge/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/overview/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/sequence/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/series/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-05-05T11:43:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/application/</loc>
     <lastmod>2022-04-28T16:22:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -27,11 +77,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
-    <lastmod>2022-04-28T16:22:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/orthogonal/</loc>
     <lastmod>2022-04-28T16:22:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -42,27 +87,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-04-28T16:22:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/solve/</loc>
     <lastmod>2022-04-28T16:22:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-04-28T16:22:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/</loc>
-    <lastmod>2022-04-28T16:22:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-04-28T16:22:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -713,11 +743,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/equidistribution/</loc>
-    <lastmod>2019-07-31T23:28:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/series/</loc>
     <lastmod>2019-07-31T23:28:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
