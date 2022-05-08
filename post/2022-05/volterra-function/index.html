@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>导函数是否一定黎曼可积？ | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="knowledge, math, teach, differentiable, non-integrable, Riemann, 教学感悟, 数学分析, studies" />
+<meta name="description" content="本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-05/volterra-function/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="导函数是否一定黎曼可积？" />
+<meta property="og:description" content="本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-05/volterra-function/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-08T11:59:11&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-08T11:59:11&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="导函数是否一定黎曼可积？"/>
+<meta name="twitter:description" content="本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "导函数是否一定黎曼可积？",
+      "item": "http://tigertooth4.github.io/post/2022-05/volterra-function/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "导函数是否一定黎曼可积？",
+  "name": "导函数是否一定黎曼可积？",
+  "description": "本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若",
+  "keywords": [
+    "knowledge", "math", "teach", "differentiable", "non-integrable", "Riemann", "教学感悟", "数学分析", "studies"
+  ],
+  "articleBody": "本文来自一个学生的提问。\n当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若考虑导函数要有界，这样的反例至少当时没有想出来。上网搜索后，发现反例已经有非常经典的构造了，称为 Volterra 函数。根据 知乎 上的一个提问，这个函数在 邓纳姆 所著的《微积分的历程》中有提到，是 Volterra 在青年时期发现的一个“不符合微积分基本定理”的病态函数。它是处处可导的有界函数，但导函数并不是黎曼可积函数。关于反例的讨论可见 stackexchange [1]。关于 Volterra 函数的具体介绍，可参见 [2] 。为便于今后参考，本文将在阅读了相关文献的基础上，对 Volterra 函数的构造过程做一个稍具体的描述。\nSmith-Volterra-Cantor 集 反例的构造需要用到 Smith-Volterra-Cantor (SVC) 集，它非常类似于 Cantor 三分集，只是改变了每次移除的区间的长度。\n考虑 $[0,1]$ 区间\n 第一步，移除以区间中点 $\\frac12$ 为中心，长度为 $1/4$ 的开区间 $(\\frac38,\\frac58)$ (见下图)； 第二步，对于剩下的两个闭区间，以它们的中点为心，各移除一个长度为 $1/4^2$ 的两个开区间； 第三步，对剩下的四个闭区间，以它们的中点为心，各移除一个长度为 $1/4^3$ 的四个开区间;  等等等.\n这样，最后剩下的闭集，就称为 SVC 集。显然可以发现，SVC 集的总长度为\n$$ 1-\\left(\\frac14 + \\frac{2}{4^2} + \\frac{4}{4^3} + \\cdots\\right) = \\frac12 \\neq 0. $$\n且其余集稠密（$[0,1]$ 的任何子区间当中都含有不在 SVC 集合中的点）。\nVolterra 函数的构造 利用 SVC 集，我们可以构造 $[0,1]$ 上一个分段定义的函数，使得这个函数在 SVC 集的余集上不恒为零。具体构造过程如下：\n  考虑一个在$[0,\\frac14]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_1(x)$。在前半个区间 $[0,\\frac18]$ 上先找到 $x^2\\sin\\frac1x$ 导函数的最大零点 $z_1$，定义$f_1(x)$ 在 $[0,z_1]$ 的值与函数 $x^2\\sin\\frac{1}{x}$相同，而在 $[z_1,\\frac18]$ 上定义 $f_1(x)$ 的值恒为 $z_1^2\\sin\\frac1{z_1}$。再令函数 $f_1(x)$ 在 $[\\frac18,\\frac14]$ 的图像与它在 $[0,\\frac18]$ 的图像对称，即\n$$ f_1(x):=\\begin{cases}x^2 \\sin\\frac1x, \u0026 x\\in[0,z_1)\\ z_1^2 \\sin\\frac1{z_1}, \u0026x\\in[z_1,\\frac18)\\ z_1^2\\sin\\frac1{z_1}, \u0026 x\\in[\\frac18,\\frac14-z_1)\\ (\\frac14-x)^2\\sin\\frac1{\\frac14-x}, \u0026 x\\in[\\frac14-z_1,\\frac14]\\ 0, \u0026 \\text{otherwise.}\\end{cases} $$\n现在，我们将 $f_1(x)$ 的函数图像向右平移 $3/8$ 个单位，得到一个在 $[\\frac38,\\frac58]$ 上不恒为零，但在此区间之外恒为零的函数 $f_1(x-\\frac38)$.\n  考虑一个在$[0,\\frac1{4^2}]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_2(x)$。在前半个区间 $[0,\\frac1{2\\cdot 4^2}]$ 上先找到 $x^2\\sin\\frac1x$ 导函数的最大零点 $z_2$，定义$f_2(x)$ 在 $[0,z_2]$ 的值与函数 $x^2\\sin\\frac{1}{x}$相同，而在 $[z_2,\\frac1{2\\cdot 4^2}]$ 上定义 $f_2(x)$ 的值恒为 $z_2^2\\sin\\frac1{z_2}$。再令函数 $f_2(x)$ 在 $[\\frac1{2\\cdot 4^2},\\frac1{4^2}]$ 的图像与它在 $[0,\\frac1{2\\cdot 4^2}]$ 的图像对称，即\n$$ f_2(x):=\\begin{cases}x^2 \\sin\\frac1x, \u0026 x\\in[0,z_2)\\ z_2^2 \\sin\\frac1{z_2}, \u0026x\\in[z_2,\\frac1{2\\cdot 4^2})\\ z_2^2\\sin\\frac1{z_2}, \u0026 x\\in[\\frac1{2\\cdot 4^2},\\frac1{4^2}-z_2)\\ (\\frac1{4^2}-x)^2\\sin\\frac1{\\frac1{4^2}-x}, \u0026 x\\in[\\frac1{4^2}-z_2,\\frac1{4^2}]\\ 0, \u0026 \\text{otherwise.}\\end{cases} $$\n现在，我们将 $f_2(x)$ 的函数图像分别向右平移 $\\frac5{32}$ 和 $\\frac{25}{32}$ 个单位，得到一个在 $[\\frac5{32},\\frac7{32}]$ 和 $[\\frac{25}{32},\\frac{27}{32}]$ 上不恒为零，但在两区间之外恒为零的函数 。\n  重复上述构造过程。\n  最后，将构造得到的所有分段函数相加，就得到了 Volterra 函数，记为 $V(x)$。它的图像如下图所示。\n  Volterra 函数的性质 Volterra 函数的可导性 由 Volterra 函数的构造过程，参考最终得到的函数图像，我们可以看到在 Volterra 函数是处处可导的（在 $x=0$ 时，$x^2\\sin\\frac1x$ 为 $x$ 的二阶无穷小量，因此可导；在 $x\\neq 0$ 时，函数根据乘积函数的求导法则知显然可导）。在 $z_1$, $z_2$ 等等导函数的零点处，左右导数显然均为 $0$, 因此可导。故 Volterra 函数是处处可导的。\n但是，$x^2\\sin\\frac1x$ 的导函数 $2x\\sin\\frac1x - \\cos(\\frac1x)$ 在 $x\\to 0$ 无极限，且振幅等于2。\nVolterra 函数其导函数在 $[0,1]$的 Riemann 不可积性 首先，容易看出 V’(x) 处处有界。但是，由 SVC 余集的稠密性，$[0,1]$ 区间的任何一个子区间总含有SVC 余集中的点。因此，在任何子区间上，V’(x) 的振幅都等于 $2$， 所以V’(x)在 $[0,1]$ 上为黎曼不可积函数。下图为 Volterra 函数的导函数图像。\n生成 Volterra 函数的 Mathematica 代码 扫描以下二维码，或点击 这里，查看 Mathematica 代码。\n参考文献 [1]\nWhat is an example that a function is differentiable but derivative is not Riemann integrable\n[2]\n\n[3]\nSmith-Volterra-Cantor set - Wikipedia\n[4]\nWrestling.pdf\n",
+  "wordCount" : "1502",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-08T11:59:11+08:00",
+  "dateModified": "2022-05-08T11:59:11+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-05/volterra-function/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      导函数是否一定黎曼可积？
+    </h1>
+    <div class="post-meta"><span title='2022-05-08 11:59:11 +0800 CST'>May 8, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>本文来自一个学生的提问。</p>
+<p>当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若考虑导函数要有界，这样的反例至少当时没有想出来。上网搜索后，发现反例已经有非常经典的构造了，称为 Volterra 函数。根据 <a href="https://www.zhihu.com/question/47546046">知乎</a> 上的一个提问，这个函数在 邓纳姆 所著的《微积分的历程》中有提到，是 Volterra 在青年时期发现的一个“不符合微积分基本定理”的病态函数。它是处处可导的有界函数，但导函数并不是黎曼可积函数。关于反例的讨论可见 stackexchange [1]。关于 Volterra 函数的具体介绍，可参见 [2] 。为便于今后参考，本文将在阅读了相关文献的基础上，对 Volterra 函数的构造过程做一个稍具体的描述。</p>
+<h1 id="smith-volterra-cantor-集">Smith-Volterra-Cantor 集<a hidden class="anchor" aria-hidden="true" href="#smith-volterra-cantor-集">#</a></h1>
+<p>反例的构造需要用到 Smith-Volterra-Cantor (SVC) 集，它非常类似于 Cantor 三分集，只是改变了每次移除的区间的长度。</p>
+<p>考虑 $[0,1]$ 区间</p>
+<ol>
+<li>第一步，移除以区间中点 $\frac12$ 为中心，长度为 $1/4$ 的开区间 $(\frac38,\frac58)$ (见下图)；</li>
+<li>第二步，对于剩下的两个闭区间，以它们的中点为心，各移除一个长度为 $1/4^2$ 的两个开区间；</li>
+<li>第三步，对剩下的四个闭区间，以它们的中点为心，各移除一个长度为 $1/4^3$ 的四个开区间;</li>
+</ol>
+<p>等等等.</p>
+<p><img loading="lazy" src="%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/24A6A84C-4F63-4BE3-98E0-D9D6C6D32869.jpeg" alt="24A6A84C-4F63-4BE3-98E0-D9D6C6D32869.jpeg"  />
+</p>
+<p>这样，最后剩下的闭集，就称为 SVC 集。显然可以发现，SVC 集的总长度为</p>
+<p>$$
+1-\left(\frac14 + \frac{2}{4^2} + \frac{4}{4^3} + \cdots\right) = \frac12 \neq 0.
+$$</p>
+<p>且其余集稠密（$[0,1]$ 的任何子区间当中都含有不在 SVC 集合中的点）。</p>
+<h1 id="volterra-函数的构造">Volterra 函数的构造<a hidden class="anchor" aria-hidden="true" href="#volterra-函数的构造">#</a></h1>
+<p>利用 SVC 集，我们可以构造 $[0,1]$ 上一个分段定义的函数，使得这个函数在 SVC 集的余集上不恒为零。具体构造过程如下：</p>
+<ol>
+<li>
+<p>考虑一个在$[0,\frac14]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_1(x)$。在前半个区间 $[0,\frac18]$ 上先找到 $x^2\sin\frac1x$ 导函数的最大零点 $z_1$，定义$f_1(x)$ 在 $[0,z_1]$ 的值与函数 $x^2\sin\frac{1}{x}$相同，而在 $[z_1,\frac18]$ 上定义 $f_1(x)$ 的值恒为 $z_1^2\sin\frac1{z_1}$。再令函数 $f_1(x)$ 在 $[\frac18,\frac14]$ 的图像与它在 $[0,\frac18]$ 的图像对称，即</p>
+<p>$$
+f_1(x):=\begin{cases}x^2 \sin\frac1x, &amp; x\in[0,z_1)\ z_1^2 \sin\frac1{z_1}, &amp;x\in[z_1,\frac18)\ z_1^2\sin\frac1{z_1}, &amp; x\in[\frac18,\frac14-z_1)\ (\frac14-x)^2\sin\frac1{\frac14-x}, &amp; x\in[\frac14-z_1,\frac14]\ 0, &amp; \text{otherwise.}\end{cases}
+$$</p>
+<p>现在，我们将 $f_1(x)$ 的函数图像向右平移 $3/8$ 个单位，得到一个在 $[\frac38,\frac58]$ 上不恒为零，但在此区间之外恒为零的函数 $f_1(x-\frac38)$.</p>
+</li>
+<li>
+<p>考虑一个在$[0,\frac1{4^2}]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_2(x)$。在前半个区间 $[0,\frac1{2\cdot 4^2}]$ 上先找到 $x^2\sin\frac1x$ 导函数的最大零点 $z_2$，定义$f_2(x)$ 在 $[0,z_2]$ 的值与函数 $x^2\sin\frac{1}{x}$相同，而在 $[z_2,\frac1{2\cdot 4^2}]$ 上定义 $f_2(x)$ 的值恒为 $z_2^2\sin\frac1{z_2}$。再令函数 $f_2(x)$ 在 $[\frac1{2\cdot 4^2},\frac1{4^2}]$ 的图像与它在 $[0,\frac1{2\cdot 4^2}]$ 的图像对称，即</p>
+<p>$$
+f_2(x):=\begin{cases}x^2 \sin\frac1x, &amp; x\in[0,z_2)\ z_2^2 \sin\frac1{z_2}, &amp;x\in[z_2,\frac1{2\cdot 4^2})\ z_2^2\sin\frac1{z_2}, &amp; x\in[\frac1{2\cdot 4^2},\frac1{4^2}-z_2)\ (\frac1{4^2}-x)^2\sin\frac1{\frac1{4^2}-x}, &amp; x\in[\frac1{4^2}-z_2,\frac1{4^2}]\ 0, &amp; \text{otherwise.}\end{cases}
+$$</p>
+<p>现在，我们将 $f_2(x)$ 的函数图像分别向右平移 $\frac5{32}$ 和 $\frac{25}{32}$ 个单位，得到一个在 $[\frac5{32},\frac7{32}]$ 和 $[\frac{25}{32},\frac{27}{32}]$ 上不恒为零，但在两区间之外恒为零的函数 。</p>
+</li>
+<li>
+<p>重复上述构造过程。</p>
+</li>
+<li>
+<p>最后，将构造得到的所有分段函数相加，就得到了 Volterra 函数，记为 $V(x)$。它的图像如下图所示。</p>
+</li>
+</ol>
+<p><img loading="lazy" src="%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/Untitled.png" alt="Untitled"  />
+</p>
+<h1 id="volterra-函数的性质">Volterra 函数的性质<a hidden class="anchor" aria-hidden="true" href="#volterra-函数的性质">#</a></h1>
+<h2 id="volterra-函数的可导性">Volterra 函数的可导性<a hidden class="anchor" aria-hidden="true" href="#volterra-函数的可导性">#</a></h2>
+<p>由 Volterra 函数的构造过程，参考最终得到的函数图像，我们可以看到在 Volterra 函数是处处可导的（在 $x=0$ 时，$x^2\sin\frac1x$ 为 $x$ 的二阶无穷小量，因此可导；在 $x\neq 0$ 时，函数根据乘积函数的求导法则知显然可导）。在 $z_1$, $z_2$ 等等导函数的零点处，左右导数显然均为 $0$, 因此可导。故 Volterra 函数是处处可导的。</p>
+<p>但是，$x^2\sin\frac1x$ 的导函数 $2x\sin\frac1x - \cos(\frac1x)$ 在 $x\to 0$ 无极限，且振幅等于2。</p>
+<h2 id="volterra-函数其导函数在-01的-riemann-不可积性">Volterra 函数其导函数在 $[0,1]$的 Riemann 不可积性<a hidden class="anchor" aria-hidden="true" href="#volterra-函数其导函数在-01的-riemann-不可积性">#</a></h2>
+<p>首先，容易看出 V’(x) 处处有界。但是，由 SVC 余集的稠密性，$[0,1]$ 区间的任何一个子区间总含有SVC 余集中的点。因此，在任何子区间上，V’(x) 的振幅都等于 $2$， 所以V’(x)在 $[0,1]$ 上为黎曼不可积函数。下图为 Volterra 函数的导函数图像。</p>
+<p><img loading="lazy" src="%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/Untitled%201.png" alt="Untitled"  />
+</p>
+<h1 id="生成-volterra-函数的-mathematica-代码">生成 Volterra 函数的 Mathematica 代码<a hidden class="anchor" aria-hidden="true" href="#生成-volterra-函数的-mathematica-代码">#</a></h1>
+<p>扫描以下二维码，或点击 <a href="https://www.wolframcloud.com/obj/tigertooth4/Published/Volterra%20Function.nb">这里</a>，查看 Mathematica 代码。</p>
+<p><img loading="lazy" src="%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/Untitled%202.png" alt="Untitled"  />
+</p>
+<h1 id="参考文献">参考文献<a hidden class="anchor" aria-hidden="true" href="#参考文献">#</a></h1>
+<p>[1]</p>
+<p><a href="https://math.stackexchange.com/questions/257069/what-is-an-example-that-a-function-is-differentiable-but-derivative-is-not-riema">What is an example that a function is differentiable but derivative is not Riemann integrable</a></p>
+<p>[2]</p>
+<p><a href="https://www.macalester.edu/~bressoud/talks/AlleghenyCollege/Wrestling.pdf"></a></p>
+<p>[3]</p>
+<p><a href="https://en.wikipedia.org/wiki/Smith%E2%80%93Volterra%E2%80%93Cantor_set">Smith-Volterra-Cantor set - Wikipedia</a></p>
+<p>[4]</p>
+<p><a href="%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/Wrestling.pdf">Wrestling.pdf</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/knowledge/">knowledge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/teach/">teach</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/differentiable/">differentiable</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/non-integrable/">non-integrable</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/riemann/">Riemann</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/%E6%95%99%E5%AD%A6%E6%84%9F%E6%82%9F/">教学感悟</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">数学分析</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/studies/">studies</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

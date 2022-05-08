@@ -6,7 +6,16 @@
     <description>Recent content on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 May 2022 11:43:25 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 May 2022 11:59:11 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>导函数是否一定黎曼可积？</title>
+      <link>http://tigertooth4.github.io/post/2022-05/volterra-function/</link>
+      <pubDate>Sun, 08 May 2022 11:59:11 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-05/volterra-function/</guid>
+      <description>本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若</description>
+    </item>
+    
     <item>
       <title>W11-S1 Infinite Sequences and Series</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</link>

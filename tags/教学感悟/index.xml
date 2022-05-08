@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>教学感悟 on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/%E6%95%99%E5%AD%A6%E6%84%9F%E6%82%9F/</link>
+    <description>Recent content in 教学感悟 on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 08 May 2022 11:59:11 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/%E6%95%99%E5%AD%A6%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>导函数是否一定黎曼可积？</title>
+      <link>http://tigertooth4.github.io/post/2022-05/volterra-function/</link>
+      <pubDate>Sun, 08 May 2022 11:59:11 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-05/volterra-function/</guid>
+      <description>本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若</description>
+    </item>
+    
+  </channel>
+</rss>
