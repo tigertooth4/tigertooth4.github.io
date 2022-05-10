@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>geometric-series on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/geometric-series/</link>
+    <description>Recent content in geometric-series on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 May 2022 16:37:28 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/geometric-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W12-S1 Infinite Sequences and Series (II)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</link>
+      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</guid>
+      <description>周次: 12 备注: Attendance check 日期: May 11, 2022 节次: 1 In this lecture, we continue the discussion of infinite series. We introduce the L’Hôpital’s Rule to the limit finding problems, and conclude this section by an important type of convergent sequences, called bounded monotonic sequences. Then we will talk about series,</description>
+    </item>
+    
+  </channel>
+</rss>
