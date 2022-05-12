@@ -6,7 +6,88 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 10 May 2022 16:37:28 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 13:20:39 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>calculus2</title>
+      <link>http://tigertooth4.github.io/tags/calculus2/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>converge</title>
+      <link>http://tigertooth4.github.io/tags/converge/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/converge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diverge</title>
+      <link>http://tigertooth4.github.io/tags/diverge/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/diverge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>geometric-series</title>
+      <link>http://tigertooth4.github.io/tags/geometric-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/geometric-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lecture</title>
+      <link>http://tigertooth4.github.io/tags/lecture/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>http://tigertooth4.github.io/tags/series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sum</title>
+      <link>http://tigertooth4.github.io/tags/sum/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/sum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telescoping series</title>
+      <link>http://tigertooth4.github.io/tags/telescoping-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/telescoping-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://tigertooth4.github.io/tags/test/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bounded-monotonic</title>
       <link>http://tigertooth4.github.io/tags/bounded-monotonic/</link>
@@ -35,29 +116,11 @@
     </item>
     
     <item>
-      <title>geometric-series</title>
-      <link>http://tigertooth4.github.io/tags/geometric-series/</link>
-      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/geometric-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>L&#39;Hôpital</title>
       <link>http://tigertooth4.github.io/tags/lh%C3%B4pital/</link>
       <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/lh%C3%B4pital/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lecture</title>
-      <link>http://tigertooth4.github.io/tags/lecture/</link>
-      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
       <description></description>
     </item>
     
@@ -71,29 +134,11 @@
     </item>
     
     <item>
-      <title>Series</title>
-      <link>http://tigertooth4.github.io/tags/series/</link>
-      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>telescoping</title>
       <link>http://tigertooth4.github.io/tags/telescoping/</link>
       <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/telescoping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>http://tigertooth4.github.io/tags/test/</link>
-      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/test/</guid>
       <description></description>
     </item>
     
@@ -175,24 +220,6 @@
       <pubDate>Sun, 08 May 2022 11:59:11 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>converge</title>
-      <link>http://tigertooth4.github.io/tags/converge/</link>
-      <pubDate>Thu, 05 May 2022 11:43:25 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/converge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diverge</title>
-      <link>http://tigertooth4.github.io/tags/diverge/</link>
-      <pubDate>Thu, 05 May 2022 11:43:25 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/diverge/</guid>
       <description></description>
     </item>
     
@@ -841,15 +868,6 @@
       <pubDate>Tue, 01 Mar 2022 15:33:34 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/length/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>calculus2</title>
-      <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Thu, 24 Feb 2022 21:44:36 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
       <description></description>
     </item>
     

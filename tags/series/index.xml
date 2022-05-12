@@ -6,7 +6,16 @@
     <description>Recent content in Series on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 10 May 2022 16:37:28 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 13:20:39 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W12-S2 Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</guid>
+      <description>周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term</description>
+    </item>
+    
     <item>
       <title>W12-S1 Infinite Sequences and Series (II)</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</link>

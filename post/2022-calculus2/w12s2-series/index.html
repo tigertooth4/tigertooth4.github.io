@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W12-S2 Series | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="series, geometric series, telescoping series, converge, diverge, sum, test, calculus2, lecture" />
+<meta name="description" content="周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W12-S2 Series" />
+<meta property="og:description" content="周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-12T13:20:39&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-12T13:20:39&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W12-S2 Series"/>
+<meta name="twitter:description" content="周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W12-S2 Series",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W12-S2 Series",
+  "name": "W12-S2 Series",
+  "description": "周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term",
+  "keywords": [
+    "series", "geometric series", "telescoping series", "converge", "diverge", "sum", "test", "calculus2", "lecture"
+  ],
+  "articleBody": "周次: 12 日期: May 13, 2022 节次: 2\nIn this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term divergence test and finally we will look at combining series and give rules for finding the sums.\nOutline Reviews on the Supreme and Infimum Simplified Definition.  A supreme (least upper bound) for sequence ${a_n}$ is  $$ \\sup {a_n} = \\text{The Smallest Upper Bound for }{a_n}. $$\n An infimum (greatest lower bound) for sequence ${a_n}$ is  $$ \\inf{a_n} = \\text{The Largest Lower Bound for }{a_n}. $$\nExistence.  A supreme of ${a_n}$ exists, if ${a_n}$ is bounded from above, An infimum of ${a_n}$ exists, if ${a_n}$ is bounded from below.  The existence of supreme and infimum is a fundamental property for real number system.\nUniqueness.  A supreme of ${a_n}$ if exists then it is unique An infimum of ${a_n}$ if exists then it is unique  Properties.  $\\sup{a_n}$ is an upper bound for ${a_n}$, but any smaller number will not be an upper bound anymore, i.e.  $$ \\forall \\epsilon0, \\quad \\exists , a_{n_0}, \\quad s.t. \\quad a_{n_0}  \\sup{a_n} - \\epsilon. $$\n $\\inf{a_n}$ is a lower bound for ${a_n}$, but any greater number will not be a lower bound anymore, i.e.  $$ \\forall \\epsilon0,\\quad \\exists a_{n_0},\\quad s.t. \\quad a_{n_0}Theorems.  A bounded from above, increasing sequence ${a_n}$ converges to its least upper bound $\\sup{a_n}$, A bounded from below, decreasing sequence ${a_n}$ converges to its greatest lower bound $\\inf{a_n}$, Any convergent sequence is **bounded. (**But not every bounded sequence converges! ) Every bounded, monotonic sequence converges !  Example. An important limit The sequence ${(1+\\frac1n)^n}$ is increasing and bounded from above, therefore it converges.\nExample. Show that the sequence $a_{n+1} = \\sqrt{2 a_n}$ with $a_1 = 1$ is monotonic and bounded. And find the limit from the recursive definition.\n§11.2 Infinite Series An infinite series is the sum of an infinite sequence of numbers\n$$ a_1+a_2+a_3 + \\cdots + a_n +\\cdots $$\nThe goal of this section is to understand the meaning of such an infinite sum and to develop methods to calculate it.\nSince there are infinite many terms, we cannot just keep adding to see what comes out. Instead we look at what we get by summing the first $n$ terms and stopping.\n$$ s_n = a_1 + a_2 + a_3 + \\cdots + a_n. $$\nThe sum is a normal addition and we call it the $n$th partial sum. As $n$ gets larger, we expect the partial sums ( sequence ${s_n}$ ) to get closer and closer to a limiting value.\nExample. An Geometric Series $$ 1+\\frac12 + \\frac14 +\\frac18 + \\cdots + \\frac1{2^n} + \\cdots $$\nThe partial sum is given by the formula\n$$ s_n = 1+\\frac12 + \\frac14 + \\cdots + \\frac1{2^{n-1}} = \\frac{1-\\frac1{2^n}}{1-\\frac12} = 2 - \\frac1{2^{n-1}}. $$\n$s_n$ is approaching $2$. Thus we say (define) the infinite series has a value $2.$ Notice that any finite sum in this series is not equal to $2$. So $2$ is the number that the partial sum could only get arbitrarily close to but never reach.\nDefinition. Partial Sum, Converges, Sum of Infinite Series Given a sequence of numbers ${a_n}$, an expression of the form\n$$ a_1 + a_2 + a_3 + \\cdots + a_n + \\cdots $$\nis an infinite series. The sequence ${s_n}$ defined by\n$$ s_n = a_1 + a_2 + \\cdots + a_n $$\nis the sequence of partial sums of the series.\n If the sequence ${s_n}$ converges to a limit $L$, we say the series converges and that its sum is $L$. And write  $$ \\sum_{n=1}^\\infty a_n := a_1 + a_2 + a_3 +\\cdots + a_n +\\cdots = L. $$\n If the sequence ${s_n}$ diverges, we say the series diverges.  The Sigma Notation Whether it is convergent or not, we use sigma notation to denote the infinite sum. We can write a series as\n$$ \\sum_{n=1}^\\infty a_n, \\quad \\sum_{k=1}^\\infty a_k,\\quad \\text{or} \\quad \\sum a_n. $$\nGeometric Series Geometric series are series of the form\n$$ a + a,r + a , r^2 + \\cdots + a , r^{n-1} + \\cdots =\\sum_{n=1}^\\infty a , r^{n-1} $$\nin which $a$ and $r$ are fixed real numbers and $a\\neq 0$. The series can also be written as $\\sum_{n=0}^\\infty a, r^{n}$.\nThe geometric series satisfies\n$$ a_{n+1}/a_n =r = \\text{constant}, $$\nwhere $r$ is the ratio. It can be either positive or negative.\n  For example\n$$ 1+\\frac12 + \\frac14 + \\cdots + \\frac1{2^n} + \\cdots $$\nis a geometric series with $r = \\frac12.$\n  As in\n$$ 1-\\frac13 + \\frac19 - \\cdots + \\left(-\\frac13\\right)^{n-1} + \\cdots $$\nis a geometric series with $r=-\\frac13$.\n  If $r=1$, the geometric series is a sum of infinite many constants\n  $$ a + a+a + \\cdots + a +\\cdots $$\nThe Partial Sum for Geometric Series Thanks to the polynomial factorization formula\n$$ 1-x^{n+1} = (1-x) ( 1 + x + x^2 + \\cdots + x^n) $$\nWe see that\n$$ 1+x+x^2 + \\cdots + x^n = \\frac{1-x^{n+1}}{1-x}. $$\nThis formula helps us to find the partial sum form for geometric series $\\sum_{k=0}^n a , r^k$ with $r\\neq 1$:\n$$ s_n = \\sum_{k=0}^n a , r^k = a \\frac{1-r^{n+1}}{1-r}. $$\nFor $r=1$, it is even simpler:\n$$ s_n=\\sum_{k=0}^n a , 1^k = \\underbrace{a+a+\\cdots + a}_{n+1} = (n+1)a. $$\n For $|r| $$ \\sum_{n=0}^\\infty a , r^n = \\lim_{n\\to\\infty} s_n = \\frac{a}{1-r}. $$\n For $|r|\\ge 1$, the partial sum of geometric series $\\sum a r^n$ is given either by  $$ a \\frac{1-r^{n+1}}{1-r},\\quad (r\\neq1),\\quad \\text{or}\\quad (n+1) a \\quad (r=1). $$\nEither case, the partial sum diverges.\nConclusion (Simple but Important)  For $|r|For $|r|\\ge 1$, the geometric series $\\sum_{n=0}^\\infty a, r^n$ diverges.  Example 1. Index Starts with $n=k\\in \\mathbb{N}$ A geometric series with $r=\\frac13$ is given by\n$$ \\frac1{3^k} + \\frac1{3^{k+1}} + \\frac{1}{3^{k+2}} \\cdots = \\sum_{n=k}^\\infty \\left(\\frac{1}{3}\\right)^n = ? $$\nExample 2. Index Starts with $n=0$ The series\n$$ \\sum_{n=0}^\\infty \\frac{(-1)^n 5}{4^n} $$\nis a geometric series with $a=5$ and $r=-\\frac14$. It converges to ?\nExample 3. Repeating Decimals Express the repeating decimal $5.91,91,91\\ldots$ as a rational number?\n(Solution: $5\\frac{91}{99}$)\nExample. $0.999\\ldots = 1$ Express the repeating decimal $0.999\\ldots$ as a rational number.\nTelescoping Series A telescoping series is usually referring to the case when\n$$ \\sum_n a_n = \\sum_n (b_n-b_{n-1}). $$\nAs taking the partial sum,\n$$ s_n = a_1 + a_2 + \\cdots + a_n = (b_1-b_0) + (b_2-b_1) + \\cdots + (b_n-b_{n-1}) = b_n - b_0. $$\nThus the summation has been greatly simplified.\nExample 5. A Telescoping Series Find the sum of the series $\\sum_{n=1}^\\infty \\frac{1}{n(n+1)}$.\nExample 6. A Divergent Telescoping Series Find the divergence for the series $\\sum_{n=1}^\\infty \\ln\\frac{n+1}{n}$.\nRemark In general, it is very rare that the sum of a series can be calculated directly. The geometric series and telescoping series are two such examples. The calculation of series has been done largely by evaluating function series at some specific locations.\nDivergent Series Example 6. Partial Sums for Two Divergent Series  The series  $$ \\sum_{n=1}^\\infty n^2 = 1 + 4 + 9 + \\cdots + n^2 + \\cdots $$\nb. The series\n$$ \\sum_{n=1}^\\infty \\frac{n+1}{n} = \\frac21 + \\frac32 + \\frac 43 + \\cdots + \\frac{n+1}{n} + \\cdots $$\nThe $n$th-Term Test for Divergence It is obvious that\nTheorem 7. If $\\sum_{n=1}^\\infty a_n$ converges, then $a_n\\to 0.$\nIt leads to the following test for detecting the kind of divergence occurred in the previous Example 6.\nThe $n$th Term Test for Divergence $\\sum_{n=1}^\\infty a_n$ diverges if $\\lim_{n\\to\\infty} a_n$ fails to exist or is different from $0.$\nExample 7. Applying the $n$th Term Test  $\\sum_n n^2$ $\\sum_n \\frac{n+1}{n}$ $\\sum_n (-1)^{n+1}$ $\\sum_n \\frac{-n}{2n+5}$  Remark The $n$th term test is a necessary condition for convergence, it does not mean that if a series passes the test, then it converges.\nExample 8. A Series Diverges Even $a_n\\to 0$ Find the Harmonic Series\n$$ 1 + \\frac12 + \\frac13 + \\frac14 + \\cdots + \\frac1{n} + \\cdots $$\ndiverges.\nCombining Series Whenever we have two convergent series, we can add them term by term, subtract them term by term, or multiply them be constants to make new convergent series.\nTheorem 8 If $\\sum a_n = A$ and $\\sum b_n = B$ are convergent series, then\n Sum Rule:  $$ \\sum (a_n+b_n) = \\sum a_n + \\sum b_n =A+B $$\n Difference Rule:  $$ \\sum(a_n-b_n) = \\sum a_n - \\sum b_n = A-B $$\n Constant Multiple Rule:  $$ \\sum k, a_n = k\\sum a_n = k A $$\nRemark These rules can be summarized to a single linear rule: For any constants $\\alpha$ and $\\beta,$\n$$ \\sum (\\alpha a_n + \\beta b_n ) = \\alpha \\sum a_n + \\beta \\sum b_n = \\alpha A + \\beta B $$\nCorollaries  Every nonzero constant multiple of a divergent series diverges If $\\sum a_n$ converges and $\\sum b_n$ diverges, then $\\sum(a_n\\pm b_n)$ diverges  Caution If both series diverge, combining series may be not diverge.\n$$ \\sum_n 1\\quad \\text{and}\\quad \\sum_n (-1) $$\nboth diverge, but $\\sum (1+ (-1)) = \\sum_n 0$ converges.\nExample 9. Find the sum of the following series Find the sum of\n$$ \\sum_{n=1}^\\infty \\left(\\frac{3^{n-1}-1}{6^{n-1}}+\\frac{1}{n(n+1)}\\right) $$\nAdding or Deleting Terms Adding or deleting finite many terms from a series, does not change the convergence/ divergence nature of the series.\nShifting the Index $$ \\sum_{n=1}^\\infty a_n = \\sum_{n=-6}^\\infty a_{n+7} $$\nThis type of operation doesn’t alter the series at all.\n",
+  "wordCount" : "1633",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-12T13:20:39+08:00",
+  "dateModified": "2022-05-12T13:20:39+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W12-S2 Series
+    </h1>
+    <div class="post-meta"><span title='2022-05-12 13:20:39 +0800 CST'>May 12, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 12
+日期: May 13, 2022
+节次: 2</p>
+<p>In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term divergence test and finally we will look at combining series and give rules for finding the sums.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h1 id="reviews-on-the-supreme-and-infimum">Reviews on the Supreme and Infimum<a hidden class="anchor" aria-hidden="true" href="#reviews-on-the-supreme-and-infimum">#</a></h1>
+<h2 id="simplified-definition">Simplified Definition.<a hidden class="anchor" aria-hidden="true" href="#simplified-definition">#</a></h2>
+<ul>
+<li>A supreme (<strong>least upper bound</strong>) for  sequence ${a_n}$ is</li>
+</ul>
+<p>$$
+\sup {a_n} = \text{The Smallest Upper Bound for }{a_n}.
+$$</p>
+<ul>
+<li>An infimum (<strong>greatest lower bound</strong>) for sequence ${a_n}$ is</li>
+</ul>
+<p>$$
+\inf{a_n} = \text{The Largest Lower Bound for }{a_n}.
+$$</p>
+<h2 id="existence">Existence.<a hidden class="anchor" aria-hidden="true" href="#existence">#</a></h2>
+<ul>
+<li>A supreme of ${a_n}$ exists, if ${a_n}$  is bounded from above,</li>
+<li>An infimum of ${a_n}$ exists, if ${a_n}$ is bounded from below.</li>
+</ul>
+<p><strong>The existence of supreme and infimum is a fundamental property for real number system.</strong></p>
+<h2 id="uniqueness">Uniqueness.<a hidden class="anchor" aria-hidden="true" href="#uniqueness">#</a></h2>
+<ul>
+<li>A supreme of  ${a_n}$ if exists then it is unique</li>
+<li>An infimum of ${a_n}$ if exists then it is unique</li>
+</ul>
+<h2 id="properties">Properties.<a hidden class="anchor" aria-hidden="true" href="#properties">#</a></h2>
+<ul>
+<li>$\sup{a_n}$ is an upper bound for ${a_n}$, but any smaller  number will not be an upper bound anymore, i.e.</li>
+</ul>
+<p>$$
+\forall \epsilon&gt;0, \quad \exists , a_{n_0}, \quad s.t. \quad a_{n_0} &gt; \sup{a_n} - \epsilon.
+$$</p>
+<ul>
+<li>$\inf{a_n}$ is a lower bound for ${a_n}$, but any greater number will not be a lower bound anymore, i.e.</li>
+</ul>
+<p>$$
+\forall \epsilon&gt;0,\quad \exists a_{n_0},\quad s.t. \quad a_{n_0}&lt; \inf{a_n} + \epsilon.
+$$</p>
+<h3 id="theorems">Theorems.<a hidden class="anchor" aria-hidden="true" href="#theorems">#</a></h3>
+<ul>
+<li>A bounded from above, increasing sequence ${a_n}$ converges to its least upper bound $\sup{a_n}$,</li>
+<li>A bounded from below, decreasing sequence ${a_n}$ converges to its greatest lower bound $\inf{a_n}$,</li>
+<li>Any convergent sequence is **bounded. (**But not every bounded sequence converges! )</li>
+<li>Every bounded, monotonic sequence converges !</li>
+</ul>
+<h3 id="example-an-important-limit">Example. An important limit<a hidden class="anchor" aria-hidden="true" href="#example-an-important-limit">#</a></h3>
+<p>The sequence ${(1+\frac1n)^n}$ is increasing and bounded from above, therefore it converges.</p>
+<h3 id="example">Example.<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h3>
+<p>Show that the sequence $a_{n+1} = \sqrt{2 a_n}$  with $a_1 = 1$ is monotonic and bounded. And find the limit from the recursive definition.</p>
+<h1 id="112-infinite-series">§11.2 Infinite Series<a hidden class="anchor" aria-hidden="true" href="#112-infinite-series">#</a></h1>
+<p>An infinite series is the sum of an infinite sequence of numbers</p>
+<p>$$
+a_1+a_2+a_3 + \cdots + a_n +\cdots
+$$</p>
+<p>The goal of this section is to understand the meaning of such an infinite sum and to develop methods to calculate it.</p>
+<p>Since there are infinite many terms, we cannot just keep adding to see what comes out. Instead we look at what we get by summing the first $n$ terms and stopping.</p>
+<p>$$
+s_n = a_1 + a_2 + a_3 + \cdots + a_n.
+$$</p>
+<p>The sum is a normal addition and we call it the $n$th <strong>partial sum</strong>. As $n$ gets larger, we expect the partial sums ( sequence ${s_n}$ ) to get closer and closer to a limiting value.</p>
+<h3 id="example-an-geometric-series">Example. An Geometric Series<a hidden class="anchor" aria-hidden="true" href="#example-an-geometric-series">#</a></h3>
+<p>$$
+1+\frac12 + \frac14 +\frac18 + \cdots + \frac1{2^n} + \cdots
+$$</p>
+<p>The <strong>partial sum</strong> is given by the formula</p>
+<p>$$
+s_n = 1+\frac12 + \frac14 + \cdots + \frac1{2^{n-1}} = \frac{1-\frac1{2^n}}{1-\frac12} = 2 - \frac1{2^{n-1}}.
+$$</p>
+<p>$s_n$ is approaching $2$. Thus we say (define) the infinite series has a value $2.$  Notice that any finite sum in this series is not equal to $2$. So $2$ is the number that the <strong>partial sum</strong> could only get arbitrarily close to but never reach.</p>
+<h2 id="definition-partial-sum-converges-sum-of-infinite-series">Definition. Partial Sum, Converges, Sum of Infinite Series<a hidden class="anchor" aria-hidden="true" href="#definition-partial-sum-converges-sum-of-infinite-series">#</a></h2>
+<p>Given a sequence of numbers ${a_n}$, an expression of the form</p>
+<p>$$
+a_1 + a_2 + a_3 + \cdots + a_n + \cdots
+$$</p>
+<p>is an <strong>infinite series</strong>. The sequence ${s_n}$ defined by</p>
+<p>$$
+s_n = a_1 + a_2 + \cdots + a_n
+$$</p>
+<p>is the <strong>sequence of partial sums</strong> of the series.</p>
+<ul>
+<li>If the sequence ${s_n}$ converges to a limit $L$, we say the series <strong>converges</strong> and that its <strong>sum</strong> is $L$. And write</li>
+</ul>
+<p>$$
+\sum_{n=1}^\infty a_n := a_1 + a_2 + a_3 +\cdots + a_n +\cdots = L.
+$$</p>
+<ul>
+<li>If the sequence ${s_n}$ diverges, we say the series <strong>diverges.</strong></li>
+</ul>
+<h3 id="the-sigma-notation">The Sigma Notation<a hidden class="anchor" aria-hidden="true" href="#the-sigma-notation">#</a></h3>
+<p>Whether it is convergent or not, we use sigma notation to denote the infinite sum. We can write a series as</p>
+<p>$$
+\sum_{n=1}^\infty a_n, \quad \sum_{k=1}^\infty a_k,\quad \text{or} \quad \sum a_n.
+$$</p>
+<h2 id="geometric-series">Geometric Series<a hidden class="anchor" aria-hidden="true" href="#geometric-series">#</a></h2>
+<p><strong>Geometric series</strong> are series of the form</p>
+<p>$$
+a + a,r + a , r^2 + \cdots + a , r^{n-1} + \cdots =\sum_{n=1}^\infty a , r^{n-1}
+$$</p>
+<p>in which $a$ and $r$ are fixed real numbers and $a\neq 0$. The series can also be written as $\sum_{n=0}^\infty a, r^{n}$.</p>
+<p>The geometric series satisfies</p>
+<p>$$
+a_{n+1}/a_n =r = \text{constant},
+$$</p>
+<p>where $r$ is the <strong>ratio.</strong> It can be either positive or negative.</p>
+<ul>
+<li>
+<p>For example</p>
+<p>$$
+1+\frac12 + \frac14 + \cdots + \frac1{2^n} + \cdots
+$$</p>
+<p>is a geometric series with $r = \frac12.$</p>
+</li>
+<li>
+<p>As in</p>
+<p>$$
+1-\frac13 + \frac19 - \cdots + \left(-\frac13\right)^{n-1} + \cdots
+$$</p>
+<p>is a geometric series with $r=-\frac13$.</p>
+</li>
+<li>
+<p>If $r=1$, the geometric series is a sum of infinite many constants</p>
+</li>
+</ul>
+<p>$$
+a + a+a + \cdots + a +\cdots
+$$</p>
+<h3 id="the-partial-sum-for-geometric-series">The Partial Sum for Geometric Series<a hidden class="anchor" aria-hidden="true" href="#the-partial-sum-for-geometric-series">#</a></h3>
+<p>Thanks to the polynomial factorization formula</p>
+<p>$$
+1-x^{n+1} = (1-x) ( 1 + x + x^2 + \cdots + x^n)
+$$</p>
+<p>We see that</p>
+<p>$$
+1+x+x^2 + \cdots + x^n = \frac{1-x^{n+1}}{1-x}.
+$$</p>
+<p>This formula helps us to find the partial sum form for geometric series $\sum_{k=0}^n a , r^k$ with $r\neq 1$:</p>
+<p>$$
+s_n = \sum_{k=0}^n a , r^k = a \frac{1-r^{n+1}}{1-r}.
+$$</p>
+<p>For $r=1$, it is even simpler:</p>
+<p>$$
+s_n=\sum_{k=0}^n a , 1^k = \underbrace{a+a+\cdots + a}_{n+1} = (n+1)a.
+$$</p>
+<ul>
+<li>For $|r|&lt;1$, the partial sum converges since $r^{n+1}\to 0$ as $n\to \infty$, so</li>
+</ul>
+<p>$$
+\sum_{n=0}^\infty a , r^n = \lim_{n\to\infty} s_n = \frac{a}{1-r}.
+$$</p>
+<ul>
+<li>For $|r|\ge 1$, the partial sum of geometric series $\sum a r^n$ is given either by</li>
+</ul>
+<p>$$
+a \frac{1-r^{n+1}}{1-r},\quad (r\neq1),\quad \text{or}\quad (n+1) a \quad (r=1).
+$$</p>
+<p>Either case, the partial sum diverges.</p>
+<h3 id="conclusion-simple-but-important">Conclusion (Simple but Important)<a hidden class="anchor" aria-hidden="true" href="#conclusion-simple-but-important">#</a></h3>
+<ul>
+<li>For $|r|&lt;1$, the geometric series $\sum_{n=0}^\infty a , r^n$ converges to $\dfrac{a}{1-r}$;</li>
+<li>For $|r|\ge 1$, the geometric series $\sum_{n=0}^\infty a, r^n$ diverges.</li>
+</ul>
+<h3 id="example-1-index-starts-with-nkin-mathbbn">Example 1. Index Starts with $n=k\in \mathbb{N}$<a hidden class="anchor" aria-hidden="true" href="#example-1-index-starts-with-nkin-mathbbn">#</a></h3>
+<p>A geometric series with $r=\frac13$ is given by</p>
+<p>$$
+\frac1{3^k} + \frac1{3^{k+1}} + \frac{1}{3^{k+2}} \cdots = \sum_{n=k}^\infty \left(\frac{1}{3}\right)^n = ?
+$$</p>
+<h3 id="example-2-index-starts-with-n0">Example 2. Index Starts with $n=0$<a hidden class="anchor" aria-hidden="true" href="#example-2-index-starts-with-n0">#</a></h3>
+<p>The series</p>
+<p>$$
+\sum_{n=0}^\infty \frac{(-1)^n 5}{4^n}
+$$</p>
+<p>is a geometric series with $a=5$ and $r=-\frac14$. It converges to ?</p>
+<h3 id="example-3-repeating-decimals">Example 3. Repeating Decimals<a hidden class="anchor" aria-hidden="true" href="#example-3-repeating-decimals">#</a></h3>
+<p>Express the repeating decimal $5.91,91,91\ldots$ as a rational number?</p>
+<p>(Solution: $5\frac{91}{99}$)</p>
+<h3 id="example-0999ldots--1">Example. $0.999\ldots = 1$<a hidden class="anchor" aria-hidden="true" href="#example-0999ldots--1">#</a></h3>
+<p>Express the repeating decimal $0.999\ldots$ as a rational number.</p>
+<h2 id="telescoping-series">Telescoping Series<a hidden class="anchor" aria-hidden="true" href="#telescoping-series">#</a></h2>
+<p>A telescoping series is usually referring to the case when</p>
+<p>$$
+\sum_n a_n = \sum_n (b_n-b_{n-1}).
+$$</p>
+<p>As taking the partial sum,</p>
+<p>$$
+s_n = a_1 + a_2 + \cdots + a_n = (b_1-b_0) + (b_2-b_1) + \cdots + (b_n-b_{n-1}) = b_n - b_0.
+$$</p>
+<p>Thus the summation has been greatly simplified.</p>
+<h3 id="example-5-a-telescoping-series">Example 5. A Telescoping Series<a hidden class="anchor" aria-hidden="true" href="#example-5-a-telescoping-series">#</a></h3>
+<p>Find the sum of the series $\sum_{n=1}^\infty \frac{1}{n(n+1)}$.</p>
+<h3 id="example-6-a-divergent-telescoping-series">Example 6. A Divergent Telescoping Series<a hidden class="anchor" aria-hidden="true" href="#example-6-a-divergent-telescoping-series">#</a></h3>
+<p>Find the divergence for the series $\sum_{n=1}^\infty \ln\frac{n+1}{n}$.</p>
+<p><strong><code>Remark</code> In general, it is very rare that the sum of a series can be calculated directly. The geometric series and telescoping series are two such examples. The calculation of series has been done largely by evaluating function series at some specific locations.</strong></p>
+<h2 id="divergent-series">Divergent Series<a hidden class="anchor" aria-hidden="true" href="#divergent-series">#</a></h2>
+<h3 id="example-6-partial-sums-for-two-divergent-series">Example 6. Partial Sums for Two Divergent Series<a hidden class="anchor" aria-hidden="true" href="#example-6-partial-sums-for-two-divergent-series">#</a></h3>
+<ol>
+<li>The series</li>
+</ol>
+<p>$$
+\sum_{n=1}^\infty n^2 = 1 + 4 + 9 + \cdots + n^2 + \cdots
+$$</p>
+<p>b. The series</p>
+<p>$$
+\sum_{n=1}^\infty \frac{n+1}{n} = \frac21 + \frac32 + \frac 43 + \cdots + \frac{n+1}{n} + \cdots
+$$</p>
+<h2 id="the-nth-term-test-for-divergence">The $n$th-Term Test for Divergence<a hidden class="anchor" aria-hidden="true" href="#the-nth-term-test-for-divergence">#</a></h2>
+<p>It is obvious that</p>
+<h3 id="theorem-7">Theorem 7.<a hidden class="anchor" aria-hidden="true" href="#theorem-7">#</a></h3>
+<p>If $\sum_{n=1}^\infty a_n$ converges, then $a_n\to 0.$</p>
+<p>It leads to the following test for detecting the kind of divergence occurred in the previous Example 6.</p>
+<h3 id="the-nth-term-test-for-divergence-1">The $n$th Term Test for Divergence<a hidden class="anchor" aria-hidden="true" href="#the-nth-term-test-for-divergence-1">#</a></h3>
+<p>$\sum_{n=1}^\infty a_n$ diverges if $\lim_{n\to\infty} a_n$ fails to exist or is different from $0.$</p>
+<h3 id="example-7-applying-the-nth-term-test">Example 7. Applying the $n$th Term Test<a hidden class="anchor" aria-hidden="true" href="#example-7-applying-the-nth-term-test">#</a></h3>
+<ol>
+<li>$\sum_n n^2$</li>
+<li>$\sum_n \frac{n+1}{n}$</li>
+<li>$\sum_n (-1)^{n+1}$</li>
+<li>$\sum_n \frac{-n}{2n+5}$</li>
+</ol>
+<p><strong><code>Remark</code> The $n$th term test is a necessary condition for convergence, it does not mean that if a series passes the test, then it converges.</strong></p>
+<h3 id="example-8-a-series-diverges-even-a_nto-0">Example 8. A Series Diverges Even $a_n\to 0$<a hidden class="anchor" aria-hidden="true" href="#example-8-a-series-diverges-even-a_nto-0">#</a></h3>
+<p>Find the Harmonic Series</p>
+<p>$$
+1 + \frac12 + \frac13 + \frac14 + \cdots + \frac1{n} + \cdots
+$$</p>
+<p>diverges.</p>
+<h2 id="combining-series">Combining Series<a hidden class="anchor" aria-hidden="true" href="#combining-series">#</a></h2>
+<p>Whenever we have two convergent series, we can add them term by term, subtract them term by term, or multiply them be constants to make new convergent series.</p>
+<h3 id="theorem-8">Theorem 8<a hidden class="anchor" aria-hidden="true" href="#theorem-8">#</a></h3>
+<p>If $\sum a_n = A$ and $\sum b_n = B$ are convergent series, then</p>
+<ol>
+<li><em>Sum Rule:</em></li>
+</ol>
+<p>$$
+\sum (a_n+b_n) = \sum a_n + \sum b_n =A+B
+$$</p>
+<ol>
+<li><em>Difference Rule:</em></li>
+</ol>
+<p>$$
+\sum(a_n-b_n) = \sum a_n - \sum b_n = A-B
+$$</p>
+<ol>
+<li>Constant Multiple Rule:</li>
+</ol>
+<p>$$
+\sum k, a_n = k\sum a_n = k A
+$$</p>
+<p><strong><code>Remark</code> These rules can be summarized to a single linear rule:  For any constants $\alpha$  and $\beta,$</strong></p>
+<p>$$
+\sum (\alpha a_n + \beta b_n ) = \alpha \sum a_n + \beta \sum b_n = \alpha A + \beta B
+$$</p>
+<h3 id="corollaries">Corollaries<a hidden class="anchor" aria-hidden="true" href="#corollaries">#</a></h3>
+<ol>
+<li>Every nonzero constant multiple of a divergent series diverges</li>
+<li>If $\sum a_n$ converges and $\sum b_n$ diverges, then $\sum(a_n\pm b_n)$  diverges</li>
+</ol>
+<p><strong><code>Caution</code> If both series diverge, combining series may be not diverge.</strong></p>
+<p>$$
+\sum_n 1\quad \text{and}\quad \sum_n (-1)
+$$</p>
+<p>both diverge, but $\sum (1+ (-1)) = \sum_n 0$ converges.</p>
+<h3 id="example-9-find-the-sum-of-the-following-series">Example 9. Find the sum of the following series<a hidden class="anchor" aria-hidden="true" href="#example-9-find-the-sum-of-the-following-series">#</a></h3>
+<p>Find the sum of</p>
+<p>$$
+\sum_{n=1}^\infty \left(\frac{3^{n-1}-1}{6^{n-1}}+\frac{1}{n(n+1)}\right)
+$$</p>
+<h2 id="adding-or-deleting-terms">Adding or Deleting Terms<a hidden class="anchor" aria-hidden="true" href="#adding-or-deleting-terms">#</a></h2>
+<p>Adding or deleting finite many terms from a series, does not change the convergence/ divergence nature of the series.</p>
+<h2 id="shifting-the-index">Shifting the Index<a hidden class="anchor" aria-hidden="true" href="#shifting-the-index">#</a></h2>
+<p>$$
+\sum_{n=1}^\infty a_n = \sum_{n=-6}^\infty a_{n+7}
+$$</p>
+<p>This type of operation doesn’t alter the series at all.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/series/">Series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/geometric-series/">geometric-series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/telescoping-series/">telescoping series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/converge/">converge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/diverge/">diverge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/sum/">sum</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/test/">test</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in calculus2 on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Feb 2022 21:44:36 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/calculus2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 13:20:39 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/calculus2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W12-S2 Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</guid>
+      <description>周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term</description>
+    </item>
+    
     <item>
       <title>W1-S2 Volumes by Slicing (cont.) , Volumes by Cylindrical Shells</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w1s2-volume-by-cylindrical-shells/</link>
