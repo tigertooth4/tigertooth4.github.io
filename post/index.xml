@@ -332,7 +332,7 @@
     </item>
     
     <item>
-      <title>Weyl 的等分布定理与数项级数的收敛性</title>
+      <title>Weyl 的等分布定理与数项级数$\sum_n (-1)^n \frac{|\sin(n)|}{n}$的收敛性</title>
       <link>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</link>
       <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
       
