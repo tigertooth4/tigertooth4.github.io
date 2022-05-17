@@ -6,13 +6,76 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 May 2022 13:20:39 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 16:45:17 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>calculus2</title>
       <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comparison</title>
+      <link>http://tigertooth4.github.io/tags/comparison/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/comparison/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>convergence</title>
+      <link>http://tigertooth4.github.io/tags/convergence/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/convergence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>integral</title>
+      <link>http://tigertooth4.github.io/tags/integral/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/integral/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lecture</title>
+      <link>http://tigertooth4.github.io/tags/lecture/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>limit</title>
+      <link>http://tigertooth4.github.io/tags/limit/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/limit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>http://tigertooth4.github.io/tags/series/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://tigertooth4.github.io/tags/test/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/test/</guid>
       <description></description>
     </item>
     
@@ -44,24 +107,6 @@
     </item>
     
     <item>
-      <title>lecture</title>
-      <link>http://tigertooth4.github.io/tags/lecture/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Series</title>
-      <link>http://tigertooth4.github.io/tags/series/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>sum</title>
       <link>http://tigertooth4.github.io/tags/sum/</link>
       <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
@@ -76,15 +121,6 @@
       <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/telescoping-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>http://tigertooth4.github.io/tags/test/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/test/</guid>
       <description></description>
     </item>
     
@@ -422,15 +458,6 @@
     </item>
     
     <item>
-      <title>convergence</title>
-      <link>http://tigertooth4.github.io/tags/convergence/</link>
-      <pubDate>Thu, 14 Apr 2022 12:36:20 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/convergence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Differential Eqaution</title>
       <link>http://tigertooth4.github.io/tags/differential-eqaution/</link>
       <pubDate>Thu, 14 Apr 2022 12:36:20 +0800</pubDate>
@@ -526,15 +553,6 @@
       <pubDate>Sun, 10 Apr 2022 07:28:47 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/thermal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>integral</title>
-      <link>http://tigertooth4.github.io/tags/integral/</link>
-      <pubDate>Thu, 07 Apr 2022 14:47:12 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/integral/</guid>
       <description></description>
     </item>
     
@@ -971,15 +989,6 @@
     </item>
     
     <item>
-      <title>limit</title>
-      <link>http://tigertooth4.github.io/tags/limit/</link>
-      <pubDate>Tue, 15 Sep 2020 23:46:00 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/limit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Approximation</title>
       <link>http://tigertooth4.github.io/tags/approximation/</link>
       <pubDate>Mon, 07 Sep 2020 18:02:00 +0800</pubDate>
@@ -1147,6 +1156,15 @@
       <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/weyl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>交错级数</title>
+      <link>http://tigertooth4.github.io/tags/%E4%BA%A4%E9%94%99%E7%BA%A7%E6%95%B0/</link>
+      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/%E4%BA%A4%E9%94%99%E7%BA%A7%E6%95%B0/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>comparison on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/comparison/</link>
+    <description>Recent content in comparison on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 May 2022 16:45:17 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/comparison/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W13-S1 The Integral Test and Comparison Tests</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</guid>
+      <description>周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,</description>
+    </item>
+    
+  </channel>
+</rss>

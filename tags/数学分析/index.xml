@@ -16,5 +16,14 @@
       <description>本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若</description>
     </item>
     
+    <item>
+      <title>Weyl 的等分布定理与数项级数$\sum_n (-1)^n \frac{|\sin(n)|}{n}$的收敛性</title>
+      <link>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</link>
+      <pubDate>Wed, 31 Jul 2019 23:28:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-06/abel-dirichlet-test-fail-reveals-weyl-theorem-on-equidistribution-theorem/</guid>
+      <description>在数学分析中有很多习题是关于数项级数的收敛性的。也有很多关于收敛性的判别方法。在这些判别法中，对于一般项级数的判别方法，一般的教材中会介绍绝</description>
+    </item>
+    
   </channel>
 </rss>

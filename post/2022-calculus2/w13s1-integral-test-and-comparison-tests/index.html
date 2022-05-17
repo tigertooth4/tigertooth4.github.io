@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W13-S1 The Integral Test and Comparison Tests | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="integral, test, comparison, limit, convergence, calculus2, lecture, series" />
+<meta name="description" content="周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W13-S1 The Integral Test and Comparison Tests" />
+<meta property="og:description" content="周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-17T16:45:17&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-17T16:45:17&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W13-S1 The Integral Test and Comparison Tests"/>
+<meta name="twitter:description" content="周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W13-S1 The Integral Test and Comparison Tests",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W13-S1 The Integral Test and Comparison Tests",
+  "name": "W13-S1 The Integral Test and Comparison Tests",
+  "description": "周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,",
+  "keywords": [
+    "integral", "test", "comparison", "limit", "convergence", "calculus2", "lecture", "series"
+  ],
+  "articleBody": "周次: 13 日期: May 18, 2022 节次: 1\nIn this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first.\nI. Recap: § 11.2 Series Basic Problems for Series Primarily, given a series $\\sum_n a_n$, we have two questions:\n Does the series converge? If it converges, what is its sum?  For most series, we expect answers to the first question. As a practical matter, the second question is also important. Unfortunately, only few of the sums can be computed precisely.\nKey Results in § 11.2  Infinite sum: Consider the limit of partial sum sequence ${s_n}$ Two computable series: Geometric and Telescoping Divergence Test: if $a_n\\not\\to 0$, then $\\sum_n a_n$ diverges Have not covered: Combining Series, shift the index, add / delete finite many terms  Starts from the last part of section 11.2. »\n Combining Series Whenever we have two convergent series, we can add them term by term, subtract them term by term, or multiply them by constants to make new convergent series.\nTheorem 8 (Combination of Series) If $\\sum a_n = A$ and $\\sum b_n = B$ are convergent series, then\n Sum Rule:  $$ \\sum (a_n+b_n) = \\sum a_n + \\sum b_n =A+B $$\n Difference Rule:  $$ \\sum(a_n-b_n) = \\sum a_n - \\sum b_n = A-B $$\n Constant Multiple Rule:  $$ \\sum k, a_n = k\\sum a_n = k A $$\nRemark These rules can be summarized to a single linear rule: For any constants $\\alpha$ and $\\beta,$\n$$ \\sum (\\alpha a_n + \\beta b_n ) = \\alpha \\sum a_n + \\beta \\sum b_n = \\alpha A + \\beta B $$\nProof.\nCorollaries  Every nonzero constant multiple of a divergent series diverges If $\\sum a_n$ converges and $\\sum b_n$ diverges, then $\\sum(a_n\\pm b_n)$ diverges  Caution If both series diverge, combining series may be not diverge.\n$$ \\sum_n 1\\quad \\text{and}\\quad \\sum_n (-1) $$\nboth diverge, but $\\sum (1+ (-1)) = \\sum_n 0$ converges.\nExample 9. Find the sum of the following series Find the sum of\n$$ \\sum_{n=1}^\\infty \\left(\\frac{3^{n-1}-1}{6^{n-1}}+\\frac{1}{n(n+1)}\\right) $$\nAdding or Deleting Terms Adding or deleting finite many terms from a series, does not change the convergence/ divergence nature of the series.\nShifting the Index $$ \\sum_{n=1}^\\infty a_n = \\sum_{n=-6}^\\infty a_{n+7} $$\nThis type of operation doesn’t alter the series at all.\n§ 11.3 The Integral Test for Series with Non-negative Terms In this section and the next two, we study series with terms being all non-negative , or all non-positive. i.e. the series\n$$ \\sum_n a_n\\quad \\text{with}\\quad a_n\\ge 0,\\quad \\text{or} \\quad \\sum_n a_n \\quad \\text{with}\\quad a_n\\le 0. $$\nWithout loss of generality, the following discussion are based on the series with non-negative terms only.\nNondecreasing Partial Sums For series $\\sum_n a_n$ with $a_n\\ge 0$, it is easy to see that $s_{n+1} = s_n + a_n \\ge s_n$. Thus the partial sum sequence is a nondecreasing sequence. The Nondecreasing Sequence Theorem tells us that the series will converge if and only if the partial sums are bounded from above.\n$$ \\sum_n a_n\\quad \\text{where}\\quad a_n\\ge 0,\\quad \\implies \\quad s_n = a_1 + \\cdots + a_n, \\text{is } \\nearrow. $$\nHence, in order to converge, it only need the partial sum $s_n$ to be bounded from above.\nExample 1. The Harmonic Series The series $\\sum_n \\frac1{n} = 1 + \\frac12 + \\frac13 + \\cdots$ is called the harmonic series. Although it passes the $n$th term test ($\\frac1n\\to 0$), it still diverges because of the unbounded partial sum. To see the partial sums are unbounded, we can use\n  Grouping the terms\n$$ 1+ \\frac12 + \\underbrace{\\frac13 + \\frac14}{\\frac12} + \\underbrace{\\frac15 + \\frac16 + \\frac17 + \\frac18}{\\frac48 = \\frac12} + \\underbrace{\\frac19 + \\frac1{10} + \\cdots + \\frac1{16}}_{\\frac8{16} = \\frac12} + \\cdots $$\n  An inequality $\\frac1n \\ge \\ln\\frac{n+1}{n}$.\n  The following graph shows the growth of partial sum against the growth of $\\ln(x)$.\nThe Integral Test Guiding Example Does the following series converge?\n$$ \\sum_{n=1}^\\infty \\frac{1}{n^2} = 1 + \\frac14 + \\frac19 + \\frac1{16} + \\cdots + \\frac1{n^2} + \\cdots $$\nThe value for each term can be plotted as columns in the following graph\nThe partial sum is equal to the total area of the first $n$-columns. To show the sum is bounded from above, we look at the area under the function $y=\\frac{1}{x^2}$ (from $1$ to $\\infty$)\nSince the integral $\\int_1^\\infty \\frac{dx}{x^2}$ is finite, the total area for $n$-columns is bounded. Here is a plot of partial sums for $n$ from $1$ to $80$. As the graph shown, the partial sum is bounded from above.\nTheorem 9. The Integral Test Let $\\sum_n a_n$ be non-negative series. Suppose that $a_n = f(n)$, where $f$ is a continuous, non-negative and decreasing function of $x$ for all $x\\ge N$ ($N$ is a positive integer). Then the series $\\sum_{n=N}^\\infty a_n$ and the integral $\\int_N^\\infty f(x) dx$ both converge or both diverge.\nProof.\nExample 3. The $p$-Series Show that the $p$-series\n$$ \\sum_{n=1}^\\infty \\frac{1}{n^p} = \\frac1{1^p} + \\frac1{2^p} + \\frac1{3^p} + \\cdots + \\frac1{n^p} + \\cdots $$\nconverges if $p1$, and diverges if $p\\le 1$.\nRemark. The $p$-Series are very important type of convergent series.\nExample 4. A Convergent Series Show the series\n$$ \\sum_{n=1}^\\infty \\frac{1}{n^2+1} $$\nconverges by the Integral Test.\n§ 11.4 Comparison Tests (for Series with Non-negative Terms) For many series with non-negative terms, we can find the upper bound for the partial sum by comparing the series with another series whose convergence is known.\nGuiding Example. Study the convergence / divergence of the following series\n$$ \\sum_{n\\ge 2} \\frac{1}{n^2 \\ln(n)}. $$\nTheorem 10. The Comparison Test Let $\\sum_n a_n$ be a series with non-negative terms.\n $\\sum_n a_n$ converges if there is a convergent series $\\sum c_n$ with $a_n \\le c_n$ for all $nN$, for some integer $N$. $\\sum_n a_n$ diverges if there is a divergent series of nonnegative terms $\\sum_n d_n$ with $a_n\\ge d_n$ for all $nN$, for some integer $N$.  Proof.\nExample 1. Applying the Comparison Test  Show the series  $$ \\sum_{n=1}^\\infty \\frac{5}{5n-1} $$\ndiverges.\nb. Show the series\n$$ \\sum_{n=0}^\\infty \\frac1{n!} $$\nconverges.\nc. Show the series\n$$ 5 +\\frac23 + \\frac17 + 1 + \\sum_{n=1}^\\infty \\frac1{2^n+\\sqrt{n}} $$\nconverges.\nThe Limit Comparison Test Based on the experiences established by the examples, we have a feeling that testing for convergence is largely about finding how fast the $n$th term is approaching $0$.\nTheorem 11. Limit Comparison Test Suppose that $a_n0$ and $b_n0$ for all $n\\ge N$ ($N$ an integer).\n If  $$ \\lim_{n\\to \\infty}\\frac{a_n}{b_n} = c  0 $$\nthen $\\sum_n a_n$ and $\\sum_n b_n$ both converge or both diverge.\n If  $$ \\lim_{n\\to\\infty}\\frac{a_n}{b_n}=0,\\quad \\text{and}\\quad \\sum_n b_n , \\text{converges} $$\nthen $\\sum_n a_n$ converges.\n If  $$ \\lim_{n\\to\\infty}\\frac{a_n}{b_n} = \\infty,\\quad \\text{and}\\quad \\sum_n b_n , \\text{diverges} $$\nthen $\\sum_n a_n$ diverges.\nProof.\nExample 2. Using the Limit Comparison Test Which of the following series converges, and which diverge?\n   $$ \\frac34 + \\frac59 + \\frac7{16} +\\cdots + \\frac{2n+1}{(n+1)^2} + \\cdots $$\nb.\n$$ \\frac11 + \\frac13 + \\frac17 + \\frac1{15} + \\cdots + \\frac{1}{2^n-1} + \\cdots $$\nc.\n$$ \\frac{1+2\\ln2}{9} + \\frac{1+3\\ln 3}{14} + \\frac{1+4\\ln 4}{21} + \\cdots + \\frac{1+n\\ln n}{n^2+5} + \\cdots $$\nExample 3. Does $\\sum_{n=1}^\\infty \\frac{\\ln n}{n^{3/2}}$ converge? ",
+  "wordCount" : "1219",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-17T16:45:17+08:00",
+  "dateModified": "2022-05-17T16:45:17+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W13-S1 The Integral Test and Comparison Tests
+    </h1>
+    <div class="post-meta"><span title='2022-05-17 16:45:17 +0800 CST'>May 17, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 13
+日期: May 18, 2022
+节次: 1</p>
+<p>In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first.</p>
+<h1 id="i-recap--112-series">I. Recap: § 11.2 Series<a hidden class="anchor" aria-hidden="true" href="#i-recap--112-series">#</a></h1>
+<h2 id="basic-problems-for-series">Basic Problems for Series<a hidden class="anchor" aria-hidden="true" href="#basic-problems-for-series">#</a></h2>
+<p>Primarily, given a series $\sum_n a_n$, we have two questions:</p>
+<ol>
+<li>Does the series converge?</li>
+<li>If it converges, what is its sum?</li>
+</ol>
+<p>For most series, we expect answers to the first question. As a practical matter, the second question is also important. Unfortunately, only few of the sums can be computed precisely.</p>
+<h2 id="key-results-in--112">Key Results in § 11.2<a hidden class="anchor" aria-hidden="true" href="#key-results-in--112">#</a></h2>
+<ul>
+<li>Infinite sum:  Consider the limit of partial sum sequence ${s_n}$</li>
+<li>Two computable series: Geometric and Telescoping</li>
+<li>Divergence Test: if $a_n\not\to 0$, then $\sum_n a_n$ diverges</li>
+<li>Have not covered: Combining Series, shift the index, add / delete finite many terms</li>
+</ul>
+<p>Starts from the last part of section 11.2. &raquo;&gt;</p>
+<hr>
+<h2 id="combining-series">Combining Series<a hidden class="anchor" aria-hidden="true" href="#combining-series">#</a></h2>
+<p>Whenever we have two <strong>convergent</strong> series, we can add them term by term, subtract them term by term, or multiply them by constants to make new convergent series.</p>
+<h3 id="theorem-8-combination-of-series">Theorem 8 (Combination of Series)<a hidden class="anchor" aria-hidden="true" href="#theorem-8-combination-of-series">#</a></h3>
+<p>If $\sum a_n = A$ and $\sum b_n = B$ are convergent series, then</p>
+<ol>
+<li><em>Sum Rule:</em></li>
+</ol>
+<p>$$
+\sum (a_n+b_n) = \sum a_n + \sum b_n =A+B
+$$</p>
+<ol>
+<li><em>Difference Rule:</em></li>
+</ol>
+<p>$$
+\sum(a_n-b_n) = \sum a_n - \sum b_n = A-B
+$$</p>
+<ol>
+<li>Constant Multiple Rule:</li>
+</ol>
+<p>$$
+\sum k, a_n = k\sum a_n = k A
+$$</p>
+<p><strong><code>Remark</code> These rules can be summarized to a single linear rule:  For any constants $\alpha$  and $\beta,$</strong></p>
+<p>$$
+\sum (\alpha a_n + \beta b_n ) = \alpha \sum a_n + \beta \sum b_n = \alpha A + \beta B
+$$</p>
+<p><strong>Proof.</strong></p>
+<h3 id="corollaries">Corollaries<a hidden class="anchor" aria-hidden="true" href="#corollaries">#</a></h3>
+<ol>
+<li>Every nonzero constant multiple of a divergent series diverges</li>
+<li>If $\sum a_n$ converges and $\sum b_n$ diverges, then $\sum(a_n\pm b_n)$  diverges</li>
+</ol>
+<p><strong><code>Caution</code> If both series diverge, combining series may be not diverge.</strong></p>
+<p>$$
+\sum_n 1\quad \text{and}\quad \sum_n (-1)
+$$</p>
+<p>both diverge, but $\sum (1+ (-1)) = \sum_n 0$ converges.</p>
+<h3 id="example-9-find-the-sum-of-the-following-series">Example 9. Find the sum of the following series<a hidden class="anchor" aria-hidden="true" href="#example-9-find-the-sum-of-the-following-series">#</a></h3>
+<p>Find the sum of</p>
+<p>$$
+\sum_{n=1}^\infty \left(\frac{3^{n-1}-1}{6^{n-1}}+\frac{1}{n(n+1)}\right)
+$$</p>
+<h2 id="adding-or-deleting-terms">Adding or Deleting Terms<a hidden class="anchor" aria-hidden="true" href="#adding-or-deleting-terms">#</a></h2>
+<p>Adding or deleting finite many terms from a series, does not change the convergence/ divergence nature of the series.</p>
+<h2 id="shifting-the-index">Shifting the Index<a hidden class="anchor" aria-hidden="true" href="#shifting-the-index">#</a></h2>
+<p>$$
+\sum_{n=1}^\infty a_n = \sum_{n=-6}^\infty a_{n+7}
+$$</p>
+<p>This type of operation doesn’t alter the series at all.</p>
+<h1 id="-113-the-integral-test-for-series-with-non-negative-terms">§ 11.3 The Integral Test for Series with Non-negative Terms<a hidden class="anchor" aria-hidden="true" href="#-113-the-integral-test-for-series-with-non-negative-terms">#</a></h1>
+<p>In this section and the next two, we study series with terms being all non-negative , or all non-positive. i.e. the series</p>
+<p>$$
+\sum_n a_n\quad \text{with}\quad a_n\ge 0,\quad \text{or} \quad \sum_n a_n \quad \text{with}\quad a_n\le 0.
+$$</p>
+<p>Without loss of generality, the following discussion are based on the series with non-negative terms only.</p>
+<h2 id="nondecreasing-partial-sums">Nondecreasing Partial Sums<a hidden class="anchor" aria-hidden="true" href="#nondecreasing-partial-sums">#</a></h2>
+<p>For series $\sum_n a_n$ with $a_n\ge 0$, it is easy to see that $s_{n+1} = s_n + a_n \ge s_n$. Thus the partial sum sequence is a nondecreasing sequence. The Nondecreasing Sequence Theorem tells us that the series will converge if and only if the partial sums are bounded from above.</p>
+<p>$$
+\sum_n a_n\quad \text{where}\quad a_n\ge 0,\quad \implies \quad s_n = a_1 + \cdots + a_n, \text{is } \nearrow.
+$$</p>
+<p>Hence, in order to converge, it only need the partial sum $s_n$ to be bounded from above.</p>
+<h3 id="example-1-the-harmonic-series">Example 1. The Harmonic Series<a hidden class="anchor" aria-hidden="true" href="#example-1-the-harmonic-series">#</a></h3>
+<p>The series $\sum_n \frac1{n} = 1 + \frac12 + \frac13 + \cdots$ is called the <strong>harmonic series.</strong> Although it passes the $n$th term test ($\frac1n\to 0$), it still diverges because of the unbounded partial sum. To see the partial sums are unbounded, we can use</p>
+<ol>
+<li>
+<p>Grouping the terms</p>
+<p>$$
+1+ \frac12 + \underbrace{\frac13 + \frac14}<em>{&gt;\frac12} + \underbrace{\frac15 + \frac16 + \frac17 + \frac18}</em>{&gt;\frac48 = \frac12} + \underbrace{\frac19 + \frac1{10} + \cdots + \frac1{16}}_{&gt;\frac8{16} = \frac12} + \cdots
+$$</p>
+</li>
+<li>
+<p>An inequality $\frac1n \ge \ln\frac{n+1}{n}$.</p>
+</li>
+</ol>
+<p>The following graph shows the growth of partial sum against the growth of $\ln(x)$.</p>
+<p><img loading="lazy" src="W13-S1%20The%20Integral%20Test%20and%20Comparison%20Tests%207f7c5394d7a644859eb3fbd5301d0d72/Untitled.png" alt="Untitled"  />
+</p>
+<h2 id="the-integral-test">The Integral Test<a hidden class="anchor" aria-hidden="true" href="#the-integral-test">#</a></h2>
+<h3 id="guiding-example">Guiding Example<a hidden class="anchor" aria-hidden="true" href="#guiding-example">#</a></h3>
+<p>Does the following series converge?</p>
+<p>$$
+\sum_{n=1}^\infty \frac{1}{n^2} = 1 + \frac14 + \frac19 + \frac1{16} + \cdots + \frac1{n^2} + \cdots
+$$</p>
+<p>The value for each term can be plotted as columns in the following graph</p>
+<p><img loading="lazy" src="W13-S1%20The%20Integral%20Test%20and%20Comparison%20Tests%207f7c5394d7a644859eb3fbd5301d0d72/Untitled%201.png" alt="Untitled"  />
+</p>
+<p>The partial sum is equal to the total area of the first $n$-columns. To show the sum is bounded from above, we look at the area under the function $y=\frac{1}{x^2}$ (from $1$ to $\infty$)</p>
+<p><img loading="lazy" src="W13-S1%20The%20Integral%20Test%20and%20Comparison%20Tests%207f7c5394d7a644859eb3fbd5301d0d72/guidingEg.gif" alt="guidingEg.gif"  />
+</p>
+<p>Since the integral $\int_1^\infty \frac{dx}{x^2}$ is finite, the total area for $n$-columns is bounded. Here is a plot of partial sums for $n$ from $1$ to $80$. As the graph shown, the partial sum is bounded from above.</p>
+<p><img loading="lazy" src="W13-S1%20The%20Integral%20Test%20and%20Comparison%20Tests%207f7c5394d7a644859eb3fbd5301d0d72/Untitled%202.png" alt="Untitled"  />
+</p>
+<h2 id="theorem-9-the-integral-test">Theorem 9. The Integral Test<a hidden class="anchor" aria-hidden="true" href="#theorem-9-the-integral-test">#</a></h2>
+<p>Let $\sum_n a_n$ be non-negative series. Suppose that $a_n = f(n)$, where $f$ is a continuous, non-negative and decreasing function of $x$ for all $x\ge N$ ($N$ is a positive integer). Then the series $\sum_{n=N}^\infty a_n$ and the integral $\int_N^\infty f(x) dx$ both converge or both diverge.</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-3-the-p-series">Example 3. The $p$-Series<a hidden class="anchor" aria-hidden="true" href="#example-3-the-p-series">#</a></h3>
+<p>Show that the $p$-series</p>
+<p>$$
+\sum_{n=1}^\infty \frac{1}{n^p} = \frac1{1^p} + \frac1{2^p} + \frac1{3^p} + \cdots + \frac1{n^p} + \cdots
+$$</p>
+<p>converges if $p&gt;1$, and diverges if $p\le 1$.</p>
+<p><em><strong><code>Remark.</code></strong></em> The $p$-Series are very important type of convergent series.</p>
+<h3 id="example-4-a-convergent-series">Example 4. A Convergent Series<a hidden class="anchor" aria-hidden="true" href="#example-4-a-convergent-series">#</a></h3>
+<p>Show the series</p>
+<p>$$
+\sum_{n=1}^\infty \frac{1}{n^2+1}
+$$</p>
+<p>converges by the Integral Test.</p>
+<h1 id="-114-comparison-tests-for-series-with-non-negative-terms">§ 11.4 Comparison Tests (for Series with Non-negative Terms)<a hidden class="anchor" aria-hidden="true" href="#-114-comparison-tests-for-series-with-non-negative-terms">#</a></h1>
+<p>For many series with non-negative terms, we can find the upper bound for the partial sum by comparing the series with another series whose convergence is known.</p>
+<h3 id="guiding-example-1">Guiding Example.<a hidden class="anchor" aria-hidden="true" href="#guiding-example-1">#</a></h3>
+<p>Study the convergence / divergence of the following series</p>
+<p>$$
+\sum_{n\ge 2} \frac{1}{n^2 \ln(n)}.
+$$</p>
+<h2 id="theorem-10-the-comparison-test">Theorem 10. The Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-10-the-comparison-test">#</a></h2>
+<p>Let $\sum_n a_n$ be a series with non-negative terms.</p>
+<ol>
+<li>$\sum_n a_n$ converges if there is a convergent series $\sum c_n$ with $a_n \le c_n$ for all $n&gt;N$, for some integer $N$.</li>
+<li>$\sum_n a_n$ diverges if there is a divergent series of nonnegative terms $\sum_n d_n$ with $a_n\ge d_n$ for all $n&gt;N$, for some integer $N$.</li>
+</ol>
+<p><strong>Proof.</strong></p>
+<h3 id="example-1-applying-the-comparison-test">Example 1. Applying the Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-comparison-test">#</a></h3>
+<ol>
+<li>Show the series</li>
+</ol>
+<p>$$
+\sum_{n=1}^\infty \frac{5}{5n-1}
+$$</p>
+<p>diverges.</p>
+<p>b. Show the series</p>
+<p>$$
+\sum_{n=0}^\infty \frac1{n!}
+$$</p>
+<p>converges.</p>
+<p>c. Show the series</p>
+<p>$$
+5 +\frac23 + \frac17 + 1 + \sum_{n=1}^\infty \frac1{2^n+\sqrt{n}}
+$$</p>
+<p>converges.</p>
+<h2 id="the-limit-comparison-test">The Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#the-limit-comparison-test">#</a></h2>
+<p>Based on the experiences established by the examples, we have a feeling that testing for convergence is largely about finding how fast the $n$th term is approaching $0$.</p>
+<h2 id="theorem-11-limit-comparison-test">Theorem 11. Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-11-limit-comparison-test">#</a></h2>
+<p>Suppose that $a_n&gt;0$ and $b_n&gt;0$ for all $n\ge N$ ($N$ an integer).</p>
+<ol>
+<li>If</li>
+</ol>
+<p>$$
+\lim_{n\to \infty}\frac{a_n}{b_n} = c &gt; 0
+$$</p>
+<p>then $\sum_n a_n$ and $\sum_n b_n$ both converge or both diverge.</p>
+<ol>
+<li>If</li>
+</ol>
+<p>$$
+\lim_{n\to\infty}\frac{a_n}{b_n}=0,\quad \text{and}\quad \sum_n b_n , \text{converges}
+$$</p>
+<p>then $\sum_n a_n$ converges.</p>
+<ol>
+<li>If</li>
+</ol>
+<p>$$
+\lim_{n\to\infty}\frac{a_n}{b_n} = \infty,\quad \text{and}\quad \sum_n b_n , \text{diverges}
+$$</p>
+<p>then $\sum_n a_n$ diverges.</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-2-using-the-limit-comparison-test">Example 2. Using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-2-using-the-limit-comparison-test">#</a></h3>
+<p>Which of the following series converges, and which diverge?</p>
+<ol>
+<li></li>
+</ol>
+<p>$$
+\frac34 + \frac59 + \frac7{16} +\cdots + \frac{2n+1}{(n+1)^2} + \cdots
+$$</p>
+<p>b.</p>
+<p>$$
+\frac11 + \frac13 + \frac17 + \frac1{15} + \cdots + \frac{1}{2^n-1} + \cdots
+$$</p>
+<p>c.</p>
+<p>$$
+\frac{1+2\ln2}{9} + \frac{1+3\ln 3}{14} + \frac{1+4\ln 4}{21} + \cdots + \frac{1+n\ln n}{n^2+5} + \cdots
+$$</p>
+<h3 id="example-3-does-sum_n1infty-fracln-nn32-converge">Example 3. Does $\sum_{n=1}^\infty \frac{\ln n}{n^{3/2}}$ converge?<a hidden class="anchor" aria-hidden="true" href="#example-3-does-sum_n1infty-fracln-nn32-converge">#</a></h3>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/integral/">integral</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/test/">test</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/comparison/">comparison</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/limit/">limit</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/series/">Series</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
