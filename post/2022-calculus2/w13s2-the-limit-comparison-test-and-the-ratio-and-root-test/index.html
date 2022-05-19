@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W13-S2 The Limit Comparison Test and The Ratio and Root Tests | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="comparison, limit comparison, test, convergence, divergence, series, ratio, root" />
+<meta name="description" content="周次: 13 日期: May 20, 2022 节次: 2 In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms. § 11.4 The">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W13-S2 The Limit Comparison Test and The Ratio and Root Tests" />
+<meta property="og:description" content="周次: 13 日期: May 20, 2022 节次: 2 In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms. § 11.4 The" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-19T14:41:38&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-19T14:41:38&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W13-S2 The Limit Comparison Test and The Ratio and Root Tests"/>
+<meta name="twitter:description" content="周次: 13 日期: May 20, 2022 节次: 2 In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms. § 11.4 The"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W13-S2 The Limit Comparison Test and The Ratio and Root Tests",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W13-S2 The Limit Comparison Test and The Ratio and Root Tests",
+  "name": "W13-S2 The Limit Comparison Test and The Ratio and Root Tests",
+  "description": "周次: 13 日期: May 20, 2022 节次: 2 In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms. § 11.4 The",
+  "keywords": [
+    "comparison", "limit comparison", "test", "convergence", "divergence", "series", "ratio", "root"
+  ],
+  "articleBody": "周次: 13 日期: May 20, 2022 节次: 2\nIn this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms.\n§ 11.4 The Limit Comparison Test Note in this lecture all the series are considered to have all the terms being non-negative.\nRecap: Theorem 10. The Comparison Test   If there is a convergent series $\\sum_n c_n$ such that\n$$ a_n \\le c_n\\quad (\\forall , n\\ge N) $$\nthen $\\sum_n a_n$ also converges.\n  If there is a divergent series $\\sum_n d_n$ such that\n$$ a_n\\ge d_n \\quad (\\forall, n\\ge N) $$\nthen $\\sum_n a_n$ also diverges.\n  Ideas behind the Proof.\nFor case 1, the partial sum\n$$ \\sum_{k=1}^n a_k \\le \\sum_{k=1}^n c_k \\nearrow \\sum_{k=1}^\\infty c_kFor case 2, the partial sum\n$$ \\sum_{k=1}^n a_k \\ge \\sum_{k=1}^n d_k \\nearrow \\sum_{k=1}^\\infty d_k = \\infty. $$\nExample 1. Applying the Comparison Test (a) $\\sum_{n=1}^\\infty \\frac{5}{5n-1}$\n( Diverges. Compared with Harmonic series $\\sum_n \\frac1n$. Because $\\frac{5}{5n-1} \\ge \\frac1n$. )\n(b) $\\sum_{n=0}^\\infty \\frac1{n!}$\n( Converges. Compared with the Telescoping series $\\sum_{n=2}^\\infty \\frac{1}{n(n-1)}$. Because $\\frac1{n!}\\le \\frac{1}{n(n-1)}$ for all $n\\ge 2$. Alternatively, one can compare it with the geometric series $\\sum_n \\frac{1}{2^{n-1}}$ )\n(c) $5 +\\frac23 + \\frac17 + 1 + \\sum_{n=1}^\\infty \\frac1{2^n+\\sqrt{n}}$\n( Converges. Compared with the geometric series $\\frac1{2^n+\\sqrt{n}} \\le \\frac1{2^n}$)\nRemarks   The $p$-series and geometric , telescoping series are frequently been used to be compared with.\n  The Comparison Test ONLY WORKS for the series with non-negative terms (or with non-positive terms).\nFor example, the following series with both positive and negative terms\n$$ \\sum_{n=0}^\\infty a_n = 1-2 + \\frac12 - 4 +\\frac1{2^2}-6 + \\frac1{2^3}-8 + \\cdots $$\ndiverges, although all the terms $a_n\\le \\frac1{\\sqrt{2}^{n}}$.\n  That’s been said, if a series has only finite many negative terms, the comparison test is still applicable. For example\n  $$ -2 -3 + \\sum_{n=3}^\\infty \\frac{1}{n^2 \\ln n} $$\nThe Limit Comparison Test Based on the experiences built up from the comparison test, we may get the feeling that testing for convergence is largely about recognizing how fast the $n$th term is approaching $0$.\nTherefore, the concepts of growth rate or order can be applied to the convergence test.\nTheorem 11. Limit Comparison Test Suppose that $a_n0$ and $b_n0$ for all $n\\ge N$ ($N$ an integer).\n  If\n$$ \\lim_{n\\to \\infty}\\frac{a_n}{b_n} = c  0 \\quad (a_n, \\text{and } b_n \\text{ have the same order}) $$\nthen $\\sum_n a_n$ and $\\sum_n b_n$ both converge or both diverge.\n  If\n$$ \\lim_{n\\to\\infty}\\frac{a_n}{b_n}=0 ,\\quad(a_n\\text{ is much smaller}) \\quad \\text{and}\\quad \\sum_n b_n , \\text{converges} $$\nthen $\\sum_n a_n$ converges.\n  If\n$$ \\lim_{n\\to\\infty}\\frac{a_n}{b_n} = \\infty,\\quad (a_n \\text{ is much bigger})\\quad\\text{and}\\quad \\sum_n b_n , \\text{diverges} $$\nthen $\\sum_n a_n$ diverges.\n  Proof.\nExample 2. Using the Limit Comparison Test Which of the following series converges, and which diverge?\n   $$ \\frac34 + \\frac59 + \\frac7{16} +\\cdots + \\frac{2n+1}{(n+1)^2} + \\cdots $$\nb.\n$$ \\frac11 + \\frac13 + \\frac17 + \\frac1{15} + \\cdots + \\frac{1}{2^n-1} + \\cdots $$\nc.\n$$ \\frac{1+2\\ln2}{9} + \\frac{1+3\\ln 3}{14} + \\frac{1+4\\ln 4}{21} + \\cdots + \\frac{1+n\\ln n}{n^2+5} + \\cdots $$\nExample 3. Does $\\sum_{n=1}^\\infty \\frac{\\ln n}{n^{3/2}}$ converge? §11.5 The Ratio and Root Tests The Ratio Test For a geometric series $\\sum_n a r^n$, the ratio is a constant\n$$ \\frac{a_{n+1}}{a_n} \\equiv r,\\quad \\sum_n a r^n \\text{ converges iff |r|For other series, it appears that we can measure the rate of growth (or decline) by extending the “Ratio Test”.\nTheorem 12. The Ratio Test Let $\\sum_n a_n$ be a series with positive terms and suppose that\n$$ \\lim_{n\\to\\infty}\\frac{a_{n+1}}{a_n} = \\rho. $$\nThen\n(a) the series converges if $\\rho (b) the series diverges if $\\rho  1$,\n(c) the test is inconclusive if $\\rho = 1$.\nProof.\nExample 1. Applying the Ratio Test (a) $\\sum_{n=0}^\\infty \\frac{2^n + 5}{3^n}$\n( Converges )\n(b) $\\sum_{n=1}^\\infty \\frac{(2n)!}{n!n!}$\n( Diverges )\n(c) $\\sum_{n=1}^\\infty \\frac{4^n n! n!}{(2n)!}$\n( Diverges, but inconclusive from the Ratio Test )\nThe Root Test The ratio test is convenient for the case when $a_{n+1}/a_n$ is relatively simple. For more complicated series, we may need other test method. For example\nGuiding Example Let $a_n = \\begin{cases}n/2^n, \u0026 n \\text{ odd},\\ 1/2^n, \u0026 n\\text{ even}\\end{cases}$, does $\\sum_n a_n$ converge?\nThis is not a geometric series, and the $n$th term approaches $0$. So we do not know the series diverges. The Integral Test does not applicable as the sequence $a_n$ is not decreasing. The Ratio Test produces\n$$ \\frac{a_{n+1}}{a_n} = \\begin{cases}\\frac1{2n}, \u0026 n\\text{ odd} \\ \\frac{n+1}{2}, \u0026 n\\text{ even}\\end{cases} $$\nAs $n\\to \\infty$, the ratio has no limit.\nA test that will answer the question is the Root Test.\nTheorem 13. The Root Test Let $\\sum a_n$ be a series with $a_n\\ge 0$ for $n\\ge N$, and suppose that\n$$ \\lim_n \\sqrt[n]{a_n} = \\rho. $$\nThen\n(a) the series converges if $\\rho (b) the series diverges if $\\rho  1$\n(c) the test is inconclusive if $\\rho = 1.$\nProof.\nExample 3. Applying the Root Test (a) $\\sum_{n=1}^\\infty \\frac{n^2}{2^n}$\n( Converges )\n(b) $\\sum_{n=1}^\\infty \\frac{3^n}{(1+\\frac1n)^{n^2}}$\n( Diverges )\n(c) $\\sum_{n=1}^\\infty \\left(\\frac{1}{1+n}\\right)^n$\n( Converges )\nGuiding Example (Revisited) Let $a_n = \\begin{cases}n/2^n, \u0026 n \\text{ odd},\\ 1/2^n, \u0026 n\\text{ even}\\end{cases}$, does $\\sum_n a_n$ converge?\n( Converges )\n",
+  "wordCount" : "918",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-19T14:41:38+08:00",
+  "dateModified": "2022-05-19T14:41:38+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W13-S2 The Limit Comparison Test and The Ratio and Root Tests
+    </h1>
+    <div class="post-meta"><span title='2022-05-19 14:41:38 +0800 CST'>May 19, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 13
+日期: May 20, 2022
+节次: 2</p>
+<p>In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms.</p>
+<h1 id="-114-the-limit-comparison-test">§ 11.4 The Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#-114-the-limit-comparison-test">#</a></h1>
+<p><strong>Note in this lecture all the series are considered to have all the terms being non-negative.</strong></p>
+<h2 id="recap-theorem-10-the-comparison-test">Recap: Theorem 10. The Comparison Test<a hidden class="anchor" aria-hidden="true" href="#recap-theorem-10-the-comparison-test">#</a></h2>
+<ol>
+<li>
+<p>If there is a convergent series $\sum_n c_n$ such that</p>
+<p>$$
+a_n \le c_n\quad (\forall , n\ge N)
+$$</p>
+<p>then $\sum_n a_n$ also converges.</p>
+</li>
+<li>
+<p>If there is a divergent series $\sum_n d_n$ such that</p>
+<p>$$
+a_n\ge d_n \quad (\forall, n\ge N)
+$$</p>
+<p>then $\sum_n a_n$ also diverges.</p>
+</li>
+</ol>
+<p><strong>Ideas behind the Proof.</strong></p>
+<p>For case 1, the partial sum</p>
+<p>$$
+\sum_{k=1}^n a_k \le \sum_{k=1}^n c_k \nearrow \sum_{k=1}^\infty c_k&lt;\infty.
+$$</p>
+<p>For case 2, the partial sum</p>
+<p>$$
+\sum_{k=1}^n a_k \ge \sum_{k=1}^n d_k \nearrow \sum_{k=1}^\infty d_k = \infty.
+$$</p>
+<h3 id="example-1-applying-the-comparison-test">Example 1. Applying the Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-comparison-test">#</a></h3>
+<p>(a)  $\sum_{n=1}^\infty \frac{5}{5n-1}$</p>
+<p>( Diverges. Compared with Harmonic series $\sum_n \frac1n$. Because $\frac{5}{5n-1} \ge \frac1n$.  )</p>
+<p>(b)  $\sum_{n=0}^\infty \frac1{n!}$</p>
+<p>( Converges. Compared with the Telescoping series $\sum_{n=2}^\infty \frac{1}{n(n-1)}$. Because $\frac1{n!}\le \frac{1}{n(n-1)}$ for all $n\ge 2$.  Alternatively, one can compare it with the geometric series $\sum_n \frac{1}{2^{n-1}}$ )</p>
+<p>(c)  $5 +\frac23 + \frac17 + 1 + \sum_{n=1}^\infty \frac1{2^n+\sqrt{n}}$</p>
+<p>( Converges. Compared with the geometric series $\frac1{2^n+\sqrt{n}} \le \frac1{2^n}$)</p>
+<h2 id="remarks">Remarks<a hidden class="anchor" aria-hidden="true" href="#remarks">#</a></h2>
+<ul>
+<li>
+<p>The $p$-series and geometric , telescoping series are frequently been used to be compared with.</p>
+</li>
+<li>
+<p>The Comparison Test  <strong>ONLY WORKS</strong> for the series with non-negative terms (or with non-positive terms).</p>
+<p>For example, the following series with both positive and negative terms</p>
+<p>$$
+\sum_{n=0}^\infty a_n  = 1-2 + \frac12 - 4 +\frac1{2^2}-6 + \frac1{2^3}-8 + \cdots
+$$</p>
+<p>diverges, although all the terms $a_n\le \frac1{\sqrt{2}^{n}}$.</p>
+</li>
+<li>
+<p>That’s been said, if a series has only finite many negative terms, the comparison test is still applicable. For example</p>
+</li>
+</ul>
+<p>$$
+-2 -3 + \sum_{n=3}^\infty \frac{1}{n^2 \ln n}
+$$</p>
+<h2 id="the-limit-comparison-test">The Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#the-limit-comparison-test">#</a></h2>
+<p>Based on the experiences built up from the comparison test, we may get the feeling that testing for convergence is largely about recognizing how fast the $n$th term is approaching $0$.</p>
+<p>Therefore, the concepts of <em>growth rate</em> or <em>order</em> can be applied to the convergence test.</p>
+<h2 id="theorem-11-limit-comparison-test">Theorem 11. Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#theorem-11-limit-comparison-test">#</a></h2>
+<p>Suppose that $a_n&gt;0$ and $b_n&gt;0$ for all $n\ge N$ ($N$ an integer).</p>
+<ol>
+<li>
+<p>If</p>
+<p>$$
+\lim_{n\to \infty}\frac{a_n}{b_n} = c &gt; 0 \quad (a_n, \text{and }  b_n \text{ have the same order})
+$$</p>
+<p>then $\sum_n a_n$ and $\sum_n b_n$ both converge or both diverge.</p>
+</li>
+<li>
+<p>If</p>
+<p>$$
+\lim_{n\to\infty}\frac{a_n}{b_n}=0 ,\quad(a_n\text{ is much smaller}) \quad \text{and}\quad \sum_n b_n , \text{converges}
+$$</p>
+<p>then $\sum_n a_n$ converges.</p>
+</li>
+<li>
+<p>If</p>
+<p>$$
+\lim_{n\to\infty}\frac{a_n}{b_n} = \infty,\quad (a_n \text{ is much bigger})\quad\text{and}\quad \sum_n b_n , \text{diverges}
+$$</p>
+<p>then $\sum_n a_n$ diverges.</p>
+</li>
+</ol>
+<p><strong>Proof.</strong></p>
+<h3 id="example-2-using-the-limit-comparison-test">Example 2. Using the Limit Comparison Test<a hidden class="anchor" aria-hidden="true" href="#example-2-using-the-limit-comparison-test">#</a></h3>
+<p>Which of the following series converges, and which diverge?</p>
+<ol>
+<li></li>
+</ol>
+<p>$$
+\frac34 + \frac59 + \frac7{16} +\cdots + \frac{2n+1}{(n+1)^2} + \cdots
+$$</p>
+<p>b.</p>
+<p>$$
+\frac11 + \frac13 + \frac17 + \frac1{15} + \cdots + \frac{1}{2^n-1} + \cdots
+$$</p>
+<p>c.</p>
+<p>$$
+\frac{1+2\ln2}{9} + \frac{1+3\ln 3}{14} + \frac{1+4\ln 4}{21} + \cdots + \frac{1+n\ln n}{n^2+5} + \cdots
+$$</p>
+<h3 id="example-3-does-sum_n1infty-fracln-nn32-converge">Example 3. Does $\sum_{n=1}^\infty \frac{\ln n}{n^{3/2}}$ converge?<a hidden class="anchor" aria-hidden="true" href="#example-3-does-sum_n1infty-fracln-nn32-converge">#</a></h3>
+<h1 id="115-the-ratio-and-root-tests">§11.5 The Ratio and Root Tests<a hidden class="anchor" aria-hidden="true" href="#115-the-ratio-and-root-tests">#</a></h1>
+<h2 id="the-ratio-test">The Ratio Test<a hidden class="anchor" aria-hidden="true" href="#the-ratio-test">#</a></h2>
+<p>For a geometric series $\sum_n a r^n$, the ratio is a constant</p>
+<p>$$
+\frac{a_{n+1}}{a_n} \equiv r,\quad \sum_n a r^n \text{ converges iff |r|&lt;1}.
+$$</p>
+<p>For other series, it appears that we can measure the rate of growth (or decline) by extending the “Ratio Test”.</p>
+<h2 id="theorem-12-the-ratio-test">Theorem 12. The Ratio Test<a hidden class="anchor" aria-hidden="true" href="#theorem-12-the-ratio-test">#</a></h2>
+<p>Let $\sum_n a_n$ be a series with positive terms and suppose that</p>
+<p>$$
+\lim_{n\to\infty}\frac{a_{n+1}}{a_n} = \rho.
+$$</p>
+<p>Then</p>
+<p>(a)  the series converges if $\rho &lt; 1$,</p>
+<p>(b)  the series diverges if $\rho &gt; 1$,</p>
+<p>(c)  the test is inconclusive if $\rho = 1$.</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-1-applying-the-ratio-test">Example 1. Applying the Ratio Test<a hidden class="anchor" aria-hidden="true" href="#example-1-applying-the-ratio-test">#</a></h3>
+<p>(a)  $\sum_{n=0}^\infty \frac{2^n + 5}{3^n}$</p>
+<p>( Converges )</p>
+<p>(b)  $\sum_{n=1}^\infty \frac{(2n)!}{n!n!}$</p>
+<p>( Diverges )</p>
+<p>(c)  $\sum_{n=1}^\infty \frac{4^n n! n!}{(2n)!}$</p>
+<p>( Diverges, but inconclusive from the Ratio Test )</p>
+<h2 id="the-root-test">The Root Test<a hidden class="anchor" aria-hidden="true" href="#the-root-test">#</a></h2>
+<p>The ratio test is convenient for the case when $a_{n+1}/a_n$ is relatively simple. For more complicated series, we may need  other test method. For example</p>
+<h3 id="guiding-example">Guiding Example<a hidden class="anchor" aria-hidden="true" href="#guiding-example">#</a></h3>
+<p>Let $a_n = \begin{cases}n/2^n, &amp; n \text{ odd},\ 1/2^n, &amp; n\text{ even}\end{cases}$, does $\sum_n a_n$  converge?</p>
+<p>This is not a geometric series, and the $n$th term approaches $0$. So we do not know the series diverges. The Integral Test does not applicable as the sequence $a_n$ is not decreasing. The Ratio Test produces</p>
+<p>$$
+\frac{a_{n+1}}{a_n} = \begin{cases}\frac1{2n}, &amp; n\text{ odd} \ \frac{n+1}{2}, &amp; n\text{ even}\end{cases}
+$$</p>
+<p>As $n\to \infty$, the ratio has no limit.</p>
+<p>A test that will answer the question is the Root Test.</p>
+<h2 id="theorem-13-the-root-test">Theorem 13. The Root Test<a hidden class="anchor" aria-hidden="true" href="#theorem-13-the-root-test">#</a></h2>
+<p>Let $\sum a_n$ be a series with $a_n\ge 0$ for $n\ge N$, and suppose that</p>
+<p>$$
+\lim_n \sqrt[n]{a_n} = \rho.
+$$</p>
+<p>Then</p>
+<p>(a)  the series converges if $\rho &lt; 1$</p>
+<p>(b)  the series diverges if $\rho &gt; 1$</p>
+<p>(c)  the test is inconclusive if $\rho = 1.$</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-3-applying-the-root-test">Example 3. Applying the Root Test<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-the-root-test">#</a></h3>
+<p>(a)  $\sum_{n=1}^\infty \frac{n^2}{2^n}$</p>
+<p>( Converges )</p>
+<p>(b)  $\sum_{n=1}^\infty \frac{3^n}{(1+\frac1n)^{n^2}}$</p>
+<p>( Diverges )</p>
+<p>(c) $\sum_{n=1}^\infty \left(\frac{1}{1+n}\right)^n$</p>
+<p>( Converges )</p>
+<h3 id="guiding-example-revisited">Guiding Example (Revisited)<a hidden class="anchor" aria-hidden="true" href="#guiding-example-revisited">#</a></h3>
+<p>Let $a_n = \begin{cases}n/2^n, &amp; n \text{ odd},\ 1/2^n, &amp; n\text{ even}\end{cases}$, does $\sum_n a_n$  converge?</p>
+<p>( Converges )</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/comparison/">comparison</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/limit-comparison/">limit comparison</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/test/">test</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/divergence/">divergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/series/">Series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/ratio/">ratio</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/root/">root</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
