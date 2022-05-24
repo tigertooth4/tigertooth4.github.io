@@ -6,7 +6,16 @@
     <description>Recent content in lectures on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 19 Apr 2022 15:17:23 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lectures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 16:19:55 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lectures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</guid>
+      <description>周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms</description>
+    </item>
+    
     <item>
       <title>W9-S1  Slop Fields, Separable and First-Order Linear Differential Equations</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</link>

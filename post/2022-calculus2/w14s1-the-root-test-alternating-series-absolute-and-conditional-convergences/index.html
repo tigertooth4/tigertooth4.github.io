@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="root, test, alternating series, absolute, conditional, convergence, lectures, calculus2" />
+<meta name="description" content="周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence" />
+<meta property="og:description" content="周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-24T16:19:55&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-24T16:19:55&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence"/>
+<meta name="twitter:description" content="周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence",
+  "name": "W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence",
+  "description": "周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms",
+  "keywords": [
+    "root", "test", "alternating series", "absolute", "conditional", "convergence", "lectures", "calculus2"
+  ],
+  "articleBody": "周次: 14 日期: May 25, 2022 节次: 1\nIn this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms cancelling each other by a large amount. With this fact, we define the absolute convergence and conditional convergence, and find them totally different from the rearrangement perspective.\nThe Root Test ( For the Series with Non-negative Terms) The ratio test is convenient for the case when $a_{n+1}/a_n$ is relatively simple. For more complicated series, we may need other test method. For example\nGuiding Example Let $a_n = \\begin{cases}n/2^n, \u0026 n \\text{ odd},\\ 1/2^n, \u0026 n\\text{ even}\\end{cases}$, does $\\sum_n a_n$ converge?\nThis is not a geometric series, and the $n$th term approaches $0$. So we do not know the series diverges. The Integral Test does not applicable as the sequence $a_n$ is not decreasing. The Ratio Test produces\n$$ \\frac{a_{n+1}}{a_n} = \\begin{cases}\\frac1{2n}, \u0026 n\\text{ odd} \\ \\frac{n+1}{2}, \u0026 n\\text{ even}\\end{cases} $$\nAs $n\\to \\infty$, the ratio has no limit.\nA test that will answer the question is the Root Test.\nTheorem 13. The Root Test Let $\\sum a_n$ be a series with $a_n\\ge 0$ for $n\\ge N$, and suppose that\n$$ \\lim_n \\sqrt[n]{a_n} = \\rho. $$\nThen\n(a) the series converges if $\\rho (b) the series diverges if $\\rho  1$\n(c) the test is inconclusive if $\\rho = 1.$\nProof.\nExample 3. Applying the Root Test (a) $\\sum_{n=1}^\\infty \\frac{n^2}{2^n}$\n( Converges )\n(b) $\\sum_{n=1}^\\infty \\frac{3^n}{(1+\\frac1n)^{n^2}}$\n( Diverges )\n(c) $\\sum_{n=1}^\\infty \\left(\\frac{1}{1+n}\\right)^n$\n( Converges )\nGuiding Example (Revisited) Let $a_n = \\begin{cases}n/2^n, \u0026 n \\text{ odd},\\ 1/2^n, \u0026 n\\text{ even}\\end{cases}$, does $\\sum_n a_n$ converge?\n( Converges )\nAlternating Series A series in which the terms are alternately positive and negative is an alternating series.\nExamples (Alternating Series)  $1-\\frac12 + \\frac13 -\\frac14 +\\cdots + \\frac{(-1)^{n+1}}{n} + \\cdots$ (alternating harmonic series, converges) $-2 + 1 -\\frac12 + \\frac14 - \\frac18 + \\cdots + \\frac{(-1)^n 4}{2^n}+\\cdots$ (converges) $1-2+3-4 + 5-6 + \\cdots +(-1)^{n+1}n + \\cdots$ (diverges)  These are alternating series.\nTheorem 14. (The Alternating Series Test , Leibniz’s Theorem) If $u_n\\searrow,0$ (starting from $n\\ge N$), then the alternating series\n$$ \\sum_{n=1}^\\infty (-1)^{n+1} u_n = u_1 -u_2 + u_3 - u_4 + \\cdots $$\nconverges.\nProof.\nExample 1. The alternating harmonic series $$ \\sum_{n=1}^\\infty (-1)^{n+1}\\frac1n = 1-\\frac12 + \\frac13 - \\frac14 + \\cdots\\quad \\text{converges} $$\nGraphical Interpretation on Convergence Why for $u_n\\searrow 0$, the series\n$$ u_1-u_2+u_3-u_4 + u_5 -\\cdots $$\nconverges ?\nFrom the graphical interpretation, we also learned that if the sum for alternating series is $L$, then the distance of the partial sum $s_n$ and the total sum $L$ satisfies\n$$ |L-s_n|Theorem 15. The Alternating Series Estimation Theorem If the alternating series $\\sum_n (-1)^{n+1} u_n$ satisfies $u_n\\searrow 0$, then for $n\\ge N$ the partial sum\n$$ s_n=u_1-u_2 +u_3- \\cdots + (-1)^{n+1} u_n $$\napproximates the sum $L$ with an error whose absolute value is less than $u_{n+1},$ the numerical value of the first unused term. Furthermore, the remainder $L-s_n$ has the same sign as the first unused term.\nExample 2. Try Theorem 15 on the series whose sum we know $$ \\sum_{n} (-1)^n \\frac1{2^n} = 1-\\frac12 + \\frac14 - \\frac18 + \\frac1{16} - \\frac1{32} + \\frac1{64} -\\frac1{128} \\bigg|+ \\frac1{256} - \\cdots $$\nThe sum of the series is $2/3$. And the partial sum indicating by the $\\big|$ sign is $\\frac23(1-(-\\frac12)^6).$\nThe remainder, $\\frac23(-\\frac12)^8$ , is positive and less than $\\frac1{2^8}.$\nAbsolute and Conditional Convergence Definition. Absolutely Convergent A series $\\sum_n a_n$ converges absolutely (is absolutely convergent) if the corresponding series of absolute values, $\\sum|a_n|$，converges.\nDefinition. Conditionally Convergent A series that converges but does not converge absolutely converges conditionally.\nExamples.  All convergent series with non-negative terms converge absolutely $1+\\frac{\\sin(1)}{1^2}+\\frac{\\sin(2)}{2^2} + \\frac{\\sin(3)}{3^2} + \\cdots$ converges absolutely $1-\\frac12 + \\frac13 - \\frac14 + \\cdots$ converges, but not absolutely. (Conditionally convergent)  Why Absolutely Convergent?  It is easier to test. (We have a number of tests for the series with non-negative terms) Converges absolutely$\\implies$ converges!  Theorem 16. The Absolute Convergence Test If $\\sum_n |a_n|$ converges, then $\\sum_n a_n$ converges.\nProof.\nRemark. Absolutely convergent is a stronger than conditionally convergent. So a conditionally convergent series may fail to be an absolutely convergent series.\nExample 3. Applying the Absolute Convergence Test  $\\sum_{n=1}^\\infty \\frac{(-1)^n \\ln n}{n^2}$ converges absolutely $\\sum_{n=1}^\\infty \\frac{(-1)^n \\ln n}{n}$ converges conditionally  Example 4. Being Alternating is Good for Convergence  If $p$ is a positive constant, then  $$ \\sum_{n=1}^\\infty \\frac1{n^p} \\text{ converges when }p1, \\ \\text{but }\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^p} \\text{ converges when } p0. $$\n   $\\sum_n \\frac{(-1)^n}{n^p}$ $0$p1$     Converge ✔️ ✔️   Absolutely ❌ ✔️   Conditionally ✔️ ❌    The difference between absolute and conditional convergences is best shown from the following phenomenon.\n$$ \\text{Absolute Convergent Series: Rearrange the terms does not change the sum}\\ \\text{Conditional Convergent Series: Rearrange the terms DOES change the sum!} $$\nRearranging Series Theorem 17. The Rearrangement Theorem for Absolutely Convergent Series If $\\sum_n a_n$ converges absolutely, and $b_1,b_2,b_3,\\cdot, b_n,\\cdots$ is any rearrangement of the sequence ${a_n}$, then $\\sum_n b_n$ converges absolutely and\n$$ \\sum_n b_n = \\sum_n a_n. $$\nExample 5. Rearrangement on Absolutely Convergent Series $$ 1-\\frac14 + \\frac19 -\\frac1{16} + \\cdots $$\nCan be rearranged to\n$$ 1-\\frac14 - \\frac1{16} + \\frac19 + \\frac1{25} + \\frac1{49} - \\frac1{36}-\\frac1{64} -\\frac1{100}-\\frac1{144} + \\cdots $$\nAnd since the series absolutely convergent, it really doesn’t matter how we rearrange it. It keeps absolutely converging to the same value.\nHowever, a rearrangement on a conditionally convergent series is more interesting!\nExample 6. Rearranging the Alternating Harmonic Series The alternating harmonic series is conditionally convergent series! Thus\n$$ 1-\\frac12 + \\frac13 -\\frac14 + \\frac15 -\\frac16 + \\cdots $$\ncan be rearranged to reach different sums.\n  Rearrange to $1/2$ of the original sum. Consider the following rearrangement\n$$ \\scriptsize\\left(1-\\frac12 -\\frac14\\right) + \\left(\\frac13 -\\frac1{6} -\\frac1{8}\\right) + \\left(\\frac15-\\frac1{10}-\\frac1{12}\\right) + \\cdots + \\left(\\frac{1}{2n+1}-\\frac{1}{4n+2} -\\frac{1}{4n+4}\\right) + \\cdots $$\nNote that the grouping partial sum has the following form\n$$ \\scriptsize\\sum_{n=0}^\\infty \\left(\\frac{1}{2n+1}-\\frac{1}{4n+2}-\\frac{1}{4n+4}\\right) = \\sum_{n=0}^\\infty \\left(\\frac{1}{4n+2}-\\frac1{4n+4}\\right) = \\frac12 \\sum_{n=0}^\\infty \\left(\\frac{1}{2n+1}-\\frac{1}{2n+2}\\right) $$\n  Rearrange to a divergent series. Since series of terms $\\sum \\frac{1}{2n-1}$ diverges to $+\\infty$, and the series of terms $\\sum\\frac{-1}{2n}$ diverges to $-\\infty$, we construct the following rearrangement\n$$ \\scriptsize\\underbrace{\\overbrace{\\underbrace{1+\\frac13 + \\frac15 + \\cdots + \\frac1{2m_1+1}}{\\text{Larger than } 2} - \\frac1{2}-\\frac14 - \\cdots - \\frac{1}{2n_1 +1}}^{\\text{smaller than }-3}+\\frac{1}{2m_1+3}+\\frac1{2m_1+5} + \\cdots + \\frac1{2m_2+1}}{\\text{larger than }4}+\\cdots $$\nsuch that the partial sum swings large in either direction\n  Rearrange to converge to 1. Making the partial sum swings about 1\n Adds 1 (Making the partial sum just $\\ge 1$) Subtracts $\\frac12$ (Making the partial sum just down to a value Adds $\\frac13$, $\\frac15$ (Making the partial sum just 1 again) Subtracts $\\frac14$ (Making the partial sum just Adds $\\frac1{7}$, $\\frac19$ (Making the partial sum just  1 again) …  The new arrangement looks like\n$$ \\scriptsize 1-\\frac12 + \\frac13 + \\frac15 -\\frac14 + \\frac17 +\\frac19 -\\frac16 + \\frac1{11} + \\frac1{13} -\\frac18 +\\frac1{15} + \\frac1{17} -\\frac1{10} + \\frac1{19} + \\frac1{21} \\ -\\frac1{12} + \\frac1{23} + \\frac1{25} -\\frac1{14} + \\frac1{27} - \\frac1{16} + \\cdots $$\nSince the amount by which our partial sums exceed 1 or fall below it approaches zero, the new series converges to 1.\n  Summary ",
+  "wordCount" : "1273",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-24T16:19:55+08:00",
+  "dateModified": "2022-05-24T16:19:55+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence
+    </h1>
+    <div class="post-meta"><span title='2022-05-24 16:19:55 +0800 CST'>May 24, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 14
+日期: May 25, 2022
+节次: 1</p>
+<p>In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms cancelling each other by a large amount. With this fact, we define the absolute convergence and conditional convergence, and find them totally different from the rearrangement perspective.</p>
+<h1 id="the-root-test--for-the-series-with-non-negative-terms">The Root Test ( For the Series with Non-negative Terms)<a hidden class="anchor" aria-hidden="true" href="#the-root-test--for-the-series-with-non-negative-terms">#</a></h1>
+<p>The ratio test is convenient for the case when $a_{n+1}/a_n$ is relatively simple. For more complicated series, we may need  other test method. For example</p>
+<h3 id="guiding-example">Guiding Example<a hidden class="anchor" aria-hidden="true" href="#guiding-example">#</a></h3>
+<p>Let $a_n = \begin{cases}n/2^n, &amp; n \text{ odd},\ 1/2^n, &amp; n\text{ even}\end{cases}$, does $\sum_n a_n$  converge?</p>
+<p>This is not a geometric series, and the $n$th term approaches $0$. So we do not know the series diverges. The Integral Test does not applicable as the sequence $a_n$ is not decreasing. The Ratio Test produces</p>
+<p>$$
+\frac{a_{n+1}}{a_n} = \begin{cases}\frac1{2n}, &amp; n\text{ odd} \ \frac{n+1}{2}, &amp; n\text{ even}\end{cases}
+$$</p>
+<p>As $n\to \infty$, the ratio has no limit.</p>
+<p>A test that will answer the question is the Root Test.</p>
+<h2 id="theorem-13-the-root-test">Theorem 13. The Root Test<a hidden class="anchor" aria-hidden="true" href="#theorem-13-the-root-test">#</a></h2>
+<p>Let $\sum a_n$ be a series with $a_n\ge 0$ for $n\ge N$, and suppose that</p>
+<p>$$
+\lim_n \sqrt[n]{a_n} = \rho.
+$$</p>
+<p>Then</p>
+<p>(a)  the series converges if $\rho &lt; 1$</p>
+<p>(b)  the series diverges if $\rho &gt; 1$</p>
+<p>(c)  the test is inconclusive if $\rho = 1.$</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-3-applying-the-root-test">Example 3. Applying the Root Test<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-the-root-test">#</a></h3>
+<p>(a)  $\sum_{n=1}^\infty \frac{n^2}{2^n}$</p>
+<p>( Converges )</p>
+<p>(b)  $\sum_{n=1}^\infty \frac{3^n}{(1+\frac1n)^{n^2}}$</p>
+<p>( Diverges )</p>
+<p>(c) $\sum_{n=1}^\infty \left(\frac{1}{1+n}\right)^n$</p>
+<p>( Converges )</p>
+<h3 id="guiding-example-revisited">Guiding Example (Revisited)<a hidden class="anchor" aria-hidden="true" href="#guiding-example-revisited">#</a></h3>
+<p>Let $a_n = \begin{cases}n/2^n, &amp; n \text{ odd},\ 1/2^n, &amp; n\text{ even}\end{cases}$, does $\sum_n a_n$  converge?</p>
+<p>( Converges )</p>
+<h1 id="alternating-series">Alternating Series<a hidden class="anchor" aria-hidden="true" href="#alternating-series">#</a></h1>
+<p>A series in which the terms are alternately positive and negative is an <strong>alternating series.</strong></p>
+<h3 id="examples-alternating-series">Examples (Alternating Series)<a hidden class="anchor" aria-hidden="true" href="#examples-alternating-series">#</a></h3>
+<ul>
+<li>$1-\frac12 + \frac13 -\frac14 +\cdots + \frac{(-1)^{n+1}}{n} + \cdots$  <strong>(alternating harmonic series, converges)</strong></li>
+<li>$-2 + 1 -\frac12 + \frac14 - \frac18 + \cdots + \frac{(-1)^n 4}{2^n}+\cdots$ <strong>(converges)</strong></li>
+<li>$1-2+3-4 + 5-6 + \cdots +(-1)^{n+1}n + \cdots$ <strong>(diverges)</strong></li>
+</ul>
+<p>These are alternating series.</p>
+<h2 id="theorem-14-the-alternating-series-test--leibnizs-theorem"><strong>Theorem 14. (The Alternating Series Test , Leibniz’s Theorem)</strong><a hidden class="anchor" aria-hidden="true" href="#theorem-14-the-alternating-series-test--leibnizs-theorem">#</a></h2>
+<p>If $u_n\searrow,0$ (starting from $n\ge N$), then the alternating series</p>
+<p>$$
+\sum_{n=1}^\infty (-1)^{n+1} u_n = u_1 -u_2 + u_3 - u_4 + \cdots
+$$</p>
+<p>converges.</p>
+<p><strong>Proof.</strong></p>
+<h3 id="example-1-the-alternating-harmonic-series">Example 1. The alternating harmonic series<a hidden class="anchor" aria-hidden="true" href="#example-1-the-alternating-harmonic-series">#</a></h3>
+<p>$$
+\sum_{n=1}^\infty (-1)^{n+1}\frac1n = 1-\frac12 + \frac13 - \frac14 + \cdots\quad \text{converges}
+$$</p>
+<h3 id="graphical-interpretation-on-convergence">Graphical Interpretation on Convergence<a hidden class="anchor" aria-hidden="true" href="#graphical-interpretation-on-convergence">#</a></h3>
+<p>Why for $u_n\searrow 0$, the series</p>
+<p>$$
+u_1-u_2+u_3-u_4 + u_5 -\cdots
+$$</p>
+<p>converges ?</p>
+<p><img loading="lazy" src="W14-S1%20The%20Root%20Test,%20Alternating%20Series,%20Absolute%20a8e63c2b08f644b7be79936601e4518f/Untitled.png" alt="Untitled"  />
+</p>
+<p>From the graphical interpretation, we also learned that if the sum for alternating series is $L$, then the distance of the partial sum  $s_n$ and the total sum $L$ satisfies</p>
+<p>$$
+|L-s_n|&lt;u_{n+1}, \quad \forall , n\ge N
+$$</p>
+<h2 id="theorem-15-the-alternating-series-estimation-theorem">Theorem 15. The Alternating Series Estimation Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-15-the-alternating-series-estimation-theorem">#</a></h2>
+<p>If the alternating series $\sum_n (-1)^{n+1} u_n$ satisfies $u_n\searrow 0$, then for $n\ge N$ the partial sum</p>
+<p>$$
+s_n=u_1-u_2 +u_3- \cdots + (-1)^{n+1} u_n
+$$</p>
+<p>approximates the sum $L$ with an error whose absolute value is less than $u_{n+1},$ the numerical value of the first unused term. Furthermore, the remainder $L-s_n$ has the same sign as the first unused term.</p>
+<h3 id="example-2-try-theorem-15-on-the-series-whose-sum-we-know">Example 2. Try Theorem 15 on the series whose sum we know<a hidden class="anchor" aria-hidden="true" href="#example-2-try-theorem-15-on-the-series-whose-sum-we-know">#</a></h3>
+<p>$$
+\sum_{n} (-1)^n \frac1{2^n} = 1-\frac12 + \frac14 - \frac18 + \frac1{16} - \frac1{32} + \frac1{64} -\frac1{128} \bigg|+ \frac1{256} - \cdots
+$$</p>
+<p>The sum of the series is $2/3$. And the partial sum indicating by the $\big|$ sign is $\frac23(1-(-\frac12)^6).$</p>
+<p>The remainder, $\frac23(-\frac12)^8$ , is positive and less than $\frac1{2^8}.$</p>
+<h1 id="absolute-and-conditional-convergence">Absolute and Conditional Convergence<a hidden class="anchor" aria-hidden="true" href="#absolute-and-conditional-convergence">#</a></h1>
+<h2 id="definition-absolutely-convergent">Definition. Absolutely Convergent<a hidden class="anchor" aria-hidden="true" href="#definition-absolutely-convergent">#</a></h2>
+<p>A series $\sum_n a_n$ <strong>converges absolutely</strong> (is <strong>absolutely convergent</strong>) if the corresponding series of absolute values, $\sum|a_n|$，converges.</p>
+<h2 id="definition-conditionally-convergent">Definition. Conditionally Convergent<a hidden class="anchor" aria-hidden="true" href="#definition-conditionally-convergent">#</a></h2>
+<p>A series that converges but does not converge absolutely <strong>converges conditionally.</strong></p>
+<h3 id="examples">Examples.<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h3>
+<ul>
+<li>All convergent series with non-negative terms converge absolutely</li>
+<li>$1+\frac{\sin(1)}{1^2}+\frac{\sin(2)}{2^2} + \frac{\sin(3)}{3^2} + \cdots$  converges absolutely</li>
+<li>$1-\frac12 + \frac13 - \frac14 + \cdots$  converges, but not absolutely. (Conditionally convergent)</li>
+</ul>
+<h2 id="why-absolutely-convergent">Why Absolutely Convergent?<a hidden class="anchor" aria-hidden="true" href="#why-absolutely-convergent">#</a></h2>
+<ol>
+<li>It is <strong>easier</strong> to test. (We have a number of tests for the series with non-negative terms)</li>
+<li>Converges absolutely$\implies$ converges!</li>
+</ol>
+<h2 id="theorem-16-the-absolute-convergence-test">Theorem 16. The Absolute Convergence Test<a hidden class="anchor" aria-hidden="true" href="#theorem-16-the-absolute-convergence-test">#</a></h2>
+<p>If $\sum_n |a_n|$ converges, then $\sum_n a_n$ converges.</p>
+<p><strong>Proof</strong>.</p>
+<h3 id="remark">Remark.<a hidden class="anchor" aria-hidden="true" href="#remark">#</a></h3>
+<p>Absolutely convergent is a stronger than conditionally convergent. So a conditionally convergent series may fail to be an absolutely convergent series.</p>
+<h3 id="example-3-applying-the-absolute-convergence-test">Example 3. Applying the Absolute Convergence Test<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-the-absolute-convergence-test">#</a></h3>
+<ol>
+<li>$\sum_{n=1}^\infty \frac{(-1)^n \ln n}{n^2}$ converges absolutely</li>
+<li>$\sum_{n=1}^\infty \frac{(-1)^n \ln n}{n}$ converges conditionally</li>
+</ol>
+<h3 id="example-4-being-alternating-is-good-for-convergence">Example 4. Being Alternating is Good for Convergence<a hidden class="anchor" aria-hidden="true" href="#example-4-being-alternating-is-good-for-convergence">#</a></h3>
+<ol>
+<li>If $p$ is a positive constant, then</li>
+</ol>
+<p>$$
+\sum_{n=1}^\infty \frac1{n^p} \text{ converges when }p&gt;1, \ \text{but }\sum_{n=1}^\infty \frac{(-1)^n}{n^p} \text{ converges when } p&gt;0.
+$$</p>
+<table>
+<thead>
+<tr>
+<th>$\sum_n \frac{(-1)^n}{n^p}$</th>
+<th>$0&lt;p\le 1$</th>
+<th>$p&gt;1$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Converge</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Absolutely</td>
+<td>❌</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Conditionally</td>
+<td>✔️</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>The difference between absolute and conditional convergences is best shown from the following phenomenon.</p>
+<p>$$
+\text{Absolute Convergent Series: Rearrange the terms does not change the sum}\ \text{Conditional Convergent Series: Rearrange the terms DOES change the sum!}
+$$</p>
+<h1 id="rearranging-series">Rearranging Series<a hidden class="anchor" aria-hidden="true" href="#rearranging-series">#</a></h1>
+<h2 id="theorem-17-the-rearrangement-theorem-for-absolutely-convergent-series">Theorem 17. The Rearrangement Theorem for Absolutely Convergent Series<a hidden class="anchor" aria-hidden="true" href="#theorem-17-the-rearrangement-theorem-for-absolutely-convergent-series">#</a></h2>
+<p>If $\sum_n a_n$ <strong>converges absolutely</strong>, and $b_1,b_2,b_3,\cdot, b_n,\cdots$ is any rearrangement of the sequence ${a_n}$, then $\sum_n b_n$ converges absolutely and</p>
+<p>$$
+\sum_n b_n = \sum_n a_n.
+$$</p>
+<h3 id="example-5-rearrangement-on-absolutely-convergent-series">Example 5. Rearrangement on Absolutely Convergent Series<a hidden class="anchor" aria-hidden="true" href="#example-5-rearrangement-on-absolutely-convergent-series">#</a></h3>
+<p>$$
+1-\frac14 + \frac19 -\frac1{16} + \cdots
+$$</p>
+<p>Can be rearranged to</p>
+<p>$$
+1-\frac14 - \frac1{16} + \frac19 + \frac1{25} + \frac1{49} - \frac1{36}-\frac1{64} -\frac1{100}-\frac1{144} + \cdots
+$$</p>
+<p>And since the series absolutely convergent, it really doesn’t matter how we rearrange it. It keeps absolutely converging to the same value.</p>
+<p>However, a rearrangement on a conditionally convergent series is more interesting!</p>
+<h3 id="example-6-rearranging-the-alternating-harmonic-series">Example 6. Rearranging the Alternating Harmonic Series<a hidden class="anchor" aria-hidden="true" href="#example-6-rearranging-the-alternating-harmonic-series">#</a></h3>
+<p>The alternating harmonic series is <strong>conditionally convergent series</strong>! Thus</p>
+<p>$$
+1-\frac12 + \frac13 -\frac14 + \frac15 -\frac16 + \cdots
+$$</p>
+<p>can be rearranged to reach different sums.</p>
+<ul>
+<li>
+<p>Rearrange to $1/2$ of the original sum.  Consider the following rearrangement</p>
+<p>$$
+\scriptsize\left(1-\frac12 -\frac14\right) + \left(\frac13 -\frac1{6} -\frac1{8}\right) + \left(\frac15-\frac1{10}-\frac1{12}\right) + \cdots + \left(\frac{1}{2n+1}-\frac{1}{4n+2} -\frac{1}{4n+4}\right) + \cdots
+$$</p>
+<p>Note that the grouping partial sum has the following form</p>
+<p>$$
+\scriptsize\sum_{n=0}^\infty \left(\frac{1}{2n+1}-\frac{1}{4n+2}-\frac{1}{4n+4}\right) = \sum_{n=0}^\infty \left(\frac{1}{4n+2}-\frac1{4n+4}\right) = \frac12 \sum_{n=0}^\infty \left(\frac{1}{2n+1}-\frac{1}{2n+2}\right)
+$$</p>
+</li>
+<li>
+<p>Rearrange to a divergent series.  Since series of terms $\sum \frac{1}{2n-1}$ diverges to $+\infty$, and the series of terms $\sum\frac{-1}{2n}$ diverges to $-\infty$, we construct the following rearrangement</p>
+<p>$$
+\scriptsize\underbrace{\overbrace{\underbrace{1+\frac13 + \frac15 + \cdots + \frac1{2m_1+1}}<em>{\text{Larger than } 2} - \frac1{2}-\frac14 - \cdots - \frac{1}{2n_1 +1}}^{\text{smaller than }-3}+\frac{1}{2m_1+3}+\frac1{2m_1+5} + \cdots + \frac1{2m_2+1}}</em>{\text{larger than }4}+\cdots
+$$</p>
+<p>such that the partial sum swings large in either direction</p>
+</li>
+<li>
+<p>Rearrange to converge to 1. Making the partial sum swings about 1</p>
+<ul>
+<li>Adds 1 (Making the partial sum just $\ge 1$)</li>
+<li>Subtracts $\frac12$ (Making the partial sum just down to a value &lt; 1)</li>
+<li>Adds $\frac13$, $\frac15$ (Making the  partial sum just &gt;1 again)</li>
+<li>Subtracts $\frac14$ (Making the partial sum just &lt; 1 again)</li>
+<li>Adds $\frac1{7}$, $\frac19$ (Making the partial sum just &gt; 1 again)</li>
+<li>…</li>
+</ul>
+<p>The new arrangement looks like</p>
+<p>$$
+\scriptsize 1-\frac12 + \frac13 + \frac15 -\frac14 + \frac17 +\frac19 -\frac16 + \frac1{11} + \frac1{13} -\frac18 +\frac1{15} + \frac1{17} -\frac1{10} + \frac1{19} + \frac1{21} \ -\frac1{12} + \frac1{23} + \frac1{25} -\frac1{14} + \frac1{27} - \frac1{16} + \cdots
+$$</p>
+<p>Since the amount by which our partial sums exceed 1 or fall below it approaches zero, the new series converges to 1.</p>
+</li>
+</ul>
+<h1 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h1>
+<p><img loading="lazy" src="W14-S1%20The%20Root%20Test,%20Alternating%20Series,%20Absolute%20a8e63c2b08f644b7be79936601e4518f/Untitled%201.png" alt="Untitled"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/root/">root</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/test/">test</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/alternating-series/">alternating series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/absolute/">absolute</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/conditional/">conditional</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lectures/">lectures</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

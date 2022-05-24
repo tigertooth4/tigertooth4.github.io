@@ -6,22 +6,85 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 May 2022 14:41:38 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 16:19:55 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>comparison</title>
-      <link>http://tigertooth4.github.io/tags/comparison/</link>
-      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
+      <title>absolute</title>
+      <link>http://tigertooth4.github.io/tags/absolute/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
       
-      <guid>http://tigertooth4.github.io/tags/comparison/</guid>
+      <guid>http://tigertooth4.github.io/tags/absolute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alternating series</title>
+      <link>http://tigertooth4.github.io/tags/alternating-series/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/alternating-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calculus2</title>
+      <link>http://tigertooth4.github.io/tags/calculus2/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conditional</title>
+      <link>http://tigertooth4.github.io/tags/conditional/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/conditional/</guid>
       <description></description>
     </item>
     
     <item>
       <title>convergence</title>
       <link>http://tigertooth4.github.io/tags/convergence/</link>
-      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/convergence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lectures</title>
+      <link>http://tigertooth4.github.io/tags/lectures/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lectures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>root</title>
+      <link>http://tigertooth4.github.io/tags/root/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/root/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://tigertooth4.github.io/tags/test/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comparison</title>
+      <link>http://tigertooth4.github.io/tags/comparison/</link>
+      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/comparison/</guid>
       <description></description>
     </item>
     
@@ -53,38 +116,11 @@
     </item>
     
     <item>
-      <title>root</title>
-      <link>http://tigertooth4.github.io/tags/root/</link>
-      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/root/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Series</title>
       <link>http://tigertooth4.github.io/tags/series/</link>
       <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>http://tigertooth4.github.io/tags/test/</link>
-      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>calculus2</title>
-      <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
       <description></description>
     </item>
     
@@ -445,15 +481,6 @@
       <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/first-order/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lectures</title>
-      <link>http://tigertooth4.github.io/tags/lectures/</link>
-      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lectures/</guid>
       <description></description>
     </item>
     
