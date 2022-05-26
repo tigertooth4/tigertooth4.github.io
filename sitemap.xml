@@ -3,21 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://tigertooth4.github.io/tags/absolute/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/alternating-series/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/conditional/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/converge/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/diverge/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/power-series/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/rearrange/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/alternating-series/</loc>
     <lastmod>2022-05-24T16:19:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -32,17 +77,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/root/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
     <lastmod>2022-05-24T16:19:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -53,11 +88,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</loc>
-    <lastmod>2022-05-24T16:19:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-05-24T16:19:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -97,11 +127,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
-    <lastmod>2022-05-17T16:45:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/limit/</loc>
     <lastmod>2022-05-17T16:45:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -109,16 +134,6 @@
   </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</loc>
     <lastmod>2022-05-17T16:45:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/converge/</loc>
-    <lastmod>2022-05-12T13:20:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/diverge/</loc>
-    <lastmod>2022-05-12T13:20:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

@@ -6,13 +6,76 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 May 2022 16:19:55 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 May 2022 17:51:07 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>absolute</title>
       <link>http://tigertooth4.github.io/tags/absolute/</link>
-      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/absolute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calculus2</title>
+      <link>http://tigertooth4.github.io/tags/calculus2/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conditional</title>
+      <link>http://tigertooth4.github.io/tags/conditional/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/conditional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>converge</title>
+      <link>http://tigertooth4.github.io/tags/converge/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/converge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diverge</title>
+      <link>http://tigertooth4.github.io/tags/diverge/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/diverge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lecture</title>
+      <link>http://tigertooth4.github.io/tags/lecture/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power series</title>
+      <link>http://tigertooth4.github.io/tags/power-series/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/power-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rearrange</title>
+      <link>http://tigertooth4.github.io/tags/rearrange/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/rearrange/</guid>
       <description></description>
     </item>
     
@@ -22,24 +85,6 @@
       <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/alternating-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>calculus2</title>
-      <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>conditional</title>
-      <link>http://tigertooth4.github.io/tags/conditional/</link>
-      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/conditional/</guid>
       <description></description>
     </item>
     
@@ -134,38 +179,11 @@
     </item>
     
     <item>
-      <title>lecture</title>
-      <link>http://tigertooth4.github.io/tags/lecture/</link>
-      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/lecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>limit</title>
       <link>http://tigertooth4.github.io/tags/limit/</link>
       <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/limit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>converge</title>
-      <link>http://tigertooth4.github.io/tags/converge/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/converge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diverge</title>
-      <link>http://tigertooth4.github.io/tags/diverge/</link>
-      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/diverge/</guid>
       <description></description>
     </item>
     

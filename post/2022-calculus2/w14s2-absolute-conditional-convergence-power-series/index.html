@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W14-S2 Absolute and Conditional Convergence, Power Series | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="absolute, conditional, converge, diverge, rearrange, power series, calculus2, lecture" />
+<meta name="description" content="周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However,">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W14-S2 Absolute and Conditional Convergence, Power Series" />
+<meta property="og:description" content="周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-26T17:51:07&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-26T17:51:07&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W14-S2 Absolute and Conditional Convergence, Power Series"/>
+<meta name="twitter:description" content="周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However,"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W14-S2 Absolute and Conditional Convergence, Power Series",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W14-S2 Absolute and Conditional Convergence, Power Series",
+  "name": "W14-S2 Absolute and Conditional Convergence, Power Series",
+  "description": "周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However,",
+  "keywords": [
+    "absolute", "conditional", "converge", "diverge", "rearrange", "power series", "calculus2", "lecture"
+  ],
+  "articleBody": "周次: 14 日期: May 27, 2022 节次: 2\nIn this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However, a conditionally convergent series maybe change its sum after the rearrangement.\nThe next big topic is power series, we discuss the convergence property for this series.\nAbsolute and Conditional Convergence Why Absolutely Convergent?  It is easier to test. (We have a number of tests for the series with non-negative terms) Converges absolutely$\\implies$ converges!  Theorem 16. The Absolute Convergence Test If $\\sum_n |a_n|$ converges, then $\\sum_n a_n$ converges.\nProof.\nRemark. Absolutely convergent is a stronger than conditionally convergent. So a conditionally convergent series may fail to be an absolutely convergent series.\nExample 3. Applying the Absolute Convergence Test  $\\sum_{n=1}^\\infty \\frac{(-1)^n \\ln n}{n^2}$ converges absolutely $\\sum_{n=1}^\\infty \\frac{(-1)^n \\ln n}{n}$ converges conditionally  Example 4. Being Alternating is Good for Convergence  If $p$ is a positive constant, then  $$ \\sum_{n=1}^\\infty \\frac1{n^p} \\text{ converges when }p1, \\ \\text{but }\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^p} \\text{ converges when } p0. $$\n   ⁍ ⁍ ⁍     Converge ✔️ ✔️   Absolutely ❌ ✔️   Conditionally ✔️ ❌    The difference between absolute and conditional convergences is best shown from the following phenomenon.\n$$ \\text{Absolute Convergent Series: Rearrange the terms does not change the sum}\\ \\text{Conditional Convergent Series: Rearrange the terms DOES change the sum!} $$\nRearranging Series Theorem 17. The Rearrangement Theorem for Absolutely Convergent Series If $\\sum_n a_n$ converges absolutely, and $b_1,b_2,b_3,\\cdot, b_n,\\cdots$ is any rearrangement of the sequence ${a_n}$, then $\\sum_n b_n$ converges absolutely and\n$$ \\sum_n b_n = \\sum_n a_n. $$\nExample 5. Rearrangement on Absolutely Convergent Series $$ 1-\\frac14 + \\frac19 -\\frac1{16} + \\cdots $$\nCan be rearranged to\n$$ 1-\\frac14 - \\frac1{16} + \\frac19 + \\frac1{25} + \\frac1{49} - \\frac1{36}-\\frac1{64} -\\frac1{100}-\\frac1{144} + \\cdots $$\nAnd since the series absolutely convergent, it really doesn’t matter how we rearrange it. It keeps absolutely converging to the same value.\nHowever, a rearrangement on a conditionally convergent series is more interesting!\nExample 6. Rearranging the Alternating Harmonic Series The alternating harmonic series is conditionally convergent series! Thus\n$$ 1-\\frac12 + \\frac13 -\\frac14 + \\frac15 -\\frac16 + \\cdots $$\ncan be rearranged to reach different sums.\n  Rearrange to $1/2$ of the original sum. Consider the following rearrangement\n$$ \\scriptsize\\left(1-\\frac12 -\\frac14\\right) + \\left(\\frac13 -\\frac1{6} -\\frac1{8}\\right) + \\left(\\frac15-\\frac1{10}-\\frac1{12}\\right) + \\cdots + \\left(\\frac{1}{2n+1}-\\frac{1}{4n+2} -\\frac{1}{4n+4}\\right) + \\cdots $$\nNote that the grouping partial sum has the following form\n$$ \\scriptsize\\sum_{n=0}^\\infty \\left(\\frac{1}{2n+1}-\\frac{1}{4n+2}-\\frac{1}{4n+4}\\right) = \\sum_{n=0}^\\infty \\left(\\frac{1}{4n+2}-\\frac1{4n+4}\\right) = \\frac12 \\sum_{n=0}^\\infty \\left(\\frac{1}{2n+1}-\\frac{1}{2n+2}\\right) $$\n  Rearrange to a divergent series. Since series of terms $\\sum \\frac{1}{2n-1}$ diverges to $+\\infty$, and the series of terms $\\sum\\frac{-1}{2n}$ diverges to $-\\infty$, we construct the following rearrangement\n$$ \\scriptsize\\underbrace{\\overbrace{\\underbrace{1+\\frac13 + \\frac15 + \\cdots + \\frac1{2m_1+1}}{\\text{Larger than } 2} - \\frac1{2}-\\frac14 - \\cdots - \\frac{1}{2n_1 +1}}^{\\text{smaller than }-3}+\\frac{1}{2m_1+3}+\\frac1{2m_1+5} + \\cdots + \\frac1{2m_2+1}}{\\text{larger than }4}+\\cdots $$\nsuch that the partial sum swings large in either direction\n  Rearrange to converge to 1. Making the partial sum swings about 1\n Adds 1 (Making the partial sum just $\\ge 1$) Subtracts $\\frac12$ (Making the partial sum just down to a value Adds $\\frac13$, $\\frac15$ (Making the partial sum just 1 again) Subtracts $\\frac14$ (Making the partial sum just Adds $\\frac1{7}$, $\\frac19$ (Making the partial sum just  1 again) …  The new arrangement looks like\n$$ \\scriptsize 1-\\frac12 + \\frac13 + \\frac15 -\\frac14 + \\frac17 +\\frac19 -\\frac16 + \\frac1{11} + \\frac1{13} -\\frac18 +\\frac1{15} + \\frac1{17} -\\frac1{10} + \\frac1{19} + \\frac1{21} \\ -\\frac1{12} + \\frac1{23} + \\frac1{25} -\\frac1{14} + \\frac1{27} - \\frac1{16} + \\cdots $$\nSince the amount by which our partial sums exceed 1 or fall below it approaches zero, the new series converges to 1.\n  Summary § 11.7 Power Series Intuition  Power series = Infinite Order Polynomials Power series has Super Power! (Evaluating it gives sum to some series) The algebraic manipulations like $+$, $-$,$\\times$, $\\frac{d}{dx}$ and $\\int\\cdot dx$ work for Power series  Formal Definitions (Power Series, Center, Coefficients) A power series about $x=0$ is a series of the form\n$$ \\sum_{n=0}^\\infty c_n x^n = x_0 + c_1 x + c_2 x^2 + \\cdots + c_n x^n + \\cdots $$\nA power series about $x=a$ is a series of the form\n$$ \\sum_{n=0}^\\infty c_n (x-a)^n = c_0 + c_1 (x-a) + c_2 (x-a)^2 + \\cdots + c_n (x-a)^n + \\cdots $$\nin which the center $a$ and the coefficients $c_0,c_1,c_2,\\cdots, c_n, \\cdots$ are constants.\nA Geometric Series View On the Convergence of Power Series Example 1. A Geometric Series As a Power Series Centered At $0$ If taking all the coefficients to be $1$, then a power series looks like\n$$ \\sum_{n=0}^\\infty x^n = 1+x+x^2 + \\cdots + x^n + \\cdots $$\nSince the ratio is $x$, it converges to $\\frac1{1-x}$ for $|x|Rethink of the partial sums $P_n(x) = 1+x+x^2 + \\cdots + x^{n-1}$ the approximation for the function $\\frac1{1-x}$. Then we have a sequence of polynomial functions\n$$ P_1(x)=1, \\P_2(x)=1+x,\\ \\cdots,\\ P_n(x)=1+x+\\cdots+x^{n-1},\\ \\cdots $$\nthey are approaching $\\frac1{1-x}$ if you are focusing on each number $x$ (point-wisely). The following graph shows the approximation.\nExample 2. A Geometric Series As a Power Series Centered At $2$ The power series\n$$ 1-\\frac12(x-2) + \\frac14(x-2)^2 + \\cdots + \\left(-\\frac12\\right)^n(x-2)^n + \\cdots $$\nis centered at $a=2$, with $c_0 = 1,$ $c_1 = -\\frac12$, etc. This is a geometric series with the ratio $-\\frac12(x-2)$. It converges for\n$$ \\left|\\frac{x-2}2\\right|The sum is\n$$ \\frac1{1+\\frac{x-2}{2}} = \\frac2{x}. $$\nSo we view the convergence as a sequence of polynomial functions ( according to the partial sums) are approximating $f(x) = \\frac2{x}$ for values of $x\\in(0,4)$. Shown in the following graph.\nExample 3. Testing for Convergence Using the Ratio Test For what values of $x$ do the following power series converge?\n  $\\sum_{n\\ge 1}(-1)^n\\frac{x^n}{n}$\n  First apply the Ratio Test to the series for absolute convergence: $\\sum_{n\\ge 1} \\left|(-1)^n \\frac{x^n}{n}\\right|$ .\nIt finds the ratio is approaching $|x|$, which means if $|x| For $|x|1$, the n-th term test confirms that the series\n$\\sum_n (-1)^n \\frac{x^n}{n}$ diverges.\n  For $x=1$, the series converges according to the alternating series test (alternating harmonic series indeed).\n  For $x=-1$, the series diverges because it is the harmonic series.\n    $\\sum_{n\\ge 1}(-1)^n \\frac{x^{2n-1}}{2n-1}$\n  $\\sum_{n\\ge 0} \\frac{x^n}{n!}$\n  $\\sum_{n\\ge0}n! x^n$\n  What’s amazing about the convergence of the power series, is that the domain of convergence is almost symmetric about its center $x=a$. The following theorem discusses this feature.\nTheorem 18. The Convergence Theorem for Power Series  If the power series $\\sum_{n=0}^\\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \\cdots$ converges for $x=c\\neq 0$, then it converges absolutely for all $x$ with $|x| If the series diverges for $x=d$, then it diverges for all $x$ with $|x||d|.$  Proof.\nExample. If a power series $\\sum_n a_n (x-1)^n$ is converging at $x=2$ and diverging at $x=0$, find its domain of convergence.\nThe Radius of Convergence of a Power Series Corollary to Theorem 18. The convergence of the series $\\sum_n c_n (x-a)^n$ is described by one of the following three possibilities:\n ($R0$) There is a positive number $R$ such that the series diverges for $x$ with $|x-a|R$ but converges absolutely for $x$ with $|x-a|($R=\\infty$) The series converges absolutely for every $x$ . ($R=0$) The series converges only at $x=a$ and diverges elsewhere.  $R$ is called the radius of convergence of the power series and the interval of radius $R$ centered at $x=a$ is called the interval of convergence. The interval of convergence may be open, closed, or half-open, depending on the particular series.\nAt points $x$ with $|x-a|radius of convergence is infinite. If it converges only at $x=a$, we say its radius of convergence is zero.\nHow to Test a Power Series for Convergence  Find the Radius of Convergence ( by Ratio Test of $n$-th Root Test) to find where the series converges absolutely. Namely, find $(a-R,a+R)$ Test the convergence for endpoints (If the radius $R$ is finite) . Usually, the endpoints can be tested by using a Comparison Test, the Integral Test or the Alternating Series Test. Outside of radius of convergence, the power series diverges, because the n-th term does not approach zero for those values of $x$.  ",
+  "wordCount" : "1443",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-26T17:51:07+08:00",
+  "dateModified": "2022-05-26T17:51:07+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W14-S2 Absolute and Conditional Convergence, Power Series
+    </h1>
+    <div class="post-meta"><span title='2022-05-26 17:51:07 +0800 CST'>May 26, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 14
+日期: May 27, 2022
+节次: 2</p>
+<p>In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge.  We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However, a conditionally convergent series maybe change its sum after the rearrangement.</p>
+<p>The next big topic is power series, we discuss the convergence property for this series.</p>
+<h1 id="absolute-and-conditional-convergence">Absolute and Conditional Convergence<a hidden class="anchor" aria-hidden="true" href="#absolute-and-conditional-convergence">#</a></h1>
+<h2 id="why-absolutely-convergent">Why Absolutely Convergent?<a hidden class="anchor" aria-hidden="true" href="#why-absolutely-convergent">#</a></h2>
+<ol>
+<li>It is <strong>easier</strong> to test. (We have a number of tests for the series with non-negative terms)</li>
+<li>Converges absolutely$\implies$ converges!</li>
+</ol>
+<h2 id="theorem-16-the-absolute-convergence-test">Theorem 16. The Absolute Convergence Test<a hidden class="anchor" aria-hidden="true" href="#theorem-16-the-absolute-convergence-test">#</a></h2>
+<p>If $\sum_n |a_n|$ converges, then $\sum_n a_n$ converges.</p>
+<p><strong>Proof</strong>.</p>
+<h3 id="remark">Remark.<a hidden class="anchor" aria-hidden="true" href="#remark">#</a></h3>
+<p>Absolutely convergent is a stronger than conditionally convergent. So a conditionally convergent series may fail to be an absolutely convergent series.</p>
+<h3 id="example-3-applying-the-absolute-convergence-test">Example 3. Applying the Absolute Convergence Test<a hidden class="anchor" aria-hidden="true" href="#example-3-applying-the-absolute-convergence-test">#</a></h3>
+<ol>
+<li>$\sum_{n=1}^\infty \frac{(-1)^n \ln n}{n^2}$ converges absolutely</li>
+<li>$\sum_{n=1}^\infty \frac{(-1)^n \ln n}{n}$ converges conditionally</li>
+</ol>
+<h3 id="example-4-being-alternating-is-good-for-convergence">Example 4. Being Alternating is Good for Convergence<a hidden class="anchor" aria-hidden="true" href="#example-4-being-alternating-is-good-for-convergence">#</a></h3>
+<ol>
+<li>If $p$ is a positive constant, then</li>
+</ol>
+<p>$$
+\sum_{n=1}^\infty \frac1{n^p} \text{ converges when }p&gt;1, \ \text{but }\sum_{n=1}^\infty \frac{(-1)^n}{n^p} \text{ converges when } p&gt;0.
+$$</p>
+<table>
+<thead>
+<tr>
+<th>⁍</th>
+<th>⁍</th>
+<th>⁍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Converge</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Absolutely</td>
+<td>❌</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Conditionally</td>
+<td>✔️</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>The difference between absolute and conditional convergences is best shown from the following phenomenon.</p>
+<p>$$
+\text{Absolute Convergent Series: Rearrange the terms does not change the sum}\ \text{Conditional Convergent Series: Rearrange the terms DOES change the sum!}
+$$</p>
+<h1 id="rearranging-series">Rearranging Series<a hidden class="anchor" aria-hidden="true" href="#rearranging-series">#</a></h1>
+<h2 id="theorem-17-the-rearrangement-theorem-for-absolutely-convergent-series">Theorem 17. The Rearrangement Theorem for Absolutely Convergent Series<a hidden class="anchor" aria-hidden="true" href="#theorem-17-the-rearrangement-theorem-for-absolutely-convergent-series">#</a></h2>
+<p>If $\sum_n a_n$ <strong>converges absolutely</strong>, and $b_1,b_2,b_3,\cdot, b_n,\cdots$ is any rearrangement of the sequence ${a_n}$, then $\sum_n b_n$ converges absolutely and</p>
+<p>$$
+\sum_n b_n = \sum_n a_n.
+$$</p>
+<h3 id="example-5-rearrangement-on-absolutely-convergent-series">Example 5. Rearrangement on Absolutely Convergent Series<a hidden class="anchor" aria-hidden="true" href="#example-5-rearrangement-on-absolutely-convergent-series">#</a></h3>
+<p>$$
+1-\frac14 + \frac19 -\frac1{16} + \cdots
+$$</p>
+<p>Can be rearranged to</p>
+<p>$$
+1-\frac14 - \frac1{16} + \frac19 + \frac1{25} + \frac1{49} - \frac1{36}-\frac1{64} -\frac1{100}-\frac1{144} + \cdots
+$$</p>
+<p>And since the series absolutely convergent, it really doesn’t matter how we rearrange it. It keeps absolutely converging to the same value.</p>
+<p>However, a rearrangement on a conditionally convergent series is more interesting!</p>
+<h3 id="example-6-rearranging-the-alternating-harmonic-series">Example 6. Rearranging the Alternating Harmonic Series<a hidden class="anchor" aria-hidden="true" href="#example-6-rearranging-the-alternating-harmonic-series">#</a></h3>
+<p>The alternating harmonic series is <strong>conditionally convergent series</strong>! Thus</p>
+<p>$$
+1-\frac12 + \frac13 -\frac14 + \frac15 -\frac16 + \cdots
+$$</p>
+<p>can be rearranged to reach different sums.</p>
+<ul>
+<li>
+<p>Rearrange to $1/2$ of the original sum.  Consider the following rearrangement</p>
+<p>$$
+\scriptsize\left(1-\frac12 -\frac14\right) + \left(\frac13 -\frac1{6} -\frac1{8}\right) + \left(\frac15-\frac1{10}-\frac1{12}\right) + \cdots + \left(\frac{1}{2n+1}-\frac{1}{4n+2} -\frac{1}{4n+4}\right) + \cdots
+$$</p>
+<p>Note that the grouping partial sum has the following form</p>
+<p>$$
+\scriptsize\sum_{n=0}^\infty \left(\frac{1}{2n+1}-\frac{1}{4n+2}-\frac{1}{4n+4}\right) = \sum_{n=0}^\infty \left(\frac{1}{4n+2}-\frac1{4n+4}\right) = \frac12 \sum_{n=0}^\infty \left(\frac{1}{2n+1}-\frac{1}{2n+2}\right)
+$$</p>
+</li>
+<li>
+<p>Rearrange to a divergent series.  Since series of terms $\sum \frac{1}{2n-1}$ diverges to $+\infty$, and the series of terms $\sum\frac{-1}{2n}$ diverges to $-\infty$, we construct the following rearrangement</p>
+<p>$$
+\scriptsize\underbrace{\overbrace{\underbrace{1+\frac13 + \frac15 + \cdots + \frac1{2m_1+1}}<em>{\text{Larger than } 2} - \frac1{2}-\frac14 - \cdots - \frac{1}{2n_1 +1}}^{\text{smaller than }-3}+\frac{1}{2m_1+3}+\frac1{2m_1+5} + \cdots + \frac1{2m_2+1}}</em>{\text{larger than }4}+\cdots
+$$</p>
+<p>such that the partial sum swings large in either direction</p>
+</li>
+<li>
+<p>Rearrange to converge to 1. Making the partial sum swings about 1</p>
+<ul>
+<li>Adds 1 (Making the partial sum just $\ge 1$)</li>
+<li>Subtracts $\frac12$ (Making the partial sum just down to a value &lt; 1)</li>
+<li>Adds $\frac13$, $\frac15$ (Making the  partial sum just &gt;1 again)</li>
+<li>Subtracts $\frac14$ (Making the partial sum just &lt; 1 again)</li>
+<li>Adds $\frac1{7}$, $\frac19$ (Making the partial sum just &gt; 1 again)</li>
+<li>…</li>
+</ul>
+<p>The new arrangement looks like</p>
+<p>$$
+\scriptsize 1-\frac12 + \frac13 + \frac15 -\frac14 + \frac17 +\frac19 -\frac16 + \frac1{11} + \frac1{13} -\frac18 +\frac1{15} + \frac1{17} -\frac1{10} + \frac1{19} + \frac1{21} \ -\frac1{12} + \frac1{23} + \frac1{25} -\frac1{14} + \frac1{27} - \frac1{16} + \cdots
+$$</p>
+<p>Since the amount by which our partial sums exceed 1 or fall below it approaches zero, the new series converges to 1.</p>
+</li>
+</ul>
+<h1 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h1>
+<p><img loading="lazy" src="W14-S2%20Absolute%20and%20Conditional%20Convergence,%20Power%20658eeafd84034e7bbb8a02c581abe5ee/Untitled.png" alt="Untitled"  />
+</p>
+<h1 id="-117-power-series">§ 11.7 Power Series<a hidden class="anchor" aria-hidden="true" href="#-117-power-series">#</a></h1>
+<h2 id="intuition">Intuition<a hidden class="anchor" aria-hidden="true" href="#intuition">#</a></h2>
+<ul>
+<li>Power series = Infinite Order Polynomials</li>
+<li>Power series has Super Power! (Evaluating it gives  sum to some series)</li>
+<li>The algebraic manipulations like $+$, $-$,$\times$, $\frac{d}{dx}$ and $\int\cdot dx$ work for Power series</li>
+</ul>
+<h2 id="formal-definitions-power-series-center-coefficients">Formal Definitions (Power Series, Center, Coefficients)<a hidden class="anchor" aria-hidden="true" href="#formal-definitions-power-series-center-coefficients">#</a></h2>
+<p>A <strong>power series</strong> about $x=0$ is a series of the form</p>
+<p>$$
+\sum_{n=0}^\infty c_n x^n = x_0 + c_1 x + c_2 x^2 + \cdots + c_n x^n + \cdots
+$$</p>
+<p>A <strong>power series</strong> about $x=a$ is a series of the form</p>
+<p>$$
+\sum_{n=0}^\infty c_n (x-a)^n = c_0 + c_1 (x-a) + c_2 (x-a)^2 + \cdots + c_n (x-a)^n + \cdots
+$$</p>
+<p>in which the <strong>center $a$</strong> and the <strong>coefficients $c_0,c_1,c_2,\cdots, c_n, \cdots$</strong> are constants.</p>
+<h2 id="a-geometric-series-view-on-the-convergence-of-power-series">A Geometric Series View On the Convergence of Power Series<a hidden class="anchor" aria-hidden="true" href="#a-geometric-series-view-on-the-convergence-of-power-series">#</a></h2>
+<h3 id="example-1-a-geometric-series-as-a-power-series-centered-at-0">Example 1. A Geometric Series As a Power Series Centered At $0$<a hidden class="anchor" aria-hidden="true" href="#example-1-a-geometric-series-as-a-power-series-centered-at-0">#</a></h3>
+<p>If taking all the coefficients to be $1$, then a power series looks like</p>
+<p>$$
+\sum_{n=0}^\infty x^n = 1+x+x^2 + \cdots + x^n + \cdots
+$$</p>
+<p>Since the ratio is $x$, it converges to $\frac1{1-x}$ for $|x|&lt;1$.</p>
+<p>Rethink of the partial sums $P_n(x) = 1+x+x^2 + \cdots + x^{n-1}$ the approximation for the function $\frac1{1-x}$. Then we have a sequence of polynomial functions</p>
+<p>$$
+P_1(x)=1, \P_2(x)=1+x,\ \cdots,\ P_n(x)=1+x+\cdots+x^{n-1},\ \cdots
+$$</p>
+<p>they are approaching $\frac1{1-x}$ if you are focusing on each number $x$ (point-wisely). The following graph shows the approximation.</p>
+<p><img loading="lazy" src="W14-S2%20Absolute%20and%20Conditional%20Convergence,%20Power%20658eeafd84034e7bbb8a02c581abe5ee/Untitled%201.png" alt="Untitled"  />
+</p>
+<h3 id="example-2-a-geometric-series-as-a-power-series-centered-at-2">Example 2. A Geometric Series As a Power Series Centered At $2$<a hidden class="anchor" aria-hidden="true" href="#example-2-a-geometric-series-as-a-power-series-centered-at-2">#</a></h3>
+<p>The power series</p>
+<p>$$
+1-\frac12(x-2) + \frac14(x-2)^2 + \cdots + \left(-\frac12\right)^n(x-2)^n + \cdots
+$$</p>
+<p>is centered at $a=2$, with $c_0 = 1,$ $c_1 = -\frac12$, etc. This is a geometric series with the ratio $-\frac12(x-2)$. It converges for</p>
+<p>$$
+\left|\frac{x-2}2\right|&lt;1,\quad \text{or} \quad 0&lt; x &lt; 4.
+$$</p>
+<p>The sum is</p>
+<p>$$
+\frac1{1+\frac{x-2}{2}} = \frac2{x}.
+$$</p>
+<p>So we view the convergence as a sequence of polynomial functions ( according to the partial sums) are approximating $f(x) = \frac2{x}$ for values of $x\in(0,4)$. Shown in the following graph.</p>
+<p><img loading="lazy" src="W14-S2%20Absolute%20and%20Conditional%20Convergence,%20Power%20658eeafd84034e7bbb8a02c581abe5ee/Untitled%202.png" alt="Untitled"  />
+</p>
+<h3 id="example-3-testing-for-convergence-using-the-ratio-test">Example 3. Testing for Convergence Using the Ratio Test<a hidden class="anchor" aria-hidden="true" href="#example-3-testing-for-convergence-using-the-ratio-test">#</a></h3>
+<p>For what values of $x$ do the following power series converge?</p>
+<ol>
+<li>
+<p>$\sum_{n\ge 1}(-1)^n\frac{x^n}{n}$</p>
+<ul>
+<li>
+<p>First apply the Ratio Test to the series for absolute convergence: $\sum_{n\ge 1} \left|(-1)^n \frac{x^n}{n}\right|$ .</p>
+<p>It finds the ratio is approaching $|x|$, which means if $|x|&lt;1$ then the series converges.</p>
+</li>
+<li>
+<p>For $|x|&gt;1$, the n-th term test confirms that the series<br>
+$\sum_n (-1)^n \frac{x^n}{n}$ diverges.</p>
+</li>
+<li>
+<p>For $x=1$, the series converges according to the alternating series test (alternating harmonic series indeed).</p>
+</li>
+<li>
+<p>For $x=-1$, the series diverges because it is the harmonic series.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>$\sum_{n\ge 1}(-1)^n \frac{x^{2n-1}}{2n-1}$</p>
+</li>
+<li>
+<p>$\sum_{n\ge 0} \frac{x^n}{n!}$</p>
+</li>
+<li>
+<p>$\sum_{n\ge0}n! x^n$</p>
+</li>
+</ol>
+<p>What’s amazing about the convergence of the power series, is that the domain of convergence is almost symmetric about its center $x=a$. The following theorem discusses this feature.</p>
+<h2 id="theorem-18-the-convergence-theorem-for-power-series">Theorem 18. The Convergence Theorem for Power Series<a hidden class="anchor" aria-hidden="true" href="#theorem-18-the-convergence-theorem-for-power-series">#</a></h2>
+<ul>
+<li>If the power series $\sum_{n=0}^\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \cdots$ converges for $x=c\neq 0$, then it <strong>converges absolutely</strong> for all $x$ with $|x|&lt;|c|$.</li>
+<li>If the series diverges for $x=d$, then it diverges for all $x$ with $|x|&gt;|d|.$</li>
+</ul>
+<p><strong>Proof.</strong></p>
+<h3 id="example">Example.<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h3>
+<p>If a power series $\sum_n a_n (x-1)^n$ is converging at $x=2$ and diverging at $x=0$, find its domain of convergence.</p>
+<h2 id="the-radius-of-convergence-of-a-power-series">The Radius of Convergence of a Power Series<a hidden class="anchor" aria-hidden="true" href="#the-radius-of-convergence-of-a-power-series">#</a></h2>
+<h3 id="corollary-to-theorem-18">Corollary to Theorem 18.<a hidden class="anchor" aria-hidden="true" href="#corollary-to-theorem-18">#</a></h3>
+<p>The convergence of the series $\sum_n c_n (x-a)^n$ is described by one of the following three possibilities:</p>
+<ol>
+<li>($R&gt;0$) There is a positive number $R$ such that the series diverges for $x$ with $|x-a|&gt;R$ but converges absolutely for $x$ with $|x-a|&lt;R$. The series may or may not converge at either of the endpoints $x=a\pm R$.</li>
+<li>($R=\infty$) The series converges absolutely for every $x$ .</li>
+<li>($R=0$) The series converges only at $x=a$ and diverges elsewhere.</li>
+</ol>
+<p>$R$ is called the <strong>radius of convergence</strong> of the power series and the interval of radius $R$ centered at $x=a$ is called the <strong>interval of convergence</strong>. The interval of convergence may be open, closed, or half-open, depending on the particular series.</p>
+<p>At points $x$ with $|x-a|&lt;R$, the series converges absolutely. If the series converges for all values of $x$, we say its <strong>radius of convergence</strong> is infinite. If it converges only at $x=a$, we say its <strong>radius of convergence</strong> is zero.</p>
+<h2 id="how-to-test-a-power-series-for-convergence">How to Test a Power Series for Convergence<a hidden class="anchor" aria-hidden="true" href="#how-to-test-a-power-series-for-convergence">#</a></h2>
+<ol>
+<li>Find the Radius of Convergence ( by Ratio Test of $n$-th Root Test) to find where the series converges absolutely. Namely, find $(a-R,a+R)$</li>
+<li>Test the convergence for endpoints (If the radius $R$ is finite) . Usually, the endpoints can be tested by using a Comparison Test, the Integral Test or the Alternating Series Test.</li>
+<li>Outside of radius of convergence, the power series diverges, because the n-th term does not approach zero for those values of $x$.</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/absolute/">absolute</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/conditional/">conditional</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/converge/">converge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/diverge/">diverge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/rearrange/">rearrange</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/power-series/">power series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

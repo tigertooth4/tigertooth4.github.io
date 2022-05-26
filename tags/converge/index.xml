@@ -6,7 +6,16 @@
     <description>Recent content in converge on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 May 2022 13:20:39 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/converge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 May 2022 17:51:07 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/converge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W14-S2 Absolute and Conditional Convergence, Power Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</guid>
+      <description>周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However,</description>
+    </item>
+    
     <item>
       <title>W12-S2 Series</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</link>
