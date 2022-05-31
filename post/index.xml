@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 May 2022 17:51:07 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 May 2022 15:49:34 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W15-S1 Power Series (II)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/</link>
+      <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/</guid>
+      <description>周次: 15 日期: June 1, 2022 节次: 1 In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power</description>
+    </item>
+    
     <item>
       <title>W14-S2 Absolute and Conditional Convergence, Power Series</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</link>

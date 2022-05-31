@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W15-S1 Power Series (II) | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="power series, radius, ratio test, convergence,  Taylor series, Maclaurin, term-by-term differntiation, term-by-term integration, multiplication" />
+<meta name="description" content="周次: 15 日期: June 1, 2022 节次: 1 In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W15-S1 Power Series (II)" />
+<meta property="og:description" content="周次: 15 日期: June 1, 2022 节次: 1 In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-31T15:49:34&#43;08:00" />
+<meta property="article:modified_time" content="2022-05-31T15:49:34&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W15-S1 Power Series (II)"/>
+<meta name="twitter:description" content="周次: 15 日期: June 1, 2022 节次: 1 In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W15-S1 Power Series (II)",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W15-S1 Power Series (II)",
+  "name": "W15-S1 Power Series (II)",
+  "description": "周次: 15 日期: June 1, 2022 节次: 1 In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power",
+  "keywords": [
+    "power series", "radius", "ratio test", "convergence", " Taylor series", "Maclaurin", "term-by-term differntiation", "term-by-term integration", "multiplication"
+  ],
+  "articleBody": "周次: 15 日期: June 1, 2022 节次: 1\nIn this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power series is convergent, we can express the coefficients by using derivatives of $f(x)$, which generates the series uniquely. Such presentation is called Taylor series, we explore the Taylor series and its partial sum in this lecture as well.\nOutline Example 3. Testing for Convergence Using the Ratio Test For what values of $x$ do the following power series converge?\n $\\sum_{n\\ge 1}(-1)^n\\frac{x^n}{n}$ $\\sum_{n\\ge 1}(-1)^n \\frac{x^{2n-1}}{2n-1}$ $\\sum_{n\\ge 0} \\frac{x^n}{n!}$ $\\sum_{n\\ge0}n! x^n$  What’s amazing about the convergence of the power series, is that the domain of convergence is almost symmetric about its center $x=a$. The following theorem discusses this feature.\nTheorem 18. The Convergence Theorem for Power Series  If the power series $\\sum_{n=0}^\\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \\cdots$ converges for $x=c\\neq 0$, then it converges absolutely for all $x$ with $|x| If the series diverges for $x=d$, then it diverges for all $x$ with $|x||d|.$  Proof.\nExample. If a power series $\\sum_n a_n (x-1)^n$ is converging at $x=2$ and diverging at $x=0$, find its domain of convergence.\nThe Radius of Convergence of a Power Series Corollary to Theorem 18. The convergence of the series $\\sum_n c_n (x-a)^n$ is described by one of the following three possibilities:\n ($R0$) There is a positive number $R$ such that the series diverges for $x$ with $|x-a|R$ but converges absolutely for $x$ with $|x-a|($R=\\infty$) The series converges absolutely for every $x$ . ($R=0$) The series converges only at $x=a$ and diverges elsewhere.  $R$ is called the radius of convergence of the power series and the interval of radius $R$ centered at $x=a$ is called the interval of convergence. The interval of convergence may be open, closed, or half-open, depending on the particular series.\nAt points $x$ with $|x-a|radius of convergence is infinite. If it converges only at $x=a$, we say its radius of convergence is zero.\nHow to Test a Power Series for Convergence  Find the Radius of Convergence ( by Ratio Test of $n$-th Root Test) to find where the series converges absolutely. Namely, find $(a-R,a+R)$ Test the convergence for endpoints (If the radius $R$ is finite) . Usually, the endpoints can be tested by using a Comparison Test, the Integral Test or the Alternating Series Test. Outside of radius of convergence, the power series diverges, because the n-th term does not approach zero for those values of $x$.  Term-by-Term Differentiation One aspect showing the power of the power series, is their compatibility with differentiations and integrations. A power series can be differentiated term-by-term at each interior point of its interval of convergence.\nTheorem 19. The Term-by-Term Differentiation Theorem If $\\sum_{n} c_n(x-a)^n$ converges for $a-R 0$, in the interval of convergence, the sum $f$\n$$ f(x) = \\sum_{n=0}^\\infty c_n(x-a)^n,\\quad a-R has derivatives of all orders inside the interval of convergence. We can obtain the derivatives by differentiating the original series term by term:\n$$ f'(x) = \\sum_{n=1}^\\infty n c_n (x-a)^{n-1}\\ f''(x) = \\sum_{n=2}^\\infty n(n-1) c_n (x-a)^{n-2}, $$\nand so on. Each of these derived series converges at every interior point of the interval of convergence of the original series.\nExample 4. Applying Term-by-Term Differentiation Find series for $f'(x)$ and $f''(x)$ if\n$$ f(x) = \\frac1{1-x} = \\sum_{n=0}^\\infty x^n, \\quad -1 Solution. (Differentiate Term-by-Term)\nRemark. The term-by-term differentiation provides a way to find the power series expansion for functions like $\\frac{1}{(1-x)^2}$ and $\\frac{2}{(1-x)^3}$.\nRemark. Each of the term-by-term differentiated power series has the same radius of convergence.\nCaution. The term-by-term differentiation may not work for other kinds of series. For example, the trigonometric series\n$$ \\sum_{n=1}^\\infty \\frac{\\sin(n! x)}{n^2} $$\nconverges for all $x$. But if we differentiate term-by-term, we get the series\n$$ \\sum_{n=1}^\\infty \\frac{n! \\cos(n!x)}{n^2} $$\nwhich diverges for all $x$. This is not a power series.\nTerm-by-Term Integration Another super power for power series is that the integration can be simply done term-by-term.\nTheorem 20. The Term-by-Term Integration Theorem Suppose that\n$$ f(x) = \\sum_{n=0}^\\infty c_n (x-a)^n $$\nconverges for $a-R 0$). Then inside of any sub-interval $[c,d]\\subset (a-R, a+R)$ we have\n$$ \\int_c^d f(x) dx = \\sum_{n=0}^\\infty c_n \\int_c^d (x-a)^n dx = \\sum_{n=0}^\\infty \\frac{c_n}{n+1}(x-a)^{n+1}\\bigg]_{c}^{d}. $$\nIn particular , the definite integral of $f(x)$ obtains\n$$ \\int_a^x f(t) dt = \\sum_{n=0}^\\infty \\frac{c_n}{n+1}(x-a)^{n+1},\\quad a-R or the indefinite integral obtains\n$$ \\int f(x) dx = \\sum_{n=0}^\\infty \\frac{c_n}{n+1} (x-a)^{n+1} + C,\\quad a-R Example 5. A Power Series for $\\arctan(x)$, $-1Identify the function\n$$ f(x) = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots, \\quad -1 \\le x \\le 1. $$\nSolution. $f(x) = \\arctan(x)$ for $-1Remark. Evaluating $f(x)$ and $\\arctan(x)$ at $x=\\frac1{\\sqrt3}$ gives a new result for infinite series\n$$ \\frac{\\pi}{6} = \\frac1{\\sqrt3} - \\frac{1}{3}\\frac{1}{\\sqrt{3}^3} + \\frac1{5}\\frac{1}{\\sqrt{3}^5} - \\cdots = \\sum_{n=0}^\\infty \\frac{(-1)^n}{2n+1}\\frac{1}{\\sqrt{3}^{2n+1}} $$\nNotice. Indeed, the power series $x-\\frac{x^3}3 + \\frac{x^5}{5}-\\cdots$ converges at $x=\\pm1$. Later we will prove that $\\arctan(x) = x-\\frac{x^3}{3} + \\frac{x^5}{5} -\\cdots$ holds for $x=\\pm1$ as well. Which gives a more elegant infinite expansions of $\\pi$\n$$ \\frac{\\pi}{4} = 1-\\frac13 + \\frac15 - \\frac17 + \\cdots $$\nExample 6. A Series for $\\ln(1+x)$, $-1 The series\n$$ \\frac1{1+t} = 1-t+t^2-t^3+\\cdots $$\nconverges on the open interval $-1 $$ \\ln(1+x)=\\int_0^x \\frac1{1+t}dt = x-\\frac{x^2}{2} + \\frac{x^3}{3} - \\frac{x^4}{4} + \\cdots,\\quad -1 Notice. Indeed, $\\ln(1+x)= x-\\frac{x^2}{2} + \\frac{x^3}{3}-\\frac{x^4}{4} + \\cdots$ holds true for $x=1$ as well, which gives the sum for alternating harmonic series\n$$ \\ln(2) = 1-\\frac12 + \\frac13 -\\frac14 + \\cdots $$\nbut we will see it until section 11.10.\nMultiplication of Power Series Theorem 21. The Series Multiplication Theorem for Power Series If $A(x)=\\sum_{n=0}^\\infty a_n x^n$ and $B(x)=\\sum_{n=0}^\\infty b_n x^n$ converges absolutely for $|x|$$ c_n = \\text{sum of all the coefficients of $n$-th order terms in the multiplication}\\ =a_0 b_n + a_1 b_{n-1} + a_2 b_{n-2} + \\cdots + a_n b_0 = \\sum_{k=0}^n a_k b_{n-k} $$\nthen $\\sum_{n=0}^\\infty c_n x^n$ converges absolutely to $A(x) B(x)$ for $|x|$$ A(x)B(x) = \\left(\\sum_{n=0}^\\infty a_n x^n\\right)\\cdot \\left(\\sum_{n=0}^\\infty b_n x^n\\right) \\underbrace{=}{\\text{important}} \\sum{n=0}^\\infty c_n x^n $$\nExample 7. Multiply the geometric series Given the power series $\\frac1{1-x} = 1 + x + x^2 + \\cdots$, multiplying with itself, one finds the power series form for $\\frac1{(1-x)^2}$, for $|x|§11.8 Taylor and Maclaurin Series The previous section has shown a sum of power series, when treated as a function $f(x)$, will be infinitely differentiable inside the interval of convergence. In this section, we ask the converse question: If a function $f(x)$ is infinitely differentiable, can we generate a power series from it? And if we can, will the generated power series converges to the function $f(x)$? The answer for the first question can be answered in this section.\nSuppose $f(x)$ can be written as the sum of a power series on an interval $(a-R,a+R)$\n$$ f(x) = \\sum_{n=0}^\\infty a_n (x-a)^n = a_0 + a_1(x-a) + a_2 (x-a)^2 + \\cdots $$\nwith a positive radius of convergence $R$. By repeated term-by-term differentiation within the interval of convergence $I$ we obtain\n$$ f'(x) = a_1 + 2 a_2 (x-a) + 3a_3(x-a)^2 + \\cdots \\ f''(x) = 2a_2 + 3\\cdot 2 a_3 (x-a) + 4\\cdots 3 a_4 (x-a)^2 + \\cdots \\ \\vdots \\ f^{(n)}(x) = n! a_n + \\text{a sum of terms with $(x-a)$ as a factor} $$\nSince these equations all hold at $x=a$, we have\n$$ f'(a) = a_1,\\ f''(a) = 2! a_2,\\ \\vdots \\ f^{(n)}(a) = n! a_n $$\nSo if there’s a series converging to $f(x)$, then the coefficients must be\n$$ a_n = \\frac{f^{(n)}(a)}{n!}. $$\nThe series is completely described by $f(x)$\n$$ f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nBut what will happen if we only know that $f(x)$ is an infinitely differentiable function on an interval $I$?\nFor an $x=a\\in I$, we can still generate the series $\\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n$, but we have to study whether this series can converge to $f(x)$ or not. It will be discussed in the next section.\nTaylor and Maclaurin Series Definitions. Taylor Series, Maclaurin Series Let $f$ be a function with derivatives of all orders throughout some interval containing $a$ as an interior point. The Taylor series generated by $f$ at $x=a$ is\n$$ \\sum_{k=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nIf $x=0$ is an interior point of the interval, the Taylor series generated by $f$ at $x=0$ is also called a Maclaurin series (generated by $f$) , which is simply\n$$ \\sum_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n. $$\nExample 1. Finding a Taylor Series Find the Taylor series generated by $f(x) = 1/x$ at $a=2$. Where does the series converge to $1/x$ ?\nSolution. The derivatives $f^{(n)}(2) = \\frac{(-1)^n n!}{ 2^{n+1}}$. Therefore the Taylor series is\n$$ \\sum_{n=0}^\\infty \\frac{(-1)^n}{2^{n+1}} (x-2)^n. $$\nIt is a geometric series converges on $|x-2|Example 2. Finding a Maclaurin Series Find the Maclaurin series generated by $f(x) = e^x$.\nSolution. The Maclaurin series generated is\n$$ \\sum_{n=0}^\\infty \\frac{x^n}{n!}. $$\nTaylor Polynomials If the function $f(x)$ has higher order derivatives at $a$, then we can truncate the Taylor series to finite order, resulting in a polynomial function. For example, if $f$ has derivative at $a$, we can truncate the Taylor series to order $1$, ended up with an order $1$ polynomial\n$$ f(a) + f'(a)(x-a) $$\nwhich is just the linear approximation of $f(x)$ at $x=a$, given in the section 3.8. From this point of view, a higher order Taylor polynomial might be a better approximation of $f(x)$.\nDefinition. Taylor Polynomial of Order $n$ (Partial sum of the Taylor Series) Let $f$ be a function with derivatives of order $k=1,2,\\cdots, N$ in some interval containing $a$ as an interior point. Then for any integer $n\\le N$, the Taylor polynomial of order $n$ generated by $f$ at $x=a$ is the polynomial\n$$ P_n(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^n + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nNotice. Since the $n$th derivative of $f$ at $a$ maybe $0$, the actual degree for the polynomial might be smaller than $n$. That is why we don’t call $P_n(x)$ a degree $n$ polynomial, but use order instead.\nExample 2. Finding Taylor Polynomials for $e^x$ Find the Taylor polynomials generated by $e^x$ at $x=0.$\nSolution.\nThe order $n$ polynomial is given by $P_n(x) = \\sum_{k=0}^n \\frac{x^k}{k!}$ .\nExample 3. Finding Taylor Polynomial for $\\cos(x)$ Find the Taylor series and Taylor polynomials generated by $\\cos(x)$ at $x=0$.\nSolution.\nThe $n$th derivative for $\\cos(x)$ can be expressed by $\\cos^{(n)}(x) = \\cos(x + \\frac{n\\pi}{2})$. The $n$th derivative at $x=0$ is either $0$ or $(\\pm1)$ depending on the order. The Taylor series is given by\n$$ \\sum_{k=0}^\\infty \\frac{(-1)^k x^{2k}}{(2k)!}=1-\\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} +\\cdots $$\nAnd the order $2n$ and $2n+1$ Taylor polynomials (they are identical) are given by\n$$ P_{2n}(x) = 1- \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots + \\frac{(-1)^n x^{2n}}{(2n)!} $$\nExample 4. A Function $f$ Whose Taylor Series Converges at Every $x$ but Converges to $f(x)$ Only at $x=0$ It can be shown that\n$$ f(x) = \\begin{cases}0, \u0026 x=0\\ e^{-1/x^2}, \u0026 x\\neq 0 \\end{cases} $$\nhas derivative of all orders at $x=0$ and that $f^{(n)}(0) = 0$ for all $n$. This means the Taylor series generated by $f$ at $x=0$ is $0$. But the function is only equal to $0$ at $x=0$. Which means the Taylor series converges everywhere but only be equal to $f$ at $x=0$.\nTwo Questions  For what values of $x$ can we normally expect a Taylor series converges to its generating functions? How accurately do a function’s Taylor polynomial approximate the function on a given interval?  ",
+  "wordCount" : "2067",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-05-31T15:49:34+08:00",
+  "dateModified": "2022-05-31T15:49:34+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w15s1-power-series-ii/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W15-S1 Power Series (II)
+    </h1>
+    <div class="post-meta"><span title='2022-05-31 15:49:34 +0800 CST'>May 31, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 15
+日期: June 1, 2022
+节次: 1</p>
+<p>In this lecture, we will continue the discussions on the power series. A radius of convergence of a power series is emerging from the ratio test for the absolute convergence. We will discuss the basic operations, like differentiation and integrations on a power series, and the multiplication of two power series as well. When a power series is convergent, we can express the coefficients by using derivatives of $f(x)$, which generates the series uniquely. Such presentation is called Taylor series, we explore the Taylor series and its partial sum in this lecture as well.</p>
+<h1 id="outline">Outline<a hidden class="anchor" aria-hidden="true" href="#outline">#</a></h1>
+<h3 id="example-3-testing-for-convergence-using-the-ratio-test">Example 3. Testing for Convergence Using the Ratio Test<a hidden class="anchor" aria-hidden="true" href="#example-3-testing-for-convergence-using-the-ratio-test">#</a></h3>
+<p>For what values of $x$ do the following power series converge?</p>
+<ol>
+<li>$\sum_{n\ge 1}(-1)^n\frac{x^n}{n}$</li>
+<li>$\sum_{n\ge 1}(-1)^n \frac{x^{2n-1}}{2n-1}$</li>
+<li>$\sum_{n\ge 0} \frac{x^n}{n!}$</li>
+<li>$\sum_{n\ge0}n! x^n$</li>
+</ol>
+<p>What’s amazing about the convergence of the power series, is that the domain of convergence is almost symmetric about its center $x=a$. The following theorem discusses this feature.</p>
+<h2 id="theorem-18-the-convergence-theorem-for-power-series">Theorem 18. The Convergence Theorem for Power Series<a hidden class="anchor" aria-hidden="true" href="#theorem-18-the-convergence-theorem-for-power-series">#</a></h2>
+<ul>
+<li>If the power series $\sum_{n=0}^\infty a_n x^n = a_0 + a_1 x + a_2 x^2 + \cdots$ converges for $x=c\neq 0$, then it <strong>converges absolutely</strong> for all $x$ with $|x|&lt;|c|$.</li>
+<li>If the series diverges for $x=d$, then it diverges for all $x$ with $|x|&gt;|d|.$</li>
+</ul>
+<p><strong>Proof.</strong></p>
+<h3 id="example">Example.<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h3>
+<p>If a power series $\sum_n a_n (x-1)^n$ is converging at $x=2$ and diverging at $x=0$, find its domain of convergence.</p>
+<h2 id="the-radius-of-convergence-of-a-power-series">The Radius of Convergence of a Power Series<a hidden class="anchor" aria-hidden="true" href="#the-radius-of-convergence-of-a-power-series">#</a></h2>
+<h3 id="corollary-to-theorem-18">Corollary to Theorem 18.<a hidden class="anchor" aria-hidden="true" href="#corollary-to-theorem-18">#</a></h3>
+<p>The convergence of the series $\sum_n c_n (x-a)^n$ is described by one of the following three possibilities:</p>
+<ol>
+<li>($R&gt;0$) There is a positive number $R$ such that the series diverges for $x$ with $|x-a|&gt;R$ but converges absolutely for $x$ with $|x-a|&lt;R$. The series may or may not converge at either of the endpoints $x=a\pm R$.</li>
+<li>($R=\infty$) The series converges absolutely for every $x$ .</li>
+<li>($R=0$) The series converges only at $x=a$ and diverges elsewhere.</li>
+</ol>
+<p>$R$ is called the <strong>radius of convergence</strong> of the power series and the interval of radius $R$ centered at $x=a$ is called the <strong>interval of convergence</strong>. The interval of convergence may be open, closed, or half-open, depending on the particular series.</p>
+<p>At points $x$ with $|x-a|&lt;R$, the series converges absolutely. If the series converges for all values of $x$, we say its <strong>radius of convergence</strong> is infinite. If it converges only at $x=a$, we say its <strong>radius of convergence</strong> is zero.</p>
+<h2 id="how-to-test-a-power-series-for-convergence">How to Test a Power Series for Convergence<a hidden class="anchor" aria-hidden="true" href="#how-to-test-a-power-series-for-convergence">#</a></h2>
+<ol>
+<li>Find the Radius of Convergence ( by Ratio Test of $n$-th Root Test) to find where the series converges absolutely. Namely, find $(a-R,a+R)$</li>
+<li>Test the convergence for endpoints (If the radius $R$ is finite) . Usually, the endpoints can be tested by using a Comparison Test, the Integral Test or the Alternating Series Test.</li>
+<li>Outside of radius of convergence, the power series diverges, because the n-th term does not approach zero for those values of $x$.</li>
+</ol>
+<h1 id="term-by-term-differentiation">Term-by-Term Differentiation<a hidden class="anchor" aria-hidden="true" href="#term-by-term-differentiation">#</a></h1>
+<p>One aspect showing the power of the power series, is their compatibility with differentiations and integrations.  A power series can be differentiated term-by-term at each interior point of its interval of convergence.</p>
+<h2 id="theorem-19-the-term-by-term-differentiation-theorem">Theorem 19. The Term-by-Term Differentiation Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-19-the-term-by-term-differentiation-theorem">#</a></h2>
+<p>If $\sum_{n} c_n(x-a)^n$ converges for $a-R &lt; x &lt; a+ R$ for some $R&gt;0$, in the interval of convergence, the sum $f$</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty c_n(x-a)^n,\quad a-R &lt; x&lt;a+R,
+$$</p>
+<p>has derivatives of all orders inside the interval of convergence. We can obtain the derivatives by differentiating the original series term by term:</p>
+<p>$$
+f'(x) = \sum_{n=1}^\infty n c_n (x-a)^{n-1}\ f''(x) = \sum_{n=2}^\infty n(n-1) c_n (x-a)^{n-2},
+$$</p>
+<p>and so on. Each of these derived series converges at every interior point of the interval of convergence of the original series.</p>
+<h3 id="example-4-applying-term-by-term-differentiation">Example 4. Applying Term-by-Term Differentiation<a hidden class="anchor" aria-hidden="true" href="#example-4-applying-term-by-term-differentiation">#</a></h3>
+<p>Find series for $f'(x)$  and $f''(x)$ if</p>
+<p>$$
+f(x) = \frac1{1-x} = \sum_{n=0}^\infty x^n, \quad -1 &lt; x &lt; 1.
+$$</p>
+<p>Solution. (Differentiate Term-by-Term)</p>
+<h3 id="remark">Remark.<a hidden class="anchor" aria-hidden="true" href="#remark">#</a></h3>
+<p>The term-by-term differentiation provides a way to find the power series expansion for functions like $\frac{1}{(1-x)^2}$ and $\frac{2}{(1-x)^3}$.</p>
+<h3 id="remark-1">Remark.<a hidden class="anchor" aria-hidden="true" href="#remark-1">#</a></h3>
+<p>Each of the term-by-term differentiated power series has the same radius of convergence.</p>
+<h3 id="caution">Caution.<a hidden class="anchor" aria-hidden="true" href="#caution">#</a></h3>
+<p>The term-by-term differentiation may not work for other kinds of series. For example, the trigonometric series</p>
+<p>$$
+\sum_{n=1}^\infty \frac{\sin(n! x)}{n^2}
+$$</p>
+<p>converges for all $x$. But if we differentiate term-by-term, we get the series</p>
+<p>$$
+\sum_{n=1}^\infty \frac{n! \cos(n!x)}{n^2}
+$$</p>
+<p>which diverges for all $x$. This is not a power series.</p>
+<h1 id="term-by-term-integration">Term-by-Term Integration<a hidden class="anchor" aria-hidden="true" href="#term-by-term-integration">#</a></h1>
+<p>Another super power for power series is that the integration can be simply done term-by-term.</p>
+<h2 id="theorem-20-the-term-by-term-integration-theorem">Theorem 20. The Term-by-Term Integration Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-20-the-term-by-term-integration-theorem">#</a></h2>
+<p>Suppose that</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty c_n (x-a)^n
+$$</p>
+<p>converges for $a-R &lt; x &lt; a+R$ ($R&gt;0$). Then inside of any sub-interval $[c,d]\subset (a-R, a+R)$ we have</p>
+<p>$$
+\int_c^d f(x) dx = \sum_{n=0}^\infty c_n \int_c^d (x-a)^n dx = \sum_{n=0}^\infty \frac{c_n}{n+1}(x-a)^{n+1}\bigg]_{c}^{d}.
+$$</p>
+<p>In particular , the definite integral of $f(x)$ obtains</p>
+<p>$$
+\int_a^x f(t) dt = \sum_{n=0}^\infty \frac{c_n}{n+1}(x-a)^{n+1},\quad a-R &lt; x &lt; a+R
+$$</p>
+<p>or the indefinite integral obtains</p>
+<p>$$
+\int f(x) dx = \sum_{n=0}^\infty \frac{c_n}{n+1} (x-a)^{n+1} + C,\quad a-R &lt; x &lt; a+R.
+$$</p>
+<h3 id="example-5-a-power-series-for-arctanx--1-x--1">Example 5. A Power Series for $\arctan(x)$, $-1&lt; x &lt; 1$<a hidden class="anchor" aria-hidden="true" href="#example-5-a-power-series-for-arctanx--1-x--1">#</a></h3>
+<p>Identify the function</p>
+<p>$$
+f(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots, \quad -1 \le x \le 1.
+$$</p>
+<p>Solution. $f(x) = \arctan(x)$ for $-1&lt; x &lt; 1$.</p>
+<h3 id="remark-2">Remark.<a hidden class="anchor" aria-hidden="true" href="#remark-2">#</a></h3>
+<p>Evaluating $f(x)$ and $\arctan(x)$ at $x=\frac1{\sqrt3}$ gives a new result for infinite series</p>
+<p>$$
+\frac{\pi}{6} = \frac1{\sqrt3} - \frac{1}{3}\frac{1}{\sqrt{3}^3} + \frac1{5}\frac{1}{\sqrt{3}^5} - \cdots = \sum_{n=0}^\infty \frac{(-1)^n}{2n+1}\frac{1}{\sqrt{3}^{2n+1}}
+$$</p>
+<h3 id="notice">Notice.<a hidden class="anchor" aria-hidden="true" href="#notice">#</a></h3>
+<p>Indeed, the power series $x-\frac{x^3}3 + \frac{x^5}{5}-\cdots$ converges at $x=\pm1$. Later we will prove that $\arctan(x) = x-\frac{x^3}{3} + \frac{x^5}{5} -\cdots$ holds for $x=\pm1$ as well. Which gives a more elegant infinite expansions of $\pi$</p>
+<p>$$
+\frac{\pi}{4} = 1-\frac13 + \frac15 - \frac17 + \cdots
+$$</p>
+<h3 id="example-6-a--series-for-ln1x--1--x-le-1">Example 6. A  Series for $\ln(1+x)$, $-1 &lt; x \le 1$<a hidden class="anchor" aria-hidden="true" href="#example-6-a--series-for-ln1x--1--x-le-1">#</a></h3>
+<p>The series</p>
+<p>$$
+\frac1{1+t} = 1-t+t^2-t^3+\cdots
+$$</p>
+<p>converges on the open interval $-1 &lt; t &lt; 1$. Therefore,</p>
+<p>$$
+\ln(1+x)=\int_0^x \frac1{1+t}dt = x-\frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots,\quad -1 &lt; x &lt; 1
+$$</p>
+<h3 id="notice-1">Notice.<a hidden class="anchor" aria-hidden="true" href="#notice-1">#</a></h3>
+<p>Indeed, $\ln(1+x)= x-\frac{x^2}{2} + \frac{x^3}{3}-\frac{x^4}{4} + \cdots$ holds true for $x=1$ as well, which gives the sum for alternating harmonic series</p>
+<p>$$
+\ln(2) = 1-\frac12 + \frac13 -\frac14 + \cdots
+$$</p>
+<p>but we will see it until section 11.10.</p>
+<h1 id="multiplication-of-power-series">Multiplication of Power Series<a hidden class="anchor" aria-hidden="true" href="#multiplication-of-power-series">#</a></h1>
+<h2 id="theorem-21-the-series-multiplication-theorem-for-power-series">Theorem 21. The Series Multiplication Theorem for Power Series<a hidden class="anchor" aria-hidden="true" href="#theorem-21-the-series-multiplication-theorem-for-power-series">#</a></h2>
+<p>If $A(x)=\sum_{n=0}^\infty a_n x^n$ and $B(x)=\sum_{n=0}^\infty b_n x^n$ converges absolutely for $|x|&lt;R$ and</p>
+<p>$$
+c_n = \text{sum of all the coefficients of $n$-th order terms in the multiplication}\ =a_0 b_n + a_1 b_{n-1} + a_2 b_{n-2} + \cdots + a_n b_0 = \sum_{k=0}^n a_k b_{n-k}
+$$</p>
+<p>then $\sum_{n=0}^\infty c_n x^n$ converges absolutely to $A(x) B(x)$ for $|x|&lt;R$</p>
+<p>$$
+A(x)B(x) = \left(\sum_{n=0}^\infty a_n x^n\right)\cdot \left(\sum_{n=0}^\infty b_n x^n\right) \underbrace{=}<em>{\text{important}} \sum</em>{n=0}^\infty c_n x^n
+$$</p>
+<h3 id="example-7-multiply-the-geometric-series">Example 7. Multiply the geometric series<a hidden class="anchor" aria-hidden="true" href="#example-7-multiply-the-geometric-series">#</a></h3>
+<p>Given the power series $\frac1{1-x}  = 1 + x + x^2 + \cdots$, multiplying with itself, one finds the power series form for $\frac1{(1-x)^2}$, for $|x|&lt;1$.</p>
+<h1 id="118-taylor-and-maclaurin--series">§11.8 Taylor and Maclaurin  Series<a hidden class="anchor" aria-hidden="true" href="#118-taylor-and-maclaurin--series">#</a></h1>
+<p>The previous section has shown a sum of power series, when treated as a function $f(x)$, will be infinitely differentiable inside the interval of convergence. In this section, we ask the converse question: If a function $f(x)$ is infinitely differentiable, can we generate a power series from it? And if we can, will the generated power series converges to the function $f(x)$? The answer for the first question can be answered in this section.</p>
+<p>Suppose $f(x)$ can be written as the sum of a power series on an interval $(a-R,a+R)$</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty a_n (x-a)^n = a_0 + a_1(x-a) + a_2 (x-a)^2 + \cdots
+$$</p>
+<p>with a positive radius of convergence $R$. By repeated term-by-term differentiation within the interval of convergence $I$ we obtain</p>
+<p>$$
+f'(x) = a_1 + 2 a_2 (x-a) + 3a_3(x-a)^2 + \cdots \ f''(x) = 2a_2 + 3\cdot 2 a_3 (x-a) + 4\cdots 3 a_4 (x-a)^2 + \cdots \ \vdots \ f^{(n)}(x) = n! a_n + \text{a sum of terms with $(x-a)$ as a factor}
+$$</p>
+<p>Since these equations all hold at $x=a$, we have</p>
+<p>$$
+f'(a) = a_1,\ f''(a) = 2! a_2,\ \vdots \ f^{(n)}(a) = n! a_n
+$$</p>
+<p>So if there’s a series converging to $f(x)$, then the coefficients must be</p>
+<p>$$
+a_n = \frac{f^{(n)}(a)}{n!}.
+$$</p>
+<p>The series is completely described by $f(x)$</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<p>But what will happen if we only know that $f(x)$ is an infinitely differentiable function on an interval $I$?</p>
+<p>For an $x=a\in I$, we can still generate the series $\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n$, but we have to study whether this series can converge to $f(x)$ or not. It will be discussed in the next section.</p>
+<h1 id="taylor-and-maclaurin-series">Taylor and Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#taylor-and-maclaurin-series">#</a></h1>
+<h2 id="definitions-taylor-series-maclaurin-series">Definitions. Taylor Series, Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#definitions-taylor-series-maclaurin-series">#</a></h2>
+<p>Let $f$ be a function with derivatives of all orders throughout some interval containing $a$ as an interior point. The <strong>Taylor series generated by $f$ at $x=a$ is</strong></p>
+<p>$$
+\sum_{k=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<p>If $x=0$ is an interior point of the interval, the <strong>Taylor series generated by $f$ at $x=0$  is also called a Maclaurin series (generated by $f$) , which is simply</strong></p>
+<p>$$
+\sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
+$$</p>
+<h3 id="example-1-finding-a-taylor-series">Example 1. Finding a Taylor Series<a hidden class="anchor" aria-hidden="true" href="#example-1-finding-a-taylor-series">#</a></h3>
+<p>Find the Taylor series generated by $f(x) = 1/x$ at $a=2$. Where does the series converge to $1/x$ ?</p>
+<p><strong>Solution.</strong> The derivatives $f^{(n)}(2) = \frac{(-1)^n n!}{ 2^{n+1}}$. Therefore the Taylor series is</p>
+<p>$$
+\sum_{n=0}^\infty \frac{(-1)^n}{2^{n+1}} (x-2)^n.
+$$</p>
+<p>It is a geometric series converges on $|x-2|&lt;2$, with the sum $\frac{1/2}{1+\frac{(x-2)}{2}} = \frac1{x}$. Therefore the Taylor series converges to $1/x$ on $(0,4)$.</p>
+<h3 id="example-2-finding-a-maclaurin-series">Example 2. Finding a Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#example-2-finding-a-maclaurin-series">#</a></h3>
+<p>Find the Maclaurin series generated by $f(x) = e^x$.</p>
+<p><strong>Solution.</strong> The Maclaurin series generated is</p>
+<p>$$
+\sum_{n=0}^\infty \frac{x^n}{n!}.
+$$</p>
+<h1 id="taylor-polynomials">Taylor Polynomials<a hidden class="anchor" aria-hidden="true" href="#taylor-polynomials">#</a></h1>
+<p>If the function $f(x)$ has higher order derivatives at $a$, then we can truncate the Taylor series to finite order, resulting in a polynomial function. For example, if $f$ has derivative at $a$, we can truncate the Taylor series to order $1$, ended up with an order $1$ polynomial</p>
+<p>$$
+f(a) + f'(a)(x-a)
+$$</p>
+<p>which is just the linear approximation of $f(x)$ at $x=a$, given in the section 3.8. From this point of view, a higher order Taylor polynomial might be a better approximation of $f(x)$.</p>
+<h2 id="definition-taylor-polynomial-of-order-n-partial-sum-of-the-taylor-series">Definition. Taylor Polynomial of Order $n$ (Partial sum of the Taylor Series)<a hidden class="anchor" aria-hidden="true" href="#definition-taylor-polynomial-of-order-n-partial-sum-of-the-taylor-series">#</a></h2>
+<p>Let $f$ be a function with derivatives of order $k=1,2,\cdots, N$ in some interval containing $a$ as an interior point. Then for any integer $n\le N$, the <strong>Taylor polynomial of order $n$ generated by $f$ at $x=a$ is the polynomial</strong></p>
+<p>$$
+P_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^n + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<h3 id="notice-2">Notice.<a hidden class="anchor" aria-hidden="true" href="#notice-2">#</a></h3>
+<p>Since the $n$th derivative of $f$ at $a$ maybe $0$, the actual degree for the polynomial might be smaller than $n$. That is why we don’t call $P_n(x)$ a <strong>degree</strong> $n$ polynomial, but use <strong>order</strong> instead.</p>
+<h3 id="example-2-finding-taylor-polynomials-for-ex">Example 2. Finding Taylor Polynomials for $e^x$<a hidden class="anchor" aria-hidden="true" href="#example-2-finding-taylor-polynomials-for-ex">#</a></h3>
+<p>Find the Taylor polynomials generated by $e^x$ at $x=0.$</p>
+<p><strong>Solution.</strong></p>
+<p>The order $n$ polynomial is given by $P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}$ .</p>
+<p><img loading="lazy" src="W15-S1%20Power%20Series%20%28II%29%20d165bfc92d2141b6aef9e3ba1831fff1/Untitled.png" alt="Untitled"  />
+</p>
+<h3 id="example-3-finding-taylor-polynomial-for-cosx">Example 3. Finding Taylor Polynomial for $\cos(x)$<a hidden class="anchor" aria-hidden="true" href="#example-3-finding-taylor-polynomial-for-cosx">#</a></h3>
+<p>Find the Taylor series and Taylor polynomials generated by $\cos(x)$ at $x=0$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th derivative for $\cos(x)$ can be expressed by $\cos^{(n)}(x) = \cos(x + \frac{n\pi}{2})$. The $n$th derivative at $x=0$ is either $0$ or $(\pm1)$ depending on the order. The Taylor series is given by</p>
+<p>$$
+\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}=1-\frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} +\cdots
+$$</p>
+<p>And the order $2n$ and $2n+1$ Taylor polynomials (they are identical) are given by</p>
+<p>$$
+P_{2n}(x) = 1- \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^n x^{2n}}{(2n)!}
+$$</p>
+<p><img loading="lazy" src="W15-S1%20Power%20Series%20%28II%29%20d165bfc92d2141b6aef9e3ba1831fff1/Untitled%201.png" alt="Untitled"  />
+</p>
+<h3 id="example-4-a-function-f-whose-taylor-series-converges-at--every-x-but-converges-to-fx-only-at-x0">Example 4. A Function $f$ Whose Taylor Series Converges at  Every $x$ but Converges to $f(x)$ Only at $x=0$<a hidden class="anchor" aria-hidden="true" href="#example-4-a-function-f-whose-taylor-series-converges-at--every-x-but-converges-to-fx-only-at-x0">#</a></h3>
+<p>It can be shown that</p>
+<p>$$
+f(x) = \begin{cases}0, &amp; x=0\ e^{-1/x^2}, &amp; x\neq 0 \end{cases}
+$$</p>
+<p>has derivative of all orders at $x=0$ and that $f^{(n)}(0) = 0$ for all $n$. This means the Taylor series generated by $f$ at $x=0$ is $0$. But the function is only equal to $0$ at $x=0$. Which means the Taylor series converges everywhere but only be equal to $f$ at $x=0$.</p>
+<p><img loading="lazy" src="W15-S1%20Power%20Series%20%28II%29%20d165bfc92d2141b6aef9e3ba1831fff1/Untitled%202.png" alt="Untitled"  />
+</p>
+<h2 id="two-questions">Two Questions<a hidden class="anchor" aria-hidden="true" href="#two-questions">#</a></h2>
+<ol>
+<li>For what values of $x$ can we normally expect a Taylor series converges to its generating functions?</li>
+<li>How accurately do a function’s Taylor polynomial approximate the function on a given interval?</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/power-series/">power series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/radius/">radius</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/ratio-test/">ratio test</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/taylor-series/"> Taylor series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/maclaurin/">Maclaurin</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/term-by-term-differntiation/">term-by-term differntiation</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/term-by-term-integration/">term-by-term integration</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/multiplication/">multiplication</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
