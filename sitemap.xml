@@ -3,31 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://tigertooth4.github.io/tags/taylor-series/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/convergence/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/converge/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/maclaurin/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/multiplication/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/power-series/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/taylor-polynomial/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w16s1-taylor-and-maclaurin-series/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-06-08T12:28:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/convergence/</loc>
     <lastmod>2022-05-31T15:49:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,11 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/ratio-test/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
     <lastmod>2022-05-31T15:49:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -62,27 +87,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
-    <lastmod>2022-05-31T15:49:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/absolute/</loc>
     <lastmod>2022-05-26T17:51:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
-    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/conditional/</loc>
-    <lastmod>2022-05-26T17:51:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/converge/</loc>
     <lastmod>2022-05-26T17:51:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

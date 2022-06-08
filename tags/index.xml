@@ -6,13 +6,67 @@
     <description>Recent content in Tags on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 May 2022 15:49:34 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 12:28:18 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Taylor series</title>
       <link>http://tigertooth4.github.io/tags/taylor-series/</link>
-      <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/taylor-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calculus2</title>
+      <link>http://tigertooth4.github.io/tags/calculus2/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>converge</title>
+      <link>http://tigertooth4.github.io/tags/converge/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/converge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maclaurin</title>
+      <link>http://tigertooth4.github.io/tags/maclaurin/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/maclaurin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiplication</title>
+      <link>http://tigertooth4.github.io/tags/multiplication/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/multiplication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power series</title>
+      <link>http://tigertooth4.github.io/tags/power-series/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/power-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taylor polynomial</title>
+      <link>http://tigertooth4.github.io/tags/taylor-polynomial/</link>
+      <pubDate>Wed, 08 Jun 2022 12:28:18 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/tags/taylor-polynomial/</guid>
       <description></description>
     </item>
     
@@ -22,33 +76,6 @@
       <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/convergence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maclaurin</title>
-      <link>http://tigertooth4.github.io/tags/maclaurin/</link>
-      <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/maclaurin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>multiplication</title>
-      <link>http://tigertooth4.github.io/tags/multiplication/</link>
-      <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/multiplication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>power series</title>
-      <link>http://tigertooth4.github.io/tags/power-series/</link>
-      <pubDate>Tue, 31 May 2022 15:49:34 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/power-series/</guid>
       <description></description>
     </item>
     
@@ -98,29 +125,11 @@
     </item>
     
     <item>
-      <title>calculus2</title>
-      <link>http://tigertooth4.github.io/tags/calculus2/</link>
-      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/calculus2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>conditional</title>
       <link>http://tigertooth4.github.io/tags/conditional/</link>
       <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/tags/conditional/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>converge</title>
-      <link>http://tigertooth4.github.io/tags/converge/</link>
-      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
-      
-      <guid>http://tigertooth4.github.io/tags/converge/</guid>
       <description></description>
     </item>
     

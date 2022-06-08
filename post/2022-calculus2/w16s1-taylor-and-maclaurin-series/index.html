@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W16-S1 Taylor Series and Maclaurin Series | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="power series, multiplication, taylor series, taylor polynomial,  maclaurin, converge, calculus2" />
+<meta name="description" content="周次: 16 日期: June 8, 2022 节次: 1 In this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w16s1-taylor-and-maclaurin-series/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W16-S1 Taylor Series and Maclaurin Series" />
+<meta property="og:description" content="周次: 16 日期: June 8, 2022 节次: 1 In this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w16s1-taylor-and-maclaurin-series/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-08T12:28:18&#43;08:00" />
+<meta property="article:modified_time" content="2022-06-08T12:28:18&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W16-S1 Taylor Series and Maclaurin Series"/>
+<meta name="twitter:description" content="周次: 16 日期: June 8, 2022 节次: 1 In this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W16-S1 Taylor Series and Maclaurin Series",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w16s1-taylor-and-maclaurin-series/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W16-S1 Taylor Series and Maclaurin Series",
+  "name": "W16-S1 Taylor Series and Maclaurin Series",
+  "description": "周次: 16 日期: June 8, 2022 节次: 1 In this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived",
+  "keywords": [
+    "power series", "multiplication", "taylor series", "taylor polynomial", " maclaurin", "converge", "calculus2"
+  ],
+  "articleBody": "周次: 16 日期: June 8, 2022 节次: 1\nIn this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived from a function really converges to the corresponding function, we have to use the Taylor’s formula and estimate the remainder.\nMultiplication of Power Series Theorem 21. The Series Multiplication Theorem for Power Series If $A(x)=\\sum_{n=0}^\\infty a_n x^n$ and $B(x)=\\sum_{n=0}^\\infty b_n x^n$ converges absolutely for $|x|$$ c_n = \\text{sum of all the coefficients of $n$-th order terms in the multiplication}\\ =a_0 b_n + a_1 b_{n-1} + a_2 b_{n-2} + \\cdots + a_n b_0 = \\sum_{k=0}^n a_k b_{n-k} $$\nthen $\\sum_{n=0}^\\infty c_n x^n$ converges absolutely to $A(x) B(x)$ for $|x|$$ A(x)B(x) = \\left(\\sum_{n=0}^\\infty a_n x^n\\right)\\cdot \\left(\\sum_{n=0}^\\infty b_n x^n\\right) \\underbrace{=}{\\text{important}} \\sum{n=0}^\\infty c_n x^n $$\nExample 7. Multiply the geometric series Given the power series $\\frac1{1-x} = 1 + x + x^2 + \\cdots$, multiplying with itself, one finds the power series form for $\\frac1{(1-x)^2}$, for $|x|§11.8 Taylor and Maclaurin Series The previous section has shown a sum of power series, when treated as a function $f(x)$, will be infinitely differentiable inside the interval of convergence. In this section, we ask the converse question: If a function $f(x)$ is infinitely differentiable, can we generate a power series from it? And if we can, will the generated power series converges to the function $f(x)$? The answer for the first question can be answered in this section.\nSuppose $f(x)$ can be written as the sum of a power series on an interval $(a-R,a+R)$\n$$ f(x) = \\sum_{n=0}^\\infty a_n (x-a)^n = a_0 + a_1(x-a) + a_2 (x-a)^2 + \\cdots $$\nwith a positive radius of convergence $R$. By repeated term-by-term differentiation within the interval of convergence $I$ we obtain\n$$ f'(x) = a_1 + 2 a_2 (x-a) + 3a_3(x-a)^2 + \\cdots \\ f''(x) = 2a_2 + 3\\cdot 2 a_3 (x-a) + 4\\cdots 3 a_4 (x-a)^2 + \\cdots \\ \\vdots \\ f^{(n)}(x) = n! a_n + \\text{a sum of terms with $(x-a)$ as a factor} $$\nSince these equations all hold at $x=a$, we have\n$$ f'(a) = a_1,\\ f''(a) = 2! a_2,\\ \\vdots \\ f^{(n)}(a) = n! a_n $$\nSo if there’s a series converging to $f(x)$, then the coefficients must be\n$$ a_n = \\frac{f^{(n)}(a)}{n!}. $$\nThe series is completely described by $f(x)$\n$$ f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nBut what will happen if we only know that $f(x)$ is an infinitely differentiable function on an interval $I$?\nFor an $x=a\\in I$, we can still generate the series $\\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n$, but we have to study whether this series can converge to $f(x)$ or not. It will be discussed in the next section.\nTaylor and Maclaurin Series Definitions. Taylor Series, Maclaurin Series Let $f$ be a function with derivatives of all orders throughout some interval containing $a$ as an interior point. The Taylor series generated by $f$ at $x=a$ is\n$$ \\sum_{k=0}^\\infty \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nIf $x=0$ is an interior point of the interval, the Taylor series generated by $f$ at $x=0$ is also called a Maclaurin series (generated by $f$) , which is simply\n$$ \\sum_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n. $$\nExample 1. Finding a Taylor Series Find the Taylor series generated by $f(x) = 1/x$ at $a=2$. Where does the series converge to $1/x$ ?\nSolution. The derivatives $f^{(n)}(2) = \\frac{(-1)^n n!}{ 2^{n+1}}$. Therefore the Taylor series is\n$$ \\sum_{n=0}^\\infty \\frac{(-1)^n}{2^{n+1}} (x-2)^n. $$\nIt is a geometric series converges on $|x-2|Example 2. Finding a Maclaurin Series Find the Maclaurin series generated by $f(x) = e^x$.\nSolution. The Maclaurin series generated is\n$$ \\sum_{n=0}^\\infty \\frac{x^n}{n!}. $$\nTaylor Polynomials If the function $f(x)$ has higher order derivatives at $a$, then we can truncate the Taylor series to finite order, resulting in a polynomial function. For example, if $f$ has derivative at $a$, we can truncate the Taylor series to order $1$, ended up with an order $1$ polynomial\n$$ f(a) + f'(a)(x-a) $$\nwhich is just the linear approximation of $f(x)$ at $x=a$, given in the section 3.8. From this point of view, a higher order Taylor polynomial might be a better approximation of $f(x)$.\nDefinition. Taylor Polynomial of Order $n$ (Partial sum of the Taylor Series) Let $f$ be a function with derivatives of order $k=1,2,\\cdots, N$ in some interval containing $a$ as an interior point. Then for any integer $n\\le N$, the Taylor polynomial of order $n$ generated by $f$ at $x=a$ is the polynomial\n$$ P_n(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^n + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n. $$\nNotice. Since the $n$th derivative of $f$ at $a$ maybe $0$, the actual degree for the polynomial might be smaller than $n$. That is why we don’t call $P_n(x)$ a degree $n$ polynomial, but use order instead.\nExample 2. Finding Taylor Polynomials for $e^x$ Find the Taylor polynomials generated by $e^x$ at $x=0.$\nSolution.\nThe order $n$ polynomial is given by $P_n(x) = \\sum_{k=0}^n \\frac{x^k}{k!}$ .\nExample 3. Finding Taylor Polynomial for $\\cos(x)$ Find the Taylor series and Taylor polynomials generated by $\\cos(x)$ at $x=0$.\nSolution.\nThe $n$th derivative for $\\cos(x)$ can be expressed by $\\cos^{(n)}(x) = \\cos(x + \\frac{n\\pi}{2})$. The $n$th derivative at $x=0$ is either $0$ or $(\\pm1)$ depending on the order. The Taylor series is given by\n$$ \\sum_{k=0}^\\infty \\frac{(-1)^k x^{2k}}{(2k)!}=1-\\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} +\\cdots $$\nAnd the order $2n$ and $2n+1$ Taylor polynomials (they are identical) are given by\n$$ P_{2n}(x) = 1- \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots + \\frac{(-1)^n x^{2n}}{(2n)!} $$\nExample 4. A Function $f$ Whose Taylor Series Converges at Every $x$ but Converges to $f(x)$ Only at $x=0$ It can be shown that\n$$ f(x) = \\begin{cases}0, \u0026 x=0\\ e^{-1/x^2}, \u0026 x\\neq 0 \\end{cases} $$\nhas derivative of all orders at $x=0$ and that $f^{(n)}(0) = 0$ for all $n$. This means the Taylor series generated by $f$ at $x=0$ is $0$. But the function is only equal to $0$ at $x=0$. Which means the Taylor series converges everywhere but only be equal to $f$ at $x=0$.\nTwo Questions  For what values of $x$ can we normally expect a Taylor series converges to its generating functions? How accurately do a function’s Taylor polynomial approximate the function on a given interval?  § 11.9 Convergence of Taylor Series; Error Estimates Two questions from the previous section:\n When does a Taylor series converge to its generating function? How accurately do a function’s Taylor polynomial approximate the function on a given interval?  Taylor’s Theorem Theorem 22. Taylor’s Theorem and Taylor’s Formula If $f$ and its first $n$ derivatives $f'$, $f''$, $\\cdots$, $f^{(n)}$ are continuous on the closed interval between $a$ and $b$, and $f^{(n)}$ is differentiable on the open interval between $a$ and $b$, then for any $x\\in[a,b]$, there exists a number $c$ between $a$ and $b$ such that\n$$ \\begin{equation}f(x)= f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n + R_n(x)\\end{equation} $$\nwhere the remainder $R_n(x)$ is\n$$ R_n(x) = \\frac{f^{(n)(x)}}{(n+1)!}(x-a)^{n+1},\\quad \\text{for some $c$ between $a$ and $x$}. $$\nFor any value of $n$ we want, the equation gives both a polynomial approximation of $f$ of that order and a formula for the error involved in using that approximation over the interval $I$.\nThe equation (1) is called Taylor’s formula. The function $R_n(x)$ is called the remainder of order $n$ or the error term for the approximation of $f$ by $P_n(x)$ over $I.$\nIf the remainder $R_n(x)\\to 0$ as $n\\to \\infty$ for all $x\\in I$, we say that the Taylor series generated by $f$ at $x=a$ converges to $f$ on $I$, and we write\n$$ f(x) = \\sum_{k=0}^\\infty \\frac{f^{(k)}(a)}{k!}(x-a)^k. $$\nExample 1. The Taylor Series for $e^x$ Revisited The Taylor series generated by $f(x) = e^x$ at $x=0$ converges to $f(x)$ for every real value of $x$.\nSolution. Writing down the Taylor’s formula for $e^x$ at $x=0$ we find\n$$ e^x = 1 + x + \\frac{x^2}{2!} + \\cdots +\\frac{x^n}{n!} + R_n(x) $$\nwhere\n$$ R_n(x) = \\frac{e^c}{(n+1)!} x^{n+1}, \\quad \\text{for some $c$ between $0$ and $x$}. $$\nAn estimation shows\n$$ |R_n(x)|\\le \\frac{e^{|x|} |x|^{n+1}}{(n+1)!} $$\nTherefore, for any $x$, $\\lim_{n\\to\\infty} R_n(x) = 0.$ Thus the series converges to $e^x$ for every $x$.\n$$ e^x = \\sum_{k=0}^\\infty \\frac{x^k}{k!}. $$\nExample 2. The Taylor Series for $\\sin(x)$ at $x=0$ The Taylor series for $\\sin(x)$ at $x=0$ converges for all $x$.\nSolution.\nThe $n$th order derivative for $\\sin(x)$ can be written as\n$$ \\sin^{(n)}(x) = \\sin(x+\\frac{n\\pi}{2}). $$\nSo\n$$ \\sin^{(n)}(0) = \\begin{cases} 0, \u0026 \\text{$n=2k$} \\ (-1)^k, \u0026 \\text{$n=2k+1$}\\end{cases}. $$\nThe series has only odd-powered terms and, Taylor’s Theorem gives\n$$ \\sin(x) = x-\\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots + \\frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2k+1}(x), $$\nwhere\n$$ |R_{2k+1}(x)| = \\left|\\frac{\\sin^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}\\right|\\le \\frac{x^{2k+1}}{(2k+1)!}\\to 0 $$\nEstimating the Remainder Theorem 23. The Remainder Estimation Theorem If there is a positive constant $M$ such that $|f^{(n+1)}(t)|\\le M$ for all $t\\in(x,a)$, then the remainder term $R_n(x)$ in Taylor’s Theorem satisfies the inequality\n$$ |R_n(x)|\\le M \\frac{|x-a|^{n+1}}{(n+1)!}. $$\nIf this condition holds for every $n$ and the other conditions of Taylor’s Theorem are satisfied by $f$, then the series converges to $f(x)$.\nExample 3. The Taylor Series for $\\cos(x)$ at $x=0$ Revisited. Show the Taylor Series for $\\cos(x)$ at $x=0$ converges to $\\cos(x)$ for every value of $x$.\nSolution.\nThe $n$th derivative for $\\cos(x)$ at $x=0$ is\n$$ \\cos^{(n)}(0) =\\cos(0+\\frac{n\\pi}{2})= \\begin{cases}(-1)^{k}\u0026 n=2k \\ 0 \u0026 n=2k+1\\end{cases}. $$\nThe Taylor’s formula shows that\n$$ \\cos(x) = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots + \\frac{(-1)^{k} x^{2k}}{(2k)!} + R_{2k}(x) $$\nwhere $R_{2k}(x)= \\frac{\\cos^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}$. Since $\\cos(x)$ is bounded, the Remainder Esitmation Theorem with $M=1$ gives\n$$ |R_{2k}(x)|\\le \\frac{|x|^{2k+1}}{(2k+1)!}. $$\nFor every value of $x$, $R_{2k}\\to 0$. Therefore the series converges to $\\cos(x)$ for every value of $x$.\n$$ \\cos(x) = \\sum_{k=0}^\\infty \\frac{(-1)^k x^{2k}}{(2k)!} = 1-\\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\cdots $$\nVarious Ways to Find the Taylor Series Example 4. Finding a Taylor Series by Substitution Find the Taylor series for $\\cos(2x)$ at $x=0.$\nSolution. By substituting $2x$ for $x$ in the Taylor series for $\\cos(x)$, we can find the Taylor series for $\\cos(2x).$\n$$ \\cos(2x) = 1-\\frac{(2x)^2}{2!} + \\frac{(2x)^4}{4!} -\\frac{(2x)^6}{6!} + \\cdots= \\sum_{k=0}^\\infty (-1)^k \\frac{2^{2k}x^{2k}}{(2k)!}. $$\nThis equality holds for $-\\inftyQuestion. Why the series is in fact the Taylor series for $\\cos(2x)$.\nExample 5. Finding a Taylor Series by Multiplication Find the Taylor series for $x\\sin(x)$ at $x=0$.\nSolution. By multiplying the Taylor series for $\\sin(x)$ with $x$,\n$$ x\\sin(x) = x^2 - \\frac{x^4}{3!} + \\frac{x^6}{5!} - \\frac{x^7}{6!} + \\cdots. $$\nTruncation Error Example 6. Calculate $e$ with an error of less than $10^{-6}$ Solution.\nAccording to the Taylor series,\n$$ e = 1 + \\frac1{1!} + \\frac{1^2}{2!} + \\frac{1^3}{3!} + \\cdots $$\nThe first several terms on the right hand side will give a good approximation for $e$. So to estimate the approximation error, we use the Taylor’s formula\n$$ e = 1 + 1 + \\frac1{2!} + \\frac1{3!} + \\cdots + \\frac1{n!} + R_n(1). $$\nWith $R_n(1) = e^c \\frac{1}{(n+1)!}$, for some $c\\in(0,1).$ Assuming we know that $eBy experiment we find that $3/10! $$ e= 1 + 1 + \\frac12 + \\frac1{3!} + \\cdots + \\frac1{9!} \\approx 2.718282. $$\nExample. How Accurate It Is to Take $\\cos(10^\\circ) \\approx 1-\\frac{(\\pi/18)^2}{2!}=0.984769129$ Solution.\nAccording to the Taylor’s formula\n$$ \\cos(x) = 1- \\frac{x^2}{2!} + \\frac{\\cos^{(3)}(c) x^3}{3!} $$\nThe remainder has an absolute value less than $x^3/3!$. In the case of $x=\\pi/18Example 7. For what values of $x$ can we replace $\\sin(x)$ by $x-\\frac{x^3}{3!}$ with an error of magnitude no greater than $3\\times 10^{-4}$? Solution.\nSince the Taylor series for $\\sin(x)$ is an alternating series, we can estimate the error in truncation by the Alternating Series Estimation Theorem\n$$ \\sin(x) = x - \\frac{x^3}{3!} {\\color{red}\\bigg| } + \\frac{x^5}{5!} - \\cdots $$\nAfter $x^3/3!$ the error is no greater than $|x|^5/120$. Therefore the error will be less than $3\\times 10^{-4}$ if\n$$ \\frac{|x|^5}{120}Notice that the alternating property shows that the truncation $x-\\frac{x^3}{3!}$ is an underestimation for $\\sin(x)$ when $x0$.\nHow the estimate given by the Remainder Estimation Theorem compares with the one just obtained from the Alternating Series Estimation Theorem?\n$$ \\sin(x) = x -\\frac{x^3}{3!} + R_3(x) $$\nThe remainder $| R_3(x) |\\le \\frac{|x|^4}{4!} = \\frac{|x|^4}{24}.$ It is not as good as obtained from the Alternating Series Estimation. But, if considered the $x^4$ term has the coefficient $0$, the remainder is actually of an order $4$, which is $|R_4(x)| = \\frac{\\cos^{(5)}(c)}{5!}|x^5|$, and it gives the same estimation as the Alternating Estimation Theorem.\nCombining Taylor Series If $f(x)$ and $g(x)$ both have convergent Taylor series on an interval $I$, then the sum $f(x)+g(x)$ has a Taylor series obtained by combining the Taylor series for $f(x)$ and $g(x)$. The Taylor series for $\\sin(x) + \\cos(x)$ is the term-by-term sum of the Taylor series for $\\sin(x)$ and $\\cos(x)$.\nA glimpse to the Euler’s Identity Definition. For any real number $x$,\n$$ e^{ix} = \\cos x + i\\sin x, \\quad i=\\sqrt{-1}. $$\nSince\n$$ e^{ix} = 1 + \\frac{ix}{1!} + \\frac{(ix)^2}{2!} + \\frac{(ix)^3}{3!} + \\frac{(ix)^4}{4!} + \\frac{(ix)^5}{5!} + \\frac{(ix)^6}{6!}\\cdots \\= \\left(1-\\frac{x^2}{2!} + \\frac{x^4}{4!} -\\cdots\\right) + i\\left(x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots\\right)\\ = \\cos (x) + i\\sin(x) $$\n",
+  "wordCount" : "2408",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-06-08T12:28:18+08:00",
+  "dateModified": "2022-06-08T12:28:18+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w16s1-taylor-and-maclaurin-series/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W16-S1 Taylor Series and Maclaurin Series
+    </h1>
+    <div class="post-meta"><span title='2022-06-08 12:28:18 +0800 CST'>June 8, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 16
+日期: June 8, 2022
+节次: 1</p>
+<p>In this lecture, we show that the convergent power series represents a function $f(x)$. The coefficient of the power series can be presented in turn by the function. This opens a new page for the application of power series, for we can associate power series to any infinitely differentiable functions. To see the power series derived from a function really converges to the corresponding function, we have to use the Taylor’s formula and estimate the remainder.</p>
+<h1 id="multiplication-of-power-series">Multiplication of Power Series<a hidden class="anchor" aria-hidden="true" href="#multiplication-of-power-series">#</a></h1>
+<h2 id="theorem-21-the-series-multiplication-theorem-for-power-series">Theorem 21. The Series Multiplication Theorem for Power Series<a hidden class="anchor" aria-hidden="true" href="#theorem-21-the-series-multiplication-theorem-for-power-series">#</a></h2>
+<p>If $A(x)=\sum_{n=0}^\infty a_n x^n$ and $B(x)=\sum_{n=0}^\infty b_n x^n$ converges absolutely for $|x|&lt;R$ and</p>
+<p>$$
+c_n = \text{sum of all the coefficients of $n$-th order terms in the multiplication}\ =a_0 b_n + a_1 b_{n-1} + a_2 b_{n-2} + \cdots + a_n b_0 = \sum_{k=0}^n a_k b_{n-k}
+$$</p>
+<p>then $\sum_{n=0}^\infty c_n x^n$ converges absolutely to $A(x) B(x)$ for $|x|&lt;R$</p>
+<p>$$
+A(x)B(x) = \left(\sum_{n=0}^\infty a_n x^n\right)\cdot \left(\sum_{n=0}^\infty b_n x^n\right) \underbrace{=}<em>{\text{important}} \sum</em>{n=0}^\infty c_n x^n
+$$</p>
+<h3 id="example-7-multiply-the-geometric-series">Example 7. Multiply the geometric series<a hidden class="anchor" aria-hidden="true" href="#example-7-multiply-the-geometric-series">#</a></h3>
+<p>Given the power series $\frac1{1-x}  = 1 + x + x^2 + \cdots$, multiplying with itself, one finds the power series form for $\frac1{(1-x)^2}$, for $|x|&lt;1$.</p>
+<h1 id="118-taylor-and-maclaurin--series">§11.8 Taylor and Maclaurin  Series<a hidden class="anchor" aria-hidden="true" href="#118-taylor-and-maclaurin--series">#</a></h1>
+<p>The previous section has shown a sum of power series, when treated as a function $f(x)$, will be infinitely differentiable inside the interval of convergence. In this section, we ask the converse question: If a function $f(x)$ is infinitely differentiable, can we generate a power series from it? And if we can, will the generated power series converges to the function $f(x)$? The answer for the first question can be answered in this section.</p>
+<p>Suppose $f(x)$ can be written as the sum of a power series on an interval $(a-R,a+R)$</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty a_n (x-a)^n = a_0 + a_1(x-a) + a_2 (x-a)^2 + \cdots
+$$</p>
+<p>with a positive radius of convergence $R$. By repeated term-by-term differentiation within the interval of convergence $I$ we obtain</p>
+<p>$$
+f'(x) = a_1 + 2 a_2 (x-a) + 3a_3(x-a)^2 + \cdots \ f''(x) = 2a_2 + 3\cdot 2 a_3 (x-a) + 4\cdots 3 a_4 (x-a)^2 + \cdots \ \vdots \ f^{(n)}(x) = n! a_n + \text{a sum of terms with $(x-a)$ as a factor}
+$$</p>
+<p>Since these equations all hold at $x=a$, we have</p>
+<p>$$
+f'(a) = a_1,\ f''(a) = 2! a_2,\ \vdots \ f^{(n)}(a) = n! a_n
+$$</p>
+<p>So if there’s a series converging to $f(x)$, then the coefficients must be</p>
+<p>$$
+a_n = \frac{f^{(n)}(a)}{n!}.
+$$</p>
+<p>The series is completely described by $f(x)$</p>
+<p>$$
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<p>But what will happen if we only know that $f(x)$ is an infinitely differentiable function on an interval $I$?</p>
+<p>For an $x=a\in I$, we can still generate the series $\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n$, but we have to study whether this series can converge to $f(x)$ or not. It will be discussed in the next section.</p>
+<h1 id="taylor-and-maclaurin-series">Taylor and Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#taylor-and-maclaurin-series">#</a></h1>
+<h2 id="definitions-taylor-series-maclaurin-series">Definitions. Taylor Series, Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#definitions-taylor-series-maclaurin-series">#</a></h2>
+<p>Let $f$ be a function with derivatives of all orders throughout some interval containing $a$ as an interior point. The <strong>Taylor series generated by $f$ at $x=a$ is</strong></p>
+<p>$$
+\sum_{k=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<p>If $x=0$ is an interior point of the interval, the <strong>Taylor series generated by $f$ at $x=0$  is also called a Maclaurin series (generated by $f$) , which is simply</strong></p>
+<p>$$
+\sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
+$$</p>
+<h3 id="example-1-finding-a-taylor-series">Example 1. Finding a Taylor Series<a hidden class="anchor" aria-hidden="true" href="#example-1-finding-a-taylor-series">#</a></h3>
+<p>Find the Taylor series generated by $f(x) = 1/x$ at $a=2$. Where does the series converge to $1/x$ ?</p>
+<p><strong>Solution.</strong> The derivatives $f^{(n)}(2) = \frac{(-1)^n n!}{ 2^{n+1}}$. Therefore the Taylor series is</p>
+<p>$$
+\sum_{n=0}^\infty \frac{(-1)^n}{2^{n+1}} (x-2)^n.
+$$</p>
+<p>It is a geometric series converges on $|x-2|&lt;2$, with the sum $\frac{1/2}{1+\frac{(x-2)}{2}} = \frac1{x}$. Therefore the Taylor series converges to $1/x$ on $(0,4)$.</p>
+<h3 id="example-2-finding-a-maclaurin-series">Example 2. Finding a Maclaurin Series<a hidden class="anchor" aria-hidden="true" href="#example-2-finding-a-maclaurin-series">#</a></h3>
+<p>Find the Maclaurin series generated by $f(x) = e^x$.</p>
+<p><strong>Solution.</strong> The Maclaurin series generated is</p>
+<p>$$
+\sum_{n=0}^\infty \frac{x^n}{n!}.
+$$</p>
+<h1 id="taylor-polynomials">Taylor Polynomials<a hidden class="anchor" aria-hidden="true" href="#taylor-polynomials">#</a></h1>
+<p>If the function $f(x)$ has higher order derivatives at $a$, then we can truncate the Taylor series to finite order, resulting in a polynomial function. For example, if $f$ has derivative at $a$, we can truncate the Taylor series to order $1$, ended up with an order $1$ polynomial</p>
+<p>$$
+f(a) + f'(a)(x-a)
+$$</p>
+<p>which is just the linear approximation of $f(x)$ at $x=a$, given in the section 3.8. From this point of view, a higher order Taylor polynomial might be a better approximation of $f(x)$.</p>
+<h2 id="definition-taylor-polynomial-of-order-n-partial-sum-of-the-taylor-series">Definition. Taylor Polynomial of Order $n$ (Partial sum of the Taylor Series)<a hidden class="anchor" aria-hidden="true" href="#definition-taylor-polynomial-of-order-n-partial-sum-of-the-taylor-series">#</a></h2>
+<p>Let $f$ be a function with derivatives of order $k=1,2,\cdots, N$ in some interval containing $a$ as an interior point. Then for any integer $n\le N$, the <strong>Taylor polynomial of order $n$ generated by $f$ at $x=a$ is the polynomial</strong></p>
+<p>$$
+P_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^n + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n.
+$$</p>
+<h3 id="notice">Notice.<a hidden class="anchor" aria-hidden="true" href="#notice">#</a></h3>
+<p>Since the $n$th derivative of $f$ at $a$ maybe $0$, the actual degree for the polynomial might be smaller than $n$. That is why we don’t call $P_n(x)$ a <strong>degree</strong> $n$ polynomial, but use <strong>order</strong> instead.</p>
+<h3 id="example-2-finding-taylor-polynomials-for-ex">Example 2. Finding Taylor Polynomials for $e^x$<a hidden class="anchor" aria-hidden="true" href="#example-2-finding-taylor-polynomials-for-ex">#</a></h3>
+<p>Find the Taylor polynomials generated by $e^x$ at $x=0.$</p>
+<p><strong>Solution.</strong></p>
+<p>The order $n$ polynomial is given by $P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}$ .</p>
+<p><img loading="lazy" src="W16-S1%20Taylor%20Series%20and%20Maclaurin%20Series%205c2e9a09f4a74422ac04f437955279a4/Untitled.png" alt="Untitled"  />
+</p>
+<h3 id="example-3-finding-taylor-polynomial-for-cosx">Example 3. Finding Taylor Polynomial for $\cos(x)$<a hidden class="anchor" aria-hidden="true" href="#example-3-finding-taylor-polynomial-for-cosx">#</a></h3>
+<p>Find the Taylor series and Taylor polynomials generated by $\cos(x)$ at $x=0$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th derivative for $\cos(x)$ can be expressed by $\cos^{(n)}(x) = \cos(x + \frac{n\pi}{2})$. The $n$th derivative at $x=0$ is either $0$ or $(\pm1)$ depending on the order. The Taylor series is given by</p>
+<p>$$
+\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}=1-\frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} +\cdots
+$$</p>
+<p>And the order $2n$ and $2n+1$ Taylor polynomials (they are identical) are given by</p>
+<p>$$
+P_{2n}(x) = 1- \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^n x^{2n}}{(2n)!}
+$$</p>
+<p><img loading="lazy" src="W16-S1%20Taylor%20Series%20and%20Maclaurin%20Series%205c2e9a09f4a74422ac04f437955279a4/Untitled%201.png" alt="Untitled"  />
+</p>
+<h3 id="example-4-a-function-f-whose-taylor-series-converges-at--every-x-but-converges-to-fx-only-at-x0">Example 4. A Function $f$ Whose Taylor Series Converges at  Every $x$ but Converges to $f(x)$ Only at $x=0$<a hidden class="anchor" aria-hidden="true" href="#example-4-a-function-f-whose-taylor-series-converges-at--every-x-but-converges-to-fx-only-at-x0">#</a></h3>
+<p>It can be shown that</p>
+<p>$$
+f(x) = \begin{cases}0, &amp; x=0\ e^{-1/x^2}, &amp; x\neq 0 \end{cases}
+$$</p>
+<p>has derivative of all orders at $x=0$ and that $f^{(n)}(0) = 0$ for all $n$. This means the Taylor series generated by $f$ at $x=0$ is $0$. But the function is only equal to $0$ at $x=0$. Which means the Taylor series converges everywhere but only be equal to $f$ at $x=0$.</p>
+<p><img loading="lazy" src="W16-S1%20Taylor%20Series%20and%20Maclaurin%20Series%205c2e9a09f4a74422ac04f437955279a4/Untitled%202.png" alt="Untitled"  />
+</p>
+<h2 id="two-questions">Two Questions<a hidden class="anchor" aria-hidden="true" href="#two-questions">#</a></h2>
+<ol>
+<li>For what values of $x$ can we normally expect a Taylor series converges to its generating functions?</li>
+<li>How accurately do a function’s Taylor polynomial approximate the function on a given interval?</li>
+</ol>
+<h1 id="-119-convergence-of-taylor-series-error-estimates">§ 11.9 Convergence of Taylor Series; Error Estimates<a hidden class="anchor" aria-hidden="true" href="#-119-convergence-of-taylor-series-error-estimates">#</a></h1>
+<p>Two questions from the previous section:</p>
+<ol>
+<li>When does a Taylor series converge to its generating function?</li>
+<li>How accurately do a function’s Taylor polynomial approximate the function on a given interval?</li>
+</ol>
+<h1 id="taylors-theorem">Taylor’s Theorem<a hidden class="anchor" aria-hidden="true" href="#taylors-theorem">#</a></h1>
+<h2 id="theorem-22-taylors-theorem-and-taylors-formula">Theorem 22. Taylor’s Theorem and Taylor’s Formula<a hidden class="anchor" aria-hidden="true" href="#theorem-22-taylors-theorem-and-taylors-formula">#</a></h2>
+<p>If $f$ and its first $n$ derivatives $f'$, $f''$, $\cdots$, $f^{(n)}$ are continuous on the closed interval between $a$ and $b$, and $f^{(n)}$ is differentiable on the open interval between $a$ and $b$, then for any $x\in[a,b]$,  there exists a number $c$ between $a$ and $b$ such that</p>
+<p>$$
+\begin{equation}f(x)= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n + R_n(x)\end{equation}
+$$</p>
+<p>where the remainder $R_n(x)$ is</p>
+<p>$$
+R_n(x) = \frac{f^{(n)(x)}}{(n+1)!}(x-a)^{n+1},\quad \text{for some $c$ between $a$ and $x$}.
+$$</p>
+<p>For any value of $n$ we want, the equation gives both a polynomial approximation of $f$ of that order and a formula for the error involved in using that approximation over the interval $I$.</p>
+<p>The equation (1) is called <strong>Taylor’s formula.</strong> The function $R_n(x)$ is called the <strong>remainder of order $n$</strong> or the <strong>error term</strong> for the approximation of $f$ by $P_n(x)$ over $I.$</p>
+<p>If the remainder $R_n(x)\to 0$ as $n\to \infty$ for all $x\in I$, we say that the Taylor series generated by $f$ at $x=a$ <strong>converges</strong> to $f$ on $I$, and we write</p>
+<p>$$
+f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x-a)^k.
+$$</p>
+<h3 id="example-1-the-taylor-series-for-ex-revisited">Example 1. The Taylor Series for $e^x$ Revisited<a hidden class="anchor" aria-hidden="true" href="#example-1-the-taylor-series-for-ex-revisited">#</a></h3>
+<p>The Taylor series generated by $f(x) = e^x$ at $x=0$ converges to $f(x)$ for every real value of $x$.</p>
+<p><strong>Solution.</strong>  Writing down the Taylor’s formula for $e^x$ at $x=0$ we find</p>
+<p>$$
+e^x = 1 + x + \frac{x^2}{2!} + \cdots +\frac{x^n}{n!} + R_n(x)
+$$</p>
+<p>where</p>
+<p>$$
+R_n(x) = \frac{e^c}{(n+1)!} x^{n+1}, \quad \text{for some $c$ between $0$ and $x$}.
+$$</p>
+<p>An estimation shows</p>
+<p>$$
+|R_n(x)|\le \frac{e^{|x|} |x|^{n+1}}{(n+1)!}
+$$</p>
+<p>Therefore, for any $x$, $\lim_{n\to\infty} R_n(x) = 0.$ Thus the series converges to $e^x$ for every $x$.</p>
+<p>$$
+e^x = \sum_{k=0}^\infty \frac{x^k}{k!}.
+$$</p>
+<h3 id="example-2-the-taylor-series-for-sinx-at-x0">Example 2. The Taylor Series for $\sin(x)$ at $x=0$<a hidden class="anchor" aria-hidden="true" href="#example-2-the-taylor-series-for-sinx-at-x0">#</a></h3>
+<p>The Taylor series for $\sin(x)$ at $x=0$ converges for all $x$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th order derivative for $\sin(x)$ can be written as</p>
+<p>$$
+\sin^{(n)}(x) = \sin(x+\frac{n\pi}{2}).
+$$</p>
+<p>So</p>
+<p>$$
+\sin^{(n)}(0) = \begin{cases} 0, &amp; \text{$n=2k$} \ (-1)^k, &amp; \text{$n=2k+1$}\end{cases}.
+$$</p>
+<p>The series has only odd-powered terms and, Taylor’s Theorem gives</p>
+<p>$$
+\sin(x) = x-\frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + \frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2k+1}(x),
+$$</p>
+<p>where</p>
+<p>$$
+|R_{2k+1}(x)| = \left|\frac{\sin^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}\right|\le \frac{x^{2k+1}}{(2k+1)!}\to 0
+$$</p>
+<h2 id="estimating-the-remainder">Estimating the Remainder<a hidden class="anchor" aria-hidden="true" href="#estimating-the-remainder">#</a></h2>
+<h2 id="theorem-23-the-remainder-estimation-theorem">Theorem 23. The Remainder Estimation Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-23-the-remainder-estimation-theorem">#</a></h2>
+<p>If there is a positive constant $M$ such that $|f^{(n+1)}(t)|\le M$ for all $t\in(x,a)$, then the remainder term $R_n(x)$ in Taylor’s Theorem satisfies the inequality</p>
+<p>$$
+|R_n(x)|\le M \frac{|x-a|^{n+1}}{(n+1)!}.
+$$</p>
+<p>If this condition holds for every $n$ and the other conditions of Taylor’s Theorem are satisfied by $f$, then the series converges to $f(x)$.</p>
+<h3 id="example-3-the-taylor-series-for-cosx-at-x0-revisited">Example 3. The Taylor Series for $\cos(x)$ at $x=0$ Revisited.<a hidden class="anchor" aria-hidden="true" href="#example-3-the-taylor-series-for-cosx-at-x0-revisited">#</a></h3>
+<p>Show the Taylor Series for $\cos(x)$ at $x=0$ converges to $\cos(x)$ for every value of $x$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th derivative for $\cos(x)$ at $x=0$ is</p>
+<p>$$
+\cos^{(n)}(0) =\cos(0+\frac{n\pi}{2})= \begin{cases}(-1)^{k}&amp;  n=2k \ 0 &amp; n=2k+1\end{cases}.
+$$</p>
+<p>The Taylor’s formula shows that</p>
+<p>$$
+\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^{k} x^{2k}}{(2k)!} + R_{2k}(x)
+$$</p>
+<p>where $R_{2k}(x)= \frac{\cos^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}$. Since $\cos(x)$ is bounded, the Remainder Esitmation Theorem with $M=1$ gives</p>
+<p>$$
+|R_{2k}(x)|\le \frac{|x|^{2k+1}}{(2k+1)!}.
+$$</p>
+<p>For every value of $x$, $R_{2k}\to 0$. Therefore the series converges to $\cos(x)$ for every value of $x$.</p>
+<p>$$
+\cos(x) = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!} = 1-\frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+$$</p>
+<h2 id="various-ways-to-find-the-taylor-series">Various Ways to Find the Taylor Series<a hidden class="anchor" aria-hidden="true" href="#various-ways-to-find-the-taylor-series">#</a></h2>
+<h3 id="example-4-finding-a-taylor-series-by-substitution">Example 4. Finding a Taylor Series by Substitution<a hidden class="anchor" aria-hidden="true" href="#example-4-finding-a-taylor-series-by-substitution">#</a></h3>
+<p>Find the Taylor series for $\cos(2x)$  at $x=0.$</p>
+<p><strong>Solution.</strong> By substituting $2x$ for $x$ in the Taylor series for $\cos(x)$, we can find the Taylor series for $\cos(2x).$</p>
+<p>$$
+\cos(2x) = 1-\frac{(2x)^2}{2!} + \frac{(2x)^4}{4!} -\frac{(2x)^6}{6!} + \cdots= \sum_{k=0}^\infty (-1)^k \frac{2^{2k}x^{2k}}{(2k)!}.
+$$</p>
+<p>This equality holds for $-\infty&lt;2x&lt;+\infty$, so the newly created series converges for all $x$.</p>
+<p><strong>Question.</strong> Why the series is in fact the Taylor series for $\cos(2x)$.</p>
+<h3 id="example-5-finding-a-taylor-series-by-multiplication">Example 5. Finding a Taylor Series by Multiplication<a hidden class="anchor" aria-hidden="true" href="#example-5-finding-a-taylor-series-by-multiplication">#</a></h3>
+<p>Find the Taylor series for $x\sin(x)$ at $x=0$.</p>
+<p><strong>Solution.</strong> By multiplying the Taylor series for $\sin(x)$ with $x$,</p>
+<p>$$
+x\sin(x) = x^2 - \frac{x^4}{3!} + \frac{x^6}{5!} - \frac{x^7}{6!} + \cdots.
+$$</p>
+<h2 id="truncation-error">Truncation Error<a hidden class="anchor" aria-hidden="true" href="#truncation-error">#</a></h2>
+<h3 id="example-6-calculate-e-with-an-error-of-less-than-10-6">Example 6. Calculate $e$ with an error of less than $10^{-6}$<a hidden class="anchor" aria-hidden="true" href="#example-6-calculate-e-with-an-error-of-less-than-10-6">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>According to the Taylor series,</p>
+<p>$$
+e = 1 + \frac1{1!} + \frac{1^2}{2!} + \frac{1^3}{3!} + \cdots
+$$</p>
+<p>The first several terms on the right hand side will give a good approximation for $e$. So to estimate the approximation error, we use the Taylor’s formula</p>
+<p>$$
+e = 1 + 1 + \frac1{2!}  + \frac1{3!} + \cdots + \frac1{n!} + R_n(1).
+$$</p>
+<p>With $R_n(1) = e^c \frac{1}{(n+1)!}$, for some $c\in(0,1).$ Assuming we know that $e&lt;3$, then the remainder is less than $3/(n+1)!$.</p>
+<p>By experiment we find that $3/10! &lt; 10^{-6}.$ Thus we should take $n$ to be at least $9$. With an error of less than $10^{-6}$.</p>
+<p>$$
+e= 1 + 1 + \frac12 + \frac1{3!} + \cdots + \frac1{9!} \approx 2.718282.
+$$</p>
+<h3 id="example-how-accurate-it-is-to-take-cos10circ-approx-1-fracpi18220984769129">Example. How Accurate It Is to Take $\cos(10^\circ) \approx 1-\frac{(\pi/18)^2}{2!}=0.984769129$<a hidden class="anchor" aria-hidden="true" href="#example-how-accurate-it-is-to-take-cos10circ-approx-1-fracpi18220984769129">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>According to the Taylor’s formula</p>
+<p>$$
+\cos(x) = 1- \frac{x^2}{2!} + \frac{\cos^{(3)}(c) x^3}{3!}
+$$</p>
+<p>The remainder has an absolute value less than $x^3/3!$. In the case of $x=\pi/18&lt; 4/18 &lt;1/4$. The error will be less than $\frac{1}{4^3 3!}\approx 0.0026.$</p>
+<h3 id="example-7-for-what-values-of-x-can-we-replace-sinx-by-x-fracx33-with-an-error-of-magnitude-no-greater-than-3times-10-4">Example 7. For what values of $x$ can we replace $\sin(x)$ by $x-\frac{x^3}{3!}$ with an error of magnitude no greater than $3\times 10^{-4}$?<a hidden class="anchor" aria-hidden="true" href="#example-7-for-what-values-of-x-can-we-replace-sinx-by-x-fracx33-with-an-error-of-magnitude-no-greater-than-3times-10-4">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>Since the Taylor series for $\sin(x)$ is an alternating series, we can estimate the error in truncation by the Alternating Series Estimation Theorem</p>
+<p>$$
+\sin(x) = x - \frac{x^3}{3!} {\color{red}\bigg| } + \frac{x^5}{5!} - \cdots
+$$</p>
+<p>After $x^3/3!$ the error is no greater than $|x|^5/120$. Therefore the error will be less than $3\times 10^{-4}$ if</p>
+<p>$$
+\frac{|x|^5}{120}&lt; 3\times 10^{-4} \quad \text{or} \quad |x|&lt; \sqrt[5]{360\times 10^{-4}} \approx 0.514.
+$$</p>
+<p>Notice that the alternating property shows that the truncation $x-\frac{x^3}{3!}$  is an underestimation for $\sin(x)$ when $x&gt;0$.</p>
+<p><img loading="lazy" src="W16-S1%20Taylor%20Series%20and%20Maclaurin%20Series%205c2e9a09f4a74422ac04f437955279a4/Untitled%203.png" alt="Untitled"  />
+</p>
+<p>How the estimate given by the Remainder Estimation Theorem compares with the one just obtained from the Alternating Series Estimation Theorem?</p>
+<p>$$
+\sin(x) = x -\frac{x^3}{3!} + R_3(x)
+$$</p>
+<p>The remainder $| R_3(x) |\le \frac{|x|^4}{4!} = \frac{|x|^4}{24}.$ It is not as good as obtained from the Alternating Series Estimation. But, if considered the $x^4$ term has the coefficient $0$, the remainder is actually of an order $4$, which is $|R_4(x)| = \frac{\cos^{(5)}(c)}{5!}|x^5|$, and it gives the same estimation as the Alternating Estimation Theorem.</p>
+<h2 id="combining-taylor-series">Combining Taylor Series<a hidden class="anchor" aria-hidden="true" href="#combining-taylor-series">#</a></h2>
+<p>If $f(x)$ and $g(x)$ both have convergent Taylor series on an interval $I$, then the sum $f(x)+g(x)$ has a Taylor series obtained by combining the Taylor series for $f(x)$ and $g(x)$. The Taylor series for $\sin(x) + \cos(x)$ is the term-by-term sum of the Taylor series for $\sin(x)$ and $\cos(x)$.</p>
+<h3 id="a-glimpse-to-the-eulers-identity">A glimpse to the Euler’s Identity<a hidden class="anchor" aria-hidden="true" href="#a-glimpse-to-the-eulers-identity">#</a></h3>
+<h3 id="definition">Definition.<a hidden class="anchor" aria-hidden="true" href="#definition">#</a></h3>
+<p>For any real number $x$,</p>
+<p>$$
+e^{ix} = \cos x + i\sin x, \quad i=\sqrt{-1}.
+$$</p>
+<p>Since</p>
+<p>$$
+e^{ix} = 1 + \frac{ix}{1!} + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \frac{(ix)^4}{4!} + \frac{(ix)^5}{5!} + \frac{(ix)^6}{6!}\cdots \= \left(1-\frac{x^2}{2!} + \frac{x^4}{4!} -\cdots\right) + i\left(x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots\right)\ = \cos (x) + i\sin(x)
+$$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/power-series/">power series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/multiplication/">multiplication</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/taylor-series/"> Taylor series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/taylor-polynomial/">taylor polynomial</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/maclaurin/">Maclaurin</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/converge/">converge</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
