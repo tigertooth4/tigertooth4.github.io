@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>W16-Extra1 Convergence of Taylor Series; Error Estimates | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="taylor series, remainder, convergence, error, calculus2, lecture" />
+<meta name="description" content="周次: 16 日期: June 9, 2022 节次: Extra1 In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="W16-Extra1 Convergence of Taylor Series; Error Estimates" />
+<meta property="og:description" content="周次: 16 日期: June 9, 2022 节次: Extra1 In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-09T11:32:36&#43;08:00" />
+<meta property="article:modified_time" content="2022-06-09T11:32:36&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="W16-Extra1 Convergence of Taylor Series; Error Estimates"/>
+<meta name="twitter:description" content="周次: 16 日期: June 9, 2022 节次: Extra1 In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "W16-Extra1 Convergence of Taylor Series; Error Estimates",
+      "item": "http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "W16-Extra1 Convergence of Taylor Series; Error Estimates",
+  "name": "W16-Extra1 Convergence of Taylor Series; Error Estimates",
+  "description": "周次: 16 日期: June 9, 2022 节次: Extra1 In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power",
+  "keywords": [
+    "taylor series", "remainder", "convergence", "error", "calculus2", "lecture"
+  ],
+  "articleBody": "周次: 16 日期: June 9, 2022 节次: Extra1\nIn this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power series, and many of the applications will be discussed.\n§ 11.9 Convergence of Taylor Series; Error Estimates Two questions from the previous section:\n When does a Taylor series converge to its generating function? How accurately do a function’s Taylor polynomial approximate the function on a given interval?  Taylor’s Theorem Theorem 22. Taylor’s Theorem and Taylor’s Formula If $f$ and its first $n$ derivatives $f'$, $f''$, $\\cdots$, $f^{(n)}$ are continuous on the closed interval between $a$ and $b$, and $f^{(n)}$ is differentiable on the open interval between $a$ and $b$, then for any $x\\in[a,b]$, there exists a number $c$ between $a$ and $b$ such that\n$$ \\begin{equation}f(x)= f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n + R_n(x)\\end{equation} $$\nwhere the remainder $R_n(x)$ is\n$$ R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1},\\quad \\text{for some $c$ between $a$ and $x$}. $$\nFor any value of $n$ we want, the equation gives both a polynomial approximation of $f$ of that order and a formula for the error involved in using that approximation over the interval $I$.\nThe equation (1) is called Taylor’s formula. The function $R_n(x)$ is called the remainder of order $n$ or the error term for the approximation of $f$ by $P_n(x)$ over $I.$\nIf the remainder $R_n(x)\\to 0$ as $n\\to \\infty$ for all $x\\in I$, we say that the Taylor series generated by $f$ at $x=a$ converges to $f$ on $I$, and we write\n$$ f(x) = \\sum_{k=0}^\\infty \\frac{f^{(k)}(a)}{k!}(x-a)^k. $$\nRemark 1 When $n=0$, the Taylor’s formula becomes\n$$ f(x) = f(a) + \\frac{f'(c)}{1!}(x-a),\\quad \\text{for some $c$ between $a$ and $x$}. $$\nwhich recovers the result from the Lagrange Mean Value Theorem.\nRemark 2 Fixing $n$, the remainder approaches $0$ as $x\\to a$. In fact, it approaches $0$ even faster than $(x-a)^n$, namely\n$$ \\lim_{x\\to a} \\frac{\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1} }{(x-a)^n} = 0. $$\nSo we may call the remainder a little “o” of $(x-a)^n$. That is,\n$$ \\begin{equation}\\scriptsize f(x)= f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n + o((x-a)^n),\\quad \\text{as $x\\to a$}\\end{equation} $$\nThis formula is also called the Taylor’s formula with Peano-type remainder.\nExample 1. The Taylor Series for $e^x$ Revisited The Taylor series generated by $f(x) = e^x$ at $x=0$ converges to $f(x)$ for every real value of $x$.\nSolution. Writing down the Taylor’s formula for $e^x$ at $x=0$ we find\n$$ e^x = 1 + x + \\frac{x^2}{2!} + \\cdots +\\frac{x^n}{n!} + R_n(x) $$\nwhere\n$$ R_n(x) = \\frac{e^c}{(n+1)!} x^{n+1}, \\quad \\text{for some $c$ between $0$ and $x$}. $$\nAn estimation shows\n$$ |R_n(x)|\\le \\frac{e^{|x|} |x|^{n+1}}{(n+1)!} $$\nTherefore, for any $x$, $\\lim_{n\\to\\infty} R_n(x) = 0.$ Thus the series converges to $e^x$ for every $x$.\n$$ e^x = \\sum_{k=0}^\\infty \\frac{x^k}{k!}. $$\nExample 2. The Taylor Series for $\\sin(x)$ at $x=0$ The Taylor series for $\\sin(x)$ at $x=0$ converges for all $x$.\nSolution.\nThe $n$th order derivative for $\\sin(x)$ can be written as\n$$ \\sin^{(n)}(x) = \\sin(x+\\frac{n\\pi}{2}). $$\nSo\n$$ \\sin^{(n)}(0) = \\begin{cases} 0, \u0026 \\text{$n=2k$} \\ (-1)^k, \u0026 \\text{$n=2k+1$}\\end{cases}. $$\nThe series has only odd-powered terms and, Taylor’s Theorem gives\n$$ \\sin(x) = x-\\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots + \\frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2k+1}(x), $$\nwhere\n$$ |R_{2k+1}(x)| = \\left|\\frac{\\sin^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}\\right|\\le \\frac{x^{2k+1}}{(2k+1)!}\\to 0 $$\nEstimating the Remainder Theorem 23. The Remainder Estimation Theorem If there is a positive constant $M$ such that $|f^{(n+1)}(t)|\\le M$ for all $t\\in(x,a)$, then the remainder term $R_n(x)$ in Taylor’s Theorem satisfies the inequality\n$$ |R_n(x)|\\le M \\frac{|x-a|^{n+1}}{(n+1)!}. $$\nIf this condition holds for every $n$ and the other conditions of Taylor’s Theorem are satisfied by $f$, then the series converges to $f(x)$.\nExample 3. The Taylor Series for $\\cos(x)$ at $x=0$ Revisited. Show the Taylor Series for $\\cos(x)$ at $x=0$ converges to $\\cos(x)$ for every value of $x$.\nSolution.\nThe $n$th derivative for $\\cos(x)$ at $x=0$ is\n$$ \\cos^{(n)}(0) =\\cos(0+\\frac{n\\pi}{2})= \\begin{cases}(-1)^{k}\u0026 n=2k \\ 0 \u0026 n=2k+1\\end{cases}. $$\nThe Taylor’s formula shows that\n$$ \\cos(x) = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots + \\frac{(-1)^{k} x^{2k}}{(2k)!} + R_{2k}(x) $$\nwhere $R_{2k}(x)= \\frac{\\cos^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}$. Since $\\cos(x)$ is bounded, the Remainder Esitmation Theorem with $M=1$ gives\n$$ |R_{2k}(x)|\\le \\frac{|x|^{2k+1}}{(2k+1)!}. $$\nFor every value of $x$, $R_{2k}\\to 0$. Therefore the series converges to $\\cos(x)$ for every value of $x$.\n$$ \\cos(x) = \\sum_{k=0}^\\infty \\frac{(-1)^k x^{2k}}{(2k)!} = 1-\\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\cdots $$\nVarious Ways to Find the Taylor Series Example 4. Finding a Taylor Series by Substitution Find the Taylor series for $\\cos(2x)$ at $x=0.$\nSolution. By substituting $2x$ for $x$ in the Taylor series for $\\cos(x)$, we can find the Taylor series for $\\cos(2x).$\n$$ \\cos(2x) = 1-\\frac{(2x)^2}{2!} + \\frac{(2x)^4}{4!} -\\frac{(2x)^6}{6!} + \\cdots= \\sum_{k=0}^\\infty (-1)^k \\frac{2^{2k}x^{2k}}{(2k)!}. $$\nThis equality holds for $-\\inftyQuestion. Why the series is in fact the Taylor series for $\\cos(2x)$.\nExample 5. Finding a Taylor Series by Multiplication Find the Taylor series for $x\\sin(x)$ at $x=0$.\nSolution. By multiplying the Taylor series for $\\sin(x)$ with $x$,\n$$ x\\sin(x) = x^2 - \\frac{x^4}{3!} + \\frac{x^6}{5!} - \\frac{x^7}{6!} + \\cdots. $$\nTruncation Error Example 6. Calculate $e$ with an error of less than $10^{-6}$ Solution.\nAccording to the Taylor series,\n$$ e = 1 + \\frac1{1!} + \\frac{1^2}{2!} + \\frac{1^3}{3!} + \\cdots $$\nThe first several terms on the right hand side will give a good approximation for $e$. So to estimate the approximation error, we use the Taylor’s formula\n$$ e = 1 + 1 + \\frac1{2!} + \\frac1{3!} + \\cdots + \\frac1{n!} + R_n(1). $$\nWith $R_n(1) = e^c \\frac{1}{(n+1)!}$, for some $c\\in(0,1).$ Assuming we know that $eBy experiment we find that $3/10! $$ e= 1 + 1 + \\frac12 + \\frac1{3!} + \\cdots + \\frac1{9!} \\approx 2.718282. $$\nExample. How Accurate It Is to Take $\\cos(10^\\circ) \\approx 1-\\frac{(\\pi/18)^2}{2!}=0.984769129$ Solution.\nAccording to the Taylor’s formula\n$$ \\cos(x) = 1- \\frac{x^2}{2!} + \\frac{\\cos^{(3)}(c) x^3}{3!} $$\nThe remainder has an absolute value less than $x^3/3!$. In the case of $x=\\pi/18Example 7. For what values of $x$ can we replace $\\sin(x)$ by $x-\\frac{x^3}{3!}$ with an error of magnitude no greater than $3\\times 10^{-4}$? Solution.\nSince the Taylor series for $\\sin(x)$ is an alternating series, we can estimate the error in truncation by the Alternating Series Estimation Theorem\n$$ \\sin(x) = x - \\frac{x^3}{3!} {\\color{red}\\bigg| } + \\frac{x^5}{5!} - \\cdots $$\nAfter $x^3/3!$ the error is no greater than $|x|^5/120$. Therefore the error will be less than $3\\times 10^{-4}$ if\n$$ \\frac{|x|^5}{120}Notice that the alternating property shows that the truncation $x-\\frac{x^3}{3!}$ is an underestimation for $\\sin(x)$ when $x0$.\nHow the estimate given by the Remainder Estimation Theorem compares with the one just obtained from the Alternating Series Estimation Theorem?\n$$ \\sin(x) = x -\\frac{x^3}{3!} + R_3(x) $$\nThe remainder $| R_3(x) |\\le \\frac{|x|^4}{4!} = \\frac{|x|^4}{24}.$ It is not as good as obtained from the Alternating Series Estimation. But, if considered the $x^4$ term has the coefficient $0$, the remainder is actually of an order $4$, which is $|R_4(x)| = \\frac{\\cos^{(5)}(c)}{5!}|x^5|$, and it gives the same estimation as the Alternating Estimation Theorem.\nCombining Taylor Series If $f(x)$ and $g(x)$ both have convergent Taylor series on an interval $I$, then the sum $f(x)+g(x)$ has a Taylor series obtained by combining the Taylor series for $f(x)$ and $g(x)$. The Taylor series for $\\sin(x) + \\cos(x)$ is the term-by-term sum of the Taylor series for $\\sin(x)$ and $\\cos(x)$.\nA glimpse to the Euler’s Identity Definition. For any real number $x$,\n$$ e^{ix} = \\cos x + i\\sin x, \\quad i=\\sqrt{-1}. $$\nSince\n$$ e^{ix} = 1 + \\frac{ix}{1!} + \\frac{(ix)^2}{2!} + \\frac{(ix)^3}{3!} + \\frac{(ix)^4}{4!} + \\frac{(ix)^5}{5!} + \\frac{(ix)^6}{6!}\\cdots \\= \\left(1-\\frac{x^2}{2!} + \\frac{x^4}{4!} -\\cdots\\right) + i\\left(x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots\\right)\\ = \\cos (x) + i\\sin(x) $$\n§ 11.10 Applications of Power Series The Binomial Series for Powers and Roots The Taylor series generates by $f(x) = (1+x)^a$, when $a$ is constant, is called the binomial series,\n$$ 1+a x + \\frac{a(a-1)}{2!} x^2 + \\frac{a(a-1)(a-2)}{3!} x^3 + \\cdots + \\frac{a(a-1)(a-2) \\cdots (a-k+1)}{k!} x^k + \\cdots $$\nThis series, converges absolutely for $|x|Derive the Binomial Series To see why the function $f(x) = (1+x)^a$ generates the series above, we need to take derivatives. The function and derivatives are listed below\n$$ \\begin{align*}f(x) \u0026= (1+x)^a \\ f'(x) \u0026= a(1+x)^{a-1} \\ f''(x) \u0026= a(a-1) (1+x)^{a-2} \\ f'''(x) \u0026= a(a-1)(a-2) (1+x)^{a-3} \\ \\vdots \\ f^{(k)}(x) \u0026= a(a-1)(a-2) \\cdots (a-k+1)(1+x)^{a-k}\\end{align*} $$\nIf $a$ is a non-negative integer, the series terminates after $a+1$ terms, otherwise the series is infinite.\nRadius of Convergence Apply the Ratio Test for absolute convergence we see that\n$$ \\left|\\frac{u_{k+1}}{u_k}\\right| = \\left|\\frac{a-k}{k+1}x\\right|\\to |x| $$\nSo for $|x|The Binomial Series For $-1$$ (1+x)^a = \\sum_{k=0}^\\infty \\binom{a}{k} x^k $$\nwhere we define\n$$ \\binom{a}{0}=1,\\quad \\binom{a}{k} = \\frac{a(a-1)\\cdots (a-k+1)}{k!},\\quad \\text{for } k\\ge 1. $$\nExample 1. Using the Binomial Series If $a=-1$,\n$$ \\binom{-1}{k} = (-1)^k. $$\nSo we get\n$$ \\frac1{1+x} = \\sum_{k\\ge 0}(-1)^k x^k $$\nwhich is again a geometric series.\nExample 2. Using the Binomial Series If $a=\\frac12$, we find\n$$ (1+x)^{1/2} = \\sum_{k\\ge 0}\\binom{1/2}{k} x^k = 1+\\frac{x}{2} -\\frac{x^2}{8} + \\frac{x^3}{16} - \\frac{5 x^4}{128} + \\cdots. $$\nNotice that the first two terms is a linear approximation for $(1+x)^{1/2}$, when $x$ is small.\nSummary. The Maclaurin Series for Common Functions  Power and Root functions  $$ (1+x)^a = \\sum_{k=0}^\\infty \\binom{a}{k} x^k, \\quad \\text{converges absolutely when $|x|Exponential function  $$ e^x = 1 + \\frac{x}{1!} + \\frac{x^2}{2!} + \\cdots = \\sum_{k=0}^\\infty \\frac{x^k}{k!}, \\quad \\text{converges everywhere}. $$\n Logarithmic function  $$ \\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\frac{x^4}{4} + \\cdots=\\sum_{k=1}^\\infty \\frac{(-1)^{k-1}}{k}x^k, \\quad\\text{converges absolutely when $|x|$$ \\ln(1-x) = -x - \\frac{x^2}{2} - \\frac{x^3}{3} - \\frac{x^4}{4} - \\cdots=-\\sum_{k=1}^\\infty \\frac{x^k}{k}, \\quad\\text{converges absolutely when $|x|Trigonometric functions  $$ \\sin(x) = x-\\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{k=0}^\\infty \\frac{(-1)^k}{(2k+1)!}x^{2k+1},\\quad \\text{converges everywhere}. $$\n$$ \\cos(x) = 1- \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{k=0}^\\infty \\frac{(-1)^k}{(2k)!}x^{2k},\\quad \\text{converges everywhere}. $$\n Inverse trigonometric functions  $$ \\arctan(x) = x-\\frac{x^3}{3} + \\frac{x^5}{5} - \\frac{x^7}{7} + \\cdots = \\sum_{k=0}^\\infty \\frac{(-1)^k}{k}x^{2k+1},\\quad \\text{converges absolutely when $|x|Remark The actual interval of convergence is $[-1,1]$. And from the Maclaurin series, we are able to find very interesting result for infinite series. The result will be shown later in this section.\nWith term-by-term integration, we can actually find the Maclaurin series for $\\arcsin(x)$, since\n$$ \\arcsin(x) = \\int_0^x \\frac{1}{\\sqrt{1-t^2}}dt = \\int_0^x \\sum_{k=0}^\\infty \\binom{-1/2}{k}t^k dt = \\sum_{k=0}^\\infty \\frac{\\binom{-1/2}{k}}{k+1}x^{k+1} $$\nAgain, the series converges absolutely for $|x|Applications of Power Series Evaluating Non-elementary Integrals Example 5. Express $\\int \\sin x^2 dx$ as a power series, and estimate the definite integral $\\int_0^1 \\sin x^2 dx$ with an error of less than $0.001.$ Solution.\n$$ \\int \\sin x^2 dx = C + \\frac{x^3}{3} - \\frac{x^7}{7\\cdot 3!} + \\frac{x^{11}}{11\\cdot 5!} - \\frac{x^{15}}{15\\cdot 7!} + \\frac{x^{10}}{19\\cdot 9!} - \\cdots $$\n$$ \\int_0^1 \\sin x^2 dx \\approx \\frac{1}{3} - \\frac1{42} \\approx 0.310. $$\nEvaluating Indeterminate Forms Besides L’Hopital’s rule, we can use power series to evaluate indeterminate forms.\nExample 7. Limits Using Power Series Evaluate\n$$ \\lim_{x\\to 1}\\frac{\\ln x}{x-1}. $$\nSolution.\nWrite logarithmic function by Taylor’s formula at $x=1$\n$$ \\frac{\\ln(x)}{x-1} = \\frac{\\ln(1) + \\ln'(1)(x-1) + \\frac{\\ln''(c)}{2!} (x-1)^2 }{x-1} = \\frac{(x-1) -\\frac1{2 c^2}(x-1)^2 }{x-1}\\to 1 $$\nNote that it’s more convenient to use Taylor’s formula with remainder of Peano-type.\n$$ \\frac{\\ln(x)}{x-1} = \\frac{\\ln(1) + \\ln'(1)(x-1) + o( (x-1)) }{x-1} = \\frac{(x-1) +o(x-1)}{x-1}\\to 1 $$\nExample 8. Limits Using Power Series Evaluate\n$$ \\lim_{x\\to 0}\\frac{\\sin(x) - \\tan(x)}{x^3} $$\nSolution.\nWe have\n$$ \\sin(x) - \\tan(x) = \\frac{\\sin(x)}{\\cos(x)} (\\cos(x) - 1) = \\frac{\\sin(x)}{\\cos(x)}\\left(1-\\frac{x^2}{2!} + o(x^2)-1\\right) = \\frac{\\sin(x)}{\\cos(x)}\\left(-\\frac{x^2}{2!} + o(x^2)\\right) $$\nTherefore a\n$$ \\lim_{x\\to0}\\frac{\\sin(x) -\\tan(x)}{x^3} = \\lim_{x\\to 0} \\frac{\\sin(x)}{x\\cos(x)}\\cdot\\lim_{x\\to 0}\\frac{-\\frac12 x^2 + o(x^2)}{x^2} = -\\frac12. $$\nExample 9. Approximation Formula for $\\csc(x)$ Prove $\\csc(x) \\approx \\frac1x + \\frac{x}{6}.$\n",
+  "wordCount" : "2194",
+  "inLanguage": "zh-cn",
+  "datePublished": "2022-06-09T11:32:36+08:00",
+  "dateModified": "2022-06-09T11:32:36+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      W16-Extra1 Convergence of Taylor Series; Error Estimates
+    </h1>
+    <div class="post-meta"><span title='2022-06-09 11:32:36 +0800 CST'>June 9, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>周次: 16
+日期: June 9, 2022
+节次: Extra1</p>
+<p>In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power series, and many of the applications will be  discussed.</p>
+<h1 id="-119-convergence-of-taylor-series-error-estimates">§ 11.9 Convergence of Taylor Series; Error Estimates<a hidden class="anchor" aria-hidden="true" href="#-119-convergence-of-taylor-series-error-estimates">#</a></h1>
+<p>Two questions from the previous section:</p>
+<ol>
+<li>When does a Taylor series converge to its generating function?</li>
+<li>How accurately do a function’s Taylor polynomial approximate the function on a given interval?</li>
+</ol>
+<h2 id="taylors-theorem">Taylor’s Theorem<a hidden class="anchor" aria-hidden="true" href="#taylors-theorem">#</a></h2>
+<h2 id="theorem-22-taylors-theorem-and-taylors-formula">Theorem 22. Taylor’s Theorem and Taylor’s Formula<a hidden class="anchor" aria-hidden="true" href="#theorem-22-taylors-theorem-and-taylors-formula">#</a></h2>
+<p>If $f$ and its first $n$ derivatives $f'$, $f''$, $\cdots$, $f^{(n)}$ are continuous on the closed interval between $a$ and $b$, and $f^{(n)}$ is differentiable on the open interval between $a$ and $b$, then for any $x\in[a,b]$,  there exists a number $c$ between $a$ and $b$ such that</p>
+<p>$$
+\begin{equation}f(x)= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n + R_n(x)\end{equation}
+$$</p>
+<p>where the remainder $R_n(x)$ is</p>
+<p>$$
+R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1},\quad \text{for some $c$ between $a$ and $x$}.
+$$</p>
+<p>For any value of $n$ we want, the equation gives both a polynomial approximation of $f$ of that order and a formula for the error involved in using that approximation over the interval $I$.</p>
+<p>The equation (1) is called <strong>Taylor’s formula.</strong> The function $R_n(x)$ is called the <strong>remainder of order $n$</strong> or the <strong>error term</strong> for the approximation of $f$ by $P_n(x)$ over $I.$</p>
+<p>If the remainder $R_n(x)\to 0$ as $n\to \infty$ for all $x\in I$, we say that the Taylor series generated by $f$ at $x=a$ <strong>converges</strong> to $f$ on $I$, and we write</p>
+<p>$$
+f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x-a)^k.
+$$</p>
+<h3 id="remark-1">Remark 1<a hidden class="anchor" aria-hidden="true" href="#remark-1">#</a></h3>
+<p>When $n=0$, the Taylor’s formula becomes</p>
+<p>$$
+f(x) = f(a) + \frac{f'(c)}{1!}(x-a),\quad \text{for some $c$ between $a$ and $x$}.
+$$</p>
+<p>which recovers the result from the Lagrange Mean Value Theorem.</p>
+<h3 id="remark-2">Remark 2<a hidden class="anchor" aria-hidden="true" href="#remark-2">#</a></h3>
+<p>Fixing $n$, the remainder approaches $0$ as $x\to a$.  In fact, it approaches $0$ even faster than $(x-a)^n$, namely</p>
+<p>$$
+\lim_{x\to a} \frac{\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1} }{(x-a)^n} = 0.
+$$</p>
+<p>So we may call the remainder a little “o” of $(x-a)^n$. That is,</p>
+<p>$$
+\begin{equation}\scriptsize f(x)= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n + o((x-a)^n),\quad \text{as $x\to a$}\end{equation}
+$$</p>
+<p>This formula is also called the <strong>Taylor’s formula with Peano-type remainder.</strong></p>
+<h3 id="example-1-the-taylor-series-for-ex-revisited">Example 1. The Taylor Series for $e^x$ Revisited<a hidden class="anchor" aria-hidden="true" href="#example-1-the-taylor-series-for-ex-revisited">#</a></h3>
+<p>The Taylor series generated by $f(x) = e^x$ at $x=0$ converges to $f(x)$ for every real value of $x$.</p>
+<p><strong>Solution.</strong>  Writing down the Taylor’s formula for $e^x$ at $x=0$ we find</p>
+<p>$$
+e^x = 1 + x + \frac{x^2}{2!} + \cdots +\frac{x^n}{n!} + R_n(x)
+$$</p>
+<p>where</p>
+<p>$$
+R_n(x) = \frac{e^c}{(n+1)!} x^{n+1}, \quad \text{for some $c$ between $0$ and $x$}.
+$$</p>
+<p>An estimation shows</p>
+<p>$$
+|R_n(x)|\le \frac{e^{|x|} |x|^{n+1}}{(n+1)!}
+$$</p>
+<p>Therefore, for any $x$, $\lim_{n\to\infty} R_n(x) = 0.$ Thus the series converges to $e^x$ for every $x$.</p>
+<p>$$
+e^x = \sum_{k=0}^\infty \frac{x^k}{k!}.
+$$</p>
+<h3 id="example-2-the-taylor-series-for-sinx-at-x0">Example 2. The Taylor Series for $\sin(x)$ at $x=0$<a hidden class="anchor" aria-hidden="true" href="#example-2-the-taylor-series-for-sinx-at-x0">#</a></h3>
+<p>The Taylor series for $\sin(x)$ at $x=0$ converges for all $x$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th order derivative for $\sin(x)$ can be written as</p>
+<p>$$
+\sin^{(n)}(x) = \sin(x+\frac{n\pi}{2}).
+$$</p>
+<p>So</p>
+<p>$$
+\sin^{(n)}(0) = \begin{cases} 0, &amp; \text{$n=2k$} \ (-1)^k, &amp; \text{$n=2k+1$}\end{cases}.
+$$</p>
+<p>The series has only odd-powered terms and, Taylor’s Theorem gives</p>
+<p>$$
+\sin(x) = x-\frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + \frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2k+1}(x),
+$$</p>
+<p>where</p>
+<p>$$
+|R_{2k+1}(x)| = \left|\frac{\sin^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}\right|\le \frac{x^{2k+1}}{(2k+1)!}\to 0
+$$</p>
+<h2 id="estimating-the-remainder">Estimating the Remainder<a hidden class="anchor" aria-hidden="true" href="#estimating-the-remainder">#</a></h2>
+<h2 id="theorem-23-the-remainder-estimation-theorem">Theorem 23. The Remainder Estimation Theorem<a hidden class="anchor" aria-hidden="true" href="#theorem-23-the-remainder-estimation-theorem">#</a></h2>
+<p>If there is a positive constant $M$ such that $|f^{(n+1)}(t)|\le M$ for all $t\in(x,a)$, then the remainder term $R_n(x)$ in Taylor’s Theorem satisfies the inequality</p>
+<p>$$
+|R_n(x)|\le M \frac{|x-a|^{n+1}}{(n+1)!}.
+$$</p>
+<p>If this condition holds for every $n$ and the other conditions of Taylor’s Theorem are satisfied by $f$, then the series converges to $f(x)$.</p>
+<h3 id="example-3-the-taylor-series-for-cosx-at-x0-revisited">Example 3. The Taylor Series for $\cos(x)$ at $x=0$ Revisited.<a hidden class="anchor" aria-hidden="true" href="#example-3-the-taylor-series-for-cosx-at-x0-revisited">#</a></h3>
+<p>Show the Taylor Series for $\cos(x)$ at $x=0$ converges to $\cos(x)$ for every value of $x$.</p>
+<p><strong>Solution.</strong></p>
+<p>The $n$th derivative for $\cos(x)$ at $x=0$ is</p>
+<p>$$
+\cos^{(n)}(0) =\cos(0+\frac{n\pi}{2})= \begin{cases}(-1)^{k}&amp;  n=2k \ 0 &amp; n=2k+1\end{cases}.
+$$</p>
+<p>The Taylor’s formula shows that</p>
+<p>$$
+\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + \frac{(-1)^{k} x^{2k}}{(2k)!} + R_{2k}(x)
+$$</p>
+<p>where $R_{2k}(x)= \frac{\cos^{(2k+1)}(c)}{(2k+1)!}x^{2k+1}$. Since $\cos(x)$ is bounded, the Remainder Esitmation Theorem with $M=1$ gives</p>
+<p>$$
+|R_{2k}(x)|\le \frac{|x|^{2k+1}}{(2k+1)!}.
+$$</p>
+<p>For every value of $x$, $R_{2k}\to 0$. Therefore the series converges to $\cos(x)$ for every value of $x$.</p>
+<p>$$
+\cos(x) = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!} = 1-\frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+$$</p>
+<h2 id="various-ways-to-find-the-taylor-series">Various Ways to Find the Taylor Series<a hidden class="anchor" aria-hidden="true" href="#various-ways-to-find-the-taylor-series">#</a></h2>
+<h3 id="example-4-finding-a-taylor-series-by-substitution">Example 4. Finding a Taylor Series by Substitution<a hidden class="anchor" aria-hidden="true" href="#example-4-finding-a-taylor-series-by-substitution">#</a></h3>
+<p>Find the Taylor series for $\cos(2x)$  at $x=0.$</p>
+<p><strong>Solution.</strong> By substituting $2x$ for $x$ in the Taylor series for $\cos(x)$, we can find the Taylor series for $\cos(2x).$</p>
+<p>$$
+\cos(2x) = 1-\frac{(2x)^2}{2!} + \frac{(2x)^4}{4!} -\frac{(2x)^6}{6!} + \cdots= \sum_{k=0}^\infty (-1)^k \frac{2^{2k}x^{2k}}{(2k)!}.
+$$</p>
+<p>This equality holds for $-\infty&lt;2x&lt;+\infty$, so the newly created series converges for all $x$.</p>
+<p><strong>Question.</strong> Why the series is in fact the Taylor series for $\cos(2x)$.</p>
+<h3 id="example-5-finding-a-taylor-series-by-multiplication">Example 5. Finding a Taylor Series by Multiplication<a hidden class="anchor" aria-hidden="true" href="#example-5-finding-a-taylor-series-by-multiplication">#</a></h3>
+<p>Find the Taylor series for $x\sin(x)$ at $x=0$.</p>
+<p><strong>Solution.</strong> By multiplying the Taylor series for $\sin(x)$ with $x$,</p>
+<p>$$
+x\sin(x) = x^2 - \frac{x^4}{3!} + \frac{x^6}{5!} - \frac{x^7}{6!} + \cdots.
+$$</p>
+<h2 id="truncation-error">Truncation Error<a hidden class="anchor" aria-hidden="true" href="#truncation-error">#</a></h2>
+<h3 id="example-6-calculate-e-with-an-error-of-less-than-10-6">Example 6. Calculate $e$ with an error of less than $10^{-6}$<a hidden class="anchor" aria-hidden="true" href="#example-6-calculate-e-with-an-error-of-less-than-10-6">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>According to the Taylor series,</p>
+<p>$$
+e = 1 + \frac1{1!} + \frac{1^2}{2!} + \frac{1^3}{3!} + \cdots
+$$</p>
+<p>The first several terms on the right hand side will give a good approximation for $e$. So to estimate the approximation error, we use the Taylor’s formula</p>
+<p>$$
+e = 1 + 1 + \frac1{2!}  + \frac1{3!} + \cdots + \frac1{n!} + R_n(1).
+$$</p>
+<p>With $R_n(1) = e^c \frac{1}{(n+1)!}$, for some $c\in(0,1).$ Assuming we know that $e&lt;3$, then the remainder is less than $3/(n+1)!$.</p>
+<p>By experiment we find that $3/10! &lt; 10^{-6}.$ Thus we should take $n$ to be at least $9$. With an error of less than $10^{-6}$.</p>
+<p>$$
+e= 1 + 1 + \frac12 + \frac1{3!} + \cdots + \frac1{9!} \approx 2.718282.
+$$</p>
+<h3 id="example-how-accurate-it-is-to-take-cos10circ-approx-1-fracpi18220984769129">Example. How Accurate It Is to Take $\cos(10^\circ) \approx 1-\frac{(\pi/18)^2}{2!}=0.984769129$<a hidden class="anchor" aria-hidden="true" href="#example-how-accurate-it-is-to-take-cos10circ-approx-1-fracpi18220984769129">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>According to the Taylor’s formula</p>
+<p>$$
+\cos(x) = 1- \frac{x^2}{2!} + \frac{\cos^{(3)}(c) x^3}{3!}
+$$</p>
+<p>The remainder has an absolute value less than $x^3/3!$. In the case of $x=\pi/18&lt; 4/18 &lt;1/4$. The error will be less than $\frac{1}{4^3 3!}\approx 0.0026.$</p>
+<h3 id="example-7-for-what-values-of-x-can-we-replace-sinx-by-x-fracx33-with-an-error-of-magnitude-no-greater-than-3times-10-4">Example 7. For what values of $x$ can we replace $\sin(x)$ by $x-\frac{x^3}{3!}$ with an error of magnitude no greater than $3\times 10^{-4}$?<a hidden class="anchor" aria-hidden="true" href="#example-7-for-what-values-of-x-can-we-replace-sinx-by-x-fracx33-with-an-error-of-magnitude-no-greater-than-3times-10-4">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>Since the Taylor series for $\sin(x)$ is an alternating series, we can estimate the error in truncation by the Alternating Series Estimation Theorem</p>
+<p>$$
+\sin(x) = x - \frac{x^3}{3!} {\color{red}\bigg| } + \frac{x^5}{5!} - \cdots
+$$</p>
+<p>After $x^3/3!$ the error is no greater than $|x|^5/120$. Therefore the error will be less than $3\times 10^{-4}$ if</p>
+<p>$$
+\frac{|x|^5}{120}&lt; 3\times 10^{-4} \quad \text{or} \quad |x|&lt; \sqrt[5]{360\times 10^{-4}} \approx 0.514.
+$$</p>
+<p>Notice that the alternating property shows that the truncation $x-\frac{x^3}{3!}$  is an underestimation for $\sin(x)$ when $x&gt;0$.</p>
+<p><img loading="lazy" src="W16-Extra1%20Convergence%20of%20Taylor%20Series;%20Error%20Est%20b07a0ea877b341af92fd1ccec2bd5c5c/Untitled.png" alt="Untitled"  />
+</p>
+<p>How the estimate given by the Remainder Estimation Theorem compares with the one just obtained from the Alternating Series Estimation Theorem?</p>
+<p>$$
+\sin(x) = x -\frac{x^3}{3!} + R_3(x)
+$$</p>
+<p>The remainder $| R_3(x) |\le \frac{|x|^4}{4!} = \frac{|x|^4}{24}.$ It is not as good as obtained from the Alternating Series Estimation. But, if considered the $x^4$ term has the coefficient $0$, the remainder is actually of an order $4$, which is $|R_4(x)| = \frac{\cos^{(5)}(c)}{5!}|x^5|$, and it gives the same estimation as the Alternating Estimation Theorem.</p>
+<h2 id="combining-taylor-series">Combining Taylor Series<a hidden class="anchor" aria-hidden="true" href="#combining-taylor-series">#</a></h2>
+<p>If $f(x)$ and $g(x)$ both have convergent Taylor series on an interval $I$, then the sum $f(x)+g(x)$ has a Taylor series obtained by combining the Taylor series for $f(x)$ and $g(x)$. The Taylor series for $\sin(x) + \cos(x)$ is the term-by-term sum of the Taylor series for $\sin(x)$ and $\cos(x)$.</p>
+<h3 id="a-glimpse-to-the-eulers-identity">A glimpse to the Euler’s Identity<a hidden class="anchor" aria-hidden="true" href="#a-glimpse-to-the-eulers-identity">#</a></h3>
+<h3 id="definition">Definition.<a hidden class="anchor" aria-hidden="true" href="#definition">#</a></h3>
+<p>For any real number $x$,</p>
+<p>$$
+e^{ix} = \cos x + i\sin x, \quad i=\sqrt{-1}.
+$$</p>
+<p>Since</p>
+<p>$$
+e^{ix} = 1 + \frac{ix}{1!} + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \frac{(ix)^4}{4!} + \frac{(ix)^5}{5!} + \frac{(ix)^6}{6!}\cdots \= \left(1-\frac{x^2}{2!} + \frac{x^4}{4!} -\cdots\right) + i\left(x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots\right)\ = \cos (x) + i\sin(x)
+$$</p>
+<h1 id="-1110-applications-of-power-series">§ 11.10 Applications of Power Series<a hidden class="anchor" aria-hidden="true" href="#-1110-applications-of-power-series">#</a></h1>
+<h2 id="the-binomial-series-for-powers-and-roots">The Binomial Series for Powers and Roots<a hidden class="anchor" aria-hidden="true" href="#the-binomial-series-for-powers-and-roots">#</a></h2>
+<p>The Taylor series generates by $f(x) = (1+x)^a$, when $a$ is constant, is called the <strong>binomial series</strong>,</p>
+<p>$$
+1+a x + \frac{a(a-1)}{2!} x^2 + \frac{a(a-1)(a-2)}{3!} x^3 + \cdots + \frac{a(a-1)(a-2) \cdots (a-k+1)}{k!} x^k + \cdots
+$$</p>
+<p>This series, converges absolutely for $|x|&lt;1$.</p>
+<h3 id="derive-the-binomial-series">Derive the Binomial Series<a hidden class="anchor" aria-hidden="true" href="#derive-the-binomial-series">#</a></h3>
+<p>To see why the function $f(x) = (1+x)^a$ generates the series above, we need to take derivatives. The function and derivatives are listed below</p>
+<p>$$
+\begin{align*}f(x) &amp;= (1+x)^a \ f'(x) &amp;= a(1+x)^{a-1} \ f''(x) &amp;= a(a-1) (1+x)^{a-2} \ f'''(x) &amp;= a(a-1)(a-2) (1+x)^{a-3} \ \vdots \ f^{(k)}(x) &amp;= a(a-1)(a-2) \cdots (a-k+1)(1+x)^{a-k}\end{align*}
+$$</p>
+<p>If $a$ is a non-negative integer, the series terminates after $a+1$ terms, otherwise the series is infinite.</p>
+<h3 id="radius-of-convergence">Radius of Convergence<a hidden class="anchor" aria-hidden="true" href="#radius-of-convergence">#</a></h3>
+<p>Apply the Ratio Test for absolute convergence we see that</p>
+<p>$$
+\left|\frac{u_{k+1}}{u_k}\right| = \left|\frac{a-k}{k+1}x\right|\to |x|
+$$</p>
+<p>So for $|x|&lt;1$, the binomial series converges, but we will not be able to show that it indeed converges to $(1+x)^a$.</p>
+<h3 id="the-binomial-series">The Binomial Series<a hidden class="anchor" aria-hidden="true" href="#the-binomial-series">#</a></h3>
+<p>For $-1&lt;x&lt;1$,</p>
+<p>$$
+(1+x)^a = \sum_{k=0}^\infty \binom{a}{k} x^k
+$$</p>
+<p>where we define</p>
+<p>$$
+\binom{a}{0}=1,\quad \binom{a}{k} = \frac{a(a-1)\cdots (a-k+1)}{k!},\quad \text{for } k\ge 1.
+$$</p>
+<h3 id="example-1-using-the-binomial-series">Example 1. Using the Binomial Series<a hidden class="anchor" aria-hidden="true" href="#example-1-using-the-binomial-series">#</a></h3>
+<p>If $a=-1$,</p>
+<p>$$
+\binom{-1}{k} = (-1)^k.
+$$</p>
+<p>So we get</p>
+<p>$$
+\frac1{1+x} = \sum_{k\ge 0}(-1)^k x^k
+$$</p>
+<p>which is again a geometric series.</p>
+<h3 id="example-2-using-the-binomial-series">Example 2. Using the Binomial Series<a hidden class="anchor" aria-hidden="true" href="#example-2-using-the-binomial-series">#</a></h3>
+<p>If $a=\frac12$, we find</p>
+<p>$$
+(1+x)^{1/2} = \sum_{k\ge 0}\binom{1/2}{k} x^k = 1+\frac{x}{2} -\frac{x^2}{8} + \frac{x^3}{16} - \frac{5 x^4}{128} + \cdots.
+$$</p>
+<p>Notice that the first two terms is a linear approximation for $(1+x)^{1/2}$, when $x$ is small.</p>
+<h2 id="summary-the-maclaurin-series-for-common-functions">Summary. The Maclaurin Series for Common Functions<a hidden class="anchor" aria-hidden="true" href="#summary-the-maclaurin-series-for-common-functions">#</a></h2>
+<ul>
+<li><strong>Power and Root functions</strong></li>
+</ul>
+<p>$$
+(1+x)^a = \sum_{k=0}^\infty \binom{a}{k} x^k, \quad \text{converges absolutely when $|x|&lt;1$}
+$$</p>
+<ul>
+<li><strong>Exponential function</strong></li>
+</ul>
+<p>$$
+e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \cdots = \sum_{k=0}^\infty \frac{x^k}{k!}, \quad \text{converges everywhere}.
+$$</p>
+<ul>
+<li><strong>Logarithmic function</strong></li>
+</ul>
+<p>$$
+\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots=\sum_{k=1}^\infty \frac{(-1)^{k-1}}{k}x^k, \quad\text{converges absolutely when $|x|&lt;1$}
+$$</p>
+<p>$$
+\ln(1-x) = -x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} - \cdots=-\sum_{k=1}^\infty \frac{x^k}{k}, \quad\text{converges absolutely when $|x|&lt;1$}
+$$</p>
+<ul>
+<li><strong>Trigonometric functions</strong></li>
+</ul>
+<p>$$
+\sin(x) = x-\frac{x^3}{3!} + \frac{x^5}{5!} - \cdots = \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1},\quad \text{converges everywhere}.
+$$</p>
+<p>$$
+\cos(x) = 1- \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots = \sum_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k},\quad \text{converges everywhere}.
+$$</p>
+<ul>
+<li><strong>Inverse trigonometric functions</strong></li>
+</ul>
+<p>$$
+\arctan(x) = x-\frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{k=0}^\infty \frac{(-1)^k}{k}x^{2k+1},\quad \text{converges absolutely when $|x|&lt;1$}
+$$</p>
+<p><code>Remark</code> The actual interval of convergence is $[-1,1]$. And from the Maclaurin series, we are able to find very interesting result for infinite series. The result will be shown later in this section.</p>
+<p>With term-by-term integration, we can actually find the Maclaurin series for $\arcsin(x)$, since</p>
+<p>$$
+\arcsin(x) = \int_0^x \frac{1}{\sqrt{1-t^2}}dt = \int_0^x \sum_{k=0}^\infty \binom{-1/2}{k}t^k dt = \sum_{k=0}^\infty \frac{\binom{-1/2}{k}}{k+1}x^{k+1}
+$$</p>
+<p>Again, the series converges absolutely for $|x|&lt;1$.</p>
+<h2 id="applications-of-power-series">Applications of Power Series<a hidden class="anchor" aria-hidden="true" href="#applications-of-power-series">#</a></h2>
+<h3 id="evaluating-non-elementary-integrals">Evaluating Non-elementary Integrals<a hidden class="anchor" aria-hidden="true" href="#evaluating-non-elementary-integrals">#</a></h3>
+<h3 id="example-5-express-int-sin-x2-dx-as-a-power-series-and-estimate-the-definite-integral-int_01-sin-x2-dx-with-an-error-of-less-than-0001">Example 5. Express $\int \sin x^2 dx$ as a power series, and estimate the definite integral $\int_0^1 \sin x^2 dx$ with an error of less than $0.001.$<a hidden class="anchor" aria-hidden="true" href="#example-5-express-int-sin-x2-dx-as-a-power-series-and-estimate-the-definite-integral-int_01-sin-x2-dx-with-an-error-of-less-than-0001">#</a></h3>
+<p><strong>Solution.</strong></p>
+<p>$$
+\int \sin x^2 dx = C + \frac{x^3}{3} - \frac{x^7}{7\cdot 3!} + \frac{x^{11}}{11\cdot 5!} - \frac{x^{15}}{15\cdot 7!} + \frac{x^{10}}{19\cdot 9!} - \cdots
+$$</p>
+<p>$$
+\int_0^1 \sin x^2 dx \approx \frac{1}{3} - \frac1{42} \approx 0.310.
+$$</p>
+<h3 id="evaluating-indeterminate-forms">Evaluating Indeterminate Forms<a hidden class="anchor" aria-hidden="true" href="#evaluating-indeterminate-forms">#</a></h3>
+<p>Besides L’Hopital’s rule, we can use power series to evaluate indeterminate forms.</p>
+<h3 id="example-7-limits-using-power-series">Example 7. Limits Using Power Series<a hidden class="anchor" aria-hidden="true" href="#example-7-limits-using-power-series">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\lim_{x\to 1}\frac{\ln x}{x-1}.
+$$</p>
+<p><strong>Solution.</strong></p>
+<p>Write logarithmic function by Taylor’s formula at $x=1$</p>
+<p>$$
+\frac{\ln(x)}{x-1} = \frac{\ln(1) + \ln'(1)(x-1) + \frac{\ln''(c)}{2!} (x-1)^2 }{x-1} = \frac{(x-1) -\frac1{2 c^2}(x-1)^2 }{x-1}\to 1
+$$</p>
+<p>Note that it’s more convenient to use Taylor’s formula with remainder of  Peano-type.</p>
+<p>$$
+\frac{\ln(x)}{x-1} = \frac{\ln(1) + \ln'(1)(x-1) + o( (x-1)) }{x-1} = \frac{(x-1) +o(x-1)}{x-1}\to 1
+$$</p>
+<h3 id="example-8-limits-using-power-series">Example 8. Limits Using Power Series<a hidden class="anchor" aria-hidden="true" href="#example-8-limits-using-power-series">#</a></h3>
+<p>Evaluate</p>
+<p>$$
+\lim_{x\to 0}\frac{\sin(x) - \tan(x)}{x^3}
+$$</p>
+<p><strong>Solution.</strong></p>
+<p>We have</p>
+<p>$$
+\sin(x) - \tan(x) = \frac{\sin(x)}{\cos(x)} (\cos(x) - 1)  = \frac{\sin(x)}{\cos(x)}\left(1-\frac{x^2}{2!} + o(x^2)-1\right) = \frac{\sin(x)}{\cos(x)}\left(-\frac{x^2}{2!} + o(x^2)\right)
+$$</p>
+<p>Therefore a</p>
+<p>$$
+\lim_{x\to0}\frac{\sin(x) -\tan(x)}{x^3} = \lim_{x\to 0} \frac{\sin(x)}{x\cos(x)}\cdot\lim_{x\to 0}\frac{-\frac12 x^2 + o(x^2)}{x^2} = -\frac12.
+$$</p>
+<h3 id="example-9-approximation-formula-for-cscx">Example 9. Approximation Formula for $\csc(x)$<a hidden class="anchor" aria-hidden="true" href="#example-9-approximation-formula-for-cscx">#</a></h3>
+<p>Prove $\csc(x) \approx \frac1x + \frac{x}{6}.$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/taylor-series/"> Taylor series</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/remainder/">remainder</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/convergence/">convergence</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/error/">error</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/calculus2/">calculus2</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/lecture/">lecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
