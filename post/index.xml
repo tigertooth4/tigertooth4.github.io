@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Jun 2022 11:32:36 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2022 21:31:17 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W16-S2 Applications of Power Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</link>
+      <pubDate>Fri, 10 Jun 2022 21:31:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</guid>
+      <description>周次: 16 日期: June 10, 2022 节次: 2 In this lecture, various applications for Taylor series are demonstrated. And we show how to generate a Fourier series from $f(x)$ in the end of the lecture. § 11.10 Applications of Power Series The Binomial Series for Powers and Roots The Taylor series generates by $f(x) = (1+x)^a$, when $a$ is constant, is called the binomial</description>
+    </item>
+    
     <item>
       <title>W16-Extra1 Convergence of Taylor Series; Error Estimates</title>
       <link>http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/</link>

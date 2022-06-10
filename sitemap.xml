@@ -2,12 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tigertooth4.github.io/tags/taylor-series/</loc>
-    <lastmod>2022-06-09T11:32:36+08:00</lastmod>
+    <loc>http://tigertooth4.github.io/tags/arctangent/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/binomial-series/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://tigertooth4.github.io/tags/calculus2/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/differential-equation/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/integral/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/</loc>
+    <lastmod>2022-06-10T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://tigertooth4.github.io/tags/taylor-series/</loc>
     <lastmod>2022-06-09T11:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22,32 +67,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/lecture/</loc>
-    <lastmod>2022-06-09T11:32:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/post/</loc>
-    <lastmod>2022-06-09T11:32:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/tags/remainder/</loc>
     <lastmod>2022-06-09T11:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tigertooth4.github.io/tags/</loc>
-    <lastmod>2022-06-09T11:32:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/</loc>
-    <lastmod>2022-06-09T11:32:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/</loc>
     <lastmod>2022-06-09T11:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -184,11 +209,6 @@
   </url><url>
     <loc>http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/</loc>
     <lastmod>2022-05-19T14:41:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://tigertooth4.github.io/tags/integral/</loc>
-    <lastmod>2022-05-17T16:45:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
