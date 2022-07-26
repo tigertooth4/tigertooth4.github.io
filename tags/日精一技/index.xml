@@ -6,7 +6,16 @@
     <description>Recent content in 日精一技 on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 14 Feb 2022 10:07:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 12:12:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/%E6%97%A5%E7%B2%BE%E4%B8%80%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Emacs &#43; AucTeX 中编译主 LaTeX 文件</title>
+      <link>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</link>
+      <pubDate>Tue, 26 Jul 2022 12:12:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</guid>
+      <description>背景 尽管使用 Emacs + AucTeX 编译 TeX 文件已经十多年了，但非常惭愧的是我一直是用最最基本的功能，比如 C-c C-c 编译 LaTeX 文件，`C-c `` 查看编译错误信息等等，从来没</description>
+    </item>
+    
     <item>
       <title>Online FriCAS Notebooks (ft. Jupyter Notebook)</title>
       <link>http://tigertooth4.github.io/post/2022-02/online-fricas-notebooks-ft-jupyter-notebook/</link>

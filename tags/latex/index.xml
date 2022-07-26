@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>latex on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/latex/</link>
+    <description>Recent content in latex on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Jul 2022 12:12:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Emacs &#43; AucTeX 中编译主 LaTeX 文件</title>
+      <link>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</link>
+      <pubDate>Tue, 26 Jul 2022 12:12:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</guid>
+      <description>背景 尽管使用 Emacs + AucTeX 编译 TeX 文件已经十多年了，但非常惭愧的是我一直是用最最基本的功能，比如 C-c C-c 编译 LaTeX 文件，`C-c `` 查看编译错误信息等等，从来没</description>
+    </item>
+    
+  </channel>
+</rss>
