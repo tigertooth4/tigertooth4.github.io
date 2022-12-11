@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>zotero on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/zotero/</link>
+    <description>Recent content in zotero on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Dec 2022 12:39:45 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/zotero/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notion &#43; Zotero = Notero!</title>
+      <link>http://tigertooth4.github.io/post/2022-12/notion&#43;zotero-notero/</link>
+      <pubDate>Sun, 11 Dec 2022 12:39:45 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-12/notion&#43;zotero-notero/</guid>
+      <description>前言 Zotero 是文献管理利器。Notion 是第二大脑。那么二者能否结合起来，最大程度地提高生产效率呢？周末我突然想到这个问题，网上搜了一下，还真有现</description>
+    </item>
+    
+  </channel>
+</rss>

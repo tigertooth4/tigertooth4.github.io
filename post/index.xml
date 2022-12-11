@@ -6,14 +6,23 @@
     <description>Recent content in Posts on 思｜制 - Thinking, lecturing and making</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 26 Jul 2022 12:12:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2022 12:39:45 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notion &#43; Zotero = Notero!</title>
+      <link>http://tigertooth4.github.io/post/2022-12/notion&#43;zotero-notero/</link>
+      <pubDate>Sun, 11 Dec 2022 12:39:45 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-12/notion&#43;zotero-notero/</guid>
+      <description>前言 Zotero 是文献管理利器。Notion 是第二大脑。那么二者能否结合起来，最大程度地提高生产效率呢？周末我突然想到这个问题，网上搜了一下，还真有现</description>
+    </item>
+    
     <item>
       <title>在 Emacs &#43; AucTeX 中编译主 LaTeX 文件</title>
       <link>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</link>
       <pubDate>Tue, 26 Jul 2022 12:12:00 +0800</pubDate>
       
       <guid>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</guid>
-      <description>背景 尽管使用 Emacs + AucTeX 编译 TeX 文件已经十多年了，但非常惭愧的是我一直是用最最基本的功能，比如 C-c C-c 编译 LaTeX 文件，`C-c `` 查看编译错误信息等等，从来没</description>
+      <description>背景 尽管使用 Emacs + AucTeX 编译 TeX 文件已经十多年了，但非常惭愧的是我一直是用最最基本的功能，比如 C-c C-c 编译 LaTeX 文件，C-c C-l 查看编译错误信息等等，从来没有</description>
     </item>
     
     <item>
